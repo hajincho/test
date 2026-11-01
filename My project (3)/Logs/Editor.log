@@ -45705,3 +45705,64 @@ Refreshing native plugins compatible for Editor in 5.23 ms, found 5 plugins.
 Asset Pipeline Refresh (id=3142b4417fff41d4392a4f7b25ffca58): Total: 0.043 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
 Asset Pipeline Refresh (id=8f1d81773e27f5a4ab7524a15a095fee): Total: 0.004 seconds - Initiated by RefreshV2(AllowForceSynchronousImport)
 [Licensing::Client] Error: Code 404 while processing request (status: Found 0 entitlement groups and 0 free entitlements matching requested entitlement ids)
+Scanning for USB devices : 4.516ms
+Scanning for USB devices : 4.692ms
+Scanning for USB devices : 4.540ms
+Scanning for USB devices : 4.106ms
+Asset Pipeline Refresh (id=7336bb3e689004c40bb82e32b5719b25): Total: 0.005 seconds - Initiated by RefreshV2(AllowForceSynchronousImport)
+[Licensing::Client] Error: Code 404 while processing request (status: Found 0 entitlement groups and 0 free entitlements matching requested entitlement ids)
+MonoPathRemapper: Attempts to remap: 906968; Successful remaps: 83940
+Serialized file version minimum: 22, current 23
+[LAYOUT] About to save layout C:\Users\fromj\Downloads\test\My project (3)\UserSettings\Layouts\default-6000.dwlt
+[LAYOUT] About to save layout C:/Users/fromj/AppData/Roaming/Unity/Editor-5.x/Preferences\Layouts\current\default-6000.dwlt
+Pipeline Server stopped
+Font Asset [LiberationSans SDF - Fallback] Units Per EM set to 2048. Please commit the newly serialized value.
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+TMPro.TMP_FontAsset:ReadFontAssetDefinition () (at ./Library/PackageCache/com.unity.ugui@eb824e41fbc7/Runtime/TMP/TMP_FontAsset.cs:846)
+TMPro.TMP_FontAsset:OnValidate () (at ./Library/PackageCache/com.unity.ugui@eb824e41fbc7/Runtime/TMP/TMP_FontAsset.cs:784)
+UnityEditor.AssetDatabase:LoadAssetAtPath (string,System.Type)
+UnityEditor.AssetDatabase:LoadAssetAtPath<TMPro.TMP_FontAsset> (string)
+TMPro.EditorEventCallbacks/<>c:<InitializeFontAssetResourceChangeCallBacks>b__0_0 () (at ./Library/PackageCache/com.unity.ugui@eb824e41fbc7/Editor/TMP/TMP_EditorResourceManager.cs:32)
+UnityEditor.EditorApplication:Internal_EditorApplicationQuit ()
+
+(Filename: ./Library/PackageCache/com.unity.ugui@eb824e41fbc7/Runtime/TMP/TMP_FontAsset.cs Line: 846)
+
+[INFO ] [relay] log Shutdown request received from client editor-28760-q4pofr
+[INFO ] [relay] log Unity client requested immediate shutdown - shutting down now, reason: Shutdown requested by client
+[INFO ] [relay] log Shutdown: Initiating graceful shutdown: Shutdown requested by client
+SUCCESS: The process with PID 32324 (child process of PID 32036) has been terminated.
+SUCCESS: The process with PID 32036 (child process of PID 28760) has been terminated.
+GPU Resident Drawer disposed.
+Input System module state changed to: ShutdownInProgress.
+Input Polling Thread exited.
+Input System module state changed to: Shutdown.
+'Packages/com.unity.cinemachine/Editor/Obsolete/CinemachineVirtualCameraBaseEditor.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+'Packages/com.unity.cinemachine/Editor/Editors/CinemachineVirtualCameraBaseEditor.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+'Packages/com.unity.render-pipelines.core/Editor/Deprecated.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+'Packages/com.unity.render-pipelines.core/Editor/Deprecated.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+[Physics::Module] Cleanup current backend.
+[Physics::Module] Id: 0xf2b8ea05
+[Licensing::IpcConnector] LicenseClient-fromj-notifications channel disconnected successfully.
+[Licensing::IpcConnector] LicenseClient-fromj channel disconnected successfully.
+Lingering sessions upon destruction of worker manager
+Unity Data Store service was successfully shut down
+UDS shutting down local client system
+Shut down UDS service system complete
+AcceleratorClientConnectionCallback - disconnected - :0
+Cleanup mono
+CodeReloadManager destroyed
+abort_threads: Failed aborting id: 0000000000002310, mono_thread_manage will ignore it
+
+abort_threads: Failed aborting id: 0000000000002310, mono_thread_manage will ignore it
+
+debugger-agent: Unable to listen on 4624
+UnwrapCL: Error reading command from socket.
+UnwrapCL: Error reading command from socket.
+UnwrapCL: Error reading command from socket.
+UnwrapCL: Error reading command from socket.
+eaks","version":2,"phase":"Immediate","time":1793549034670,"processId":28760,"allocatedMemory":62296596,"memoryLabels":[{"Default":4809194},{"Permanent":15516},{"NewDelete":147481},{"Thread":4241480},{"Manager":2341632},{"VertexData":8},{"Geometry":824},{"Shader":959238},{"Material":132},{"TextureCache":304},{"GfxDevice":154184},{"GfxThread":107520},{"Animation":104},{"Font":880819},{"FreeType":145010},{"FontEngine":736},{"Physics":1970},{"Physics2D":16},{"Serialization":692824},{"Input":45280},{"JobScheduler":256},{"TextLib":164477},{"Mono":48},{"MonoCode":832},{"ScriptingNativeRuntime":1988136},{"BaseObject":34464},{"Resource":1444},{"Renderer":2512},{"Transform":4781},{"File":3383120},{"WebCam":616},{"Culling":32},{"Terrain":6487682},{"Wind":24},{"STL":40},{"String":5876433},{"StaticString":3808},{"Utility":2675077},{"PoolAlloc":3512},{"AI":80},{"TypeTree":11186352},{"ScriptManager":132888},{"CodeReload":448},{"RuntimeInitializeOnLoadManager":64},{"Sprites":102},{"SpriteAtlas":120},{"GI":7816},{"Director":8296},{"CloudService":7296},{"WebRequest":8602},{"VR":49650},{"SceneManager":608},{"Video":208},{"LazyScriptCache":32},{"NativeArray":10800},{"Camera":729},{"Secure":4489},{"SerializationCache":9256},{"APIUpdating":10320},{"Subsystems":336},{"VirtualTexturing":57888},{"StaticSafetyDebugInfo":278528},{"Analytics":768},{"Hierarchy":1188},{"UIElements":40},{"CoreStats":14456},{"Identifiers":7152},{"EntityIdStore":33088},{"Gui":806435},{"EditorUtility":4776452},{"VersionControl":8},{"Undo":931},{"AssetDatabase":9627668},{"AssetImporter":2568},{"EditorGi":328},{"UnityConnect":36921},{"Upm":1988},{"UpmDiagnostics":8},{"AssetCompliance":96},{"DrivenProperties":72},{"LocalIPC":260},{"ProfilerEditor":9746},{"CoreBusinessMetrics":3600},{"Windowing":456},{"TLS":41952},{"Licensing":12805},{"AssetReference":32},{"IPCStream":32}]}

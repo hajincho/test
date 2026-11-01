@@ -1994,3 +1994,8 @@ Memory consumption went from 1.32 GB to 1.31 GB.
 Total: 21.545000 ms (FindLiveObjects: 1.232800 ms CreateObjectMapping: 0.730400 ms MarkObjects: 16.321400 ms  DeleteObjects: 2.928100 ms)
 
 Prepare: number of updated asset objects reloaded= 0
+Editor requested this worker to shutdown with reason: Editor is closing down
+AcceleratorClientConnectionCallback - disconnected - :0
+AssetImportWorker is now disconnected from the server
+Process exiting
+[ExitDontLaunchBugReporter] Exiting without the bug reporter. Application will exit with return code 0
