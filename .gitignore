@@ -1,0 +1,17 @@
+/[Ll]ibrary/
+/[Tt]emp/
+/[Obj]/
+/[Build]/
+/[Builds]/
+/[Logs]/
+/[UserSettings]/
+/[MemoryCaptures]/
+*.cs.pidb
+*.suo
+*.user
+*.userprefs
+*.sln
+*.csproj
+*.unityproj
+*.booproj
+.DS_Store
