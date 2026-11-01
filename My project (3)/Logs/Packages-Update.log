@@ -43,3 +43,19 @@ The following packages were 추가됨:
   com.unity.modules.accessibility@1.0.0
 The following packages were 업데이트됨:
   com.unity.ide.rider 3.0.40 버전에서 3.1.0버전으로  com.unity.inputsystem 1.20.0 버전에서 1.20.1버전으로
+=== Sun Nov  1 22:59:46 2026
+
+Packages were changed.
+Update Mode: updateDependencies
+
+The following packages were 업데이트됨:
+  com.unity.cinemachine 3.1.7 버전에서 6.6.0버전으로  com.unity.render-pipelines.high-definition 17.3.0 버전에서 17.6.0버전으로  com.unity.timeline 1.8.13 버전에서 6.6.0버전으로
+=== Sun Nov  1 22:59:47 2026
+
+Packages were changed.
+Update Mode: mergeDefaultDependencies
+
+The following packages were 추가됨:
+  com.unity.cinemachine@6.6.0
+  com.unity.terrain-tools@5.3.3
+  com.unity.timeline@6.6.0
