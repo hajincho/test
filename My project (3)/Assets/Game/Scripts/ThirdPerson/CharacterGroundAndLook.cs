@@ -21,6 +21,10 @@ namespace Game.ThirdPerson
         private Transform head;
         private Leg left, right, leftAux, rightAux;
         private float groundedBlend, headYaw, headPitch;
+        private Quaternion stableHeadRotation;
+        private bool hasStableHeadRotation;
+
+        private void OnEnable() { hasStableHeadRotation = false; }
         private readonly RaycastHit[] hits = new RaycastHit[16];
 
         private sealed class Leg
@@ -170,6 +174,16 @@ namespace Game.ThirdPerson
             headPitch = Mathf.Lerp(headPitch, pitch * lookWeight, smooth);
             head.rotation = Quaternion.AngleAxis(headYaw, visualRoot.up) *
                             Quaternion.AngleAxis(-headPitch, visualRoot.right) * head.rotation;
+
+            // Filter gait-induced rotation in character space while preserving look and body turns.
+            Quaternion desired = Quaternion.Inverse(visualRoot.rotation) * head.rotation;
+            if (!hasStableHeadRotation)
+            {
+                stableHeadRotation = desired;
+                hasStableHeadRotation = true;
+            }
+            stableHeadRotation = Quaternion.Slerp(stableHeadRotation, desired, 1f - Mathf.Exp(-5f * dt));
+            head.rotation = visualRoot.rotation * stableHeadRotation;
         }
     }
 }
