@@ -12,9 +12,15 @@ namespace Game.ThirdPerson
         public bool flightMode = false;
         public float flySpeed = 20f;
         public float fastFlySpeed = 80f;
-        public float sprintSpeed = 4f;
+        public float sprintSpeed = 5.5f;
         public float jumpHeight = .8f;
         public float gravity = -9.81f;
+        // The observed flat-ground jump takes about 0.6 s. Apply the quicker arc only to an accepted jump.
+        [Min(.1f)] public float jumpGravityScale = 1.9f;
+        public bool IsJumping { get; private set; }
+        public float JumpProgress => IsJumping && launchSpeed > 0f
+            ? Mathf.Clamp01(.5f * (1f - verticalSpeed / launchSpeed)) : 0f;
+        float launchSpeed;
         public float turnSpeed = 12f;
         public bool Grounded { get; private set; }
         public float VerticalSpeed => verticalSpeed;
@@ -57,16 +63,20 @@ namespace Game.ThirdPerson
             if (Grounded && verticalSpeed < 0f) verticalSpeed = -2f;
             if (Time.time - lastJumpPressed < .12f && Time.time - lastGrounded < .1f)
             {
-                verticalSpeed = Mathf.Sqrt(2f * Mathf.Abs(gravity) * jumpHeight);
+                launchSpeed = Mathf.Sqrt(2f * Mathf.Abs(gravity) * Mathf.Max(.1f, jumpGravityScale) * jumpHeight);
+                verticalSpeed = launchSpeed;
+                IsJumping = true;
                 lastJumpPressed = -10f; lastGrounded = -10f; Grounded = false;
             }
             float previousVertical = verticalSpeed;
-            verticalSpeed = Mathf.Max(verticalSpeed + gravity * dt, -50f);
+            float acceleration = IsJumping ? gravity * Mathf.Max(.1f, jumpGravityScale) : gravity;
+            verticalSpeed = Mathf.Max(verticalSpeed + acceleration * dt, -50f);
             float verticalDisplacement = (previousVertical + verticalSpeed) * .5f * dt;
             Vector3 before = transform.position;
             var flags = controller.Move(direction * (sprint ? sprintSpeed : walkSpeed) * dt + Vector3.up * verticalDisplacement);
             if ((flags & CollisionFlags.Above) != 0 && verticalSpeed > 0f) verticalSpeed = 0f;
             Grounded = (flags & CollisionFlags.Below) != 0;
+            if (Grounded) IsJumping = false;
             Vector3 delta = transform.position - before;
             PlanarSpeed = new Vector2(delta.x, delta.z).magnitude / dt;
             Sprinting = sprint && PlanarSpeed > .1f;
@@ -75,7 +85,7 @@ namespace Game.ThirdPerson
             if (transform.position.y < spawn.y - 100f)
             {
                 controller.enabled = false; transform.position = spawn;
-                verticalSpeed = 0f; controller.enabled = true;
+                verticalSpeed = 0f; IsJumping = false; controller.enabled = true;
             }
         }
     }

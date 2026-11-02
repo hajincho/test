@@ -4,7 +4,7 @@ using UnityEngine;
 namespace Game.ThirdPerson
 {
     [DefaultExecutionOrder(100)]
-    public sealed class UntitledCharacterMotion : MonoBehaviour
+    public sealed partial class UntitledCharacterMotion : MonoBehaviour
     {
         [Serializable] public class Joint
         {
@@ -17,7 +17,7 @@ namespace Game.ThirdPerson
         public Transform movementRoot;
         public ThirdPersonMotor motor;
         public Joint[] joints;
-        public float walkingAmplitude = 24f;
+        public float walkingAmplitude = 32f;
         public float breathingAmplitude = .008f;
         [SerializeField] float currentSpeed;
         [SerializeField] float motionPhase;
@@ -26,16 +26,47 @@ namespace Game.ThirdPerson
             public Transform bone;
             public Quaternion rest;
             public Vector3 curlAxis;
-            public float curlDegrees;
+            public float relaxedCurl, sprintCurl;
         }
         FingerJoint[] fingers;
         Transform[] clothBones;
         Quaternion[] clothRest;
-        Vector3[] clothAxes;
+        Vector3[] clothAxes, capeFlareAxes;
+        float[] capeTrailAngles;
         float windBlend;
         Transform[] hairBones;
         Quaternion[] hairRest;
-        Vector3[] hairAxes;
+        Vector3[] hairAxes, hairRollAxes;
+        Transform leftHand, rightHand, waist;
+        Quaternion waistRest;
+        Vector3 waistPitchAxis;
+        // One full stride, sampled from support through toe-off, knee recovery and extension.
+        // Positive thigh angles move the leg back; arm angles are measured forward from vertical.
+        static AnimationCurve sprintThigh, sprintKnee, sprintUpperArm, sprintForearm;
+
+        static void CacheSprintCycle()
+        {
+            if (sprintThigh != null) return;
+            sprintThigh = MakeCycle(-14, 19, 41, 18, -31, -68, -66, -44);
+            sprintKnee = MakeCycle(24, 33, 67, 104, 123, 107, 68, 35);
+            sprintUpperArm = MakeCycle(-3, 12, 16, -1, -36, -67, -60, -32);
+            sprintForearm = MakeCycle(72, 96, 110, 74, 8, -55, -42, 19);
+        }
+
+        static AnimationCurve MakeCycle(params float[] angles)
+        {
+            int count = angles.Length;
+            var keys = new Keyframe[count + 1];
+            for (int i = 0; i <= count; i++)
+            {
+                float tangent = .5f * count * (angles[(i + 1) % count] - angles[(i + count - 1) % count]);
+                keys[i] = new Keyframe((float)i / count, angles[i % count], tangent, tangent);
+            }
+            return new AnimationCurve(keys);
+        }
+
+        public float GaitPhase => motionPhase;
+        public float RunContactWeight => runBlend * movement * (1f - airBlend);
         Vector3 restPosition;
         Quaternion restRotation;
         Vector3 previousPosition;
@@ -70,28 +101,48 @@ namespace Game.ThirdPerson
             previousPosition = movementRoot ? movementRoot.position : transform.position;
             lastYaw = transform.parent ? transform.parent.eulerAngles.y : transform.eulerAngles.y;
             turnLean = 0f;
-            CacheFingers();
+            CacheSprintCycle();
+            CacheUpperBody();
             CacheCloth();
         }
-        void CacheFingers()
+        void CacheUpperBody()
         {
             int[] starts = { 246, 250, 254, 258, 262, 284, 288, 292, 296, 300 };
             var all = GetComponentsInChildren<Transform>(true);
+            waist = Array.Find(all, t => t.name == "Bone_163");
+            if (waist)
+            {
+                waistRest = waist.localRotation;
+                waistPitchAxis = waist.InverseTransformDirection(transform.right).normalized;
+            }
+            leftHand = Array.Find(all, t => t.name == "Bone_244");
+            rightHand = Array.Find(all, t => t.name == "Bone_282");
             var found = new System.Collections.Generic.List<FingerJoint>();
             for (int chain = 0; chain < starts.Length; chain++)
             {
+                int digit = chain % 5;
+                int indexBase = starts[chain - digit + 1];
+                var index = Array.Find(all, t => t.name == "Bone_" + indexBase);
+                var little = Array.Find(all, t => t.name == "Bone_" + (indexBase + 12));
+                var hand = chain < 5 ? leftHand : rightHand;
+                if (!index || !little || !hand) continue;
+                Vector3 across = (little.position - index.position).normalized;
+                Vector3 palm = Vector3.Cross(index.position - hand.position, across).normalized;
+                if (Vector3.Dot(palm, -transform.up) < 0f) palm = -palm;
+                Vector3 inward = digit == 0 ? (across + palm * .45f).normalized : palm;
                 for (int segment = 0; segment < 3; segment++)
                 {
                     string boneName = "Bone_" + (starts[chain] + segment);
                     Transform bone = Array.Find(all, t => t.name == boneName);
                     if (!bone || bone.childCount == 0) continue;
                     Vector3 direction = (bone.GetChild(0).position - bone.position).normalized;
-                    Vector3 axis = Vector3.Cross(direction, -transform.up);
+                    Vector3 axis = Vector3.Cross(direction, inward);
                     if (axis.sqrMagnitude < .0001f) axis = transform.forward;
                     found.Add(new FingerJoint {
                         bone = bone, rest = bone.localRotation,
                         curlAxis = bone.InverseTransformDirection(axis.normalized),
-                        curlDegrees = chain % 5 == 0 ? 42f : (segment == 0 ? 58f : 72f)
+                        relaxedCurl = digit == 0 ? 10f : (segment == 2 ? 9f : 15f) + 3f * digit,
+                        sprintCurl = digit == 0 ? 14f : (segment == 1 ? 25f : 16f) + 3f * digit
                     });
                 }
             }
@@ -106,12 +157,22 @@ namespace Game.ThirdPerson
             clothBones = new Transform[ids.Length];
             clothRest = new Quaternion[ids.Length];
             clothAxes = new Vector3[ids.Length];
+            capeFlareAxes = new Vector3[ids.Length];
+            capeTrailAngles = new float[ids.Length];
             for (int i = 0; i < ids.Length; i++)
             {
                 Transform bone = Array.Find(all, t => t.name == "Bone_" + ids[i].ToString("D3"));
                 clothBones[i] = bone;
                 if (!bone) continue;
                 clothRest[i] = bone.localRotation;
+                // Let the rear panels tilt from the belt as a unit. Keep the front panels clear of the knees.
+                float rootZ = transform.InverseTransformPoint((i % 2 == 0 ? bone : bone.parent).position).z;
+                float rear = 1f - Mathf.SmoothStep(0f, 1f, Mathf.InverseLerp(-.02f, .11f, rootZ));
+                // Each belt panel opens around its own hinge as the character decelerates on landing.
+                Vector3 radial = bone.position - bone.parent.position;
+                Vector3 axis = Vector3.Cross(-transform.up, Vector3.ProjectOnPlane(radial, transform.up));
+                capeFlareAxes[i] = bone.InverseTransformDirection(axis.normalized);
+                capeTrailAngles[i] = rear * (i % 2 == 0 ? 27f : 2f);
                 clothAxes[i] = bone.InverseTransformDirection(transform.right).normalized;
             }
             // Long back hair chains; facial and head bones remain untouched.
@@ -120,6 +181,7 @@ namespace Game.ThirdPerson
             hairBones = new Transform[hairIds.Length];
             hairRest = new Quaternion[hairIds.Length];
             hairAxes = new Vector3[hairIds.Length];
+            hairRollAxes = new Vector3[hairIds.Length];
             for (int i = 0; i < hairIds.Length; i++)
             {
                 var bone = Array.Find(all, t => t.name == "Bone_" + hairIds[i].ToString("D3"));
@@ -127,6 +189,7 @@ namespace Game.ThirdPerson
                 if (!bone) continue;
                 hairRest[i] = bone.localRotation;
                 hairAxes[i] = bone.InverseTransformDirection(transform.right).normalized;
+                hairRollAxes[i] = bone.InverseTransformDirection(transform.forward).normalized;
             }
             windBlend = 0f;
         }
@@ -142,8 +205,12 @@ namespace Game.ThirdPerson
                 float chain = i / 2;
                 float wave = Mathf.Sin(clock * (1.3f + .5f * windBlend) + chain * .55f - (i % 2) * .55f);
                 float gust = Mathf.Sin(clock * .43f + chain * .3f);
-                float angle = wave * (1.4f + 3.6f * windBlend) + gust * .8f + 2f * windBlend;
+                float downwardLook = motor && motor.cameraTransform ? Mathf.Clamp01(-motor.cameraTransform.forward.y) : 0f;
+                float lift = (4f + capeTrailAngles[i]) * windBlend + 1.2f * downwardLook;
+                float angle = wave * (.18f + .35f * windBlend) + gust * .12f + lift;
                 clothBones[i].localRotation = clothRest[i] * Quaternion.AngleAxis(angle, clothAxes[i]);
+                if (i % 2 == 0 && jumpFollow > 0f && capeFlareAxes[i].sqrMagnitude > .5f)
+                    clothBones[i].localRotation *= Quaternion.AngleAxis(19f * jumpFollow, capeFlareAxes[i]);
             }
             if (hairBones == null) return;
             for (int i = 0; i < hairBones.Length; i++)
@@ -154,7 +221,14 @@ namespace Game.ThirdPerson
                 float wave = Mathf.Sin(clock * (1.25f + .8f * windBlend) + chain * .8f - segment * .65f);
                 float gust = Mathf.Sin(clock * .55f + chain * .4f);
                 float angle = wave * (.9f + 3.2f * windBlend) + gust * .7f + 2.5f * windBlend;
-                hairBones[i].localRotation = hairRest[i] * Quaternion.AngleAxis(angle, hairAxes[i]);
+                float lag = segment * .55f + chain * .12f;
+                float bounce = Mathf.Sin(2f * motionPhase - lag) * movement * (1f - airBlend);
+                float trailAngle = chain < 3 ? (segment == 0 ? 23f : 6f) : 3f;
+                float trailing = angle + jumpFollow * (segment == 0 ? 12f : 4f) + windBlend * trailAngle + bounce * (.55f + segment * .65f);
+                float lateral = (Mathf.Sin(motionPhase - lag) * movement * 2.2f + turnLean * .55f)
+                              * (.5f + segment * .4f);
+                hairBones[i].localRotation = hairRest[i] * Quaternion.AngleAxis(trailing, hairAxes[i])
+                                           * Quaternion.AngleAxis(lateral, hairRollAxes[i]);
             }
         }
         public string MotionState { get; private set; } = "Idle";
@@ -171,10 +245,10 @@ namespace Game.ThirdPerson
             float target = Mathf.Clamp01(currentSpeed / Mathf.Max(motor ? motor.walkSpeed : 1.2f,.1f));
             float run = Mathf.InverseLerp(motor ? motor.walkSpeed : 1.2f,motor ? motor.sprintSpeed : 4f,currentSpeed);
             bool grounded = !motor || motor.Grounded;
-            if (grounded && !wasGrounded) landing=.9f;
+            if (grounded && !wasGrounded && !trackingJump) landing=.9f;
             wasGrounded=grounded;
             landing=Mathf.MoveTowards(landing,0f,dt*4f);
-            movement=Mathf.Lerp(movement,target,1f-Mathf.Exp(-10f*dt));
+            movement=Mathf.Lerp(movement,target,1f-Mathf.Exp(-7f*dt));
             runBlend=Mathf.Lerp(runBlend,run,1f-Mathf.Exp(-8f*dt));
             airBlend=Mathf.Lerp(airBlend,grounded ? 0f : 1f,1f-Mathf.Exp(-12f*dt));
             clock+=dt;
@@ -184,10 +258,12 @@ namespace Game.ThirdPerson
             lastYaw = yaw;
             float targetLean = Mathf.Clamp(-yawRate * .025f, -7f, 7f) * movement * (1f-airBlend);
             turnLean = Mathf.Lerp(turnLean, targetLean, 1f-Mathf.Exp(-8f*dt));
-            motionPhase+=dt*Mathf.Lerp(6.5f,10.5f,runBlend)*Mathf.Lerp(.2f,1f,movement);
+            float cycleDistance = Mathf.Lerp(1.16f, 2.57f, runBlend);
+            motionPhase = Mathf.Repeat(motionPhase + currentSpeed * dt * (2f * Mathf.PI / cycleDistance), 2f * Mathf.PI);
             MotionState=!grounded ? (motor.VerticalSpeed>0f ? "Jump" : "Fall") :
                 currentSpeed<.08f ? "Idle" : run>.65f ? "Run" : run>.15f ? "Jog" : "Walk";
             ApplyLocomotion(clock,motionPhase,movement,runBlend,airBlend,motor ? motor.VerticalSpeed : 0f,landing);
+            ApplyReferenceJump(dt);
             ApplyClothWind(dt);
         }
         // Kept for the existing pose-preview and skin-validation editor tools.
@@ -197,42 +273,73 @@ namespace Game.ThirdPerson
         public void ApplyLocomotion(float time,float phase,float amount,float run,float air,float vertical,float land)
         {
             if(joints==null || joints.Length<14) return;
+            CacheSprintCycle();
             float wave=Mathf.Sin(phase);
             float breath=Mathf.Sin(time*1.8f);
             float sway=Mathf.Sin(time*.75f);
             float grounded=1f-air;
-            float stride=Mathf.Lerp(walkingAmplitude,37f,run)*amount*grounded;
-            float knee=Mathf.Lerp(32f,58f,run)*amount*grounded;
-            float arms=Mathf.Lerp(19f,34f,run)*amount*grounded;
+            float leftCycle = Mathf.Repeat(phase / (2f * Mathf.PI), 1f);
+            float rightCycle = Mathf.Repeat(leftCycle + .5f, 1f);
+            float weight = amount * grounded;
+            float arms=Mathf.Lerp(39f,48f,run)*amount*grounded;
             // Hold the planted leg longer, while the other foot recovers briskly.
             float recoveryL=Mathf.Pow(Mathf.Max(0f,-wave), 1.15f);
             float recoveryR=Mathf.Pow(Mathf.Max(0f,wave), 1.15f);
             float counterTwist=Mathf.Sin(phase+.22f)*amount*grounded;
+            float bodyBounce=(1f-Mathf.Cos(2f*phase))*.5f;
+            float torsoSway=Mathf.Sin(phase-.15f)*amount*grounded;
             float idle=1f-amount;
             transform.localPosition=restPosition+Vector3.up*(
-                breath*breathingAmplitude*.55f*idle+Mathf.Abs(wave)*Mathf.Lerp(.010f,.018f,run)*amount*grounded-.065f*land);
+                breath*breathingAmplitude*.55f*idle+bodyBounce*Mathf.Lerp(.010f,.018f,run)*amount*grounded-.095f*run*amount*grounded-.065f*land);
             // The stylized run leans forward, recovers upright in air, and banks gently into turns.
-            transform.localRotation=restRotation*Quaternion.Euler(5f*run*amount+4f*air, counterTwist*1.2f, sway*.3f*idle+turnLean*.6f);
+            transform.localRotation=restRotation*Quaternion.Euler(4f*air+bodyBounce*1.1f*amount*grounded, counterTwist*3.2f, sway*.3f*idle+turnLean*.6f+torsoSway*1.4f);
             foreach(var j in joints) if(j.bone) j.bone.localRotation=j.rest;
-            Rotate(0,breath*.7f+2f*run*amount+5f*land,counterTwist*1.2f+sway*.3f*idle);
-            Rotate(1,-breath*.12f-2f*run*amount,-sway*.1f*idle-counterTwist*.2f);
+            float sprintPose = run * amount * grounded;
+            if (waist) waist.localRotation = waistRest * Quaternion.AngleAxis(45.5f * sprintPose, waistPitchAxis);
+            Rotate(0,breath*.7f+18f*sprintPose+5f*land+bodyBounce*1.4f*amount*grounded,counterTwist*2.7f+sway*.3f*idle);
+            Rotate(1,-breath*.12f-51.5f*sprintPose-bodyBounce*1.6f*amount*grounded,-sway*.1f*idle-counterTwist*2.7f-torsoSway*1.4f);
             Rotate(2,-wave*arms-15f*air,-joints[2].side*(35f-breath*.8f-7f*air));
             Rotate(3,wave*arms-15f*air,-joints[3].side*(35f-breath*.8f-7f*air));
-            Rotate(4,-8f-38f*run*amount-20f*air-recoveryR*amount*12f,0f);
-            Rotate(5,-8f-38f*run*amount-20f*air-recoveryL*amount*12f,0f);
+            Rotate(4,-8f-38f*run*amount-20f*air-recoveryR*amount*12f+wave*4f*amount*grounded,0f);
+            Rotate(5,-8f-38f*run*amount-20f*air-recoveryL*amount*12f-wave*4f*amount*grounded,0f);
+            float armBlend = sprintPose;
+            GuideRunningArm(2, 4, leftHand, leftCycle, armBlend);
+            GuideRunningArm(3, 5, rightHand, rightCycle, armBlend);
             if (fingers != null)
                 foreach (var finger in fingers)
                     if (finger.bone) finger.bone.localRotation = finger.rest *
-                        Quaternion.AngleAxis(finger.curlDegrees * run * amount, finger.curlAxis);
+                        Quaternion.AngleAxis(Mathf.Lerp(finger.relaxedCurl, finger.sprintCurl, armBlend), finger.curlAxis);
             float tuck=air*(vertical>0f ? 23f : 10f);
+            float thighL = Mathf.Lerp(wave * walkingAmplitude, sprintThigh.Evaluate(leftCycle), run) * weight;
+            float thighR = Mathf.Lerp(-wave * walkingAmplitude, sprintThigh.Evaluate(rightCycle), run) * weight;
+            float kneeL = Mathf.Lerp(recoveryL * 32f, sprintKnee.Evaluate(leftCycle), run) * weight;
+            float kneeR = Mathf.Lerp(recoveryR * 32f, sprintKnee.Evaluate(rightCycle), run) * weight;
             for(int i=6;i<=10;i+=4)
             {
-                Rotate(i,wave*stride-tuck,0f);
-                Rotate(i+1,-wave*stride-tuck*.65f,0f);
-                Rotate(i+2,recoveryL*knee+tuck*1.5f+22f*land,0f);
-                Rotate(i+3,recoveryR*knee+tuck+22f*land,0f);
+                Rotate(i,thighL-tuck,0f);
+                Rotate(i+1,thighR-tuck*.65f,0f);
+                Rotate(i+2,kneeL+tuck*1.5f+22f*land,0f);
+                Rotate(i+3,kneeR+tuck+22f*land,0f);
             }
         }
+        // Set the swing plane from the elbow and wrist, independent of the imported arm axes.
+        void GuideRunningArm(int upperIndex, int lowerIndex, Transform hand, float cycle, float blend)
+        {
+            var upper = joints[upperIndex];
+            var elbow = joints[lowerIndex].bone;
+            if (blend <= 0f || !upper.bone || !elbow || !hand) return;
+            float angle = sprintUpperArm.Evaluate(cycle) * Mathf.Deg2Rad;
+            AimSegment(upper.bone, elbow, new Vector3(upper.side * .16f, -Mathf.Cos(angle), Mathf.Sin(angle)), blend);
+            float forearm = sprintForearm.Evaluate(cycle) * Mathf.Deg2Rad;
+            AimSegment(elbow, hand, new Vector3(-upper.side * .06f, -Mathf.Cos(forearm), Mathf.Sin(forearm)), blend);
+        }
+
+        void AimSegment(Transform bone, Transform end, Vector3 localDirection, float blend)
+        {
+            var turn = Quaternion.FromToRotation(end.position - bone.position, transform.TransformDirection(localDirection));
+            bone.rotation = Quaternion.Slerp(Quaternion.identity, turn, blend) * bone.rotation;
+        }
+
         void Rotate(int index, float pitch, float roll)
         {
             if (index >= joints.Length) return;
@@ -242,6 +349,9 @@ namespace Game.ThirdPerson
         }
         void OnDisable()
         {
+            trackingJump = false;
+            jumpFollow = 0f;
+            if (waist) waist.localRotation = waistRest;
             if (joints != null) foreach (var j in joints)
                 if (j.bone) j.bone.localRotation = j.rest;
             if (fingers != null) foreach (var finger in fingers)

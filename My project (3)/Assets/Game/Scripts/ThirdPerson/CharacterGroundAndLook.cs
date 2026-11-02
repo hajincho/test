@@ -18,6 +18,7 @@ namespace Game.ThirdPerson
         public float maxHeadPitch = 35f;
 
         private ThirdPersonMotor motor;
+        private UntitledCharacterMotion motion;
         private Transform head;
         private Leg left, right, leftAux, rightAux;
         private float groundedBlend, headYaw, headPitch;
@@ -34,6 +35,8 @@ namespace Game.ThirdPerson
             public float targetHeight, weight;
             public Quaternion restFootRotation;
             public Vector3 normal = Vector3.up;
+            public bool planted;
+            public Vector3 contactPosition;
         }
 
         private Transform FindBone(string name)
@@ -62,6 +65,7 @@ namespace Game.ThirdPerson
             }
             if (!playerRoot) { enabled = false; return; }
             motor = playerRoot.GetComponent<ThirdPersonMotor>();
+            motion = GetComponent<UntitledCharacterMotion>();
             if (!visualRoot && motor) visualRoot = motor.visualRoot;
             if (!visualRoot) visualRoot = playerRoot;
             if (!lookCamera && motor) lookCamera = motor.cameraTransform;
@@ -90,6 +94,13 @@ namespace Game.ThirdPerson
         {
             if (leg == null || !leg.foot || !leg.thigh || !leg.shin) return;
             leg.foot.localRotation = leg.restFootRotation;
+            if (motor && motor.IsJumping)
+            {
+                leg.planted = false;
+                leg.weight = 0f;
+                leg.targetHeight = leg.foot.position.y;
+                return;
+            }
             Vector3 foot = leg.foot.position;
             Vector3 origin = foot + Vector3.up * .45f;
             int count = Physics.RaycastNonAlloc(origin, Vector3.down, hits, 1.2f, groundLayers, QueryTriggerInteraction.Ignore);
@@ -118,15 +129,35 @@ namespace Game.ThirdPerson
                 normal = best.normal;
             }
 
+            // Opposite legs contact half a cycle apart. Hold the ankle in world space
+            // through support, and release before the knee starts its recovery.
+            float lockWeight = 0f;
+            if (motion && motion.enabled && motion.RunContactWeight > .1f && motor && motor.Grounded && best.collider)
+            {
+                bool rightSide = leg == right || leg == rightAux;
+                float cycle = Mathf.Repeat(motion.GaitPhase / (2f * Mathf.PI) + (rightSide ? .5f : 0f) + .16f, 1f);
+                if (cycle < .32f)
+                {
+                    if (!leg.planted) leg.contactPosition = foot;
+                    leg.planted = true;
+                    float edge = Mathf.Clamp01(Mathf.Min(cycle, .32f - cycle) / .045f);
+                    lockWeight = Mathf.SmoothStep(0f, 1f, edge) * motion.RunContactWeight * footWeight;
+                    desiredHeight = Mathf.Lerp(desiredHeight, best.point.y + leg.restFootHeight, lockWeight);
+                    desiredWeight = Mathf.Max(desiredWeight, lockWeight);
+                }
+                else leg.planted = false;
+            }
+            else leg.planted = false;
+
             float blend = 1f - Mathf.Exp(-14f * dt);
             leg.weight = Mathf.Lerp(leg.weight, desiredWeight, blend);
             leg.targetHeight = Mathf.Lerp(leg.targetHeight, desiredHeight, blend);
             leg.normal = Vector3.Slerp(leg.normal, normal, blend).normalized;
             if (leg.weight < .005f) return;
 
-            Vector3 target = foot;
+            Vector3 target = Vector3.Lerp(foot, leg.contactPosition, lockWeight);
             target.y = Mathf.Lerp(foot.y, leg.targetHeight, leg.weight);
-            SolveTwoBone(leg, target, leg.weight);
+            SolveTwoBone(leg, target, Mathf.Max(lockWeight, leg.weight));
 
             // Rotate only modestly; the imported rig may already have a stylized foot angle.
             Quaternion align = Quaternion.FromToRotation(visualRoot.up, leg.normal);
@@ -182,7 +213,8 @@ namespace Game.ThirdPerson
                 stableHeadRotation = desired;
                 hasStableHeadRotation = true;
             }
-            stableHeadRotation = Quaternion.Slerp(stableHeadRotation, desired, 1f - Mathf.Exp(-5f * dt));
+            float gait = motor ? Mathf.Clamp01(motor.PlanarSpeed / Mathf.Max(motor.walkSpeed, .1f)) : 0f;
+            stableHeadRotation = Quaternion.Slerp(stableHeadRotation, desired, 1f - Mathf.Exp(-Mathf.Lerp(5f, 2.5f, gait) * dt));
             head.rotation = visualRoot.rotation * stableHeadRotation;
         }
     }
