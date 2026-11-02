@@ -66,7 +66,8 @@ namespace Game.ThirdPerson
         }
 
         public float GaitPhase => motionPhase;
-        public float RunContactWeight => runBlend * movement * (1f - airBlend);
+        public float GroundStrideWeight => movement * (1f - airBlend);
+        public float ContactHalfCycle => Mathf.Lerp(.25f, .16f, runBlend);
         Vector3 restPosition;
         Quaternion restRotation;
         Vector3 previousPosition;
@@ -104,6 +105,8 @@ namespace Game.ThirdPerson
             CacheSprintCycle();
             CacheUpperBody();
             CacheCloth();
+            CacheWalkDetails();
+            CacheBlink();
         }
         void CacheUpperBody()
         {
@@ -258,13 +261,17 @@ namespace Game.ThirdPerson
             lastYaw = yaw;
             float targetLean = Mathf.Clamp(-yawRate * .025f, -7f, 7f) * movement * (1f-airBlend);
             turnLean = Mathf.Lerp(turnLean, targetLean, 1f-Mathf.Exp(-8f*dt));
-            float cycleDistance = Mathf.Lerp(1.16f, 2.57f, runBlend);
+            // At full walking speed one left-to-left cycle takes 80 frames of the 60 Hz reference.
+            float walkDistance = (motor ? motor.walkSpeed : 1.2f) * (80f / 60f);
+            float cycleDistance = Mathf.Lerp(Mathf.Max(.1f, walkDistance), 2.57f, runBlend);
             motionPhase = Mathf.Repeat(motionPhase + currentSpeed * dt * (2f * Mathf.PI / cycleDistance), 2f * Mathf.PI);
             MotionState=!grounded ? (motor.VerticalSpeed>0f ? "Jump" : "Fall") :
                 currentSpeed<.08f ? "Idle" : run>.65f ? "Run" : run>.15f ? "Jog" : "Walk";
             ApplyLocomotion(clock,motionPhase,movement,runBlend,airBlend,motor ? motor.VerticalSpeed : 0f,landing);
             ApplyReferenceJump(dt);
             ApplyClothWind(dt);
+            ApplyWalkDetails(dt);
+            UpdateIdleBlink(dt);
         }
         // Kept for the existing pose-preview and skin-validation editor tools.
         public void ApplyPose(float time,float phase,float amount,bool flying)
@@ -274,6 +281,7 @@ namespace Game.ThirdPerson
         {
             if(joints==null || joints.Length<14) return;
             CacheSprintCycle();
+            CacheWalkCycle();
             float wave=Mathf.Sin(phase);
             float breath=Mathf.Sin(time*1.8f);
             float sway=Mathf.Sin(time*.75f);
@@ -290,7 +298,7 @@ namespace Game.ThirdPerson
             float torsoSway=Mathf.Sin(phase-.15f)*amount*grounded;
             float idle=1f-amount;
             transform.localPosition=restPosition+Vector3.up*(
-                breath*breathingAmplitude*.55f*idle+bodyBounce*Mathf.Lerp(.010f,.018f,run)*amount*grounded-.095f*run*amount*grounded-.065f*land);
+                breath*breathingAmplitude*.55f*idle+Mathf.Lerp(-bodyBounce*.026f,bodyBounce*.018f,run)*amount*grounded-.095f*run*amount*grounded-.065f*land);
             // The stylized run leans forward, recovers upright in air, and banks gently into turns.
             transform.localRotation=restRotation*Quaternion.Euler(4f*air+bodyBounce*1.1f*amount*grounded, counterTwist*3.2f, sway*.3f*idle+turnLean*.6f+torsoSway*1.4f);
             foreach(var j in joints) if(j.bone) j.bone.localRotation=j.rest;
@@ -303,17 +311,17 @@ namespace Game.ThirdPerson
             Rotate(4,-8f-38f*run*amount-20f*air-recoveryR*amount*12f+wave*4f*amount*grounded,0f);
             Rotate(5,-8f-38f*run*amount-20f*air-recoveryL*amount*12f-wave*4f*amount*grounded,0f);
             float armBlend = sprintPose;
-            GuideRunningArm(2, 4, leftHand, leftCycle, armBlend);
-            GuideRunningArm(3, 5, rightHand, rightCycle, armBlend);
+            GuideStrideArm(2, 4, leftHand, leftCycle, run, weight);
+            GuideStrideArm(3, 5, rightHand, rightCycle, run, weight);
             if (fingers != null)
                 foreach (var finger in fingers)
                     if (finger.bone) finger.bone.localRotation = finger.rest *
                         Quaternion.AngleAxis(Mathf.Lerp(finger.relaxedCurl, finger.sprintCurl, armBlend), finger.curlAxis);
             float tuck=air*(vertical>0f ? 23f : 10f);
-            float thighL = Mathf.Lerp(wave * walkingAmplitude, sprintThigh.Evaluate(leftCycle), run) * weight;
-            float thighR = Mathf.Lerp(-wave * walkingAmplitude, sprintThigh.Evaluate(rightCycle), run) * weight;
-            float kneeL = Mathf.Lerp(recoveryL * 32f, sprintKnee.Evaluate(leftCycle), run) * weight;
-            float kneeR = Mathf.Lerp(recoveryR * 32f, sprintKnee.Evaluate(rightCycle), run) * weight;
+            float thighL = Mathf.Lerp(walkThigh.Evaluate(leftCycle) * (walkingAmplitude / 32f), sprintThigh.Evaluate(leftCycle), run) * weight;
+            float thighR = Mathf.Lerp(walkThigh.Evaluate(rightCycle) * (walkingAmplitude / 32f), sprintThigh.Evaluate(rightCycle), run) * weight;
+            float kneeL = Mathf.Lerp(walkKnee.Evaluate(leftCycle), sprintKnee.Evaluate(leftCycle), run) * weight;
+            float kneeR = Mathf.Lerp(walkKnee.Evaluate(rightCycle), sprintKnee.Evaluate(rightCycle), run) * weight;
             for(int i=6;i<=10;i+=4)
             {
                 Rotate(i,thighL-tuck,0f);
@@ -323,15 +331,15 @@ namespace Game.ThirdPerson
             }
         }
         // Set the swing plane from the elbow and wrist, independent of the imported arm axes.
-        void GuideRunningArm(int upperIndex, int lowerIndex, Transform hand, float cycle, float blend)
+        void GuideStrideArm(int upperIndex, int lowerIndex, Transform hand, float cycle, float run, float blend)
         {
             var upper = joints[upperIndex];
             var elbow = joints[lowerIndex].bone;
             if (blend <= 0f || !upper.bone || !elbow || !hand) return;
-            float angle = sprintUpperArm.Evaluate(cycle) * Mathf.Deg2Rad;
+            float angle = Mathf.Lerp(walkUpperArm.Evaluate(cycle), sprintUpperArm.Evaluate(cycle), run) * Mathf.Deg2Rad;
             AimSegment(upper.bone, elbow, new Vector3(upper.side * .16f, -Mathf.Cos(angle), Mathf.Sin(angle)), blend);
-            float forearm = sprintForearm.Evaluate(cycle) * Mathf.Deg2Rad;
-            AimSegment(elbow, hand, new Vector3(-upper.side * .06f, -Mathf.Cos(forearm), Mathf.Sin(forearm)), blend);
+            float forearm = Mathf.Lerp(walkForearm.Evaluate(cycle), sprintForearm.Evaluate(cycle), run) * Mathf.Deg2Rad;
+            AimSegment(elbow, hand, new Vector3(upper.side * Mathf.Lerp(.06f, -.06f, run), -Mathf.Cos(forearm), Mathf.Sin(forearm)), blend);
         }
 
         void AimSegment(Transform bone, Transform end, Vector3 localDirection, float blend)
@@ -349,6 +357,8 @@ namespace Game.ThirdPerson
         }
         void OnDisable()
         {
+            SetBlinkWeight(0f);
+            RestoreWalkDetails();
             trackingJump = false;
             jumpFollow = 0f;
             if (waist) waist.localRotation = waistRest;

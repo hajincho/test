@@ -78,9 +78,10 @@ MonoBehaviour:
   flightMode: 0
   flySpeed: 20
   fastFlySpeed: 80
-  sprintSpeed: 4
+  sprintSpeed: 5.5
   jumpHeight: 0.8
   gravity: -9.81
+  jumpGravityScale: 1.9
   turnSpeed: 12
 --- !u!1 &1514756417159590656
 GameObject:
@@ -170,7 +171,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5543698012466972685}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1135,7 +1136,7 @@ MonoBehaviour:
     pitchAxis: {x: 1, y: 3.0252242e-10, z: -0.000000028812496}
     rollAxis: {x: 0.0000000288125, y: -0.00000005552368, z: 1}
     side: 1
-  walkingAmplitude: 24
+  walkingAmplitude: 32
   breathingAmplitude: 0.008
   currentSpeed: 0
   motionPhase: 0
@@ -1153,15 +1154,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Game.ThirdPerson.CharacterGroundAndLook
   playerRoot: {fileID: 0}
   visualRoot: {fileID: 0}
-  lookCamera: {fileID: 0}
   groundLayers:
     serializedVersion: 2
     m_Bits: 4294967295
   footWeight: 1
-  lookWeight: 0.75
   maxFootAdjustment: 0.3
-  maxHeadYaw: 55
-  maxHeadPitch: 35
 --- !u!4 &2543079909776394645 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8257545706817639454, guid: 2c5c8df9bb82ef24288c79ac89713d47, type: 3}
