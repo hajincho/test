@@ -6,4 +6,6 @@ Initialising UDS system complete:
   - Command buffer size: 8192
   - Hashmap size: 4194304
   - Service connected: false
+[Warning] Evict-before-extend: reclaimed cold content for 2815548-byte alloc
+[Warning] Evict-before-extend: reclaimed cold content for 33574136-byte alloc
 Shut down UDS service system complete
