@@ -104,6 +104,7 @@ namespace Game.ThirdPerson
             turnLean = 0f;
             CacheSprintCycle();
             CacheUpperBody();
+            groundPose = GetComponent<CharacterGroundAndLook>();
             CacheCloth();
             CacheWalkDetails();
             CacheBlink();
@@ -162,6 +163,9 @@ namespace Game.ThirdPerson
             clothAxes = new Vector3[ids.Length];
             capeFlareAxes = new Vector3[ids.Length];
             capeTrailAngles = new float[ids.Length];
+            panels = new CapePanel[ids.Length / 2];
+            leftToe = Array.Find(all, t => t.name == "Bone_012");
+            rightToe = Array.Find(all, t => t.name == "Bone_022");
             for (int i = 0; i < ids.Length; i++)
             {
                 Transform bone = Array.Find(all, t => t.name == "Bone_" + ids[i].ToString("D3"));
@@ -175,9 +179,16 @@ namespace Game.ThirdPerson
                 Vector3 radial = bone.position - bone.parent.position;
                 Vector3 axis = Vector3.Cross(-transform.up, Vector3.ProjectOnPlane(radial, transform.up));
                 capeFlareAxes[i] = bone.InverseTransformDirection(axis.normalized);
+                if (i % 2 == 0)
+                {
+                    panels[i / 2].restPosition = bone.localPosition;
+                    panels[i / 2].outward = Vector3.ProjectOnPlane(transform.InverseTransformDirection(radial), Vector3.up).normalized;
+                    panels[i / 2].front = Mathf.SmoothStep(0f, 1f, Mathf.InverseLerp(.05f, .65f, panels[i / 2].outward.z));
+                }
                 capeTrailAngles[i] = rear * (i % 2 == 0 ? 27f : 2f);
                 clothAxes[i] = bone.InverseTransformDirection(transform.right).normalized;
             }
+            BindCapeWaist();
             // Long back hair chains; facial and head bones remain untouched.
             int[] hairIds = { 175, 176, 177, 181, 182, 183, 187, 188, 189,
                               217, 218, 219, 226, 227, 228 };
@@ -205,12 +216,14 @@ namespace Game.ThirdPerson
             for (int i = 0; i < clothBones.Length; i++)
             {
                 if (!clothBones[i]) continue;
+                if (i % 2 == 0) clothBones[i].localPosition = panels[i / 2].restPosition;
                 float chain = i / 2;
                 float wave = Mathf.Sin(clock * (1.3f + .5f * windBlend) + chain * .55f - (i % 2) * .55f);
                 float gust = Mathf.Sin(clock * .43f + chain * .3f);
                 float downwardLook = motor && motor.cameraTransform ? Mathf.Clamp01(-motor.cameraTransform.forward.y) : 0f;
                 float lift = (4f + capeTrailAngles[i]) * windBlend + 1.2f * downwardLook;
                 float angle = wave * (.18f + .35f * windBlend) + gust * .12f + lift;
+                angle *= 1f - panels[i / 2].front * runBlend * (1f - airBlend);
                 clothBones[i].localRotation = clothRest[i] * Quaternion.AngleAxis(angle, clothAxes[i]);
                 if (i % 2 == 0 && jumpFollow > 0f && capeFlareAxes[i].sqrMagnitude > .5f)
                     clothBones[i].localRotation *= Quaternion.AngleAxis(19f * jumpFollow, capeFlareAxes[i]);
@@ -235,7 +248,7 @@ namespace Game.ThirdPerson
             }
         }
         public string MotionState { get; private set; } = "Idle";
-        float runBlend, airBlend, landing;
+        float runBlend, airBlend, landing, uphillBlend;
         float lastYaw, turnLean;
         bool wasGrounded = true;
         void LateUpdate()
@@ -254,6 +267,8 @@ namespace Game.ThirdPerson
             movement=Mathf.Lerp(movement,target,1f-Mathf.Exp(-7f*dt));
             runBlend=Mathf.Lerp(runBlend,run,1f-Mathf.Exp(-8f*dt));
             airBlend=Mathf.Lerp(airBlend,grounded ? 0f : 1f,1f-Mathf.Exp(-12f*dt));
+            float climb = motor ? Mathf.SmoothStep(0f, 1f, Mathf.InverseLerp(3f, 28f, motor.UphillAngle)) : 0f;
+            uphillBlend = Mathf.Lerp(uphillBlend, climb, 1f - Mathf.Exp(-9f * dt));
             clock+=dt;
             // Match cadence to the locomotion speed and ease into a turn instead of snapping.
             float yaw = transform.parent ? transform.parent.eulerAngles.y : transform.eulerAngles.y;
@@ -271,6 +286,7 @@ namespace Game.ThirdPerson
             ApplyReferenceJump(dt);
             ApplyClothWind(dt);
             ApplyWalkDetails(dt);
+            if (!groundPose || !groundPose.isActiveAndEnabled) OpenCapeForStride();
             UpdateIdleBlink(dt);
         }
         // Kept for the existing pose-preview and skin-validation editor tools.
@@ -303,9 +319,11 @@ namespace Game.ThirdPerson
             transform.localRotation=restRotation*Quaternion.Euler(4f*air+bodyBounce*1.1f*amount*grounded, counterTwist*3.2f, sway*.3f*idle+turnLean*.6f+torsoSway*1.4f);
             foreach(var j in joints) if(j.bone) j.bone.localRotation=j.rest;
             float sprintPose = run * amount * grounded;
-            if (waist) waist.localRotation = waistRest * Quaternion.AngleAxis(45.5f * sprintPose, waistPitchAxis);
+            float climbPose = uphillBlend * weight;
+            float climbLean = Mathf.Lerp(14f, 7f, run) * climbPose;
+            if (waist) waist.localRotation = waistRest * Quaternion.AngleAxis(45.5f * sprintPose + climbLean, waistPitchAxis);
             Rotate(0,breath*.7f+18f*sprintPose+5f*land+bodyBounce*1.4f*amount*grounded,counterTwist*2.7f+sway*.3f*idle);
-            Rotate(1,-breath*.12f-51.5f*sprintPose-bodyBounce*1.6f*amount*grounded,-sway*.1f*idle-counterTwist*2.7f-torsoSway*1.4f);
+            Rotate(1,-breath*.12f-51.5f*sprintPose-.65f*climbLean-bodyBounce*1.6f*amount*grounded,-sway*.1f*idle-counterTwist*2.7f-torsoSway*1.4f);
             Rotate(2,-wave*arms-15f*air,-joints[2].side*(35f-breath*.8f-7f*air));
             Rotate(3,wave*arms-15f*air,-joints[3].side*(35f-breath*.8f-7f*air));
             Rotate(4,-8f-38f*run*amount-20f*air-recoveryR*amount*12f+wave*4f*amount*grounded,0f);
@@ -322,6 +340,15 @@ namespace Game.ThirdPerson
             float thighR = Mathf.Lerp(walkThigh.Evaluate(rightCycle) * (walkingAmplitude / 32f), sprintThigh.Evaluate(rightCycle), run) * weight;
             float kneeL = Mathf.Lerp(walkKnee.Evaluate(leftCycle), sprintKnee.Evaluate(leftCycle), run) * weight;
             float kneeR = Mathf.Lerp(walkKnee.Evaluate(rightCycle), sprintKnee.Evaluate(rightCycle), run) * weight;
+            // Lift each advancing knee and tuck its heel while the opposite foot supports the climb.
+            float stepL = climbPose * recoveryL;
+            float stepR = climbPose * recoveryR;
+            float kneeLift = Mathf.Lerp(23f, 9f, run);
+            float heelTuck = Mathf.Lerp(29f, 14f, run);
+            thighL -= kneeLift * stepL;
+            thighR -= kneeLift * stepR;
+            kneeL += heelTuck * stepL;
+            kneeR += heelTuck * stepR;
             for(int i=6;i<=10;i+=4)
             {
                 Rotate(i,thighL-tuck,0f);
@@ -360,14 +387,20 @@ namespace Game.ThirdPerson
             SetBlinkWeight(0f);
             RestoreWalkDetails();
             trackingJump = false;
+            uphillBlend = 0f;
             jumpFollow = 0f;
             if (waist) waist.localRotation = waistRest;
+            if (capeBelt) { capeBelt.localPosition = Vector3.zero; capeBelt.localScale = Vector3.one; }
             if (joints != null) foreach (var j in joints)
                 if (j.bone) j.bone.localRotation = j.rest;
             if (fingers != null) foreach (var finger in fingers)
                 if (finger.bone) finger.bone.localRotation = finger.rest;
             if (clothBones != null) for (int i = 0; i < clothBones.Length; i++)
-                if (clothBones[i]) clothBones[i].localRotation = clothRest[i];
+                if (clothBones[i])
+                {
+                    clothBones[i].localRotation = clothRest[i];
+                    if (i % 2 == 0) clothBones[i].localPosition = panels[i / 2].restPosition;
+                }
             if (hairBones != null) for (int i = 0; i < hairBones.Length; i++)
                 if (hairBones[i]) hairBones[i].localRotation = hairRest[i];
             transform.localPosition = restPosition;

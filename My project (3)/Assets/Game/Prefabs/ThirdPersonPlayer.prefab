@@ -76,7 +76,7 @@ MonoBehaviour:
   visualRoot: {fileID: 7695297555748132233}
   walkSpeed: 4
   sprintSpeed: 7
-  jumpHeight: 1.2
+  jumpHeight: 1.44
   gravity: -22
   turnSpeed: 12
 --- !u!1 &3530056499503828963

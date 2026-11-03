@@ -43,25 +43,28 @@ namespace Game.ThirdPerson
             var found = new List<HangingJoint>();
             // The belt plate and its pendant have different pivots. The head ornaments
             // and neck ribbon have shorter chains than the hanging strip at the waist.
-            AddChain(bones, found, new[] { 28, 29 }, .40f, false);
-            AddChain(bones, found, new[] { 31, 32, 33 }, 1.05f, false);
-            AddChain(bones, found, new[] { 201, 202 }, .43f, false);
-            AddChain(bones, found, new[] { 205, 206 }, .43f, false);
-            AddChain(bones, found, new[] { 235, 236 }, .52f, false);
+            AddChain(bones, found, new[] { 28, 29 }, .40f);
+            AddChain(bones, found, new[] { 31, 32, 33 }, 1.05f);
+            AddChain(bones, found, new[] { 201, 202 }, .43f);
+            AddChain(bones, found, new[] { 205, 206 }, .43f);
+            AddChain(bones, found, new[] { 235, 236 }, .52f);
             // One lower hinge per panel lets the hem lag behind the stiffer cloth at the belt.
-            foreach (int id in new[] { 38, 48, 59, 70, 81, 92, 103, 114, 125, 136, 147, 158 })
-                AddChain(bones, found, new[] { id }, 1f, true);
+            int[] hemIds = { 38, 48, 59, 70, 81, 92, 103, 114, 125, 136, 147, 158 };
+            for (int i = 0; i < hemIds.Length; i++)
+                AddChain(bones, found, new[] { hemIds[i] }, 1f, i);
             hanging = found.ToArray();
             follow = followVelocity = Vector2.zero;
         }
 
-        void AddChain(Transform[] bones, List<HangingJoint> found, int[] ids, float scale, bool hem)
+        void AddChain(Transform[] bones, List<HangingJoint> found, int[] ids, float scale, int panel = -1)
         {
             for (int i = 0; i < ids.Length; i++)
             {
                 string name = "Bone_" + ids[i].ToString("D3");
                 var bone = Array.Find(bones, b => b.name == name);
                 if (!bone) continue;
+                bool hem = panel >= 0;
+                if (hem) panels[panel].hem = bone;
                 found.Add(new HangingJoint {
                     bone = bone, rest = bone.localRotation, hem = hem,
                     pitch = bone.InverseTransformDirection(transform.right).normalized,
