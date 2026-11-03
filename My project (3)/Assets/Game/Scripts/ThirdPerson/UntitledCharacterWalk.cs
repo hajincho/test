@@ -16,6 +16,7 @@ namespace Game.ThirdPerson
             public Quaternion rest;
             public Vector3 pitch, roll;
             public float amplitude, phaseLag, side;
+            public int panel;
             public bool hem;
         }
         HangingJoint[] hanging;
@@ -66,7 +67,7 @@ namespace Game.ThirdPerson
                 bool hem = panel >= 0;
                 if (hem) panels[panel].hem = bone;
                 found.Add(new HangingJoint {
-                    bone = bone, rest = bone.localRotation, hem = hem,
+                    bone = bone, rest = bone.localRotation, hem = hem, panel = panel,
                     pitch = bone.InverseTransformDirection(transform.right).normalized,
                     roll = bone.InverseTransformDirection(transform.forward).normalized,
                     amplitude = scale * (i == 0 ? 1f : .65f),
@@ -113,8 +114,9 @@ namespace Game.ThirdPerson
             for (int i = 0; i < clothBones.Length; i++)
             {
                 if (!clothBones[i]) continue;
-                float gain = i % 2 == 0 ? .45f : .14f;
-                float pitch = gait * (capeTrailAngles[i] * .17f + gain * hemTrace.Evaluate(phase)) - drag * gain;
+                float back = 1f - panels[i / 2].front;
+                float gain = (i % 2 == 0 ? .45f : .14f) * (1f - .75f * back);
+                float pitch = gait * (capeTrailAngles[i] * Mathf.Lerp(.17f, .05f, back) + gain * hemTrace.Evaluate(phase)) - drag * gain;
                 clothBones[i].localRotation *= Quaternion.AngleAxis(pitch, clothAxes[i]);
             }
             foreach (var j in hanging)
@@ -124,7 +126,8 @@ namespace Game.ThirdPerson
                 float trace = j.hem ? hemTrace.Evaluate(t) : pendantTrace.Evaluate(t);
                 float sway = Mathf.Sin(clock * 1.6f - j.phaseLag * 8f);
                 float detailWeight = j.hem ? gait : groundedMotion;
-                float pitch = j.amplitude * (detailWeight * trace + .55f * sway - drag * 4f + 2f * jumpFollow);
+                float backStiffness = j.hem && j.panel >= 0 ? 1f - .72f * (1f - panels[j.panel].front) : 1f;
+                float pitch = backStiffness * j.amplitude * (detailWeight * trace + .55f * sway - drag * 4f + 2f * jumpFollow);
                 // The weighted belt stays put. Let the hem and hanging tips breathe a little at rest.
                 float lag = 9f * j.phaseLag + j.side * .36f;
                 float idleTip = Mathf.Sin(clock * (j.hem ? 1.05f : 1.56f) - lag)
@@ -132,7 +135,7 @@ namespace Game.ThirdPerson
                 float roll = j.amplitude * (.56f * follow.y + detailWeight * 1.7f * Mathf.Sin(2f * Mathf.PI * t)
                            + idle * idleTip * (j.hem ? 1.05f : 2.25f));
                 pitch += idle * j.amplitude * .65f * Mathf.Sin(clock * 1.31f - lag);
-                j.bone.localRotation = j.rest * Quaternion.AngleAxis(pitch, j.pitch) * Quaternion.AngleAxis(roll, j.roll);
+                j.bone.localRotation = j.rest * Quaternion.AngleAxis(pitch, j.pitch) * Quaternion.AngleAxis(roll * backStiffness, j.roll);
             }
         }
 

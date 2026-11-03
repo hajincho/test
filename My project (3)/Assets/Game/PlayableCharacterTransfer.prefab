@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 323284017955152621}
   - component: {fileID: 1946411175064826716}
   - component: {fileID: 6071574224090169529}
+  - component: {fileID: 4050461033132802287}
   m_Layer: 2
   m_Name: Player
   m_TagString: Player
@@ -28,7 +29,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -95.75, y: -21.359377, z: 110.77}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6236508532406943959}
@@ -74,15 +75,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Game.ThirdPerson.ThirdPersonMotor
   cameraTransform: {fileID: 7488098582314170715}
   visualRoot: {fileID: 6236508532406943959}
-  walkSpeed: 1.2
+  walkSpeed: 2.4
   flightMode: 0
   flySpeed: 20
   fastFlySpeed: 80
-  sprintSpeed: 5.5
-  jumpHeight: 0.96
-  gravity: -9.81
+  sprintSpeed: 11
+  jumpHeight: 1.92
+  gravity: -19.62
   jumpGravityScale: 1.9
   turnSpeed: 12
+--- !u!114 &4050461033132802287
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 629680552935952474}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77aa3b5cdc965ee4f8db3de11601c023, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Game.ThirdPerson.CharacterAppearanceSwitch
+  blenderCharacterPrefab: {fileID: 3799640898499924972, guid: b5417a112580ab146b4e21c37a1a24b3, type: 3}
 --- !u!1 &1514756417159590656
 GameObject:
   m_ObjectHideFlags: 0
@@ -493,14 +507,14 @@ MonoBehaviour:
   target: {fileID: 5208061989759328426}
   playerRoot: {fileID: 323284017955152621}
   characterRoot: {fileID: 3001404128784008604}
-  distance: 5
+  distance: 10
   minDistance: 0
-  maxDistance: 9
+  maxDistance: 18
   pitch: 18
   yaw: 330.62003
   mouseSensitivity: 0.15
-  zoomStep: 12
-  firstPersonThreshold: 0.2
+  zoomStep: 24
+  firstPersonThreshold: 0.4
   collisionMask:
     serializedVersion: 2
     m_Bits: 4294967291
@@ -1158,7 +1172,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   footWeight: 1
-  maxFootAdjustment: 0.3
+  maxFootAdjustment: 0.6
 --- !u!4 &2543079909776394645 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8257545706817639454, guid: 2c5c8df9bb82ef24288c79ac89713d47, type: 3}

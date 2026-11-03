@@ -117,7 +117,7 @@ namespace Game.ThirdPerson
                 float onGround = best.point.y + leg.restFootHeight;
                 float delta = onGround - foot.y;
                 // Let a swinging foot lift; correct only the planted part of the stride.
-                float contact = 1f - Mathf.InverseLerp(.04f, .22f, Mathf.Max(0f, -delta));
+                float contact = 1f - Mathf.InverseLerp(.04f * playerRoot.lossyScale.y, .22f * playerRoot.lossyScale.y, Mathf.Max(0f, -delta));
                 desiredWeight = footWeight * groundedBlend * contact;
                 desiredHeight = foot.y + Mathf.Clamp(delta, -maxFootAdjustment, maxFootAdjustment);
                 normal = best.normal;
@@ -171,8 +171,9 @@ namespace Game.ThirdPerson
 
         private bool ProbeGround(Vector3 foot, out RaycastHit best)
         {
-            Vector3 origin = foot + Vector3.up * .45f;
-            int count = Physics.RaycastNonAlloc(origin, Vector3.down, hits, 1.2f, groundLayers, QueryTriggerInteraction.Ignore);
+            float scale = playerRoot.lossyScale.y;
+            Vector3 origin = foot + Vector3.up * (.45f * scale);
+            int count = Physics.RaycastNonAlloc(origin, Vector3.down, hits, 1.2f * scale, groundLayers, QueryTriggerInteraction.Ignore);
             float closest = float.PositiveInfinity;
             best = default;
             for (int i = 0; i < count; i++)
@@ -190,7 +191,7 @@ namespace Game.ThirdPerson
         {
             // Widen and slightly stagger the stance so uphill and downhill contacts have room.
             Vector3 rest = visualRoot.TransformPoint(leg.restAnkle);
-            Vector3 spread = visualRoot.right * (.075f * side) - visualRoot.forward * (.08f * side);
+            Vector3 spread = (visualRoot.right * (.075f * side) - visualRoot.forward * (.08f * side)) * playerRoot.lossyScale.y;
             Vector3 point = rest + spread * stanceWeight;
             if (!ProbeGround(point, out RaycastHit hit) || hit.normal.y < .68f) return false;
             float y = hit.point.y + leg.restFootHeight / hit.normal.y;
@@ -217,17 +218,17 @@ namespace Game.ThirdPerson
             if (!pelvis || !pelvis.parent || left == null || right == null || !motor) return;
             pelvis.localPosition = pelvisRest;
             float targetWeight = 0f;
-            if (motor.Grounded && !motor.IsJumping && (motor.PlanarSpeed < .65f || stanceWeight > .005f)
+            if (motor.Grounded && !motor.IsJumping && (motor.PlanarSpeed < .65f * playerRoot.lossyScale.y || stanceWeight > .005f)
                 && SampleSupport(left, -1f) && SampleSupport(right, 1f))
             {
                 supported = true;
                 float angle = Vector3.Angle(Vector3.up, (left.supportNormal + right.supportNormal).normalized);
                 targetWeight = Mathf.SmoothStep(0f, 1f, Mathf.InverseLerp(3f, 14f, angle))
-                             * (1f - Mathf.InverseLerp(.06f, .65f, motor.PlanarSpeed)) * footWeight;
+                             * (1f - Mathf.InverseLerp(.06f * playerRoot.lossyScale.y, .65f * playerRoot.lossyScale.y, motor.PlanarSpeed)) * footWeight;
             }
             float blend = 1f - Mathf.Exp(-13f * dt);
             stanceWeight = Mathf.Lerp(stanceWeight, targetWeight, blend);
-            float drop = supported ? Mathf.Clamp(Mathf.Max(DropForReach(left), DropForReach(right)), 0f, .22f) : 0f;
+            float drop = supported ? Mathf.Clamp(Mathf.Max(DropForReach(left), DropForReach(right)), 0f, .22f * playerRoot.lossyScale.y) : 0f;
             pelvisDrop = motor.Grounded ? Mathf.Lerp(pelvisDrop, drop * stanceWeight, blend) : 0f;
             pelvis.localPosition += pelvis.parent.InverseTransformVector(Vector3.down * pelvisDrop);
         }

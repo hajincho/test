@@ -32,13 +32,21 @@ namespace Game.ThirdPerson
             CurrentDistance = distance;
             oldLock = Cursor.lockState; oldVisible = Cursor.visible;
             if (Application.isPlaying) { Cursor.lockState = CursorLockMode.Locked; Cursor.visible = false; }
-            if (characterRoot)
-            {
-                characterRenderers = characterRoot.GetComponentsInChildren<Renderer>(true);
-                originalShadows = new ShadowCastingMode[characterRenderers.Length];
-                for (int i=0;i<characterRenderers.Length;i++) originalShadows[i]=characterRenderers[i].shadowCastingMode;
-            }
+            SetCharacterRoot(characterRoot);
         }
+
+        public void SetCharacterRoot(Transform root)
+        {
+            SetHidden(false);
+            characterRoot = root;
+            characterRenderers = root ? root.GetComponentsInChildren<Renderer>(true) : null;
+            if (characterRenderers == null) return;
+            originalShadows = new ShadowCastingMode[characterRenderers.Length];
+            for (int i = 0; i < characterRenderers.Length; i++)
+                originalShadows[i] = characterRenderers[i].shadowCastingMode;
+            SetHidden(IsFirstPerson);
+        }
+
         public void Zoom(float steps) { distance = Mathf.Clamp(distance - steps * zoomStep, minDistance, maxDistance); }
         public void Look(Vector2 delta) { yaw += delta.x; pitch = Mathf.Clamp(pitch - delta.y, -90f, 85f); }
         void LateUpdate()

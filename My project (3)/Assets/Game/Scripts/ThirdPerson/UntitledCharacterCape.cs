@@ -55,7 +55,6 @@ namespace Game.ThirdPerson
             var toeL = toModel.MultiplyPoint3x4(leftToe.position);
             var toeR = toModel.MultiplyPoint3x4(rightToe.position);
             float running = runBlend * GroundStrideWeight;
-            float settle = 1f - Mathf.Exp(-Mathf.Lerp(12f, 8f, running) * Time.deltaTime);
             // Leave a little ease at the waist while settling into a planted pose.
             float clearance = Mathf.Max(.38f * (1f - airBlend), Mathf.Clamp01(GroundStrideWeight * 3f));
             if (capeBelt)
@@ -79,7 +78,9 @@ namespace Game.ThirdPerson
                 float required = Mathf.Atan(Mathf.Max(knees, Mathf.Max(ankles, toes))) * Mathf.Rad2Deg;
                 // Make room immediately, then let the fabric fall as the leg passes.
                 ref CapePanel panel = ref panels[i / 2];
-                required = Mathf.Max(required, Mathf.Lerp(panel.angle, required, settle));
+                float rear = 1f - panel.front;
+                float response = 1f - Mathf.Exp(-Mathf.Lerp(16f, 7f, rear) * Time.deltaTime);
+                required = Mathf.Lerp(panel.angle, required, response);
                 panel.angle = required;
                 var drape = toModel.MultiplyPoint3x4(next.position) - pivot;
                 float current = Mathf.Atan2(Vector3.Dot(drape, outward), -drape.y) * Mathf.Rad2Deg;

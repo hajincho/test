@@ -25,6 +25,22 @@ namespace Game.ThirdPerson
         public bool Grounded { get; private set; }
         public float VerticalSpeed => verticalSpeed;
         public float PlanarSpeed { get; private set; }
+        public enum Transition { None, SprintStart, SprintStop, WalkStop, AirStop }
+        public Transition CurrentTransition { get; private set; }
+        public int TransitionSequence { get; private set; }
+        public float TransitionProgress => transitionDuration > 0f ? Mathf.Clamp01(transitionTime / transitionDuration) : 1f;
+        float transitionTime, transitionDuration;
+        Vector3 planarVelocity;
+        bool previousMove, previousSprint, airStopped;
+
+        void BeginTransition(Transition kind, float duration)
+        {
+            CurrentTransition = kind;
+            TransitionSequence++;
+            transitionTime = 0f;
+            transitionDuration = duration;
+        }
+
         public float UphillAngle { get; private set; }
         public bool Sprinting { get; private set; }
         CharacterController controller;
@@ -58,7 +74,32 @@ namespace Game.ThirdPerson
             // Camera yaw remains well-defined even when looking straight up.
             float yaw = cameraTransform ? cameraTransform.eulerAngles.y : 0f;
             Vector3 direction = Quaternion.Euler(0f, yaw, 0f) * new Vector3(input.x, 0f, input.y);
+            bool moving = input.sqrMagnitude > .001f;
             Grounded = controller.isGrounded;
+            bool wasJumping = IsJumping;
+            transitionTime += dt;
+            if (CurrentTransition != Transition.None && transitionTime >= transitionDuration)
+                CurrentTransition = Transition.None;
+            if (moving)
+            {
+                if (Grounded && sprint && (!previousMove || !previousSprint))
+                    BeginTransition(Transition.SprintStart, .24f);
+                else if (Grounded && !sprint && previousSprint && previousMove)
+                    BeginTransition(Transition.SprintStop, .42f);
+                else if (!previousMove && CurrentTransition != Transition.SprintStart)
+                    CurrentTransition = Transition.None;
+                airStopped = false;
+            }
+            else if (previousMove)
+            {
+                if (!Grounded || IsJumping) airStopped = true;
+                else if (PlanarSpeed > walkSpeed * 1.35f) BeginTransition(Transition.SprintStop, .48f);
+                else if (PlanarSpeed > .08f) BeginTransition(Transition.WalkStop, .28f);
+            }
+            if (moving && (CurrentTransition == Transition.WalkStop || CurrentTransition == Transition.AirStop))
+                CurrentTransition = Transition.None;
+            previousMove = moving;
+            previousSprint = sprint;
             if (Grounded) lastGrounded = Time.time;
             if (jump) lastJumpPressed = Time.time;
             if (Grounded && verticalSpeed < 0f) verticalSpeed = -2f;
@@ -67,6 +108,8 @@ namespace Game.ThirdPerson
                 launchSpeed = Mathf.Sqrt(2f * Mathf.Abs(gravity) * Mathf.Max(.1f, jumpGravityScale) * jumpHeight);
                 verticalSpeed = launchSpeed;
                 IsJumping = true;
+                CurrentTransition = Transition.None;
+                airStopped = false;
                 lastJumpPressed = -10f; lastGrounded = -10f; Grounded = false;
             }
             float previousVertical = verticalSpeed;
@@ -74,13 +117,31 @@ namespace Game.ThirdPerson
             verticalSpeed = Mathf.Max(verticalSpeed + acceleration * dt, -50f);
             float verticalDisplacement = (previousVertical + verticalSpeed) * .5f * dt;
             Vector3 before = transform.position;
-            var flags = controller.Move(direction * (sprint ? sprintSpeed : walkSpeed) * dt + Vector3.up * verticalDisplacement);
+            float targetSpeed = sprint ? sprintSpeed : walkSpeed;
+            // The reference has a brief push-off before settling into the running cycle.
+            if (CurrentTransition == Transition.SprintStart && moving && Grounded)
+                targetSpeed *= 1f + .18f * (1f - Mathf.SmoothStep(0f, 1f, TransitionProgress));
+            Vector3 desiredVelocity = direction * targetSpeed;
+            float changeTime = moving ? (sprint ? .075f : .10f)
+                : (!Grounded ? .16f : planarVelocity.magnitude > walkSpeed * 1.35f ? .20f : .11f);
+            float referenceSpeed = moving ? targetSpeed
+                : CurrentTransition == Transition.WalkStop ? walkSpeed : sprintSpeed;
+            planarVelocity = Vector3.MoveTowards(planarVelocity, desiredVelocity,
+                Mathf.Max(.1f, referenceSpeed) * dt / changeTime);
+            var flags = controller.Move(planarVelocity * dt + Vector3.up * verticalDisplacement);
             if ((flags & CollisionFlags.Above) != 0 && verticalSpeed > 0f) verticalSpeed = 0f;
             Grounded = (flags & CollisionFlags.Below) != 0;
-            if (Grounded) IsJumping = false;
+            if (Grounded)
+            {
+                if (wasJumping && airStopped && !moving) BeginTransition(Transition.AirStop, .38f);
+                IsJumping = false;
+                airStopped = false;
+            }
             Vector3 delta = transform.position - before;
             float planarDistance = new Vector2(delta.x, delta.z).magnitude;
             PlanarSpeed = planarDistance / dt;
+            if ((flags & CollisionFlags.Sides) != 0)
+                planarVelocity = new Vector3(delta.x, 0f, delta.z) / dt;
             UphillAngle = Grounded && input.sqrMagnitude > .001f && PlanarSpeed > .08f
                 ? Mathf.Atan2(Mathf.Max(0f, delta.y), planarDistance) * Mathf.Rad2Deg : 0f;
             Sprinting = sprint && PlanarSpeed > .1f;
@@ -89,7 +150,8 @@ namespace Game.ThirdPerson
             if (transform.position.y < spawn.y - 100f)
             {
                 controller.enabled = false; transform.position = spawn;
-                verticalSpeed = 0f; IsJumping = false; controller.enabled = true;
+                verticalSpeed = 0f; IsJumping = false; planarVelocity = Vector3.zero;
+                CurrentTransition = Transition.None; airStopped = false; controller.enabled = true;
             }
         }
     }
