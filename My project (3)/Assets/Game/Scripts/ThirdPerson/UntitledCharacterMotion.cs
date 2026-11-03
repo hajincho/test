@@ -183,6 +183,7 @@ namespace Game.ThirdPerson
                 {
                     panels[i / 2].restPosition = bone.localPosition;
                     panels[i / 2].outward = Vector3.ProjectOnPlane(transform.InverseTransformDirection(radial), Vector3.up).normalized;
+                    panels[i / 2].front = Mathf.SmoothStep(0f, 1f, Mathf.InverseLerp(.05f, .65f, panels[i / 2].outward.z));
                 }
                 capeTrailAngles[i] = rear * (i % 2 == 0 ? 27f : 2f);
                 clothAxes[i] = bone.InverseTransformDirection(transform.right).normalized;
@@ -222,6 +223,7 @@ namespace Game.ThirdPerson
                 float downwardLook = motor && motor.cameraTransform ? Mathf.Clamp01(-motor.cameraTransform.forward.y) : 0f;
                 float lift = (4f + capeTrailAngles[i]) * windBlend + 1.2f * downwardLook;
                 float angle = wave * (.18f + .35f * windBlend) + gust * .12f + lift;
+                angle *= 1f - panels[i / 2].front * runBlend * (1f - airBlend);
                 clothBones[i].localRotation = clothRest[i] * Quaternion.AngleAxis(angle, clothAxes[i]);
                 if (i % 2 == 0 && jumpFollow > 0f && capeFlareAxes[i].sqrMagnitude > .5f)
                     clothBones[i].localRotation *= Quaternion.AngleAxis(19f * jumpFollow, capeFlareAxes[i]);

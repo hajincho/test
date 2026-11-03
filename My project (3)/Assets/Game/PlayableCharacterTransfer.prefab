@@ -79,7 +79,7 @@ MonoBehaviour:
   flySpeed: 20
   fastFlySpeed: 80
   sprintSpeed: 5.5
-  jumpHeight: 0.8
+  jumpHeight: 0.96
   gravity: -9.81
   jumpGravityScale: 1.9
   turnSpeed: 12

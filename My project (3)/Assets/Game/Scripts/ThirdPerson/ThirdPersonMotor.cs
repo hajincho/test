@@ -13,7 +13,7 @@ namespace Game.ThirdPerson
         public float flySpeed = 20f;
         public float fastFlySpeed = 80f;
         public float sprintSpeed = 5.5f;
-        public float jumpHeight = .8f;
+        public float jumpHeight = .96f;
         public float gravity = -9.81f;
         // The observed flat-ground jump takes about 0.6 s. Apply the quicker arc only to an accepted jump.
         [Min(.1f)] public float jumpGravityScale = 1.9f;

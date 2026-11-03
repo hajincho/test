@@ -9,6 +9,7 @@ namespace Game.ThirdPerson
         {
             public Vector3 outward, restPosition;
             public float angle;
+            public float front;
         }
         CapePanel[] panels;
         Transform leftToe, rightToe, capeBelt;
@@ -53,6 +54,7 @@ namespace Game.ThirdPerson
             var toeL = toModel.MultiplyPoint3x4(leftToe.position);
             var toeR = toModel.MultiplyPoint3x4(rightToe.position);
             float settle = 1f - Mathf.Exp(-12f * Time.deltaTime);
+            float frontSettle = 1f - Mathf.Exp(-3f * Time.deltaTime);
             // Leave a little ease at the waist while settling into a planted pose.
             float clearance = Mathf.Max(.38f * (1f - airBlend), Mathf.Clamp01(GroundStrideWeight * 3f));
             if (capeBelt)
@@ -68,17 +70,20 @@ namespace Game.ThirdPerson
                 var next = clothBones[i + 1];
                 if (!belt || !next) continue;
                 var outward = panels[i / 2].outward;
+                float front = panels[i / 2].front * runBlend * (1f - airBlend);
                 var pivot = toModel.MultiplyPoint3x4(belt.position);
                 float knees = Mathf.Max(ClearanceSlope(kneeL - pivot, outward, .09f), ClearanceSlope(kneeR - pivot, outward, .09f));
                 float ankles = Mathf.Max(ClearanceSlope(ankleL - pivot, outward, .075f), ClearanceSlope(ankleR - pivot, outward, .075f));
                 float toes = Mathf.Max(ClearanceSlope(toeL - pivot, outward, .065f), ClearanceSlope(toeR - pivot, outward, .065f));
                 float required = Mathf.Atan(Mathf.Max(knees, Mathf.Max(ankles, toes))) * Mathf.Rad2Deg;
                 // Follow an approaching leg immediately, then let the panel settle after it passes.
-                required = Mathf.Max(required, Mathf.Lerp(panels[i / 2].angle, required, settle));
+                required = Mathf.Max(required, Mathf.Lerp(panels[i / 2].angle, required, Mathf.Lerp(settle, frontSettle, front)));
                 panels[i / 2].angle = required;
                 var drape = toModel.MultiplyPoint3x4(next.position) - pivot;
                 float current = Mathf.Atan2(Vector3.Dot(drape, outward), -drape.y) * Mathf.Rad2Deg;
-                float open = Mathf.Clamp(required + 7f - current, 0f, 90f) * clearance;
+                // The lifted front seam already clears part of the knee. Keep the fabric close
+                // and let it settle slowly between steps instead of swinging with every footfall.
+                float open = Mathf.Clamp(required * Mathf.Lerp(1f, .64f, front) + 7f * (1f - front) - current, 0f, 90f) * clearance;
                 var hinge = transform.TransformDirection(Vector3.Cross(Vector3.down, outward));
                 // The upper fabric lies close to the thigh. Give it room at the belt as well as the hem.
                 float lift = (.025f + .05f * Mathf.InverseLerp(0f, 65f, required)) * clearance;
