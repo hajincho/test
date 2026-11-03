@@ -9,8 +9,8 @@ namespace Game.ThirdPerson
         {
             public Vector3 outward, restPosition;
             public float angle;
-            public float holdTime;
             public float front;
+            public Transform hem;
         }
         CapePanel[] panels;
         Transform leftToe, rightToe, capeBelt;
@@ -54,8 +54,8 @@ namespace Game.ThirdPerson
             var ankleR = toModel.MultiplyPoint3x4(rightToe.parent.position);
             var toeL = toModel.MultiplyPoint3x4(leftToe.position);
             var toeR = toModel.MultiplyPoint3x4(rightToe.position);
-            float settle = 1f - Mathf.Exp(-12f * Time.deltaTime);
             float running = runBlend * GroundStrideWeight;
+            float settle = 1f - Mathf.Exp(-Mathf.Lerp(12f, 8f, running) * Time.deltaTime);
             // Leave a little ease at the waist while settling into a planted pose.
             float clearance = Mathf.Max(.38f * (1f - airBlend), Mathf.Clamp01(GroundStrideWeight * 3f));
             if (capeBelt)
@@ -77,25 +77,28 @@ namespace Game.ThirdPerson
                 float ankles = Mathf.Max(ClearanceSlope(ankleL - pivot, outward, .075f), ClearanceSlope(ankleR - pivot, outward, .075f));
                 float toes = Mathf.Max(ClearanceSlope(toeL - pivot, outward, .065f), ClearanceSlope(toeR - pivot, outward, .065f));
                 float required = Mathf.Atan(Mathf.Max(knees, Mathf.Max(ankles, toes))) * Mathf.Rad2Deg;
-                // Keep the clearance for a whole stride. Releasing after each knee passes
-                // makes the front and its adjoining panels pump even in a steady run.
+                // Make room immediately, then let the fabric fall as the leg passes.
                 ref CapePanel panel = ref panels[i / 2];
-                if (required >= panel.angle - 1f)
-                    panel.holdTime = .8f * running;
-                else
-                    panel.holdTime = Mathf.Max(0f, panel.holdTime - Time.deltaTime);
-                float release = panel.holdTime > 0f ? settle * (1f - running) : settle;
-                required = Mathf.Max(required, Mathf.Lerp(panel.angle, required, release));
+                required = Mathf.Max(required, Mathf.Lerp(panel.angle, required, settle));
                 panel.angle = required;
                 var drape = toModel.MultiplyPoint3x4(next.position) - pivot;
                 float current = Mathf.Atan2(Vector3.Dot(drape, outward), -drape.y) * Mathf.Rad2Deg;
                 // The lifted front seam already provides some of the clearance.
-                float open = Mathf.Clamp(required * Mathf.Lerp(1f, .64f, front) + 7f * (1f - front) - current, 0f, 90f) * clearance;
+                float open = Mathf.Clamp(required * Mathf.Lerp(1f, .83f, front) + 7f * (1f - front) - current, 0f, 90f) * clearance;
                 var hinge = transform.TransformDirection(Vector3.Cross(Vector3.down, outward));
-                // The upper fabric lies close to the thigh. Give it room at the belt as well as the hem.
                 float lift = (.025f + .05f * Mathf.InverseLerp(0f, 65f, required)) * clearance;
-                belt.position += transform.TransformVector(lift * (outward + Vector3.up));
+                // Give the leading knee room in front of the belt instead of lifting the whole panel.
+                var beltOffset = outward + 1.7f * front * Vector3.forward + (1f - .35f * front) * Vector3.up;
+                belt.position += transform.TransformVector(lift * beltOffset);
                 belt.rotation = Quaternion.AngleAxis(open, hinge) * belt.rotation;
+                // Keep the bend over the thigh. Below it the fabric hangs back down and the tip can sway.
+                float bend = open * front;
+                next.rotation = Quaternion.AngleAxis(-.45f * bend, hinge) * next.rotation;
+                if (panel.hem)
+                {
+                    float tipBend = .55f * bend + .24f * open * running * (1f - panel.front);
+                    panel.hem.rotation = Quaternion.AngleAxis(-tipBend, hinge) * panel.hem.rotation;
+                }
             }
         }
 
