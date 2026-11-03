@@ -37,6 +37,9 @@ namespace Game.ThirdPerson
         float capeFollow, capeFollowVelocity;
         Transform[] hairBones;
         Quaternion[] hairRest;
+        Transform[] hairTips;
+        Quaternion[] hairTipRest;
+        Vector3[] hairTipAxes;
         Vector3[] hairAxes, hairRollAxes;
         Transform leftHand, rightHand, waist;
         Quaternion waistRest;
@@ -207,6 +210,17 @@ namespace Game.ThirdPerson
                 hairRollAxes[i] = bone.InverseTransformDirection(transform.forward).normalized;
             }
             windBlend = 0f;
+            int[] tipIds = { 178, 184, 190, 220, 229 };
+            hairTips = new Transform[tipIds.Length];
+            hairTipRest = new Quaternion[tipIds.Length];
+            hairTipAxes = new Vector3[tipIds.Length];
+            for (int i=0; i<tipIds.Length; i++) {
+                var tip = Array.Find(all, t => t.name == "Bone_" + tipIds[i].ToString("D3"));
+                hairTips[i] = tip;
+                if (!tip) continue;
+                hairTipRest[i] = tip.localRotation;
+                hairTipAxes[i] = tip.InverseTransformDirection(transform.right).normalized;
+            }
             capeFollow = capeFollowVelocity = 0f;
         }
         void ApplyClothWind(float dt)
@@ -296,8 +310,19 @@ namespace Game.ThirdPerson
             SmoothBrakingPose(dt);
             ApplyClothWind(dt);
             ApplyWalkDetails(dt);
+            AnimateHairTips();
             if (!groundPose || !groundPose.isActiveAndEnabled) OpenCapeForStride();
             UpdateIdleBlink(dt);
+        }
+        void AnimateHairTips()
+        {
+            if (hairTips == null) return;
+            for (int i=0; i<hairTips.Length; i++) {
+                var tip = hairTips[i]; if (!tip) continue;
+                float slow = Mathf.Sin(clock * 1.15f - i * .83f) * .7f;
+                float gait = Mathf.Sin(motionPhase - i * .71f) * movement * Mathf.Lerp(.5f, 2.2f, runBlend);
+                tip.localRotation = hairTipRest[i] * Quaternion.AngleAxis(slow + gait, hairTipAxes[i]);
+            }
         }
         // Kept for the existing pose-preview and skin-validation editor tools.
         public void ApplyPose(float time,float phase,float amount,bool flying)
@@ -415,6 +440,8 @@ namespace Game.ThirdPerson
                     clothBones[i].localRotation = clothRest[i];
                     if (i % 2 == 0) clothBones[i].localPosition = panels[i / 2].restPosition;
                 }
+            if (hairTips != null) for (int i = 0; i < hairTips.Length; i++)
+                if (hairTips[i]) hairTips[i].localRotation = hairTipRest[i];
             if (hairBones != null) for (int i = 0; i < hairBones.Length; i++)
                 if (hairBones[i]) hairBones[i].localRotation = hairRest[i];
             transform.localPosition = restPosition;

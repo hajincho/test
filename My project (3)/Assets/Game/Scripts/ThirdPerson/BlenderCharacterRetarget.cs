@@ -13,7 +13,8 @@ namespace Game.ThirdPerson
             public Transform from, to;
             public Quaternion fromRest, toRest, basis;
             public float share;
-            public bool cape, braid;
+            public bool cape, braid, rearCapeRoot;
+            public Vector3 rearCapeAxis;
         }
         struct Leg
         {
@@ -36,7 +37,7 @@ namespace Game.ThirdPerson
         Vector3 braidRootPrevious;
         Transform chest;
         ThirdPersonMotor motor;
-        float braidRunBlend;
+        float braidRunBlend, capeRunBlend;
         readonly Transform[,] curlTips = new Transform[2, 2];
         Mesh curlMesh;
 
@@ -131,7 +132,10 @@ namespace Game.ThirdPerson
             details.Add(new Detail {from=from,to=to,fromRest=from.localRotation,toRest=to.localRotation,
                 basis=Quaternion.Inverse(to.rotation)*from.rotation,share=share,
                 cape=b.StartsWith("HB", System.StringComparison.Ordinal),
-                braid=b.StartsWith("F_", System.StringComparison.Ordinal)});
+                braid=b.StartsWith("F_", System.StringComparison.Ordinal),
+                rearCapeRoot=b.StartsWith("HB", System.StringComparison.Ordinal) && to.parent == pelvis &&
+                    root.InverseTransformPoint(to.position).z < root.InverseTransformPoint(pelvis.position).z - .02f,
+                rearCapeAxis=to.InverseTransformDirection(root.right).normalized});
         }
         void LateUpdate()
         {
@@ -142,12 +146,16 @@ namespace Game.ThirdPerson
             float response = targetRun < braidRunBlend ? 2.2f : 4f;
             braidRunBlend = Mathf.Lerp(braidRunBlend, targetRun, 1f - Mathf.Exp(-response * Time.deltaTime));
             float run = braidRunBlend;
+            float capeTarget = motor && motor.Grounded && !motor.IsJumping ? targetRun : 0f;
+            capeRunBlend = Mathf.Lerp(capeRunBlend, capeTarget, 1f - Mathf.Exp(-3f * Time.deltaTime));
             bool braking = motor && (motor.CurrentTransition == ThirdPersonMotor.Transition.SprintStop ||
                                      motor.CurrentTransition == ThirdPersonMotor.Transition.WalkStop ||
                                      motor.CurrentTransition == ThirdPersonMotor.Transition.AirStop);
             foreach(var d in details){
                 var delta=d.basis*(Quaternion.Inverse(d.fromRest)*d.from.localRotation)*Quaternion.Inverse(d.basis);
                 var desired = d.toRest * Quaternion.SlerpUnclamped(Quaternion.identity, delta, d.share * (d.cape ? .6f : d.braid ? Mathf.Lerp(.045f, .30f, run) : 1f));
+                // Tilt the rear waist panels back gently during a run, then settle with inertia.
+                if (d.rearCapeRoot) desired *= Quaternion.AngleAxis(30f * capeRunBlend, d.rearCapeAxis);
                 float rate = d.cape ? 7f : d.braid ? (braking ? 3.5f : 9f) : 0f;
                 d.to.localRotation = rate > 0f
                     ? Quaternion.Slerp(d.to.localRotation, desired, 1f - Mathf.Exp(-rate * Time.deltaTime))
@@ -245,7 +253,7 @@ namespace Game.ThirdPerson
 
         void OnDestroy() { if (curlMesh) Destroy(curlMesh); }
 
-        void OnDisable() { braidReady = false; braidRunBlend = 0f; }
+        void OnDisable() { braidReady = false; braidRunBlend = 0f; capeRunBlend = 0f; }
 
         void UpdateBraids()
         {

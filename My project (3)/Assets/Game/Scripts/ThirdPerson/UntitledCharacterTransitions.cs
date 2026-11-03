@@ -80,11 +80,11 @@ namespace Game.ThirdPerson
             bool air = state == ThirdPersonMotor.Transition.AirStop;
             float strength = walk ? .45f : air ? .55f : 1f;
             weight *= strength;
-            float crouch = start ? .10f : walk ? .025f : .08f;
+            float crouch = start ? .10f : walk ? .025f : air ? .08f : .12f;
             transform.localPosition = Vector3.Lerp(transform.localPosition, restPosition - Vector3.up * crouch, weight);
             transform.localRotation = Quaternion.Slerp(transform.localRotation, restRotation, weight);
 
-            float lean = start ? 53f : walk ? 3f : air ? 6f : -8f;
+            float lean = start ? 53f : walk ? 3f : air ? 6f : Mathf.Lerp(-15f, -3f, JumpEase(.20f, 1f, t));
             if (waist)
                 waist.localRotation = Quaternion.Slerp(waist.localRotation,
                     waistRest * Quaternion.AngleAxis(lean, waistPitchAxis), weight);
@@ -92,7 +92,7 @@ namespace Game.ThirdPerson
             BlendTransitionPitch(1, start ? -48f : walk ? 0f : 2f, weight);
 
             float leadThigh = start ? -49f : walk ? -11f : air ? -20f : -40f;
-            float leadKnee = start ? 75f : walk ? 14f : air ? 34f : 23f;
+            float leadKnee = start ? 75f : walk ? 14f : air ? 34f : 34f;
             float rearThigh = start ? 23f : walk ? 4f : air ? -8f : 15f;
             float rearKnee = start ? 50f : walk ? 9f : air ? 34f : 48f;
             for (int hip = 6; hip <= 10; hip += 4)

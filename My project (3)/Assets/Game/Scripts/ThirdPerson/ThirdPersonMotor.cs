@@ -120,7 +120,7 @@ namespace Game.ThirdPerson
             float targetSpeed = sprint ? sprintSpeed : walkSpeed;
             // The reference has a brief push-off before settling into the running cycle.
             if (CurrentTransition == Transition.SprintStart && moving && Grounded)
-                targetSpeed *= 1f + .18f * (1f - Mathf.SmoothStep(0f, 1f, TransitionProgress));
+                targetSpeed *= 1f + .25f * (1f - Mathf.SmoothStep(0f, 1f, TransitionProgress));
             Vector3 desiredVelocity = direction * targetSpeed;
             float changeTime = moving ? (sprint ? .075f : .10f)
                 : (!Grounded ? .16f : planarVelocity.magnitude > walkSpeed * 1.35f ? .20f : .11f);
