@@ -1263,3 +1263,15 @@
 [2026-11-03T14:07:19.363Z] [DEBUG] log Relay->Editor communication is unblocked
 [2026-11-03T14:07:19.363Z] [INFO] log Unity client connected with ID: editor-19044-ximr5n (relay 1.0.12-build.100)
 [2026-11-03T14:07:19.363Z] [INFO] connection.established clientId=editor-19044-ximr5n port=9001
+[2026-11-03T14:09:07.587Z] [INFO] log Domain reload signal received from client editor-19044-ximr5n
+[2026-11-03T14:09:07.588Z] [DEBUG] log Relay->Editor communication is blocked
+[2026-11-03T14:09:07.588Z] [DEBUG] acp.queue.pause depth=0
+[2026-11-03T14:09:08.110Z] [DEBUG] log Relay->Editor communication is blocked
+[2026-11-03T14:09:08.110Z] [DEBUG] acp.queue.pause depth=0
+[2026-11-03T14:09:08.110Z] [INFO] log Client disconnected - blocking and caching for recovery
+[2026-11-03T14:09:08.111Z] [WARN] connection.lost clientId=null
+[2026-11-03T14:09:08.111Z] [WARN] log Client disconnected - sessions will persist until auto-shutdown, reason: Client disconnected
+[2026-11-03T14:09:08.111Z] [INFO] log Auto-shutdown timer started due to client disconnection
+[2026-11-03T14:09:36.518Z] [DEBUG] log Relay->Editor communication is unblocked
+[2026-11-03T14:09:36.519Z] [INFO] log Unity client connected with ID: editor-19044-l46ewp (relay 1.0.12-build.100)
+[2026-11-03T14:09:36.519Z] [INFO] connection.established clientId=editor-19044-l46ewp port=9001
