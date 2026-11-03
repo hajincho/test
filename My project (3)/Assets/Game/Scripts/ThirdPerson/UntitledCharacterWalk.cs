@@ -129,6 +129,12 @@ namespace Game.ThirdPerson
                 float roll = j.amplitude * (.56f * follow.y + detailWeight * 1.7f * Mathf.Sin(2f * Mathf.PI * t)
                            + idle * idleTip * (j.hem ? 1.05f : 2.25f));
                 pitch += idle * j.amplitude * .65f * Mathf.Sin(clock * 1.31f - lag);
+                if (j.hem)
+                {
+                    float loose = 1f - runBlend * GroundStrideWeight;
+                    pitch *= loose;
+                    roll *= loose;
+                }
                 j.bone.localRotation = j.rest * Quaternion.AngleAxis(pitch, j.pitch) * Quaternion.AngleAxis(roll, j.roll);
             }
         }
