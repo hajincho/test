@@ -91,6 +91,7 @@ namespace Game.ThirdPerson
             AdjustLeg(right, dt);
             AdjustLeg(leftAux, dt);
             AdjustLeg(rightAux, dt);
+            if (motion && motion.isActiveAndEnabled) motion.OpenCapeForStride();
             StabilizeHead(dt);
         }
 

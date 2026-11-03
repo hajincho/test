@@ -25,6 +25,7 @@ namespace Game.ThirdPerson
         public bool Grounded { get; private set; }
         public float VerticalSpeed => verticalSpeed;
         public float PlanarSpeed { get; private set; }
+        public float UphillAngle { get; private set; }
         public bool Sprinting { get; private set; }
         CharacterController controller;
         float verticalSpeed;
@@ -78,7 +79,10 @@ namespace Game.ThirdPerson
             Grounded = (flags & CollisionFlags.Below) != 0;
             if (Grounded) IsJumping = false;
             Vector3 delta = transform.position - before;
-            PlanarSpeed = new Vector2(delta.x, delta.z).magnitude / dt;
+            float planarDistance = new Vector2(delta.x, delta.z).magnitude;
+            PlanarSpeed = planarDistance / dt;
+            UphillAngle = Grounded && input.sqrMagnitude > .001f && PlanarSpeed > .08f
+                ? Mathf.Atan2(Mathf.Max(0f, delta.y), planarDistance) * Mathf.Rad2Deg : 0f;
             Sprinting = sprint && PlanarSpeed > .1f;
             if (direction.sqrMagnitude > .001f && visualRoot)
                 visualRoot.rotation = Quaternion.Slerp(visualRoot.rotation, Quaternion.LookRotation(direction), 1f - Mathf.Exp(-turnSpeed * dt));
