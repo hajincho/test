@@ -28,17 +28,16 @@ abc 프로젝트의 플레이어를 Furina로 바꾸면서 만든 원본 파일�
 - `Input/IA_CameraZoom` + `Default_IMC`의 MouseWheelAxis 매핑, `ThirdPersonCharacter_BP` 이벤트 그래프의 "Mouse wheel camera zoom (Furina)" 노드:
   휠 1칸당 CameraBoom 길이 ±60, 200~1600 사이로 제한 (값은 `Scripts/Tools/gen_zoom_t3d.py`의 STEP/MIN_LEN/MAX_LEN)
 
-## 머리카락 물리 (Unity `HuTaoChainPhysics` → `ABP_Furina`의 AnimDynamics 5개)
+## 부드러운 머리카락 움직임 (2026-11-14)
 
-- **생성:** `Scripts/Tools/gen_t3d3.py <Data 경로>` → `Data/abp_graph3.t3d` (ABP_Furina AnimGraph 전체)
-- **대상 사슬:** 땋은 머리 `F_0..17_1_L/R`, 옆머리 `CF_1..2_L/R`, 아호게 `DM_0..5_1`
-- **파라미터:** Unity `ProfileFor()`의 HairBack / HairSide / Ahoge 값을 그대로 씁니다. 변환식은 다음과 같습니다.
-  - 감쇠 d = 1−e^(−damping)
-  - 스프링 = 12×stiffness²
-  - 중력 = gravityInfluence×0.6
-  - 회전 한계: 뿌리→끝으로 보간
-- **충돌:** 몸 캡슐은 Unity `CacheBodyCapsules()`의 Furina 목록을 구로 옮겼습니다. 휴식 자세에서 이미 닿는 구는 줄이거나 제외합니다(`CacheAttachmentContacts`와 같은 처리).
-- **시뮬레이션 공간:** Head 본 기준입니다. Unity의 parentMotionInfluence에 해당하며, 머리 가속의 일부만 관성으로 받습니다.
+- **대상:** 땋은 머리 `F_0..17_1_L/R`, 옆머리 `CF_1..2_L/R`, 아호게 `DM_0..5_1`.
+- **출력:** `ABP_Furina`에서 `CR_FurinaSecondary`의 포즈를 최종 출력에 직접 연결합니다. 이전 AnimDynamics 5개는 보존하지만 출력 경로에서 제외했습니다. 겹친 물리·스프링·몸 충돌 제약이 머리카락을 튀게 만들던 처리를 없앴습니다.
+- **속도:** 메시 컴포넌트 원점의 실제 수평 이동을 측정합니다. 골반·머리 애니메이션의 흔들림과 수직 낙하는 달리기 속도로 계산하지 않습니다. 6~600 cm/s를 0~1로 제한하고 보간 계수 3.8/s로 완충합니다(`HairFlow` 커브).
+- **움직임:** 대기 중 작은 바람 → 걷기 → 달리기 순서로 진폭과 주기가 부드럽게 증가합니다. 위상은 연속으로 진행하며 양쪽 사슬에 작은 위상 차이를 둡니다. 뿌리는 작게, 끝은 크게 움직이고, 달릴 때 긴 머리의 뿌리는 최대 8도 뒤로 따라갑니다.
+- **튜닝:** `Scripts/Tools/gen_cr_params.py`의 hair 프로필. `idle`은 정지 진폭, `amp`는 최고 속도에서 더할 진폭(rad/관절), `lift`는 뒤로 따라가는 각도, `rootAmp`는 뿌리 가중치입니다.
+- **적용 순서:** `gen_cr_params.py <Data 경로>` → 에디터에서 `ue_build_cr.py` → `ue_apply_soft_hair.py`. 이전 `gen_t3d3.py` / `gen_t3d4.py`의 AnimDynamics 그래프를 다시 사용하면 마지막 적용 스크립트로 출력 연결을 복구해야 합니다.
+- **검증:** `ue_validate_soft_hair.py`가 현재 메시의 cm 기준 포즈로 대기·걷기·달리기, 30/60 fps 전환, 움직임 범위와 본 길이를 검사합니다. `ue_verify_soft_hair_runtime.py`는 임시 PIE 검사 후 편집 모드와 기존 뷰포트 카메라로 돌아갑니다.
+- **백업:** `Backups/HairSoftMotion_20261114/`.
 
 ## 눈 깜빡임 (Unity `UntitledCharacterIdle.UpdateIdleBlink` 타이밍 → `CR_FurinaSecondary`)
 

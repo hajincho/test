@@ -3,6 +3,7 @@ import unreal, json, traceback, os, math
 S = r"C:\Users\fromj\Downloads\test\test\abc\FurinaSource\Data"
 P = json.load(open(os.path.join(S, 'cr_params.json'), encoding='utf-8'))
 res = {'log': [], 'fail': []}
+STAGE_ONLY = os.path.exists(os.path.join(S, 'hair_stage_only'))
 def log(*a): res['log'].append(' '.join(str(x) for x in a))
 eal = unreal.EditorAssetLibrary
 DEST = '/Game/Furina/CR_FurinaSecondary'
@@ -18,11 +19,10 @@ try:
         if src != DEST:
             eal.rename_asset(src, DEST)
             bp = unreal.load_asset(DEST)
-    # the idle signal must exist in the rig hierarchy, otherwise GetCurveValue reads 0 and the blink is gated off
+    # Curves used by the graph and by animation/debug probes.
     h = bp.get_hierarchy()
     have = [str(k.name) for k in h.get_all_keys(True) if k.type == unreal.RigElementType.CURVE]
-    # FurinaIdle: read (blink gate). HairDyn: written (AnimDynamics alpha). Dbg*: written, read by probes in PIE.
-    for cv in ('IdleBlink', 'FurinaIdle', 'HairDyn', 'AhogeDyn', 'DbgL', 'DbgR', 'DbgW', 'DbgC'):
+    for cv in ('IdleBlink', 'FurinaIdle', 'HairDyn', 'AhogeDyn', 'HairFlow', 'DbgL', 'DbgR', 'DbgW', 'DbgC'):
         if cv not in have:
             log('add curve', cv, bp.get_hierarchy_controller().add_curve(cv, 0.0, False))
     c = bp.get_controller_by_name('RigVMModel') or bp.get_controller()
@@ -236,17 +236,32 @@ try:
     link('HipsLow.Result', 'HipsDrop.Value')
     prev = chain_exec(prev, 'HipsDrop')
 
-    # ---------------- hair physics weight: idle = gentle, grows with speed (AnimDynamics alpha in ABP_Furina)
-    add('RigUnit_MathFloatRemap', 'HairDynV', -1800, -5200, SourceMinimum='0', SourceMaximum='1.5', TargetMinimum=str(P.get('hair_idle_alpha', 0.3)), TargetMaximum='1', bClamp='True')
-    link('Drive.Result', 'HairDynV.Value')
-    add('RigUnit_SetCurveValue', 'SetHairDyn', -1550, -5200, Curve='HairDyn')
-    link('HairDynV.Result', 'SetHairDyn.Value')
+    # ---------------- hair: actual component travel, independent of animated hip/head bob.
+    # A filtered 0..1 signal owns amplitude, backward trail, and phase speed. The
+    # old whole-chain physics is disabled so it cannot fight this bounded motion.
+    add('RigUnit_ToWorldSpace_Location', 'HairWorldOrigin', -1800, -5900, Value=V(0, 0, 0))
+    add('RigUnit_DeltaFromPreviousVector', 'HairTravel', -1550, -5900)
+    link('HairWorldOrigin.World', 'HairTravel.Value')
+    add('RigUnit_MathVectorMul', 'HairTravelXY', -1300, -5900, B=V(1, 1, 0))
+    link('HairTravel.Delta', 'HairTravelXY.A')
+    add('RigUnit_MathVectorLength', 'HairDistance', -1050, -5900)
+    link('HairTravelXY.Result', 'HairDistance.Value')
+    add('RigUnit_MathFloatDiv', 'HairSpeedRaw', -800, -5900)
+    link('HairDistance.Result', 'HairSpeedRaw.A'); link('DtSafe.Result', 'HairSpeedRaw.B')
+    add('RigUnit_MathFloatRemap', 'HairSpeedRatio', -550, -5900, SourceMinimum='6', SourceMaximum=str(P['sprint']), TargetMinimum='0', TargetMaximum='1', bClamp='True')
+    link('HairSpeedRaw.Result', 'HairSpeedRatio.Value')
+    add('RigUnit_AccumulateFloatLerp', 'HairFlow', -300, -5900, Blend=str(P.get('hair_speed_blend', 3.8)), bIntegrateDeltaTime='True')
+    link('HairSpeedRatio.Result', 'HairFlow.TargetValue')
+    add('RigUnit_MathFloatMul', 'HairTempoRun', -50, -5900, B='0.9')
+    link('HairFlow.Result', 'HairTempoRun.A')
+    add('RigUnit_MathFloatAdd', 'HairTempo', 200, -5900, B='1')
+    link('HairTempoRun.Result', 'HairTempo.A')
+    add('RigUnit_SetCurveValue', 'SetHairFlow', -1800, -5500, Curve='HairFlow')
+    link('HairFlow.Result', 'SetHairFlow.Value')
+    prev = chain_exec(prev, 'SetHairFlow')
+    add('RigUnit_SetCurveValue', 'SetHairDyn', -1550, -5200, Curve='HairDyn', Value='0')
     prev = chain_exec(prev, 'SetHairDyn')
-    # the ahoge sits on top of the head: while standing it should just ride the head (no lagging wobble)
-    add('RigUnit_MathFloatRemap', 'AhogeDynV', -1800, -5000, SourceMinimum='0', SourceMaximum='1.5', TargetMinimum='0.05', TargetMaximum='1', bClamp='True')
-    link('Drive.Result', 'AhogeDynV.Value')
-    add('RigUnit_SetCurveValue', 'SetAhogeDyn', -1550, -5000, Curve='AhogeDyn')
-    link('AhogeDynV.Result', 'SetAhogeDyn.Value')
+    add('RigUnit_SetCurveValue', 'SetAhogeDyn', -1550, -5000, Curve='AhogeDyn', Value='0')
     prev = chain_exec(prev, 'SetAhogeDyn')
     for cv, src, x in (('DbgL', 'LD.Result', 0), ('DbgR', 'RD.Result', 1), ('DbgW', 'SlopeW.Result', 2), ('DbgC', 'Run.Result', 3)):
         add('RigUnit_SetCurveValue', 'Set' + cv, -1300 + x * 250, -5200, Curve=cv)
@@ -261,8 +276,8 @@ try:
         if ch['lift'] > 0:
             add('RigUnit_GetTransform', n + 'Root', x0, y, Item='(Type=Bone,Name="%s")' % ch['root'], Space='GlobalSpace')
             # negative angle about +X swings a hanging strand toward -Y (behind Furina)
-            add('RigUnit_MathFloatMul', n + 'AngT', x0, y + 200, B=str(-math.radians(ch['lift']) / 2.0))
-            link('TrailC.Result', n + 'AngT.A')
+            add('RigUnit_MathFloatMul', n + 'AngT', x0, y + 200, B=str(-math.radians(ch['lift']) / (2.0 if ch['kind'] == 'cloth' else 1.0)))
+            link('TrailC.Result' if ch['kind'] == 'cloth' else 'HairFlow.Result', n + 'AngT.A')
             add('RigUnit_MathFloatMul', n + 'AngB', x0, y + 350, B=str(-math.radians(ch.get('bob', 0))))
             link('Bob.Result', n + 'AngB.A')
             add('RigUnit_MathFloatMul', n + 'AngBR', x0 + 120, y + 350)      # bounce only while moving
@@ -280,15 +295,22 @@ try:
         if not ch.get('wave', True): continue
         a = ch['amp']; b = ch['idle']
         add('RigUnit_MathVectorScale', n + 'AmpS', x0 + 750, y + 300, Value=V(a[0], 0, a[1]))
-        link('Run.Result' if ch['kind'] == 'cloth' else 'Drive.Result', n + 'AmpS.Factor')
+        link('Run.Result' if ch['kind'] == 'cloth' else 'HairFlow.Result', n + 'AmpS.Factor')
         add('RigUnit_MathVectorAdd', n + 'Amp', x0 + 1000, y + 300, B=V(b[0], 0, b[1]))
         link(n + 'AmpS.Result', n + 'Amp.A')
         add('RigUnit_MathVectorScale', n + 'Spd', x0 + 1000, y + 450, Value=V(ch['tempo'], ch['tempo'], ch['tempo'] * 1.3))
-        link('Tempo.Result', n + 'Spd.Factor')
+        link('Tempo.Result' if ch['kind'] == 'cloth' else 'HairTempo.Result', n + 'Spd.Factor')
         add('RigUnit_ChainHarmonicsPerItem', n + 'Wave', x0 + 1250, y,
             ChainRoot='(Type=Bone,Name="%s")' % ch['root'], bDrawDebug='False',
             Wave='(bEnabled=True,WaveFrequency=%s,WaveAmplitude=%s,WaveOffset=%s,WaveNoise=(X=0,Y=0,Z=0),WaveMinimum=%f,WaveMaximum=1.0,WaveEase=Linear)' % (
                 V(ch['spatial'], 0, ch['spatial'] * .8), V(0, 0, 0), V(ch['phase'], 0, ch['phase'] + 1.3), ch['rootAmp']))
+        if ch['kind'] == 'hair':
+            # The unit's default 0..1 curve multiplies the taper a second time,
+            # completely pinning the root of the two-bone side strands. Use one
+            # explicit taper, so short strands also receive a small breeze.
+            if not c.set_pin_default_value(n + 'Wave.WaveCurve',
+                    '(EditorCurveData=(Keys=((Time=0.000000,Value=1.000000),(Time=1.000000,Value=1.000000))))', True, False):
+                res['fail'].append('hair wave curve ' + n)
         link(n + 'Amp.Result', n + 'Wave.Wave.WaveAmplitude')
         link(n + 'Spd.Result', n + 'Wave.Speed')
         prev = chain_exec(prev, n + 'Wave')
@@ -340,8 +362,9 @@ try:
     res['status'] = str(bp.get_editor_property('status')) if True else None
     skeleton = unreal.load_asset('/Game/Furina/SK_Furina_Skeleton')
     unreal.AnimationLibrary.set_curve_meta_data_morph_target(skeleton, 'IdleBlink', True)
-    eal.save_loaded_asset(skeleton, False)
-    eal.save_asset(DEST)
+    if not STAGE_ONLY:
+        assert eal.save_loaded_asset(skeleton, False)
+        assert eal.save_asset(DEST)
 except Exception:
     res['error'] = traceback.format_exc()
 json.dump(res, open(os.path.join(S, 'ue_build_cr.json'), 'w', encoding='utf-8'), ensure_ascii=False, indent=1, default=str)

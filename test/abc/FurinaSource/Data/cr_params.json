@@ -4,7 +4,9 @@
  "run_narrow_cm": 2.0,
  "run_stride": 0.55,
  "run_kick": 0.6,
- "hair_idle_alpha": 0.3,
+ "hair_motion_mode": "bounded_speed_sway",
+ "hair_speed_blend": 3.8,
+ "hair_idle_alpha": 0.0,
  "chains": [
   {
    "root": "HB1_1_0",
@@ -262,74 +264,74 @@
   {
    "root": "F_0_1_L",
    "kind": "hair",
-   "lift": 0,
+   "lift": 8,
    "bob": 0.0,
    "amp": [
-    0.02,
-    0.012
+    0.016,
+    0.0085
    ],
    "idle": [
-    0.008,
-    0.006
+    0.002,
+    0.0015
    ],
    "tempo": 1.0,
-   "spatial": 2.0,
+   "spatial": 1.6,
    "phase": 0.0,
-   "rootAmp": 0.1
+   "rootAmp": 0.02
   },
   {
    "root": "F_0_1_R",
    "kind": "hair",
-   "lift": 0,
+   "lift": 8,
    "bob": 0.0,
    "amp": [
-    0.02,
-    0.012
+    0.016,
+    0.0085
    ],
    "idle": [
-    0.008,
-    0.006
+    0.002,
+    0.0015
    ],
    "tempo": 1.0,
-   "spatial": 2.0,
-   "phase": 1.1,
-   "rootAmp": 0.1
+   "spatial": 1.6,
+   "phase": 0.75,
+   "rootAmp": 0.02
   },
   {
    "root": "CF_1_L",
    "kind": "hair",
-   "lift": 0,
+   "lift": 2,
    "bob": 0.0,
    "amp": [
-    0.05,
-    0.03
+    0.07,
+    0.04
    ],
    "idle": [
-    0.004,
-    0.003
+    0.01,
+    0.006
    ],
-   "tempo": 1.2,
-   "spatial": 1.0,
+   "tempo": 1.1,
+   "spatial": 0.8,
    "phase": 0.5,
-   "rootAmp": 0.4
+   "rootAmp": 0.35
   },
   {
    "root": "CF_1_R",
    "kind": "hair",
-   "lift": 0,
+   "lift": 2,
    "bob": 0.0,
    "amp": [
-    0.05,
-    0.03
+    0.07,
+    0.04
    ],
    "idle": [
-    0.004,
-    0.003
+    0.01,
+    0.006
    ],
-   "tempo": 1.2,
-   "spatial": 1.0,
-   "phase": 1.7,
-   "rootAmp": 0.4
+   "tempo": 1.1,
+   "spatial": 0.8,
+   "phase": 1.25,
+   "rootAmp": 0.35
   },
   {
    "root": "DM_0_1",
@@ -337,17 +339,17 @@
    "lift": 0,
    "bob": 0.0,
    "amp": [
-    0.03,
-    0.02
+    0.024,
+    0.014
    ],
    "idle": [
-    0.001,
-    0.0007
+    0.004,
+    0.0025
    ],
-   "tempo": 1.4,
-   "spatial": 1.5,
+   "tempo": 1.2,
+   "spatial": 1.2,
    "phase": 0.9,
-   "rootAmp": 0.2
+   "rootAmp": 0.1
   }
  ]
 }

@@ -1,0 +1,15 @@
+{
+ "saved": [
+  "/Game/Furina/ABP_Furina.ABP_Furina",
+  "/Game/Furina/CR_FurinaSecondary.CR_FurinaSecondary"
+ ],
+ "stage_only": false,
+ "previous_output": [
+  "AnimGraphNode_ControlRig_0"
+ ],
+ "output": [
+  "AnimGraphNode_ControlRig_0"
+ ],
+ "dynamics_connected_to_output": false,
+ "ok": true
+}

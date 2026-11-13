@@ -25,4 +25,13 @@ while time.time() < deadline:
         reply = {'id':last,'ok':True}
     except Exception:
         reply = {'id':last,'ok':False,'error':traceback.format_exc()}
-    with open(REPLY,'w',encoding='utf-8') as f: json.dump(reply,f)
+    # Windows readers can briefly hold the previous reply open. Publish atomically
+    # and retry sharing violations instead of losing the in-memory editor session.
+    reply_tmp=REPLY+'.tmp'
+    with open(reply_tmp,'w',encoding='utf-8') as f: json.dump(reply,f)
+    for attempt in range(30):
+        try:
+            os.replace(reply_tmp,REPLY)
+            break
+        except OSError:
+            time.sleep(.1)

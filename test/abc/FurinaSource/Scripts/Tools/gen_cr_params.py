@@ -25,17 +25,19 @@ for i, ch in enumerate(chains):
 # neck scarf (single joint) and hat ribbon also stream back like the Unity run
 out.append(dict(root='领巾', kind='cloth', lift=60.0, bob=10.0, wave=False, amp=[0, 0], idle=[0, 0], tempo=0, spatial=0, phase=0, rootAmp=0))
 out.append(dict(root='帽D1_1', kind='cloth', lift=35.0, bob=8.0, amp=[.10, .05], idle=[0, 0], tempo=5.0, spatial=1.5, phase=.3, rootAmp=.4))
-# Hair motion itself now comes from the Unity chain physics (AnimDynamics in ABP_Furina, gen_t3d3.py).
-# The rig only adds HuTaoChainPhysics' slow idle breeze (idleBreeze .45 x profile breeze) as a gentle target sway.
-# idle: barely a breeze; the amplitude grows with Drive (0 idle .. 1 walk .. 2 sprint) so running makes the hair flap
-hair = [('F_0_1_L', 0, [.020, .012], [.008, .006], 1.0, 2.0, .10, 0.0),
-        ('F_0_1_R', 0, [.020, .012], [.008, .006], 1.0, 2.0, .10, 1.1),
-        ('CF_1_L', 0, [.050, .030], [.004, .003], 1.2, 1.0, .40, .5),
-        ('CF_1_R', 0, [.050, .030], [.004, .003], 1.2, 1.0, .40, 1.7),
-        ('DM_0_1', 0, [.030, .020], [.001, .0007], 1.4, 1.5, .20, .9)]
+# Bounded travelling sway replaces the overlapping AnimDynamics chain solvers.
+# amp is the extra radians per joint at 600 cm/s, added to idle. Small values
+# matter: 18 braid joints accumulate their rotations down the strand.
+hair = [('F_0_1_L', 8, [.016, .0085], [.002, .0015], 1.0, 1.6, .02, 0.0),
+        ('F_0_1_R', 8, [.016, .0085], [.002, .0015], 1.0, 1.6, .02, .75),
+        ('CF_1_L', 2, [.070, .040], [.010, .006], 1.1, .8, .35, .5),
+        ('CF_1_R', 2, [.070, .040], [.010, .006], 1.1, .8, .35, 1.25),
+        ('DM_0_1', 0, [.024, .014], [.004, .0025], 1.2, 1.2, .10, .9)]
 for root, lift, amp, idle, tempo, spatial, rootAmp, phase in hair:
     out.append(dict(root=root, kind='hair', lift=lift, bob=0.0, amp=amp, idle=idle, tempo=tempo, spatial=spatial, phase=phase, rootAmp=rootAmp))
-json.dump(dict(walk=120, sprint=600, run_narrow_cm=2.0, run_stride=0.55, run_kick=0.6, hair_idle_alpha=0.3, chains=out), open(S + r'\cr_params.json', 'w', encoding='utf-8'), indent=1)
+json.dump(dict(walk=120, sprint=600, run_narrow_cm=2.0, run_stride=0.55, run_kick=0.6,
+               hair_motion_mode='bounded_speed_sway', hair_speed_blend=3.8, hair_idle_alpha=0.0, chains=out),
+          open(S + r'\cr_params.json', 'w', encoding='utf-8'), indent=1)
 for o in out: print(ascii(o['root']), o['kind'], o['lift'])
 
 
