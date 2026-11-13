@@ -1,0 +1,28 @@
+{
+ "saved": [
+  "/Game/Furina/CR_FurinaSecondary.CR_FurinaSecondary",
+  "/Game/Furina/SK_Furina_Skeleton.SK_Furina_Skeleton",
+  "/Game/3DPlatformerGameBundle/Demo/ThirdPersonAssets/Characters/Mannequins/Animations/Manny_AnimBlueprint.Manny_AnimBlueprint",
+  "/Game/Furina/Anim/AS_Furina_Walk.AS_Furina_Walk",
+  "/Game/Furina/ABP_Furina.ABP_Furina"
+ ],
+ "manny_status": "<BlueprintStatus.BS_UP_TO_DATE: 3>",
+ "walk_notifies": [
+  {
+   "time": 0.06666666666666667,
+   "bone": "Right-ankle",
+   "volume": 0.28,
+   "pitch": 1.05,
+   "weight_threshold": 0.5
+  },
+  {
+   "time": 0.7333333333333333,
+   "bone": "Left-ankle",
+   "volume": 0.28,
+   "pitch": 1.05,
+   "weight_threshold": 0.5
+  }
+ ],
+ "ok": true,
+ "stage_only": false
+}

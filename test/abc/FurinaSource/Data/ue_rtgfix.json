@@ -1,0 +1,8 @@
+{
+ "log": [
+  "disabled Root Motion 4",
+  "Hips reset, was len 0.9935173925605446",
+  "normalized 28",
+  "ops [('Pelvis Motion', True), ('FK Chains', True), ('Retarget IK Goals', True), ('Run IK Rig', True), ('Root Motion', False), ('Remap Curves', True)]"
+ ]
+}

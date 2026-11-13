@@ -1,0 +1,47 @@
+{
+ "log": [
+  "set update_skeleton_reference_pose",
+  "set use_t0_as_ref_pose"
+ ],
+ "imported": [
+  "/Game/Furina/SK_Furina.SK_Furina"
+ ],
+ "skeleton": "/Game/Furina/SK_Furina_Skeleton.SK_Furina_Skeleton",
+ "materials": [
+  [
+   "Furina_Face",
+   "MI_Furina_Face"
+  ],
+  [
+   "Furina_SkinHair",
+   "MI_Furina_SkinHair"
+  ],
+  [
+   "Furina_HairDetail",
+   "MI_Furina_HairDetail"
+  ],
+  [
+   "Furina_Outfit",
+   "MI_Furina_Outfit"
+  ],
+  [
+   "Furina_HairSheen",
+   "MI_Furina_HairSheen"
+  ]
+ ],
+ "mesh_Hips": [
+  "<Struct 'Vector' (0x0000027866FFAC60) {x: 0.000000, y: 5.400200, z: 92.763719}>",
+  "<Struct 'Vector' (0x0000027866FFAC80) {x: 1.000000, y: 1.000000, z: 1.000000}>"
+ ],
+ "mesh_Left-knee": [
+  "<Struct 'Vector' (0x0000027866FFACF0) {x: 0.000001, y: -39.395714, z: -0.000000}>",
+  "<Struct 'Vector' (0x0000027866FFAD10) {x: 1.000000, y: 1.000000, z: 1.000000}>"
+ ],
+ "mesh_Left-ankle": [
+  "<Struct 'Vector' (0x0000027866FFAA20) {x: 0.000001, y: -41.221199, z: -0.000001}>",
+  "<Struct 'Vector' (0x0000027866FFAA40) {x: 1.000000, y: 1.000000, z: 1.000000}>"
+ ],
+ "hips_world": "<Struct 'Vector' (0x0000027866FFAB40) {x: 0.000000, y: 5.400200, z: 92.763719}>",
+ "bounds": "<Struct 'BoxSphereBounds' (0x00000278FC018F80) {origin: {x: 0.000046, y: -16.166263, z: 86.975852}, box_extent: {x: 52.899574, y: 34.497739, z: 86.120507}, sphere_radius: 106.795134}>",
+ "morphs": 60
+}

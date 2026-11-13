@@ -1,0 +1,41 @@
+{
+ "pose_name": "Default Pose",
+ "root_offset_T": "<Struct 'Vector' (0x000002C003E6FDF0) {x: 0.000000, y: 0.000000, z: 0.000000}>",
+ "root_offset_S": "<Struct 'Vector' (0x000002C003E6FDF0) {x: 0.000000, y: 0.000000, z: 0.000000}>",
+ "rot_Hips": "<Struct 'Quat' (0x000002C003E6FDF0) {x: 0.001137, y: -0.000000, z: 0.000000, w: 0.993517}>",
+ "rot_Spine": "<Struct 'Quat' (0x000002C003E6FDF0) {x: -0.193204, y: 0.000000, z: -0.000001, w: 0.981159}>",
+ "rot_Left-leg": "<Struct 'Quat' (0x000002C003E6FDF0) {x: 0.077508, y: 0.000000, z: 0.151711, w: 0.985069}>",
+ "rot_Left-arm": "<Struct 'Quat' (0x000002C003E6FDF0) {x: 0.251220, y: 0.000000, z: 0.089782, w: 0.963412}>",
+ "rot_Left-shoulder": "<Struct 'Quat' (0x000002C003E6FDF0) {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}>",
+ "rot_Head": "<Struct 'Quat' (0x000002C02E60BC60) {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}>",
+ "op_0": [
+  "Pelvis Motion",
+  "IKRetargetPelvisMotionController",
+  "(SourcePelvisBone=(BoneName=\"pelvis\"),TargetPelvisBone=(BoneName=\"Hips\"),BlendToAbsoluteOffset=(X=0.000000,Y=0.000000,Z=0.000000),FloorConstraintWeight=0.000000,SourceCrotchOffset=0.000000,TargetCrotchOffset=0.000000,bUseGroundFalloff=False,GroundFalloffHeightPercent=0.900000,RotationAlpha=1.000000,RotationOffsetLocal=(Pitch=0.000000,Yaw=0.000000,Roll=0.000000),RotationOffsetGlobal=(Pitch=0.000000,Yaw=0.000000,Roll=0.000000),TranslationAlpha=1.000000,TranslationOffsetLocal=(X=0.000000,Y=0.000000,Z=0.000000),TranslationOffsetGlobal=(X=0.000000,Y=0.000000,Z=0.000000),BlendToSourceTranslation=0.000000,BlendToSourceTranslationWeights=(X=1.000000,Y=1.000000,Z=1.000000),ScaleHorizontal=1.000000,ScaleVertical=1.000000,AffectIKHorizontal=1.000000,AffectIKVertical=0.000000,DebugDrawSize=5.000000,DebugDrawThickness=5.000000,bEnabled=True,LODThreshold=-1,bDebugDraw=True)"
+ ],
+ "op_1": [
+  "FK Chains",
+  "IKRetargetFKChainsController",
+  "(IKRigAsset=\"/Script/IKRig.IKRigDefinition'/Game/Furina/Retarget/IK_Furina.IK_Furina'\",ChainsToRetarget=((TargetChainName=\"Spine\"),(TargetChainName=\"Neck\"),(TargetChainName=\"Head\"),(TargetChainName=\"LeftClavicle\"),(TargetChainName=\"LeftArm\"),(TargetChainName=\"LeftThumb\"),(TargetChainName=\"LeftIndex\"),(TargetChainName=\"LeftMiddle\"),(TargetChainName=\"LeftRing\"),(TargetChainName=\"LeftPinky\"),(TargetChainName=\"LeftLeg\"),(TargetChainName=\"RightClavicle\"),(TargetChainName=\"RightArm\"),(TargetChainName=\"RightThumb\"),(TargetChainName=\"RightIndex\"),(TargetChainName=\"RightMiddle\"),(TargetChainName=\"RightRing\"),(TargetChainName=\"RightPinky\"),(TargetChainName=\"RightLeg\"),(TargetChainName=\"LeftFoot\"),(TargetChainName=\"RightFoot\")),bDrawChainLines=True,bDrawSingleBoneChains=True,ChainDrawThickness=1.000000,ChainDrawSize=1.000000,ChainMapping=(ChainMap=((TargetChainName=\"Spine\",SourceChainName=\"Spine\"),(TargetChainName=\"Neck\",SourceChainName=\"Neck\"),(TargetChainName=\"Head\",SourceChainName=\"Head\"),(TargetChainName=\"LeftClavicle\",SourceChainName=\"LeftClavicle\"),(TargetChainName=\"LeftArm\",SourceChainName=\"LeftArm\"),(TargetChainName=\"LeftThumb\",SourceChainName=\"LeftThumb\"),(TargetChainName=\"LeftIndex\",SourceChainName=\"LeftIndex\"),(TargetChainName=\"LeftMiddle\",SourceChainName=\"LeftMiddle\"),(TargetChainName=\"LeftRing\",SourceChainName=\"LeftRing\"),(TargetChainName=\"LeftPinky\",SourceChainName=\"LeftPinky\"),(TargetChainName=\"RightClavicle\",SourceChainName=\"RightClavicle\"),(TargetChainName=\"RightArm\",So"
+ ],
+ "op_2": [
+  "Retarget IK Goals",
+  "IKRetargetIKChainsController",
+  "(ChainsToRetarget=((TargetChainName=\"LeftArm\"),(TargetChainName=\"LeftLeg\"),(TargetChainName=\"RightArm\"),(TargetChainName=\"RightLeg\")),bDrawFinalGoals=True,bDrawSourceLocations=True,GoalDrawSize=5.000000,GoalDrawThickness=1.000000,bEnabled=True,LODThreshold=-1,bDebugDraw=True)"
+ ],
+ "op_3": [
+  "Run IK Rig",
+  "IKRetargetRunIKRigController",
+  "(Chains=((TargetChainName=\"LeftArm\"),(TargetChainName=\"LeftLeg\"),(TargetChainName=\"RightArm\"),(TargetChainName=\"RightLeg\")),IKRigAsset=\"/Script/IKRig.IKRigDefinition'/Game/Furina/Retarget/IK_Furina.IK_Furina'\",bDrawGoals=True,bDrawGoalBoneLocations=True,GoalDrawSize=5.000000,GoalDrawThickness=1.000000,bEnabled=True,LODThreshold=-1,bDebugDraw=True)"
+ ],
+ "op_4": [
+  "Root Motion",
+  "IKRetargetRootMotionController",
+  "(SourceRoot=(BoneName=\"root\"),TargetRoot=(BoneName=\"Hips\"),RootMotionSource=CopyFromSourceRoot,TargetPelvis=(BoneName=\"Hips\"),bRotateWithPelvis=False,RootHeightSource=CopyHeightFromSource,GlobalOffset=(Rotation=(X=0.000000,Y=0.000000,Z=0.000000,W=1.000000),Translation=(X=0.000000,Y=0.000000,Z=0.000000),Scale3D=(X=1.000000,Y=1.000000,Z=1.000000)),bMaintainOffsetFromPelvis=True,bPropagateToNonRetargetedChildren=True,bEnabled=True,LODThreshold=-1,bDebugDraw=True)"
+ ],
+ "op_5": [
+  "Remap Curves",
+  "IKRetargetCurveRemapController",
+  "(bCopyAllSourceCurves=True,bRemapCurves=True,CurvesToRemap=,bEnabled=True,LODThreshold=-1,bDebugDraw=True)"
+ ]
+}

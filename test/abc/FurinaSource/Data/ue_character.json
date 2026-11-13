@@ -1,0 +1,25 @@
+{
+ "log": [
+  "/Game/3DPlatformerGameBundle/Demo/ThirdPersonAssets/Blueprints/ThirdPersonCharacter_BP ok /Game/3DPlatformerGameBundle/Demo/ThirdPersonAssets/Blueprints/ThirdPersonCharacter_BP.ThirdPersonCharacter_BP_C:FurinaMesh_GEN_VARIABLE",
+  "/Game/3DPlatformerGameBundle/Demo/ThirdPersonAssets/Blueprints/GrindRailCharacterBP/Ver_2_ThirdPersonCharacter_BP added ",
+  "/Game/3DPlatformerGameBundle/Demo/ThirdPersonAssets/Blueprints/GrindRailCharacterBP/Ver_2_ThirdPersonCharacter_BP ok /Game/3DPlatformerGameBundle/Demo/ThirdPersonAssets/Blueprints/GrindRailCharacterBP/Ver_2_ThirdPersonCharacter_BP.Ver_2_ThirdPersonCharacter_BP_C:FurinaMesh_GEN_VARIABLE",
+  "/Game/3DPlatformerGameBundle/Demo/ThirdPersonAssets/Blueprints/HomingAttackCharacterBP/ThirdPersonCharacter_BP added ",
+  "/Game/3DPlatformerGameBundle/Demo/ThirdPersonAssets/Blueprints/HomingAttackCharacterBP/ThirdPersonCharacter_BP ok /Game/3DPlatformerGameBundle/Demo/ThirdPersonAssets/Blueprints/HomingAttackCharacterBP/ThirdPersonCharacter_BP.ThirdPersonCharacter_BP_C:FurinaMesh_GEN_VARIABLE",
+  "/Game/3DPlatformerGameBundle/Demo/ThirdPersonAssets/Blueprints/JumpPadCharacterBP/ThirdPersonCharacter_BP added ",
+  "/Game/3DPlatformerGameBundle/Demo/ThirdPersonAssets/Blueprints/JumpPadCharacterBP/ThirdPersonCharacter_BP ok /Game/3DPlatformerGameBundle/Demo/ThirdPersonAssets/Blueprints/JumpPadCharacterBP/ThirdPersonCharacter_BP.ThirdPersonCharacter_BP_C:FurinaMesh_GEN_VARIABLE"
+ ],
+ "level_player": [
+  [
+   "CharacterMesh0",
+   "Manny_Simple_SK",
+   false,
+   "<Object '/Game/3DPlatformerGameBundle/Demo/ThirdPersonAssets/Characters/Mannequins/Animations/Manny_AnimBlueprint.Manny_AnimBlueprint_C' (0x000002BFF80C2A00) Class 'AnimBlueprintGeneratedClass'>"
+  ],
+  [
+   "FurinaMesh",
+   "SK_Furina",
+   true,
+   "<Object '/Game/Furina/ABP_Furina.ABP_Furina_C' (0x000002C075257E00) Class 'AnimBlueprintGeneratedClass'>"
+  ]
+ ]
+}

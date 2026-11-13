@@ -1,0 +1,314 @@
+{
+ "/Game/3DPlatformerGameBundle/Animations/Dash_Dive_BlendSpace": [
+  [
+   "/Game/3DPlatformerGameBundle/Animations/Dash_Downward_A_Anim.Dash_Downward_A_Anim",
+   [
+    0.0,
+    -90.0,
+    0.0
+   ]
+  ],
+  [
+   "/Game/3DPlatformerGameBundle/Animations/Dash_Upward_A_Anim.Dash_Upward_A_Anim",
+   [
+    0.0,
+    90.0,
+    0.0
+   ]
+  ],
+  [
+   "/Game/3DPlatformerGameBundle/Animations/Dash_Forward_A_Anim.Dash_Forward_A_Anim",
+   [
+    0.0,
+    0.0,
+    0.0
+   ]
+  ],
+  [
+   "/Game/3DPlatformerGameBundle/Animations/Dash_Upward_C_Anim.Dash_Upward_C_Anim",
+   [
+    100.0,
+    90.0,
+    0.0
+   ]
+  ],
+  [
+   "/Game/3DPlatformerGameBundle/Animations/Dash_Forward_C_Anim.Dash_Forward_C_Anim",
+   [
+    100.0,
+    0.0,
+    0.0
+   ]
+  ],
+  [
+   "/Game/3DPlatformerGameBundle/Animations/Dash_Downward_C_Anim.Dash_Downward_C_Anim",
+   [
+    100.0,
+    -90.0,
+    0.0
+   ]
+  ],
+  [
+   "/Game/3DPlatformerGameBundle/Animations/Dash_Forward_B_Anim.Dash_Forward_B_Anim",
+   [
+    50.0,
+    0.0,
+    0.0
+   ]
+  ],
+  [
+   "/Game/3DPlatformerGameBundle/Animations/Dash_Upward_B_Anim.Dash_Upward_B_Anim",
+   [
+    50.0,
+    90.0,
+    0.0
+   ]
+  ],
+  [
+   "/Game/3DPlatformerGameBundle/Animations/Dash_Downward_B_Anim.Dash_Downward_B_Anim",
+   [
+    50.0,
+    -90.0,
+    0.0
+   ]
+  ]
+ ],
+ "/Game/3DPlatformerGameBundle/Animations/Dash_Start_BlendSpace": [
+  [
+   "/Game/3DPlatformerGameBundle/Animations/Dash_Start__Forward_Anim.Dash_Start__Forward_Anim",
+   [
+    50.0,
+    0.0,
+    0.0
+   ]
+  ],
+  [
+   "/Game/3DPlatformerGameBundle/Animations/Dash_Start_Downward_Anim.Dash_Start_Downward_Anim",
+   [
+    50.0,
+    -90.0,
+    0.0
+   ]
+  ],
+  [
+   "/Game/3DPlatformerGameBundle/Animations/Dash_Start_Upward_Anim.Dash_Start_Upward_Anim",
+   [
+    50.0,
+    90.0,
+    0.0
+   ]
+  ]
+ ],
+ "/Game/3DPlatformerGameBundle/Animations/Dive_BlendSpace": [
+  [
+   "/Game/3DPlatformerGameBundle/Animations/Dive_Downward_A_Anim.Dive_Downward_A_Anim",
+   [
+    0.0,
+    -90.0,
+    0.0
+   ]
+  ],
+  [
+   "/Game/3DPlatformerGameBundle/Animations/Dive_Upward_A_Anim.Dive_Upward_A_Anim",
+   [
+    0.0,
+    90.0,
+    0.0
+   ]
+  ],
+  [
+   "/Game/3DPlatformerGameBundle/Animations/Dive_Downward_B_Anim.Dive_Downward_B_Anim",
+   [
+    50.0,
+    -90.0,
+    0.0
+   ]
+  ],
+  [
+   "/Game/3DPlatformerGameBundle/Animations/Dive_Downward_C_Anim.Dive_Downward_C_Anim",
+   [
+    100.0,
+    -90.0,
+    0.0
+   ]
+  ],
+  [
+   "/Game/3DPlatformerGameBundle/Animations/Dive_Upward_B_Anim.Dive_Upward_B_Anim",
+   [
+    50.0,
+    90.0,
+    0.0
+   ]
+  ],
+  [
+   "/Game/3DPlatformerGameBundle/Animations/Dive_Upward_C_Anim.Dive_Upward_C_Anim",
+   [
+    100.0,
+    90.0,
+    0.0
+   ]
+  ],
+  [
+   "/Game/3DPlatformerGameBundle/Animations/Dive_Forward_A_Anim.Dive_Forward_A_Anim",
+   [
+    0.0,
+    0.0,
+    0.0
+   ]
+  ]
+ ],
+ "/Game/3DPlatformerGameBundle/Animations/Dive_Launch_BlendSpace": [
+  [
+   "/Game/3DPlatformerGameBundle/Animations/Launch_Downward_Anim.Launch_Downward_Anim",
+   [
+    50.0,
+    -90.0,
+    0.0
+   ]
+  ],
+  [
+   "/Game/3DPlatformerGameBundle/Animations/Launch_Upward_Anim.Launch_Upward_Anim",
+   [
+    50.0,
+    90.0,
+    0.0
+   ]
+  ],
+  [
+   "/Game/3DPlatformerGameBundle/Animations/Launch_Forward_Anim.Launch_Forward_Anim",
+   [
+    50.0,
+    0.0,
+    0.0
+   ]
+  ]
+ ],
+ "/Game/3DPlatformerGameBundle/Animations/Spin_Dash_BlendSpace": [
+  [
+   "/Game/3DPlatformerGameBundle/Animations/Spin_Dash_Forwrad_Anim.Spin_Dash_Forwrad_Anim",
+   [
+    50.0,
+    0.0,
+    0.0
+   ]
+  ],
+  [
+   "/Game/3DPlatformerGameBundle/Animations/Spin_Dash_Downward_Anim.Spin_Dash_Downward_Anim",
+   [
+    50.0,
+    -90.0,
+    0.0
+   ]
+  ],
+  [
+   "/Game/3DPlatformerGameBundle/Animations/Spin_Dash_Upward_Anim.Spin_Dash_Upward_Anim",
+   [
+    50.0,
+    90.0,
+    0.0
+   ]
+  ]
+ ],
+ "/Game/3DPlatformerGameBundle/Animations/Zipline_BlendSpace": [
+  [
+   "/Game/3DPlatformerGameBundle/Animations/Zipline_Up_2_Anim.Zipline_Up_2_Anim",
+   [
+    -65.0,
+    50.0,
+    0.0
+   ]
+  ],
+  [
+   "/Game/3DPlatformerGameBundle/Animations/Zipline_Up_1_Anim.Zipline_Up_1_Anim",
+   [
+    -43.33333333333333,
+    50.0,
+    0.0
+   ]
+  ],
+  [
+   "/Game/3DPlatformerGameBundle/Animations/Zipline_Anim.Zipline_Anim",
+   [
+    0.0,
+    50.0,
+    0.0
+   ]
+  ],
+  [
+   "/Game/3DPlatformerGameBundle/Animations/Zipline_Down_1_Anim.Zipline_Down_1_Anim",
+   [
+    43.33333333333334,
+    50.0,
+    0.0
+   ]
+  ],
+  [
+   "/Game/3DPlatformerGameBundle/Animations/Zipline_Down_2_Anim.Zipline_Down_2_Anim",
+   [
+    65.0,
+    50.0,
+    0.0
+   ]
+  ]
+ ],
+ "/Game/3DPlatformerGameBundle/Demo/ThirdPersonAssets/Characters/Mannequins/Animations/WalkRun_BlendSpace": [
+  [
+   "/Game/3DPlatformerGameBundle/Demo/ThirdPersonAssets/Characters/Mannequins/Animations/Run_Fwd_Anim.Run_Fwd_Anim",
+   [
+    500.0,
+    0.0,
+    0.0
+   ]
+  ],
+  [
+   "/Game/3DPlatformerGameBundle/Demo/ThirdPersonAssets/Characters/Mannequins/Animations/Walk_Fwd_Anim.Walk_Fwd_Anim",
+   [
+    230.0,
+    0.0,
+    0.0
+   ]
+  ],
+  [
+   "/Game/3DPlatformerGameBundle/Demo/ThirdPersonAssets/Characters/Mannequins/Animations/Walk_InPlace_Anim.Walk_InPlace_Anim",
+   [
+    0.0,
+    0.0,
+    0.0
+   ]
+  ]
+ ],
+ "curves /Game/3DPlatformerGameBundle/Animations/Dash_Start_Upward_Anim": [],
+ "curves /Game/3DPlatformerGameBundle/Animations/Dash_Upward_B_Anim": [],
+ "curves /Game/3DPlatformerGameBundle/Animations/Zipline_Down_2_Anim": [],
+ "curves /Game/3DPlatformerGameBundle/Animations/Zipline_Down_1_Anim": [],
+ "curves /Game/3DPlatformerGameBundle/Animations/Launch_Upward_Anim": [],
+ "curves /Game/3DPlatformerGameBundle/Animations/Dive_Upward_B_Anim": [],
+ "curves /Game/3DPlatformerGameBundle/Animations/Zipline_Up_2_Anim": [],
+ "curves /Game/3DPlatformerGameBundle/Animations/Dive_Downward_A_Anim": [],
+ "curves /Game/3DPlatformerGameBundle/Demo/ThirdPersonAssets/Characters/Mannequins/Animations/Walk_Fwd_Anim": [],
+ "curves /Game/3DPlatformerGameBundle/Animations/Zipline_Up_1_Anim": [],
+ "curves /Game/3DPlatformerGameBundle/Demo/ThirdPersonAssets/Characters/Mannequins/Animations/Walk_InPlace_Anim": [],
+ "curves /Game/3DPlatformerGameBundle/Animations/Launch_Downward_Anim": [],
+ "curves /Game/3DPlatformerGameBundle/Animations/Dash_Start_Downward_Anim": [],
+ "curves /Game/3DPlatformerGameBundle/Animations/Dive_Upward_C_Anim": [],
+ "curves /Game/3DPlatformerGameBundle/Animations/Dash_Downward_B_Anim": [],
+ "curves /Game/3DPlatformerGameBundle/Animations/Dash_Start__Forward_Anim": [],
+ "curves /Game/3DPlatformerGameBundle/Animations/Spin_Dash_Forwrad_Anim": [],
+ "curves /Game/3DPlatformerGameBundle/Animations/Dive_Upward_A_Anim": [],
+ "curves /Game/3DPlatformerGameBundle/Animations/Dive_Forward_A_Anim": [],
+ "curves /Game/3DPlatformerGameBundle/Animations/Zipline_Anim": [],
+ "curves /Game/3DPlatformerGameBundle/Animations/Dive_Downward_C_Anim": [],
+ "curves /Game/3DPlatformerGameBundle/Animations/Dive_Downward_B_Anim": [],
+ "curves /Game/3DPlatformerGameBundle/Animations/Dash_Downward_A_Anim": [],
+ "curves /Game/3DPlatformerGameBundle/Demo/ThirdPersonAssets/Characters/Mannequins/Animations/Run_Fwd_Anim": [],
+ "curves /Game/3DPlatformerGameBundle/Animations/Dash_Downward_C_Anim": [],
+ "curves /Game/3DPlatformerGameBundle/Animations/Dash_Forward_B_Anim": [],
+ "curves /Game/3DPlatformerGameBundle/Animations/Dash_Upward_C_Anim": [],
+ "curves /Game/3DPlatformerGameBundle/Animations/Spin_Dash_Upward_Anim": [],
+ "curves /Game/3DPlatformerGameBundle/Animations/Dash_Upward_A_Anim": [],
+ "curves /Game/3DPlatformerGameBundle/Animations/Dash_Forward_C_Anim": [],
+ "curves /Game/3DPlatformerGameBundle/Animations/Launch_Forward_Anim": [],
+ "curves /Game/3DPlatformerGameBundle/Animations/Dash_Forward_A_Anim": [],
+ "curves /Game/3DPlatformerGameBundle/Animations/Spin_Dash_Downward_Anim": [],
+ "cdo": "None"
+}

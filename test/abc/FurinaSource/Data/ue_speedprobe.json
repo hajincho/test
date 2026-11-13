@@ -1,0 +1,6 @@
+{
+ "comp_CollisionCylinder": "CapsuleComponent",
+ "comp_Arrow": "ArrowComponent",
+ "comp_CharMoveComp": "CharacterMovementComponent",
+ "comp_CharacterMesh0": "SkeletalMeshComponent"
+}

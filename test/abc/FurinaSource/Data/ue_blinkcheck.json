@@ -1,0 +1,116 @@
+[
+{
+"t": 2.459,
+"blink": 0.551,
+"morph_active": true,
+"n_morph": 1
+},
+{
+"t": 2.474,
+"blink": 0.988,
+"morph_active": true,
+"n_morph": 1
+},
+{
+"t": 2.491,
+"blink": 1.0,
+"morph_active": true,
+"n_morph": 1
+},
+{
+"t": 2.508,
+"blink": 1.0,
+"morph_active": true,
+"n_morph": 1
+},
+{
+"t": 2.524,
+"blink": 1.0,
+"morph_active": true,
+"n_morph": 1
+},
+{
+"t": 2.541,
+"blink": 0.992,
+"morph_active": true,
+"n_morph": 1
+},
+{
+"t": 2.558,
+"blink": 0.824,
+"morph_active": true,
+"n_morph": 1
+},
+{
+"t": 2.576,
+"blink": 0.53,
+"morph_active": true,
+"n_morph": 1
+},
+{
+"t": 2.592,
+"blink": 0.225,
+"morph_active": true,
+"n_morph": 1
+},
+{
+"t": 6.627,
+"blink": 0.197,
+"morph_active": true,
+"n_morph": 1
+},
+{
+"t": 6.643,
+"blink": 0.743,
+"morph_active": true,
+"n_morph": 1
+},
+{
+"t": 6.66,
+"blink": 1.0,
+"morph_active": true,
+"n_morph": 1
+},
+{
+"t": 6.677,
+"blink": 1.0,
+"morph_active": true,
+"n_morph": 1
+},
+{
+"t": 6.694,
+"blink": 1.0,
+"morph_active": true,
+"n_morph": 1
+},
+{
+"t": 6.71,
+"blink": 1.0,
+"morph_active": true,
+"n_morph": 1
+},
+{
+"t": 6.727,
+"blink": 0.984,
+"morph_active": true,
+"n_morph": 1
+},
+{
+"t": 6.744,
+"blink": 0.812,
+"morph_active": true,
+"n_morph": 1
+},
+{
+"t": 6.761,
+"blink": 0.531,
+"morph_active": true,
+"n_morph": 1
+},
+{
+"t": 6.777,
+"blink": 0.239,
+"morph_active": true,
+"n_morph": 1
+}
+]

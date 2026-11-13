@@ -1,0 +1,6 @@
+{
+ "log": [
+  "add /Script/IKRig.IKRetargetIKChainsOp 2",
+  "ops ['Pelvis Motion', 'FK Chains', 'Retarget IK Goals', 'Run IK Rig', 'Root Motion', 'Remap Curves']"
+ ]
+}

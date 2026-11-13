@@ -1,0 +1,8 @@
+{
+ "furina": true,
+ "/Game/3DPlatformerGameBundle/Demo/ThirdPersonAssets/Blueprints/ThirdPersonCharacter_BP": true,
+ "/Game/3DPlatformerGameBundle/Demo/ThirdPersonAssets/Blueprints/GrindRailCharacterBP/Ver_2_ThirdPersonCharacter_BP": true,
+ "/Game/3DPlatformerGameBundle/Demo/ThirdPersonAssets/Blueprints/HomingAttackCharacterBP/ThirdPersonCharacter_BP": true,
+ "/Game/3DPlatformerGameBundle/Demo/ThirdPersonAssets/Blueprints/JumpPadCharacterBP/ThirdPersonCharacter_BP": true,
+ "still_dirty": []
+}

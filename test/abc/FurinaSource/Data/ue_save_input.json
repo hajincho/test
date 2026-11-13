@@ -1,0 +1,15 @@
+{
+ "/Game/Furina/Input/IA_CameraZoom": [
+  "<Object '/Game/Furina/Input/IA_CameraZoom.IA_CameraZoom' (0x00000278D9702D00) Class 'InputAction'>",
+  true
+ ],
+ "/Game/3DPlatformerGameBundle/Demo/ThirdPersonAssets/Input/Default_IMC": [
+  "<Object '/Game/3DPlatformerGameBundle/Demo/ThirdPersonAssets/Input/Default_IMC.Default_IMC' (0x0000027881C80140) Class 'InputMappingContext'>",
+  true
+ ],
+ "/Game/3DPlatformerGameBundle/Demo/ThirdPersonAssets/Blueprints/ThirdPersonCharacter_BP": [
+  "<Object '/Game/3DPlatformerGameBundle/Demo/ThirdPersonAssets/Blueprints/ThirdPersonCharacter_BP.ThirdPersonCharacter_BP' (0x0000027853D6CC00) Class 'Blueprint'>",
+  true
+ ],
+ "pkg_ok": true
+}

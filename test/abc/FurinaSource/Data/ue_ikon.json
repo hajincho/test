@@ -1,0 +1,1 @@
+[["Pelvis Motion", true], ["FK Chains", true], ["Retarget IK Goals", true], ["Run IK Rig", true], ["Root Motion", false], ["Remap Curves", true], "TypeError(\"run_op_initial_setup() required argument 'op_index' (pos 1) not found\")", ["solvers", 2, ["Left-leg", "Right-leg"]], ["mesh compatible", true]]

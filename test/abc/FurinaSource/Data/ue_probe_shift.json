@@ -1,0 +1,148 @@
+{
+ "mappings": "[]",
+ "default_key_mappings": "<Struct 'InputMappingContextMappingData' (0x0000027881C80180) {mappings: ((Action=\"/Script/EnhancedInput.InputAction'/Game/3DPlatformerGameBundle/Demo/ThirdPersonAssets/Input/Actions/Jump_IA.Jump_IA'\",Key=SpaceBar),(Action=\"/Script/EnhancedInput.InputAction'/Game/3DPlatformerGameBundle/Demo/ThirdPersonAssets/Input/Actions/Jump_IA.Jump_IA'\",Key=Gamepad_FaceButton_Bottom),(Modifiers=(\"/Script/EnhancedInput.InputModifierSwizzleAxis'/Game/3DPlatformerGameBundle/Demo/ThirdPersonAssets/Input/Default_IMC.Default_IMC:InputModifierSwizzleAxis_3'\"),Action=\"/Script/EnhancedInput.InputAction'/Game/3DPlatformerGameBundle/Demo/ThirdPersonAssets/Input/Actions/Move_IA.Move_IA'\",Key=W),(Modifiers=(\"/Script/EnhancedInput.InputModifierSwizzleAxis'/Game/3DPlatformerGameBundle/Demo/ThirdPersonAssets/Input/Default_IMC.Default_IMC:InputModifierSwizzleAxis_4'\",\"/Script/EnhancedInput.InputModifierNegate'/Game/3DPlatformerGameBundle/Demo/ThirdPersonAssets/Input/Default_IMC.Default_IMC:InputModifierNegate_0'\"),Action=\"/Script/EnhancedInput.InputAction'/Game/3DPlatformerGameBundle/Demo/ThirdPersonAssets/Input/Actions/Move_IA.Move_IA'\",Key=S),(Modifiers=(\"/Script/EnhancedInput.InputModifierNegate'/Game/3DPlatformerGameBundle/Demo/ThirdPersonAssets/Input/Default_IMC.Default_IMC:InputModifierNegate_3'\"),Action=\"/Script/EnhancedInput.InputAction'/Game/3DPlatformerGameBundle/Demo/ThirdPersonAssets/Input/Actions/Move_IA.Move_IA'\",Key=A),(Action=\"/Script/EnhancedInput.InputAction'/Game/3DPlatformerGameBundle/Demo/ThirdPersonAssets/Input/Actions/Move_IA.Move_IA'\",Key=D),(Modifiers=(\"/Script/EnhancedInput.InputModifierSwizzleAxis'/Game/3DPlatformerGameBundle/Demo/ThirdPersonAssets/Input/Default_IMC.Default_IMC:InputModifierSwizzleAxis_5'\"),Action=\"/Script/EnhancedInput.InputAction'/Game/3DPlatformerGameBundle/Demo/ThirdPersonAssets/Input/Actions/Move_IA.Move_IA'\",Key=Up),(Modifiers=(\"/Script/EnhancedInput.InputModifierSwizzleAxis'/Game/3DPlatformerGameBundle/Demo/ThirdPersonAssets/Input/Default_IMC.Default_IMC:InputModifierSwizzleAxis_6'\",\"/Script/EnhancedInput.InputModifierNegate'/Game/3DPlatformerGameBundle/Demo/ThirdPersonAssets/Input/Default_IMC.Default_IMC:InputModifierNegate_2'\"),Action=\"/Script/EnhancedInput.InputAction'/Game/3DPlatformerGameBundle/Demo/ThirdPersonAssets/Input/Actions/Move_IA.Move_IA'\",Key=Down),(Action=\"/Script/EnhancedInput.InputAction'/Game/3DPlatformerGameBundle/Demo/ThirdPersonAssets/Input/Actions/Move_IA.Move_IA'\",Key=Right),(Modifiers=(\"/Script/EnhancedInput.InputModifierNegate'/Game/3DPlatformerGameBundle/Demo/ThirdPersonAssets/Input/Default_IMC.Default_IMC:InputModifierNegate_6'\"),Action=\"/Script/EnhancedInput.InputAction'/Game/3DPlatformerGameBundle/Demo/ThirdPersonAssets/Input/Actions/Move_IA.Move_IA'\",Key=Left),(Modifiers=(\"/Script/EnhancedInput.InputModifierDeadZone'/Game/3DPlatformerGameBundle/Demo/ThirdPersonAssets/Input/Default_IMC.Default_IMC:InputModifierDeadZone_0'\",\"/Script/EnhancedInput.InputModifierScalar'/Game/3DPlatformerGameBundle/Dem",
+ "dkm_list": [
+  [
+   "SpaceBar",
+   "/Game/3DPlatformerGameBundle/Demo/ThirdPersonAssets/Input/Actions/Jump_IA.Jump_IA"
+  ],
+  [
+   "Gamepad_FaceButton_Bottom",
+   "/Game/3DPlatformerGameBundle/Demo/ThirdPersonAssets/Input/Actions/Jump_IA.Jump_IA"
+  ],
+  [
+   "W",
+   "/Game/3DPlatformerGameBundle/Demo/ThirdPersonAssets/Input/Actions/Move_IA.Move_IA"
+  ],
+  [
+   "S",
+   "/Game/3DPlatformerGameBundle/Demo/ThirdPersonAssets/Input/Actions/Move_IA.Move_IA"
+  ],
+  [
+   "A",
+   "/Game/3DPlatformerGameBundle/Demo/ThirdPersonAssets/Input/Actions/Move_IA.Move_IA"
+  ],
+  [
+   "D",
+   "/Game/3DPlatformerGameBundle/Demo/ThirdPersonAssets/Input/Actions/Move_IA.Move_IA"
+  ],
+  [
+   "Up",
+   "/Game/3DPlatformerGameBundle/Demo/ThirdPersonAssets/Input/Actions/Move_IA.Move_IA"
+  ],
+  [
+   "Down",
+   "/Game/3DPlatformerGameBundle/Demo/ThirdPersonAssets/Input/Actions/Move_IA.Move_IA"
+  ],
+  [
+   "Right",
+   "/Game/3DPlatformerGameBundle/Demo/ThirdPersonAssets/Input/Actions/Move_IA.Move_IA"
+  ],
+  [
+   "Left",
+   "/Game/3DPlatformerGameBundle/Demo/ThirdPersonAssets/Input/Actions/Move_IA.Move_IA"
+  ],
+  [
+   "Gamepad_Left2D",
+   "/Game/3DPlatformerGameBundle/Demo/ThirdPersonAssets/Input/Actions/Move_IA.Move_IA"
+  ],
+  [
+   "Mouse2D",
+   "/Game/3DPlatformerGameBundle/Demo/ThirdPersonAssets/Input/Actions/Look_IA.Look_IA"
+  ],
+  [
+   "Gamepad_Right2D",
+   "/Game/3DPlatformerGameBundle/Demo/ThirdPersonAssets/Input/Actions/Look_IA.Look_IA"
+  ],
+  [
+   "Touch1",
+   "/Game/3DPlatformerGameBundle/Demo/ThirdPersonAssets/Input/Actions/Jump_IA.Jump_IA"
+  ],
+  [
+   "LeftShift",
+   "/Game/3DPlatformerGameBundle/Demo/ThirdPersonAssets/Input/Actions/Sprint_IA.Sprint_IA"
+  ],
+  [
+   "Gamepad_FaceButton_Left",
+   "/Game/3DPlatformerGameBundle/Demo/ThirdPersonAssets/Input/Actions/Sprint_IA.Sprint_IA"
+  ],
+  [
+   "Gamepad_LeftTriggerAxis",
+   "/Game/3DPlatformerGameBundle/Demo/ThirdPersonAssets/Input/Actions/Direction_IA.Direction_IA"
+  ],
+  [
+   "LeftMouseButton",
+   "/Game/3DPlatformerGameBundle/Demo/ThirdPersonAssets/Input/Actions/Direction_IA.Direction_IA"
+  ],
+  [
+   "Gamepad_LeftShoulder",
+   "/Game/3DPlatformerGameBundle/Demo/ThirdPersonAssets/Input/Actions/Position_IA.Position_IA"
+  ],
+  [
+   "RightMouseButton",
+   "/Game/3DPlatformerGameBundle/Demo/ThirdPersonAssets/Input/Actions/Position_IA.Position_IA"
+  ],
+  [
+   "Gamepad_Special_Left",
+   "/Game/3DPlatformerGameBundle/Demo/ThirdPersonAssets/Input/Actions/InvertLookUp_IA.InvertLookUp_IA"
+  ],
+  [
+   "RightShift",
+   "/Game/3DPlatformerGameBundle/Demo/ThirdPersonAssets/Input/Actions/InvertLookUp_IA.InvertLookUp_IA"
+  ],
+  [
+   "Q",
+   "/Game/3DPlatformerGameBundle/Demo/ThirdPersonAssets/Input/Actions/SwitchRail_IA.SwitchRail_IA"
+  ],
+  [
+   "Gamepad_RightShoulder",
+   "/Game/3DPlatformerGameBundle/Demo/ThirdPersonAssets/Input/Actions/SwitchRail_IA.SwitchRail_IA"
+  ],
+  [
+   "MouseWheelAxis",
+   "/Game/Furina/Input/IA_CameraZoom.IA_CameraZoom"
+  ],
+  [
+   "LeftShift",
+   "/Game/Furina/Input/IA_FurinaSprint.IA_FurinaSprint"
+  ]
+ ],
+ "ia": [
+  "/Game/3DPlatformerGameBundle/Animations/Sprint_Anim",
+  "/Game/3DPlatformerGameBundle/Animations/Sprint_Jump_Anim",
+  "/Game/3DPlatformerGameBundle/Animations/Sprint_Jump_Anim_Montage",
+  "/Game/3DPlatformerGameBundle/Animations/Sprint_Jump_Mirror_Anim",
+  "/Game/3DPlatformerGameBundle/Animations/Sprint_Jump_Mirror_Anim_Montage",
+  "/Game/3DPlatformerGameBundle/Audio/Cues/Sprint_Jump_Cue",
+  "/Game/3DPlatformerGameBundle/Demo/ThirdPersonAssets/Input/Actions/Sprint_IA",
+  "/Game/Furina/Input/IA_FurinaSprint"
+ ],
+ "refs /Game/3DPlatformerGameBundle/Animations/Sprint_Anim": [
+  "/Game/3DPlatformerGameBundle/Animations/AnimationBlueprints/Grind_Rail_AnimBlueprint",
+  "/Game/3DPlatformerGameBundle/Levels/GrindRailExampleLevel/Ver_2_ExampleLevel"
+ ],
+ "refs /Game/3DPlatformerGameBundle/Animations/Sprint_Jump_Anim": [
+  "/Game/3DPlatformerGameBundle/Animations/Sprint_Jump_Anim_Montage"
+ ],
+ "refs /Game/3DPlatformerGameBundle/Animations/Sprint_Jump_Anim_Montage": [
+  "/Game/3DPlatformerGameBundle/Blueprints/Components/Grind_Rail_Component_BP"
+ ],
+ "refs /Game/3DPlatformerGameBundle/Animations/Sprint_Jump_Mirror_Anim": [
+  "/Game/3DPlatformerGameBundle/Animations/Sprint_Jump_Mirror_Anim_Montage"
+ ],
+ "refs /Game/3DPlatformerGameBundle/Animations/Sprint_Jump_Mirror_Anim_Montage": [
+  "/Game/3DPlatformerGameBundle/Blueprints/Components/Grind_Rail_Component_BP"
+ ],
+ "refs /Game/3DPlatformerGameBundle/Audio/Cues/Sprint_Jump_Cue": [
+  "/Game/3DPlatformerGameBundle/Blueprints/Components/Grind_Rail_Component_BP"
+ ],
+ "refs /Game/3DPlatformerGameBundle/Demo/ThirdPersonAssets/Input/Actions/Sprint_IA": [
+  "/Game/3DPlatformerGameBundle/Demo/ThirdPersonAssets/Blueprints/ThirdPersonCharacter_BP",
+  "/Game/3DPlatformerGameBundle/Demo/ThirdPersonAssets/Blueprints/GrindRailCharacterBP/Ver_2_ThirdPersonCharacter_BP",
+  "/Game/3DPlatformerGameBundle/Demo/ThirdPersonAssets/Input/Default_IMC"
+ ],
+ "refs /Game/Furina/Input/IA_FurinaSprint": [
+  "/Game/3DPlatformerGameBundle/Demo/ThirdPersonAssets/Blueprints/ThirdPersonCharacter_BP",
+  "/Game/3DPlatformerGameBundle/Demo/ThirdPersonAssets/Input/Default_IMC"
+ ]
+}

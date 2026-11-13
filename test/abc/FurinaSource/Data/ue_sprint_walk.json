@@ -1,0 +1,9 @@
+{
+ "log": [
+  "mappings []",
+  "max_walk_speed before 600.0",
+  "max_walk_speed after 120.0",
+  "Walk_Fwd_Anim ['FurinaWalk']",
+  "Walk_InPlace_Anim ['FurinaWalk']"
+ ]
+}

@@ -1,0 +1,25 @@
+{
+ "world": "<Object '/Game/3DPlatformerGameBundle/Levels/UEDPIE_0_ExampleLevel.ExampleLevel' (0x000002C0E8297000) Class 'World'>",
+ "pawn": "ThirdPersonCharacter_BP_2",
+ "pawn_loc": "<Struct 'Vector' (0x000002C02E622A40) {x: 0.000000, y: 0.000000, z: 148.275198}>",
+ "CharacterMesh0": {
+  "visible": false,
+  "loc": "<Struct 'Vector' (0x000002C02E622A40) {x: 0.000000, y: 0.000000, z: 53.275198}>",
+  "bounds": null,
+  "pelvis": "<Struct 'Vector' (0x000002C02E622A40) {x: -0.875379, y: -1.328866, z: 143.722597}>",
+  "head": "<Struct 'Vector' (0x000002C02E622A40) {x: 8.935481, y: 2.178155, z: 209.580945}>",
+  "foot_l": "<Struct 'Vector' (0x000002C02E622A40) {x: 11.021732, y: -20.520010, z: 58.466020}>",
+  "anim": "<Object '/Game/3DPlatformerGameBundle/Levels/UEDPIE_0_ExampleLevel.ExampleLevel:PersistentLevel.ThirdPersonCharacter_BP_2.CharacterMesh0.Manny_AnimBlueprint_C_0' (0x000002C0E8A29000) Class 'Manny_AnimBlueprint_C'>"
+ },
+ "FurinaMesh": {
+  "visible": true,
+  "loc": "<Struct 'Vector' (0x000002C02E622A40) {x: 0.000000, y: 0.000000, z: 53.275198}>",
+  "bounds": null,
+  "Hips": "<Struct 'Vector' (0x000002C02E622A40) {x: -0.846780, y: -1.285451, z: 140.767568}>",
+  "Head": "<Struct 'Vector' (0x000002C02E622A40) {x: 14.493563, y: 4.282743, z: 179.448808}>",
+  "Left-ankle": "<Struct 'Vector' (0x000002C02E622A40) {x: 7.747849, y: -18.098949, z: 62.295176}>",
+  "HB1_7_2": "<Struct 'Vector' (0x000002C02E622A40) {x: -11.917190, y: 8.701298, z: 125.297557}>",
+  "HB2_18_1": "<Struct 'Vector' (0x000002C02E622A40) {x: -6.369840, y: -14.233603, z: 60.180299}>",
+  "anim": "<Object '/Game/3DPlatformerGameBundle/Levels/UEDPIE_0_ExampleLevel.ExampleLevel:PersistentLevel.ThirdPersonCharacter_BP_2.FurinaMesh.ABP_Furina_C_0' (0x000002C099F74000) Class 'ABP_Furina_C'>"
+ }
+}

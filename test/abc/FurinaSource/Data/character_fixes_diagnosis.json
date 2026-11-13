@@ -1,0 +1,1278 @@
+{
+  "engine": "5.8.4-58902052+++UE5+Release-5.8",
+  "rig_curves": [
+    "あ",
+    "い",
+    "う",
+    "え",
+    "お",
+    "にやり",
+    "ワ",
+    "ん",
+    "い１",
+    "い２",
+    "あ２",
+    "にやり２",
+    "にやり３",
+    "ω",
+    "てへぺろ",
+    "ぺろっ",
+    "口角上げ",
+    "口角下げ",
+    "口横広げ",
+    "口横狭め",
+    "舌広げ",
+    "IdleBlink",
+    "笑い",
+    "ウィンク",
+    "ウィンク右",
+    "ウィンク２",
+    "ウィンク２右",
+    "なごみ",
+    "なごみ左",
+    "なごみ右",
+    "びっくり",
+    "じと目",
+    "悲しむ",
+    "怒り目",
+    "ジト目",
+    "眼角上",
+    "眼角下",
+    "下眼上",
+    "真面目",
+    "困る",
+    "にこり",
+    "怒り",
+    "恥ずかしい",
+    "上",
+    "下",
+    "前",
+    "困る左",
+    "困る右",
+    "にこり左",
+    "にこり右",
+    "怒り左",
+    "怒り右",
+    "恥ずかしい左",
+    "恥ずかしい右",
+    "上左",
+    "上右",
+    "下左",
+    "下右",
+    "前左",
+    "前右",
+    "FurinaIdle",
+    "HairDyn",
+    "DbgL",
+    "DbgR",
+    "DbgW",
+    "DbgC",
+    "AhogeDyn"
+  ],
+  "rig_nodes": {
+    "Run": {
+      "Value": {
+        "default": "0.000000",
+        "links": [
+          "Speed.Result"
+        ]
+      },
+      "SourceMinimum": {
+        "default": "120",
+        "links": []
+      },
+      "SourceMaximum": {
+        "default": "600",
+        "links": []
+      },
+      "TargetMinimum": {
+        "default": "0",
+        "links": []
+      },
+      "TargetMaximum": {
+        "default": "1",
+        "links": []
+      },
+      "bClamp": {
+        "default": "True",
+        "links": []
+      },
+      "Result": {
+        "default": "0.000000",
+        "links": []
+      }
+    },
+    "IKWa": {
+      "A": {
+        "default": "0.000000",
+        "links": [
+          "SlopeW.Result"
+        ]
+      },
+      "B": {
+        "default": "0.000000",
+        "links": [
+          "Run.Result"
+        ]
+      },
+      "Result": {
+        "default": "0.000000",
+        "links": []
+      }
+    },
+    "IKWs": {
+      "A": {
+        "default": "1.000000",
+        "links": [
+          "IKWa.Result"
+        ]
+      },
+      "B": {
+        "default": "10",
+        "links": []
+      },
+      "Result": {
+        "default": "0.000000",
+        "links": []
+      }
+    },
+    "IKW": {
+      "Value": {
+        "default": "0.000000",
+        "links": [
+          "IKWs.Result"
+        ]
+      },
+      "Minimum": {
+        "default": "0",
+        "links": []
+      },
+      "Maximum": {
+        "default": "1",
+        "links": []
+      },
+      "Result": {
+        "default": "0.000000",
+        "links": []
+      }
+    },
+    "LNarrow": {
+      "A": {
+        "default": "1.000000",
+        "links": [
+          "Run.Result"
+        ]
+      },
+      "B": {
+        "default": "-2.0",
+        "links": []
+      },
+      "Result": {
+        "default": "0.000000",
+        "links": []
+      }
+    },
+    "LKDir": {
+      "A": {
+        "default": "(X=0.000000,Y=0.000000,Z=0.000000)",
+        "links": [
+          "LKnee.Transform.Translation"
+        ]
+      },
+      "B": {
+        "default": "(X=0.000000,Y=0.000000,Z=0.000000)",
+        "links": [
+          "LMid.Result"
+        ]
+      },
+      "Result": {
+        "default": "(X=0.000000,Y=0.000000,Z=0.000000)",
+        "links": []
+      }
+    },
+    "LPoleR": {
+      "A": {
+        "default": "1.000000",
+        "links": [
+          "Run.Result"
+        ]
+      },
+      "B": {
+        "default": "25",
+        "links": []
+      },
+      "Result": {
+        "default": "0.000000",
+        "links": []
+      }
+    },
+    "LPoleY": {
+      "A": {
+        "default": "0.000000",
+        "links": [
+          "LPoleR.Result"
+        ]
+      },
+      "B": {
+        "default": "2",
+        "links": []
+      },
+      "Result": {
+        "default": "0.000000",
+        "links": []
+      }
+    },
+    "LPoleF": {
+      "X": {
+        "default": "0",
+        "links": []
+      },
+      "Y": {
+        "default": "0.000000",
+        "links": [
+          "LPoleY.Result"
+        ]
+      },
+      "Z": {
+        "default": "0",
+        "links": []
+      },
+      "Result": {
+        "default": "(X=0.000000,Y=0.000000,Z=0.000000)",
+        "links": []
+      }
+    },
+    "LKDirF": {
+      "A": {
+        "default": "(X=0.000000,Y=0.000000,Z=0.000000)",
+        "links": [
+          "LKDir.Result"
+        ]
+      },
+      "B": {
+        "default": "(X=0.000000,Y=0.000000,Z=0.000000)",
+        "links": [
+          "LPoleF.Result"
+        ]
+      },
+      "Result": {
+        "default": "(X=0.000000,Y=0.000000,Z=0.000000)",
+        "links": []
+      }
+    },
+    "LIK": {
+      "ExecutePin": {
+        "default": "()",
+        "links": [
+          "BeginExecution.ExecutePin"
+        ]
+      },
+      "ItemA": {
+        "default": "(Type=Bone,Name=\"Left-leg\")",
+        "links": []
+      },
+      "ItemB": {
+        "default": "(Type=Bone,Name=\"Left-knee\")",
+        "links": []
+      },
+      "EffectorItem": {
+        "default": "(Type=Bone,Name=\"Left-ankle\")",
+        "links": []
+      },
+      "Effector": {
+        "default": "(Rotation=(X=0.000000,Y=0.000000,Z=0.000000,W=1.000000),Translation=(X=0.000000,Y=0.000000,Z=0.000000),Scale3D=(X=1.000000,Y=1.000000,Z=1.000000))",
+        "links": []
+      },
+      "PrimaryAxis": {
+        "default": "(X=0.000000,Y=-1.000000,Z=0.000000)",
+        "links": []
+      },
+      "SecondaryAxis": {
+        "default": "(X=0.000000,Y=0.000000,Z=-1.000000)",
+        "links": []
+      },
+      "SecondaryAxisWeight": {
+        "default": "1.000000",
+        "links": []
+      },
+      "PoleVector": {
+        "default": "(X=0.000000,Y=0.000000,Z=1.000000)",
+        "links": [
+          "LKDirF.Result"
+        ]
+      },
+      "PoleVectorKind": {
+        "default": "Direction",
+        "links": []
+      },
+      "PoleVectorSpace": {
+        "default": "(Type=Bone,Name=\"None\")",
+        "links": []
+      },
+      "bEnableStretch": {
+        "default": "False",
+        "links": []
+      },
+      "StretchStartRatio": {
+        "default": "0.750000",
+        "links": []
+      },
+      "StretchMaximumRatio": {
+        "default": "1.250000",
+        "links": []
+      },
+      "Weight": {
+        "default": "1.000000",
+        "links": [
+          "IKW.Result"
+        ]
+      },
+      "ItemALength": {
+        "default": "39.40",
+        "links": []
+      },
+      "ItemBLength": {
+        "default": "41.22",
+        "links": []
+      },
+      "bPropagateToChildren": {
+        "default": "True",
+        "links": []
+      },
+      "DebugSettings": {
+        "default": "(bEnabled=False,Scale=10.000000,WorldOffset=(Rotation=(X=0.000000,Y=0.000000,Z=0.000000,W=1.000000),Translation=(X=0.000000,Y=0.000000,Z=0.000000),Scale3D=(X=1.000000,Y=1.000000,Z=1.000000)))",
+        "links": []
+      },
+      "CachedItemAIndex": {
+        "default": "(Key=(Type=None,Name=\"None\"),Index=65535,ContainerVersion=-1)",
+        "links": []
+      },
+      "CachedItemBIndex": {
+        "default": "(Key=(Type=None,Name=\"None\"),Index=65535,ContainerVersion=-1)",
+        "links": []
+      },
+      "CachedEffectorItemIndex": {
+        "default": "(Key=(Type=None,Name=\"None\"),Index=65535,ContainerVersion=-1)",
+        "links": []
+      },
+      "CachedPoleVectorSpaceIndex": {
+        "default": "(Key=(Type=None,Name=\"None\"),Index=65535,ContainerVersion=-1)",
+        "links": []
+      }
+    },
+    "RNarrow": {
+      "A": {
+        "default": "1.000000",
+        "links": [
+          "Run.Result"
+        ]
+      },
+      "B": {
+        "default": "2.0",
+        "links": []
+      },
+      "Result": {
+        "default": "0.000000",
+        "links": []
+      }
+    },
+    "RKDir": {
+      "A": {
+        "default": "(X=0.000000,Y=0.000000,Z=0.000000)",
+        "links": [
+          "RKnee.Transform.Translation"
+        ]
+      },
+      "B": {
+        "default": "(X=0.000000,Y=0.000000,Z=0.000000)",
+        "links": [
+          "RMid.Result"
+        ]
+      },
+      "Result": {
+        "default": "(X=0.000000,Y=0.000000,Z=0.000000)",
+        "links": []
+      }
+    },
+    "RPoleR": {
+      "A": {
+        "default": "1.000000",
+        "links": [
+          "Run.Result"
+        ]
+      },
+      "B": {
+        "default": "25",
+        "links": []
+      },
+      "Result": {
+        "default": "0.000000",
+        "links": []
+      }
+    },
+    "RPoleY": {
+      "A": {
+        "default": "0.000000",
+        "links": [
+          "RPoleR.Result"
+        ]
+      },
+      "B": {
+        "default": "2",
+        "links": []
+      },
+      "Result": {
+        "default": "0.000000",
+        "links": []
+      }
+    },
+    "RPoleF": {
+      "X": {
+        "default": "0",
+        "links": []
+      },
+      "Y": {
+        "default": "0.000000",
+        "links": [
+          "RPoleY.Result"
+        ]
+      },
+      "Z": {
+        "default": "0",
+        "links": []
+      },
+      "Result": {
+        "default": "(X=0.000000,Y=0.000000,Z=0.000000)",
+        "links": []
+      }
+    },
+    "RKDirF": {
+      "A": {
+        "default": "(X=0.000000,Y=0.000000,Z=0.000000)",
+        "links": [
+          "RKDir.Result"
+        ]
+      },
+      "B": {
+        "default": "(X=0.000000,Y=0.000000,Z=0.000000)",
+        "links": [
+          "RPoleF.Result"
+        ]
+      },
+      "Result": {
+        "default": "(X=0.000000,Y=0.000000,Z=0.000000)",
+        "links": []
+      }
+    },
+    "RIK": {
+      "ExecutePin": {
+        "default": "()",
+        "links": [
+          "LIK.ExecutePin"
+        ]
+      },
+      "ItemA": {
+        "default": "(Type=Bone,Name=\"Right-leg\")",
+        "links": []
+      },
+      "ItemB": {
+        "default": "(Type=Bone,Name=\"Right-knee\")",
+        "links": []
+      },
+      "EffectorItem": {
+        "default": "(Type=Bone,Name=\"Right-ankle\")",
+        "links": []
+      },
+      "Effector": {
+        "default": "(Rotation=(X=0.000000,Y=0.000000,Z=0.000000,W=1.000000),Translation=(X=0.000000,Y=0.000000,Z=0.000000),Scale3D=(X=1.000000,Y=1.000000,Z=1.000000))",
+        "links": []
+      },
+      "PrimaryAxis": {
+        "default": "(X=0.000000,Y=-1.000000,Z=0.000000)",
+        "links": []
+      },
+      "SecondaryAxis": {
+        "default": "(X=0.000000,Y=0.000000,Z=-1.000000)",
+        "links": []
+      },
+      "SecondaryAxisWeight": {
+        "default": "1.000000",
+        "links": []
+      },
+      "PoleVector": {
+        "default": "(X=0.000000,Y=0.000000,Z=1.000000)",
+        "links": [
+          "RKDirF.Result"
+        ]
+      },
+      "PoleVectorKind": {
+        "default": "Direction",
+        "links": []
+      },
+      "PoleVectorSpace": {
+        "default": "(Type=Bone,Name=\"None\")",
+        "links": []
+      },
+      "bEnableStretch": {
+        "default": "False",
+        "links": []
+      },
+      "StretchStartRatio": {
+        "default": "0.750000",
+        "links": []
+      },
+      "StretchMaximumRatio": {
+        "default": "1.250000",
+        "links": []
+      },
+      "Weight": {
+        "default": "1.000000",
+        "links": [
+          "IKW.Result"
+        ]
+      },
+      "ItemALength": {
+        "default": "39.40",
+        "links": []
+      },
+      "ItemBLength": {
+        "default": "41.22",
+        "links": []
+      },
+      "bPropagateToChildren": {
+        "default": "True",
+        "links": []
+      },
+      "DebugSettings": {
+        "default": "(bEnabled=False,Scale=10.000000,WorldOffset=(Rotation=(X=0.000000,Y=0.000000,Z=0.000000,W=1.000000),Translation=(X=0.000000,Y=0.000000,Z=0.000000),Scale3D=(X=1.000000,Y=1.000000,Z=1.000000)))",
+        "links": []
+      },
+      "CachedItemAIndex": {
+        "default": "(Key=(Type=None,Name=\"None\"),Index=65535,ContainerVersion=-1)",
+        "links": []
+      },
+      "CachedItemBIndex": {
+        "default": "(Key=(Type=None,Name=\"None\"),Index=65535,ContainerVersion=-1)",
+        "links": []
+      },
+      "CachedEffectorItemIndex": {
+        "default": "(Key=(Type=None,Name=\"None\"),Index=65535,ContainerVersion=-1)",
+        "links": []
+      },
+      "CachedPoleVectorSpaceIndex": {
+        "default": "(Key=(Type=None,Name=\"None\"),Index=65535,ContainerVersion=-1)",
+        "links": []
+      }
+    },
+    "BlinkLoop": {
+      "Speed": {
+        "default": "1",
+        "links": []
+      },
+      "Duration": {
+        "default": "4.5",
+        "links": []
+      },
+      "Normalize": {
+        "default": "False",
+        "links": []
+      },
+      "Absolute": {
+        "default": "0.000000",
+        "links": []
+      },
+      "Relative": {
+        "default": "0.000000",
+        "links": []
+      },
+      "FlipFlop": {
+        "default": "0.000000",
+        "links": []
+      },
+      "Even": {
+        "default": "False",
+        "links": []
+      },
+      "AccumulatedAbsolute": {
+        "default": "0.000000",
+        "links": []
+      },
+      "AccumulatedRelative": {
+        "default": "0.000000",
+        "links": []
+      },
+      "NumIterations": {
+        "default": "0",
+        "links": []
+      },
+      "bIsInitialized": {
+        "default": "False",
+        "links": []
+      }
+    },
+    "BlinkJt": {
+      "A": {
+        "default": "1.000000",
+        "links": [
+          "BlinkLoop.Absolute"
+        ]
+      },
+      "B": {
+        "default": "0.37",
+        "links": []
+      },
+      "Result": {
+        "default": "0.000000",
+        "links": []
+      }
+    },
+    "BlinkJs": {
+      "Value": {
+        "default": "0.000000",
+        "links": [
+          "BlinkJt.Result"
+        ]
+      },
+      "Result": {
+        "default": "0.000000",
+        "links": []
+      }
+    },
+    "BlinkJ": {
+      "A": {
+        "default": "1.000000",
+        "links": [
+          "BlinkJs.Result"
+        ]
+      },
+      "B": {
+        "default": "0.25",
+        "links": []
+      },
+      "Result": {
+        "default": "0.000000",
+        "links": []
+      }
+    },
+    "BlinkStart": {
+      "A": {
+        "default": "0.000000",
+        "links": [
+          "BlinkJ.Result"
+        ]
+      },
+      "B": {
+        "default": "2.25",
+        "links": []
+      },
+      "Result": {
+        "default": "0.000000",
+        "links": []
+      }
+    },
+    "BlinkLocal": {
+      "A": {
+        "default": "0.000000",
+        "links": [
+          "BlinkLoop.Relative"
+        ]
+      },
+      "B": {
+        "default": "0.000000",
+        "links": [
+          "BlinkStart.Result"
+        ]
+      },
+      "Result": {
+        "default": "0.000000",
+        "links": []
+      }
+    },
+    "BlinkUpR": {
+      "A": {
+        "default": "0.000000",
+        "links": [
+          "BlinkLocal.Result"
+        ]
+      },
+      "B": {
+        "default": "0.045",
+        "links": []
+      },
+      "Result": {
+        "default": "0.000000",
+        "links": []
+      }
+    },
+    "BlinkUp": {
+      "Value": {
+        "default": "0.000000",
+        "links": [
+          "BlinkUpR.Result"
+        ]
+      },
+      "Minimum": {
+        "default": "0",
+        "links": []
+      },
+      "Maximum": {
+        "default": "1",
+        "links": []
+      },
+      "Result": {
+        "default": "0.000000",
+        "links": []
+      }
+    },
+    "BlinkDnS": {
+      "A": {
+        "default": "0.195",
+        "links": []
+      },
+      "B": {
+        "default": "0.000000",
+        "links": [
+          "BlinkLocal.Result"
+        ]
+      },
+      "Result": {
+        "default": "0.000000",
+        "links": []
+      }
+    },
+    "BlinkDnR": {
+      "A": {
+        "default": "0.000000",
+        "links": [
+          "BlinkDnS.Result"
+        ]
+      },
+      "B": {
+        "default": "0.085",
+        "links": []
+      },
+      "Result": {
+        "default": "0.000000",
+        "links": []
+      }
+    },
+    "BlinkDn": {
+      "Value": {
+        "default": "0.000000",
+        "links": [
+          "BlinkDnR.Result"
+        ]
+      },
+      "Minimum": {
+        "default": "0",
+        "links": []
+      },
+      "Maximum": {
+        "default": "1",
+        "links": []
+      },
+      "Result": {
+        "default": "0.000000",
+        "links": []
+      }
+    },
+    "BlinkW": {
+      "A": {
+        "default": "0.000000",
+        "links": [
+          "BlinkUp.Result"
+        ]
+      },
+      "B": {
+        "default": "0.000000",
+        "links": [
+          "BlinkDn.Result"
+        ]
+      },
+      "Result": {
+        "default": "0.000000",
+        "links": []
+      }
+    },
+    "BlinkS1": {
+      "A": {
+        "default": "1.000000",
+        "links": [
+          "BlinkW.Result"
+        ]
+      },
+      "B": {
+        "default": "-2",
+        "links": []
+      },
+      "Result": {
+        "default": "0.000000",
+        "links": []
+      }
+    },
+    "BlinkS2": {
+      "A": {
+        "default": "0.000000",
+        "links": [
+          "BlinkS1.Result"
+        ]
+      },
+      "B": {
+        "default": "3",
+        "links": []
+      },
+      "Result": {
+        "default": "0.000000",
+        "links": []
+      }
+    },
+    "BlinkS3": {
+      "A": {
+        "default": "1.000000",
+        "links": [
+          "BlinkS2.Result"
+        ]
+      },
+      "B": {
+        "default": "1.000000",
+        "links": [
+          "BlinkW.Result"
+        ]
+      },
+      "Result": {
+        "default": "0.000000",
+        "links": []
+      }
+    },
+    "BlinkS4": {
+      "A": {
+        "default": "1.000000",
+        "links": [
+          "BlinkS3.Result"
+        ]
+      },
+      "B": {
+        "default": "1.000000",
+        "links": [
+          "BlinkW.Result"
+        ]
+      },
+      "Result": {
+        "default": "0.000000",
+        "links": []
+      }
+    },
+    "IdleCurve": {
+      "Curve": {
+        "default": "FurinaIdle",
+        "links": []
+      },
+      "Valid": {
+        "default": "True",
+        "links": []
+      },
+      "Value": {
+        "default": "0.000000",
+        "links": []
+      },
+      "CachedCurveIndex": {
+        "default": "(Key=(Type=None,Name=\"None\"),Index=65535,ContainerVersion=-1)",
+        "links": []
+      }
+    },
+    "IdleGate": {
+      "Value": {
+        "default": "0.000000",
+        "links": [
+          "IdleCurve.Value"
+        ]
+      },
+      "SourceMinimum": {
+        "default": "0.9",
+        "links": []
+      },
+      "SourceMaximum": {
+        "default": "1",
+        "links": []
+      },
+      "TargetMinimum": {
+        "default": "0",
+        "links": []
+      },
+      "TargetMaximum": {
+        "default": "1",
+        "links": []
+      },
+      "bClamp": {
+        "default": "True",
+        "links": []
+      },
+      "Result": {
+        "default": "0.000000",
+        "links": []
+      }
+    },
+    "BlinkOut": {
+      "A": {
+        "default": "1.000000",
+        "links": [
+          "BlinkS4.Result"
+        ]
+      },
+      "B": {
+        "default": "1.000000",
+        "links": [
+          "IdleGate.Result"
+        ]
+      },
+      "Result": {
+        "default": "0.000000",
+        "links": []
+      }
+    },
+    "SetBlink": {
+      "ExecutePin": {
+        "default": "()",
+        "links": [
+          "C18Wave.ExecutePin"
+        ]
+      },
+      "Curve": {
+        "default": "IdleBlink",
+        "links": []
+      },
+      "Value": {
+        "default": "0.000000",
+        "links": [
+          "BlinkOut.Result"
+        ]
+      },
+      "CachedCurveIndex": {
+        "default": "(Key=(Type=None,Name=\"None\"),Index=65535,ContainerVersion=-1)",
+        "links": []
+      }
+    }
+  },
+  "abp": {
+    "status": "<BlueprintStatus.BS_UP_TO_DATE: 3>",
+    "target_skeleton": "<Object '/Game/Furina/SK_Furina_Skeleton.SK_Furina_Skeleton' (0x0000029DA4F67800) Class 'Skeleton'>",
+    "ubergraph_pages": "ERROR: AnimBlueprint: Failed to find property 'ubergraph_pages' for attribute 'ubergraph_pages' on 'AnimBlueprint'",
+    "function_graphs": "ERROR: AnimBlueprint: Failed to find property 'function_graphs' for attribute 'function_graphs' on 'AnimBlueprint'"
+  },
+  "abp_methods": [
+    "add_node_asset_override",
+    "get_animation_graphs",
+    "get_nodes_of_class"
+  ],
+  "animations": {
+    "/Game/3DPlatformerGameBundle/Demo/ThirdPersonAssets/Characters/Mannequins/Animations/Walk_InPlace_Anim": {
+      "length": 2.7333333492279053,
+      "curves": [
+        "FurinaWalk"
+      ],
+      "notifies": [
+        {
+          "text": "(TriggerTimeOffset=0.000000,EndTriggerTimeOffset=0.000000,TriggerWeightThreshold=0.000010,NotifyName=\"Footstep\",Notify=None,NotifyStateClass=None,Duration=0.000000,EndLink=(LinkedMontage=None,SlotIndex=0,SegmentIndex=-1,LinkMethod=Absolute,CachedLinkMethod=Absolute,SegmentBeginTime=0.000000,SegmentLength=0.000000,LinkValue=0.158299,LinkedSequence=None),bConvertedFromBranchingPoint=False,MontageTickType=Queued,NotifyTriggerChance=1.000000,NotifyFilterType=NoFiltering,NotifyFilterLOD=0,bCanBeFilteredViaRequest=True,bTriggerOnDedicatedServer=True,bTriggerOnFollower=False,NotifyColor=(B=0,G=0,R=0,A=255),Guid=BDC27C65432A3BEC6444AF8E671AEC77,TrackIndex=0,LinkedMontage=None,SlotIndex=0,SegmentIndex=0,LinkMethod=Absolute,CachedLinkMethod=Absolute,SegmentBeginTime=0.000000,SegmentLength=2.733333,LinkValue=0.158299,LinkedSequence=\"/Script/Engine.AnimSequence'/Game/3DPlatformerGameBundle/Demo/ThirdPersonAssets/Characters/Mannequins/Animations/Walk_InPlace_Anim.Walk_InPlace_Anim'\")"
+        },
+        {
+          "text": "(TriggerTimeOffset=0.000000,EndTriggerTimeOffset=0.000000,TriggerWeightThreshold=0.000010,NotifyName=\"Footstep\",Notify=None,NotifyStateClass=None,Duration=0.000000,EndLink=(LinkedMontage=None,SlotIndex=0,SegmentIndex=-1,LinkMethod=Absolute,CachedLinkMethod=Absolute,SegmentBeginTime=0.000000,SegmentLength=0.000000,LinkValue=0.599959,LinkedSequence=None),bConvertedFromBranchingPoint=False,MontageTickType=Queued,NotifyTriggerChance=1.000000,NotifyFilterType=NoFiltering,NotifyFilterLOD=0,bCanBeFilteredViaRequest=True,bTriggerOnDedicatedServer=True,bTriggerOnFollower=False,NotifyColor=(B=0,G=0,R=0,A=255),Guid=372AE49746D2FE072B4880BDD9D48356,TrackIndex=0,LinkedMontage=None,SlotIndex=0,SegmentIndex=0,LinkMethod=Absolute,CachedLinkMethod=Absolute,SegmentBeginTime=0.000000,SegmentLength=2.733333,LinkValue=0.599959,LinkedSequence=\"/Script/Engine.AnimSequence'/Game/3DPlatformerGameBundle/Demo/ThirdPersonAssets/Characters/Mannequins/Animations/Walk_InPlace_Anim.Walk_InPlace_Anim'\")"
+        },
+        {
+          "text": "(TriggerTimeOffset=0.000000,EndTriggerTimeOffset=0.000000,TriggerWeightThreshold=0.000010,NotifyName=\"Footstep\",Notify=None,NotifyStateClass=None,Duration=0.000000,EndLink=(LinkedMontage=None,SlotIndex=0,SegmentIndex=-1,LinkMethod=Absolute,CachedLinkMethod=Absolute,SegmentBeginTime=0.000000,SegmentLength=0.000000,LinkValue=1.037112,LinkedSequence=None),bConvertedFromBranchingPoint=False,MontageTickType=Queued,NotifyTriggerChance=1.000000,NotifyFilterType=NoFiltering,NotifyFilterLOD=0,bCanBeFilteredViaRequest=True,bTriggerOnDedicatedServer=True,bTriggerOnFollower=False,NotifyColor=(B=0,G=0,R=0,A=255),Guid=0EFC53244A40ADBB26E4BB80DD3BFC26,TrackIndex=0,LinkedMontage=None,SlotIndex=0,SegmentIndex=0,LinkMethod=Absolute,CachedLinkMethod=Absolute,SegmentBeginTime=0.000000,SegmentLength=2.733333,LinkValue=1.037112,LinkedSequence=\"/Script/Engine.AnimSequence'/Game/3DPlatformerGameBundle/Demo/ThirdPersonAssets/Characters/Mannequins/Animations/Walk_InPlace_Anim.Walk_InPlace_Anim'\")"
+        },
+        {
+          "text": "(TriggerTimeOffset=0.000000,EndTriggerTimeOffset=0.000000,TriggerWeightThreshold=0.000010,NotifyName=\"Footstep\",Notify=None,NotifyStateClass=None,Duration=0.000000,EndLink=(LinkedMontage=None,SlotIndex=0,SegmentIndex=-1,LinkMethod=Absolute,CachedLinkMethod=Absolute,SegmentBeginTime=0.000000,SegmentLength=0.000000,LinkValue=1.438211,LinkedSequence=None),bConvertedFromBranchingPoint=False,MontageTickType=Queued,NotifyTriggerChance=1.000000,NotifyFilterType=NoFiltering,NotifyFilterLOD=0,bCanBeFilteredViaRequest=True,bTriggerOnDedicatedServer=True,bTriggerOnFollower=False,NotifyColor=(B=0,G=0,R=0,A=255),Guid=3A9B8E7643A575F2829802B815D1524F,TrackIndex=0,LinkedMontage=None,SlotIndex=0,SegmentIndex=0,LinkMethod=Absolute,CachedLinkMethod=Absolute,SegmentBeginTime=0.000000,SegmentLength=2.733333,LinkValue=1.438211,LinkedSequence=\"/Script/Engine.AnimSequence'/Game/3DPlatformerGameBundle/Demo/ThirdPersonAssets/Characters/Mannequins/Animations/Walk_InPlace_Anim.Walk_InPlace_Anim'\")"
+        },
+        {
+          "text": "(TriggerTimeOffset=0.000000,EndTriggerTimeOffset=0.000000,TriggerWeightThreshold=0.000010,NotifyName=\"Footstep\",Notify=None,NotifyStateClass=None,Duration=0.000000,EndLink=(LinkedMontage=None,SlotIndex=0,SegmentIndex=-1,LinkMethod=Absolute,CachedLinkMethod=Absolute,SegmentBeginTime=0.000000,SegmentLength=0.000000,LinkValue=1.933951,LinkedSequence=None),bConvertedFromBranchingPoint=False,MontageTickType=Queued,NotifyTriggerChance=1.000000,NotifyFilterType=NoFiltering,NotifyFilterLOD=0,bCanBeFilteredViaRequest=True,bTriggerOnDedicatedServer=True,bTriggerOnFollower=False,NotifyColor=(B=0,G=0,R=0,A=255),Guid=8AAC19D84E5F80B5F3BEA7ABEA7CBEC5,TrackIndex=0,LinkedMontage=None,SlotIndex=0,SegmentIndex=0,LinkMethod=Absolute,CachedLinkMethod=Absolute,SegmentBeginTime=0.000000,SegmentLength=2.733333,LinkValue=1.933951,LinkedSequence=\"/Script/Engine.AnimSequence'/Game/3DPlatformerGameBundle/Demo/ThirdPersonAssets/Characters/Mannequins/Animations/Walk_InPlace_Anim.Walk_InPlace_Anim'\")"
+        },
+        {
+          "text": "(TriggerTimeOffset=0.000000,EndTriggerTimeOffset=0.000000,TriggerWeightThreshold=0.000010,NotifyName=\"Footstep\",Notify=None,NotifyStateClass=None,Duration=0.000000,EndLink=(LinkedMontage=None,SlotIndex=0,SegmentIndex=-1,LinkMethod=Absolute,CachedLinkMethod=Absolute,SegmentBeginTime=0.000000,SegmentLength=0.000000,LinkValue=2.374484,LinkedSequence=None),bConvertedFromBranchingPoint=False,MontageTickType=Queued,NotifyTriggerChance=1.000000,NotifyFilterType=NoFiltering,NotifyFilterLOD=0,bCanBeFilteredViaRequest=True,bTriggerOnDedicatedServer=True,bTriggerOnFollower=False,NotifyColor=(B=0,G=0,R=0,A=255),Guid=A574814B4B18B3F7D5D855BD583B9B77,TrackIndex=0,LinkedMontage=None,SlotIndex=0,SegmentIndex=0,LinkMethod=Absolute,CachedLinkMethod=Absolute,SegmentBeginTime=0.000000,SegmentLength=2.733333,LinkValue=2.374484,LinkedSequence=\"/Script/Engine.AnimSequence'/Game/3DPlatformerGameBundle/Demo/ThirdPersonAssets/Characters/Mannequins/Animations/Walk_InPlace_Anim.Walk_InPlace_Anim'\")"
+        }
+      ]
+    },
+    "/Game/3DPlatformerGameBundle/Demo/ThirdPersonAssets/Characters/Mannequins/Animations/Walk_Fwd_Anim": {
+      "length": 2.7333333492279053,
+      "curves": [
+        "FurinaWalk"
+      ],
+      "notifies": [
+        {
+          "text": "(TriggerTimeOffset=0.000000,EndTriggerTimeOffset=0.000000,TriggerWeightThreshold=0.000010,NotifyName=\"Footstep\",Notify=None,NotifyStateClass=None,Duration=0.000000,EndLink=(LinkedMontage=None,SlotIndex=0,SegmentIndex=-1,LinkMethod=Absolute,CachedLinkMethod=Absolute,SegmentBeginTime=0.000000,SegmentLength=0.000000,LinkValue=0.278854,LinkedSequence=None),bConvertedFromBranchingPoint=False,MontageTickType=Queued,NotifyTriggerChance=1.000000,NotifyFilterType=NoFiltering,NotifyFilterLOD=0,bCanBeFilteredViaRequest=True,bTriggerOnDedicatedServer=True,bTriggerOnFollower=False,NotifyColor=(B=0,G=0,R=0,A=255),Guid=4FA5B31D449710CB5BC9F7B7A4174811,TrackIndex=0,LinkedMontage=None,SlotIndex=0,SegmentIndex=0,LinkMethod=Absolute,CachedLinkMethod=Absolute,SegmentBeginTime=0.000000,SegmentLength=2.733333,LinkValue=0.278854,LinkedSequence=\"/Script/Engine.AnimSequence'/Game/3DPlatformerGameBundle/Demo/ThirdPersonAssets/Characters/Mannequins/Animations/Walk_Fwd_Anim.Walk_Fwd_Anim'\")"
+        },
+        {
+          "text": "(TriggerTimeOffset=0.000000,EndTriggerTimeOffset=0.000000,TriggerWeightThreshold=0.000010,NotifyName=\"Footstep\",Notify=None,NotifyStateClass=None,Duration=0.000000,EndLink=(LinkedMontage=None,SlotIndex=0,SegmentIndex=-1,LinkMethod=Absolute,CachedLinkMethod=Absolute,SegmentBeginTime=0.000000,SegmentLength=0.000000,LinkValue=0.754314,LinkedSequence=None),bConvertedFromBranchingPoint=False,MontageTickType=Queued,NotifyTriggerChance=1.000000,NotifyFilterType=NoFiltering,NotifyFilterLOD=0,bCanBeFilteredViaRequest=True,bTriggerOnDedicatedServer=True,bTriggerOnFollower=False,NotifyColor=(B=0,G=0,R=0,A=255),Guid=3A70EE4744AEE3D63974E99FCCC7F230,TrackIndex=0,LinkedMontage=None,SlotIndex=0,SegmentIndex=0,LinkMethod=Absolute,CachedLinkMethod=Absolute,SegmentBeginTime=0.000000,SegmentLength=2.733333,LinkValue=0.754314,LinkedSequence=\"/Script/Engine.AnimSequence'/Game/3DPlatformerGameBundle/Demo/ThirdPersonAssets/Characters/Mannequins/Animations/Walk_Fwd_Anim.Walk_Fwd_Anim'\")"
+        },
+        {
+          "text": "(TriggerTimeOffset=0.000000,EndTriggerTimeOffset=0.000000,TriggerWeightThreshold=0.000010,NotifyName=\"Footstep\",Notify=None,NotifyStateClass=None,Duration=0.000000,EndLink=(LinkedMontage=None,SlotIndex=0,SegmentIndex=-1,LinkMethod=Absolute,CachedLinkMethod=Absolute,SegmentBeginTime=0.000000,SegmentLength=0.000000,LinkValue=1.214001,LinkedSequence=None),bConvertedFromBranchingPoint=False,MontageTickType=Queued,NotifyTriggerChance=1.000000,NotifyFilterType=NoFiltering,NotifyFilterLOD=0,bCanBeFilteredViaRequest=True,bTriggerOnDedicatedServer=True,bTriggerOnFollower=False,NotifyColor=(B=0,G=0,R=0,A=255),Guid=83227AD544499F88A8B3C298B76F0F8D,TrackIndex=0,LinkedMontage=None,SlotIndex=0,SegmentIndex=0,LinkMethod=Absolute,CachedLinkMethod=Absolute,SegmentBeginTime=0.000000,SegmentLength=2.733333,LinkValue=1.214001,LinkedSequence=\"/Script/Engine.AnimSequence'/Game/3DPlatformerGameBundle/Demo/ThirdPersonAssets/Characters/Mannequins/Animations/Walk_Fwd_Anim.Walk_Fwd_Anim'\")"
+        },
+        {
+          "text": "(TriggerTimeOffset=0.000000,EndTriggerTimeOffset=0.000000,TriggerWeightThreshold=0.000010,NotifyName=\"Footstep\",Notify=None,NotifyStateClass=None,Duration=0.000000,EndLink=(LinkedMontage=None,SlotIndex=0,SegmentIndex=-1,LinkMethod=Absolute,CachedLinkMethod=Absolute,SegmentBeginTime=0.000000,SegmentLength=0.000000,LinkValue=1.680448,LinkedSequence=None),bConvertedFromBranchingPoint=False,MontageTickType=Queued,NotifyTriggerChance=1.000000,NotifyFilterType=NoFiltering,NotifyFilterLOD=0,bCanBeFilteredViaRequest=True,bTriggerOnDedicatedServer=True,bTriggerOnFollower=False,NotifyColor=(B=0,G=0,R=0,A=255),Guid=CBB8A5934DEE9325D883B18FE01F73C5,TrackIndex=0,LinkedMontage=None,SlotIndex=0,SegmentIndex=0,LinkMethod=Absolute,CachedLinkMethod=Absolute,SegmentBeginTime=0.000000,SegmentLength=2.733333,LinkValue=1.680448,LinkedSequence=\"/Script/Engine.AnimSequence'/Game/3DPlatformerGameBundle/Demo/ThirdPersonAssets/Characters/Mannequins/Animations/Walk_Fwd_Anim.Walk_Fwd_Anim'\")"
+        },
+        {
+          "text": "(TriggerTimeOffset=0.000000,EndTriggerTimeOffset=0.000000,TriggerWeightThreshold=0.000010,NotifyName=\"Footstep\",Notify=None,NotifyStateClass=None,Duration=0.000000,EndLink=(LinkedMontage=None,SlotIndex=0,SegmentIndex=-1,LinkMethod=Absolute,CachedLinkMethod=Absolute,SegmentBeginTime=0.000000,SegmentLength=0.000000,LinkValue=2.086054,LinkedSequence=None),bConvertedFromBranchingPoint=False,MontageTickType=Queued,NotifyTriggerChance=1.000000,NotifyFilterType=NoFiltering,NotifyFilterLOD=0,bCanBeFilteredViaRequest=True,bTriggerOnDedicatedServer=True,bTriggerOnFollower=False,NotifyColor=(B=0,G=0,R=0,A=255),Guid=3324BE414CA7C9ECF0307FBF9B853521,TrackIndex=0,LinkedMontage=None,SlotIndex=0,SegmentIndex=0,LinkMethod=Absolute,CachedLinkMethod=Absolute,SegmentBeginTime=0.000000,SegmentLength=2.733333,LinkValue=2.086054,LinkedSequence=\"/Script/Engine.AnimSequence'/Game/3DPlatformerGameBundle/Demo/ThirdPersonAssets/Characters/Mannequins/Animations/Walk_Fwd_Anim.Walk_Fwd_Anim'\")"
+        },
+        {
+          "text": "(TriggerTimeOffset=0.000000,EndTriggerTimeOffset=0.000000,TriggerWeightThreshold=0.000010,NotifyName=\"Footstep\",Notify=None,NotifyStateClass=None,Duration=0.000000,EndLink=(LinkedMontage=None,SlotIndex=0,SegmentIndex=-1,LinkMethod=Absolute,CachedLinkMethod=Absolute,SegmentBeginTime=0.000000,SegmentLength=0.000000,LinkValue=2.545740,LinkedSequence=None),bConvertedFromBranchingPoint=False,MontageTickType=Queued,NotifyTriggerChance=1.000000,NotifyFilterType=NoFiltering,NotifyFilterLOD=0,bCanBeFilteredViaRequest=True,bTriggerOnDedicatedServer=True,bTriggerOnFollower=False,NotifyColor=(B=0,G=0,R=0,A=255),Guid=3FD1B4C2445F214A9B1EA880910463EC,TrackIndex=0,LinkedMontage=None,SlotIndex=0,SegmentIndex=0,LinkMethod=Absolute,CachedLinkMethod=Absolute,SegmentBeginTime=0.000000,SegmentLength=2.733333,LinkValue=2.545740,LinkedSequence=\"/Script/Engine.AnimSequence'/Game/3DPlatformerGameBundle/Demo/ThirdPersonAssets/Characters/Mannequins/Animations/Walk_Fwd_Anim.Walk_Fwd_Anim'\")"
+        }
+      ]
+    },
+    "/Game/3DPlatformerGameBundle/Demo/ThirdPersonAssets/Characters/Mannequins/Animations/Run_Fwd_Anim": {
+      "length": 1.899999976158142,
+      "curves": [],
+      "notifies": [
+        {
+          "text": "(TriggerTimeOffset=0.000000,EndTriggerTimeOffset=0.000000,TriggerWeightThreshold=0.000010,NotifyName=\"Footstep\",Notify=None,NotifyStateClass=None,Duration=0.000000,EndLink=(LinkedMontage=None,SlotIndex=0,SegmentIndex=-1,LinkMethod=Absolute,CachedLinkMethod=Absolute,SegmentBeginTime=0.000000,SegmentLength=0.000000,LinkValue=0.202452,LinkedSequence=None),bConvertedFromBranchingPoint=False,MontageTickType=Queued,NotifyTriggerChance=1.000000,NotifyFilterType=NoFiltering,NotifyFilterLOD=0,bCanBeFilteredViaRequest=True,bTriggerOnDedicatedServer=True,bTriggerOnFollower=False,NotifyColor=(B=0,G=0,R=0,A=255),Guid=2F00C0CA4E64FADF27120EA590A0F151,TrackIndex=0,LinkedMontage=None,SlotIndex=0,SegmentIndex=0,LinkMethod=Absolute,CachedLinkMethod=Absolute,SegmentBeginTime=0.000000,SegmentLength=1.900000,LinkValue=0.202452,LinkedSequence=\"/Script/Engine.AnimSequence'/Game/3DPlatformerGameBundle/Demo/ThirdPersonAssets/Characters/Mannequins/Animations/Run_Fwd_Anim.Run_Fwd_Anim'\")"
+        },
+        {
+          "text": "(TriggerTimeOffset=0.000000,EndTriggerTimeOffset=0.000000,TriggerWeightThreshold=0.000010,NotifyName=\"Footstep\",Notify=None,NotifyStateClass=None,Duration=0.000000,EndLink=(LinkedMontage=None,SlotIndex=0,SegmentIndex=-1,LinkMethod=Absolute,CachedLinkMethod=Absolute,SegmentBeginTime=0.000000,SegmentLength=0.000000,LinkValue=0.517292,LinkedSequence=None),bConvertedFromBranchingPoint=False,MontageTickType=Queued,NotifyTriggerChance=1.000000,NotifyFilterType=NoFiltering,NotifyFilterLOD=0,bCanBeFilteredViaRequest=True,bTriggerOnDedicatedServer=True,bTriggerOnFollower=False,NotifyColor=(B=0,G=0,R=0,A=255),Guid=CB0D9D7D4E1FD6EE81B872A73DCB45C8,TrackIndex=0,LinkedMontage=None,SlotIndex=0,SegmentIndex=0,LinkMethod=Absolute,CachedLinkMethod=Absolute,SegmentBeginTime=0.000000,SegmentLength=1.900000,LinkValue=0.517292,LinkedSequence=\"/Script/Engine.AnimSequence'/Game/3DPlatformerGameBundle/Demo/ThirdPersonAssets/Characters/Mannequins/Animations/Run_Fwd_Anim.Run_Fwd_Anim'\")"
+        },
+        {
+          "text": "(TriggerTimeOffset=0.000000,EndTriggerTimeOffset=0.000000,TriggerWeightThreshold=0.000010,NotifyName=\"Footstep\",Notify=None,NotifyStateClass=None,Duration=0.000000,EndLink=(LinkedMontage=None,SlotIndex=0,SegmentIndex=-1,LinkMethod=Absolute,CachedLinkMethod=Absolute,SegmentBeginTime=0.000000,SegmentLength=0.000000,LinkValue=0.824299,LinkedSequence=None),bConvertedFromBranchingPoint=False,MontageTickType=Queued,NotifyTriggerChance=1.000000,NotifyFilterType=NoFiltering,NotifyFilterLOD=0,bCanBeFilteredViaRequest=True,bTriggerOnDedicatedServer=True,bTriggerOnFollower=False,NotifyColor=(B=0,G=0,R=0,A=255),Guid=3326A4D047E383D0B741E7AD838E489A,TrackIndex=0,LinkedMontage=None,SlotIndex=0,SegmentIndex=0,LinkMethod=Absolute,CachedLinkMethod=Absolute,SegmentBeginTime=0.000000,SegmentLength=1.900000,LinkValue=0.824299,LinkedSequence=\"/Script/Engine.AnimSequence'/Game/3DPlatformerGameBundle/Demo/ThirdPersonAssets/Characters/Mannequins/Animations/Run_Fwd_Anim.Run_Fwd_Anim'\")"
+        },
+        {
+          "text": "(TriggerTimeOffset=0.000000,EndTriggerTimeOffset=0.000000,TriggerWeightThreshold=0.000010,NotifyName=\"Footstep\",Notify=None,NotifyStateClass=None,Duration=0.000000,EndLink=(LinkedMontage=None,SlotIndex=0,SegmentIndex=-1,LinkMethod=Absolute,CachedLinkMethod=Absolute,SegmentBeginTime=0.000000,SegmentLength=0.000000,LinkValue=1.151669,LinkedSequence=None),bConvertedFromBranchingPoint=False,MontageTickType=Queued,NotifyTriggerChance=1.000000,NotifyFilterType=NoFiltering,NotifyFilterLOD=0,bCanBeFilteredViaRequest=True,bTriggerOnDedicatedServer=True,bTriggerOnFollower=False,NotifyColor=(B=0,G=0,R=0,A=255),Guid=9E7E38B04D7CA1DF9A9C81A8743148D9,TrackIndex=0,LinkedMontage=None,SlotIndex=0,SegmentIndex=0,LinkMethod=Absolute,CachedLinkMethod=Absolute,SegmentBeginTime=0.000000,SegmentLength=1.900000,LinkValue=1.151669,LinkedSequence=\"/Script/Engine.AnimSequence'/Game/3DPlatformerGameBundle/Demo/ThirdPersonAssets/Characters/Mannequins/Animations/Run_Fwd_Anim.Run_Fwd_Anim'\")"
+        },
+        {
+          "text": "(TriggerTimeOffset=0.000000,EndTriggerTimeOffset=0.000000,TriggerWeightThreshold=0.000010,NotifyName=\"Footstep\",Notify=None,NotifyStateClass=None,Duration=0.000000,EndLink=(LinkedMontage=None,SlotIndex=0,SegmentIndex=-1,LinkMethod=Absolute,CachedLinkMethod=Absolute,SegmentBeginTime=0.000000,SegmentLength=0.000000,LinkValue=1.466509,LinkedSequence=None),bConvertedFromBranchingPoint=False,MontageTickType=Queued,NotifyTriggerChance=1.000000,NotifyFilterType=NoFiltering,NotifyFilterLOD=0,bCanBeFilteredViaRequest=True,bTriggerOnDedicatedServer=True,bTriggerOnFollower=False,NotifyColor=(B=0,G=0,R=0,A=255),Guid=92A1A310482F1A43DA914CA29CE2F44A,TrackIndex=0,LinkedMontage=None,SlotIndex=0,SegmentIndex=0,LinkMethod=Absolute,CachedLinkMethod=Absolute,SegmentBeginTime=0.000000,SegmentLength=1.900000,LinkValue=1.466509,LinkedSequence=\"/Script/Engine.AnimSequence'/Game/3DPlatformerGameBundle/Demo/ThirdPersonAssets/Characters/Mannequins/Animations/Run_Fwd_Anim.Run_Fwd_Anim'\")"
+        },
+        {
+          "text": "(TriggerTimeOffset=0.000000,EndTriggerTimeOffset=0.000000,TriggerWeightThreshold=0.000010,NotifyName=\"Footstep\",Notify=None,NotifyStateClass=None,Duration=0.000000,EndLink=(LinkedMontage=None,SlotIndex=0,SegmentIndex=-1,LinkMethod=Absolute,CachedLinkMethod=Absolute,SegmentBeginTime=0.000000,SegmentLength=0.000000,LinkValue=1.776648,LinkedSequence=None),bConvertedFromBranchingPoint=False,MontageTickType=Queued,NotifyTriggerChance=1.000000,NotifyFilterType=NoFiltering,NotifyFilterLOD=0,bCanBeFilteredViaRequest=True,bTriggerOnDedicatedServer=True,bTriggerOnFollower=False,NotifyColor=(B=0,G=0,R=0,A=255),Guid=90930CAB4E8B343260729595685591C0,TrackIndex=0,LinkedMontage=None,SlotIndex=0,SegmentIndex=0,LinkMethod=Absolute,CachedLinkMethod=Absolute,SegmentBeginTime=0.000000,SegmentLength=1.900000,LinkValue=1.776648,LinkedSequence=\"/Script/Engine.AnimSequence'/Game/3DPlatformerGameBundle/Demo/ThirdPersonAssets/Characters/Mannequins/Animations/Run_Fwd_Anim.Run_Fwd_Anim'\")"
+        }
+      ]
+    },
+    "/Game/3DPlatformerGameBundle/Demo/ThirdPersonAssets/Characters/Mannequins/Animations/Idle_Anim": {
+      "length": 7.566666603088379,
+      "curves": [
+        "FurinaIdle"
+      ],
+      "notifies": []
+    },
+    "/Game/Furina/Anim/AS_Furina_Idle": {
+      "length": 10.466666221618652,
+      "curves": [],
+      "notifies": []
+    },
+    "/Game/Furina/Anim/AS_Furina_Walk": {
+      "length": 1.3333333730697632,
+      "curves": [],
+      "notifies": []
+    }
+  },
+  "character": {
+    "mesh": "<Object '/Game/3DPlatformerGameBundle/Demo/ThirdPersonAssets/Blueprints/ThirdPersonCharacter_BP.Default__ThirdPersonCharacter_BP_C:CharacterMesh0' (0x0000029DB3B66400) Class 'SkeletalMeshComponent'>",
+    "character_movement": "<Object '/Game/3DPlatformerGameBundle/Demo/ThirdPersonAssets/Blueprints/ThirdPersonCharacter_BP.Default__ThirdPersonCharacter_BP_C:CharMoveComp' (0x0000029DB3B67800) Class 'CharacterMovementComponent'>"
+  },
+  "components": [
+    {
+      "name": "CollisionCylinder",
+      "class": "/Script/Engine.CapsuleComponent",
+      "fields": {
+        "sound": "ERROR: CapsuleComponent: Failed to find property 'sound' for attribute 'sound' on 'CapsuleComponent'",
+        "auto_activate": "False",
+        "skeletal_mesh_asset": "ERROR: CapsuleComponent: Failed to find property 'skeletal_mesh_asset' for attribute 'skeletal_mesh_asset' on 'CapsuleComponent'",
+        "anim_class": "ERROR: CapsuleComponent: Failed to find property 'anim_class' for attribute 'anim_class' on 'CapsuleComponent'",
+        "visibility_based_anim_tick_option": "ERROR: CapsuleComponent: Failed to find property 'visibility_based_anim_tick_option' for attribute 'visibility_based_anim_tick_option' on 'CapsuleComponent'"
+      }
+    },
+    {
+      "name": "Arrow",
+      "class": "/Script/Engine.ArrowComponent",
+      "fields": {
+        "sound": "ERROR: ArrowComponent: Failed to find property 'sound' for attribute 'sound' on 'ArrowComponent'",
+        "auto_activate": "False",
+        "skeletal_mesh_asset": "ERROR: ArrowComponent: Failed to find property 'skeletal_mesh_asset' for attribute 'skeletal_mesh_asset' on 'ArrowComponent'",
+        "anim_class": "ERROR: ArrowComponent: Failed to find property 'anim_class' for attribute 'anim_class' on 'ArrowComponent'",
+        "visibility_based_anim_tick_option": "ERROR: ArrowComponent: Failed to find property 'visibility_based_anim_tick_option' for attribute 'visibility_based_anim_tick_option' on 'ArrowComponent'"
+      }
+    },
+    {
+      "name": "CharMoveComp",
+      "class": "/Script/Engine.CharacterMovementComponent",
+      "fields": {
+        "sound": "ERROR: CharacterMovementComponent: Failed to find property 'sound' for attribute 'sound' on 'CharacterMovementComponent'",
+        "auto_activate": "True",
+        "skeletal_mesh_asset": "ERROR: CharacterMovementComponent: Failed to find property 'skeletal_mesh_asset' for attribute 'skeletal_mesh_asset' on 'CharacterMovementComponent'",
+        "anim_class": "ERROR: CharacterMovementComponent: Failed to find property 'anim_class' for attribute 'anim_class' on 'CharacterMovementComponent'",
+        "visibility_based_anim_tick_option": "ERROR: CharacterMovementComponent: Failed to find property 'visibility_based_anim_tick_option' for attribute 'visibility_based_anim_tick_option' on 'CharacterMovementComponent'"
+      }
+    },
+    {
+      "name": "CharacterMesh0",
+      "class": "/Script/Engine.SkeletalMeshComponent",
+      "fields": {
+        "sound": "ERROR: SkeletalMeshComponent: Failed to find property 'sound' for attribute 'sound' on 'SkeletalMeshComponent'",
+        "auto_activate": "True",
+        "skeletal_mesh_asset": "<Object '/Game/3DPlatformerGameBundle/Demo/ThirdPersonAssets/Characters/Mannequins/Meshes/Manny_Simple_SK.Manny_Simple_SK' (0x0000029DA5FD8C00) Class 'SkeletalMesh'>",
+        "anim_class": "<Object '/Game/3DPlatformerGameBundle/Demo/ThirdPersonAssets/Characters/Mannequins/Animations/Manny_AnimBlueprint.Manny_AnimBlueprint_C' (0x0000029DB0BEB600) Class 'AnimBlueprintGeneratedClass'>",
+        "visibility_based_anim_tick_option": "<VisibilityBasedAnimTickOption.ALWAYS_TICK_POSE_AND_REFRESH_BONES: 0>"
+      }
+    }
+  ],
+  "api": {
+    "AnimationLibrary": [
+      "add_animation_notify_event",
+      "add_animation_notify_event_from_source",
+      "add_animation_notify_event_object",
+      "add_animation_notify_state_event",
+      "add_animation_notify_state_event_object",
+      "add_animation_notify_track",
+      "add_curve",
+      "add_curve_meta_data",
+      "add_float_curve_key",
+      "add_float_curve_keys",
+      "add_node_asset_override",
+      "add_transformation_curve_key",
+      "add_transformation_curve_keys",
+      "add_vector_curve_key",
+      "add_vector_curve_keys",
+      "copy_animation_curve_names_to_skeleton",
+      "does_curve_exist",
+      "get_anim_notify_event_duration",
+      "get_anim_notify_event_trigger_time",
+      "get_animation_curve_names",
+      "get_animation_graphs",
+      "get_animation_notify_event_names",
+      "get_animation_notify_events",
+      "get_animation_notify_events_for_track",
+      "get_animation_notify_track_names",
+      "get_curve_compression_settings",
+      "get_curve_meta_data_material",
+      "get_curve_meta_data_morph_target",
+      "get_curve_meta_data_names",
+      "get_nodes_of_class",
+      "get_num_curve_meta_data",
+      "is_valid_anim_notify_track_name",
+      "remove_all_animation_notify_tracks",
+      "remove_all_curve_data",
+      "remove_animation_notify_events_by_name",
+      "remove_animation_notify_events_by_track",
+      "remove_animation_notify_track",
+      "remove_curve",
+      "remove_curve_meta_data",
+      "rename_curve_meta_data",
+      "replace_anim_notify_states",
+      "set_curve_compression_settings",
+      "set_curve_meta_data_material",
+      "set_curve_meta_data_morph_target"
+    ],
+    "BlueprintEditorLibrary": [
+      "add_function_graph",
+      "compile_blueprint",
+      "find_event_graph",
+      "find_graph",
+      "get_node_category",
+      "get_node_pos",
+      "get_node_size",
+      "get_node_title",
+      "get_nodes_in_comment",
+      "list_graph_names",
+      "list_graphs",
+      "remove_function_graph",
+      "remove_graph",
+      "remove_unused_nodes",
+      "rename_graph",
+      "set_node_pos",
+      "upgrade_operator_nodes"
+    ],
+    "EditorLoadingAndSavingUtils": [
+      "reload_packages"
+    ],
+    "RigVMController": [
+      "add_array_node",
+      "add_array_node_from_object_path",
+      "add_branch_node",
+      "add_comment_node",
+      "add_enum_node",
+      "add_external_function_reference_node",
+      "add_free_reroute_node",
+      "add_function_reference_node",
+      "add_function_reference_node_from_description",
+      "add_if_node",
+      "add_if_node_from_struct",
+      "add_injected_node",
+      "add_injected_node_from_struct_path",
+      "add_invoke_entry_node",
+      "add_override_to_all_pins_on_node",
+      "add_override_to_all_pins_on_nodes",
+      "add_parameter_node",
+      "add_parameter_node_from_object_path",
+      "add_reroute_node_on_link",
+      "add_reroute_node_on_link_path",
+      "add_reroute_node_on_pin",
+      "add_select_node",
+      "add_select_node_from_struct",
+      "add_template_node",
+      "add_unit_node",
+      "add_unit_node_from_struct_path",
+      "add_unit_node_with_defaults",
+      "add_variable_node",
+      "add_variable_node_from_object_path",
+      "can_import_nodes_from_text",
+      "clear_node_layout",
+      "clear_node_selection",
+      "clear_override_on_all_pins_on_node",
+      "clear_override_on_all_pins_on_nodes",
+      "collapse_nodes",
+      "eject_node_from_pin",
+      "expand_library_node",
+      "export_node_to_text",
+      "export_nodes_to_text",
+      "export_selected_nodes_to_text",
+      "find_graph_function_header",
+      "find_graph_function_header_by_name",
+      "find_graph_function_identifier",
+      "get_controller_for_graph",
+      "get_graph",
+      "get_top_level_graph",
+      "import_nodes_from_text",
+      "make_bindings_from_variable_node",
+      "make_variable_node_from_binding",
+      "pop_graph",
+      "promote_collapse_node_to_function_reference_node",
+      "promote_function_reference_node_to_collapse_node",
+      "push_graph",
+      "refresh_variable_node",
+      "remove_injected_node",
+      "remove_node",
+      "remove_node_by_name",
+      "remove_nodes",
+      "remove_nodes_by_name",
+      "rename_node",
+      "replace_parameter_node_with_variable",
+      "reset_default_value_for_all_pins_on_node",
+      "reset_default_value_for_all_pins_on_nodes",
+      "select_linked_nodes",
+      "select_node",
+      "select_node_by_name",
+      "select_node_islands",
+      "set_graph",
+      "set_node_category",
+      "set_node_category_by_name",
+      "set_node_color",
+      "set_node_color_by_name",
+      "set_node_description",
+      "set_node_description_by_name",
+      "set_node_keywords",
+      "set_node_keywords_by_name",
+      "set_node_layout",
+      "set_node_position",
+      "set_node_position_by_name",
+      "set_node_selection",
+      "set_node_size",
+      "set_node_size_by_name",
+      "set_node_title",
+      "set_node_title_by_name",
+      "set_unit_node_defaults",
+      "unresolve_template_nodes",
+      "upgrade_nodes"
+    ],
+    "AnimGraphNode_ControlRig": [
+      "get_node_category",
+      "get_node_pos",
+      "get_node_size",
+      "get_node_title",
+      "set_node_pos"
+    ]
+  }
+}

@@ -1,0 +1,353 @@
+{
+ "walk": 120,
+ "sprint": 600,
+ "run_narrow_cm": 2.0,
+ "run_stride": 0.55,
+ "run_kick": 0.6,
+ "hair_idle_alpha": 0.3,
+ "chains": [
+  {
+   "root": "HB1_1_0",
+   "kind": "cloth",
+   "lift": 15.8,
+   "bob": 7.0,
+   "amp": [
+    0.12,
+    0.06
+   ],
+   "idle": [
+    0,
+    0
+   ],
+   "tempo": 4.5,
+   "spatial": 2.0,
+   "phase": 0.0,
+   "rootAmp": 0.15
+  },
+  {
+   "root": "HB1_1_6",
+   "kind": "cloth",
+   "lift": 28.8,
+   "bob": 7.0,
+   "amp": [
+    0.12,
+    0.06
+   ],
+   "idle": [
+    0,
+    0
+   ],
+   "tempo": 4.5,
+   "spatial": 2.0,
+   "phase": 0.7,
+   "rootAmp": 0.15
+  },
+  {
+   "root": "HB1_2_1",
+   "kind": "cloth",
+   "lift": 37.0,
+   "bob": 7.0,
+   "amp": [
+    0.12,
+    0.06
+   ],
+   "idle": [
+    0,
+    0
+   ],
+   "tempo": 4.5,
+   "spatial": 2.0,
+   "phase": 1.4,
+   "rootAmp": 0.15
+  },
+  {
+   "root": "HB1_1_5",
+   "kind": "cloth",
+   "lift": 36.2,
+   "bob": 7.0,
+   "amp": [
+    0.12,
+    0.06
+   ],
+   "idle": [
+    0,
+    0
+   ],
+   "tempo": 4.5,
+   "spatial": 2.0,
+   "phase": 2.1,
+   "rootAmp": 0.15
+  },
+  {
+   "root": "HB1_2_7",
+   "kind": "cloth",
+   "lift": 37.0,
+   "bob": 7.0,
+   "amp": [
+    0.12,
+    0.06
+   ],
+   "idle": [
+    0,
+    0
+   ],
+   "tempo": 4.5,
+   "spatial": 2.0,
+   "phase": 2.8,
+   "rootAmp": 0.15
+  },
+  {
+   "root": "HB2_0_1",
+   "kind": "cloth",
+   "lift": 55.0,
+   "bob": 8.0,
+   "amp": [
+    0.08,
+    0.04
+   ],
+   "idle": [
+    0,
+    0
+   ],
+   "tempo": 4.5,
+   "spatial": 4.0,
+   "phase": 3.5,
+   "rootAmp": 0.15
+  },
+  {
+   "root": "HB3_0_1",
+   "kind": "cloth",
+   "lift": 55.0,
+   "bob": 8.0,
+   "amp": [
+    0.08,
+    0.04
+   ],
+   "idle": [
+    0,
+    0
+   ],
+   "tempo": 4.5,
+   "spatial": 4.0,
+   "phase": 4.2,
+   "rootAmp": 0.15
+  },
+  {
+   "root": "HB1_1_3",
+   "kind": "cloth",
+   "lift": 36.2,
+   "bob": 7.0,
+   "amp": [
+    0.12,
+    0.06
+   ],
+   "idle": [
+    0,
+    0
+   ],
+   "tempo": 4.5,
+   "spatial": 2.0,
+   "phase": 4.9,
+   "rootAmp": 0.15
+  },
+  {
+   "root": "HB4_0_1",
+   "kind": "cloth",
+   "lift": 55.0,
+   "bob": 8.0,
+   "amp": [
+    0.08,
+    0.04
+   ],
+   "idle": [
+    0,
+    0
+   ],
+   "tempo": 4.5,
+   "spatial": 4.0,
+   "phase": 5.6,
+   "rootAmp": 0.15
+  },
+  {
+   "root": "HB1_1_4",
+   "kind": "cloth",
+   "lift": 37.0,
+   "bob": 7.0,
+   "amp": [
+    0.12,
+    0.06
+   ],
+   "idle": [
+    0,
+    0
+   ],
+   "tempo": 4.5,
+   "spatial": 2.0,
+   "phase": 6.3,
+   "rootAmp": 0.15
+  },
+  {
+   "root": "HB1_1_8",
+   "kind": "cloth",
+   "lift": 15.8,
+   "bob": 7.0,
+   "amp": [
+    0.12,
+    0.06
+   ],
+   "idle": [
+    0,
+    0
+   ],
+   "tempo": 4.5,
+   "spatial": 2.0,
+   "phase": 7.0,
+   "rootAmp": 0.15
+  },
+  {
+   "root": "HB1_1_2",
+   "kind": "cloth",
+   "lift": 28.8,
+   "bob": 7.0,
+   "amp": [
+    0.12,
+    0.06
+   ],
+   "idle": [
+    0,
+    0
+   ],
+   "tempo": 4.5,
+   "spatial": 2.0,
+   "phase": 7.7,
+   "rootAmp": 0.15
+  },
+  {
+   "root": "\u9886\u5dfe",
+   "kind": "cloth",
+   "lift": 60.0,
+   "bob": 10.0,
+   "wave": false,
+   "amp": [
+    0,
+    0
+   ],
+   "idle": [
+    0,
+    0
+   ],
+   "tempo": 0,
+   "spatial": 0,
+   "phase": 0,
+   "rootAmp": 0
+  },
+  {
+   "root": "\u5e3dD1_1",
+   "kind": "cloth",
+   "lift": 35.0,
+   "bob": 8.0,
+   "amp": [
+    0.1,
+    0.05
+   ],
+   "idle": [
+    0,
+    0
+   ],
+   "tempo": 5.0,
+   "spatial": 1.5,
+   "phase": 0.3,
+   "rootAmp": 0.4
+  },
+  {
+   "root": "F_0_1_L",
+   "kind": "hair",
+   "lift": 0,
+   "bob": 0.0,
+   "amp": [
+    0.02,
+    0.012
+   ],
+   "idle": [
+    0.008,
+    0.006
+   ],
+   "tempo": 1.0,
+   "spatial": 2.0,
+   "phase": 0.0,
+   "rootAmp": 0.1
+  },
+  {
+   "root": "F_0_1_R",
+   "kind": "hair",
+   "lift": 0,
+   "bob": 0.0,
+   "amp": [
+    0.02,
+    0.012
+   ],
+   "idle": [
+    0.008,
+    0.006
+   ],
+   "tempo": 1.0,
+   "spatial": 2.0,
+   "phase": 1.1,
+   "rootAmp": 0.1
+  },
+  {
+   "root": "CF_1_L",
+   "kind": "hair",
+   "lift": 0,
+   "bob": 0.0,
+   "amp": [
+    0.05,
+    0.03
+   ],
+   "idle": [
+    0.004,
+    0.003
+   ],
+   "tempo": 1.2,
+   "spatial": 1.0,
+   "phase": 0.5,
+   "rootAmp": 0.4
+  },
+  {
+   "root": "CF_1_R",
+   "kind": "hair",
+   "lift": 0,
+   "bob": 0.0,
+   "amp": [
+    0.05,
+    0.03
+   ],
+   "idle": [
+    0.004,
+    0.003
+   ],
+   "tempo": 1.2,
+   "spatial": 1.0,
+   "phase": 1.7,
+   "rootAmp": 0.4
+  },
+  {
+   "root": "DM_0_1",
+   "kind": "hair",
+   "lift": 0,
+   "bob": 0.0,
+   "amp": [
+    0.03,
+    0.02
+   ],
+   "idle": [
+    0.001,
+    0.0007
+   ],
+   "tempo": 1.4,
+   "spatial": 1.5,
+   "phase": 0.9,
+   "rootAmp": 0.2
+  }
+ ]
+}

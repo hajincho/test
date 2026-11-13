@@ -1,0 +1,12 @@
+{
+ "log": [
+  "remove solver True",
+  "Left limb solver 0",
+  "root True",
+  "connect True",
+  "Right limb solver 1",
+  "root True",
+  "connect True",
+  "ops [(Name(\"Pelvis Motion\"), True), (Name(\"FK Chains\"), True), (Name(\"Run IK Rig\"), True), (Name(\"Root Motion\"), True), (Name(\"Remap Curves\"), True)]"
+ ]
+}

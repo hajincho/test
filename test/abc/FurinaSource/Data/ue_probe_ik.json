@@ -1,0 +1,31 @@
+{
+ "ik_units": [
+  "RigUnit_LineTraceByObjectTypes",
+  "RigUnit_LineTraceByProfile",
+  "RigUnit_LineTraceByTraceChannel",
+  "RigUnit_SphereTraceByObjectTypes",
+  "RigUnit_SphereTraceByProfile",
+  "RigUnit_SphereTraceByTraceChannel",
+  "RigUnit_SphereTraceWorld",
+  "RigUnit_TwoBoneIKFK",
+  "RigUnit_TwoBoneIKSimple",
+  "RigUnit_TwoBoneIKSimplePerItem",
+  "RigUnit_TwoBoneIKSimpleTransforms",
+  "RigUnit_TwoBoneIKSimpleVectors",
+  "RigUnit_TwoBoneIKSimple_DebugSettings"
+ ],
+ "RigUnit_TwoBoneIKSimplePerItem": "(ItemA=(Type=Bone,Name=\"\"),ItemB=(Type=Bone,Name=\"\"),EffectorItem=(Type=Bone,Name=\"\"),Effector=(Rotation=(X=0.000000,Y=0.000000,Z=0.000000,W=1.000000),Translation=(X=0.000000,Y=0.000000,Z=0.000000),Scale3D=(X=1.000000,Y=1.000000,Z=1.000000)),PrimaryAxis=(X=1.000000,Y=0.000000,Z=0.000000),SecondaryAxis=(X=0.000000,Y=1.000000,Z=0.000000),SecondaryAxisWeight=1.000000,PoleVector=(X=0.000000,Y=0.000000,Z=1.000000),PoleVectorKind=Direction,PoleVectorSpace=(Type=Bone,Name=\"\"),bEnableStretch=False,StretchStartRatio=0.750000,StretchMaximumRatio=1.250000,Weight=1.000000,ItemALength=0.000000,ItemBLength=0.000000,bPropagateToChildren=True,DebugSettings=(bEnabled=False,Scale=10.000000,WorldOffset=(Rotation=(X=0.000000,Y=0.000000,Z=0.000000,W=1.000000),Translation=(X=0.000000,Y=0.000000,Z=0.000000),Scale3D=(X=1.000000,Y=1.000000,Z=1.000000))),CachedItemAIndex=(Key=(Type=None,Name=\"\"),Index=65535,ContainerVersion=-1),CachedItemBIndex=(Key=(Type=None,Name=\"\"),Index=65535,ContainerVersion=-1),CachedEffectorItemIndex=(Key=(Type=None,Name=\"\"),Index=65535,ContainerVersion=-1),CachedPoleVectorSpaceIndex=(Key=(Type=None,Name=\"\"),Index=65535,ContainerVersion=-1))",
+ "RigUnit_SphereTraceWorld": "(Start=(X=0.000000,Y=0.000000,Z=0.000000),End=(X=0.000000,Y=0.000000,Z=0.000000),Channel=ECC_Visibility,Radius=5.000000,bHit=False,HitLocation=(X=0.000000,Y=0.000000,Z=0.000000),HitNormal=(X=0.000000,Y=0.000000,Z=1.000000),WorkData=(Hash=4294967295,bHit=False,HitLocation=(X=0.000000,Y=0.000000,Z=0.000000),HitNormal=(X=0.000000,Y=0.000000,Z=1.000000)))",
+ "RigUnit_SphereTraceByTraceChannel": "(Start=(X=0.000000,Y=0.000000,Z=0.000000),End=(X=0.000000,Y=0.000000,Z=0.000000),TraceChannel=TraceTypeQuery1,Radius=5.000000,bHit=False,HitLocation=(X=0.000000,Y=0.000000,Z=0.000000),HitNormal=(X=0.000000,Y=0.000000,Z=1.000000),WorkData=(Hash=4294967295,bHit=False,HitLocation=(X=0.000000,Y=0.000000,Z=0.000000),HitNormal=(X=0.000000,Y=0.000000,Z=1.000000)))",
+ "RigUnit_MathQuaternionFromTwoVectors": "(A=(X=1.000000,Y=0.000000,Z=0.000000),B=(X=1.000000,Y=0.000000,Z=0.000000),Result=(X=0.000000,Y=0.000000,Z=0.000000,W=1.000000))",
+ "RigUnit_ToRigSpace_Location": "(Value=(X=0.000000,Y=0.000000,Z=0.000000),Global=(X=0.000000,Y=0.000000,Z=0.000000))",
+ "RigUnit_MathVectorMake": "(X=0.000000,Y=0.000000,Z=0.000000,Result=(X=0.000000,Y=0.000000,Z=0.000000))",
+ "RigUnit_MathFloatMin": "(A=0.000000,B=0.000000,Result=0.000000)",
+ "RigUnit_MathFloatMax": "(A=0.000000,B=0.000000,Result=0.000000)",
+ "RigUnit_MathFloatSub": "(A=0.000000,B=0.000000,Result=0.000000)",
+ "RigUnit_MathQuaternionSlerp": "(A=(X=0.000000,Y=0.000000,Z=0.000000,W=1.000000),B=(X=0.000000,Y=0.000000,Z=0.000000,W=1.000000),T=0.000000,Result=(X=0.000000,Y=0.000000,Z=0.000000,W=1.000000))",
+ "RigUnit_MathVectorAdd": "(A=(X=0.000000,Y=0.000000,Z=0.000000),B=(X=0.000000,Y=0.000000,Z=0.000000),Result=(X=0.000000,Y=0.000000,Z=0.000000))",
+ "RigUnit_SetTranslation": "(Item=(Type=Bone,Name=\"\"),Space=GlobalSpace,bInitial=False,Value=(X=0.000000,Y=0.000000,Z=0.000000),Weight=1.000000,bPropagateToChildren=True,CachedIndex=(Key=(Type=None,Name=\"\"),Index=65535,ContainerVersion=-1))",
+ "RigUnit_MathVectorFromFloat": "(Value=0.000000,Result=(X=0.000000,Y=0.000000,Z=0.000000))",
+ "RigUnit_MathFloatLerp": "(A=0.000000,B=1.000000,T=0.000000,Result=0.000000)"
+}

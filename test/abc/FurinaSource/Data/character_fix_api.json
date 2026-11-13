@@ -1,0 +1,597 @@
+{
+ "api_BlueprintGraphLibrary": {},
+ "api_BlueprintGraphPin": {
+  "break_pin_links": "x.break_pin_links() -> bool\r\nBreaks all pin links associated with this pin\r\n\r\nReturns:\r\n    bool:",
+  "break_single_pin_link": "x.break_single_pin_link(other) -> bool\r\nBreaks a pin link between this pin and Other\r\n\r\nArgs:\r\n    other (BlueprintGraphPin): \r\n\r\nReturns:\r\n    bool:",
+  "get_owning_node": "x.get_owning_node() -> K2Node\r\nReturns the pin's node\r\n\r\nReturns:\r\n    K2Node:",
+  "get_pin_direction": "x.get_pin_direction() -> EdGraphPinDirection\r\nReturns the direction of the pin (either EGPD_Output or EGPD_Input)\r\n\r\nReturns:\r\n    EdGraphPinDirection:",
+  "get_pin_name": "x.get_pin_name() -> Name\r\nReturns the low level name of the pin\r\n\r\nReturns:\r\n    Name:",
+  "get_pin_type": "x.get_pin_type() -> EdGraphPinType\r\nReturns the pin's type, FEdGraphPinType is mostly opaque to script but can\nbe used e.g. to create variables of the same type\r\n\r\nReturns:\r\n    EdGraphPinType:",
+  "get_pin_type_as_json_schema": "x.get_pin_type_as_json_schema() -> str\r\nReturns a json schema encoded description of the pin's type:\r\n\r\nReturns:\r\n    str:",
+  "get_pin_type_display_string": "x.get_pin_type_display_string() -> Text\r\nReturns the string used to describe the pin type in the blueprint UI\r\n\r\nReturns:\r\n    Text:",
+  "get_pin_value": "x.get_pin_value() -> str\r\nReturns the literal value associated with the pin. Empty string for pins\nthat have nothing set or are connected to some other pin:\r\n\r\nReturns:\r\n    str:",
+  "is_same_native_pin": "x.is_same_native_pin(other) -> bool\r\nBecause these pin objects are proxies for the underlying native pin, this function\nshould be used for establishing whether to FBlueprintGraphPin values refer to the\nsame pin on a node\r\n\r\nArgs:\r\n    other (BlueprintGraphPin): \r\n\r\nReturns:\r\n    bool: true if the Other pin and this Pin are the same pin",
+  "list_connected_pins": "x.list_connected_pins() -> Array[BlueprintGraphPin]\r\nReturns a list of pins this pin is connected to, note that these pin objects are\nproxies and so comparison to other pin objects must be done via IsSameNativePin\r\n\r\nReturns:\r\n    Array[BlueprintGraphPin]:",
+  "set_pin_value": "x.set_pin_value(value) -> bool\r\nSets the literal value associated with this pin, returning false if the value is not valid\r\n\r\nArgs:\r\n    value (str): \r\n\r\nReturns:\r\n    bool:"
+ },
+ "api_EdGraph": {
+  "get_default_object": "get_default_object(cls: Type[_T]) -> _T -- get the Unreal class default object (CDO) of this type"
+ },
+ "api_K2Node": {
+  "find_data_input_pin": "x.find_data_input_pin() -> BlueprintGraphPin\r\nReturns the single data input pin associated with this node, returning default pin if there are multiple or no input(s)\r\n\r\nReturns:\r\n    BlueprintGraphPin:",
+  "find_execute_pin": "x.find_execute_pin() -> BlueprintGraphPin\r\nReturns the 'execute' or 'do' pin associated with this node, if any\r\n\r\nReturns:\r\n    BlueprintGraphPin:",
+  "find_input_pin": "x.find_input_pin(pin_name, type=[]) -> BlueprintGraphPin\r\nReturns an input pin specified by name and, optionally, type\r\n\r\nArgs:\r\n    pin_name (Name): \r\n    type (EdGraphPinType): \r\n\r\nReturns:\r\n    BlueprintGraphPin:",
+  "find_input_pin_by_index": "x.find_input_pin_by_index(index, type=[]) -> BlueprintGraphPin\r\nReturns an input pin specified by index and, optionally, type\r\n\r\nArgs:\r\n    index (int32): \r\n    type (EdGraphPinType): \r\n\r\nReturns:\r\n    BlueprintGraphPin:",
+  "find_output_pin": "x.find_output_pin(pin_name, type=[]) -> BlueprintGraphPin\r\nReturns an output pin specified by name and, optionally, type\r\n\r\nArgs:\r\n    pin_name (Name): \r\n    type (EdGraphPinType): \r\n\r\nReturns:\r\n    BlueprintGraphPin:",
+  "find_output_pin_by_index": "x.find_output_pin_by_index(index, type=[]) -> BlueprintGraphPin\r\nReturns an output pin specified by index and, optionally, type\r\n\r\nArgs:\r\n    index (int32): \r\n    type (EdGraphPinType): \r\n\r\nReturns:\r\n    BlueprintGraphPin:",
+  "find_result_pin": "x.find_result_pin() -> BlueprintGraphPin\r\nReturns the single data output pin associated with this node, returning default pin if there are multiple or no output(s)\r\n\r\nReturns:\r\n    BlueprintGraphPin:",
+  "find_self_pin": "x.find_self_pin() -> BlueprintGraphPin\r\nReturns the self pin associated with this node, if any\r\n\r\nReturns:\r\n    BlueprintGraphPin:",
+  "find_then_pin": "x.find_then_pin() -> BlueprintGraphPin\r\nReturns the 'then' pin associated with this node, if any\r\n\r\nReturns:\r\n    BlueprintGraphPin:",
+  "get_default_object": "get_default_object(cls: Type[_T]) -> _T -- get the Unreal class default object (CDO) of this type",
+  "get_node_category": "x.get_node_category() -> str\r\nReturns this node's menu category\r\n\r\nReturns:\r\n    str:",
+  "get_node_pos": "x.get_node_pos() -> IntPoint\r\nReturns this node's visual position in the graph\r\n\r\nReturns:\r\n    IntPoint:",
+  "get_node_size": "x.get_node_size() -> Vector2D\r\nReturns the size (width, height) of a node as stored in the graph data.\nNote: sizes are only populated after the graph has been rendered in the editor.\r\n\r\nReturns:\r\n    Vector2D:",
+  "get_node_title": "x.get_node_title() -> str\r\nReturns this node's title, as used when the node is displayed in a list\r\n\r\nReturns:\r\n    str:",
+  "list_all_pins": "x.list_all_pins(direction=EdGraphPinDirection.EGPD_MAX) -> Array[BlueprintGraphPin]\r\nReturns all visible pins on this node, optionally discriminated by direction\r\n\r\nArgs:\r\n    direction (EdGraphPinDirection): \r\n\r\nReturns:\r\n    Array[BlueprintGraphPin]:",
+  "list_input_pins": "x.list_input_pins() -> Array[BlueprintGraphPin]\r\nReturns all visible input pins on this node\r\n\r\nReturns:\r\n    Array[BlueprintGraphPin]:",
+  "list_output_pins": "x.list_output_pins() -> Array[BlueprintGraphPin]\r\nReturns all visible output pins on this node\r\n\r\nReturns:\r\n    Array[BlueprintGraphPin]:",
+  "set_node_pos": "x.set_node_pos(pos) -> None\r\nSets this node's visual position in the graph\r\n\r\nArgs:\r\n    pos (IntPoint):"
+ },
+ "api_ControlRig": {
+  "can_execute": "x.can_execute() -> bool\r\nIs valid for execution\r\n\r\nReturns:\r\n    bool:",
+  "execute": "x.execute(event_name) -> bool\r\nExecute\r\n\r\nArgs:\r\n    event_name (Name): \r\n\r\nReturns:\r\n    bool:",
+  "execute_event": "x.execute_event(event_name) -> bool\r\nExecute a user defined event\r\n\r\nArgs:\r\n    event_name (Name): \r\n\r\nReturns:\r\n    bool:",
+  "find_control_rigs": "X.find_control_rigs(outer, optional_class) -> Array[ControlRig]\r\nFind Control Rigs\r\n\r\nArgs:\r\n    outer (Object): \r\n    optional_class (type(Class)): \r\n\r\nReturns:\r\n    Array[ControlRig]:",
+  "find_rig_vm_hosts": "X.find_rig_vm_hosts(outer, optional_class) -> Array[RigVMHost]\r\nFind Rig VMHosts\r\n\r\nArgs:\r\n    outer (Object): \r\n    optional_class (type(Class)): \r\n\r\nReturns:\r\n    Array[RigVMHost]:",
+  "get_default_object": "get_default_object(cls: Type[_T]) -> _T -- get the Unreal class default object (CDO) of this type",
+  "get_delta_time": "x.get_delta_time() -> float\r\nGets the current delta time\r\n\r\nReturns:\r\n    float:",
+  "get_extended_execute_context": "x.get_extended_execute_context() -> RigVMExtendedExecuteContext\r\nGet Extended Execute Context\r\ndeprecated: This function has been deprecated and it is no longer supported.\r\n\r\nReturns:\r\n    RigVMExtendedExecuteContext:",
+  "set_absolute_and_delta_time": "x.set_absolute_and_delta_time(absolute_time, delta_time) -> None\r\nSet the current absolute and delta times\r\n\r\nArgs:\r\n    absolute_time (float): \r\n    delta_time (float):",
+  "set_delta_time": "x.set_delta_time(delta_time) -> None\r\nSet the current delta time\r\n\r\nArgs:\r\n    delta_time (float):"
+ },
+ "api_ControlRigBlueprint": {
+  "can_turn_into_standalone_rig": "x.can_turn_into_standalone_rig() -> bool\r\nCanTurnIntoStandaloneRig\r\n\r\nReturns:\r\n    bool:",
+  "convert_hierarchy_elements_to_spawner_nodes": "x.convert_hierarchy_elements_to_spawner_nodes(hierarchy, keys, remove_elements=True) -> Array[RigVMNode]\r\nConvert Hierarchy Elements to Spawner Nodes\r\n\r\nArgs:\r\n    hierarchy (RigHierarchy): \r\n    keys (Array[RigElementKey]): \r\n    remove_elements (bool): \r\n\r\nReturns:\r\n    Array[RigVMNode]:",
+  "create_control_rig": "x.create_control_rig() -> ControlRig\r\nCreate Control Rig\r\n\r\nReturns:\r\n    ControlRig:",
+  "create_rig_vm_host": "x.create_rig_vm_host() -> RigVMHost\r\nCreate Rig VMHost\r\n\r\nReturns:\r\n    RigVMHost:",
+  "get_available_rig_vm_structs": "x.get_available_rig_vm_structs() -> Array[Struct]\r\nGet Available Rig VMStructs\r\n\r\nReturns:\r\n    Array[Struct]:",
+  "get_control_rig_asset_reference": "x.get_control_rig_asset_reference() -> ControlRigAssetStrongReference\r\nGet Control Rig Asset Reference\r\n\r\nReturns:\r\n    ControlRigAssetStrongReference:",
+  "get_control_rig_class": "x.get_control_rig_class() -> type(Class)\r\nGet Control Rig Class\r\ndeprecated: Use GetControlRigAssetReference instead\r\n\r\nReturns:\r\n    type(Class):",
+  "get_currently_open_rig_blueprints": "X.get_currently_open_rig_blueprints() -> Array[ControlRigBlueprint]\r\nGet Currently Open Rig Blueprints\r\n\r\nReturns:\r\n    Array[ControlRigBlueprint]:",
+  "get_debugged_control_rig": "x.get_debugged_control_rig() -> ControlRig\r\nGet Debugged Control Rig\r\n\r\nReturns:\r\n    ControlRig:",
+  "get_debugged_rig_vm_host": "x.get_debugged_rig_vm_host() -> RigVMHost\r\nGet Debugged Rig VMHost\r\n\r\nReturns:\r\n    RigVMHost:",
+  "get_default_model": "x.get_default_model() -> RigVMGraph\r\nGet Default Model\r\n\r\nReturns:\r\n    RigVMGraph:",
+  "get_default_object": "get_default_object(cls: Type[_T]) -> _T -- get the Unreal class default object (CDO) of this type",
+  "get_modular_rig_controller": "x.get_modular_rig_controller() -> ModularRigController\r\nGet Modular Rig Controller\r\n\r\nReturns:\r\n    ModularRigController:",
+  "get_rig_module_icon": "x.get_rig_module_icon() -> Texture2D\r\nGet Rig Module Icon\r\n\r\nReturns:\r\n    Texture2D:",
+  "get_rig_vm_host_class": "x.get_rig_vm_host_class() -> type(Class)\r\nGet Rig VMHost Class\r\n\r\nReturns:\r\n    type(Class):",
+  "is_control_rig_module": "x.is_control_rig_module() -> bool\r\nIs Control Rig Module\r\n\r\nReturns:\r\n    bool:",
+  "modular_rig_model": "(ModularRigModel):  [Read-Only]",
+  "recompile_modular_rig": "x.recompile_modular_rig() -> None\r\nRecompile Modular Rig",
+  "request_rig_vm_init": "x.request_rig_vm_init() -> None\r\nRequest Rig VMInit",
+  "set_blueprint_variable_expose_on_spawn": "x.set_blueprint_variable_expose_on_spawn(variable_name, expose_on_spawn) -> None\r\nSets \"Expose On Spawn\" to true/false on a Blueprint variable\r\n\r\nArgs:\r\n    variable_name (Name): The variable name\r\n    expose_on_spawn (bool): Set to true to expose on spawn",
+  "set_blueprint_variable_expose_to_cinematics": "x.set_blueprint_variable_expose_to_cinematics(variable_name, expose_to_cinematics) -> None\r\nSets \"Expose To Cinematics\" to true/false on a Blueprint variable\r\n\r\nArgs:\r\n    variable_name (Name): The variable name\r\n    expose_to_cinematics (bool): Set to true to expose to cinematics",
+  "turn_into_control_rig_module": "x.turn_into_control_rig_module() -> bool\r\nTurnIntoControlRigModule\r\n\r\nReturns:\r\n    bool:",
+  "turn_into_standalone_rig": "x.turn_into_standalone_rig() -> bool\r\nTurnIntoStandaloneRig\r\n\r\nReturns:\r\n    bool:",
+  "update_exposed_module_connectors": "x.update_exposed_module_connectors() -> None\r\nUpdate Exposed Module Connectors"
+ },
+ "api_AnimGraphNode_ControlRig": {
+  "find_data_input_pin": "x.find_data_input_pin() -> BlueprintGraphPin\r\nReturns the single data input pin associated with this node, returning default pin if there are multiple or no input(s)\r\n\r\nReturns:\r\n    BlueprintGraphPin:",
+  "find_execute_pin": "x.find_execute_pin() -> BlueprintGraphPin\r\nReturns the 'execute' or 'do' pin associated with this node, if any\r\n\r\nReturns:\r\n    BlueprintGraphPin:",
+  "find_input_pin": "x.find_input_pin(pin_name, type=[]) -> BlueprintGraphPin\r\nReturns an input pin specified by name and, optionally, type\r\n\r\nArgs:\r\n    pin_name (Name): \r\n    type (EdGraphPinType): \r\n\r\nReturns:\r\n    BlueprintGraphPin:",
+  "find_input_pin_by_index": "x.find_input_pin_by_index(index, type=[]) -> BlueprintGraphPin\r\nReturns an input pin specified by index and, optionally, type\r\n\r\nArgs:\r\n    index (int32): \r\n    type (EdGraphPinType): \r\n\r\nReturns:\r\n    BlueprintGraphPin:",
+  "find_output_pin": "x.find_output_pin(pin_name, type=[]) -> BlueprintGraphPin\r\nReturns an output pin specified by name and, optionally, type\r\n\r\nArgs:\r\n    pin_name (Name): \r\n    type (EdGraphPinType): \r\n\r\nReturns:\r\n    BlueprintGraphPin:",
+  "find_output_pin_by_index": "x.find_output_pin_by_index(index, type=[]) -> BlueprintGraphPin\r\nReturns an output pin specified by index and, optionally, type\r\n\r\nArgs:\r\n    index (int32): \r\n    type (EdGraphPinType): \r\n\r\nReturns:\r\n    BlueprintGraphPin:",
+  "find_result_pin": "x.find_result_pin() -> BlueprintGraphPin\r\nReturns the single data output pin associated with this node, returning default pin if there are multiple or no output(s)\r\n\r\nReturns:\r\n    BlueprintGraphPin:",
+  "find_self_pin": "x.find_self_pin() -> BlueprintGraphPin\r\nReturns the self pin associated with this node, if any\r\n\r\nReturns:\r\n    BlueprintGraphPin:",
+  "find_then_pin": "x.find_then_pin() -> BlueprintGraphPin\r\nReturns the 'then' pin associated with this node, if any\r\n\r\nReturns:\r\n    BlueprintGraphPin:",
+  "get_default_object": "get_default_object(cls: Type[_T]) -> _T -- get the Unreal class default object (CDO) of this type",
+  "get_node_category": "x.get_node_category() -> str\r\nReturns this node's menu category\r\n\r\nReturns:\r\n    str:",
+  "get_node_pos": "x.get_node_pos() -> IntPoint\r\nReturns this node's visual position in the graph\r\n\r\nReturns:\r\n    IntPoint:",
+  "get_node_size": "x.get_node_size() -> Vector2D\r\nReturns the size (width, height) of a node as stored in the graph data.\nNote: sizes are only populated after the graph has been rendered in the editor.\r\n\r\nReturns:\r\n    Vector2D:",
+  "get_node_title": "x.get_node_title() -> str\r\nReturns this node's title, as used when the node is displayed in a list\r\n\r\nReturns:\r\n    str:",
+  "list_all_pins": "x.list_all_pins(direction=EdGraphPinDirection.EGPD_MAX) -> Array[BlueprintGraphPin]\r\nReturns all visible pins on this node, optionally discriminated by direction\r\n\r\nArgs:\r\n    direction (EdGraphPinDirection): \r\n\r\nReturns:\r\n    Array[BlueprintGraphPin]:",
+  "list_input_pins": "x.list_input_pins() -> Array[BlueprintGraphPin]\r\nReturns all visible input pins on this node\r\n\r\nReturns:\r\n    Array[BlueprintGraphPin]:",
+  "list_output_pins": "x.list_output_pins() -> Array[BlueprintGraphPin]\r\nReturns all visible output pins on this node\r\n\r\nReturns:\r\n    Array[BlueprintGraphPin]:",
+  "set_node_pos": "x.set_node_pos(pos) -> None\r\nSets this node's visual position in the graph\r\n\r\nArgs:\r\n    pos (IntPoint):"
+ },
+ "api_SkeletalMeshComponent": {
+  "allow_anim_curve_evaluation": "x.allow_anim_curve_evaluation(name_of_curve, allow) -> None\r\nAllow Anim Curve Evaluation\r\n\r\nArgs:\r\n    name_of_curve (Name): \r\n    allow (bool):",
+  "b_ignore_master_pose_component_lod": "deprecated: 'b_ignore_master_pose_component_lod' was renamed to 'ignore_leader_pose_component_lod'.",
+  "b_propagate_curves_to_slaves": "deprecated: 'b_propagate_curves_to_slaves' was renamed to 'propagate_curves_to_followers'.",
+  "b_use_bounds_from_master_pose_component": "deprecated: 'b_use_bounds_from_master_pose_component' was renamed to 'use_bounds_from_leader_pose_component'.",
+  "bind_cloth_to_leader_pose_component": "x.bind_cloth_to_leader_pose_component() -> None\r\nIf this component has a valid LeaderPoseComponent then this function makes cloth items on the follower component\ntake the transforms of the cloth items on the leader component instead of simulating separately.\r\nNote: This will FORCE any cloth actor on the leader component to simulate in local space. Also The meshes used in the components must be identical for the cloth to bind correctly",
+  "bind_cloth_to_master_pose_component": "deprecated: 'bind_cloth_to_master_pose_component' was renamed to 'bind_cloth_to_leader_pose_component'.",
+  "default_animating_rig_override": "(Object):  [Read-Write] Default Animating Rig to Use if bOverrideDefaultAnimatingRig is true",
+  "evaluate_world_position_offset": "(bool):  [Read-Write] Whether to evaluate World Position Offset.",
+  "get_allow_anim_dynamics_anim_node": "x.get_allow_anim_dynamics_anim_node() -> bool\r\nGet Allow Anim Dynamics Anim Node\r\n\r\nReturns:\r\n    bool:",
+  "get_allow_rigid_body_anim_node": "x.get_allow_rigid_body_anim_node() -> bool\r\nGet Allow Rigid Body Anim Node\r\n\r\nReturns:\r\n    bool:",
+  "get_allowed_anim_curve_evaluate": "x.get_allowed_anim_curve_evaluate() -> bool\r\nGet Allowed Anim Curve Evaluate\r\n\r\nReturns:\r\n    bool:",
+  "get_angular_damping": "x.get_angular_damping() -> float\r\nReturns the angular damping of this component.\r\n\r\nReturns:\r\n    float:",
+  "get_curve_value": "x.get_curve_value(curve_name, default_value) -> float or None\r\nGet curve value\r\n\r\nArgs:\r\n    curve_name (Name): Name of the curve to retrieve\r\n    default_value (float): In case the curve could not be found\r\n\r\nReturns:\r\n    float or None: Whether the curve was successfully retrieved\r\n\r\n    value (float): Retrieved curve value if found, otherwise is set to DefaultValue",
+  "get_default_animating_rig": "x.get_default_animating_rig() -> Object\r\nGet Default Animating Rig\r\n\r\nReturns:\r\n    Object:",
+  "get_default_object": "get_default_object(cls: Type[_T]) -> _T -- get the Unreal class default object (CDO) of this type",
+  "get_delta_transform_from_ref_pose": "x.get_delta_transform_from_ref_pose(bone_name, base_name=\"None\") -> Transform\r\nGet delta transform from reference pose based on BaseNode.\nThis uses last frame up-to-date transform, so it will have a frame delay if you use this info in the AnimGraph\r\n\r\nArgs:\r\n    bone_name (Name): Name of the bone\r\n    base_name (Name): Name of the base bone - if none, it will use parent as a base\r\n\r\nReturns:\r\n    Transform: the delta transform from refpose in that given space (BaseName)",
+  "get_disable_anim_curves": "x.get_disable_anim_curves() -> bool\r\nGet Disable Anim Curves\r\n\r\nReturns:\r\n    bool:",
+  "get_linear_damping": "x.get_linear_damping() -> float\r\nReturns the linear damping of this component.\r\n\r\nReturns:\r\n    float:",
+  "get_linked_anim_graph_instance_by_tag": "x.get_linked_anim_graph_instance_by_tag(tag) -> AnimInstance\r\nReturns the a tagged linked instance node. If no linked instances are found or none are tagged with the\nsupplied name, this will return NULL.\r\n\r\nArgs:\r\n    tag (Name): \r\n\r\nReturns:\r\n    AnimInstance:",
+  "get_linked_anim_graph_instances_by_tag": "x.get_linked_anim_graph_instances_by_tag(tag) -> Array[AnimInstance]\r\nGet Linked Anim Graph Instances by Tag\r\ndeprecated: Tags are unique so this function is no longer supported. Please use GetLinkedAnimGraphInstanceByTag instead\r\n\r\nArgs:\r\n    tag (Name): \r\n\r\nReturns:\r\n    Array[AnimInstance]: \r\n\r\n    out_linked_instances (Array[AnimInstance]):",
+  "get_linked_anim_layer_instance_by_class": "x.get_linked_anim_layer_instance_by_class(class_) -> AnimInstance\r\nGets the first layer linked instance corresponding to the specified class\r\n\r\nArgs:\r\n    class_ (type(Class)): \r\n\r\nReturns:\r\n    AnimInstance:",
+  "get_linked_anim_layer_instance_by_group": "x.get_linked_anim_layer_instance_by_group(group) -> AnimInstance\r\nGets the layer linked instance corresponding to the specified group\r\n\r\nArgs:\r\n    group (Name): \r\n\r\nReturns:\r\n    AnimInstance:",
+  "get_overlapping_actors": "x.get_overlapping_actors(class_filter=None) -> Array[Actor]\r\nReturns a list of actors that this component is overlapping.\r\n\r\nArgs:\r\n    class_filter (type(Class)): [optional] If set, only returns actors of this class or subclasses\r\n\r\nReturns:\r\n    Array[Actor]: \r\n\r\n    overlapping_actors (Array[Actor]): [out] Returned list of overlapping actors",
+  "get_overlapping_components": "x.get_overlapping_components() -> Array[PrimitiveComponent]\r\nReturns unique list of components this component is overlapping.\r\n\r\nReturns:\r\n    Array[PrimitiveComponent]: \r\n\r\n    out_overlapping_components (Array[PrimitiveComponent]):",
+  "get_ref_pose_position": "x.get_ref_pose_position(bone_index) -> Vector\r\nGets the local-space position of a bone in the reference pose.\r\n\r\nArgs:\r\n    bone_index (int32): Index of the bone\r\n\r\nReturns:\r\n    Vector: Local space reference position",
+  "get_ref_pose_transform": "x.get_ref_pose_transform(bone_index) -> Transform\r\nGets the local-space transform of a bone in the reference pose.\r\n\r\nArgs:\r\n    bone_index (int32): Index of the bone\r\n\r\nReturns:\r\n    Transform: Local space reference transform",
+  "get_right_vector": "x.get_right_vector() -> Vector\r\nGet the right (Y) unit direction vector from this component, in world space.\r\n\r\nReturns:\r\n    Vector:",
+  "get_twist_and_swing_angle_of_delta_rotation_from_ref_pose": "x.get_twist_and_swing_angle_of_delta_rotation_from_ref_pose(bone_name) -> (out_twist_angle=float, out_swing_angle=float) or None\r\nGet Twist and Swing Angle in Degree of Delta Rotation from Reference Pose in Local space\n\nFirst this function gets rotation of current, and rotation of ref pose in local space, and\nAnd gets twist/swing angle value from refpose aligned.\r\n\r\nArgs:\r\n    bone_name (Name): Name of the bone\r\n\r\nReturns:\r\n    tuple or None: true if succeed. False otherwise. Often due to incorrect bone name.\r\n\r\n    out_twist_angle (float): TwistAngle in degree\r\n\r\n    out_swing_angle (float): SwingAngle in degree",
+  "ignore_leader_pose_component_lod": "(bool):  [Read-Only] Flag that when set will ensure UpdateLODStatus will not take the LeaderPoseComponent's current LOD in consideration when determining the correct LOD level (this requires LeaderPoseComponent's LOD to always be >= determined LOD otherwise bone transforms could be missing",
+  "is_any_rigid_body_awake": "x.is_any_rigid_body_awake() -> bool\r\nReturns if any body in this component is currently awake and simulating.\r\n\r\nReturns:\r\n    bool:",
+  "is_overlapping_actor": "x.is_overlapping_actor(other) -> bool\r\nCheck whether this component is overlapping any component of the given Actor.\r\n\r\nArgs:\r\n    other (Actor): Actor to test this component against.\r\n\r\nReturns:\r\n    bool: Whether this component is overlapping any component of the given Actor.",
+  "is_overlapping_component": "x.is_overlapping_component(other_comp) -> bool\r\nCheck whether this component is overlapping another component.\r\n\r\nArgs:\r\n    other_comp (PrimitiveComponent): Component to test this component against.\r\n\r\nReturns:\r\n    bool: Whether this component is overlapping another component.",
+  "leader_pose_component": "(SkinnedMeshComponent):  [Read-Only] If set, this SkeletalMeshComponent will not use its SpaceBase for bone transform, but will\nuse the component space transforms from the LeaderPoseComponent. This is used when constructing a character using multiple skeletal meshes sharing the same\nskeleton within the same Actor.",
+  "link_anim_class_layers": "x.link_anim_class_layers(class_) -> None\r\nRuns through all layer nodes, attempting to find layer nodes that are implemented by the specified class, then sets up a linked instance of the class for each.\nAllocates one linked instance to run each of the groups specified in the class, so state is shared. If a layer is not grouped (ie. NAME_None), then state is not shared\nand a separate linked instance is allocated for each layer node.\nIf InClass is null, then all layers are reset to their defaults.\r\n\r\nArgs:\r\n    class_ (type(Class)):",
+  "link_anim_graph_by_tag": "x.link_anim_graph_by_tag(tag, class_) -> None\r\nRuns through all nodes, attempting to find linked instance by name/tag, then sets the class of each node if the tag matches\r\n\r\nArgs:\r\n    tag (Name): \r\n    class_ (type(Class)):",
+  "master_pose_component": "deprecated: 'master_pose_component' was renamed to 'leader_pose_component'.",
+  "propagate_curves_to_followers": "(bool):  [Read-Write] If true, propagates calls to ApplyAnimationCurvesToComponent for follower components, only needed if follower components do not tick themselves",
+  "put_rigid_body_to_sleep": "x.put_rigid_body_to_sleep(bone_name=\"None\") -> None\r\nForce a single body back to sleep.\r\n\r\nArgs:\r\n    bone_name (Name): If a SkeletalMeshComponent, name of body to put to sleep. 'None' indicates root body.",
+  "reinitialize_anim_nodes": "x.reinitialize_anim_nodes() -> None\r\nInitialise animation nodes.",
+  "reset_allowed_anim_curve_evaluation": "x.reset_allowed_anim_curve_evaluation() -> None\r\nBy reset, it will allow all the curves to be evaluated",
+  "set_allow_anim_curve_evaluation": "x.set_allow_anim_curve_evaluation(allow) -> None\r\nSet Allow Anim Curve Evaluation\r\n\r\nArgs:\r\n    allow (bool):",
+  "set_allow_anim_dynamics_anim_node": "x.set_allow_anim_dynamics_anim_node(allow, reinit_anim=True) -> None\r\nSets whether or not to allow Anim Dynamics animation nodes for this component\r\n\r\nArgs:\r\n    allow (bool): \r\n    reinit_anim (bool):",
+  "set_allow_rigid_body_anim_node": "x.set_allow_rigid_body_anim_node(allow, reinit_anim=True) -> None\r\nSets whether or not to allow rigid body animation nodes for this component\r\n\r\nArgs:\r\n    allow (bool): \r\n    reinit_anim (bool):",
+  "set_allowed_anim_curves_evaluation": "x.set_allowed_anim_curves_evaluation(list, allow) -> None\r\nresets, and then only allow the following list to be allowed/disallowed\r\n\r\nArgs:\r\n    list (Array[Name]): \r\n    allow (bool):",
+  "set_angular_damping": "x.set_angular_damping(damping) -> None\r\nSets the angular damping of this component.\r\n\r\nArgs:\r\n    damping (float):",
+  "set_body_notify_rigid_body_collision": "x.set_body_notify_rigid_body_collision(new_notify_rigid_body_collision, bone_name=\"None\") -> None\r\nChanges the value of bNotifyRigidBodyCollision for a given body\r\n\r\nArgs:\r\n    new_notify_rigid_body_collision (bool): The value to assign to bNotifyRigidBodyCollision\r\n    bone_name (Name): Name of the body to turn hit notifies on/off. None implies root body",
+  "set_default_custom_primitive_data_float": "x.set_default_custom_primitive_data_float(data_index, value) -> None\r\nSet default custom primitive data at index DataIndex, and marks the render state dirty\r\n\r\nArgs:\r\n    data_index (int32): \r\n    value (float):",
+  "set_default_custom_primitive_data_float_array": "x.set_default_custom_primitive_data_float_array(data_index, values) -> None\r\nSet default custom primitive data, an array floats at once, from index DataIndex to index DataIndex + Values.Num(), and marks the render state dirty\r\n\r\nArgs:\r\n    data_index (int32): \r\n    values (Array[float]):",
+  "set_default_custom_primitive_data_vector2": "x.set_default_custom_primitive_data_vector2(data_index, value) -> None\r\nSet default custom primitive data, two floats at once, from index DataIndex to index DataIndex + 1, and marks the render state dirty\r\n\r\nArgs:\r\n    data_index (int32): \r\n    value (Vector2D):",
+  "set_default_custom_primitive_data_vector3": "x.set_default_custom_primitive_data_vector3(data_index, value) -> None\r\nSet default custom primitive data, three floats at once, from index DataIndex to index DataIndex + 2, and marks the render state dirty\r\n\r\nArgs:\r\n    data_index (int32): \r\n    value (Vector):",
+  "set_default_custom_primitive_data_vector4": "x.set_default_custom_primitive_data_vector4(data_index, value) -> None\r\nSet default custom primitive data, four floats at once, from index DataIndex to index DataIndex + 3, and marks the render state dirty\r\n\r\nArgs:\r\n    data_index (int32): \r\n    value (Vector4):",
+  "set_disable_anim_curves": "x.set_disable_anim_curves(disable_anim_curves) -> None\r\nSet Disable Anim Curves\r\n\r\nArgs:\r\n    disable_anim_curves (bool):",
+  "set_evaluate_world_position_offset": "x.set_evaluate_world_position_offset(new_value) -> None\r\nSet whether World Position Offset is evaluated for this component. Toggles WPO on/off without rebuilding the proxy.\r\n\r\nArgs:\r\n    new_value (bool):",
+  "set_leader_pose_component": "x.set_leader_pose_component(new_leader_bone_component, force_update=False, follower_should_tick_pose=False) -> None\r\nSet LeaderPoseComponent for this component\r\n\r\nArgs:\r\n    new_leader_bone_component (SkinnedMeshComponent): New LeaderPoseComponent\r\n    force_update (bool): If false, the function will be skipped if NewLeaderBoneComponent is the same as currently setup (default)\r\n    follower_should_tick_pose (bool): If false, Follower components will not execute TickPose (default)",
+  "set_linear_damping": "x.set_linear_damping(damping) -> None\r\nSets the linear damping of this component.\r\n\r\nArgs:\r\n    damping (float):",
+  "set_master_pose_component": "deprecated: 'set_master_pose_component' was renamed to 'set_leader_pose_component'.",
+  "set_notify_rigid_body_collision": "x.set_notify_rigid_body_collision(new_notify_rigid_body_collision) -> None\r\nChanges the value of bNotifyRigidBodyCollision\r\n\r\nArgs:\r\n    new_notify_rigid_body_collision (bool):",
+  "set_notify_rigid_body_collision_below": "x.set_notify_rigid_body_collision_below(new_notify_rigid_body_collision, bone_name=\"None\", include_self=True) -> None\r\nChanges the value of bNotifyRigidBodyCollision on all bodies below a given bone\r\n\r\nArgs:\r\n    new_notify_rigid_body_collision (bool): The value to assign to bNotifyRigidBodyCollision\r\n    bone_name (Name): Name of the body to turn hit notifies on (and below)\r\n    include_self (bool): Whether to modify the given body (useful for roots with multiple children)",
+  "set_scalar_parameter_for_default_custom_primitive_data": "x.set_scalar_parameter_for_default_custom_primitive_data(parameter_name, value) -> None\r\nSet a scalar parameter for default custom primitive data. This will be serialized and is useful in construction scripts.\r\n\r\nArgs:\r\n    parameter_name (Name): The parameter name of the custom primitive\r\n    value (float): The new value of the custom primitive",
+  "set_vector_parameter_for_default_custom_primitive_data": "x.set_vector_parameter_for_default_custom_primitive_data(parameter_name, value) -> None\r\nSet a vector parameter for default custom primitive data. This will be serialized and is useful in construction scripts.\r\n\r\nArgs:\r\n    parameter_name (Name): The parameter name of the custom primitive\r\n    value (Vector4): The new value of the custom primitive",
+  "setup_default_custom_primitive_data_from_materials": "x.setup_default_custom_primitive_data_from_materials() -> None\r\nSetup the Default Custom Primitive Data based on the assigned materials. Wipes any existing data.",
+  "snapshot_pose": "x.snapshot_pose(snapshot) -> PoseSnapshot\r\nTakes a snapshot of this skeletal mesh component's pose and saves it to the specified snapshot.\nThe snapshot is taken at the current LOD, so if for example you took the snapshot at LOD1\nand then used it at LOD0 any bones not in LOD1 will use the reference pose\r\n\r\nArgs:\r\n    snapshot (PoseSnapshot): \r\n\r\nReturns:\r\n    PoseSnapshot: \r\n\r\n    snapshot (PoseSnapshot):",
+  "suppress_notify_event_dispatch": "(bool):  [Read-Write] Prevent notify events from being dispatched for this mesh.",
+  "unbind_cloth_from_leader_pose_component": "x.unbind_cloth_from_leader_pose_component(restore_simulation_space=True) -> None\r\nIf this component has a valid LeaderPoseComponent and has previously had its cloth bound to the\nMCP, this function will unbind the cloth and resume simulation.\r\n\r\nArgs:\r\n    restore_simulation_space (bool): if true and the leader pose cloth was originally simulating in world space, we will restore this setting. This will cause the leader component to reset which may be undesirable.",
+  "unbind_cloth_from_master_pose_component": "deprecated: 'unbind_cloth_from_master_pose_component' was renamed to 'unbind_cloth_from_leader_pose_component'.",
+  "unlink_anim_class_layers": "x.unlink_anim_class_layers(class_) -> None\r\nRuns through all layer nodes, attempting to find layer nodes that are currently running the specified class, then resets each to its default value.\nState sharing rules are as with SetLayerOverlay.\nIf InClass is null, does nothing.\r\n\r\nArgs:\r\n    class_ (type(Class)):",
+  "use_bounds_from_leader_pose_component": "(bool):  [Read-Write] When true, we will just using the bounds from our LeaderPoseComponent.  This is useful for when we have a Mesh Parented\nto the main SkelMesh (e.g. outline mesh or a full body overdraw effect that is toggled) that is always going to be the same\nbounds as parent.  We want to do no calculations in that case.",
+  "wake_all_rigid_bodies": "x.wake_all_rigid_bodies() -> None\r\nEnsure simulation is running for all bodies in this component.",
+  "wake_rigid_body": "x.wake_rigid_body(bone_name=\"None\") -> None\r\n'Wake' physics simulation for a single body.\r\n\r\nArgs:\r\n    bone_name (Name): If a SkeletalMeshComponent, name of body to wake. 'None' indicates root body."
+ },
+ "api_AnimationLibrary": {
+  "add_animation_notify_event": "X.add_animation_notify_event(animation_sequence_base, notify_track_name, start_time, notify_class) -> AnimNotify\r\nAdds an Animation Notify Event to Notify track in the given Animation with the given Notify creation data\r\n\r\nArgs:\r\n    animation_sequence_base (AnimSequenceBase): \r\n    notify_track_name (Name): \r\n    start_time (float): \r\n    notify_class (type(Class)): \r\n\r\nReturns:\r\n    AnimNotify:",
+  "add_animation_notify_event_from_source": "X.add_animation_notify_event_from_source(animation_sequence_base, start_time, notify_event, notify_track_name) -> AnimNotify\r\nExperimental: Adds a custom animation notify event to the specified animation sequence at the given time and on the specified notify track.\n\nA new notify event will be created using relevant data copied from the provided NotifyEvent. The UAnimNotify is extracted from\nNotifyEvent and, if it is not already owned by the animation sequence (not part of its outer), it will be automatically duplicated.\nOnly properties exposed to Blueprints in the NotifyEvent (such as TriggerWeightThreshold and NotifyTriggerChance) will be copied.\r\n\r\nArgs:\r\n    animation_sequence_base (AnimSequenceBase): The animation sequence to which the new notify event will be added.\r\n    start_time (float): The time (in seconds) within the sequence where the notify should be placed.\r\n    notify_event (AnimNotifyEvent): The source notify event used to initialize the new one. Its UAnimNotify will be extracted and validated.\r\n    notify_track_name (Name): The name of the notify track to add the notify to.\r\n\r\nReturns:\r\n    AnimNotify: The UAnimNotify used in the new notify event (original or duplicated).",
+  "add_animation_notify_event_object": "X.add_animation_notify_event_object(animation_sequence_base, start_time, notify, notify_track_name) -> None\r\nAdds the specific Animation Notify to the Animation Sequence (requires Notify's outer to be the Animation Sequence)\r\n\r\nArgs:\r\n    animation_sequence_base (AnimSequenceBase): \r\n    start_time (float): \r\n    notify (AnimNotify): \r\n    notify_track_name (Name):",
+  "add_animation_notify_state_event": "X.add_animation_notify_state_event(animation_sequence_base, notify_track_name, start_time, duration, notify_state_class) -> AnimNotifyState\r\nAdds an Animation Notify State Event to Notify track in the given Animation with the given Notify State creation data\r\n\r\nArgs:\r\n    animation_sequence_base (AnimSequenceBase): \r\n    notify_track_name (Name): \r\n    start_time (float): \r\n    duration (float): \r\n    notify_state_class (type(Class)): \r\n\r\nReturns:\r\n    AnimNotifyState:",
+  "add_animation_notify_state_event_object": "X.add_animation_notify_state_event_object(animation_sequence_base, start_time, duration, notify_state, notify_track_name) -> None\r\nAdds the specific Animation Notify State to the Animation Sequence (requires Notify State's outer to be the Animation Sequence)\r\n\r\nArgs:\r\n    animation_sequence_base (AnimSequenceBase): \r\n    start_time (float): \r\n    duration (float): \r\n    notify_state (AnimNotifyState): \r\n    notify_track_name (Name):",
+  "add_animation_notify_track": "X.add_animation_notify_track(animation_sequence_base, notify_track_name, track_color=[1.000000, 1.000000, 1.000000, 1.000000]) -> None\r\nAdds an Animation Notify Track to the Animation Sequence\r\n\r\nArgs:\r\n    animation_sequence_base (AnimSequenceBase): \r\n    notify_track_name (Name): \r\n    track_color (LinearColor):",
+  "add_curve": "X.add_curve(animation_sequence_base, curve_name, curve_type=RawCurveTrackTypes.RCT_FLOAT, meta_data_curve=False) -> None\r\nAdds an Animation Curve by Type and Name to the given Animation Sequence\r\n\r\nArgs:\r\n    animation_sequence_base (AnimSequenceBase): \r\n    curve_name (Name): \r\n    curve_type (RawCurveTrackTypes): \r\n    meta_data_curve (bool):",
+  "add_curve_meta_data": "X.add_curve_meta_data(skeleton, curve_name, transact=True) -> bool\r\nAdds a curve metadata entry with the specified name on the skeleton\r\n\r\nArgs:\r\n    skeleton (Skeleton): \r\n    curve_name (Name): \r\n    transact (bool): If true record a new transaction\r\n\r\nReturns:\r\n    bool: true if an entry was added, false if an entry already existed",
+  "add_float_curve_key": "X.add_float_curve_key(animation_sequence_base, curve_name, time, value) -> None\r\nAdds a Float Key to the specified Animation Curve inside of the given Animation Sequence\r\n\r\nArgs:\r\n    animation_sequence_base (AnimSequenceBase): \r\n    curve_name (Name): \r\n    time (float): \r\n    value (float):",
+  "add_float_curve_keys": "X.add_float_curve_keys(animation_sequence_base, curve_name, times, values) -> None\r\nAdds a multiple of Float Keys to the specified Animation Curve inside of the given Animation Sequence\r\n\r\nArgs:\r\n    animation_sequence_base (AnimSequenceBase): \r\n    curve_name (Name): \r\n    times (Array[float]): \r\n    values (Array[float]):",
+  "add_node_asset_override": "X.add_node_asset_override(anim_blueprint, target, override, print_applied_overrides=False) -> None\r\nAdds an Animation Asset override for the provided AnimationBlueprint, replacing any instance of Target with Override\r\n\r\nArgs:\r\n    anim_blueprint (AnimBlueprint): The Animation Blueprint to add/set the Override for\r\n    target (AnimationAsset): The Animation Asset to add an override for (overrides all instances of the asset)\r\n    override (AnimationAsset): The Animation Asset to used to override the Target with (types have to match)\r\n    print_applied_overrides (bool): Flag whether or not to print the applied overrides",
+  "add_transformation_curve_key": "X.add_transformation_curve_key(animation_sequence_base, curve_name, time, transform) -> None\r\nAdds a Transformation Key to the specified Animation Curve inside of the given Animation Sequence\r\n\r\nArgs:\r\n    animation_sequence_base (AnimSequenceBase): \r\n    curve_name (Name): \r\n    time (float): \r\n    transform (Transform):",
+  "add_transformation_curve_keys": "X.add_transformation_curve_keys(animation_sequence_base, curve_name, times, transforms) -> None\r\nAdds a multiple of Transformation Keys to the specified Animation Curve inside of the given Animation Sequence\r\n\r\nArgs:\r\n    animation_sequence_base (AnimSequenceBase): \r\n    curve_name (Name): \r\n    times (Array[float]): \r\n    transforms (Array[Transform]):",
+  "add_vector_curve_key": "X.add_vector_curve_key(animation_sequence_base, curve_name, time, vector) -> None\r\nAdds a Vector Key to the specified Animation Curve inside of the given Animation Sequence\r\n\r\nArgs:\r\n    animation_sequence_base (AnimSequenceBase): \r\n    curve_name (Name): \r\n    time (float): \r\n    vector (Vector):",
+  "add_vector_curve_keys": "X.add_vector_curve_keys(animation_sequence_base, curve_name, times, vectors) -> None\r\nAdds a multiple of Vector Keys to the specified Animation Curve inside of the given Animation Sequence\r\n\r\nArgs:\r\n    animation_sequence_base (AnimSequenceBase): \r\n    curve_name (Name): \r\n    times (Array[float]): \r\n    vectors (Array[Vector]):",
+  "copy_animation_curve_names_to_skeleton": "X.copy_animation_curve_names_to_skeleton(old_skeleton, new_skeleton, sequence_base, curve_type) -> None\r\nEnsures that any curve names that do not exist on the NewSkeleton are added to it, in which case the SmartName on the actual curve itself will also be updated\r\ndeprecated: It is no longer necessary to copy curve names to the skeleton. If metadata is required to be updated, please use the metadata setting APIs.\r\n\r\nArgs:\r\n    old_skeleton (Skeleton): \r\n    new_skeleton (Skeleton): \r\n    sequence_base (AnimSequenceBase): \r\n    curve_type (RawCurveTrackTypes):",
+  "does_curve_exist": "X.does_curve_exist(animation_sequence_base, curve_name, curve_type) -> bool\r\nChecks whether or not the given Curve Name exist on the Skeleton referenced by the given Animation Sequence\r\n\r\nArgs:\r\n    animation_sequence_base (AnimSequenceBase): \r\n    curve_name (Name): \r\n    curve_type (RawCurveTrackTypes): \r\n\r\nReturns:\r\n    bool:",
+  "evaluate_bone_timecode_and_slate_attributes_at_time": "X.evaluate_bone_timecode_and_slate_attributes_at_time(bone_name, animation_sequence_base, eval_time) -> (out_qualified_frame_time=QualifiedTime, slate=str) or None\r\nEvaluates timecode attributes (e.g. \"TCFrame\", \"TCSecond\", etc.) and TCSlate of the root bone and returns the resulting qualified frame time.\r\nreturn:: true if the root bone had timecode attributes that could be evaluated and a qualified frame time was set, or false otherwise.\r\n\r\nArgs:\r\n    bone_name (Name): \r\n    animation_sequence_base (AnimSequenceBase): \r\n    eval_time (float): \r\n\r\nReturns:\r\n    tuple or None: \r\n\r\n    out_qualified_frame_time (QualifiedTime): \r\n\r\n    slate (str):",
+  "evaluate_root_bone_timecode_attributes_at_time": "X.evaluate_root_bone_timecode_attributes_at_time(animation_sequence_base, eval_time) -> QualifiedTime or None\r\nEvaluates timecode attributes (e.g. \"TCFrame\", \"TCSecond\", etc.) of the root bone and returns the resulting qualified frame time.\r\nreturn:: true if the root bone had timecode attributes that could be evaluated and a qualified frame time was set, or false otherwise.\r\n\r\nArgs:\r\n    animation_sequence_base (AnimSequenceBase): \r\n    eval_time (float): \r\n\r\nReturns:\r\n    QualifiedTime or None: \r\n\r\n    out_qualified_frame_time (QualifiedTime):",
+  "evaluate_root_bone_timecode_subframe_attribute_at_time": "X.evaluate_root_bone_timecode_subframe_attribute_at_time(animation_sequence_base, eval_time) -> float or None\r\nEvaluates the subframe timecode attribute (e.g. \"TCSubframe\") of the root bone and returns the resulting value.\n\nSince the subframe component of FFrameTime is clamped to the range [0.0, 1.0), it cannot accurately represent the use\ncase where the timecode metadata represents subframe values as whole numbered subframes instead of as a percentage of a\nframe the way the engine does. The subframe component of the FQualifiedFrameTime returned by\nEvaluateRootBoneTimecodeAttributesAtTime() may not reflect the authored subframe metadata in that case.\n\nThis function allows access to the subframe values that were actually authored in the timecode metadata.\r\nreturn:: true if the root bone had a subframe timecode attribute that could be evaluated and a value was set, or false otherwise.\r\n\r\nArgs:\r\n    animation_sequence_base (AnimSequenceBase): \r\n    eval_time (float): \r\n\r\nReturns:\r\n    float or None: \r\n\r\n    out_subframe (float):",
+  "get_additive_base_pose_type": "X.get_additive_base_pose_type(animation_sequence) -> AdditiveBasePoseType\r\nRetrieves the Additive Base Pose type for the given Animation Sequence\r\n\r\nArgs:\r\n    animation_sequence (AnimSequence): \r\n\r\nReturns:\r\n    AdditiveBasePoseType: \r\n\r\n    additive_base_pose_type (AdditiveBasePoseType):",
+  "get_anim_notify_event_duration": "X.get_anim_notify_event_duration(notify_event) -> float\r\nReturns the duration for a NotifyEvent, only non-zero for Anim Notify States\r\n\r\nArgs:\r\n    notify_event (AnimNotifyEvent): \r\n\r\nReturns:\r\n    float:",
+  "get_anim_notify_event_trigger_time": "X.get_anim_notify_event_trigger_time(notify_event) -> float\r\nReturns the actual trigger time for a NotifyEvent\r\n\r\nArgs:\r\n    notify_event (AnimNotifyEvent): \r\n\r\nReturns:\r\n    float:",
+  "get_animation_curve_names": "X.get_animation_curve_names(animation_sequence_base, curve_type) -> Array[Name]\r\nRetrieves the Names of the individual float curves for the given Animation Sequence\r\n\r\nArgs:\r\n    animation_sequence_base (AnimSequenceBase): \r\n    curve_type (RawCurveTrackTypes): \r\n\r\nReturns:\r\n    Array[Name]: \r\n\r\n    curve_names (Array[Name]):",
+  "get_animation_notify_event_names": "X.get_animation_notify_event_names(animation_sequence_base) -> Array[Name]\r\nRetrieves all Unique Animation Notify Events found within the given Animation Sequence\r\n\r\nArgs:\r\n    animation_sequence_base (AnimSequenceBase): \r\n\r\nReturns:\r\n    Array[Name]: \r\n\r\n    event_names (Array[Name]):",
+  "get_animation_notify_events": "X.get_animation_notify_events(animation_sequence_base) -> Array[AnimNotifyEvent]\r\nRetrieves all Animation Notify Events found within the given Animation Sequence\r\n\r\nArgs:\r\n    animation_sequence_base (AnimSequenceBase): \r\n\r\nReturns:\r\n    Array[AnimNotifyEvent]: \r\n\r\n    notify_events (Array[AnimNotifyEvent]):",
+  "get_animation_notify_events_for_track": "X.get_animation_notify_events_for_track(animation_sequence_base, notify_track_name) -> Array[AnimNotifyEvent]\r\nRetrieves all Animation Notify Events for the given Notify Track Name from the given Animation Sequence\r\n\r\nArgs:\r\n    animation_sequence_base (AnimSequenceBase): \r\n    notify_track_name (Name): \r\n\r\nReturns:\r\n    Array[AnimNotifyEvent]: \r\n\r\n    events (Array[AnimNotifyEvent]):",
+  "get_animation_notify_track_names": "X.get_animation_notify_track_names(animation_sequence_base) -> Array[Name]\r\nRetrieves all Unique Animation Notify Track Names found within the given Animation Sequence\r\n\r\nArgs:\r\n    animation_sequence_base (AnimSequenceBase): \r\n\r\nReturns:\r\n    Array[Name]: \r\n\r\n    track_names (Array[Name]):",
+  "get_bone_pose_for_frame": "X.get_bone_pose_for_frame(animation_sequence_base, bone_name, frame, extract_root_motion) -> Transform\r\nGet Bone Pose for Frame\r\n\r\nArgs:\r\n    animation_sequence_base (AnimSequenceBase): \r\n    bone_name (Name): \r\n    frame (int32): \r\n    extract_root_motion (bool): \r\n\r\nReturns:\r\n    Transform: \r\n\r\n    pose (Transform):",
+  "get_bone_pose_for_time": "X.get_bone_pose_for_time(animation_sequence_base, bone_name, time, extract_root_motion) -> Transform\r\nGet Bone Pose for Time\r\n\r\nArgs:\r\n    animation_sequence_base (AnimSequenceBase): \r\n    bone_name (Name): \r\n    time (float): \r\n    extract_root_motion (bool): \r\n\r\nReturns:\r\n    Transform: \r\n\r\n    pose (Transform):",
+  "get_bone_poses_for_frame": "X.get_bone_poses_for_frame(animation_sequence_base, bone_names, frame, extract_root_motion, preview_mesh=None) -> Array[Transform]\r\nGet Bone Poses for Frame\r\n\r\nArgs:\r\n    animation_sequence_base (AnimSequenceBase): \r\n    bone_names (Array[Name]): \r\n    frame (int32): \r\n    extract_root_motion (bool): \r\n    preview_mesh (SkeletalMesh): \r\n\r\nReturns:\r\n    Array[Transform]: \r\n\r\n    poses (Array[Transform]):",
+  "get_bone_poses_for_time": "X.get_bone_poses_for_time(animation_sequence_base, bone_names, time, extract_root_motion, preview_mesh=None) -> Array[Transform]\r\nGet Bone Poses for Time\r\n\r\nArgs:\r\n    animation_sequence_base (AnimSequenceBase): \r\n    bone_names (Array[Name]): \r\n    time (float): \r\n    extract_root_motion (bool): \r\n    preview_mesh (SkeletalMesh): \r\n\r\nReturns:\r\n    Array[Transform]: \r\n\r\n    poses (Array[Transform]):",
+  "get_curve_compression_settings": "X.get_curve_compression_settings(animation_sequence) -> AnimCurveCompressionSettings\r\nRetrieves the Curve Compression Settings for the given Animation Sequence\r\n\r\nArgs:\r\n    animation_sequence (AnimSequence): \r\n\r\nReturns:\r\n    AnimCurveCompressionSettings: \r\n\r\n    compression_settings (AnimCurveCompressionSettings):",
+  "get_curve_meta_data_material": "X.get_curve_meta_data_material(skeleton, curve_name) -> bool\r\nGets the material flag for a curve's metadata\r\n\r\nArgs:\r\n    skeleton (Skeleton): \r\n    curve_name (Name): The name of the curve to check\r\n\r\nReturns:\r\n    bool: true if the flag has been set",
+  "get_curve_meta_data_morph_target": "X.get_curve_meta_data_morph_target(skeleton, curve_name) -> bool\r\nGets the morph target flag for a curve's metadata\r\n\r\nArgs:\r\n    skeleton (Skeleton): \r\n    curve_name (Name): The name of the curve to check\r\n\r\nReturns:\r\n    bool: true if the flag has been set",
+  "get_curve_meta_data_names": "X.get_curve_meta_data_names(skeleton) -> Array[Name]\r\nGet an array of all curve metadata names\r\n\r\nArgs:\r\n    skeleton (Skeleton): \r\n\r\nReturns:\r\n    Array[Name]: \r\n\r\n    out_names (Array[Name]): The array to receive the metadata names",
+  "get_default_object": "get_default_object(cls: Type[_T]) -> _T -- get the Unreal class default object (CDO) of this type",
+  "get_nodes_of_class": "X.get_nodes_of_class(animation_blueprint, node_class, include_child_classes=True) -> Array[AnimGraphNode_Base]\r\nReturns all Animation Graph Nodes of the provided Node Class contained by the Animation Blueprint\r\n\r\nArgs:\r\n    animation_blueprint (AnimBlueprint): \r\n    node_class (type(Class)): \r\n    include_child_classes (bool): \r\n\r\nReturns:\r\n    Array[AnimGraphNode_Base]: \r\n\r\n    graph_nodes (Array[AnimGraphNode_Base]):",
+  "get_num_curve_meta_data": "X.get_num_curve_meta_data(skeleton) -> int32\r\n\r\n\r\nArgs:\r\n    skeleton (Skeleton): \r\n\r\nReturns:\r\n    int32: the number of curve metadata entries on the skeleton *",
+  "get_variable_frame_stripping_settings": "X.get_variable_frame_stripping_settings(animation_sequence) -> VariableFrameStrippingSettings\r\nRetrieves the Variable Frame Stripping Settings for the given Animation Sequence\r\n\r\nArgs:\r\n    animation_sequence (AnimSequence): \r\n\r\nReturns:\r\n    VariableFrameStrippingSettings: \r\n\r\n    variable_frame_stripping_settings (VariableFrameStrippingSettings):",
+  "is_valid_anim_notify_track_name": "X.is_valid_anim_notify_track_name(animation_sequence_base, notify_track_name) -> bool\r\nChecks whether or not the given Track Name is a valid Animation Notify Track in the Animation Sequence\r\n\r\nArgs:\r\n    animation_sequence_base (AnimSequenceBase): \r\n    notify_track_name (Name): \r\n\r\nReturns:\r\n    bool:",
+  "remove_all_animation_notify_tracks": "X.remove_all_animation_notify_tracks(animation_sequence_base) -> None\r\nRemoves All Animation Notify Tracks from Animation Sequence\r\n\r\nArgs:\r\n    animation_sequence_base (AnimSequenceBase):",
+  "remove_all_curve_data": "X.remove_all_curve_data(animation_sequence_base) -> None\r\nRemoves all Animation Curve Data from the given Animation Sequence (Raw Animation Curves [Names] may not be removed from the Skeleton)\r\n\r\nArgs:\r\n    animation_sequence_base (AnimSequenceBase):",
+  "remove_animation_notify_events_by_name": "X.remove_animation_notify_events_by_name(animation_sequence_base, notify_name) -> int32\r\nRemoves Animation Notify Events found by Name within the Animation Sequence, and returns the number of removed name instances\r\n\r\nArgs:\r\n    animation_sequence_base (AnimSequenceBase): \r\n    notify_name (Name): \r\n\r\nReturns:\r\n    int32:",
+  "remove_animation_notify_events_by_track": "X.remove_animation_notify_events_by_track(animation_sequence_base, notify_track_name) -> int32\r\nRemoves Animation Notify Events found by Track within the Animation Sequence, and returns the number of removed name instances\r\n\r\nArgs:\r\n    animation_sequence_base (AnimSequenceBase): \r\n    notify_track_name (Name): \r\n\r\nReturns:\r\n    int32:",
+  "remove_animation_notify_track": "X.remove_animation_notify_track(animation_sequence_base, notify_track_name) -> None\r\nRemoves an Animation Notify Track from Animation Sequence by Name\r\n\r\nArgs:\r\n    animation_sequence_base (AnimSequenceBase): \r\n    notify_track_name (Name):",
+  "remove_curve": "X.remove_curve(animation_sequence_base, curve_name, remove_name_from_skeleton=False) -> None\r\nRemoves an Animation Curve by Name from the given Animation Sequence (Raw Animation Curves [Names] may not be removed from the Skeleton)\r\n\r\nArgs:\r\n    animation_sequence_base (AnimSequenceBase): \r\n    curve_name (Name): \r\n    remove_name_from_skeleton (bool):",
+  "remove_curve_meta_data": "X.remove_curve_meta_data(skeleton, curve_name) -> bool\r\nRemoves a curve metadata entry for the specified name.\r\n\r\nArgs:\r\n    skeleton (Skeleton): \r\n    curve_name (Name): The name of the curve to remove the metadata for\r\n\r\nReturns:\r\n    bool: true if the entry was successfully removed (i.e. it existed)",
+  "rename_curve_meta_data": "X.rename_curve_meta_data(skeleton, old_name, new_name) -> bool\r\nRenames a curve metadata entry. Metadata is preserved, but assigned to a different curve name.\r\n\r\nArgs:\r\n    skeleton (Skeleton): \r\n    old_name (Name): The name of an existing curve entry\r\n    new_name (Name): The name to change the entry to\r\n\r\nReturns:\r\n    bool: true if the rename was successful (the old name was found and the new name didnt collide with an existing entry)",
+  "replace_anim_notify_states": "X.replace_anim_notify_states(animation_sequence_base, old_notify_class, new_notify_class, on_notify_state_replaced) -> None\r\nReplaces animation notifies in the specified Animation Sequence\r\n\r\nArgs:\r\n    animation_sequence_base (AnimSequenceBase): \r\n    old_notify_class (type(Class)): \r\n    new_notify_class (type(Class)): \r\n    on_notify_state_replaced (OnNotifyStateReplaced):",
+  "set_additive_base_pose_type": "X.set_additive_base_pose_type(animation_sequence, additive_base_pose_type) -> None\r\nSets the Additive Base Pose type for the given Animation Sequence\r\n\r\nArgs:\r\n    animation_sequence (AnimSequence): \r\n    additive_base_pose_type (AdditiveBasePoseType):",
+  "set_curve_compression_settings": "X.set_curve_compression_settings(animation_sequence, compression_settings) -> None\r\nSets the Curve Compression Settings for the given Animation Sequence\r\n\r\nArgs:\r\n    animation_sequence (AnimSequence): \r\n    compression_settings (AnimCurveCompressionSettings):",
+  "set_curve_meta_data_material": "X.set_curve_meta_data_material(skeleton, curve_name, override_material) -> None\r\nSet the material flag for a curve's metadata\r\n\r\nArgs:\r\n    skeleton (Skeleton): \r\n    curve_name (Name): The name of the curve to set\r\n    override_material (bool): Whether to set the material flag",
+  "set_curve_meta_data_morph_target": "X.set_curve_meta_data_morph_target(skeleton, curve_name, override_morph_target) -> None\r\nSet the morph target flag for a curve's metadata\r\n\r\nArgs:\r\n    skeleton (Skeleton): \r\n    curve_name (Name): The name of the curve to set\r\n    override_morph_target (bool): Whether to set the morph target flag",
+  "set_variable_frame_stripping_settings": "X.set_variable_frame_stripping_settings(animation_sequence, variable_frame_stripping_settings) -> None\r\nSets the Variable Frame Stripping Settings for the given Animation Sequence\r\n\r\nArgs:\r\n    animation_sequence (AnimSequence): \r\n    variable_frame_stripping_settings (VariableFrameStrippingSettings):"
+ },
+ "classes": [
+  "AnimGraphLibrary",
+  "BlueprintGraphEditor",
+  "BlueprintGraphPin",
+  "BlueprintGraphPinLibrary",
+  "EdGraphPinDirection",
+  "EdGraphPinType",
+  "LinkedAnimGraphLibrary"
+ ],
+ "/Game/Furina/ABP_Furina": [
+  {
+   "name": "AnimGraph",
+   "methods": [
+    "get_graph_nodes_of_class"
+   ]
+  },
+  {
+   "name": "EventGraph",
+   "methods": []
+  }
+ ],
+ "/Game/Furina/ABP_Furina_animnodes": [
+  {
+   "name": "AnimGraphNode_Root_0",
+   "class": "AnimGraphNode_Root",
+   "node": null
+  },
+  {
+   "name": "AnimGraphNode_RetargetPoseFromMesh_0",
+   "class": "AnimGraphNode_RetargetPoseFromMesh",
+   "node": null
+  },
+  {
+   "name": "AnimGraphNode_SequencePlayer_1",
+   "class": "AnimGraphNode_SequencePlayer",
+   "node": null
+  },
+  {
+   "name": "AnimGraphNode_TwoWayBlend_1",
+   "class": "AnimGraphNode_TwoWayBlend",
+   "node": null
+  },
+  {
+   "name": "AnimGraphNode_SequencePlayer_0",
+   "class": "AnimGraphNode_SequencePlayer",
+   "node": null
+  },
+  {
+   "name": "AnimGraphNode_TwoWayBlend_0",
+   "class": "AnimGraphNode_TwoWayBlend",
+   "node": null
+  },
+  {
+   "name": "AnimGraphNode_RetargetPoseFromMesh_1",
+   "class": "AnimGraphNode_RetargetPoseFromMesh",
+   "node": null
+  },
+  {
+   "name": "AnimGraphNode_LayeredBoneBlend_0",
+   "class": "AnimGraphNode_LayeredBoneBlend",
+   "node": null
+  },
+  {
+   "name": "AnimGraphNode_ControlRig_0",
+   "class": "AnimGraphNode_ControlRig",
+   "node": null
+  },
+  {
+   "name": "AnimGraphNode_LocalToComponentSpace_0",
+   "class": "AnimGraphNode_LocalToComponentSpace",
+   "node": null
+  },
+  {
+   "name": "AnimGraphNode_AnimDynamics_0",
+   "class": "AnimGraphNode_AnimDynamics",
+   "node": null
+  },
+  {
+   "name": "AnimGraphNode_AnimDynamics_1",
+   "class": "AnimGraphNode_AnimDynamics",
+   "node": null
+  },
+  {
+   "name": "AnimGraphNode_AnimDynamics_2",
+   "class": "AnimGraphNode_AnimDynamics",
+   "node": null
+  },
+  {
+   "name": "AnimGraphNode_AnimDynamics_3",
+   "class": "AnimGraphNode_AnimDynamics",
+   "node": null
+  },
+  {
+   "name": "AnimGraphNode_AnimDynamics_4",
+   "class": "AnimGraphNode_AnimDynamics",
+   "node": null
+  },
+  {
+   "name": "AnimGraphNode_ComponentToLocalSpace_0",
+   "class": "AnimGraphNode_ComponentToLocalSpace",
+   "node": null
+  }
+ ],
+ "/Game/3DPlatformerGameBundle/Demo/ThirdPersonAssets/Characters/Mannequins/Animations/Manny_AnimBlueprint": [
+  {
+   "name": "AnimGraph",
+   "methods": [
+    "get_graph_nodes_of_class"
+   ]
+  },
+  {
+   "name": "Locomotion",
+   "methods": []
+  },
+  {
+   "name": "Idle",
+   "methods": [
+    "get_graph_nodes_of_class"
+   ]
+  },
+  {
+   "name": "Walk / Run",
+   "methods": [
+    "get_graph_nodes_of_class"
+   ]
+  },
+  {
+   "name": "Transition",
+   "methods": [
+    "get_graph_nodes_of_class"
+   ]
+  },
+  {
+   "name": "Transition",
+   "methods": [
+    "get_graph_nodes_of_class"
+   ]
+  },
+  {
+   "name": "Main States",
+   "methods": []
+  },
+  {
+   "name": "Locomotion",
+   "methods": [
+    "get_graph_nodes_of_class"
+   ]
+  },
+  {
+   "name": "Jump",
+   "methods": [
+    "get_graph_nodes_of_class"
+   ]
+  },
+  {
+   "name": "Transition",
+   "methods": [
+    "get_graph_nodes_of_class"
+   ]
+  },
+  {
+   "name": "Fall Loop",
+   "methods": [
+    "get_graph_nodes_of_class"
+   ]
+  },
+  {
+   "name": "Transition",
+   "methods": [
+    "get_graph_nodes_of_class"
+   ]
+  },
+  {
+   "name": "Transition",
+   "methods": [
+    "get_graph_nodes_of_class"
+   ]
+  },
+  {
+   "name": "Land",
+   "methods": [
+    "get_graph_nodes_of_class"
+   ]
+  },
+  {
+   "name": "Transition",
+   "methods": [
+    "get_graph_nodes_of_class"
+   ]
+  },
+  {
+   "name": "Transition",
+   "methods": [
+    "get_graph_nodes_of_class"
+   ]
+  },
+  {
+   "name": "Transition",
+   "methods": [
+    "get_graph_nodes_of_class"
+   ]
+  },
+  {
+   "name": "EventGraph",
+   "methods": []
+  },
+  {
+   "name": "Grind_Rail_AnimationLayer",
+   "methods": [
+    "get_graph_nodes_of_class"
+   ]
+  },
+  {
+   "name": "Platformer_Animation_Layer",
+   "methods": [
+    "get_graph_nodes_of_class"
+   ]
+  }
+ ],
+ "/Game/3DPlatformerGameBundle/Demo/ThirdPersonAssets/Characters/Mannequins/Animations/Manny_AnimBlueprint_animnodes": [
+  {
+   "name": "AnimGraphNode_Root_0",
+   "class": "AnimGraphNode_Root",
+   "node": null
+  },
+  {
+   "name": "AnimGraphNode_StateMachine_0",
+   "class": "AnimGraphNode_StateMachine",
+   "node": null
+  },
+  {
+   "name": "AnimGraphNode_SaveCachedPose_0",
+   "class": "AnimGraphNode_SaveCachedPose",
+   "node": null
+  },
+  {
+   "name": "AnimGraphNode_StateMachine_1",
+   "class": "AnimGraphNode_StateMachine",
+   "node": null
+  },
+  {
+   "name": "AnimGraphNode_Slot_0",
+   "class": "AnimGraphNode_Slot",
+   "node": null
+  },
+  {
+   "name": "AnimGraphNode_ControlRig_1",
+   "class": "AnimGraphNode_ControlRig",
+   "node": null
+  },
+  {
+   "name": "AnimGraphNode_LinkedAnimLayer_0",
+   "class": "AnimGraphNode_LinkedAnimLayer",
+   "node": null
+  },
+  {
+   "name": "AnimGraphNode_LinkedAnimLayer_1",
+   "class": "AnimGraphNode_LinkedAnimLayer",
+   "node": null
+  },
+  {
+   "name": "AnimGraphNode_StateResult_0",
+   "class": "AnimGraphNode_StateResult",
+   "node": null
+  },
+  {
+   "name": "AnimGraphNode_SequencePlayer_0",
+   "class": "AnimGraphNode_SequencePlayer",
+   "node": null
+  },
+  {
+   "name": "AnimGraphNode_StateResult_0",
+   "class": "AnimGraphNode_StateResult",
+   "node": null
+  },
+  {
+   "name": "AnimGraphNode_BlendSpacePlayer_0",
+   "class": "AnimGraphNode_BlendSpacePlayer",
+   "node": null
+  },
+  {
+   "name": "AnimGraphNode_TransitionResult_0",
+   "class": "AnimGraphNode_TransitionResult",
+   "node": null
+  },
+  {
+   "name": "AnimGraphNode_TransitionResult_0",
+   "class": "AnimGraphNode_TransitionResult",
+   "node": null
+  },
+  {
+   "name": "AnimGraphNode_StateResult_0",
+   "class": "AnimGraphNode_StateResult",
+   "node": null
+  },
+  {
+   "name": "AnimGraphNode_UseCachedPose_0",
+   "class": "AnimGraphNode_UseCachedPose",
+   "node": null
+  },
+  {
+   "name": "AnimGraphNode_StateResult_0",
+   "class": "AnimGraphNode_StateResult",
+   "node": null
+  },
+  {
+   "name": "AnimGraphNode_SequencePlayer_1",
+   "class": "AnimGraphNode_SequencePlayer",
+   "node": null
+  },
+  {
+   "name": "AnimGraphNode_TransitionResult_0",
+   "class": "AnimGraphNode_TransitionResult",
+   "node": null
+  },
+  {
+   "name": "AnimGraphNode_StateResult_0",
+   "class": "AnimGraphNode_StateResult",
+   "node": null
+  },
+  {
+   "name": "AnimGraphNode_SequencePlayer_3",
+   "class": "AnimGraphNode_SequencePlayer",
+   "node": null
+  },
+  {
+   "name": "AnimGraphNode_TransitionResult_0",
+   "class": "AnimGraphNode_TransitionResult",
+   "node": null
+  },
+  {
+   "name": "AnimGraphNode_TransitionResult_0",
+   "class": "AnimGraphNode_TransitionResult",
+   "node": null
+  },
+  {
+   "name": "AnimGraphNode_StateResult_0",
+   "class": "AnimGraphNode_StateResult",
+   "node": null
+  },
+  {
+   "name": "AnimGraphNode_SequencePlayer_4",
+   "class": "AnimGraphNode_SequencePlayer",
+   "node": null
+  },
+  {
+   "name": "AnimGraphNode_UseCachedPose_0",
+   "class": "AnimGraphNode_UseCachedPose",
+   "node": null
+  },
+  {
+   "name": "AnimGraphNode_ApplyAdditive_1",
+   "class": "AnimGraphNode_ApplyAdditive",
+   "node": null
+  },
+  {
+   "name": "AnimGraphNode_TransitionResult_0",
+   "class": "AnimGraphNode_TransitionResult",
+   "node": null
+  },
+  {
+   "name": "AnimGraphNode_TransitionResult_0",
+   "class": "AnimGraphNode_TransitionResult",
+   "node": null
+  },
+  {
+   "name": "AnimGraphNode_TransitionResult_0",
+   "class": "AnimGraphNode_TransitionResult",
+   "node": null
+  }
+ ]
+}

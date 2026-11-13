@@ -1,0 +1,81 @@
+{
+ "mesh_import": [
+  "/Game/Furina/SK_Furina_Skeleton.SK_Furina_Skeleton",
+  "/Game/Furina/SK_Furina.SK_Furina"
+ ],
+ "slots": [
+  "Furina_Face",
+  "Furina_SkinHair",
+  "Furina_HairDetail",
+  "Furina_Outfit",
+  "Furina_HairSheen"
+ ],
+ "skeleton": "/Game/Furina/SK_Furina_Skeleton.SK_Furina_Skeleton",
+ "bounds": "<Struct 'BoxSphereBounds' (0x000002BFF925BCC0) {origin: {x: 0.000042, y: -16.166265, z: 86.975852}, box_extent: {x: 52.899574, y: 34.497741, z: 86.120507}, sphere_radius: 106.795135}>",
+ "probe": {
+  "physasset_props": [
+   "acquire_editor_element_handle",
+   "add_asset_user_data_of_class",
+   "call_method",
+   "cast",
+   "get_asset_user_data_of_class",
+   "get_class",
+   "get_constraint_by_bone_names",
+   "get_constraint_by_name",
+   "get_constraints",
+   "get_default_object",
+   "get_editor_property",
+   "get_fname",
+   "get_full_name",
+   "get_name",
+   "get_outer",
+   "get_outermost",
+   "get_package",
+   "get_path_name",
+   "get_typed_outer",
+   "get_world",
+   "has_asset_user_data_of_class",
+   "is_editor_property_overridden",
+   "is_package_external",
+   "modify",
+   "rename",
+   "reset_editor_property",
+   "set_editor_properties",
+   "set_editor_property",
+   "static_class"
+  ],
+  "anim_nodes": [
+   "AnimGraphNode_AnimDynamics",
+   "AnimGraphNode_ComponentToLocalSpace",
+   "AnimGraphNode_HandIKRetargeting",
+   "AnimGraphNode_LocalToComponentSpace",
+   "AnimGraphNode_RetargetPoseFromMesh",
+   "AnimGraphNode_RigidBody",
+   "AnimGraphNode_RigidBodyWithControl",
+   "AnimGraphNode_SpringBone"
+  ],
+  "abp_factory": true,
+  "ikrig": [
+   "IKRetargetFactory",
+   "IKRetargeterController",
+   "IKRigController",
+   "IKRigDefinitionFactory"
+  ],
+  "sk_props": [
+   "_post_init",
+   "physics_asset",
+   "post_process_anim_blueprint",
+   "shadow_physics_asset"
+  ],
+  "pae": [
+   "InterchangePhysicsAssetFactory",
+   "InterchangePhysicsAssetFactoryNode",
+   "PhysicsAsset",
+   "PhysicsAssetFactory",
+   "PhysicsAssetSolverSettings",
+   "PhysicsAssetSolverType",
+   "RigUnit_HierarchyImportCollisionFromPhysicsAsset",
+   "RigUnit_HierarchyInstantiateFromPhysicsAsset"
+  ]
+ }
+}

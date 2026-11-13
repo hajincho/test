@@ -1,0 +1,2036 @@
+[
+ {
+  "bone": "HB1_1_0",
+  "chain": "HB1_1_0",
+  "depth": 0,
+  "stiffness": 13.0,
+  "damping": 6.0,
+  "mass": 0.04,
+  "gravity": 0.16,
+  "limit": 24.0,
+  "parentInfluence": 0.78,
+  "radius": 0.008,
+  "tip": [
+   1.7578714e-08,
+   0,
+   0
+  ],
+  "parent": "Hips"
+ },
+ {
+  "bone": "HB1_1_6",
+  "chain": "HB1_1_6",
+  "depth": 0,
+  "stiffness": 13.0,
+  "damping": 6.0,
+  "mass": 0.04,
+  "gravity": 0.16,
+  "limit": 24.0,
+  "parentInfluence": 0.78,
+  "radius": 0.008,
+  "tip": [
+   -9.313226e-09,
+   0,
+   0
+  ],
+  "parent": "Hips"
+ },
+ {
+  "bone": "HB1_2_1",
+  "chain": "HB1_2_1",
+  "depth": 0,
+  "stiffness": 13.0,
+  "damping": 6.0,
+  "mass": 0.04,
+  "gravity": 0.16,
+  "limit": 24.0,
+  "parentInfluence": 0.78,
+  "radius": 0.008,
+  "tip": [
+   5.5879354e-09,
+   0,
+   0
+  ],
+  "parent": "Hips"
+ },
+ {
+  "bone": "HB1_1_5",
+  "chain": "HB1_1_5",
+  "depth": 0,
+  "stiffness": 13.0,
+  "damping": 6.0,
+  "mass": 0.04,
+  "gravity": 0.16,
+  "limit": 24.0,
+  "parentInfluence": 0.78,
+  "radius": 0.008,
+  "tip": [
+   2.7939677e-09,
+   0,
+   0
+  ],
+  "parent": "Hips"
+ },
+ {
+  "bone": "HB1_2_7",
+  "chain": "HB1_2_7",
+  "depth": 0,
+  "stiffness": 13.0,
+  "damping": 6.0,
+  "mass": 0.04,
+  "gravity": 0.16,
+  "limit": 24.0,
+  "parentInfluence": 0.78,
+  "radius": 0.008,
+  "tip": [
+   -1.21071935e-08,
+   0,
+   0
+  ],
+  "parent": "Hips"
+ },
+ {
+  "bone": "HB2_0_1",
+  "chain": "HB2_0_1",
+  "depth": 0,
+  "stiffness": 11.0,
+  "damping": 6.0,
+  "mass": 0.044,
+  "gravity": 0.16,
+  "limit": 24.0,
+  "parentInfluence": 0.78,
+  "radius": 0.008,
+  "tip": [
+   9.313226e-09,
+   0,
+   0
+  ],
+  "parent": "Hips"
+ },
+ {
+  "bone": "HB3_0_1",
+  "chain": "HB3_0_1",
+  "depth": 0,
+  "stiffness": 10.0,
+  "damping": 6.0,
+  "mass": 0.04,
+  "gravity": 0.16,
+  "limit": 24.0,
+  "parentInfluence": 0.78,
+  "radius": 0.008,
+  "tip": [
+   -0.0,
+   0,
+   0
+  ],
+  "parent": "Hips"
+ },
+ {
+  "bone": "HB1_1_3",
+  "chain": "HB1_1_3",
+  "depth": 0,
+  "stiffness": 13.0,
+  "damping": 6.0,
+  "mass": 0.04,
+  "gravity": 0.16,
+  "limit": 24.0,
+  "parentInfluence": 0.78,
+  "radius": 0.008,
+  "tip": [
+   -1.7695129e-08,
+   0,
+   0
+  ],
+  "parent": "Hips"
+ },
+ {
+  "bone": "HB4_0_1",
+  "chain": "HB4_0_1",
+  "depth": 0,
+  "stiffness": 9.1,
+  "damping": 6.0,
+  "mass": 0.0364,
+  "gravity": 0.16,
+  "limit": 24.0,
+  "parentInfluence": 0.78,
+  "radius": 0.008,
+  "tip": [
+   -2.7939677e-09,
+   0,
+   0
+  ],
+  "parent": "Hips"
+ },
+ {
+  "bone": "HB1_1_4",
+  "chain": "HB1_1_4",
+  "depth": 0,
+  "stiffness": 13.0,
+  "damping": 6.0,
+  "mass": 0.04,
+  "gravity": 0.16,
+  "limit": 24.0,
+  "parentInfluence": 0.78,
+  "radius": 0.008,
+  "tip": [
+   -0.0,
+   0,
+   0
+  ],
+  "parent": "Hips"
+ },
+ {
+  "bone": "HB1_1_8",
+  "chain": "HB1_1_8",
+  "depth": 0,
+  "stiffness": 13.0,
+  "damping": 6.0,
+  "mass": 0.04,
+  "gravity": 0.16,
+  "limit": 24.0,
+  "parentInfluence": 0.78,
+  "radius": 0.008,
+  "tip": [
+   7.072231e-08,
+   0,
+   0
+  ],
+  "parent": "Hips"
+ },
+ {
+  "bone": "HB1_1_2",
+  "chain": "HB1_1_2",
+  "depth": 0,
+  "stiffness": 13.0,
+  "damping": 6.0,
+  "mass": 0.04,
+  "gravity": 0.16,
+  "limit": 24.0,
+  "parentInfluence": 0.78,
+  "radius": 0.008,
+  "tip": [
+   -0.0,
+   0,
+   0
+  ],
+  "parent": "Hips"
+ },
+ {
+  "bone": "HB1_2_6",
+  "chain": "HB1_1_6",
+  "depth": 1,
+  "stiffness": 11.5,
+  "damping": 5.7,
+  "mass": 0.037,
+  "gravity": 0.175,
+  "limit": 27.0,
+  "parentInfluence": 0.6933333,
+  "radius": 0.0085,
+  "tip": [
+   1.3038516e-08,
+   0,
+   0
+  ],
+  "parent": "HB1_1_6"
+ },
+ {
+  "bone": "HB1_3_0",
+  "chain": "HB1_1_0",
+  "depth": 1,
+  "stiffness": 11.2,
+  "damping": 5.64,
+  "mass": 0.036399998,
+  "gravity": 0.178,
+  "limit": 27.6,
+  "parentInfluence": 0.676,
+  "radius": 0.0086,
+  "tip": [
+   -1.0430813e-07,
+   0,
+   0
+  ],
+  "parent": "HB1_1_0"
+ },
+ {
+  "bone": "HB1_3_1",
+  "chain": "HB1_2_1",
+  "depth": 1,
+  "stiffness": 11.2,
+  "damping": 5.64,
+  "mass": 0.036399998,
+  "gravity": 0.178,
+  "limit": 27.6,
+  "parentInfluence": 0.676,
+  "radius": 0.0086,
+  "tip": [
+   8.195639e-08,
+   0,
+   0
+  ],
+  "parent": "HB1_2_1"
+ },
+ {
+  "bone": "HB1_2_5",
+  "chain": "HB1_1_5",
+  "depth": 1,
+  "stiffness": 11.5,
+  "damping": 5.7,
+  "mass": 0.037,
+  "gravity": 0.175,
+  "limit": 27.0,
+  "parentInfluence": 0.6933333,
+  "radius": 0.0085,
+  "tip": [
+   8.381903e-09,
+   0,
+   0
+  ],
+  "parent": "HB1_1_5"
+ },
+ {
+  "bone": "HB4_1_1",
+  "chain": "HB4_0_1",
+  "depth": 1,
+  "stiffness": 8.804251,
+  "damping": 5.9875,
+  "mass": 0.03537625,
+  "gravity": 0.17375,
+  "limit": 26.125,
+  "parentInfluence": 0.73875,
+  "radius": 0.008375,
+  "tip": [
+   2.3283064e-09,
+   0,
+   0
+  ],
+  "parent": "HB4_0_1"
+ },
+ {
+  "bone": "HB1_2_4",
+  "chain": "HB1_1_4",
+  "depth": 1,
+  "stiffness": 11.5,
+  "damping": 5.7,
+  "mass": 0.037,
+  "gravity": 0.175,
+  "limit": 27.0,
+  "parentInfluence": 0.6933333,
+  "radius": 0.0085,
+  "tip": [
+   -0.0,
+   0,
+   0
+  ],
+  "parent": "HB1_1_4"
+ },
+ {
+  "bone": "HB1_3_8",
+  "chain": "HB1_1_8",
+  "depth": 1,
+  "stiffness": 11.2,
+  "damping": 5.64,
+  "mass": 0.036399998,
+  "gravity": 0.178,
+  "limit": 27.6,
+  "parentInfluence": 0.676,
+  "radius": 0.0086,
+  "tip": [
+   2.7939677e-09,
+   0,
+   0
+  ],
+  "parent": "HB1_1_8"
+ },
+ {
+  "bone": "HB1_3_7",
+  "chain": "HB1_2_7",
+  "depth": 1,
+  "stiffness": 11.2,
+  "damping": 5.64,
+  "mass": 0.036399998,
+  "gravity": 0.178,
+  "limit": 27.6,
+  "parentInfluence": 0.676,
+  "radius": 0.0086,
+  "tip": [
+   5.5879354e-08,
+   0,
+   0
+  ],
+  "parent": "HB1_2_7"
+ },
+ {
+  "bone": "HB1_2_3",
+  "chain": "HB1_1_3",
+  "depth": 1,
+  "stiffness": 11.5,
+  "damping": 5.7,
+  "mass": 0.037,
+  "gravity": 0.175,
+  "limit": 27.0,
+  "parentInfluence": 0.6933333,
+  "radius": 0.0085,
+  "tip": [
+   2.7939677e-09,
+   0,
+   0
+  ],
+  "parent": "HB1_1_3"
+ },
+ {
+  "bone": "HB3_1_1",
+  "chain": "HB3_0_1",
+  "depth": 1,
+  "stiffness": 9.694118,
+  "damping": 5.9882355,
+  "mass": 0.038941175,
+  "gravity": 0.17294118,
+  "limit": 26.0,
+  "parentInfluence": 0.7411764,
+  "radius": 0.008352942,
+  "tip": [
+   2.6077032e-08,
+   0,
+   0
+  ],
+  "parent": "HB3_0_1"
+ },
+ {
+  "bone": "HB1_2_2",
+  "chain": "HB1_1_2",
+  "depth": 1,
+  "stiffness": 11.5,
+  "damping": 5.7,
+  "mass": 0.037,
+  "gravity": 0.175,
+  "limit": 27.0,
+  "parentInfluence": 0.6933333,
+  "radius": 0.0085,
+  "tip": [
+   3.7252903e-09,
+   0,
+   0
+  ],
+  "parent": "HB1_1_2"
+ },
+ {
+  "bone": "HB2_1_1",
+  "chain": "HB2_0_1",
+  "depth": 1,
+  "stiffness": 10.682222,
+  "damping": 5.9888887,
+  "mass": 0.042900003,
+  "gravity": 0.17222221,
+  "limit": 25.88889,
+  "parentInfluence": 0.7433333,
+  "radius": 0.008333334,
+  "tip": [
+   2.2351742e-08,
+   0,
+   0
+  ],
+  "parent": "HB2_0_1"
+ },
+ {
+  "bone": "HB1_4_0",
+  "chain": "HB1_1_0",
+  "depth": 2,
+  "stiffness": 9.4,
+  "damping": 5.2799997,
+  "mass": 0.0328,
+  "gravity": 0.196,
+  "limit": 31.2,
+  "parentInfluence": 0.57199997,
+  "radius": 0.0092,
+  "tip": [
+   4.4703484e-08,
+   0,
+   0
+  ],
+  "parent": "HB1_3_0"
+ },
+ {
+  "bone": "HB1_4_1",
+  "chain": "HB1_2_1",
+  "depth": 2,
+  "stiffness": 9.4,
+  "damping": 5.2799997,
+  "mass": 0.0328,
+  "gravity": 0.196,
+  "limit": 31.2,
+  "parentInfluence": 0.57199997,
+  "radius": 0.0092,
+  "tip": [
+   6.891787e-08,
+   0,
+   0
+  ],
+  "parent": "HB1_3_1"
+ },
+ {
+  "bone": "HB1_3_5",
+  "chain": "HB1_1_5",
+  "depth": 2,
+  "stiffness": 10.0,
+  "damping": 5.4,
+  "mass": 0.033999998,
+  "gravity": 0.19,
+  "limit": 30.0,
+  "parentInfluence": 0.6066666,
+  "radius": 0.009000001,
+  "tip": [
+   -9.313226e-10,
+   0,
+   0
+  ],
+  "parent": "HB1_2_5"
+ },
+ {
+  "bone": "HB3_2_1",
+  "chain": "HB3_0_1",
+  "depth": 2,
+  "stiffness": 9.388235,
+  "damping": 5.9764705,
+  "mass": 0.03788235,
+  "gravity": 0.18588234,
+  "limit": 28.0,
+  "parentInfluence": 0.70235294,
+  "radius": 0.008705882,
+  "tip": [
+   -4.656613e-09,
+   0,
+   0
+  ],
+  "parent": "HB3_1_1"
+ },
+ {
+  "bone": "HB2_2_1",
+  "chain": "HB2_0_1",
+  "depth": 2,
+  "stiffness": 10.364445,
+  "damping": 5.977778,
+  "mass": 0.0418,
+  "gravity": 0.18444444,
+  "limit": 27.777779,
+  "parentInfluence": 0.70666665,
+  "radius": 0.008666667,
+  "tip": [
+   -1.2805685e-09,
+   0,
+   0
+  ],
+  "parent": "HB2_1_1"
+ },
+ {
+  "bone": "HB4_2_1",
+  "chain": "HB4_0_1",
+  "depth": 2,
+  "stiffness": 8.508501,
+  "damping": 5.975,
+  "mass": 0.0343525,
+  "gravity": 0.1875,
+  "limit": 28.25,
+  "parentInfluence": 0.6975,
+  "radius": 0.00875,
+  "tip": [
+   -1.8859282e-08,
+   0,
+   0
+  ],
+  "parent": "HB4_1_1"
+ },
+ {
+  "bone": "HB1_3_2",
+  "chain": "HB1_1_2",
+  "depth": 2,
+  "stiffness": 10.0,
+  "damping": 5.4,
+  "mass": 0.033999998,
+  "gravity": 0.19,
+  "limit": 30.0,
+  "parentInfluence": 0.6066666,
+  "radius": 0.009000001,
+  "tip": [
+   5.029142e-08,
+   0,
+   0
+  ],
+  "parent": "HB1_2_2"
+ },
+ {
+  "bone": "HB1_4_7",
+  "chain": "HB1_2_7",
+  "depth": 2,
+  "stiffness": 9.4,
+  "damping": 5.2799997,
+  "mass": 0.0328,
+  "gravity": 0.196,
+  "limit": 31.2,
+  "parentInfluence": 0.57199997,
+  "radius": 0.0092,
+  "tip": [
+   -1.8626451e-08,
+   0,
+   0
+  ],
+  "parent": "HB1_3_7"
+ },
+ {
+  "bone": "HB1_3_3",
+  "chain": "HB1_1_3",
+  "depth": 2,
+  "stiffness": 10.0,
+  "damping": 5.4,
+  "mass": 0.033999998,
+  "gravity": 0.19,
+  "limit": 30.0,
+  "parentInfluence": 0.6066666,
+  "radius": 0.009000001,
+  "tip": [
+   1.5832484e-08,
+   0,
+   0
+  ],
+  "parent": "HB1_2_3"
+ },
+ {
+  "bone": "HB1_3_4",
+  "chain": "HB1_1_4",
+  "depth": 2,
+  "stiffness": 10.0,
+  "damping": 5.4,
+  "mass": 0.033999998,
+  "gravity": 0.19,
+  "limit": 30.0,
+  "parentInfluence": 0.6066666,
+  "radius": 0.009000001,
+  "tip": [
+   2.842171e-14,
+   0,
+   0
+  ],
+  "parent": "HB1_2_4"
+ },
+ {
+  "bone": "HB1_4_8",
+  "chain": "HB1_1_8",
+  "depth": 2,
+  "stiffness": 9.4,
+  "damping": 5.2799997,
+  "mass": 0.0328,
+  "gravity": 0.196,
+  "limit": 31.2,
+  "parentInfluence": 0.57199997,
+  "radius": 0.0092,
+  "tip": [
+   1.8626451e-09,
+   0,
+   0
+  ],
+  "parent": "HB1_3_8"
+ },
+ {
+  "bone": "HB1_3_6",
+  "chain": "HB1_1_6",
+  "depth": 2,
+  "stiffness": 10.0,
+  "damping": 5.4,
+  "mass": 0.033999998,
+  "gravity": 0.19,
+  "limit": 30.0,
+  "parentInfluence": 0.6066666,
+  "radius": 0.009000001,
+  "tip": [
+   3.7252903e-08,
+   0,
+   0
+  ],
+  "parent": "HB1_2_6"
+ },
+ {
+  "bone": "HB1_5_8",
+  "chain": "HB1_1_8",
+  "depth": 3,
+  "stiffness": 7.6,
+  "damping": 4.92,
+  "mass": 0.029199999,
+  "gravity": 0.214,
+  "limit": 34.8,
+  "parentInfluence": 0.46799996,
+  "radius": 0.0098,
+  "tip": [
+   -0.0,
+   0,
+   0
+  ],
+  "parent": "HB1_4_8"
+ },
+ {
+  "bone": "HB1_5_1",
+  "chain": "HB1_2_1",
+  "depth": 3,
+  "stiffness": 7.6,
+  "damping": 4.92,
+  "mass": 0.029199999,
+  "gravity": 0.214,
+  "limit": 34.8,
+  "parentInfluence": 0.46799996,
+  "radius": 0.0098,
+  "tip": [
+   -1.4901161e-08,
+   0,
+   0
+  ],
+  "parent": "HB1_4_1"
+ },
+ {
+  "bone": "HB2_3_1",
+  "chain": "HB2_0_1",
+  "depth": 3,
+  "stiffness": 10.046667,
+  "damping": 5.9666667,
+  "mass": 0.0407,
+  "gravity": 0.19666666,
+  "limit": 29.666666,
+  "parentInfluence": 0.66999996,
+  "radius": 0.009000001,
+  "tip": [
+   -1.21071935e-08,
+   0,
+   0
+  ],
+  "parent": "HB2_2_1"
+ },
+ {
+  "bone": "HB4_3_1",
+  "chain": "HB4_0_1",
+  "depth": 3,
+  "stiffness": 8.2127495,
+  "damping": 5.9625,
+  "mass": 0.03332875,
+  "gravity": 0.20125,
+  "limit": 30.375,
+  "parentInfluence": 0.65625,
+  "radius": 0.009125001,
+  "tip": [
+   2.388333e-08,
+   0,
+   0
+  ],
+  "parent": "HB4_2_1"
+ },
+ {
+  "bone": "HB3_3_1",
+  "chain": "HB3_0_1",
+  "depth": 3,
+  "stiffness": 9.082353,
+  "damping": 5.964706,
+  "mass": 0.03682353,
+  "gravity": 0.19882353,
+  "limit": 30.0,
+  "parentInfluence": 0.6635294,
+  "radius": 0.009058824,
+  "tip": [
+   5.5879354e-09,
+   0,
+   0
+  ],
+  "parent": "HB3_2_1"
+ },
+ {
+  "bone": "HB1_5_7",
+  "chain": "HB1_2_7",
+  "depth": 3,
+  "stiffness": 7.6,
+  "damping": 4.92,
+  "mass": 0.029199999,
+  "gravity": 0.214,
+  "limit": 34.8,
+  "parentInfluence": 0.46799996,
+  "radius": 0.0098,
+  "tip": [
+   3.3527613e-08,
+   0,
+   0
+  ],
+  "parent": "HB1_4_7"
+ },
+ {
+  "bone": "HB1_4_2",
+  "chain": "HB1_1_2",
+  "depth": 3,
+  "stiffness": 8.5,
+  "damping": 5.1,
+  "mass": 0.031,
+  "gravity": 0.205,
+  "limit": 33.0,
+  "parentInfluence": 0.52,
+  "radius": 0.009500001,
+  "tip": [
+   -3.5390258e-08,
+   0,
+   0
+  ],
+  "parent": "HB1_3_2"
+ },
+ {
+  "bone": "HB1_4_6",
+  "chain": "HB1_1_6",
+  "depth": 3,
+  "stiffness": 8.5,
+  "damping": 5.1,
+  "mass": 0.031,
+  "gravity": 0.205,
+  "limit": 33.0,
+  "parentInfluence": 0.52,
+  "radius": 0.009500001,
+  "tip": [
+   -1.4901161e-08,
+   0,
+   0
+  ],
+  "parent": "HB1_3_6"
+ },
+ {
+  "bone": "HB1_4_4",
+  "chain": "HB1_1_4",
+  "depth": 3,
+  "stiffness": 8.5,
+  "damping": 5.1,
+  "mass": 0.031,
+  "gravity": 0.205,
+  "limit": 33.0,
+  "parentInfluence": 0.52,
+  "radius": 0.009500001,
+  "tip": [
+   -0.0,
+   0,
+   0
+  ],
+  "parent": "HB1_3_4"
+ },
+ {
+  "bone": "HB1_5_0",
+  "chain": "HB1_1_0",
+  "depth": 3,
+  "stiffness": 7.6,
+  "damping": 4.92,
+  "mass": 0.029199999,
+  "gravity": 0.214,
+  "limit": 34.8,
+  "parentInfluence": 0.46799996,
+  "radius": 0.0098,
+  "tip": [
+   -4.8428774e-08,
+   0,
+   0
+  ],
+  "parent": "HB1_4_0"
+ },
+ {
+  "bone": "HB1_4_5",
+  "chain": "HB1_1_5",
+  "depth": 3,
+  "stiffness": 8.5,
+  "damping": 5.1,
+  "mass": 0.031,
+  "gravity": 0.205,
+  "limit": 33.0,
+  "parentInfluence": 0.52,
+  "radius": 0.009500001,
+  "tip": [
+   -1.1175871e-08,
+   0,
+   0
+  ],
+  "parent": "HB1_3_5"
+ },
+ {
+  "bone": "HB1_4_3",
+  "chain": "HB1_1_3",
+  "depth": 3,
+  "stiffness": 8.5,
+  "damping": 5.1,
+  "mass": 0.031,
+  "gravity": 0.205,
+  "limit": 33.0,
+  "parentInfluence": 0.52,
+  "radius": 0.009500001,
+  "tip": [
+   -4.656613e-09,
+   0,
+   0
+  ],
+  "parent": "HB1_3_3"
+ },
+ {
+  "bone": "HB4_4_1",
+  "chain": "HB4_0_1",
+  "depth": 4,
+  "stiffness": 7.917,
+  "damping": 5.95,
+  "mass": 0.032305,
+  "gravity": 0.215,
+  "limit": 32.5,
+  "parentInfluence": 0.61499995,
+  "radius": 0.009500001,
+  "tip": [
+   -8.8475645e-09,
+   0,
+   0
+  ],
+  "parent": "HB4_3_1"
+ },
+ {
+  "bone": "HB1_6_7",
+  "chain": "HB1_2_7",
+  "depth": 4,
+  "stiffness": 5.7999997,
+  "damping": 4.56,
+  "mass": 0.0256,
+  "gravity": 0.232,
+  "limit": 38.4,
+  "parentInfluence": 0.364,
+  "radius": 0.0104,
+  "tip": [
+   -1.0430813e-07,
+   0,
+   0
+  ],
+  "parent": "HB1_5_7"
+ },
+ {
+  "bone": "HB1_6_0",
+  "chain": "HB1_1_0",
+  "depth": 4,
+  "stiffness": 5.7999997,
+  "damping": 4.56,
+  "mass": 0.0256,
+  "gravity": 0.232,
+  "limit": 38.4,
+  "parentInfluence": 0.364,
+  "radius": 0.0104,
+  "tip": [
+   -7.450581e-09,
+   0,
+   0
+  ],
+  "parent": "HB1_5_0"
+ },
+ {
+  "bone": "HB1_5_4",
+  "chain": "HB1_1_4",
+  "depth": 4,
+  "stiffness": 7.0,
+  "damping": 4.7999997,
+  "mass": 0.027999999,
+  "gravity": 0.22,
+  "limit": 36.0,
+  "parentInfluence": 0.4333333,
+  "radius": 0.01,
+  "tip": [
+   -0.0,
+   0,
+   0
+  ],
+  "parent": "HB1_4_4"
+ },
+ {
+  "bone": "HB2_4_1",
+  "chain": "HB2_0_1",
+  "depth": 4,
+  "stiffness": 9.7288885,
+  "damping": 5.9555554,
+  "mass": 0.0396,
+  "gravity": 0.20888889,
+  "limit": 31.555555,
+  "parentInfluence": 0.6333333,
+  "radius": 0.009333334,
+  "tip": [
+   7.450581e-09,
+   0,
+   0
+  ],
+  "parent": "HB2_3_1"
+ },
+ {
+  "bone": "HB1_6_1",
+  "chain": "HB1_2_1",
+  "depth": 4,
+  "stiffness": 5.7999997,
+  "damping": 4.56,
+  "mass": 0.0256,
+  "gravity": 0.232,
+  "limit": 38.4,
+  "parentInfluence": 0.364,
+  "radius": 0.0104,
+  "tip": [
+   -3.3527613e-08,
+   0,
+   0
+  ],
+  "parent": "HB1_5_1"
+ },
+ {
+  "bone": "HB1_5_5",
+  "chain": "HB1_1_5",
+  "depth": 4,
+  "stiffness": 7.0,
+  "damping": 4.7999997,
+  "mass": 0.027999999,
+  "gravity": 0.22,
+  "limit": 36.0,
+  "parentInfluence": 0.4333333,
+  "radius": 0.01,
+  "tip": [
+   -4.656613e-09,
+   0,
+   0
+  ],
+  "parent": "HB1_4_5"
+ },
+ {
+  "bone": "HB1_5_2",
+  "chain": "HB1_1_2",
+  "depth": 4,
+  "stiffness": 7.0,
+  "damping": 4.7999997,
+  "mass": 0.027999999,
+  "gravity": 0.22,
+  "limit": 36.0,
+  "parentInfluence": 0.4333333,
+  "radius": 0.01,
+  "tip": [
+   5.5879354e-09,
+   0,
+   0
+  ],
+  "parent": "HB1_4_2"
+ },
+ {
+  "bone": "HB3_4_1",
+  "chain": "HB3_0_1",
+  "depth": 4,
+  "stiffness": 8.77647,
+  "damping": 5.9529414,
+  "mass": 0.035764705,
+  "gravity": 0.21176471,
+  "limit": 32.0,
+  "parentInfluence": 0.62470585,
+  "radius": 0.009411765,
+  "tip": [
+   -1.4901161e-08,
+   0,
+   0
+  ],
+  "parent": "HB3_3_1"
+ },
+ {
+  "bone": "HB1_6_8",
+  "chain": "HB1_1_8",
+  "depth": 4,
+  "stiffness": 5.7999997,
+  "damping": 4.56,
+  "mass": 0.0256,
+  "gravity": 0.232,
+  "limit": 38.4,
+  "parentInfluence": 0.364,
+  "radius": 0.0104,
+  "tip": [
+   1.1175871e-08,
+   0,
+   0
+  ],
+  "parent": "HB1_5_8"
+ },
+ {
+  "bone": "HB1_5_6",
+  "chain": "HB1_1_6",
+  "depth": 4,
+  "stiffness": 7.0,
+  "damping": 4.7999997,
+  "mass": 0.027999999,
+  "gravity": 0.22,
+  "limit": 36.0,
+  "parentInfluence": 0.4333333,
+  "radius": 0.01,
+  "tip": [
+   -7.450581e-09,
+   0,
+   0
+  ],
+  "parent": "HB1_4_6"
+ },
+ {
+  "bone": "HB1_5_3",
+  "chain": "HB1_1_3",
+  "depth": 4,
+  "stiffness": 7.0,
+  "damping": 4.7999997,
+  "mass": 0.027999999,
+  "gravity": 0.22,
+  "limit": 36.0,
+  "parentInfluence": 0.4333333,
+  "radius": 0.01,
+  "tip": [
+   4.656613e-09,
+   0,
+   0
+  ],
+  "parent": "HB1_4_3"
+ },
+ {
+  "bone": "HB1_7_0",
+  "chain": "HB1_1_0",
+  "depth": 5,
+  "stiffness": 4.0,
+  "damping": 4.2,
+  "mass": 0.022,
+  "gravity": 0.25,
+  "limit": 42.0,
+  "parentInfluence": 0.26,
+  "radius": 0.011,
+  "tip": [
+   0.0,
+   0,
+   0
+  ],
+  "parent": "HB1_6_0"
+ },
+ {
+  "bone": "HB3_5_1",
+  "chain": "HB3_0_1",
+  "depth": 5,
+  "stiffness": 8.470589,
+  "damping": 5.9411764,
+  "mass": 0.03470588,
+  "gravity": 0.22470587,
+  "limit": 34.0,
+  "parentInfluence": 0.5858823,
+  "radius": 0.009764707,
+  "tip": [
+   -7.450581e-09,
+   0,
+   0
+  ],
+  "parent": "HB3_4_1"
+ },
+ {
+  "bone": "HB4_5_1",
+  "chain": "HB4_0_1",
+  "depth": 5,
+  "stiffness": 7.62125,
+  "damping": 5.9375,
+  "mass": 0.03128125,
+  "gravity": 0.22874999,
+  "limit": 34.625,
+  "parentInfluence": 0.57374996,
+  "radius": 0.009875,
+  "tip": [
+   8.381903e-09,
+   0,
+   0
+  ],
+  "parent": "HB4_4_1"
+ },
+ {
+  "bone": "HB1_6_2",
+  "chain": "HB1_1_2",
+  "depth": 5,
+  "stiffness": 5.5,
+  "damping": 4.5,
+  "mass": 0.025,
+  "gravity": 0.235,
+  "limit": 39.0,
+  "parentInfluence": 0.34666666,
+  "radius": 0.0105,
+  "tip": [
+   9.313226e-09,
+   0,
+   0
+  ],
+  "parent": "HB1_5_2"
+ },
+ {
+  "bone": "HB1_6_6",
+  "chain": "HB1_1_6",
+  "depth": 5,
+  "stiffness": 5.5,
+  "damping": 4.5,
+  "mass": 0.025,
+  "gravity": 0.235,
+  "limit": 39.0,
+  "parentInfluence": 0.34666666,
+  "radius": 0.0105,
+  "tip": [
+   7.450581e-09,
+   0,
+   0
+  ],
+  "parent": "HB1_5_6"
+ },
+ {
+  "bone": "HB1_6_4",
+  "chain": "HB1_1_4",
+  "depth": 5,
+  "stiffness": 5.5,
+  "damping": 4.5,
+  "mass": 0.025,
+  "gravity": 0.235,
+  "limit": 39.0,
+  "parentInfluence": 0.34666666,
+  "radius": 0.0105,
+  "tip": [
+   -2.842171e-14,
+   0,
+   0
+  ],
+  "parent": "HB1_5_4"
+ },
+ {
+  "bone": "HB1_7_8",
+  "chain": "HB1_1_8",
+  "depth": 5,
+  "stiffness": 4.0,
+  "damping": 4.2,
+  "mass": 0.022,
+  "gravity": 0.25,
+  "limit": 42.0,
+  "parentInfluence": 0.26,
+  "radius": 0.011,
+  "tip": [
+   0.0,
+   0,
+   0
+  ],
+  "parent": "HB1_6_8"
+ },
+ {
+  "bone": "HB1_6_5",
+  "chain": "HB1_1_5",
+  "depth": 5,
+  "stiffness": 5.5,
+  "damping": 4.5,
+  "mass": 0.025,
+  "gravity": 0.235,
+  "limit": 39.0,
+  "parentInfluence": 0.34666666,
+  "radius": 0.0105,
+  "tip": [
+   -1.8626451e-09,
+   0,
+   0
+  ],
+  "parent": "HB1_5_5"
+ },
+ {
+  "bone": "HB1_7_1",
+  "chain": "HB1_2_1",
+  "depth": 5,
+  "stiffness": 4.0,
+  "damping": 4.2,
+  "mass": 0.022,
+  "gravity": 0.25,
+  "limit": 42.0,
+  "parentInfluence": 0.26,
+  "radius": 0.011,
+  "tip": [
+   0.0,
+   0,
+   0
+  ],
+  "parent": "HB1_6_1"
+ },
+ {
+  "bone": "HB1_6_3",
+  "chain": "HB1_1_3",
+  "depth": 5,
+  "stiffness": 5.5,
+  "damping": 4.5,
+  "mass": 0.025,
+  "gravity": 0.235,
+  "limit": 39.0,
+  "parentInfluence": 0.34666666,
+  "radius": 0.0105,
+  "tip": [
+   3.7252903e-09,
+   0,
+   0
+  ],
+  "parent": "HB1_5_3"
+ },
+ {
+  "bone": "HB1_7_7",
+  "chain": "HB1_2_7",
+  "depth": 5,
+  "stiffness": 4.0,
+  "damping": 4.2,
+  "mass": 0.022,
+  "gravity": 0.25,
+  "limit": 42.0,
+  "parentInfluence": 0.26,
+  "radius": 0.011,
+  "tip": [
+   0.0,
+   0,
+   0
+  ],
+  "parent": "HB1_6_7"
+ },
+ {
+  "bone": "HB2_5_1",
+  "chain": "HB2_0_1",
+  "depth": 5,
+  "stiffness": 9.411111,
+  "damping": 5.9444447,
+  "mass": 0.0385,
+  "gravity": 0.2211111,
+  "limit": 33.444447,
+  "parentInfluence": 0.59666663,
+  "radius": 0.009666667,
+  "tip": [
+   -9.313226e-09,
+   0,
+   0
+  ],
+  "parent": "HB2_4_1"
+ },
+ {
+  "bone": "HB3_6_1",
+  "chain": "HB3_0_1",
+  "depth": 6,
+  "stiffness": 8.164706,
+  "damping": 5.929412,
+  "mass": 0.033647057,
+  "gravity": 0.23764706,
+  "limit": 36.0,
+  "parentInfluence": 0.5470588,
+  "radius": 0.010117647,
+  "tip": [
+   -0.0,
+   0,
+   0
+  ],
+  "parent": "HB3_5_1"
+ },
+ {
+  "bone": "HB1_7_5",
+  "chain": "HB1_1_5",
+  "depth": 6,
+  "stiffness": 4.0,
+  "damping": 4.2,
+  "mass": 0.022,
+  "gravity": 0.25,
+  "limit": 42.0,
+  "parentInfluence": 0.26,
+  "radius": 0.011,
+  "tip": [
+   0.0,
+   0,
+   0
+  ],
+  "parent": "HB1_6_5"
+ },
+ {
+  "bone": "HB1_7_2",
+  "chain": "HB1_1_2",
+  "depth": 6,
+  "stiffness": 4.0,
+  "damping": 4.2,
+  "mass": 0.022,
+  "gravity": 0.25,
+  "limit": 42.0,
+  "parentInfluence": 0.26,
+  "radius": 0.011,
+  "tip": [
+   0.0,
+   0,
+   0
+  ],
+  "parent": "HB1_6_2"
+ },
+ {
+  "bone": "HB1_7_4",
+  "chain": "HB1_1_4",
+  "depth": 6,
+  "stiffness": 4.0,
+  "damping": 4.2,
+  "mass": 0.022,
+  "gravity": 0.25,
+  "limit": 42.0,
+  "parentInfluence": 0.26,
+  "radius": 0.011,
+  "tip": [
+   0.0,
+   0,
+   0
+  ],
+  "parent": "HB1_6_4"
+ },
+ {
+  "bone": "HB1_7_6",
+  "chain": "HB1_1_6",
+  "depth": 6,
+  "stiffness": 4.0,
+  "damping": 4.2,
+  "mass": 0.022,
+  "gravity": 0.25,
+  "limit": 42.0,
+  "parentInfluence": 0.26,
+  "radius": 0.011,
+  "tip": [
+   0.0,
+   0,
+   0
+  ],
+  "parent": "HB1_6_6"
+ },
+ {
+  "bone": "HB2_6_1",
+  "chain": "HB2_0_1",
+  "depth": 6,
+  "stiffness": 9.093333,
+  "damping": 5.9333334,
+  "mass": 0.0374,
+  "gravity": 0.23333333,
+  "limit": 35.333332,
+  "parentInfluence": 0.56,
+  "radius": 0.010000001,
+  "tip": [
+   4.656613e-10,
+   0,
+   0
+  ],
+  "parent": "HB2_5_1"
+ },
+ {
+  "bone": "HB1_7_3",
+  "chain": "HB1_1_3",
+  "depth": 6,
+  "stiffness": 4.0,
+  "damping": 4.2,
+  "mass": 0.022,
+  "gravity": 0.25,
+  "limit": 42.0,
+  "parentInfluence": 0.26,
+  "radius": 0.011,
+  "tip": [
+   0.0,
+   0,
+   0
+  ],
+  "parent": "HB1_6_3"
+ },
+ {
+  "bone": "HB4_6_1",
+  "chain": "HB4_0_1",
+  "depth": 6,
+  "stiffness": 7.3255005,
+  "damping": 5.925,
+  "mass": 0.0302575,
+  "gravity": 0.24249999,
+  "limit": 36.75,
+  "parentInfluence": 0.53249997,
+  "radius": 0.01025,
+  "tip": [
+   -9.313226e-09,
+   0,
+   0
+  ],
+  "parent": "HB4_5_1"
+ },
+ {
+  "bone": "HB4_7_1",
+  "chain": "HB4_0_1",
+  "depth": 7,
+  "stiffness": 7.0297503,
+  "damping": 5.9125,
+  "mass": 0.02923375,
+  "gravity": 0.25625,
+  "limit": 38.875,
+  "parentInfluence": 0.49124998,
+  "radius": 0.010625,
+  "tip": [
+   -4.656613e-09,
+   0,
+   0
+  ],
+  "parent": "HB4_6_1"
+ },
+ {
+  "bone": "HB2_7_1",
+  "chain": "HB2_0_1",
+  "depth": 7,
+  "stiffness": 8.775556,
+  "damping": 5.922222,
+  "mass": 0.0363,
+  "gravity": 0.24555555,
+  "limit": 37.22222,
+  "parentInfluence": 0.5233333,
+  "radius": 0.010333334,
+  "tip": [
+   -2.4214387e-08,
+   0,
+   0
+  ],
+  "parent": "HB2_6_1"
+ },
+ {
+  "bone": "HB3_7_1",
+  "chain": "HB3_0_1",
+  "depth": 7,
+  "stiffness": 7.858824,
+  "damping": 5.9176474,
+  "mass": 0.032588236,
+  "gravity": 0.25058824,
+  "limit": 38.0,
+  "parentInfluence": 0.5082353,
+  "radius": 0.010470589,
+  "tip": [
+   -5.2154064e-08,
+   0,
+   0
+  ],
+  "parent": "HB3_6_1"
+ },
+ {
+  "bone": "HB2_8_1",
+  "chain": "HB2_0_1",
+  "depth": 8,
+  "stiffness": 8.457778,
+  "damping": 5.9111114,
+  "mass": 0.0352,
+  "gravity": 0.25777778,
+  "limit": 39.11111,
+  "parentInfluence": 0.48666665,
+  "radius": 0.0106666675,
+  "tip": [
+   -9.313226e-09,
+   0,
+   0
+  ],
+  "parent": "HB2_7_1"
+ },
+ {
+  "bone": "HB3_8_1",
+  "chain": "HB3_0_1",
+  "depth": 8,
+  "stiffness": 7.5529413,
+  "damping": 5.9058824,
+  "mass": 0.03152941,
+  "gravity": 0.26352942,
+  "limit": 40.0,
+  "parentInfluence": 0.46941176,
+  "radius": 0.01082353,
+  "tip": [
+   8.940697e-08,
+   0,
+   0
+  ],
+  "parent": "HB3_7_1"
+ },
+ {
+  "bone": "HB4_8_1",
+  "chain": "HB4_0_1",
+  "depth": 8,
+  "stiffness": 6.734,
+  "damping": 5.9,
+  "mass": 0.028210001,
+  "gravity": 0.26999998,
+  "limit": 41.0,
+  "parentInfluence": 0.45,
+  "radius": 0.011,
+  "tip": [
+   1.8626451e-09,
+   0,
+   0
+  ],
+  "parent": "HB4_7_1"
+ },
+ {
+  "bone": "HB4_9_1",
+  "chain": "HB4_0_1",
+  "depth": 9,
+  "stiffness": 6.4382505,
+  "damping": 5.8875003,
+  "mass": 0.02718625,
+  "gravity": 0.28375,
+  "limit": 43.125,
+  "parentInfluence": 0.40875,
+  "radius": 0.011375001,
+  "tip": [
+   7.450581e-09,
+   0,
+   0
+  ],
+  "parent": "HB4_8_1"
+ },
+ {
+  "bone": "HB2_9_1",
+  "chain": "HB2_0_1",
+  "depth": 9,
+  "stiffness": 8.14,
+  "damping": 5.9,
+  "mass": 0.0341,
+  "gravity": 0.26999998,
+  "limit": 41.0,
+  "parentInfluence": 0.45,
+  "radius": 0.011,
+  "tip": [
+   1.3969839e-08,
+   0,
+   0
+  ],
+  "parent": "HB2_8_1"
+ },
+ {
+  "bone": "HB3_9_1",
+  "chain": "HB3_0_1",
+  "depth": 9,
+  "stiffness": 7.247059,
+  "damping": 5.894118,
+  "mass": 0.030470587,
+  "gravity": 0.2764706,
+  "limit": 42.0,
+  "parentInfluence": 0.43058822,
+  "radius": 0.011176472,
+  "tip": [
+   5.9604645e-08,
+   0,
+   0
+  ],
+  "parent": "HB3_8_1"
+ },
+ {
+  "bone": "HB4_10_1",
+  "chain": "HB4_0_1",
+  "depth": 10,
+  "stiffness": 6.1425004,
+  "damping": 5.875,
+  "mass": 0.0261625,
+  "gravity": 0.29749998,
+  "limit": 45.25,
+  "parentInfluence": 0.36749998,
+  "radius": 0.0117500005,
+  "tip": [
+   -7.450581e-09,
+   0,
+   0
+  ],
+  "parent": "HB4_9_1"
+ },
+ {
+  "bone": "HB2_10_1",
+  "chain": "HB2_0_1",
+  "depth": 10,
+  "stiffness": 7.822222,
+  "damping": 5.888889,
+  "mass": 0.033,
+  "gravity": 0.2822222,
+  "limit": 42.88889,
+  "parentInfluence": 0.4133333,
+  "radius": 0.011333334,
+  "tip": [
+   2.0489097e-08,
+   0,
+   0
+  ],
+  "parent": "HB2_9_1"
+ },
+ {
+  "bone": "HB3_10_1",
+  "chain": "HB3_0_1",
+  "depth": 10,
+  "stiffness": 6.9411764,
+  "damping": 5.882353,
+  "mass": 0.029411763,
+  "gravity": 0.28941175,
+  "limit": 44.0,
+  "parentInfluence": 0.39176467,
+  "radius": 0.011529412,
+  "tip": [
+   -4.4703484e-08,
+   0,
+   0
+  ],
+  "parent": "HB3_9_1"
+ },
+ {
+  "bone": "HB2_11_1",
+  "chain": "HB2_0_1",
+  "depth": 11,
+  "stiffness": 7.5044446,
+  "damping": 5.877778,
+  "mass": 0.0319,
+  "gravity": 0.29444444,
+  "limit": 44.77778,
+  "parentInfluence": 0.37666667,
+  "radius": 0.011666667,
+  "tip": [
+   7.450581e-09,
+   0,
+   0
+  ],
+  "parent": "HB2_10_1"
+ },
+ {
+  "bone": "HB4_11_1",
+  "chain": "HB4_0_1",
+  "depth": 11,
+  "stiffness": 5.8467503,
+  "damping": 5.8625,
+  "mass": 0.02513875,
+  "gravity": 0.31125,
+  "limit": 47.375,
+  "parentInfluence": 0.32625,
+  "radius": 0.012125,
+  "tip": [
+   3.7252903e-09,
+   0,
+   0
+  ],
+  "parent": "HB4_10_1"
+ },
+ {
+  "bone": "HB3_11_1",
+  "chain": "HB3_0_1",
+  "depth": 11,
+  "stiffness": 6.635294,
+  "damping": 5.8705883,
+  "mass": 0.02835294,
+  "gravity": 0.30235294,
+  "limit": 46.0,
+  "parentInfluence": 0.35294116,
+  "radius": 0.011882354,
+  "tip": [
+   -0.0,
+   0,
+   0
+  ],
+  "parent": "HB3_10_1"
+ },
+ {
+  "bone": "HB3_12_1",
+  "chain": "HB3_0_1",
+  "depth": 12,
+  "stiffness": 6.329412,
+  "damping": 5.858824,
+  "mass": 0.027294116,
+  "gravity": 0.31529412,
+  "limit": 48.0,
+  "parentInfluence": 0.3141176,
+  "radius": 0.012235295,
+  "tip": [
+   1.4901161e-08,
+   0,
+   0
+  ],
+  "parent": "HB3_11_1"
+ },
+ {
+  "bone": "HB4_12_1",
+  "chain": "HB4_0_1",
+  "depth": 12,
+  "stiffness": 5.5510006,
+  "damping": 5.8500004,
+  "mass": 0.024115,
+  "gravity": 0.325,
+  "limit": 49.5,
+  "parentInfluence": 0.285,
+  "radius": 0.0125,
+  "tip": [
+   7.450581e-09,
+   0,
+   0
+  ],
+  "parent": "HB4_11_1"
+ },
+ {
+  "bone": "HB2_12_1",
+  "chain": "HB2_0_1",
+  "depth": 12,
+  "stiffness": 7.186667,
+  "damping": 5.866667,
+  "mass": 0.0308,
+  "gravity": 0.30666667,
+  "limit": 46.666668,
+  "parentInfluence": 0.33999997,
+  "radius": 0.012,
+  "tip": [
+   -5.3551048e-08,
+   0,
+   0
+  ],
+  "parent": "HB2_11_1"
+ },
+ {
+  "bone": "HB3_13_1",
+  "chain": "HB3_0_1",
+  "depth": 13,
+  "stiffness": 6.0235295,
+  "damping": 5.847059,
+  "mass": 0.026235294,
+  "gravity": 0.3282353,
+  "limit": 50.0,
+  "parentInfluence": 0.2752941,
+  "radius": 0.012588236,
+  "tip": [
+   -2.9802322e-08,
+   0,
+   0
+  ],
+  "parent": "HB3_12_1"
+ },
+ {
+  "bone": "HB4_13_1",
+  "chain": "HB4_0_1",
+  "depth": 13,
+  "stiffness": 5.2552505,
+  "damping": 5.8375,
+  "mass": 0.02309125,
+  "gravity": 0.33875,
+  "limit": 51.625,
+  "parentInfluence": 0.24374999,
+  "radius": 0.012875,
+  "tip": [
+   -0.0,
+   0,
+   0
+  ],
+  "parent": "HB4_12_1"
+ },
+ {
+  "bone": "HB2_13_1",
+  "chain": "HB2_0_1",
+  "depth": 13,
+  "stiffness": 6.8688893,
+  "damping": 5.8555555,
+  "mass": 0.029700002,
+  "gravity": 0.31888887,
+  "limit": 48.555553,
+  "parentInfluence": 0.30333334,
+  "radius": 0.0123333335,
+  "tip": [
+   2.2351742e-08,
+   0,
+   0
+  ],
+  "parent": "HB2_12_1"
+ },
+ {
+  "bone": "HB4_14_1",
+  "chain": "HB4_0_1",
+  "depth": 14,
+  "stiffness": 4.9595003,
+  "damping": 5.8250003,
+  "mass": 0.022067502,
+  "gravity": 0.3525,
+  "limit": 53.75,
+  "parentInfluence": 0.2025,
+  "radius": 0.013250001,
+  "tip": [
+   1.1175871e-08,
+   0,
+   0
+  ],
+  "parent": "HB4_13_1"
+ },
+ {
+  "bone": "HB3_14_1",
+  "chain": "HB3_0_1",
+  "depth": 14,
+  "stiffness": 5.717647,
+  "damping": 5.8352942,
+  "mass": 0.02517647,
+  "gravity": 0.34117648,
+  "limit": 52.0,
+  "parentInfluence": 0.23647058,
+  "radius": 0.012941177,
+  "tip": [
+   -0.0,
+   0,
+   0
+  ],
+  "parent": "HB3_13_1"
+ },
+ {
+  "bone": "HB2_14_1",
+  "chain": "HB2_0_1",
+  "depth": 14,
+  "stiffness": 6.551111,
+  "damping": 5.8444448,
+  "mass": 0.0286,
+  "gravity": 0.3311111,
+  "limit": 50.444447,
+  "parentInfluence": 0.26666665,
+  "radius": 0.012666667,
+  "tip": [
+   2.6077032e-08,
+   0,
+   0
+  ],
+  "parent": "HB2_13_1"
+ },
+ {
+  "bone": "HB3_15_1",
+  "chain": "HB3_0_1",
+  "depth": 15,
+  "stiffness": 5.4117646,
+  "damping": 5.8235297,
+  "mass": 0.024117647,
+  "gravity": 0.35411763,
+  "limit": 54.0,
+  "parentInfluence": 0.19764705,
+  "radius": 0.013294118,
+  "tip": [
+   -0.0,
+   0,
+   0
+  ],
+  "parent": "HB3_14_1"
+ },
+ {
+  "bone": "HB4_15_1",
+  "chain": "HB4_0_1",
+  "depth": 15,
+  "stiffness": 4.66375,
+  "damping": 5.8125,
+  "mass": 0.021043751,
+  "gravity": 0.36625,
+  "limit": 55.875,
+  "parentInfluence": 0.16125,
+  "radius": 0.013625001,
+  "tip": [
+   7.450581e-09,
+   0,
+   0
+  ],
+  "parent": "HB4_14_1"
+ },
+ {
+  "bone": "HB2_15_1",
+  "chain": "HB2_0_1",
+  "depth": 15,
+  "stiffness": 6.2333336,
+  "damping": 5.8333335,
+  "mass": 0.027500002,
+  "gravity": 0.34333333,
+  "limit": 52.333332,
+  "parentInfluence": 0.23,
+  "radius": 0.013,
+  "tip": [
+   -3.7252903e-08,
+   0,
+   0
+  ],
+  "parent": "HB2_14_1"
+ },
+ {
+  "bone": "HB4_16_1",
+  "chain": "HB4_0_1",
+  "depth": 16,
+  "stiffness": 4.3680005,
+  "damping": 5.8,
+  "mass": 0.02002,
+  "gravity": 0.38,
+  "limit": 58.0,
+  "parentInfluence": 0.12,
+  "radius": 0.014,
+  "tip": [
+   0.0,
+   0,
+   0
+  ],
+  "parent": "HB4_15_1"
+ },
+ {
+  "bone": "HB3_16_1",
+  "chain": "HB3_0_1",
+  "depth": 16,
+  "stiffness": 5.1058826,
+  "damping": 5.8117647,
+  "mass": 0.023058822,
+  "gravity": 0.3670588,
+  "limit": 56.0,
+  "parentInfluence": 0.15882352,
+  "radius": 0.013647059,
+  "tip": [
+   1.4901161e-08,
+   0,
+   0
+  ],
+  "parent": "HB3_15_1"
+ },
+ {
+  "bone": "HB2_16_1",
+  "chain": "HB2_0_1",
+  "depth": 16,
+  "stiffness": 5.915556,
+  "damping": 5.822222,
+  "mass": 0.026400002,
+  "gravity": 0.35555556,
+  "limit": 54.22222,
+  "parentInfluence": 0.19333333,
+  "radius": 0.013333334,
+  "tip": [
+   -7.450581e-09,
+   0,
+   0
+  ],
+  "parent": "HB2_15_1"
+ },
+ {
+  "bone": "HB2_17_1",
+  "chain": "HB2_0_1",
+  "depth": 17,
+  "stiffness": 5.5977783,
+  "damping": 5.8111115,
+  "mass": 0.0253,
+  "gravity": 0.36777776,
+  "limit": 56.11111,
+  "parentInfluence": 0.15666668,
+  "radius": 0.013666667,
+  "tip": [
+   1.15484e-07,
+   0,
+   0
+  ],
+  "parent": "HB2_16_1"
+ },
+ {
+  "bone": "HB3_17_1",
+  "chain": "HB3_0_1",
+  "depth": 17,
+  "stiffness": 4.8,
+  "damping": 5.8,
+  "mass": 0.022,
+  "gravity": 0.38,
+  "limit": 58.0,
+  "parentInfluence": 0.12,
+  "radius": 0.014,
+  "tip": [
+   0.0,
+   0,
+   0
+  ],
+  "parent": "HB3_16_1"
+ },
+ {
+  "bone": "HB2_18_1",
+  "chain": "HB2_0_1",
+  "depth": 18,
+  "stiffness": 5.28,
+  "damping": 5.8,
+  "mass": 0.0242,
+  "gravity": 0.38,
+  "limit": 58.0,
+  "parentInfluence": 0.12,
+  "radius": 0.014,
+  "tip": [
+   0.0,
+   0,
+   0
+  ],
+  "parent": "HB2_17_1"
+ }
+]

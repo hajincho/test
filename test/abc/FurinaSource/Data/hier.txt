@@ -1,0 +1,43 @@
+Furina Player/ModelRoot/Furina/Armature
+Hips
+Hips/Left leg
+Hips/Left leg/Left knee
+Hips/Left leg/Left knee/Left ankle
+Hips/Left leg/Left knee/Left ankle/Left toe
+Hips/Right leg
+Hips/Right leg/Right knee
+Hips/Right leg/Right knee/Right ankle
+Hips/Right leg/Right knee/Right ankle/Right toe
+Hips/Spine
+Hips/Spine/Chest
+Hips/Spine/Chest/Left shoulder
+Hips/Spine/Chest/Left shoulder/Breast针
+Hips/Spine/Chest/Left shoulder/Left arm
+Hips/Spine/Chest/Left shoulder/Left arm/Left elbow
+Hips/Spine/Chest/Left shoulder/Left arm/Left elbow/Left wrist
+Hips/Spine/Chest/Left shoulder/Left arm/Left elbow/Left wrist/IndexFinger1_L
+Hips/Spine/Chest/Left shoulder/Left arm/Left elbow/Left wrist/LittleFinger1_L
+Hips/Spine/Chest/Left shoulder/Left arm/Left elbow/Left wrist/MiddleFinger1_L
+Hips/Spine/Chest/Left shoulder/Left arm/Left elbow/Left wrist/RingFinger1_L
+Hips/Spine/Chest/Left shoulder/Left arm/Left elbow/Left wrist/Thumb0_L
+Hips/Spine/Chest/Left shoulder/Left arm/Left elbow/Left wrist/Thumb0_L/Thumb1_L
+Hips/Spine/Chest/Left shoulder/Left arm/Left elbow/zHandTwist_L
+Hips/Spine/Chest/Left shoulder/Left arm/zArmTwist_L
+Hips/Spine/Chest/Neck
+Hips/Spine/Chest/Neck/Head
+Hips/Spine/Chest/Neck/Head/Eye_L
+Hips/Spine/Chest/Neck/Head/Eye_R
+Hips/Spine/Chest/Neck/Head/帽
+Hips/Spine/Chest/Neck/Head/帽/帽D1_1
+Hips/Spine/Chest/Neck/Head/帽/帽D1_1/帽D1_2
+Hips/Spine/Chest/Neck/Head/齿Lower
+Hips/Spine/Chest/Neck/Head/齿Upper
+Hips/Spine/Chest/Right shoulder
+Hips/Spine/Chest/Right shoulder/+EarF_R_A21
+Hips/Spine/Chest/Right shoulder/Right arm
+Hips/Spine/Chest/Right shoulder/Right arm/Right elbow
+Hips/Spine/Chest/Right shoulder/Right arm/Right elbow/Right wrist
+Hips/Spine/Chest/Right shoulder/Right arm/Right elbow/Right wrist/Thumb0_R
+Hips/Spine/Chest/Right shoulder/Right arm/Right elbow/zHandTwist_R
+Hips/Spine/Chest/Right shoulder/Right arm/zArmTwist_R
+Hips/Spine/Chest/领巾

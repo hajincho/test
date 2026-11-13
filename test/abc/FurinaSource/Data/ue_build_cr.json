@@ -1,0 +1,10 @@
+{
+ "log": [
+  "add curve AhogeDyn <Struct 'RigElementKey' (0x0000027902ABB8D0) {type: Curve, name: \"AhogeDyn\"}>",
+  "nodes ['BeginExecution']",
+  "spring text (Target=0.000000,Strength=4.000000,CriticalDamping=1.000000,Force=0.000000,bUseCurrentInput=False,Current=0.000000,TargetVelocityAmount=0.000000,bInitializeFromTarget=False,Result=0.000000,Velocity=0.000000,SimulatedResult=0.000000,SpringState=())",
+  "timeloop (Speed=1.000000,Duration=1.000000,Normalize=False,Absolute=0.000000,Relative=0.000000,FlipFlop=0.000000,Even=False,AccumulatedAbsolute=0.000000,AccumulatedRelative=0.000000,NumIterations=0,bIsInitialized=False)"
+ ],
+ "fail": [],
+ "status": "<BlueprintStatus.BS_UP_TO_DATE: 3>"
+}

@@ -1,0 +1,1261 @@
+{
+ "nodes": [
+  {
+   "name": "K2Node_Event_3",
+   "title": "BlueprintUpdateAnimation 이벤트",
+   "class": "K2Node_Event",
+   "pins": [
+    {
+     "name": "OutputDelegate",
+     "value": "",
+     "links": []
+    },
+    {
+     "name": "then",
+     "value": "",
+     "links": [
+      "K2Node_VariableGet_9.execute"
+     ]
+    },
+    {
+     "name": "DeltaTimeX",
+     "value": "0.0",
+     "links": []
+    }
+   ]
+  },
+  {
+   "name": "K2Node_Event_2",
+   "title": "BlueprintInitializeAnimation 이벤트",
+   "class": "K2Node_Event",
+   "pins": [
+    {
+     "name": "OutputDelegate",
+     "value": "",
+     "links": []
+    },
+    {
+     "name": "then",
+     "value": "",
+     "links": [
+      "K2Node_DynamicCast_0.execute"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "K2Node_VariableGet_9",
+   "title": "Get",
+   "class": "K2Node_VariableGet",
+   "pins": [
+    {
+     "name": "execute",
+     "value": "",
+     "links": [
+      "K2Node_Event_3.then"
+     ]
+    },
+    {
+     "name": "then",
+     "value": "",
+     "links": [
+      "K2Node_ExecutionSequence_0.execute"
+     ]
+    },
+    {
+     "name": "else",
+     "value": "",
+     "links": []
+    },
+    {
+     "name": "Character",
+     "value": "",
+     "links": []
+    }
+   ]
+  },
+  {
+   "name": "K2Node_CallFunction_15",
+   "title": "GetOwningActor",
+   "class": "K2Node_CallFunction",
+   "pins": [
+    {
+     "name": "self",
+     "value": "",
+     "links": []
+    },
+    {
+     "name": "ReturnValue",
+     "value": "",
+     "links": [
+      "K2Node_DynamicCast_0.Object"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "K2Node_DynamicCast_0",
+   "title": "Cast To Character",
+   "class": "K2Node_DynamicCast",
+   "pins": [
+    {
+     "name": "execute",
+     "value": "",
+     "links": [
+      "K2Node_Event_2.then"
+     ]
+    },
+    {
+     "name": "Object",
+     "value": "",
+     "links": [
+      "K2Node_CallFunction_15.ReturnValue"
+     ]
+    },
+    {
+     "name": "then",
+     "value": "",
+     "links": [
+      "K2Node_VariableSet_1.execute"
+     ]
+    },
+    {
+     "name": "CastFailed",
+     "value": "",
+     "links": []
+    },
+    {
+     "name": "As캐릭터",
+     "value": "",
+     "links": [
+      "K2Node_VariableSet_1.Character"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "K2Node_VariableGet_10",
+   "title": "Get CharacterMovement",
+   "class": "K2Node_VariableGet",
+   "pins": [
+    {
+     "name": "self",
+     "value": "",
+     "links": [
+      "K2Node_VariableSet_1.Output_Get"
+     ]
+    },
+    {
+     "name": "CharacterMovement",
+     "value": "",
+     "links": [
+      "K2Node_VariableSet_2.MovementComponent"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "K2Node_VariableSet_1",
+   "title": "Set Character",
+   "class": "K2Node_VariableSet",
+   "pins": [
+    {
+     "name": "execute",
+     "value": "",
+     "links": [
+      "K2Node_DynamicCast_0.then"
+     ]
+    },
+    {
+     "name": "Character",
+     "value": "",
+     "links": [
+      "K2Node_DynamicCast_0.As캐릭터"
+     ]
+    },
+    {
+     "name": "then",
+     "value": "",
+     "links": [
+      "K2Node_VariableSet_2.execute"
+     ]
+    },
+    {
+     "name": "Output_Get",
+     "value": "",
+     "links": [
+      "K2Node_VariableGet_10.self"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "K2Node_VariableSet_2",
+   "title": "Set MovementComponent",
+   "class": "K2Node_VariableSet",
+   "pins": [
+    {
+     "name": "execute",
+     "value": "",
+     "links": [
+      "K2Node_VariableSet_1.then"
+     ]
+    },
+    {
+     "name": "MovementComponent",
+     "value": "",
+     "links": [
+      "K2Node_VariableGet_10.CharacterMovement"
+     ]
+    },
+    {
+     "name": "then",
+     "value": "",
+     "links": []
+    },
+    {
+     "name": "Output_Get",
+     "value": "",
+     "links": []
+    }
+   ]
+  },
+  {
+   "name": "K2Node_ExecutionSequence_0",
+   "title": "시퀀스",
+   "class": "K2Node_ExecutionSequence",
+   "pins": [
+    {
+     "name": "execute",
+     "value": "",
+     "links": [
+      "K2Node_VariableGet_9.then"
+     ]
+    },
+    {
+     "name": "then_0",
+     "value": "",
+     "links": [
+      "K2Node_Knot_0.InputPin"
+     ]
+    },
+    {
+     "name": "then_1",
+     "value": "",
+     "links": [
+      "K2Node_Knot_1.InputPin"
+     ]
+    },
+    {
+     "name": "then_2",
+     "value": "",
+     "links": [
+      "K2Node_Knot_2.InputPin"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "K2Node_VariableSet_3",
+   "title": "Set Velocity",
+   "class": "K2Node_VariableSet",
+   "pins": [
+    {
+     "name": "execute",
+     "value": "",
+     "links": [
+      "K2Node_Knot_0.OutputPin"
+     ]
+    },
+    {
+     "name": "Velocity",
+     "value": "0, 0, 0",
+     "links": [
+      "K2Node_VariableGet_14.Velocity"
+     ]
+    },
+    {
+     "name": "then",
+     "value": "",
+     "links": [
+      "K2Node_VariableSet_4.execute"
+     ]
+    },
+    {
+     "name": "Output_Get",
+     "value": "0, 0, 0",
+     "links": [
+      "K2Node_CallFunction_11.A"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "K2Node_VariableGet_12",
+   "title": "Get MovementComponent",
+   "class": "K2Node_VariableGet",
+   "pins": [
+    {
+     "name": "MovementComponent",
+     "value": "",
+     "links": [
+      "K2Node_VariableGet_14.self"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "K2Node_VariableGet_14",
+   "title": "Get Velocity",
+   "class": "K2Node_VariableGet",
+   "pins": [
+    {
+     "name": "self",
+     "value": "",
+     "links": [
+      "K2Node_VariableGet_12.MovementComponent"
+     ]
+    },
+    {
+     "name": "Velocity",
+     "value": "0, 0, 0",
+     "links": [
+      "K2Node_VariableSet_3.Velocity"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "K2Node_CallFunction_11",
+   "title": "Vector Length XY",
+   "class": "K2Node_CallFunction",
+   "pins": [
+    {
+     "name": "A",
+     "value": "0, 0, 0",
+     "links": [
+      "K2Node_VariableSet_3.Output_Get"
+     ]
+    },
+    {
+     "name": "ReturnValue",
+     "value": "0.0",
+     "links": [
+      "K2Node_VariableSet_4.GroundSpeed"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "K2Node_VariableSet_4",
+   "title": "Set GroundSpeed",
+   "class": "K2Node_VariableSet",
+   "pins": [
+    {
+     "name": "execute",
+     "value": "",
+     "links": [
+      "K2Node_VariableSet_3.then"
+     ]
+    },
+    {
+     "name": "GroundSpeed",
+     "value": "0.0",
+     "links": [
+      "K2Node_CallFunction_11.ReturnValue"
+     ]
+    },
+    {
+     "name": "then",
+     "value": "",
+     "links": []
+    },
+    {
+     "name": "Output_Get",
+     "value": "0.0",
+     "links": []
+    }
+   ]
+  },
+  {
+   "name": "K2Node_Knot_0",
+   "title": "경유 노드",
+   "class": "K2Node_Knot",
+   "pins": [
+    {
+     "name": "InputPin",
+     "value": "",
+     "links": [
+      "K2Node_ExecutionSequence_0.then_0"
+     ]
+    },
+    {
+     "name": "OutputPin",
+     "value": "",
+     "links": [
+      "K2Node_VariableSet_3.execute"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "K2Node_VariableSet_5",
+   "title": "Set ShouldMove",
+   "class": "K2Node_VariableSet",
+   "pins": [
+    {
+     "name": "execute",
+     "value": "",
+     "links": [
+      "K2Node_Knot_1.OutputPin"
+     ]
+    },
+    {
+     "name": "ShouldMove",
+     "value": "false",
+     "links": [
+      "K2Node_CommutativeAssociativeBinaryOperator_5.ReturnValue"
+     ]
+    },
+    {
+     "name": "then",
+     "value": "",
+     "links": []
+    },
+    {
+     "name": "Output_Get",
+     "value": "false",
+     "links": []
+    }
+   ]
+  },
+  {
+   "name": "K2Node_Knot_1",
+   "title": "경유 노드",
+   "class": "K2Node_Knot",
+   "pins": [
+    {
+     "name": "InputPin",
+     "value": "",
+     "links": [
+      "K2Node_ExecutionSequence_0.then_1"
+     ]
+    },
+    {
+     "name": "OutputPin",
+     "value": "",
+     "links": [
+      "K2Node_VariableSet_5.execute"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "K2Node_VariableGet_16",
+   "title": "Get GroundSpeed",
+   "class": "K2Node_VariableGet",
+   "pins": [
+    {
+     "name": "GroundSpeed",
+     "value": "0.0",
+     "links": [
+      "K2Node_PromotableOperator_0.A"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "K2Node_PromotableOperator_0",
+   "title": "float > float",
+   "class": "K2Node_PromotableOperator",
+   "pins": [
+    {
+     "name": "A",
+     "value": "",
+     "links": [
+      "K2Node_VariableGet_16.GroundSpeed"
+     ]
+    },
+    {
+     "name": "B",
+     "value": "3.000000",
+     "links": []
+    },
+    {
+     "name": "ReturnValue",
+     "value": "",
+     "links": [
+      "K2Node_CommutativeAssociativeBinaryOperator_5.A"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "K2Node_CommutativeAssociativeBinaryOperator_5",
+   "title": "AND Boolean",
+   "class": "K2Node_CommutativeAssociativeBinaryOperator",
+   "pins": [
+    {
+     "name": "A",
+     "value": "false",
+     "links": [
+      "K2Node_PromotableOperator_0.ReturnValue"
+     ]
+    },
+    {
+     "name": "B",
+     "value": "false",
+     "links": [
+      "K2Node_PromotableOperator_2.ReturnValue"
+     ]
+    },
+    {
+     "name": "ReturnValue",
+     "value": "false",
+     "links": [
+      "K2Node_VariableSet_5.ShouldMove"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "K2Node_VariableGet_13",
+   "title": "Get MovementComponent",
+   "class": "K2Node_VariableGet",
+   "pins": [
+    {
+     "name": "MovementComponent",
+     "value": "",
+     "links": [
+      "K2Node_CallFunction_13.self"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "K2Node_CallFunction_13",
+   "title": "GetCurrentAcceleration",
+   "class": "K2Node_CallFunction",
+   "pins": [
+    {
+     "name": "self",
+     "value": "",
+     "links": [
+      "K2Node_VariableGet_13.MovementComponent"
+     ]
+    },
+    {
+     "name": "ReturnValue",
+     "value": "0, 0, 0",
+     "links": [
+      "K2Node_PromotableOperator_2.A"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "K2Node_PromotableOperator_2",
+   "title": "Not Equal (Vector)",
+   "class": "K2Node_PromotableOperator",
+   "pins": [
+    {
+     "name": "A",
+     "value": "",
+     "links": [
+      "K2Node_CallFunction_13.ReturnValue"
+     ]
+    },
+    {
+     "name": "B",
+     "value": "",
+     "links": []
+    },
+    {
+     "name": "ErrorTolerance",
+     "value": "",
+     "links": []
+    },
+    {
+     "name": "ReturnValue",
+     "value": "",
+     "links": [
+      "K2Node_CommutativeAssociativeBinaryOperator_5.B"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "K2Node_VariableSet_6",
+   "title": "Set IsFalling",
+   "class": "K2Node_VariableSet",
+   "pins": [
+    {
+     "name": "execute",
+     "value": "",
+     "links": [
+      "K2Node_Knot_2.OutputPin"
+     ]
+    },
+    {
+     "name": "IsFalling",
+     "value": "false",
+     "links": [
+      "K2Node_CallFunction_9.ReturnValue"
+     ]
+    },
+    {
+     "name": "then",
+     "value": "",
+     "links": []
+    },
+    {
+     "name": "Output_Get",
+     "value": "false",
+     "links": []
+    }
+   ]
+  },
+  {
+   "name": "K2Node_Knot_2",
+   "title": "경유 노드",
+   "class": "K2Node_Knot",
+   "pins": [
+    {
+     "name": "InputPin",
+     "value": "",
+     "links": [
+      "K2Node_ExecutionSequence_0.then_2"
+     ]
+    },
+    {
+     "name": "OutputPin",
+     "value": "",
+     "links": [
+      "K2Node_VariableSet_6.execute"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "K2Node_VariableGet_11",
+   "title": "Get MovementComponent",
+   "class": "K2Node_VariableGet",
+   "pins": [
+    {
+     "name": "MovementComponent",
+     "value": "",
+     "links": [
+      "K2Node_CallFunction_9.self"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "K2Node_CallFunction_9",
+   "title": "IsFalling",
+   "class": "K2Node_CallFunction",
+   "pins": [
+    {
+     "name": "self",
+     "value": "",
+     "links": [
+      "K2Node_VariableGet_11.MovementComponent"
+     ]
+    },
+    {
+     "name": "ReturnValue",
+     "value": "false",
+     "links": [
+      "K2Node_VariableSet_6.IsFalling"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "K2Node_Event_0",
+   "title": "AnimNotify_Footstep",
+   "class": "K2Node_Event",
+   "pins": [
+    {
+     "name": "OutputDelegate",
+     "value": "",
+     "links": []
+    },
+    {
+     "name": "then",
+     "value": "",
+     "links": [
+      "K2Node_IfThenElse_2.execute"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "K2Node_CallFunction_2",
+   "title": "SpawnSoundAtLocation",
+   "class": "K2Node_CallFunction",
+   "pins": [
+    {
+     "name": "execute",
+     "value": "",
+     "links": [
+      "K2Node_IfThenElse_2.else"
+     ]
+    },
+    {
+     "name": "Sound",
+     "value": "/Game/3DPlatformerGameBundle/Audio/Cues/Footsteps2_Cue.Footsteps2_Cue",
+     "links": []
+    },
+    {
+     "name": "Location",
+     "value": "0, 0, 0",
+     "links": []
+    },
+    {
+     "name": "Rotation",
+     "value": "0, 0, 0",
+     "links": []
+    },
+    {
+     "name": "VolumeMultiplier",
+     "value": "0.800000",
+     "links": []
+    },
+    {
+     "name": "PitchMultiplier",
+     "value": "0.800000",
+     "links": []
+    },
+    {
+     "name": "StartTime",
+     "value": "0.002000",
+     "links": []
+    },
+    {
+     "name": "AttenuationSettings",
+     "value": "",
+     "links": []
+    },
+    {
+     "name": "ConcurrencySettings",
+     "value": "",
+     "links": []
+    },
+    {
+     "name": "bAutoDestroy",
+     "value": "true",
+     "links": []
+    },
+    {
+     "name": "then",
+     "value": "",
+     "links": [
+      "K2Node_CallFunction_5.execute"
+     ]
+    },
+    {
+     "name": "ReturnValue",
+     "value": "",
+     "links": [
+      "K2Node_MacroInstance_0.InputObject",
+      "K2Node_CallFunction_3.self"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "K2Node_Event_4",
+   "title": "AnimNotify_Start Jump",
+   "class": "K2Node_Event",
+   "pins": [
+    {
+     "name": "OutputDelegate",
+     "value": "",
+     "links": []
+    },
+    {
+     "name": "then",
+     "value": "",
+     "links": [
+      "K2Node_MacroInstance_0.exec"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "K2Node_MacroInstance_0",
+   "title": "Is Valid",
+   "class": "K2Node_MacroInstance",
+   "pins": [
+    {
+     "name": "exec",
+     "value": "",
+     "links": [
+      "K2Node_Event_4.then",
+      "K2Node_IfThenElse_1.then"
+     ]
+    },
+    {
+     "name": "InputObject",
+     "value": "",
+     "links": [
+      "K2Node_CallFunction_2.ReturnValue"
+     ]
+    },
+    {
+     "name": "Is Valid",
+     "value": "",
+     "links": [
+      "K2Node_CallFunction_3.execute"
+     ]
+    },
+    {
+     "name": "Is Not Valid",
+     "value": "",
+     "links": []
+    }
+   ]
+  },
+  {
+   "name": "K2Node_CallFunction_3",
+   "title": "Stop",
+   "class": "K2Node_CallFunction",
+   "pins": [
+    {
+     "name": "execute",
+     "value": "",
+     "links": [
+      "K2Node_MacroInstance_0.Is Valid"
+     ]
+    },
+    {
+     "name": "self",
+     "value": "",
+     "links": [
+      "K2Node_CallFunction_2.ReturnValue"
+     ]
+    },
+    {
+     "name": "then",
+     "value": "",
+     "links": []
+    }
+   ]
+  },
+  {
+   "name": "K2Node_IfThenElse_2",
+   "title": "Branch",
+   "class": "K2Node_IfThenElse",
+   "pins": [
+    {
+     "name": "execute",
+     "value": "",
+     "links": [
+      "K2Node_Event_0.then"
+     ]
+    },
+    {
+     "name": "Condition",
+     "value": "true",
+     "links": [
+      "K2Node_VariableGet_17.IsFalling"
+     ]
+    },
+    {
+     "name": "then",
+     "value": "",
+     "links": []
+    },
+    {
+     "name": "else",
+     "value": "",
+     "links": [
+      "K2Node_CallFunction_2.execute"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "K2Node_CallFunction_5",
+   "title": "Delay",
+   "class": "K2Node_CallFunction",
+   "pins": [
+    {
+     "name": "execute",
+     "value": "",
+     "links": [
+      "K2Node_CallFunction_2.then"
+     ]
+    },
+    {
+     "name": "Duration",
+     "value": "0.2",
+     "links": []
+    },
+    {
+     "name": "then",
+     "value": "",
+     "links": [
+      "K2Node_IfThenElse_1.execute"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "K2Node_IfThenElse_1",
+   "title": "Branch",
+   "class": "K2Node_IfThenElse",
+   "pins": [
+    {
+     "name": "execute",
+     "value": "",
+     "links": [
+      "K2Node_CallFunction_5.then"
+     ]
+    },
+    {
+     "name": "Condition",
+     "value": "true",
+     "links": [
+      "K2Node_CommutativeAssociativeBinaryOperator_1.ReturnValue"
+     ]
+    },
+    {
+     "name": "then",
+     "value": "",
+     "links": [
+      "K2Node_MacroInstance_0.exec"
+     ]
+    },
+    {
+     "name": "else",
+     "value": "",
+     "links": []
+    }
+   ]
+  },
+  {
+   "name": "K2Node_CallFunction_1",
+   "title": "float < float",
+   "class": "K2Node_CallFunction",
+   "pins": [
+    {
+     "name": "A",
+     "value": "0.0",
+     "links": [
+      "K2Node_VariableGet_18.GroundSpeed"
+     ]
+    },
+    {
+     "name": "B",
+     "value": "1.000000",
+     "links": []
+    },
+    {
+     "name": "ReturnValue",
+     "value": "false",
+     "links": [
+      "K2Node_CommutativeAssociativeBinaryOperator_1.A"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "K2Node_CommutativeAssociativeBinaryOperator_1",
+   "title": "OR Boolean",
+   "class": "K2Node_CommutativeAssociativeBinaryOperator",
+   "pins": [
+    {
+     "name": "A",
+     "value": "false",
+     "links": [
+      "K2Node_CallFunction_1.ReturnValue"
+     ]
+    },
+    {
+     "name": "B",
+     "value": "false",
+     "links": [
+      "K2Node_CallFunction_8.ReturnValue"
+     ]
+    },
+    {
+     "name": "ReturnValue",
+     "value": "false",
+     "links": [
+      "K2Node_IfThenElse_1.Condition"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "K2Node_CallFunction_11813",
+   "title": "TryGetPawnOwner",
+   "class": "K2Node_CallFunction",
+   "pins": [
+    {
+     "name": "self",
+     "value": "",
+     "links": []
+    },
+    {
+     "name": "ReturnValue",
+     "value": "",
+     "links": [
+      "K2Node_CallFunction_7.self"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "K2Node_CallFunction_7",
+   "title": "GetLastMovementInputVector",
+   "class": "K2Node_CallFunction",
+   "pins": [
+    {
+     "name": "self",
+     "value": "",
+     "links": [
+      "K2Node_CallFunction_11813.ReturnValue"
+     ]
+    },
+    {
+     "name": "ReturnValue",
+     "value": "0, 0, 0",
+     "links": [
+      "K2Node_CallFunction_8.A"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "K2Node_CallFunction_8",
+   "title": "Equal (Vector)",
+   "class": "K2Node_CallFunction",
+   "pins": [
+    {
+     "name": "A",
+     "value": "0, 0, 0",
+     "links": [
+      "K2Node_CallFunction_7.ReturnValue"
+     ]
+    },
+    {
+     "name": "B",
+     "value": "0, 0, 0",
+     "links": []
+    },
+    {
+     "name": "ErrorTolerance",
+     "value": "0.100000",
+     "links": []
+    },
+    {
+     "name": "ReturnValue",
+     "value": "false",
+     "links": [
+      "K2Node_CommutativeAssociativeBinaryOperator_1.B"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "K2Node_VariableGet_17",
+   "title": "Get IsFalling",
+   "class": "K2Node_VariableGet",
+   "pins": [
+    {
+     "name": "IsFalling",
+     "value": "false",
+     "links": [
+      "K2Node_IfThenElse_2.Condition"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "K2Node_VariableGet_18",
+   "title": "Get GroundSpeed",
+   "class": "K2Node_VariableGet",
+   "pins": [
+    {
+     "name": "GroundSpeed",
+     "value": "0.0",
+     "links": [
+      "K2Node_CallFunction_1.A"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "K2Node_Event_1",
+   "title": "AnimNotify_Rail Footstep",
+   "class": "K2Node_Event",
+   "pins": [
+    {
+     "name": "OutputDelegate",
+     "value": "",
+     "links": []
+    },
+    {
+     "name": "then",
+     "value": "",
+     "links": [
+      "K2Node_Message_0.execute"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "K2Node_CallFunction_0",
+   "title": "GetLinkedAnimLayerInstanceByClass",
+   "class": "K2Node_CallFunction",
+   "pins": [
+    {
+     "name": "self",
+     "value": "",
+     "links": []
+    },
+    {
+     "name": "InClass",
+     "value": "/Game/3DPlatformerGameBundle/Animations/AnimationBlueprints/Grind_Rail_AnimBlueprint.Grind_Rail_AnimBlueprint_C",
+     "links": []
+    },
+    {
+     "name": "bCheckForChildClass",
+     "value": "false",
+     "links": []
+    },
+    {
+     "name": "ReturnValue",
+     "value": "",
+     "links": [
+      "K2Node_Message_0.self"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "K2Node_Message_0",
+   "title": "Play Footstep SFX",
+   "class": "K2Node_Message",
+   "pins": [
+    {
+     "name": "execute",
+     "value": "",
+     "links": [
+      "K2Node_Event_1.then"
+     ]
+    },
+    {
+     "name": "self",
+     "value": "",
+     "links": [
+      "K2Node_CallFunction_0.ReturnValue"
+     ]
+    },
+    {
+     "name": "then",
+     "value": "",
+     "links": []
+    }
+   ]
+  },
+  {
+   "name": "K2Node_IfThenElse_0",
+   "title": "Branch",
+   "class": "K2Node_IfThenElse",
+   "pins": [
+    {
+     "name": "execute",
+     "value": "",
+     "links": []
+    },
+    {
+     "name": "Condition",
+     "value": "true",
+     "links": []
+    },
+    {
+     "name": "then",
+     "value": "",
+     "links": []
+    },
+    {
+     "name": "else",
+     "value": "",
+     "links": []
+    }
+   ]
+  },
+  {
+   "name": "K2Node_CallFunction_4",
+   "title": "GetCurveValue",
+   "class": "K2Node_CallFunction",
+   "pins": [
+    {
+     "name": "self",
+     "value": "",
+     "links": []
+    },
+    {
+     "name": "CurveName",
+     "value": "FurinaWalk",
+     "links": []
+    },
+    {
+     "name": "ReturnValue",
+     "value": "0.0",
+     "links": []
+    }
+   ]
+  },
+  {
+   "name": "K2Node_PromotableOperator_1",
+   "title": "float > float",
+   "class": "K2Node_PromotableOperator",
+   "pins": [
+    {
+     "name": "A",
+     "value": "",
+     "links": []
+    },
+    {
+     "name": "B",
+     "value": "",
+     "links": []
+    },
+    {
+     "name": "ReturnValue",
+     "value": "",
+     "links": []
+    }
+   ]
+  }
+ ],
+ "blendspace": {
+  "notify_trigger_mode": "<NotifyTriggerMode.HIGHEST_WEIGHTED_ANIMATION: 1>",
+  "sample_data": "[{}, {}, {}]",
+  "axis_to_scale_animation": "<BlendSpaceAxis.BSA_NONE: 0>"
+ },
+ "rig_methods": {
+  "__init__": "Initialize self.  See help(type(self)) for accurate signature.",
+  "__init_subclass__": "This method is called when a class is subclassed.\n\nThe default implementation does nothing. It may be\noverridden to extend subclasses.\n",
+  "_post_init": "_post_init(self) -> None -- called during Unreal object initialization (equivalent to PostInitProperties in C++)",
+  "can_execute": "x.can_execute() -> bool\r\nIs valid for execution\r\n\r\nReturns:\r\n    bool:",
+  "execute": "x.execute(event_name) -> bool\r\nExecute\r\n\r\nArgs:\r\n    event_name (Name): \r\n\r\nReturns:\r\n    bool:",
+  "execute_event": "x.execute_event(event_name) -> bool\r\nExecute a user defined event\r\n\r\nArgs:\r\n    event_name (Name): \r\n\r\nReturns:\r\n    bool:",
+  "get_absolute_time": "x.get_absolute_time() -> float\r\nGets the current absolute time\r\n\r\nReturns:\r\n    float:",
+  "get_delta_time": "x.get_delta_time() -> float\r\nGets the current delta time\r\n\r\nReturns:\r\n    float:",
+  "get_extended_execute_context": "x.get_extended_execute_context() -> RigVMExtendedExecuteContext\r\nGet Extended Execute Context\r\ndeprecated: This function has been deprecated and it is no longer supported.\r\n\r\nReturns:\r\n    RigVMExtendedExecuteContext:",
+  "get_hierarchy": "x.get_hierarchy() -> RigHierarchy\r\nGet Hierarchy\r\n\r\nReturns:\r\n    RigHierarchy:",
+  "is_init_required": "x.is_init_required() -> bool\r\nReturns true if this host requires the VM memory to be initialized\r\n\r\nReturns:\r\n    bool:",
+  "request_init": "x.request_init() -> None\r\nRequests to perform an init during the next execution",
+  "reset_editor_property": "x.reset_editor_property(property_name, change_notify_mode=PropertyAccessChangeNotifyMode.DEFAULT) -> bool\r\nAttempts to reset the value of a named property on the given object so that it matches the value of the archetype.\r\n\r\nArgs:\r\n    property_name (Name): The name of the object property to reset the value of.\r\n    change_notify_mode (PropertyAccessChangeNotifyMode): When to emit property change notifications.\r\n\r\nReturns:\r\n    bool: Whether the property value was found and correctly reset.",
+  "set_absolute_and_delta_time": "x.set_absolute_and_delta_time(absolute_time, delta_time) -> None\r\nSet the current absolute and delta times\r\n\r\nArgs:\r\n    absolute_time (float): \r\n    delta_time (float):",
+  "set_absolute_time": "x.set_absolute_time(absolute_time, set_delta_time_zero=False) -> None\r\nSet the current absolute time\r\n\r\nArgs:\r\n    absolute_time (float): \r\n    set_delta_time_zero (bool):",
+  "set_delta_time": "x.set_delta_time(delta_time) -> None\r\nSet the current delta time\r\n\r\nArgs:\r\n    delta_time (float):"
+ },
+ "error": "Traceback (most recent call last):\n  File \"C:\\Users\\fromj\\Downloads\\test\\test\\abc\\FurinaSource\\Scripts\\Unreal\\ue_probe_footsteps.py\", line 15, in <module>\n    R['rig_props']={n:str(rig.get_editor_property(n)) for n in ('hierarchy',)}\n                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\fromj\\Downloads\\test\\test\\abc\\FurinaSource\\Scripts\\Unreal\\ue_probe_footsteps.py\", line 15, in <dictcomp>\n    R['rig_props']={n:str(rig.get_editor_property(n)) for n in ('hierarchy',)}\n                          ^^^^^^^^^^^^^^^^^^^^^^^^^^\nException: ControlRig: Failed to find property 'hierarchy' for attribute 'hierarchy' on 'CR_FurinaSecondary_C'\n"
+}

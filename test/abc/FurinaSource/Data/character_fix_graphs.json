@@ -1,0 +1,1285 @@
+{
+ "api_BlueprintGraphEditor": {
+  "add_branch_node": "x.add_branch_node() -> K2Node_IfThenElse\r\nCreates a UK2Node_IfThenElse in the current graph\r\n\r\nReturns:\r\n    K2Node_IfThenElse:",
+  "add_call_function_node": "x.add_call_function_node(function_path) -> K2Node_CallFunction\r\nCreates a UK2Node_CallFunction in the current graph invoking the function specified by FunctionPath\r\n\r\nArgs:\r\n    function_path (str): \r\n\r\nReturns:\r\n    K2Node_CallFunction:",
+  "add_comment_node": "x.add_comment_node(comment_text, location, size=[400.000000, 200.000000]) -> EdGraphNode_Comment\r\nCreates a comment node in the current graph at the given location with the given text and size.\r\n\r\nArgs:\r\n    comment_text (str): \r\n    location (Vector2D): \r\n    size (Vector2D): \r\n\r\nReturns:\r\n    EdGraphNode_Comment:",
+  "add_comment_to_nodes": "x.add_comment_to_nodes(comment_text, nodes, padding=50) -> EdGraphNode_Comment\r\nCreates a comment node that wraps the given nodes with the given padding.\nThe comment bounds are computed from the node positions plus padding.\r\n\r\nArgs:\r\n    comment_text (str): \r\n    nodes (Array[K2Node]): \r\n    padding (int32): \r\n\r\nReturns:\r\n    EdGraphNode_Comment:",
+  "add_component_bound_event_node": "x.add_component_bound_event_node(component, event_name) -> K2Node_ComponentBoundEvent\r\nCreates a UK2Node_ComponentBoundEvent in this event graph for the given component\nand delegate event name. Returns the existing node if one already exists.\nThe graph must be an event graph.\r\n\r\nArgs:\r\n    component (ActorComponent): \r\n    event_name (Name): \r\n\r\nReturns:\r\n    K2Node_ComponentBoundEvent:",
+  "add_custom_event_node": "x.add_custom_event_node(event_name) -> K2Node_CustomEvent\r\nCreates a UK2Node_CustomEvent node if the current graph is an event graph, using the provided EventName\r\n\r\nArgs:\r\n    event_name (str): \r\n\r\nReturns:\r\n    K2Node_CustomEvent:",
+  "add_dispatcher_event_node": "x.add_dispatcher_event_node(dispatcher_name, declaring_class=None) -> K2Node_Event\r\nCreates an event node in this event graph whose pins match the signature of the named dispatcher.\nThe current graph must be an Event Graph and the Blueprint must have a valid SkeletonGeneratedClass\n(i.e. it must have been compiled at least once). Returns nullptr if the graph is not an Event Graph,\nthe skeleton class is absent, or no dispatcher named DispatcherName exists on the Blueprint.\nWhen DeclaringClass is provided the dispatcher is only accepted if it is declared on exactly that\nclass, not merely inherited through it - use this to disambiguate between sibling classes that\nexpose a dispatcher under the same name.\r\n\r\nArgs:\r\n    dispatcher_name (Name): \r\n    declaring_class (type(Class)): \r\n\r\nReturns:\r\n    K2Node_Event:",
+  "add_get_local_variable_node": "x.add_get_local_variable_node(local_name) -> K2Node_VariableGet\r\nCreates a UK2Node_VariableGet for the provided local variable identified by LocalName\r\n\r\nArgs:\r\n    local_name (Name): \r\n\r\nReturns:\r\n    K2Node_VariableGet:",
+  "add_get_member_variable_node": "x.add_get_member_variable_node(member_name, class_path=\"\") -> K2Node_VariableGet\r\nCreates a UK2Node_VariableGet for the member variable identified by MemberName\nby default this will use the current class, provided a ClassPath to work\nwith a different class\r\n\r\nArgs:\r\n    member_name (Name): \r\n    class_path (str): \r\n\r\nReturns:\r\n    K2Node_VariableGet:",
+  "add_graph_input_parameter": "x.add_graph_input_parameter(input_name, pin_type=[], value=\"\") -> BlueprintGraphPin\r\nAdds a graph input parameter with name InputName, and optional PinType and Value. Returns the added pin.\nBy default the type will be a boolean as defined by UBlueprintEditorLibrary.\r\n\r\nArgs:\r\n    input_name (Name): \r\n    pin_type (EdGraphPinType): \r\n    value (str): \r\n\r\nReturns:\r\n    BlueprintGraphPin:",
+  "add_graph_output_parameter": "x.add_graph_output_parameter(output_name, pin_type=[]) -> K2Node_FunctionResult\r\nAdds a graph output parameter, returning the UK2Node_FunctionResult that has the new output on it.\nBy default the type will be a boolean as defined by UBlueprintEditorLibrary.\r\n\r\nArgs:\r\n    output_name (Name): \r\n    pin_type (EdGraphPinType): \r\n\r\nReturns:\r\n    K2Node_FunctionResult:",
+  "add_local_variable": "x.add_local_variable(local_name, pin_type=[], value=\"\") -> bool\r\nAdds a local variable, use BlueprintEditorLibrary to specify a type. A default value can optionally be provided.\nBy default the type will be a boolean as defined by UBlueprintEditorLibrary.\r\n\r\nArgs:\r\n    local_name (Name): \r\n    pin_type (EdGraphPinType): \r\n    value (str): \r\n\r\nReturns:\r\n    bool:",
+  "add_macro_node": "x.add_macro_node(macro_path) -> K2Node_MacroInstance\r\nCreates a UK2Node_MacroInstance in the current graph for the provided MacroPath\r\n\r\nArgs:\r\n    macro_path (str): \r\n\r\nReturns:\r\n    K2Node_MacroInstance:",
+  "add_member_variable": "x.add_member_variable(member_name, pin_type=[], value=\"\") -> bool\r\nAdds a member variable, use BlueprintEditorLibrary to specify a type. A default value can optionally be provided.\nBy default the type will be a boolean as defined by UBlueprintEditorLibrary.\r\n\r\nArgs:\r\n    member_name (Name): \r\n    pin_type (EdGraphPinType): \r\n    value (str): \r\n\r\nReturns:\r\n    bool:",
+  "add_node_pin": "x.add_node_pin(node) -> bool\r\nAdds a pin to a node that supports dynamic pin addition, such as a Switch node,\nSequence node, commutative binary operator (Add, Multiply), or Make Array node.\nReturns true on success, false if the node type does not support adding pins.\r\n\r\nArgs:\r\n    node (EdGraphNode): \r\n\r\nReturns:\r\n    bool:",
+  "add_return_node": "x.add_return_node() -> K2Node_FunctionResult\r\nCreates a UK2Node_FunctionResult in the current graph\r\n\r\nReturns:\r\n    K2Node_FunctionResult:",
+  "add_set_local_variable_node": "x.add_set_local_variable_node(local_name) -> K2Node_VariableSet\r\nCreates a UK2Node_VariableSet for the provided local variable identified by LocalName\r\n\r\nArgs:\r\n    local_name (Name): \r\n\r\nReturns:\r\n    K2Node_VariableSet:",
+  "add_set_member_variable_node": "x.add_set_member_variable_node(member_name, class_path=\"\") -> K2Node_VariableSet\r\nCreates a UK2Node_VariableSet for the member variable identified by MemberName\nby default this will use the current class, provided a ClassPath to work\nwith a different class\r\n\r\nArgs:\r\n    member_name (Name): \r\n    class_path (str): \r\n\r\nReturns:\r\n    K2Node_VariableSet:",
+  "create_and_edit_function_graph": "X.create_and_edit_function_graph(blueprint, func_name=\"NewFunction\") -> BlueprintGraphEditor\r\nreturns a new UBlueprintGraphEditor for a graph in InBlueprint, creating a new graph named FuncName - useful for creating new function graphs\r\n\r\nArgs:\r\n    blueprint (Blueprint): \r\n    func_name (str): \r\n\r\nReturns:\r\n    BlueprintGraphEditor:",
+  "create_node_from_name": "x.create_node_from_name(node_with_category, location, context_pins, declaring_class=None) -> EdGraphNode\r\nCreates node from Catagory and Name. Example:\n                     - 'Development|PrintString'\n                     - 'Utilities|Operators|Add'\n                     - 'Utilities|FlowControl|Branch'\n                     - 'Math|Vector|VectorLength'\nWhen multiple actions share the same Category|Name string , pass DeclaringClass to\nselect the action belonging to that specific class.\r\n\r\nArgs:\r\n    node_with_category (str): \r\n    location (Vector2D): \r\n    context_pins (Array[BlueprintGraphPin]): \r\n    declaring_class (type(Class)): \r\n\r\nReturns:\r\n    EdGraphNode:",
+  "find_event_node": "x.find_event_node(event_name) -> K2Node_Event\r\nReturns the event node associated with EventName - aka Member Name\nof the event. Names will not resolve against the display name, so e.g. 'Begin Play'\nis not a valid member name - instead search for ReceiveBeginPlay, the underlying\nBlueprintImplementableEvent\r\n\r\nArgs:\r\n    event_name (Name): \r\n\r\nReturns:\r\n    K2Node_Event:",
+  "find_graph_entry_pin": "x.find_graph_entry_pin() -> BlueprintGraphPin\r\nReturns the 'entry' pin for the graph, e.g. the 'then' pin of the entry node\r\n\r\nReturns:\r\n    BlueprintGraphPin:",
+  "get_graph": "x.get_graph() -> EdGraph\r\nGet Graph\r\n\r\nReturns:\r\n    EdGraph:",
+  "get_graph_editor": "X.get_graph_editor(graph) -> BlueprintGraphEditor\r\nreturns a new UBlueprintGraphEditor for the provided graph - useful for editing graphs that already exist\r\n\r\nArgs:\r\n    graph (EdGraph): \r\n\r\nReturns:\r\n    BlueprintGraphEditor:",
+  "get_graph_editor_by_name": "X.get_graph_editor_by_name(blueprint, graph_name) -> BlueprintGraphEditor\r\nreturns a new UBlueprintGraphEditor for a graph in InBlueprint named GraphName - useful for editing graphs that already exist\r\n\r\nArgs:\r\n    blueprint (Blueprint): \r\n    graph_name (Name): \r\n\r\nReturns:\r\n    BlueprintGraphEditor:",
+  "get_local_variable_default_value": "x.get_local_variable_default_value(local_variable_name) -> Optional[str]\r\nReturns the default value of a local variable, unset if no variable is found.\r\n\r\nArgs:\r\n    local_variable_name (str): \r\n\r\nReturns:\r\n    Optional[str]:",
+  "get_local_variable_type": "x.get_local_variable_type(local_variable_name) -> Optional[EdGraphPinType]\r\nReturns the type of a local variable, unset if no variable is found.\r\n\r\nArgs:\r\n    local_variable_name (str): \r\n\r\nReturns:\r\n    Optional[EdGraphPinType]:",
+  "list_all_nodes": "x.list_all_nodes() -> Array[K2Node]\r\nLists all nodes in the graph\r\n\r\nReturns:\r\n    Array[K2Node]: \r\n\r\n    out_nodes (Array[K2Node]):",
+  "list_available_nodes": "x.list_available_nodes(context_pins) -> Array[str]\r\nList all of the nodes by name that can be added to this graph\r\n\r\nArgs:\r\n    context_pins (Array[BlueprintGraphPin]): \r\n\r\nReturns:\r\n    Array[str]: \r\n\r\n    result (Array[str]):",
+  "list_comment_nodes": "x.list_comment_nodes() -> Array[EdGraphNode_Comment]\r\nReturns all comment nodes in the current graph.\r\n\r\nReturns:\r\n    Array[EdGraphNode_Comment]:",
+  "list_component_events": "x.list_component_events(component) -> Array[Name]\r\nReturns the names of all bindable delegate events on the given component.\r\n\r\nArgs:\r\n    component (ActorComponent): \r\n\r\nReturns:\r\n    Array[Name]:",
+  "list_local_variable_names": "x.list_local_variable_names() -> Array[str]\r\nLists the names of the local variables in the function.\r\n\r\nReturns:\r\n    Array[str]: \r\n\r\n    out_local_variable_names (Array[str]):",
+  "list_nodes_of_class": "x.list_nodes_of_class(class_) -> Array[K2Node]\r\nLists nodes of the type provided by the Class input\r\n\r\nArgs:\r\n    class_ (type(Class)): \r\n\r\nReturns:\r\n    Array[K2Node]: \r\n\r\n    out_nodes (Array[K2Node]):",
+  "list_nodes_with_errors": "x.list_nodes_with_errors() -> Array[K2Node]\r\nLists nodes with EMessageSeverity::Error level compiler messages\r\n\r\nReturns:\r\n    Array[K2Node]: \r\n\r\n    out_nodes (Array[K2Node]):",
+  "list_nodes_with_notes": "x.list_nodes_with_notes() -> Array[K2Node]\r\nLists nodes with EMessageSeverity::Info level compiler messages\r\n\r\nReturns:\r\n    Array[K2Node]: \r\n\r\n    out_nodes (Array[K2Node]):",
+  "list_nodes_with_warnings": "x.list_nodes_with_warnings() -> Array[K2Node]\r\nLists nodes with EMessageSeverity::Warning level compiler messages\r\n\r\nReturns:\r\n    Array[K2Node]: \r\n\r\n    out_nodes (Array[K2Node]):",
+  "remove_comment_node": "x.remove_comment_node(comment_node) -> None\r\nRemoves a comment node from the current graph.\r\n\r\nArgs:\r\n    comment_node (EdGraphNode_Comment):",
+  "remove_graph_input_parameter": "x.remove_graph_input_parameter(input_name) -> bool\r\nRemoves the graph input parameter specified by InputName\r\n\r\nArgs:\r\n    input_name (Name): \r\n\r\nReturns:\r\n    bool:",
+  "remove_graph_output_parameter": "x.remove_graph_output_parameter(output_name) -> bool\r\nRemoves the output parameter specified by OutputName, returns true if there is a variable and it is removed\r\n\r\nArgs:\r\n    output_name (Name): \r\n\r\nReturns:\r\n    bool:",
+  "remove_local_variable": "x.remove_local_variable(local_name) -> bool\r\nRemoves the local variable with the corresponding name, returns true if there is a variable and it is removed\r\n\r\nArgs:\r\n    local_name (Name): \r\n\r\nReturns:\r\n    bool:",
+  "remove_member_variable": "x.remove_member_variable(member_name) -> bool\r\nRemoves the member variable with the corresponding name, returns true if there is a variable and it is removed\r\n\r\nArgs:\r\n    member_name (Name): \r\n\r\nReturns:\r\n    bool:",
+  "remove_node_pin": "x.remove_node_pin(node, pin) -> bool\r\nRemoves a specific pin from a node that supports dynamic pin removal, such as a Sequence\nnode, Switch node, commutative binary operator (Add, Multiply), or Make Array node.\nReturns true on success, false if the node type does not support removing pins or the\npin cannot be removed (e.g. minimum pin count reached).\r\n\r\nArgs:\r\n    node (EdGraphNode): \r\n    pin (BlueprintGraphPin): \r\n\r\nReturns:\r\n    bool:",
+  "remove_nodes": "x.remove_nodes(nodes) -> None\r\nRemoves (aka deletes) the provided nodes from the current graph\r\n\r\nArgs:\r\n    nodes (Array[K2Node]):",
+  "retarget_node_class": "x.retarget_node_class(node, old_class, new_class) -> bool\r\nReplaces a node's baked-in class reference from OldClass to NewClass and reconstructs\nthe node so its pins reflect the new type. Handles the following node kinds:\n  - UK2Node_DynamicCast     (TargetType)\n  - UK2Node_CallFunction    (FunctionReference)\n  - UK2Node_Event           (EventReference)\n  - UK2Node_BaseMCDelegate  (DelegateReference - covers all multicast delegate nodes)\nReturns true if the node was retargeted or already references NewClass.\nReturns false if the node type is unsupported or its current class reference does not match OldClass.\r\n\r\nArgs:\r\n    node (EdGraphNode): \r\n    old_class (type(Class)): \r\n    new_class (type(Class)): \r\n\r\nReturns:\r\n    bool:",
+  "set_deprecation_message_on_function": "x.set_deprecation_message_on_function(message) -> None\r\nSets the graph's deprecation message\r\n\r\nArgs:\r\n    message (Text):",
+  "set_function_is_private": "x.set_function_is_private() -> None\r\nSets the graph's visibility to private",
+  "set_function_is_protected": "x.set_function_is_protected() -> None\r\nSets the graph's visibility to protected",
+  "set_function_is_public": "x.set_function_is_public() -> None\r\nSets the graph's visibility to public",
+  "set_is_call_in_editor_function": "x.set_is_call_in_editor_function(call_in_editor=True) -> None\r\nSets the graph's callability in editor\r\n\r\nArgs:\r\n    call_in_editor (bool):",
+  "set_is_const_function": "x.set_is_const_function(is_const=True) -> None\r\nSets the graph's FUNC_Const flag\r\n\r\nArgs:\r\n    is_const (bool):",
+  "set_is_deprecated_function": "x.set_is_deprecated_function(is_deprecated=True) -> None\r\nSets the graph's deprecation status\r\n\r\nArgs:\r\n    is_deprecated (bool):",
+  "set_is_exec_function": "x.set_is_exec_function(is_exec=True) -> None\r\nSets the graph's FUNC_Exec flag\r\n\r\nArgs:\r\n    is_exec (bool):",
+  "set_is_pure_function": "x.set_is_pure_function(is_pure=True) -> None\r\nSets the graph's FUNC_BlueprintPure flag\r\n\r\nArgs:\r\n    is_pure (bool):",
+  "set_is_thread_safe_function": "x.set_is_thread_safe_function(is_thread_safe=True) -> None\r\nSets the graph's thread safety status\r\n\r\nArgs:\r\n    is_thread_safe (bool):",
+  "set_is_unsafe_during_actor_construction_function": "x.set_is_unsafe_during_actor_construction_function(is_unsafe_during_actor_construction=True) -> None\r\nSets the graph's construction script safety status\r\n\r\nArgs:\r\n    is_unsafe_during_actor_construction (bool):",
+  "set_local_variable_default_value": "x.set_local_variable_default_value(local_variable_name, new_default_value) -> bool\r\nSet default value of a local variable. Returns false if the operation fails\neither because the value is invalid or there is no variable of the specified name.\r\n\r\nArgs:\r\n    local_variable_name (str): \r\n    new_default_value (str): \r\n\r\nReturns:\r\n    bool:"
+ },
+ "api_BlueprintGraphPinLibrary": {
+  "break_pin_links": "X.break_pin_links(pin) -> bool\r\nBreaks all pin links associated with this pin\r\n\r\nArgs:\r\n    pin (BlueprintGraphPin): \r\n\r\nReturns:\r\n    bool:",
+  "break_single_pin_link": "X.break_single_pin_link(pin, other) -> bool\r\nBreaks a pin link between this pin and Other\r\n\r\nArgs:\r\n    pin (BlueprintGraphPin): \r\n    other (BlueprintGraphPin): \r\n\r\nReturns:\r\n    bool:",
+  "can_create_connection": "X.can_create_connection(pin, other) -> bool\r\nReturns true if this and Other pin can be connected. Performing connection may result in implicitly created conversion nodes.\r\n\r\nArgs:\r\n    pin (BlueprintGraphPin): \r\n    other (BlueprintGraphPin): \r\n\r\nReturns:\r\n    bool:",
+  "get_owning_node": "X.get_owning_node(pin) -> K2Node\r\nReturns the pin's node\r\n\r\nArgs:\r\n    pin (BlueprintGraphPin): \r\n\r\nReturns:\r\n    K2Node:",
+  "get_pin_direction": "X.get_pin_direction(pin) -> EdGraphPinDirection\r\nReturns the direction of the pin (either EGPD_Output or EGPD_Input)\r\n\r\nArgs:\r\n    pin (BlueprintGraphPin): \r\n\r\nReturns:\r\n    EdGraphPinDirection:",
+  "get_pin_name": "X.get_pin_name(pin) -> Name\r\nReturns the low level name of the pin\r\n\r\nArgs:\r\n    pin (BlueprintGraphPin): \r\n\r\nReturns:\r\n    Name:",
+  "get_pin_type": "X.get_pin_type(pin) -> EdGraphPinType\r\nReturns the pin's type, FEdGraphPinType is mostly opaque to script but can\nbe used e.g. to create variables of the same type\r\n\r\nArgs:\r\n    pin (BlueprintGraphPin): \r\n\r\nReturns:\r\n    EdGraphPinType:",
+  "get_pin_type_as_json_schema": "X.get_pin_type_as_json_schema(pin) -> str\r\nReturns a json schema encoded description of the pin's type:\r\n\r\nArgs:\r\n    pin (BlueprintGraphPin): \r\n\r\nReturns:\r\n    str:",
+  "get_pin_type_display_string": "X.get_pin_type_display_string(pin) -> Text\r\nReturns the string used to describe the pin type in the blueprint UI\r\n\r\nArgs:\r\n    pin (BlueprintGraphPin): \r\n\r\nReturns:\r\n    Text:",
+  "get_pin_value": "X.get_pin_value(pin) -> str\r\nReturns the literal value associated with the pin. Empty string for pins\nthat have nothing set or are connected to some other pin:\r\n\r\nArgs:\r\n    pin (BlueprintGraphPin): \r\n\r\nReturns:\r\n    str:",
+  "is_same_native_pin": "X.is_same_native_pin(pin, other) -> bool\r\nBecause these pin objects are proxies for the underlying native pin, this function\nshould be used for establishing whether to FBlueprintGraphPin values refer to the\nsame pin on a node\r\n\r\nArgs:\r\n    pin (BlueprintGraphPin): \r\n    other (BlueprintGraphPin): \r\n\r\nReturns:\r\n    bool: true if the Other pin and this Pin are the same pin",
+  "is_valid": "X.is_valid(pin) -> bool\r\n\r\n\r\nArgs:\r\n    pin (BlueprintGraphPin): \r\n\r\nReturns:\r\n    bool: true if the pin has a valid underlying pin",
+  "list_connected_pins": "X.list_connected_pins(pin) -> Array[BlueprintGraphPin]\r\nReturns a list of pins this pin is connected to, note that these pin objects are\nproxies and so comparison to other pin objects must be done via IsSameNativePin\r\n\r\nArgs:\r\n    pin (BlueprintGraphPin): \r\n\r\nReturns:\r\n    Array[BlueprintGraphPin]:",
+  "set_pin_value": "X.set_pin_value(pin, value) -> bool\r\nSets the literal value associated with this pin, returning false if the value is not valid\r\n\r\nArgs:\r\n    pin (BlueprintGraphPin): \r\n    value (str): \r\n\r\nReturns:\r\n    bool:",
+  "try_create_connection": "X.try_create_connection(pin, other) -> bool\r\nTries to create a connection between this pin and Other, returning false if the connection is not allowed\r\n\r\nArgs:\r\n    pin (BlueprintGraphPin): \r\n    other (BlueprintGraphPin): \r\n\r\nReturns:\r\n    bool:"
+ },
+ "api_AnimGraphLibrary": {
+  "calculate_direction": "X.calculate_direction(velocity, base_rotation) -> float\r\nReturns degree of the angle between Velocity and Rotation forward vector\nThe range of return will be from [-180, 180]. Useful for feeding directional blendspaces.\r\n\r\nArgs:\r\n    velocity (Vector): The velocity to use as direction relative to BaseRotation\r\n    base_rotation (Rotator): The base rotation, e.g. of a pawn\r\n\r\nReturns:\r\n    float:",
+  "calculate_velocity_from_position_history": "X.calculate_velocity_from_position_history(delta_seconds, position, history, number_of_samples=16, velocity_min=0.000000, velocity_max=128.000000) -> (float, history=PositionHistory)\r\nThis function calculates the velocity of a position changing over time.\nYou need to hook up a valid PositionHistory variable to this for storage.\r\n\r\nArgs:\r\n    delta_seconds (float): The time passed in seconds\r\n    position (Vector): The position to track over time.\r\n    history (PositionHistory): The history to use for storage.\r\n    number_of_samples (int32): The number of samples to use for the history. The higher the number of samples - the smoother the velocity changes.\r\n    velocity_min (float): The minimum velocity to use for normalization (if both min and max are set to 0, normalization is turned off)\r\n    velocity_max (float): The maximum velocity to use for normalization (if both min and max are set to 0, normalization is turned off)\r\n\r\nReturns:\r\n    PositionHistory: \r\n\r\n    history (PositionHistory): The history to use for storage.",
+  "calculate_velocity_from_sockets": "X.calculate_velocity_from_sockets(delta_seconds, component, socket_or_bone_name, reference_socket_or_bone, socket_space, offset_in_bone_space, history, number_of_samples=16, velocity_min=0.000000, velocity_max=128.000000, easing_type, custom_curve) -> (float, history=PositionHistory)\r\nThis function calculates the velocity of an offset position on a bone / socket over time.\nThe bone's / socket's motion can be expressed within a reference frame (another bone / socket).\nYou need to hook up a valid PositionHistory variable to this for storage.\r\n\r\nArgs:\r\n    delta_seconds (float): The time passed in seconds\r\n    component (SkeletalMeshComponent): The skeletal component to look for the bones / sockets\r\n    socket_or_bone_name (Name): The name of the bone / socket to track.\r\n    reference_socket_or_bone (Name): The name of the bone / socket to use as a frame of reference (or None if no frame of reference == world space).\r\n    socket_space (RelativeTransformSpace): The space to use for the two sockets / bones\r\n    offset_in_bone_space (Vector): The relative position in the space of the bone / socket to track over time.\r\n    history (PositionHistory): The history to use for storage.\r\n    number_of_samples (int32): The number of samples to use for the history. The higher the number of samples - the smoother the velocity changes.\r\n    velocity_min (float): The minimum velocity to use for normalization (if both min and max are set to 0, normalization is turned off)\r\n    velocity_max (float): The maximum velocity to use for normalization (if both min and max are set to 0, normalization is turned off)\r\n    easing_type (EasingFuncType): The easing function to use\r\n    custom_curve (RuntimeFloatCurve): The curve to use if the easing type is \"Custom\"\r\n\r\nReturns:\r\n    PositionHistory: \r\n\r\n    history (PositionHistory): The history to use for storage.",
+  "direction_between_sockets": "X.direction_between_sockets(component, socket_or_bone_name_from, socket_or_bone_name_to) -> Vector\r\nComputes the direction between two bones / sockets.\r\n\r\nArgs:\r\n    component (SkeletalMeshComponent): The skeletal component to look for the sockets / bones within\r\n    socket_or_bone_name_from (Name): The name of the first socket / bone\r\n    socket_or_bone_name_to (Name): The name of the second socket / bone\r\n\r\nReturns:\r\n    Vector:",
+  "distance_between_sockets": "X.distance_between_sockets(component, socket_or_bone_name_a, socket_space_a, socket_or_bone_name_b, socket_space_b, remap_range=False, range_min, range_max, out_range_min, out_range_max) -> float\r\nComputes the distance between two bones / sockets and can remap the range.\r\n\r\nArgs:\r\n    component (SkeletalMeshComponent): The skeletal component to look for the sockets / bones within\r\n    socket_or_bone_name_a (Name): The name of the first socket / bone\r\n    socket_space_a (RelativeTransformSpace): The space for the first socket / bone\r\n    socket_or_bone_name_b (Name): The name of the second socket / bone\r\n    socket_space_b (RelativeTransformSpace): The space for the second socket / bone\r\n    remap_range (bool): If set to true, the distance will be remapped using the range parameters\r\n    range_min (float): The minimum for the input range (commonly == 0.0)\r\n    range_max (float): The maximum for the input range (the max expected distance)\r\n    out_range_min (float): The minimum for the output range (commonly == 0.0)\r\n    out_range_max (float): The maximum for the output range (commonly == 1.0)\r\n\r\nReturns:\r\n    float:",
+  "k2_end_profiling_timer": "X.k2_end_profiling_timer(log=True, log_prefix=\"\") -> float\r\nThis function ends measuring a profiling bracket and optionally logs the result\r\nresult: The time spent in milliseconds\r\n\r\nArgs:\r\n    log (bool): If set to true the result is logged to the OutputLog\r\n    log_prefix (str): A prefix to use for the log\r\n\r\nReturns:\r\n    float:",
+  "k2_start_profiling_timer": "X.k2_start_profiling_timer() -> None\r\nThis function starts measuring the time for a profiling bracket",
+  "look_at": "X.look_at(current_transform, target_position, look_at_vector, use_up_vector=False, up_vector, clamp_cone_in_degree) -> Transform\r\nComputes the transform which is \"looking\" at target position with a local axis.\r\n\r\nArgs:\r\n    current_transform (Transform): The input transform to modify\r\n    target_position (Vector): The position this transform should look at\r\n    look_at_vector (Vector): The local vector to align with the target\r\n    use_up_vector (bool): If set to true the lookat will also perform a twist rotation\r\n    up_vector (Vector): The position to use for the upvector target (only used is bUseUpVector is turned on)\r\n    clamp_cone_in_degree (float): A limit for only allowing the lookat to rotate as much as defined by the float value\r\n\r\nReturns:\r\n    Transform:",
+  "make_float_from_perlin_noise": "X.make_float_from_perlin_noise(value, range_out_min, range_out_max) -> float\r\nThis function creates perlin noise for a single float and then range map to RangeOut\r\n\r\nArgs:\r\n    value (float): The input value for the noise function\r\n    range_out_min (float): The minimum for the output range\r\n    range_out_max (float): The maximum for the output range\r\n\r\nReturns:\r\n    float:",
+  "make_vector_from_perlin_noise": "X.make_vector_from_perlin_noise(x, y, z, range_out_min_x=-1.000000, range_out_max_x=1.000000, range_out_min_y=-1.000000, range_out_max_y=1.000000, range_out_min_z=-1.000000, range_out_max_z=1.000000) -> Vector\r\nThis function creates perlin noise from input X, Y, Z, and then range map to RangeOut, and out put to OutX, OutY, OutZ\r\n\r\nArgs:\r\n    x (float): The x component for the input position of the noise\r\n    y (float): The y component for the input position of the noise\r\n    z (float): The z component for the input position of the noise\r\n    range_out_min_x (float): The minimum for the output range for the x component\r\n    range_out_max_x (float): The maximum for the output range for the x component\r\n    range_out_min_y (float): The minimum for the output range for the y component\r\n    range_out_max_y (float): The maximum for the output range for the y component\r\n    range_out_min_z (float): The minimum for the output range for the z component\r\n    range_out_max_z (float): The maximum for the output range for the z component\r\n\r\nReturns:\r\n    Vector:",
+  "two_bone_ik": "X.two_bone_ik(root_pos, joint_pos, end_pos, joint_target, effector, allow_stretching=False, start_stretch_ratio=1.000000, max_stretch_scale=1.200000) -> (out_joint_pos=Vector, out_end_pos=Vector)\r\nComputes the transform for two bones using inverse kinematics.\r\n\r\nArgs:\r\n    root_pos (Vector): The input root position of the two bone chain\r\n    joint_pos (Vector): The input center (elbow) position of the two bone chain\r\n    end_pos (Vector): The input end (wrist) position of the two bone chain\r\n    joint_target (Vector): The IK target for the write to reach\r\n    effector (Vector): The position of the target effector for the IK Chain.\r\n    allow_stretching (bool): If set to true the bones are allowed to stretch\r\n    start_stretch_ratio (float): The ratio at which the bones should start to stretch. The higher the value, the later the stretching wil start.\r\n    max_stretch_scale (float): The maximum multiplier for the stretch to reach.\r\n\r\nReturns:\r\n    tuple: \r\n\r\n    out_joint_pos (Vector): The resulting position for the center (elbow)\r\n\r\n    out_end_pos (Vector): The resulting position for the end (wrist)"
+ },
+ "api_ControlRigBlueprint": {
+  "add_event_dispatcher": "x.add_event_dispatcher(name) -> bool\r\nCreates a new event dispatcher on the Blueprint with the given name.\nReturns false if the name is already in use or the Blueprint is invalid.\r\n\r\nArgs:\r\n    name (Name): \r\n\r\nReturns:\r\n    bool:",
+  "add_event_dispatcher_parameter": "x.add_event_dispatcher_parameter(dispatcher_name, param_name, param_type) -> bool\r\nAdds a parameter to an event dispatcher's signature.\nReturns false if the dispatcher does not exist or the parameter name is already in use.\r\n\r\nArgs:\r\n    dispatcher_name (Name): \r\n    param_name (Name): \r\n    param_type (EdGraphPinType): \r\n\r\nReturns:\r\n    bool:",
+  "add_member_variable": "x.add_member_variable(name, cpp_type, is_public=False, is_read_only=False, default_value=\"\") -> Name\r\nAdd Member Variable\r\n\r\nArgs:\r\n    name (Name): \r\n    cpp_type (str): \r\n    is_public (bool): \r\n    is_read_only (bool): \r\n    default_value (str): \r\n\r\nReturns:\r\n    Name:",
+  "add_model": "x.add_model(name=\"Rig Graph\", setup_undo_redo=True, print_python_command=True) -> RigVMGraph\r\nAdd Model\r\n\r\nArgs:\r\n    name (str): \r\n    setup_undo_redo (bool): \r\n    print_python_command (bool): \r\n\r\nReturns:\r\n    RigVMGraph:",
+  "bulk_remove_member_variables": "x.bulk_remove_member_variables(names) -> bool\r\nBulk Remove Member Variables\r\n\r\nArgs:\r\n    names (Array[Name]): \r\n\r\nReturns:\r\n    bool:",
+  "can_turn_into_standalone_rig": "x.can_turn_into_standalone_rig() -> bool\r\nCanTurnIntoStandaloneRig\r\n\r\nReturns:\r\n    bool:",
+  "change_member_variable_type": "x.change_member_variable_type(name, cpp_type, is_public=False, is_read_only=False, default_value=\"\") -> bool\r\nChange Member Variable Type\r\n\r\nArgs:\r\n    name (Name): \r\n    cpp_type (str): \r\n    is_public (bool): \r\n    is_read_only (bool): \r\n    default_value (str): \r\n\r\nReturns:\r\n    bool:",
+  "convert_hierarchy_elements_to_spawner_nodes": "x.convert_hierarchy_elements_to_spawner_nodes(hierarchy, keys, remove_elements=True) -> Array[RigVMNode]\r\nConvert Hierarchy Elements to Spawner Nodes\r\n\r\nArgs:\r\n    hierarchy (RigHierarchy): \r\n    keys (Array[RigElementKey]): \r\n    remove_elements (bool): \r\n\r\nReturns:\r\n    Array[RigVMNode]:",
+  "create_control_rig": "x.create_control_rig() -> ControlRig\r\nCreate Control Rig\r\n\r\nReturns:\r\n    ControlRig:",
+  "create_rig_vm_host": "x.create_rig_vm_host() -> RigVMHost\r\nCreate Rig VMHost\r\n\r\nReturns:\r\n    RigVMHost:",
+  "draw_container": "(RigVMDrawContainer):  [Read-Write]\r\ndeprecated: Use RigVMBlueprint::DrawContainer instead",
+  "find_references_to_module": "x.find_references_to_module() -> Array[ModuleReferenceData]\r\nFind References to Module\r\n\r\nReturns:\r\n    Array[ModuleReferenceData]:",
+  "generate_python_commands": "x.generate_python_commands() -> Array[str]\r\nGenerate Python Commands\r\n\r\nReturns:\r\n    Array[str]:",
+  "generated_class": "x.generated_class() -> type(Class)\r\nGets the class generated when this blueprint is compiled\r\n\r\nReturns:\r\n    type(Class): UClass*                      The generated class",
+  "get_all_models": "x.get_all_models() -> Array[RigVMGraph]\r\nGet All Models\r\n\r\nReturns:\r\n    Array[RigVMGraph]:",
+  "get_asset_variant": "x.get_asset_variant() -> RigVMVariant\r\nGetAssetVariant\r\n\r\nReturns:\r\n    RigVMVariant:",
+  "get_asset_variant_ref": "x.get_asset_variant_ref() -> RigVMVariantRef\r\nGet Asset Variant Ref\r\n\r\nReturns:\r\n    RigVMVariantRef:",
+  "get_auto_vm_recompile": "x.get_auto_vm_recompile() -> bool\r\nGet Auto VMRecompile\r\n\r\nReturns:\r\n    bool:",
+  "get_available_rig_vm_structs": "x.get_available_rig_vm_structs() -> Array[Struct]\r\nGet Available Rig VMStructs\r\n\r\nReturns:\r\n    Array[Struct]:",
+  "get_blueprint_parent_class": "x.get_blueprint_parent_class() -> type(Class)\r\nReturns the parent class of the given Blueprint.\r\n\r\nReturns:\r\n    type(Class): The parent class of the Blueprint, or null if the Blueprint is invalid",
+  "get_blueprint_variable_category": "x.get_blueprint_variable_category(variable_name) -> Text\r\nGets the user-defined category of a Blueprint member variable. Categories are\nused to group variables in the My Blueprint panel.\r\n\r\nArgs:\r\n    variable_name (Name): The variable name\r\n\r\nReturns:\r\n    Text: The category text. Empty if the variable was not found or has no explicit category override (defaults to the Blueprint's name in the UI).",
+  "get_blueprint_variable_replication": "x.get_blueprint_variable_replication(variable_name) -> BlueprintVariableReplication\r\nGets the replication mode of a Blueprint variable.\r\n\r\nArgs:\r\n    variable_name (Name): The variable name\r\n\r\nReturns:\r\n    BlueprintVariableReplication: The replication mode: None, Replicated, or RepNotify",
+  "get_control_rig_asset_reference": "x.get_control_rig_asset_reference() -> ControlRigAssetStrongReference\r\nGet Control Rig Asset Reference\r\n\r\nReturns:\r\n    ControlRigAssetStrongReference:",
+  "get_control_rig_class": "x.get_control_rig_class() -> type(Class)\r\nGet Control Rig Class\r\ndeprecated: Use GetControlRigAssetReference instead\r\n\r\nReturns:\r\n    type(Class):",
+  "get_controller": "x.get_controller(graph=None) -> RigVMController\r\nGet Controller\r\n\r\nArgs:\r\n    graph (RigVMGraph): \r\n\r\nReturns:\r\n    RigVMController:",
+  "get_controller_by_name": "x.get_controller_by_name(graph_name=\"\") -> RigVMController\r\nGet Controller by Name\r\n\r\nArgs:\r\n    graph_name (str): \r\n\r\nReturns:\r\n    RigVMController:",
+  "get_currently_open_rig_blueprints": "X.get_currently_open_rig_blueprints() -> Array[ControlRigBlueprint]\r\nGet Currently Open Rig Blueprints\r\n\r\nReturns:\r\n    Array[ControlRigBlueprint]:",
+  "get_debugged_control_rig": "x.get_debugged_control_rig() -> ControlRig\r\nGet Debugged Control Rig\r\n\r\nReturns:\r\n    ControlRig:",
+  "get_debugged_rig_vm_host": "x.get_debugged_rig_vm_host() -> RigVMHost\r\nGet Debugged Rig VMHost\r\n\r\nReturns:\r\n    RigVMHost:",
+  "get_default_model": "x.get_default_model() -> RigVMGraph\r\nGet Default Model\r\n\r\nReturns:\r\n    RigVMGraph:",
+  "get_focused_model": "x.get_focused_model() -> RigVMGraph\r\nGet Focused Model\r\n\r\nReturns:\r\n    RigVMGraph:",
+  "get_hierarchy": "x.get_hierarchy() -> RigHierarchy\r\nGet Hierarchy\r\n\r\nReturns:\r\n    RigHierarchy:",
+  "get_hierarchy_controller": "x.get_hierarchy_controller() -> RigHierarchyController\r\nGet Hierarchy Controller\r\n\r\nReturns:\r\n    RigHierarchyController:",
+  "get_local_function_library": "x.get_local_function_library() -> RigVMFunctionLibrary\r\nGet Local Function Library\r\n\r\nReturns:\r\n    RigVMFunctionLibrary:",
+  "get_matching_variants": "x.get_matching_variants() -> Array[RigVMVariantRef]\r\nGet Matching Variants\r\n\r\nReturns:\r\n    Array[RigVMVariantRef]:",
+  "get_member_variable_type": "x.get_member_variable_type(member_variable_name) -> Optional[EdGraphPinType]\r\nReturns the type of a member variable, unset if no variable is found. Inherited variables can be requested using a fully qualified name to avoid ambiguities.\r\n\r\nArgs:\r\n    member_variable_name (str): \r\n\r\nReturns:\r\n    Optional[EdGraphPinType]:",
+  "get_member_variables": "x.get_member_variables() -> Array[RigVMGraphVariableDescription]\r\nGet Member Variables\r\n\r\nReturns:\r\n    Array[RigVMGraphVariableDescription]:",
+  "get_model": "x.get_model(ed_graph=None) -> RigVMGraph\r\nGet Model\r\n\r\nArgs:\r\n    ed_graph (EdGraph): \r\n\r\nReturns:\r\n    RigVMGraph:",
+  "get_modular_rig_controller": "x.get_modular_rig_controller() -> ModularRigController\r\nGet Modular Rig Controller\r\n\r\nReturns:\r\n    ModularRigController:",
+  "get_or_create_controller": "x.get_or_create_controller(graph=None) -> RigVMController\r\nGet or Create Controller\r\n\r\nArgs:\r\n    graph (RigVMGraph): \r\n\r\nReturns:\r\n    RigVMController:",
+  "get_or_create_local_function_library": "x.get_or_create_local_function_library(setup_undo_redo=True) -> RigVMFunctionLibrary\r\nGet or Create Local Function Library\r\n\r\nArgs:\r\n    setup_undo_redo (bool): \r\n\r\nReturns:\r\n    RigVMFunctionLibrary:",
+  "get_preview_mesh": "x.get_preview_mesh() -> SkeletalMesh\r\nGet Preview Mesh\r\n\r\nReturns:\r\n    SkeletalMesh:",
+  "get_rig_module_icon": "x.get_rig_module_icon() -> Texture2D\r\nGet Rig Module Icon\r\n\r\nReturns:\r\n    Texture2D:",
+  "get_rig_vm_host_class": "x.get_rig_vm_host_class() -> type(Class)\r\nGet Rig VMHost Class\r\n\r\nReturns:\r\n    type(Class):",
+  "hierarchy": "(RigHierarchy):  [Read-Only]",
+  "is_control_rig_module": "x.is_control_rig_module() -> bool\r\nIs Control Rig Module\r\n\r\nReturns:\r\n    bool:",
+  "join_asset_variant": "x.join_asset_variant(guid) -> bool\r\nMerges the asset's guid with a provided one to join the variant set\r\n\r\nArgs:\r\n    guid (Guid): \r\n\r\nReturns:\r\n    bool:",
+  "list_event_dispatchers": "x.list_event_dispatchers() -> Array[Name]\r\nReturns the names of all event dispatchers defined on the Blueprint.\r\n\r\nReturns:\r\n    Array[Name]:",
+  "list_member_variable_names": "x.list_member_variable_names(include_inherited_members=True) -> Array[str]\r\nLists the names of the member variables in the BP. Inherited members will be prefixed with the full path of their declaring class.\r\n\r\nArgs:\r\n    include_inherited_members (bool): \r\n\r\nReturns:\r\n    Array[str]: \r\n\r\n    out_member_variable_names (Array[str]):",
+  "modular_rig_model": "(ModularRigModel):  [Read-Only]",
+  "recompile_modular_rig": "x.recompile_modular_rig() -> None\r\nRecompile Modular Rig",
+  "recompile_vm": "x.recompile_vm() -> None\r\n--- IRigVMClientHost interface End---",
+  "recompile_vm_if_required": "x.recompile_vm_if_required() -> None\r\nRecompile VMIf Required",
+  "remove_event_dispatcher": "x.remove_event_dispatcher(name) -> bool\r\nRemoves the event dispatcher with the given name from the Blueprint.\nReturns false if no dispatcher with that name exists or the Blueprint is invalid.\r\n\r\nArgs:\r\n    name (Name): \r\n\r\nReturns:\r\n    bool:",
+  "remove_event_dispatcher_parameter": "x.remove_event_dispatcher_parameter(dispatcher_name, param_name) -> bool\r\nRemoves a parameter from an event dispatcher's signature.\nReturns false if the dispatcher or parameter does not exist.\r\n\r\nArgs:\r\n    dispatcher_name (Name): \r\n    param_name (Name): \r\n\r\nReturns:\r\n    bool:",
+  "remove_member_variable": "x.remove_member_variable(name) -> bool\r\nRemove Member Variable\r\n\r\nArgs:\r\n    name (Name): \r\n\r\nReturns:\r\n    bool:",
+  "remove_model": "x.remove_model(name=\"Rig Graph\", setup_undo_redo=True, print_python_command=True) -> bool\r\nRemove Model\r\n\r\nArgs:\r\n    name (str): \r\n    setup_undo_redo (bool): \r\n    print_python_command (bool): \r\n\r\nReturns:\r\n    bool:",
+  "rename_member_variable": "x.rename_member_variable(old_name, new_name) -> bool\r\nRename Member Variable\r\n\r\nArgs:\r\n    old_name (Name): \r\n    new_name (Name): \r\n\r\nReturns:\r\n    bool:",
+  "request_auto_vm_recompilation": "x.request_auto_vm_recompilation() -> None\r\nRequest Auto VMRecompilation",
+  "request_rig_vm_init": "x.request_rig_vm_init() -> None\r\nRequest Rig VMInit",
+  "set_auto_vm_recompile": "x.set_auto_vm_recompile(auto_recompile) -> None\r\nSet Auto VMRecompile\r\n\r\nArgs:\r\n    auto_recompile (bool):",
+  "set_blueprint_variable_category": "x.set_blueprint_variable_category(variable_name, new_category) -> None\r\nSets the user-defined category on a Blueprint member variable. Categories are\nused to group variables in the My Blueprint panel.\nNote: Will not change the category for variables defined via native classes.\r\n\r\nArgs:\r\n    variable_name (Name): The variable name\r\n    new_category (Text): The new category text. Pass empty to reset to the default (the Blueprint's name).",
+  "set_blueprint_variable_expose_on_spawn": "x.set_blueprint_variable_expose_on_spawn(variable_name, expose_on_spawn) -> None\r\nSets \"Expose On Spawn\" to true/false on a Blueprint variable\r\n\r\nArgs:\r\n    variable_name (Name): The variable name\r\n    expose_on_spawn (bool): Set to true to expose on spawn",
+  "set_blueprint_variable_expose_to_cinematics": "x.set_blueprint_variable_expose_to_cinematics(variable_name, expose_to_cinematics) -> None\r\nSets \"Expose To Cinematics\" to true/false on a Blueprint variable\r\n\r\nArgs:\r\n    variable_name (Name): The variable name\r\n    expose_to_cinematics (bool): Set to true to expose to cinematics",
+  "set_blueprint_variable_instance_editable": "x.set_blueprint_variable_instance_editable(variable_name, instance_editable) -> None\r\nSets \"Instance Editable\" to true/false on a Blueprint variable\r\n\r\nArgs:\r\n    variable_name (Name): The variable name\r\n    instance_editable (bool): Toggle InstanceEditable",
+  "set_blueprint_variable_replication": "x.set_blueprint_variable_replication(variable_name, replication) -> None\r\nSets the replication mode on a Blueprint variable.\nRepNotify will auto-create an OnRep_ function if one does not already exist.\r\n\r\nArgs:\r\n    variable_name (Name): The variable name\r\n    replication (BlueprintVariableReplication): The replication mode: None, Replicated, or RepNotify",
+  "set_preview_mesh": "x.set_preview_mesh(preview_mesh, mark_as_dirty=True) -> None\r\nIInterface_PreviewMeshProvider interface\r\n\r\nArgs:\r\n    preview_mesh (SkeletalMesh): \r\n    mark_as_dirty (bool):",
+  "set_variable_index": "x.set_variable_index(name, new_index) -> bool\r\nSet Variable Index\r\n\r\nArgs:\r\n    name (Name): \r\n    new_index (int32): \r\n\r\nReturns:\r\n    bool:",
+  "split_asset_variant": "x.split_asset_variant() -> bool\r\nResets the asset's guid to a new one and splits it from the former variant set\r\n\r\nReturns:\r\n    bool:",
+  "status": "(BlueprintStatus):  [Read-Only] The current status of this blueprint",
+  "suspend_notifications": "x.suspend_notifications(suspend_notifs) -> None\r\nSuspend Notifications\r\n\r\nArgs:\r\n    suspend_notifs (bool):",
+  "turn_into_control_rig_module": "x.turn_into_control_rig_module() -> bool\r\nTurnIntoControlRigModule\r\n\r\nReturns:\r\n    bool:",
+  "turn_into_standalone_rig": "x.turn_into_standalone_rig() -> bool\r\nTurnIntoStandaloneRig\r\n\r\nReturns:\r\n    bool:",
+  "update_exposed_module_connectors": "x.update_exposed_module_connectors() -> None\r\nUpdate Exposed Module Connectors",
+  "vm_compile_settings": "(RigVMCompileSettings):  [Read-Write]"
+ },
+ "api_RigHierarchy": {
+  "contains": "x.contains(key) -> bool\r\nReturns true if the provided element key is valid\r\n\r\nArgs:\r\n    key (RigElementKey): The key to validate\r\n\r\nReturns:\r\n    bool: Returns true if the provided element key is valid",
+  "copy_hierarchy": "x.copy_hierarchy(hierarchy) -> None\r\nCopies the contents of a hierarchy onto this one\r\n\r\nArgs:\r\n    hierarchy (RigHierarchy):",
+  "copy_pose": "x.copy_pose(hierarchy, current, initial, weights, match_pose_in_global_if_needed=False) -> None\r\nCopies the contents of a hierarchy onto this one\r\n\r\nArgs:\r\n    hierarchy (RigHierarchy): \r\n    current (bool): \r\n    initial (bool): \r\n    weights (bool): \r\n    match_pose_in_global_if_needed (bool):",
+  "find_bone": "x.find_bone(key) -> RigBoneElement\r\nReturns bone element for a given key, for scripting purpose only, for cpp usage, use Find<FRigBoneElement>()\r\ndeprecated: Use Contains to check if the element exists, GetBoneType for the bone type, IsSelected for selection state, or GetIndex to retrieve the element index.\r\n\r\nArgs:\r\n    key (RigElementKey): The key of the bone element to retrieve.\r\n\r\nReturns:\r\n    RigBoneElement:",
+  "find_control": "x.find_control(key) -> RigControlElement\r\nReturns control element for a given key, for scripting purpose only, for cpp usage, use Find<FRigControlElement>()\r\ndeprecated: Use Contains to check if the element exists, GetControlSettings for settings, IsSelected for selection state, or GetIndex to retrieve the element index.\r\n\r\nArgs:\r\n    key (RigElementKey): The key of the control element to retrieve.\r\n\r\nReturns:\r\n    RigControlElement:",
+  "find_null": "x.find_null(key) -> RigNullElement\r\nReturns null element for a given key, for scripting purpose only, for cpp usage, use Find<FRigControlElement>()\r\ndeprecated: Use Contains to check if the element exists, IsSelected for selection state, or GetIndex to retrieve the element index.\r\n\r\nArgs:\r\n    key (RigElementKey): The key of the null element to retrieve.\r\n\r\nReturns:\r\n    RigNullElement:",
+  "get_all_component_keys": "x.get_all_component_keys() -> Array[RigComponentKey]\r\nGet All Component Keys\r\n\r\nReturns:\r\n    Array[RigComponentKey]:",
+  "get_all_keys": "x.get_all_keys(traverse=True) -> Array[RigElementKey]\r\nReturns all element keys of this hierarchy\r\n\r\nArgs:\r\n    traverse (bool): If set to true the keys will be returned by depth first traversal\r\n\r\nReturns:\r\n    Array[RigElementKey]: The keys of all elements",
+  "get_bone_type": "x.get_bone_type(key) -> RigBoneType\r\nReturns the bone type for a bone identified by key.\r\n\r\nArgs:\r\n    key (RigElementKey): The element key of the bone\r\n\r\nReturns:\r\n    RigBoneType: The ERigBoneType, or ERigBoneType::User if the key is invalid",
+  "get_bones": "x.get_bones(traverse=True) -> Array[RigElementKey]\r\nReturns all Bone elements\r\n\r\nArgs:\r\n    traverse (bool): Returns the elements in order of a depth first traversal\r\n\r\nReturns:\r\n    Array[RigElementKey]:",
+  "get_bool_array_metadata": "x.get_bool_array_metadata(item, metadata_name) -> Array[bool]\r\nQueries and returns the value of bool array metadata\r\n\r\nArgs:\r\n    item (RigElementKey): The element key to return the metadata for\r\n    metadata_name (Name): The name of the metadata to query\r\n\r\nReturns:\r\n    Array[bool]:",
+  "get_bool_metadata": "x.get_bool_metadata(item, metadata_name, default_value) -> bool\r\nQueries and returns the value of bool metadata\r\n\r\nArgs:\r\n    item (RigElementKey): The element key to return the metadata for\r\n    metadata_name (Name): The name of the metadata to query\r\n    default_value (bool): The default value to fall back on\r\n\r\nReturns:\r\n    bool:",
+  "get_children": "x.get_children(key, recursive=False) -> Array[RigElementKey]\r\nReturns the child elements of a given element key\r\n\r\nArgs:\r\n    key (RigElementKey): The key of the element to retrieve the children for\r\n    recursive (bool): If set to true grand-children will also be returned etc\r\n\r\nReturns:\r\n    Array[RigElementKey]: Returns the child elements",
+  "get_component_content": "x.get_component_content(element, component_index) -> str\r\nGet Component Content\r\n\r\nArgs:\r\n    element (RigElementKey): \r\n    component_index (int32): \r\n\r\nReturns:\r\n    str:",
+  "get_component_key": "x.get_component_key(element, component_index) -> RigComponentKey\r\nGet Component Key\r\n\r\nArgs:\r\n    element (RigElementKey): \r\n    component_index (int32): \r\n\r\nReturns:\r\n    RigComponentKey:",
+  "get_component_keys": "x.get_component_keys(element) -> Array[RigComponentKey]\r\nGet Component Keys\r\n\r\nArgs:\r\n    element (RigElementKey): \r\n\r\nReturns:\r\n    Array[RigComponentKey]:",
+  "get_component_name": "x.get_component_name(element, component_index) -> Name\r\nGet Component Name\r\n\r\nArgs:\r\n    element (RigElementKey): \r\n    component_index (int32): \r\n\r\nReturns:\r\n    Name:",
+  "get_component_type": "x.get_component_type(element, component_index) -> ScriptStruct\r\nGet Component Type\r\n\r\nArgs:\r\n    element (RigElementKey): \r\n    component_index (int32): \r\n\r\nReturns:\r\n    ScriptStruct:",
+  "get_connector_states": "x.get_connector_states() -> Array[RigConnectorState]\r\nReturns all of the connectors' state\r\n\r\nReturns:\r\n    Array[RigConnectorState]:",
+  "get_connectors": "x.get_connectors(traverse=True) -> Array[RigElementKey]\r\nReturns all Connector elements\r\n\r\nArgs:\r\n    traverse (bool): Returns the elements in order of a depth first traversal\r\n\r\nReturns:\r\n    Array[RigElementKey]:",
+  "get_control_preferred_euler_angles": "x.get_control_preferred_euler_angles(key, rotation_order, initial=False) -> Vector\r\nReturns a control's preferred euler angles (local transform rotation)\r\n\r\nArgs:\r\n    key (RigElementKey): The key of the element to retrieve the current value for\r\n    rotation_order (EulerRotationOrder): The rotation order to use when retrieving the euler angles\r\n    initial (bool): If true we'll return the preferred euler angles for the initial - otherwise current transform\r\n\r\nReturns:\r\n    Vector: Returns the current preferred euler angles",
+  "get_control_preferred_euler_angles_by_index": "x.get_control_preferred_euler_angles_by_index(element_index, rotation_order, initial=False) -> Vector\r\nReturns a control's preferred euler angles (local transform rotation)\r\n\r\nArgs:\r\n    element_index (int32): The element index to look up\r\n    rotation_order (EulerRotationOrder): The rotation order to use when retrieving the euler angles\r\n    initial (bool): If true we'll return the preferred euler angles for the initial - otherwise current transform\r\n\r\nReturns:\r\n    Vector: Returns the current preferred euler angles",
+  "get_control_preferred_euler_rotation_order": "x.get_control_preferred_euler_rotation_order(key, from_settings=True) -> EulerRotationOrder\r\nReturns a control's preferred euler rotation order\r\n\r\nArgs:\r\n    key (RigElementKey): The key of the element to retrieve the current value for\r\n    from_settings (bool): If true the rotation order will be looked up from the control's settings, otherwise from the currently set animation value\r\n\r\nReturns:\r\n    EulerRotationOrder: Returns the current preferred euler rotation order",
+  "get_control_preferred_euler_rotation_order_by_index": "x.get_control_preferred_euler_rotation_order_by_index(element_index, from_settings=True) -> EulerRotationOrder\r\nReturns a control's preferred euler rotation order\r\n\r\nArgs:\r\n    element_index (int32): The element index to look up\r\n    from_settings (bool): If true the rotation order will be looked up from the control's settings, otherwise from the currently set animation value\r\n\r\nReturns:\r\n    EulerRotationOrder: Returns the current preferred euler rotation order",
+  "get_control_preferred_rotator": "x.get_control_preferred_rotator(key, initial=False) -> Rotator\r\nReturns a control's preferred rotator (local transform rotation)\r\n\r\nArgs:\r\n    key (RigElementKey): The key of the element to retrieve the current value for\r\n    initial (bool): If true we'll return the preferred rotator for the initial - otherwise current transform\r\n\r\nReturns:\r\n    Rotator: Returns the current preferred rotator",
+  "get_control_preferred_rotator_by_index": "x.get_control_preferred_rotator_by_index(element_index, initial=False) -> Rotator\r\nReturns a control's preferred rotator (local transform rotation)\r\n\r\nArgs:\r\n    element_index (int32): The element index to look up\r\n    initial (bool): If true we'll return the preferred rotator for the initial - otherwise current transform\r\n\r\nReturns:\r\n    Rotator: Returns the current preferred rotator",
+  "get_control_settings": "x.get_control_settings(key) -> RigControlSettings\r\nReturns the settings for a control identified by key.\r\n\r\nArgs:\r\n    key (RigElementKey): The element key of the control\r\n\r\nReturns:\r\n    RigControlSettings: The FRigControlSettings, or a default-constructed one if the key is invalid",
+  "get_control_value": "x.get_control_value(key, value_type=RigControlValueType.CURRENT) -> RigControlValue\r\nReturns a control's current value given its key\r\n\r\nArgs:\r\n    key (RigElementKey): The key of the element to retrieve the current value for\r\n    value_type (RigControlValueType): The type of value to return\r\n\r\nReturns:\r\n    RigControlValue: Returns the current value of the control",
+  "get_control_value_by_index": "x.get_control_value_by_index(element_index, value_type=RigControlValueType.CURRENT) -> RigControlValue\r\nReturns a control's current value given its index\r\n\r\nArgs:\r\n    element_index (int32): The index of the element to retrieve the current value for\r\n    value_type (RigControlValueType): The type of value to return\r\n\r\nReturns:\r\n    RigControlValue: Returns the current value of the control",
+  "get_controller": "x.get_controller(create_if_needed=True) -> RigHierarchyController\r\nReturns a controller for this hierarchy.\nNote: If the controller is not available this will return nullptr\neven if the bCreateIfNeeded flag is set to true. You can check the\ncontroller's availability with IsControllerAvailable().\r\n\r\nArgs:\r\n    create_if_needed (bool): Creates a controller if needed\r\n\r\nReturns:\r\n    RigHierarchyController: The Controller for this hierarchy",
+  "get_controls": "x.get_controls(traverse=True) -> Array[RigElementKey]\r\nReturns all Control elements\r\n\r\nArgs:\r\n    traverse (bool): Returns the elements in order of a depth first traversal\r\n\r\nReturns:\r\n    Array[RigElementKey]:",
+  "get_curve_value": "x.get_curve_value(key) -> float\r\nReturns a curve's value given its key\r\n\r\nArgs:\r\n    key (RigElementKey): The key of the element to retrieve the value for\r\n\r\nReturns:\r\n    float: Returns the value of the curve",
+  "get_curve_value_by_index": "x.get_curve_value_by_index(element_index) -> float\r\nReturns a curve's value given its index\r\n\r\nArgs:\r\n    element_index (int32): The index of the element to retrieve the value for\r\n\r\nReturns:\r\n    float: Returns the value of the curve",
+  "get_curves": "x.get_curves() -> Array[RigElementKey]\r\nReturns all Curve elements\r\n\r\nReturns:\r\n    Array[RigElementKey]:",
+  "get_default_parent": "x.get_default_parent(key) -> RigElementKey\r\nReturns the default parent element's key of a given child key\r\n\r\nArgs:\r\n    key (RigElementKey): The key of the element to retrieve the parent for\r\n\r\nReturns:\r\n    RigElementKey: Returns the default parent element key",
+  "get_euler_transform_from_control_value": "X.get_euler_transform_from_control_value(value) -> EulerTransform\r\nReturns the contained FEulerTransform value from a a Rig Control Value\r\n\r\nArgs:\r\n    value (RigControlValue): The Rig Control value to convert from\r\n\r\nReturns:\r\n    EulerTransform: The converted FEulerTransform value",
+  "get_first_parent": "x.get_first_parent(key) -> RigElementKey\r\nReturns the first parent element of a given element key\r\n\r\nArgs:\r\n    key (RigElementKey): The key of the element to retrieve the parents for\r\n\r\nReturns:\r\n    RigElementKey: Returns the first parent element",
+  "get_float_array_metadata": "x.get_float_array_metadata(item, metadata_name) -> Array[float]\r\nQueries and returns the value of float array metadata\r\n\r\nArgs:\r\n    item (RigElementKey): The element key to return the metadata for\r\n    metadata_name (Name): The name of the metadata to query\r\n\r\nReturns:\r\n    Array[float]:",
+  "get_float_from_control_value": "X.get_float_from_control_value(value) -> float\r\nReturns the contained float value from a a Rig Control Value\r\n\r\nArgs:\r\n    value (RigControlValue): The Rig Control value to convert from\r\n\r\nReturns:\r\n    float: The converted float value",
+  "get_float_metadata": "x.get_float_metadata(item, metadata_name, default_value) -> float\r\nQueries and returns the value of float metadata\r\n\r\nArgs:\r\n    item (RigElementKey): The element key to return the metadata for\r\n    metadata_name (Name): The name of the metadata to query\r\n    default_value (float): The default value to fall back on\r\n\r\nReturns:\r\n    float:",
+  "get_global_control_offset_transform": "x.get_global_control_offset_transform(key, initial=False) -> Transform\r\nReturns the global offset transform for a given control element.\r\n\r\nArgs:\r\n    key (RigElementKey): The key of the control to retrieve the transform for\r\n    initial (bool): If true the initial transform will be used\r\n\r\nReturns:\r\n    Transform: The global offset transform",
+  "get_global_control_offset_transform_by_index": "x.get_global_control_offset_transform_by_index(element_index, initial=False) -> Transform\r\nReturns the global offset transform for a given control element.\r\n\r\nArgs:\r\n    element_index (int32): The index of the control to retrieve the transform for\r\n    initial (bool): If true the initial transform will be used\r\n\r\nReturns:\r\n    Transform: The global offset transform",
+  "get_global_control_shape_transform": "x.get_global_control_shape_transform(key, initial=False) -> Transform\r\nReturns the global shape transform for a given control element.\r\n\r\nArgs:\r\n    key (RigElementKey): The key of the control to retrieve the transform for\r\n    initial (bool): If true the initial transform will be used\r\n\r\nReturns:\r\n    Transform: The global shape transform",
+  "get_global_control_shape_transform_by_index": "x.get_global_control_shape_transform_by_index(element_index, initial=False) -> Transform\r\nReturns the global shape transform for a given control element.\r\n\r\nArgs:\r\n    element_index (int32): The index of the control to retrieve the transform for\r\n    initial (bool): If true the initial transform will be used\r\n\r\nReturns:\r\n    Transform: The global shape transform",
+  "get_global_transform": "x.get_global_transform(key, initial=False) -> Transform\r\nReturns the global current or initial value for a given key.\nIf the key is invalid FTransform::Identity will be returned.\r\n\r\nArgs:\r\n    key (RigElementKey): The key to retrieve the transform for\r\n    initial (bool): If true the initial transform will be used\r\n\r\nReturns:\r\n    Transform: The global current or initial transform's value.",
+  "get_global_transform_by_index": "x.get_global_transform_by_index(element_index, initial=False) -> Transform\r\nReturns the global current or initial value for a element index.\nIf the index is invalid FTransform::Identity will be returned.\r\n\r\nArgs:\r\n    element_index (int32): The index to retrieve the transform for\r\n    initial (bool): If true the initial transform will be used\r\n\r\nReturns:\r\n    Transform: The global current or initial transform's value.",
+  "get_index": "x.get_index(key) -> int32\r\nReturns the index of an element given its key\r\n\r\nArgs:\r\n    key (RigElementKey): The key of the element to retrieve the index for\r\n\r\nReturns:\r\n    int32: The index of the element or INDEX_NONE",
+  "get_int32_array_metadata": "x.get_int32_array_metadata(item, metadata_name) -> Array[int32]\r\nQueries and returns the value of int32 array metadata\r\n\r\nArgs:\r\n    item (RigElementKey): The element key to return the metadata for\r\n    metadata_name (Name): The name of the metadata to query\r\n\r\nReturns:\r\n    Array[int32]:",
+  "get_int32_metadata": "x.get_int32_metadata(item, metadata_name, default_value) -> int32\r\nQueries and returns the value of int32 metadata\r\n\r\nArgs:\r\n    item (RigElementKey): The element key to return the metadata for\r\n    metadata_name (Name): The name of the metadata to query\r\n    default_value (int32): The default value to fall back on\r\n\r\nReturns:\r\n    int32:",
+  "get_int_from_control_value": "X.get_int_from_control_value(value) -> int32\r\nReturns the contained int32 value from a a Rig Control Value\r\n\r\nArgs:\r\n    value (RigControlValue): The Rig Control value to convert from\r\n\r\nReturns:\r\n    int32: The converted int32 value",
+  "get_key": "x.get_key(element_index) -> RigElementKey\r\nReturns the key of an element given its index\r\n\r\nArgs:\r\n    element_index (int32): The index of the element to retrieve the key for\r\n\r\nReturns:\r\n    RigElementKey: The key of an element given its index",
+  "get_keys": "x.get_keys(element_indices) -> Array[RigElementKey]\r\nReturns the keys of an array of indices\r\n\r\nArgs:\r\n    element_indices (Array[int32]): The indices to retrieve the keys for\r\n\r\nReturns:\r\n    Array[RigElementKey]: The keys of the elements given the indices",
+  "get_linear_color_array_metadata": "x.get_linear_color_array_metadata(item, metadata_name) -> Array[LinearColor]\r\nQueries and returns the value of FLinearColor array metadata\r\n\r\nArgs:\r\n    item (RigElementKey): The element key to return the metadata for\r\n    metadata_name (Name): The name of the metadata to query\r\n\r\nReturns:\r\n    Array[LinearColor]:",
+  "get_linear_color_metadata": "x.get_linear_color_metadata(item, metadata_name, default_value) -> LinearColor\r\nQueries and returns the value of FLinearColor metadata\r\n\r\nArgs:\r\n    item (RigElementKey): The element key to return the metadata for\r\n    metadata_name (Name): The name of the metadata to query\r\n    default_value (LinearColor): The default value to fall back on\r\n\r\nReturns:\r\n    LinearColor:",
+  "get_local_control_shape_transform": "x.get_local_control_shape_transform(key, initial=False) -> Transform\r\nReturns the local shape transform for a given control element.\r\n\r\nArgs:\r\n    key (RigElementKey): The key of the control to retrieve the transform for\r\n    initial (bool): If true the initial transform will be used\r\n\r\nReturns:\r\n    Transform: The local shape transform",
+  "get_local_control_shape_transform_by_index": "x.get_local_control_shape_transform_by_index(element_index, initial=False) -> Transform\r\nReturns the local shape transform for a given control element.\r\n\r\nArgs:\r\n    element_index (int32): The index of the control to retrieve the transform for\r\n    initial (bool): If true the initial transform will be used\r\n\r\nReturns:\r\n    Transform: The local shape transform",
+  "get_local_index": "x.get_local_index(key) -> int32\r\nReturns the index of an element given its key within its default parent (or root)\r\n\r\nArgs:\r\n    key (RigElementKey): The key of the element to retrieve the index for\r\n\r\nReturns:\r\n    int32: The index of the element or INDEX_NONE",
+  "get_local_transform": "x.get_local_transform(key, initial=False) -> Transform\r\nReturns the local current or initial value for a given key.\nIf the key is invalid FTransform::Identity will be returned.\r\n\r\nArgs:\r\n    key (RigElementKey): The key to retrieve the transform for\r\n    initial (bool): If true the initial transform will be used\r\n\r\nReturns:\r\n    Transform: The local current or initial transform's value.",
+  "get_local_transform_by_index": "x.get_local_transform_by_index(element_index, initial=False) -> Transform\r\nReturns the local current or initial value for a element index.\nIf the index is invalid FTransform::Identity will be returned.\r\n\r\nArgs:\r\n    element_index (int32): The index to retrieve the transform for\r\n    initial (bool): If true the initial transform will be used\r\n\r\nReturns:\r\n    Transform: The local current or initial transform's value.",
+  "get_metadata_names": "x.get_metadata_names(item) -> Array[Name]\r\nReturns the name of metadata for a given element\r\n\r\nArgs:\r\n    item (RigElementKey): The element key to return the metadata keys for\r\n\r\nReturns:\r\n    Array[Name]:",
+  "get_metadata_type": "x.get_metadata_type(item, metadata_name) -> RigMetadataType\r\nReturns the type of metadata given its name the item it is stored under\r\n\r\nArgs:\r\n    item (RigElementKey): The element key to return the metadata type for\r\n    metadata_name (Name): The name of the metadata to return the type for\r\n\r\nReturns:\r\n    RigMetadataType:",
+  "get_module_f_name": "x.get_module_f_name(item) -> Name\r\nReturns the name of the module an element belong to (or NAME_None in case the element doesn't belong to a module)\r\n\r\nArgs:\r\n    item (RigElementKey): \r\n\r\nReturns:\r\n    Name: The name the element belongs to (or NAME_None)",
+  "get_module_name": "x.get_module_name(item) -> str\r\nReturns the name of the module an element belong to (or an empty string in case the element doesn't belong to a module)\r\n\r\nArgs:\r\n    item (RigElementKey): \r\n\r\nReturns:\r\n    str: The name the element belongs to (or empty string)",
+  "get_module_path": "x.get_module_path(item) -> str\r\nReturns the path of the module an element belong to (or an empty string in case the element doesn't belong to a module)\r\ndeprecated: This function has been deprecated. Please use GetModuleName() instead.\r\n\r\nArgs:\r\n    item (RigElementKey): \r\n\r\nReturns:\r\n    str: The path the element belongs to (or empty string)",
+  "get_module_path_f_name": "x.get_module_path_f_name(item) -> Name\r\nReturns the path of the module an element belong to (or NAME_None in case the element doesn't belong to a module)\r\ndeprecated: This function has been deprecated. Please use GetModuleFName() instead.\r\n\r\nArgs:\r\n    item (RigElementKey): \r\n\r\nReturns:\r\n    Name: The path the element belongs to (or NAME_None)",
+  "get_module_prefix": "x.get_module_prefix(item) -> str\r\nReturns the prefix of the module an element belong to (or an empty string in case the element doesn't belong to a module)\r\n\r\nArgs:\r\n    item (RigElementKey): \r\n\r\nReturns:\r\n    str: The prefix the element belongs to (or empty string)",
+  "get_name_array_metadata": "x.get_name_array_metadata(item, metadata_name) -> Array[Name]\r\nQueries and returns the value of FName array metadata\r\n\r\nArgs:\r\n    item (RigElementKey): The element key to return the metadata for\r\n    metadata_name (Name): The name of the metadata to query\r\n\r\nReturns:\r\n    Array[Name]:",
+  "get_name_metadata": "x.get_name_metadata(item, metadata_name, default_value) -> Name\r\nQueries and returns the value of FName metadata\r\n\r\nArgs:\r\n    item (RigElementKey): The element key to return the metadata for\r\n    metadata_name (Name): The name of the metadata to query\r\n    default_value (Name): The default value to fall back on\r\n\r\nReturns:\r\n    Name:",
+  "get_name_space": "x.get_name_space(item) -> str\r\nReturns the namespace of an element belong to (or an empty string in case the element doesn't belong to a module / namespace)\r\ndeprecated: This function has been deprecated. Please use GetModuleName() instead.\r\n\r\nArgs:\r\n    item (RigElementKey): \r\n\r\nReturns:\r\n    str: The namespace the element belongs to (or empty string)",
+  "get_name_space_f_name": "x.get_name_space_f_name(item) -> Name\r\nReturns the namespace of an element belong to (or NAME_None in case the element doesn't belong to a module / namespace)\r\ndeprecated: This function has been deprecated. Please use GetModuleFName() instead.\r\n\r\nArgs:\r\n    item (RigElementKey): \r\n\r\nReturns:\r\n    Name: The namespace the element belongs to (or NAME_None)",
+  "get_nulls": "x.get_nulls(traverse=True) -> Array[RigElementKey]\r\nReturns all Null elements\r\n\r\nArgs:\r\n    traverse (bool): Returns the elements in order of a depth first traversal\r\n\r\nReturns:\r\n    Array[RigElementKey]:",
+  "get_number_of_parents": "x.get_number_of_parents(key) -> int32\r\nReturns the number of parents of an element\r\n\r\nArgs:\r\n    key (RigElementKey): The key of the element to retrieve the number of parents for\r\n\r\nReturns:\r\n    int32: Returns the number of parents of an element",
+  "get_parent_transform": "x.get_parent_transform(key, initial=False) -> Transform\r\nReturns the global current or initial value for a given key.\nIf the element does not have a parent FTransform::Identity will be returned.\r\n\r\nArgs:\r\n    key (RigElementKey): The key of the element to retrieve the transform for\r\n    initial (bool): If true the initial transform will be used\r\n\r\nReturns:\r\n    Transform: The element's parent's global current or initial transform's value.",
+  "get_parent_transform_by_index": "x.get_parent_transform_by_index(element_index, initial=False) -> Transform\r\nReturns the global current or initial value for a given element index.\nIf the element does not have a parent FTransform::Identity will be returned.\r\n\r\nArgs:\r\n    element_index (int32): The index of the element to retrieve the transform for\r\n    initial (bool): If true the initial transform will be used\r\n\r\nReturns:\r\n    Transform: The element's parent's global current or initial transform's value.",
+  "get_parent_weight": "x.get_parent_weight(child, parent, initial=False) -> RigElementWeight\r\nReturns the weight of a parent below a multi parent element\r\n\r\nArgs:\r\n    child (RigElementKey): The key of the multi parented element\r\n    parent (RigElementKey): The key of the parent to look up the weight for\r\n    initial (bool): If true the initial weights will be used\r\n\r\nReturns:\r\n    RigElementWeight: Returns the weight of a parent below a multi parent element, or FLT_MAX if the parent is invalid",
+  "get_parent_weight_array": "x.get_parent_weight_array(child, initial=False) -> Array[RigElementWeight]\r\nReturns the weights of all parents below a multi parent element\r\n\r\nArgs:\r\n    child (RigElementKey): The key of the multi parented element\r\n    initial (bool): If true the initial weights will be used\r\n\r\nReturns:\r\n    Array[RigElementWeight]: Returns the weight of a parent below a multi parent element, or FLT_MAX if the parent is invalid",
+  "get_parents": "x.get_parents(key, recursive=False) -> Array[RigElementKey]\r\nReturns the parent elements of a given element key\r\n\r\nArgs:\r\n    key (RigElementKey): The key of the element to retrieve the parents for\r\n    recursive (bool): If set to true parents of parents will also be returned\r\n\r\nReturns:\r\n    Array[RigElementKey]: Returns the parent elements",
+  "get_pose": "x.get_pose(initial=False, include_transient_controls=True) -> RigPose\r\nReturns the current / initial pose of the hierarchy\r\n\r\nArgs:\r\n    initial (bool): If set to true the initial pose will be returned\r\n    include_transient_controls (bool): If true the transient controls will be included in the pose\r\n\r\nReturns:\r\n    RigPose: The pose of the hierarchy",
+  "get_previous_hierarchy_name": "x.get_previous_hierarchy_name(key) -> Name\r\nReturns the previous name of an element or a component prior to a rename operation\r\n\r\nArgs:\r\n    key (RigHierarchyKey): The key to request the old name for\r\n\r\nReturns:\r\n    Name:",
+  "get_previous_hierarchy_parent": "x.get_previous_hierarchy_parent(key) -> RigHierarchyKey\r\nReturns the previous parent of an element or a component prior to a reparent operation\r\n\r\nArgs:\r\n    key (RigHierarchyKey): The key to request the old parent  for\r\n\r\nReturns:\r\n    RigHierarchyKey:",
+  "get_previous_name": "x.get_previous_name(key) -> Name\r\nReturns the previous name of an element prior to a rename operation\r\n\r\nArgs:\r\n    key (RigElementKey): The key of the element to request the old name for\r\n\r\nReturns:\r\n    Name:",
+  "get_previous_parent": "x.get_previous_parent(key) -> RigElementKey\r\nReturns the previous parent of an element prior to a reparent operation\r\n\r\nArgs:\r\n    key (RigElementKey): The key of the element to request the old parent  for\r\n\r\nReturns:\r\n    RigElementKey:",
+  "get_quat_array_metadata": "x.get_quat_array_metadata(item, metadata_name) -> Array[Quat]\r\nQueries and returns the value of FQuat array metadata\r\n\r\nArgs:\r\n    item (RigElementKey): The element key to return the metadata for\r\n    metadata_name (Name): The name of the metadata to query\r\n\r\nReturns:\r\n    Array[Quat]:",
+  "get_quat_metadata": "x.get_quat_metadata(item, metadata_name, default_value) -> Quat\r\nQueries and returns the value of FQuat metadata\r\n\r\nArgs:\r\n    item (RigElementKey): The element key to return the metadata for\r\n    metadata_name (Name): The name of the metadata to query\r\n    default_value (Quat): The default value to fall back on\r\n\r\nReturns:\r\n    Quat:",
+  "get_references": "x.get_references(traverse=True) -> Array[RigElementKey]\r\nReturns all references\r\n\r\nArgs:\r\n    traverse (bool): Returns the elements in order of a depth first traversal\r\n\r\nReturns:\r\n    Array[RigElementKey]:",
+  "get_rig_element_key_array_metadata": "x.get_rig_element_key_array_metadata(item, metadata_name) -> Array[RigElementKey]\r\nQueries and returns the value of FRigElementKey array metadata\r\n\r\nArgs:\r\n    item (RigElementKey): The element key to return the metadata for\r\n    metadata_name (Name): The name of the metadata to query\r\n\r\nReturns:\r\n    Array[RigElementKey]:",
+  "get_rig_element_key_metadata": "x.get_rig_element_key_metadata(item, metadata_name, default_value) -> RigElementKey\r\nQueries and returns the value of FRigElementKey metadata\r\n\r\nArgs:\r\n    item (RigElementKey): The element key to return the metadata for\r\n    metadata_name (Name): The name of the metadata to query\r\n    default_value (RigElementKey): The default value to fall back on\r\n\r\nReturns:\r\n    RigElementKey:",
+  "get_root_elements": "x.get_root_elements() -> Array[RigElementKey]\r\nReturns all root element keys\r\n\r\nReturns:\r\n    Array[RigElementKey]:",
+  "get_rotator_array_metadata": "x.get_rotator_array_metadata(item, metadata_name) -> Array[Rotator]\r\nQueries and returns the value of FRotator array metadata\r\n\r\nArgs:\r\n    item (RigElementKey): The element key to return the metadata for\r\n    metadata_name (Name): The name of the metadata to query\r\n\r\nReturns:\r\n    Array[Rotator]:",
+  "get_rotator_from_control_value": "X.get_rotator_from_control_value(value) -> Rotator\r\nReturns the contained FRotator value from a a Rig Control Value\r\n\r\nArgs:\r\n    value (RigControlValue): The Rig Control value to convert from\r\n\r\nReturns:\r\n    Rotator: The converted FRotator value",
+  "get_rotator_metadata": "x.get_rotator_metadata(item, metadata_name, default_value) -> Rotator\r\nQueries and returns the value of FRotator metadata\r\n\r\nArgs:\r\n    item (RigElementKey): The element key to return the metadata for\r\n    metadata_name (Name): The name of the metadata to query\r\n    default_value (Rotator): The default value to fall back on\r\n\r\nReturns:\r\n    Rotator:",
+  "get_rule_manager": "x.get_rule_manager(create_if_needed=True) -> ModularRigRuleManager\r\nReturns a rule manager for this hierarchy\nNote: If the manager is not available this will return nullptr\neven if the bCreateIfNeeded flag is set to true.\r\n\r\nArgs:\r\n    create_if_needed (bool): Creates a controller if needed\r\n\r\nReturns:\r\n    ModularRigRuleManager: The Controller for this hierarchy",
+  "get_selected_hierarchy_keys": "x.get_selected_hierarchy_keys() -> Array[RigHierarchyKey]\r\nReturns the keys of selected elements and components\r\n\r\nReturns:\r\n    Array[RigHierarchyKey]: An array of the currently selected elements",
+  "get_selected_keys": "x.get_selected_keys(type_filter=RigElementType.ALL) -> Array[RigElementKey]\r\nReturns the keys of selected elements\r\nInTypeFilter: The types to retrieve the selection for\r\n\r\nArgs:\r\n    type_filter (RigElementType): \r\n\r\nReturns:\r\n    Array[RigElementKey]: An array of the currently selected elements",
+  "get_socket_states": "x.get_socket_states() -> Array[RigSocketState]\r\nReturns all of the sockets' state\r\n\r\nReturns:\r\n    Array[RigSocketState]:",
+  "get_sockets": "x.get_sockets(traverse=True) -> Array[RigElementKey]\r\nReturns all Socket elements\r\n\r\nArgs:\r\n    traverse (bool): Returns the elements in order of a depth first traversal\r\n\r\nReturns:\r\n    Array[RigElementKey]:",
+  "get_tags": "x.get_tags(item) -> Array[Name]\r\nReturns the tags for a given item\r\n\r\nArgs:\r\n    item (RigElementKey): The item to return the tags for\r\n\r\nReturns:\r\n    Array[Name]:",
+  "get_transform_array_metadata": "x.get_transform_array_metadata(item, metadata_name) -> Array[Transform]\r\nQueries and returns the value of FTransform array metadata\r\n\r\nArgs:\r\n    item (RigElementKey): The element key to return the metadata for\r\n    metadata_name (Name): The name of the metadata to query\r\n\r\nReturns:\r\n    Array[Transform]:",
+  "get_transform_from_control_value": "X.get_transform_from_control_value(value) -> Transform\r\nReturns the contained FTransform value from a a Rig Control Value\r\n\r\nArgs:\r\n    value (RigControlValue): The Rig Control value to convert from\r\n\r\nReturns:\r\n    Transform: The converted FTransform value",
+  "get_transform_metadata": "x.get_transform_metadata(item, metadata_name, default_value) -> Transform\r\nQueries and returns the value of FTransform metadata\r\n\r\nArgs:\r\n    item (RigElementKey): The element key to return the metadata for\r\n    metadata_name (Name): The name of the metadata to query\r\n    default_value (Transform): The default value to fall back on\r\n\r\nReturns:\r\n    Transform:",
+  "get_transform_no_scale_from_control_value": "X.get_transform_no_scale_from_control_value(value) -> TransformNoScale\r\nReturns the contained FTransformNoScale value from a a Rig Control Value\r\n\r\nArgs:\r\n    value (RigControlValue): The Rig Control value to convert from\r\n\r\nReturns:\r\n    TransformNoScale: The converted FTransformNoScale value",
+  "get_vector2d_from_control_value": "X.get_vector2d_from_control_value(value) -> Vector2D\r\nReturns the contained FVector2D value from a a Rig Control Value\r\n\r\nArgs:\r\n    value (RigControlValue): The Rig Control value to convert from\r\n\r\nReturns:\r\n    Vector2D: The converted FVector2D value",
+  "get_vector_array_metadata": "x.get_vector_array_metadata(item, metadata_name) -> Array[Vector]\r\nQueries and returns the value of FVector array metadata\r\n\r\nArgs:\r\n    item (RigElementKey): The element key to return the metadata for\r\n    metadata_name (Name): The name of the metadata to query\r\n\r\nReturns:\r\n    Array[Vector]:",
+  "get_vector_from_control_value": "X.get_vector_from_control_value(value) -> Vector\r\nReturns the contained FVector value from a a Rig Control Value\r\n\r\nArgs:\r\n    value (RigControlValue): The Rig Control value to convert from\r\n\r\nReturns:\r\n    Vector: The converted FVector value",
+  "get_vector_metadata": "x.get_vector_metadata(item, metadata_name, default_value) -> Vector\r\nQueries and returns the value of FVector metadata\r\n\r\nArgs:\r\n    item (RigElementKey): The element key to return the metadata for\r\n    metadata_name (Name): The name of the metadata to query\r\n    default_value (Vector): The default value to fall back on\r\n\r\nReturns:\r\n    Vector:",
+  "has_tag": "x.has_tag(item, tag) -> bool\r\nReturns true if a given item has a certain tag\r\n\r\nArgs:\r\n    item (RigElementKey): The item to return the tags for\r\n    tag (Name): The tag to check\r\n\r\nReturns:\r\n    bool:",
+  "is_component_selected": "x.is_component_selected(key) -> bool\r\nReturns true if a given component is selected\r\n\r\nArgs:\r\n    key (RigComponentKey): The key to check\r\n\r\nReturns:\r\n    bool: true if a given component is selected",
+  "is_controller_available": "x.is_controller_available() -> bool\r\nReturns true if the hierarchy controller is currently available\nThe controller may not be available during certain events.\nIf the controller is not available then GetController() will return nullptr.\r\n\r\nReturns:\r\n    bool:",
+  "is_curve_value_set": "x.is_curve_value_set(key) -> bool\r\nReturns whether a curve's value is set, given its key\r\n\r\nArgs:\r\n    key (RigElementKey): The key of the element to retrieve the value for\r\n\r\nReturns:\r\n    bool: Returns true if the value is set, false otherwise.",
+  "is_curve_value_set_by_index": "x.is_curve_value_set_by_index(element_index) -> bool\r\nReturns a curve's value given its index\r\n\r\nArgs:\r\n    element_index (int32): The index of the element to retrieve the value for\r\n\r\nReturns:\r\n    bool: Returns true if the value is set, false otherwise.",
+  "is_parented_to": "x.is_parented_to(child, parent, consider_inactive_parents=False) -> bool\r\nReturns true if an element is parented to another element\r\n\r\nArgs:\r\n    child (RigElementKey): The key of the child element to check for a parent\r\n    parent (RigElementKey): The key of the parent element to check for\r\n    consider_inactive_parents (bool): (Optional) when set to true, considers inactive parents, defaults to false.\r\n\r\nReturns:\r\n    bool: True if the given parent and given child have a parent-child relationship",
+  "is_procedural": "x.is_procedural(key) -> bool\r\nReturns true if the provided element is procedural.\r\n\r\nArgs:\r\n    key (RigElementKey): The key to validate\r\n\r\nReturns:\r\n    bool: Returns true if the element is procedural",
+  "is_selected": "x.is_selected(key) -> bool\r\nReturns true if a given element is selected\r\n\r\nArgs:\r\n    key (RigElementKey): The key to check\r\n\r\nReturns:\r\n    bool: true if a given element is selected",
+  "is_selected_by_index": "x.is_selected_by_index(index) -> bool\r\nReturns true if a given element is selected\r\n\r\nArgs:\r\n    index (int32): The index to check\r\n\r\nReturns:\r\n    bool: true if a given element is selected",
+  "is_valid_index": "x.is_valid_index(element_index) -> bool\r\nReturns true if the provided element index is valid\r\n\r\nArgs:\r\n    element_index (int32): The index to validate\r\n\r\nReturns:\r\n    bool: Returns true if the provided element index is valid",
+  "make_control_value_from_bool": "X.make_control_value_from_bool(value) -> RigControlValue\r\nCreates a rig control value from a bool value\r\n\r\nArgs:\r\n    value (bool): The value to create the rig control value from\r\n\r\nReturns:\r\n    RigControlValue: The converted control rig val ue",
+  "make_control_value_from_euler_transform": "X.make_control_value_from_euler_transform(value) -> RigControlValue\r\nCreates a rig control value from a FEulerTransform value\r\n\r\nArgs:\r\n    value (EulerTransform): The value to create the rig control value from\r\n\r\nReturns:\r\n    RigControlValue: The converted control rig val ue",
+  "make_control_value_from_float": "X.make_control_value_from_float(value) -> RigControlValue\r\nCreates a rig control value from a float value\r\n\r\nArgs:\r\n    value (float): The value to create the rig control value from\r\n\r\nReturns:\r\n    RigControlValue: The converted control rig val ue",
+  "make_control_value_from_int": "X.make_control_value_from_int(value) -> RigControlValue\r\nCreates a rig control value from a int32 value\r\n\r\nArgs:\r\n    value (int32): The value to create the rig control value from\r\n\r\nReturns:\r\n    RigControlValue: The converted control rig val ue",
+  "make_control_value_from_rotator": "X.make_control_value_from_rotator(value) -> RigControlValue\r\nCreates a rig control value from a FRotator value\r\n\r\nArgs:\r\n    value (Rotator): The value to create the rig control value from\r\n\r\nReturns:\r\n    RigControlValue: The converted control rig val ue",
+  "make_control_value_from_transform": "X.make_control_value_from_transform(value) -> RigControlValue\r\nCreates a rig control value from a FTransform value\r\n\r\nArgs:\r\n    value (Transform): The value to create the rig control value from\r\n\r\nReturns:\r\n    RigControlValue: The converted control rig val ue",
+  "make_control_value_from_transform_no_scale": "X.make_control_value_from_transform_no_scale(value) -> RigControlValue\r\nCreates a rig control value from a FTransformNoScale value\r\n\r\nArgs:\r\n    value (TransformNoScale): The value to create the rig control value from\r\n\r\nReturns:\r\n    RigControlValue: The converted control rig val ue",
+  "make_control_value_from_vector": "X.make_control_value_from_vector(value) -> RigControlValue\r\nCreates a rig control value from a FVector value\r\n\r\nArgs:\r\n    value (Vector): The value to create the rig control value from\r\n\r\nReturns:\r\n    RigControlValue: The converted control rig val ue",
+  "make_control_value_from_vector2d": "X.make_control_value_from_vector2d(value) -> RigControlValue\r\nCreates a rig control value from a FVector2D value\r\n\r\nArgs:\r\n    value (Vector2D): The value to create the rig control value from\r\n\r\nReturns:\r\n    RigControlValue: The converted control rig val ue",
+  "modified_event": "(RigHierarchyModifiedDynamicEvent):  [Read-Only]",
+  "num": "x.num() -> int32\r\nReturns the number of elements in the Hierarchy.\r\n\r\nReturns:\r\n    int32: The number of elements in the Hierarchy",
+  "num_components": "x.num_components(element) -> int32\r\nNum Components\r\n\r\nArgs:\r\n    element (RigElementKey): \r\n\r\nReturns:\r\n    int32:",
+  "remove_all_metadata": "x.remove_all_metadata(item) -> bool\r\nRemoves all of the metadata under a given item\r\n\r\nArgs:\r\n    item (RigElementKey): The element key to search under\r\n\r\nReturns:\r\n    bool:",
+  "remove_metadata": "x.remove_metadata(item, metadata_name) -> bool\r\nRemoves the metadata under a given element\r\n\r\nArgs:\r\n    item (RigElementKey): The element key to search under\r\n    metadata_name (Name): The name of the metadata to remove\r\n\r\nReturns:\r\n    bool:",
+  "reset": "x.reset() -> None\r\nClears the whole hierarchy and removes all elements.",
+  "reset_curve_values": "x.reset_curve_values() -> None\r\nResets all curves to 0.0",
+  "reset_pose_to_initial": "x.reset_pose_to_initial(type_filter) -> None\r\nResets the current pose of a filtered list of elements to the initial / ref pose.\r\n\r\nArgs:\r\n    type_filter (RigElementType):",
+  "reset_to_default": "x.reset_to_default() -> None\r\nResets the hierarchy to the state of its default. This refers to the\nhierarchy on the default object.",
+  "restore_connectors_from_states": "x.restore_connectors_from_states(states, setup_undo_redo=False) -> Array[RigElementKey]\r\nTry to restore the connectors from the state structs\r\n\r\nArgs:\r\n    states (Array[RigConnectorState]): \r\n    setup_undo_redo (bool): \r\n\r\nReturns:\r\n    Array[RigElementKey]:",
+  "restore_sockets_from_states": "x.restore_sockets_from_states(states, setup_undo_redo=False) -> Array[RigElementKey]\r\nTry to restore the sockets from the state structs\r\n\r\nArgs:\r\n    states (Array[RigSocketState]): \r\n    setup_undo_redo (bool): \r\n\r\nReturns:\r\n    Array[RigElementKey]:",
+  "send_auto_key_event": "x.send_auto_key_event(element, offset_in_seconds=0.000000, asynchronous=True) -> None\r\nSends an autokey event from the hierarchy to the world\r\n\r\nArgs:\r\n    element (RigElementKey): The element to send the autokey for\r\n    offset_in_seconds (float): The time offset in seconds\r\n    asynchronous (bool): If set to true the event will go on a thread safe queue",
+  "set_bool_array_metadata": "x.set_bool_array_metadata(item, metadata_name, value) -> bool\r\nSets the metadata to a bool array value\r\n\r\nArgs:\r\n    item (RigElementKey): The element key to set the metadata for\r\n    metadata_name (Name): The name of the metadata to set\r\n    value (Array[bool]): The value to set\r\n\r\nReturns:\r\n    bool: Returns true if setting the metadata was successful",
+  "set_bool_metadata": "x.set_bool_metadata(item, metadata_name, value) -> bool\r\nSets the metadata to a bool value\r\n\r\nArgs:\r\n    item (RigElementKey): The element key to set the metadata for\r\n    metadata_name (Name): The name of the metadata to set\r\n    value (bool): The value to set\r\n\r\nReturns:\r\n    bool: Returns true if setting the metadata was successful",
+  "set_connector_settings": "x.set_connector_settings(key, settings, setup_undo=False, force=False, print_python_commands=False) -> None\r\nSets the connector settings for a given connector element by key\r\n\r\nArgs:\r\n    key (RigElementKey): The key of the connector element to set the settings for\r\n    settings (RigConnectorSettings): The new connector settings value to set\r\n    setup_undo (bool): If true the transform stack will be setup for undo / redo\r\n    force (bool): \r\n    print_python_commands (bool):",
+  "set_connector_settings_by_index": "x.set_connector_settings_by_index(element_index, settings, setup_undo=False, force=False, print_python_commands=False) -> None\r\nSets the connector settings for a given connector element by index\r\n\r\nArgs:\r\n    element_index (int32): The index of the connector element to set the settings for\r\n    settings (RigConnectorSettings): The new connector settings value to set\r\n    setup_undo (bool): If true the transform stack will be setup for undo / redo\r\n    force (bool): \r\n    print_python_commands (bool):",
+  "set_control_offset_transform": "x.set_control_offset_transform(key, transform, initial=False, affect_children=True, setup_undo=False, print_python_commands=False) -> None\r\nSets the offset transform for a given control element by key\r\n\r\nArgs:\r\n    key (RigElementKey): The key of the control element to set the offset transform for\r\n    transform (Transform): The new offset transform value to set\r\n    initial (bool): If true the initial value will be used\r\n    affect_children (bool): If set to false children will not move (maintain global).\r\n    setup_undo (bool): If true the transform stack will be setup for undo / redo\r\n    print_python_commands (bool):",
+  "set_control_offset_transform_by_index": "x.set_control_offset_transform_by_index(element_index, transform, initial=False, affect_children=True, setup_undo=False, print_python_commands=False) -> None\r\nSets the local offset transform for a given control element by index\r\n\r\nArgs:\r\n    element_index (int32): The index of the control element to set the offset transform for\r\n    transform (Transform): The new local offset transform value to set\r\n    initial (bool): If true the initial value will be used\r\n    affect_children (bool): If set to false children will not move (maintain global).\r\n    setup_undo (bool): If true the transform stack will be setup for undo / redo\r\n    print_python_commands (bool):",
+  "set_control_preferred_euler_angles": "x.set_control_preferred_euler_angles(key, euler_angles, rotation_order, initial=False, fix_euler_flips=False) -> None\r\nSets a control's preferred euler angles (local transform rotation)\r\n\r\nArgs:\r\n    key (RigElementKey): The key of the element to retrieve the current value for\r\n    euler_angles (Vector): The new preferred euler angles to set\r\n    rotation_order (EulerRotationOrder): The rotation order to use when setting the euler angles\r\n    initial (bool): If true we'll return the preferred euler angles for the initial - otherwise current transform\r\n    fix_euler_flips (bool): If true the new euler angles value will use the shortest path",
+  "set_control_preferred_euler_angles_by_index": "x.set_control_preferred_euler_angles_by_index(element_index, euler_angles, rotation_order, initial=False, fix_euler_flips=False) -> None\r\nSets a control's preferred euler angles (local transform rotation)\r\n\r\nArgs:\r\n    element_index (int32): The element index to look up\r\n    euler_angles (Vector): The new preferred euler angles to set\r\n    rotation_order (EulerRotationOrder): The rotation order to use when setting the euler angles\r\n    initial (bool): If true we'll return the preferred euler angles for the initial - otherwise current transform\r\n    fix_euler_flips (bool): If true the new euler angles value will use the shortest path",
+  "set_control_preferred_rotation_order": "x.set_control_preferred_rotation_order(key, rotation_order) -> None\r\nSets a control's preferred euler rotation order\r\n\r\nArgs:\r\n    key (RigElementKey): The key of the element to retrieve the current value for\r\n    rotation_order (EulerRotationOrder): The rotation order to use when setting the euler angles",
+  "set_control_preferred_rotation_order_by_index": "x.set_control_preferred_rotation_order_by_index(element_index, rotation_order) -> None\r\nSets a control's preferred euler rotation order\r\n\r\nArgs:\r\n    element_index (int32): The element index to look up\r\n    rotation_order (EulerRotationOrder): The rotation order to use when setting the euler angles",
+  "set_control_preferred_rotator": "x.set_control_preferred_rotator(key, rotator, initial=False, fix_euler_flips=False) -> None\r\nSets a control's preferred rotator (local transform rotation)\r\n\r\nArgs:\r\n    key (RigElementKey): The key of the element to retrieve the current value for\r\n    rotator (Rotator): The new preferred rotator to set\r\n    initial (bool): If true we'll return the preferred rotator for the initial - otherwise current transform\r\n    fix_euler_flips (bool): If true the new rotator value will use the shortest path",
+  "set_control_preferred_rotator_by_index": "x.set_control_preferred_rotator_by_index(element_index, rotator, initial=False, fix_euler_flips=False) -> None\r\nSets a control's preferred rotator (local transform rotation)\r\n\r\nArgs:\r\n    element_index (int32): The element index to look up\r\n    rotator (Rotator): The new preferred rotator to set\r\n    initial (bool): If true we'll return the preferred rotator for the initial - otherwise current transform\r\n    fix_euler_flips (bool): If true the new rotator value will use the shortest path",
+  "set_control_settings": "x.set_control_settings(key, settings, setup_undo=False, force=False, print_python_commands=False) -> None\r\nSets the control settings for a given control element by key\r\n\r\nArgs:\r\n    key (RigElementKey): The key of the control element to set the settings for\r\n    settings (RigControlSettings): The new control settings value to set\r\n    setup_undo (bool): If true the transform stack will be setup for undo / redo\r\n    force (bool): \r\n    print_python_commands (bool):",
+  "set_control_settings_by_index": "x.set_control_settings_by_index(element_index, settings, setup_undo=False, force=False, print_python_commands=False) -> None\r\nSets the control settings for a given control element by index\r\n\r\nArgs:\r\n    element_index (int32): The index of the control element to set the settings for\r\n    settings (RigControlSettings): The new control settings value to set\r\n    setup_undo (bool): If true the transform stack will be setup for undo / redo\r\n    force (bool): \r\n    print_python_commands (bool):",
+  "set_control_shape_transform": "x.set_control_shape_transform(key, transform, initial=False, setup_undo=False) -> None\r\nSets the shape transform for a given control element by key\r\n\r\nArgs:\r\n    key (RigElementKey): The key of the control element to set the shape transform for\r\n    transform (Transform): The new shape transform value to set\r\n    initial (bool): If true the initial value will be used\r\n    setup_undo (bool): If true the transform stack will be setup for undo / redo",
+  "set_control_shape_transform_by_index": "x.set_control_shape_transform_by_index(element_index, transform, initial=False, setup_undo=False) -> None\r\nSets the local shape transform for a given control element by index\r\n\r\nArgs:\r\n    element_index (int32): The index of the control element to set the shape transform for\r\n    transform (Transform): The new local shape transform value to set\r\n    initial (bool): If true the initial value will be used\r\n    setup_undo (bool): If true the transform stack will be setup for undo / redo",
+  "set_control_value": "x.set_control_value(key, value, value_type=RigControlValueType.CURRENT, setup_undo=False, print_python_commands=False) -> None\r\nSets a control's current value given its key\r\n\r\nArgs:\r\n    key (RigElementKey): The key of the element to set the current value for\r\n    value (RigControlValue): The value to set on the control\r\n    value_type (RigControlValueType): The type of value to set\r\n    setup_undo (bool): If true the transform stack will be setup for undo / redo\r\n    print_python_commands (bool):",
+  "set_control_value_by_index": "x.set_control_value_by_index(element_index, value, value_type=RigControlValueType.CURRENT, setup_undo=False, print_python_commands=False) -> None\r\nSets a control's current value given its index\r\n\r\nArgs:\r\n    element_index (int32): The index of the element to set the current value for\r\n    value (RigControlValue): The value to set on the control\r\n    value_type (RigControlValueType): The type of value to set\r\n    setup_undo (bool): If true the transform stack will be setup for undo / redo\r\n    print_python_commands (bool):",
+  "set_control_visibility": "x.set_control_visibility(key, visibility) -> None\r\nSets a control's current visibility based on a key\r\n\r\nArgs:\r\n    key (RigElementKey): The key of the element to set the visibility for\r\n    visibility (bool): The visibility to set on the control",
+  "set_control_visibility_by_index": "x.set_control_visibility_by_index(element_index, visibility) -> None\r\nSets a control's current visibility based on a key\r\n\r\nArgs:\r\n    element_index (int32): The index of the element to set the visibility for\r\n    visibility (bool): The visibility to set on the control",
+  "set_curve_value": "x.set_curve_value(key, value, setup_undo=False) -> None\r\nSets a curve's value given its key\r\n\r\nArgs:\r\n    key (RigElementKey): The key of the element to set the value for\r\n    value (float): The value to set on the curve\r\n    setup_undo (bool): If true the transform stack will be setup for undo / redo",
+  "set_curve_value_by_index": "x.set_curve_value_by_index(element_index, value, setup_undo=False) -> None\r\nSets a curve's value given its index\r\n\r\nArgs:\r\n    element_index (int32): The index of the element to set the value for\r\n    value (float): The value to set on the curve\r\n    setup_undo (bool): If true the transform stack will be setup for undo / redo",
+  "set_float_array_metadata": "x.set_float_array_metadata(item, metadata_name, value) -> bool\r\nSets the metadata to a float array value\r\n\r\nArgs:\r\n    item (RigElementKey): The element key to set the metadata for\r\n    metadata_name (Name): The name of the metadata to set\r\n    value (Array[float]): The value to set\r\n\r\nReturns:\r\n    bool: Returns true if setting the metadata was successful",
+  "set_float_metadata": "x.set_float_metadata(item, metadata_name, value) -> bool\r\nSets the metadata to a float value\r\n\r\nArgs:\r\n    item (RigElementKey): The element key to set the metadata for\r\n    metadata_name (Name): The name of the metadata to set\r\n    value (float): The value to set\r\n\r\nReturns:\r\n    bool: Returns true if setting the metadata was successful",
+  "set_global_transform": "x.set_global_transform(key, transform, initial=False, affect_children=True, setup_undo=False, print_python_command=False) -> None\r\nSets the global current or initial transform for a given key.\r\n\r\nArgs:\r\n    key (RigElementKey): The key to set the transform for\r\n    transform (Transform): The new transform value to set\r\n    initial (bool): If true the initial transform will be used\r\n    affect_children (bool): If set to false children will not move (maintain global).\r\n    setup_undo (bool): If true the transform stack will be setup for undo / redo\r\n    print_python_command (bool):",
+  "set_global_transform_by_index": "x.set_global_transform_by_index(element_index, transform, initial=False, affect_children=True, setup_undo=False, print_python_command=False) -> None\r\nSets the global current or initial transform for a given element index.\r\n\r\nArgs:\r\n    element_index (int32): The index of the element to set the transform for\r\n    transform (Transform): The new transform value to set\r\n    initial (bool): If true the initial transform will be used\r\n    affect_children (bool): If set to false children will not move (maintain global).\r\n    setup_undo (bool): If true the transform stack will be setup for undo / redo\r\n    print_python_command (bool):",
+  "set_int32_array_metadata": "x.set_int32_array_metadata(item, metadata_name, value) -> bool\r\nSets the metadata to a int32 array value\r\n\r\nArgs:\r\n    item (RigElementKey): The element key to set the metadata for\r\n    metadata_name (Name): The name of the metadata to set\r\n    value (Array[int32]): The value to set\r\n\r\nReturns:\r\n    bool: Returns true if setting the metadata was successful",
+  "set_int32_metadata": "x.set_int32_metadata(item, metadata_name, value) -> bool\r\nSets the metadata to a int32 value\r\n\r\nArgs:\r\n    item (RigElementKey): The element key to set the metadata for\r\n    metadata_name (Name): The name of the metadata to set\r\n    value (int32): The value to set\r\n\r\nReturns:\r\n    bool: Returns true if setting the metadata was successful",
+  "set_linear_color_array_metadata": "x.set_linear_color_array_metadata(item, metadata_name, value) -> bool\r\nSets the metadata to a FLinearColor array value\r\n\r\nArgs:\r\n    item (RigElementKey): The element key to set the metadata for\r\n    metadata_name (Name): The name of the metadata to set\r\n    value (Array[LinearColor]): The value to set\r\n\r\nReturns:\r\n    bool: Returns true if setting the metadata was successful",
+  "set_linear_color_metadata": "x.set_linear_color_metadata(item, metadata_name, value) -> bool\r\nSets the metadata to a FLinearColor value\r\n\r\nArgs:\r\n    item (RigElementKey): The element key to set the metadata for\r\n    metadata_name (Name): The name of the metadata to set\r\n    value (LinearColor): The value to set\r\n\r\nReturns:\r\n    bool: Returns true if setting the metadata was successful",
+  "set_local_transform": "x.set_local_transform(key, transform, initial=False, affect_children=True, setup_undo=False, print_python_commands=False) -> None\r\nSets the local current or initial transform for a given key.\r\n\r\nArgs:\r\n    key (RigElementKey): The key to set the transform for\r\n    transform (Transform): The new transform value to set\r\n    initial (bool): If true the initial transform will be used\r\n    affect_children (bool): If set to false children will not move (maintain global).\r\n    setup_undo (bool): If true the transform stack will be setup for undo / redo\r\n    print_python_commands (bool):",
+  "set_local_transform_by_index": "x.set_local_transform_by_index(element_index, transform, initial=False, affect_children=True, setup_undo=False, print_python_commands=False) -> None\r\nSets the local current or initial transform for a given element index.\r\n\r\nArgs:\r\n    element_index (int32): The index of the element to set the transform for\r\n    transform (Transform): The new transform value to set\r\n    initial (bool): If true the initial transform will be used\r\n    affect_children (bool): If set to false children will not move (maintain global).\r\n    setup_undo (bool): If true the transform stack will be setup for undo / redo\r\n    print_python_commands (bool):",
+  "set_name_array_metadata": "x.set_name_array_metadata(item, metadata_name, value) -> bool\r\nSets the metadata to a FName array value\r\n\r\nArgs:\r\n    item (RigElementKey): The element key to set the metadata for\r\n    metadata_name (Name): The name of the metadata to set\r\n    value (Array[Name]): The value to set\r\n\r\nReturns:\r\n    bool: Returns true if setting the metadata was successful",
+  "set_name_metadata": "x.set_name_metadata(item, metadata_name, value) -> bool\r\nSets the metadata to a FName value\r\n\r\nArgs:\r\n    item (RigElementKey): The element key to set the metadata for\r\n    metadata_name (Name): The name of the metadata to set\r\n    value (Name): The value to set\r\n\r\nReturns:\r\n    bool: Returns true if setting the metadata was successful",
+  "set_parent_weight": "x.set_parent_weight(child, parent, weight, initial=False, affect_children=True) -> bool\r\nSets the weight of a parent below a multi parent element\r\n\r\nArgs:\r\n    child (RigElementKey): The key of the multi parented element\r\n    parent (RigElementKey): The key of the parent to look up the weight for\r\n    weight (RigElementWeight): The new weight to set for the parent\r\n    initial (bool): If true the initial weights will be used\r\n    affect_children (bool): If set to false children will not move (maintain global).\r\n\r\nReturns:\r\n    bool: Returns true if changing the weight was successful",
+  "set_parent_weight_array": "x.set_parent_weight_array(child, weights, initial=False, affect_children=True) -> bool\r\nSets the all of the weights of the parents of a multi parent element\r\n\r\nArgs:\r\n    child (RigElementKey): The key of the multi parented element\r\n    weights (Array[RigElementWeight]): The new weights to set for the parents\r\n    initial (bool): If true the initial weights will be used\r\n    affect_children (bool): If set to false children will not move (maintain global).\r\n\r\nReturns:\r\n    bool: Returns true if changing the weight was successful",
+  "set_pose": "x.set_pose(pose) -> None\r\nSets the current / initial pose of the hierarchy\r\n\r\nArgs:\r\n    pose (RigPose): The pose to set on the hierarchy",
+  "set_quat_array_metadata": "x.set_quat_array_metadata(item, metadata_name, value) -> bool\r\nSets the metadata to a FQuat array value\r\n\r\nArgs:\r\n    item (RigElementKey): The element key to set the metadata for\r\n    metadata_name (Name): The name of the metadata to set\r\n    value (Array[Quat]): The value to set\r\n\r\nReturns:\r\n    bool: Returns true if setting the metadata was successful",
+  "set_quat_metadata": "x.set_quat_metadata(item, metadata_name, value) -> bool\r\nSets the metadata to a FQuat value\r\n\r\nArgs:\r\n    item (RigElementKey): The element key to set the metadata for\r\n    metadata_name (Name): The name of the metadata to set\r\n    value (Quat): The value to set\r\n\r\nReturns:\r\n    bool: Returns true if setting the metadata was successful",
+  "set_rig_element_key_array_metadata": "x.set_rig_element_key_array_metadata(item, metadata_name, value) -> bool\r\nSets the metadata to a FRigElementKey array value\r\n\r\nArgs:\r\n    item (RigElementKey): The element key to set the metadata for\r\n    metadata_name (Name): The name of the metadata to set\r\n    value (Array[RigElementKey]): The value to set\r\n\r\nReturns:\r\n    bool: Returns true if setting the metadata was successful",
+  "set_rig_element_key_metadata": "x.set_rig_element_key_metadata(item, metadata_name, value) -> bool\r\nSets the metadata to a FRigElementKey value\r\n\r\nArgs:\r\n    item (RigElementKey): The element key to set the metadata for\r\n    metadata_name (Name): The name of the metadata to set\r\n    value (RigElementKey): The value to set\r\n\r\nReturns:\r\n    bool: Returns true if setting the metadata was successful",
+  "set_rotator_array_metadata": "x.set_rotator_array_metadata(item, metadata_name, value) -> bool\r\nSets the metadata to a FRotator array value\r\n\r\nArgs:\r\n    item (RigElementKey): The element key to set the metadata for\r\n    metadata_name (Name): The name of the metadata to set\r\n    value (Array[Rotator]): The value to set\r\n\r\nReturns:\r\n    bool: Returns true if setting the metadata was successful",
+  "set_rotator_metadata": "x.set_rotator_metadata(item, metadata_name, value) -> bool\r\nSets the metadata to a FRotator value\r\n\r\nArgs:\r\n    item (RigElementKey): The element key to set the metadata for\r\n    metadata_name (Name): The name of the metadata to set\r\n    value (Rotator): The value to set\r\n\r\nReturns:\r\n    bool: Returns true if setting the metadata was successful",
+  "set_tag": "x.set_tag(item, tag) -> bool\r\nSets a tag on an element in the hierarchy\r\n\r\nArgs:\r\n    item (RigElementKey): The item to set the tag for\r\n    tag (Name): The tag to set\r\n\r\nReturns:\r\n    bool:",
+  "set_transform_array_metadata": "x.set_transform_array_metadata(item, metadata_name, value) -> bool\r\nSets the metadata to a FTransform array value\r\n\r\nArgs:\r\n    item (RigElementKey): The element key to set the metadata for\r\n    metadata_name (Name): The name of the metadata to set\r\n    value (Array[Transform]): The value to set\r\n\r\nReturns:\r\n    bool: Returns true if setting the metadata was successful",
+  "set_transform_metadata": "x.set_transform_metadata(item, metadata_name, value) -> bool\r\nSets the metadata to a FTransform value\r\n\r\nArgs:\r\n    item (RigElementKey): The element key to set the metadata for\r\n    metadata_name (Name): The name of the metadata to set\r\n    value (Transform): The value to set\r\n\r\nReturns:\r\n    bool: Returns true if setting the metadata was successful",
+  "set_vector_array_metadata": "x.set_vector_array_metadata(item, metadata_name, value) -> bool\r\nSets the metadata to a FVector array value\r\n\r\nArgs:\r\n    item (RigElementKey): The element key to set the metadata for\r\n    metadata_name (Name): The name of the metadata to set\r\n    value (Array[Vector]): The value to set\r\n\r\nReturns:\r\n    bool: Returns true if setting the metadata was successful",
+  "set_vector_metadata": "x.set_vector_metadata(item, metadata_name, value) -> bool\r\nSets the metadata to a FVector value\r\n\r\nArgs:\r\n    item (RigElementKey): The element key to set the metadata for\r\n    metadata_name (Name): The name of the metadata to set\r\n    value (Vector): The value to set\r\n\r\nReturns:\r\n    bool: Returns true if setting the metadata was successful",
+  "sort_keys": "x.sort_keys(keys) -> Array[RigElementKey]\r\nSorts the input key list by traversing the hierarchy\r\n\r\nArgs:\r\n    keys (Array[RigElementKey]): The keys to sort\r\n\r\nReturns:\r\n    Array[RigElementKey]: The sorted keys",
+  "switch_to_default_parent": "x.switch_to_default_parent(child, initial=False, affect_children=True) -> bool\r\nSwitches a multi parent element to its first parent\r\n\r\nArgs:\r\n    child (RigElementKey): The key of the multi parented element\r\n    initial (bool): If true the initial weights will be used\r\n    affect_children (bool): If set to false children will not move (maintain global).\r\n\r\nReturns:\r\n    bool: Returns true if changing the weight was successful",
+  "switch_to_parent": "x.switch_to_parent(child, parent, initial=False, affect_children=True) -> bool\r\nSwitches a multi parent element to a single parent.\nThis sets the new parent's weight to 1.0 and disables\nweights for all other potential parents.\r\n\r\nArgs:\r\n    child (RigElementKey): The key of the multi parented element\r\n    parent (RigElementKey): The key of the parent to look up the weight for\r\n    initial (bool): If true the initial weights will be used\r\n    affect_children (bool): If set to false children will not move (maintain global).\r\n\r\nReturns:\r\n    bool: Returns true if changing the weight was successful",
+  "switch_to_world_space": "x.switch_to_world_space(child, initial=False, affect_children=True) -> bool\r\nSwitches a multi parent element to world space.\nThis injects a world space reference.\r\n\r\nArgs:\r\n    child (RigElementKey): The key of the multi parented element\r\n    initial (bool): If true the initial weights will be used\r\n    affect_children (bool): If set to false children will not move (maintain global).\r\n\r\nReturns:\r\n    bool: Returns true if changing the weight was successful",
+  "unset_curve_value": "x.unset_curve_value(key, setup_undo=False) -> None\r\nSets a curve's value given its key\r\n\r\nArgs:\r\n    key (RigElementKey): The key of the element to set the value for\r\n    setup_undo (bool): If true the transform stack will be setup for undo / redo",
+  "unset_curve_value_by_index": "x.unset_curve_value_by_index(element_index, setup_undo=False) -> None\r\nSets a curve's value given its index\r\n\r\nArgs:\r\n    element_index (int32): The index of the element to set the value for\r\n    setup_undo (bool): If true the transform stack will be setup for undo / redo"
+ },
+ "/Game/Furina/ABP_Furina": [
+  {
+   "name": "AnimGraphNode_Root_0",
+   "graph": "AnimGraph",
+   "class": "AnimGraphNode_Root",
+   "node": "(Result=(LinkID=-1,SourceLinkID=-1),Name=\"\",LayerGroup=\"DefaultSharedGroup\",InitialUpdateFunction=(ClassName=\"\",FunctionName=\"\"),BecomeRelevantFunction=(ClassName=\"\",FunctionName=\"\"),UpdateFunction=(ClassName=\"\",FunctionName=\"\"))",
+   "pins": [
+    {
+     "name": "Result",
+     "value": "(LinkID=-1,SourceLinkID=-1)",
+     "links": [
+      "AnimGraphNode_ComponentToLocalSpace_0.Pose"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "AnimGraphNode_RetargetPoseFromMesh_0",
+   "graph": "AnimGraph",
+   "class": "AnimGraphNode_RetargetPoseFromMesh",
+   "node": "(Source=(LinkID=-1,SourceLinkID=-1),RetargetFrom=ParentSkeletalMeshComponent,IKRetargeterAsset=\"/Script/IKRig.IKRetargeter'/Game/Furina/Retarget/RTG_Manny_To_Furina.RTG_Manny_To_Furina'\",CustomRetargetProfile=(RetargetOpProfiles=,bApplyTargetRetargetPose=False,TargetRetargetPoseName=\"\",bApplySourceRetargetPose=False,SourceRetargetPoseName=\"\",bForceAllIKOff=False,bApplyChainSettings=False,ChainSettings=(),bApplyRootSettings=False,RootSettings=(RotationAlpha=1.000000,TranslationAlpha=1.000000,BlendToSource=0.000000,BlendToSourceWeights=(X=1.000000,Y=1.000000,Z=1.000000),ScaleHorizontal=1.000000,ScaleVertical=1.000000,TranslationOffset=(X=0.000000,Y=0.000000,Z=0.000000),RotationOffset=(Pitch=0.000000,Yaw=0.000000,Roll=0.000000),AffectIKHorizontal=1.000000,AffectIKVertical=0.000000),bApplyGlobalSettings=False,GlobalSettings=(bEnableRoot=True,bEnableFK=True,bEnableIK=True,bEnablePost=True,bCopyBasePose=False,CopyBasePoseRoot=\"\",SourceScaleFactor=1.000000,bWarping=False,DirectionSource=Goals,ForwardDirection=Y,DirectionChain=\"\",WarpForwards=1.000000,SidewaysOffset=0.000000,WarpSplay=1.000000)),bUseCustomOverrideSets=False,OverrideSetsToApply=,LODThreshold=-1,LODThresholdForIK=-1,bSuppressWarnings=False,SourcePropertyNames=,DestPropertyNames=,InitialUpdateFunction=(ClassName=\"\",FunctionName=\"\"),BecomeRelevantFunction=(ClassName=\"\",FunctionName=\"\"),UpdateFunction=(ClassName=\"\",FunctionName=\"\"))",
+   "pins": [
+    {
+     "name": "Pose",
+     "value": "",
+     "links": [
+      "AnimGraphNode_TwoWayBlend_1.A"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "AnimGraphNode_SequencePlayer_1",
+   "graph": "AnimGraph",
+   "class": "AnimGraphNode_SequencePlayer",
+   "node": "(GroupName=\"\",GroupRole=CanBeLeader,bOverridePositionWhenJoiningSyncGroupAsLeader=False,Method=DoNotSync,bIgnoreForRelevancyTest=False,Sequence=\"/Script/Engine.AnimSequence'/Game/Furina/Anim/AS_Furina_Walk.AS_Furina_Walk'\",PlayRateBasis=1.000000,PlayRate=1.000000,PlayRateScaleBiasClampConstants=(bMapRange=False,bClampResult=False,bInterpResult=False,InRange=(Min=0.000000,Max=1.000000),OutRange=(Min=0.000000,Max=1.000000),Scale=1.000000,Bias=0.000000,ClampMin=0.000000,ClampMax=1.000000,InterpSpeedIncreasing=10.000000,InterpSpeedDecreasing=10.000000),StartPosition=0.000000,bLoopAnimation=True,bStartFromMatchingPose=False,PlayRateScaleBiasClampState=(),InitialUpdateFunction=(ClassName=\"\",FunctionName=\"\"),BecomeRelevantFunction=(ClassName=\"\",FunctionName=\"\"),UpdateFunction=(ClassName=\"\",FunctionName=\"\"))",
+   "pins": [
+    {
+     "name": "Pose",
+     "value": "",
+     "links": [
+      "AnimGraphNode_TwoWayBlend_1.B"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "AnimGraphNode_TwoWayBlend_1",
+   "graph": "AnimGraph",
+   "class": "AnimGraphNode_TwoWayBlend",
+   "node": "AnimGraphNode_TwoWayBlend: Failed to find property 'node' for attribute 'node' on 'AnimGraphNode_TwoWayBlend'",
+   "pins": [
+    {
+     "name": "A",
+     "value": "(LinkID=-1,SourceLinkID=-1)",
+     "links": [
+      "AnimGraphNode_RetargetPoseFromMesh_0.Pose"
+     ]
+    },
+    {
+     "name": "B",
+     "value": "(LinkID=-1,SourceLinkID=-1)",
+     "links": [
+      "AnimGraphNode_SequencePlayer_1.Pose"
+     ]
+    },
+    {
+     "name": "AlphaCurveName",
+     "value": "FurinaWalk",
+     "links": []
+    },
+    {
+     "name": "Pose",
+     "value": "",
+     "links": [
+      "AnimGraphNode_TwoWayBlend_0.A"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "AnimGraphNode_SequencePlayer_0",
+   "graph": "AnimGraph",
+   "class": "AnimGraphNode_SequencePlayer",
+   "node": "(GroupName=\"\",GroupRole=CanBeLeader,bOverridePositionWhenJoiningSyncGroupAsLeader=False,Method=DoNotSync,bIgnoreForRelevancyTest=False,Sequence=\"/Script/Engine.AnimSequence'/Game/Furina/Anim/AS_Furina_Idle.AS_Furina_Idle'\",PlayRateBasis=1.000000,PlayRate=1.000000,PlayRateScaleBiasClampConstants=(bMapRange=False,bClampResult=False,bInterpResult=False,InRange=(Min=0.000000,Max=1.000000),OutRange=(Min=0.000000,Max=1.000000),Scale=1.000000,Bias=0.000000,ClampMin=0.000000,ClampMax=1.000000,InterpSpeedIncreasing=10.000000,InterpSpeedDecreasing=10.000000),StartPosition=0.000000,bLoopAnimation=True,bStartFromMatchingPose=False,PlayRateScaleBiasClampState=(),InitialUpdateFunction=(ClassName=\"\",FunctionName=\"\"),BecomeRelevantFunction=(ClassName=\"\",FunctionName=\"\"),UpdateFunction=(ClassName=\"\",FunctionName=\"\"))",
+   "pins": [
+    {
+     "name": "Pose",
+     "value": "",
+     "links": [
+      "AnimGraphNode_TwoWayBlend_0.B"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "AnimGraphNode_TwoWayBlend_0",
+   "graph": "AnimGraph",
+   "class": "AnimGraphNode_TwoWayBlend",
+   "node": "AnimGraphNode_TwoWayBlend: Failed to find property 'node' for attribute 'node' on 'AnimGraphNode_TwoWayBlend'",
+   "pins": [
+    {
+     "name": "A",
+     "value": "(LinkID=-1,SourceLinkID=-1)",
+     "links": [
+      "AnimGraphNode_TwoWayBlend_1.Pose"
+     ]
+    },
+    {
+     "name": "B",
+     "value": "(LinkID=-1,SourceLinkID=-1)",
+     "links": [
+      "AnimGraphNode_SequencePlayer_0.Pose"
+     ]
+    },
+    {
+     "name": "AlphaCurveName",
+     "value": "FurinaIdle",
+     "links": []
+    },
+    {
+     "name": "Pose",
+     "value": "",
+     "links": [
+      "AnimGraphNode_LayeredBoneBlend_0.BlendPoses_0"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "AnimGraphNode_RetargetPoseFromMesh_1",
+   "graph": "AnimGraph",
+   "class": "AnimGraphNode_RetargetPoseFromMesh",
+   "node": "(Source=(LinkID=-1,SourceLinkID=-1),RetargetFrom=ParentSkeletalMeshComponent,IKRetargeterAsset=\"/Script/IKRig.IKRetargeter'/Game/Furina/Retarget/RTG_Manny_To_Furina.RTG_Manny_To_Furina'\",CustomRetargetProfile=(RetargetOpProfiles=,bApplyTargetRetargetPose=False,TargetRetargetPoseName=\"\",bApplySourceRetargetPose=False,SourceRetargetPoseName=\"\",bForceAllIKOff=False,bApplyChainSettings=False,ChainSettings=(),bApplyRootSettings=False,RootSettings=(RotationAlpha=1.000000,TranslationAlpha=1.000000,BlendToSource=0.000000,BlendToSourceWeights=(X=1.000000,Y=1.000000,Z=1.000000),ScaleHorizontal=1.000000,ScaleVertical=1.000000,TranslationOffset=(X=0.000000,Y=0.000000,Z=0.000000),RotationOffset=(Pitch=0.000000,Yaw=0.000000,Roll=0.000000),AffectIKHorizontal=1.000000,AffectIKVertical=0.000000),bApplyGlobalSettings=False,GlobalSettings=(bEnableRoot=True,bEnableFK=True,bEnableIK=True,bEnablePost=True,bCopyBasePose=False,CopyBasePoseRoot=\"\",SourceScaleFactor=1.000000,bWarping=False,DirectionSource=Goals,ForwardDirection=Y,DirectionChain=\"\",WarpForwards=1.000000,SidewaysOffset=0.000000,WarpSplay=1.000000)),bUseCustomOverrideSets=False,OverrideSetsToApply=,LODThreshold=-1,LODThresholdForIK=-1,bSuppressWarnings=False,SourcePropertyNames=,DestPropertyNames=,InitialUpdateFunction=(ClassName=\"\",FunctionName=\"\"),BecomeRelevantFunction=(ClassName=\"\",FunctionName=\"\"),UpdateFunction=(ClassName=\"\",FunctionName=\"\"))",
+   "pins": [
+    {
+     "name": "Pose",
+     "value": "",
+     "links": [
+      "AnimGraphNode_LayeredBoneBlend_0.BasePose"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "AnimGraphNode_LayeredBoneBlend_0",
+   "graph": "AnimGraph",
+   "class": "AnimGraphNode_LayeredBoneBlend",
+   "node": "(BasePose=(LinkID=-1,SourceLinkID=-1),BlendPoses=(()),BlendMode=BranchFilter,BlendMasks=,LayerSetup=((BranchFilters=((BoneName=\"Hips\")))),BlendWeights=(1.000000),PerBoneBlendWeights=,SkeletonGuid=00000000000000000000000000000000,VirtualBoneGuid=00000000000000000000000000000000,LODThreshold=-1,bMeshSpaceRotationBlend=False,bRootSpaceRotationBlend=False,bMeshSpaceScaleBlend=False,CurveBlendOption=UseMaxValue,bBlendRootMotionBasedOnRootBone=True,bUpdateBasePoseFirst=False,InitialUpdateFunction=(ClassName=\"\",FunctionName=\"\"),BecomeRelevantFunction=(ClassName=\"\",FunctionName=\"\"),UpdateFunction=(ClassName=\"\",FunctionName=\"\"))",
+   "pins": [
+    {
+     "name": "BasePose",
+     "value": "(LinkID=-1,SourceLinkID=-1)",
+     "links": [
+      "AnimGraphNode_RetargetPoseFromMesh_1.Pose"
+     ]
+    },
+    {
+     "name": "BlendPoses_0",
+     "value": "(LinkID=-1,SourceLinkID=-1)",
+     "links": [
+      "AnimGraphNode_TwoWayBlend_0.Pose"
+     ]
+    },
+    {
+     "name": "BlendWeights_0",
+     "value": "1.000000",
+     "links": []
+    },
+    {
+     "name": "Pose",
+     "value": "",
+     "links": [
+      "AnimGraphNode_ControlRig_0.Source"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "AnimGraphNode_ControlRig_0",
+   "graph": "AnimGraph",
+   "class": "AnimGraphNode_ControlRig",
+   "node": "(ControlRigAssetReference=(BlueprintRigClass=\"/Script/ControlRig.ControlRigBlueprintGeneratedClass'/Game/Furina/CR_FurinaSecondary.CR_FurinaSecondary_C'\",ControlRigAsset=None),DefaultControlRigAssetReference=(BlueprintRigClass=None,ControlRigAsset=None),Alpha=1.000000,AlphaInputType=Float,bAlphaBoolEnabled=True,bSetRefPoseFromSkeleton=False,AlphaScaleBias=(Scale=1.000000,Bias=0.000000),AlphaBoolBlend=(BlendInTime=0.000000,BlendOutTime=0.000000,BlendOption=HermiteCubic,CustomCurve=None),AlphaCurveName=\"\",AlphaScaleBiasClamp=(bMapRange=False,bClampResult=False,bInterpResult=False,InRange=(Min=0.000000,Max=1.000000),OutRange=(Min=0.000000,Max=1.000000),Scale=1.000000,Bias=0.000000,ClampMin=0.000000,ClampMax=1.000000,InterpSpeedIncreasing=10.000000,InterpSpeedDecreasing=10.000000),InputMapping=(),OutputMapping=(),LODThreshold=-1,Source=(LinkID=-1,SourceLinkID=-1),bResetInputPoseToInitial=True,bTransferInputPose=True,bTransferInputCurves=True,bTransferPoseInGlobalSpace=False,InputBonesToTransfer=,OutputBonesToTransfer=,AssetUserData=,EventQueue=,SourcePropertyNames=,DestPropertyNames=,InitialUpdateFunction=(ClassName=\"\",FunctionName=\"\"),BecomeRelevantFunction=(ClassName=\"\",FunctionName=\"\"),UpdateFunction=(ClassName=\"\",FunctionName=\"\"))",
+   "pins": [
+    {
+     "name": "Source",
+     "value": "(LinkID=-1,SourceLinkID=-1)",
+     "links": [
+      "AnimGraphNode_LayeredBoneBlend_0.Pose"
+     ]
+    },
+    {
+     "name": "Alpha",
+     "value": "1.000000",
+     "links": []
+    },
+    {
+     "name": "Pose",
+     "value": "",
+     "links": [
+      "AnimGraphNode_LocalToComponentSpace_0.LocalPose"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "AnimGraphNode_LocalToComponentSpace_0",
+   "graph": "AnimGraph",
+   "class": "AnimGraphNode_LocalToComponentSpace",
+   "node": "(LocalPose=(LinkID=-1,SourceLinkID=-1),InitialUpdateFunction=(ClassName=\"\",FunctionName=\"\"),BecomeRelevantFunction=(ClassName=\"\",FunctionName=\"\"),UpdateFunction=(ClassName=\"\",FunctionName=\"\"))",
+   "pins": [
+    {
+     "name": "LocalPose",
+     "value": "(LinkID=-1,SourceLinkID=-1)",
+     "links": [
+      "AnimGraphNode_ControlRig_0.Pose"
+     ]
+    },
+    {
+     "name": "ComponentPose",
+     "value": "",
+     "links": [
+      "AnimGraphNode_AnimDynamics_0.ComponentPose"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "AnimGraphNode_AnimDynamics_0",
+   "graph": "AnimGraph",
+   "class": "AnimGraphNode_AnimDynamics",
+   "node": "(LinearDampingOverride=0.990000,AngularDampingOverride=0.990000,RelativeSpaceBone=(BoneName=\"\"),BoundBone=(BoneName=\"F_0_1_L\"),ChainEnd=(BoneName=\"F_17_1_L\"),PhysicsBodyDefinitions=((BoundBone=(BoneName=\"F_0_1_L\"),BoxExtents=(X=2.000000,Y=2.000000,Z=2.000000),ConstraintSetup=(TwistAxis=AxisY,AngularTargetAxis=AxisY,AngularLimitsMin=(X=-22.000000,Y=-6.600000,Z=-22.000000),AngularLimitsMax=(X=22.000000,Y=6.600000,Z=22.000000),AngularTarget=(X=0.000000,Y=1.000000,Z=0.000000)),CollisionType=CustomSphere,SphereCollisionRadius=1.000000),(BoundBone=(BoneName=\"F_1_1_L\"),BoxExtents=(X=2.070000,Y=2.070000,Z=2.070000),ConstraintSetup=(TwistAxis=AxisY,AngularTargetAxis=AxisY,AngularLimitsMin=(X=-46.600000,Y=-29.300000,Z=-46.600000),AngularLimitsMax=(X=46.600000,Y=29.300000,Z=46.600000),AngularTarget=(X=-0.079400,Y=0.398100,Z=0.913900)),CollisionType=CustomSphere,SphereCollisionRadius=1.040000),(BoundBone=(BoneName=\"F_2_1_L\"),BoxExtents=(X=2.140000,Y=2.140000,Z=2.140000),ConstraintSetup=(TwistAxis=AxisY,AngularTargetAxis=AxisY,AngularLimitsMin=(X=-38.600000,Y=-19.400000,Z=-38.600000),AngularLimitsMax=(X=38.600000,Y=19.400000,Z=38.600000),AngularTarget=(X=-0.237300,Y=0.354700,Z=0.904400)),CollisionType=CustomSphere,SphereCollisionRadius=1.070000),(BoundBone=(BoneName=\"F_3_1_L\"),BoxExtents=(X=2.210000,Y=2.210000,Z=2.210000),ConstraintSetup=(TwistAxis=AxisY,AngularTargetAxis=AxisY,AngularLimitsMin=(X=-35.500000,Y=-14.500000,Z=-35.500000),AngularLimitsMax=(X=35.500000,Y=14.500000,Z=35.500000),AngularTarget=(X=-0.311200,Y=0.359100,Z=0.879900)),CollisionType=CustomSphere,SphereCollisionRadius=1.110000),(BoundBone=(BoneName=\"F_4_1_L\"),BoxExtents=(X=2.280000,Y=2.280000,Z=2.280000),ConstraintSetup=(TwistAxis=AxisY,AngularTargetAxis=AxisY,AngularLimitsMin=(X=-36.100000,Y=-13.100000,Z=-36.100000),AngularLimitsMax=(X=36.100000,Y=13.100000,Z=36.100000),AngularTarget=(X=-0.337400,Y=0.396500,Z=0.853800)),CollisionType=CustomSphere,SphereCollisionRadius=1.140000),(BoundBone=(BoneName=\"F_5_1_L\"),BoxExtents=(X=2.350000,Y=2.350000,Z=2.350000),ConstraintSetup=(TwistAxis=AxisY,AngularTargetAxis=AxisY,AngularLimitsMin=(X=-39.400000,Y=-13.800000,Z=-39.400000),AngularLimitsMax=(X=39.400000,Y=13.800000,Z=39.400000),AngularTarget=(X=-0.330900,Y=0.457000,Z=0.825600)),CollisionType=CustomSphere,SphereCollisionRadius=1.180000),(BoundBone=(BoneName=\"F_6_1_L\"),BoxExtents=(X=2.420000,Y=2.420000,Z=2.420000),ConstraintSetup=(TwistAxis=AxisY,AngularTargetAxis=AxisY,AngularLimitsMin=(X=-43.400000,Y=-15.200000,Z=-43.400000),AngularLimitsMax=(X=43.400000,Y=15.200000,Z=43.400000),AngularTarget=(X=-0.297900,Y=0.532900,Z=0.792000)),CollisionType=CustomSphere,SphereCollisionRadius=1.210000),(BoundBone=(BoneName=\"F_7_1_L\"),BoxExtents=(X=2.490000,Y=2.490000,Z=2.490000),ConstraintSetup=(TwistAxis=AxisY,AngularTargetAxis=AxisY,AngularLimitsMin=(X=-47.200000,Y=-16.300000,Z=-47.200000),AngularLimitsMax=(X=47.200000,Y=16.300000,Z=47.200000),AngularTarget=(X=-0.241900,Y=0.615000,Z=0.750500)),CollisionType=CustomSphere,SphereCollisionRadius=1.250000),(BoundBone=(BoneName=\"F_8_1_L\"),BoxExtents=(X=2.560000,Y=2.560000,Z=2.560000),ConstraintSetup=(TwistAxis=AxisY,AngularTargetAxis=AxisY,AngularLimitsMin=(X=-50.600000,Y=-16.900000,Z=-50.600000),AngularLimitsMax=(X=50.600000,Y=16.900000,Z=50.600000),AngularTarget=(X=-0.168300,Y=0.692600,Z=0.701400)),CollisionType=CustomSphere,SphereCollisionRadius=1.280000),(BoundBone=(BoneName=\"F_9_1_L\"),BoxExtents=(X=2.640000,Y=2.640000,Z=2.640000),ConstraintSetup=(TwistAxis=AxisY,AngularTargetAxis=AxisY,AngularLimitsMin=(X=-53.200000,Y=-16.900000,Z=-53.200000),AngularLimitsMax=(X=53.200000,Y=16.900000,Z=53.200000),AngularTarget=(X=-0.085100,Y=0.755300,Z=0.649800)),CollisionType=CustomSphere,SphereCollisionRadius=1.320000),(BoundBone=(BoneName=\"F_10_1_L\"),BoxExtents=(X=2.710000,Y=2.710000,Z=2.710000),ConstraintSetup=(TwistAxis=AxisY,AngularTargetAxis=AxisY,AngularLimitsMin=(X=-55.200000,Y=-16.100000,Z=-55.200000),AngularLimitsMax=(X=55.200000,Y=16.100000,Z=55.200000),AngularTarget=(X=-0.002200,Y=0.796000,Z=0.605300)),CollisionType=CustomSphere,SphereCollisionRadius=1.350000),(BoundBone=(BoneName=\"F_11_1_L\"),BoxExtents=(X=2.780000,Y=2.780000,Z=2.780000),ConstraintSetup=(TwistAxis=AxisY,AngularTargetAxis=AxisY,AngularLimitsMin=(X=-56.500000,Y=-14.700000,Z=-56.500000),AngularLimitsMax=(X=56.500000,Y=14.700000,Z=56.500000),AngularTarget=(X=0.070900,Y=0.811500,Z=0.580000)),CollisionType=CustomSphere,SphereCollisionRadius=1.390000),(BoundBone=(BoneName=\"F_12_1_L\"),BoxExtents=(X=2.850000,Y=2.850000,Z=2.850000),ConstraintSetup=(TwistAxis=AxisY,AngularTargetAxis=AxisY,AngularLimitsMin=(X=-57.900000,Y=-13.400000,Z=-57.900000),AngularLimitsMax=(X=57.900000,Y=13.400000,Z=57.900000),AngularTarget=(X=0.125900,Y=0.799900,Z=0.586800)),CollisionType=CustomSphere,SphereCollisionRadius=1.420000),(BoundBone=(BoneName=\"F_13_1_L\"),BoxExtents=(X=2.920000,Y=2.920000,Z=2.920000),ConstraintSetup=(TwistAxis=AxisY,AngularTargetAxis=AxisY,AngularLimitsMin=(X=-61.500000,Y=-14.300000,Z=-61.500000),AngularLimitsMax=(X=61.500000,Y=14.300000,Z=61.500000),AngularTarget=(X=0.154200,Y=0.753600,Z=0.639000)),CollisionType=CustomSphere,SphereCollisionRadius=1.460000),(BoundBone=(BoneName=\"F_14_1_L\"),BoxExtents=(X=2.990000,Y=2.990000,Z=2.990000),ConstraintSetup=(TwistAxis=AxisY,AngularTargetAxis=AxisY,AngularLimitsMin=(X=-68.400000,Y=-18.500000,Z=-68.400000),AngularLimitsMax=(X=68.400000,Y=18.500000,Z=68.400000),AngularTarget=(X=0.142000,Y=0.651400,Z=0.745300)),CollisionType=CustomSphere,SphereCollisionRadius=1.490000),(BoundBone=(BoneName=\"F_15_1_L\"),BoxExtents=(X=3.060000,Y=3.060000,Z=3.060000),ConstraintSetup=(TwistAxis=AxisY,AngularTargetAxis=AxisY,AngularLimitsMin=(X=-77.300000,Y=-24.700000,Z=-77.300000),AngularLimitsMax=(X=77.300000,Y=24.700000,Z=77.300000),AngularTarget=(X=0.069600,Y=0.456400,Z=0.887100)),CollisionType=CustomSphere,SphereCollisionRadius=1.530000),(BoundBone=(BoneName=\"F_16_1_L\"),BoxExtents=(X=3.130000,Y=3.130000,Z=3.130000),ConstraintSetup=(TwistAxis=AxisY,AngularTargetAxis=AxisY,AngularLimitsMin=(X=-85.300000,Y=-30.000000,Z=-85.300000),AngularLimitsMax=(X=85.300000,Y=30.000000,Z=85.300000),AngularTarget=(X=-0.062400,Y=0.165900,Z=0.984200)),CollisionType=CustomSphere,SphereCollisionRadius=1.560000),(BoundBone=(BoneName=\"F_17_1_L\"),BoxExtents=(X=3.200000,Y=3.200000,Z=3.200000),ConstraintSetup=(TwistAxis=AxisY,AngularTargetAxis=AxisY,AngularLimitsMin=(X=-88.000000,Y=-30.000000,Z=-88.000000),AngularLimitsMax=(X=88.000000,Y=30.000000,Z=88.000000),AngularTarget=(X=-0.201700,Y=-0.121200,Z=0.971900)),CollisionType=CustomSphere,SphereCollisionRadius=1.600000)),GravityScale=0.162000,GravityOverride=(X=0.000000,Y=0.000000,Z=0.000000),LinearSpringConstant=265.100006,AngularSpringConstant=150.000000,WorldSpaceMinimumScale=0.010000,WindScale=1.000000,ComponentLinearAccScale=(X=0.300000,Y=0.300000,Z=0.300000),ComponentLinearVelScale=(X=0.600000,Y=0.600000,Z=0.300000),ComponentAppliedLinearAccClamp=(X=800.000000,Y=800.000000,Z=800.000000),SimSpaceSettings=(SimSpaceAngularAlpha=0.300000,MaxAngularVelocity=20.000000,MaxAngularAcceleration=200.000000,ExternalAngularVelocity=(X=0.000000,Y=0.000000,Z=0.000000)),AngularBiasOverride=0.000000,NumSolverIterationsPreUpdate=8,NumSolverIterationsPostUpdate=2,SphericalLimits=((DrivingBone=(BoneName=\"Hips\"),SphereLocalOffset=(X=0.000000,Y=-4.451400,Z=-0.017800),LimitRadius=11.500000),(DrivingBone=(BoneName=\"Hips\"),SphereLocalOffset=(X=0.000000,Y=-8.902700,Z=-0.035500),LimitRadius=11.500000),(DrivingBone=(BoneName=\"Hips\"),SphereLocalOffset=(X=0.000000,Y=-13.354100,Z=-0.053300),LimitRadius=11.500000),(DrivingBone=(BoneName=\"Chest\"),SphereLocalOffset=(X=0.000000,Y=-4.416900,Z=0.000000),LimitRadius=9.500000),(DrivingBone=(BoneName=\"Chest\"),SphereLocalOffset=(X=0.000000,Y=-8.833800,Z=0.000000),LimitRadius=9.500000),(DrivingBone=(BoneName=\"Chest\"),SphereLocalOffset=(X=0.000000,Y=-13.250700,Z=0.000000),LimitRadius=9.500000),(DrivingBone=(BoneName=\"Neck\"),SphereLocalOffset=(X=0.000000,Y=-1.902700,Z=-0.000000),LimitRadius=5.000000),(DrivingBone=(BoneName=\"Neck\"),SphereLocalOffset=(X=0.000000,Y=-3.805400,Z=-0.000000),LimitRadius=5.000000),(DrivingBone=(BoneName=\"Neck\"),SphereLocalOffset=(X=0.000000,Y=-5.708000,Z=-0.000000),LimitRadius=5.000000),(DrivingBone=(BoneName=\"Head\"),SphereLocalOffset=(X=-1.390800,Y=-5.138800,Z=1.361700),LimitRadius=8.000000),(DrivingBone=(BoneName=\"Head\"),SphereLocalOffset=(X=-2.781500,Y=-10.277600,Z=2.723500),LimitRadius=8.000000),(DrivingBone=(BoneName=\"Head\"),SphereLocalOffset=(X=-4.172300,Y=-15.416400,Z=4.085200),LimitRadius=8.000000),(DrivingBone=(BoneName=\"Left-shoulder\"),SphereLocalOffset=(X=-0.000000,Y=-2.225800,Z=0.000000),LimitRadius=5.000000),(DrivingBone=(BoneName=\"Left-shoulder\"),SphereLocalOffset=(X=-0.000000,Y=-4.451500,Z=0.000000),LimitRadius=5.000000),(DrivingBone=(BoneName=\"Left-shoulder\"),SphereLocalOffset=(X=-0.000000,Y=-6.677300,Z=0.000000),LimitRadius=5.000000),(DrivingBone=(BoneName=\"Left-arm\"),SphereLocalOffset=(X=0.000000,Y=-5.284800,Z=0.000000),LimitRadius=4.500000),(DrivingBone=(BoneName=\"Left-arm\"),SphereLocalOffset=(X=0.000000,Y=-10.569500,Z=0.000000),LimitRadius=4.500000),(DrivingBone=(BoneName=\"Left-arm\"),SphereLocalOffset=(X=0.000000,Y=-15.854300,Z=0.000000),LimitRadius=4.500000),(DrivingBone=(BoneName=\"Right-shoulder\"),SphereLocalOffset=(X=0.000000,Y=-2.225800,Z=-0.000000),LimitRadius=5.000000),(DrivingBone=(BoneName=\"Right-shoulder\"),SphereLocalOffset=(X=0.000000,Y=-4.451500,Z=-0.000000),LimitRadius=5.000000),(DrivingBone=(BoneName=\"Right-shoulder\"),SphereLocalOffset=(X=0.000000,Y=-6.677300,Z=-0.000000),LimitRadius=5.000000),(DrivingBone=(BoneName=\"Right-arm\"),SphereLocalOffset=(X=0.000000,Y=-5.284800,Z=0.000000),LimitRadius=4.500000),(DrivingBone=(BoneName=\"Right-arm\"),SphereLocalOffset=(X=0.000000,Y=-10.569600,Z=0.000000),LimitRadius=4.500000),(DrivingBone=(BoneName=\"Right-arm\"),SphereLocalOffset=(X=0.000000,Y=-15.854300,Z=0.000000),LimitRadius=4.500000)),ExternalForce=(X=0.000000,Y=0.000000,Z=0.000000),PlanarLimits=,SimulationSpace=Component,bUseSphericalLimits=True,bUsePlanarLimit=False,bDoUpdate=True,bDoEval=True,bOverrideLinearDamping=True,bOverrideAngularBias=False,bOverrideAngularDamping=True,bEnableWind=False,bUseGravityOverride=False,bGravityOverrideInSimSpace=False,bLinearSpring=False,bAngularSpring=True,bChain=True,RetargetingSettings=(bEnabled=False,Source=(Rotation=(X=0.000000,Y=0.000000,Z=0.000000,W=1.000000),Translation=(X=0.000000,Y=0.000000,Z=0.000000),Scale3D=(X=1.000000,Y=1.000000,Z=1.000000)),Target=(Rotation=(X=0.000000,Y=0.000000,Z=0.000000,W=1.000000),Translation=(X=0.000000,Y=0.000000,Z=0.000000),Scale3D=(X=1.000000,Y=1.000000,Z=1.000000)),RotationComponent=SwingAngle,TwistAxis=(X=1.000000,Y=0.000000,Z=0.000000),bUseAbsoluteAngle=False,SourceMinimum=0.000000,SourceMaximum=45.000000,TargetMinimum=0.000000,TargetMaximum=45.000000,EasingType=Linear,CustomCurve=(EditorCurveData=(Keys=,DefaultValue=340282346638528859811704183484516925440.000000,PreInfinityExtrap=RCCE_Constant,PostInfinityExtrap=RCCE_Constant),ExternalCurve=None),bFlipEasing=False,EasingWeight=1.000000,bClamp=False),ComponentPose=(LinkID=-1,SourceLinkID=-1),LODThreshold=-1,AlphaInputType=Curve,bAlphaBoolEnabled=True,Alpha=1.000000,AlphaScaleBias=(Scale=1.000000,Bias=0.000000),AlphaBoolBlend=(BlendInTime=0.000000,BlendOutTime=0.000000,BlendOption=HermiteCubic,CustomCurve=None),AlphaCurveName=\"HairDyn\",AlphaScaleBiasClamp=(bMapRange=False,bClampResult=False,bInterpResult=False,InRange=(Min=0.000000,Max=1.000000),OutRange=(Min=0.000000,Max=1.000000),Scale=1.000000,Bias=0.000000,ClampMin=0.000000,ClampMax=1.000000,InterpSpeedIncreasing=10.000000,InterpSpeedDecreasing=10.000000),InitialUpdateFunction=(ClassName=\"\",FunctionName=\"\"),BecomeRelevantFunction=(ClassName=\"\",FunctionName=\"\"),UpdateFunction=(ClassName=\"\",FunctionName=\"\"))",
+   "pins": [
+    {
+     "name": "ComponentPose",
+     "value": "(LinkID=-1,SourceLinkID=-1)",
+     "links": [
+      "AnimGraphNode_LocalToComponentSpace_0.ComponentPose"
+     ]
+    },
+    {
+     "name": "AlphaCurveName",
+     "value": "HairDyn",
+     "links": []
+    },
+    {
+     "name": "ExternalForce",
+     "value": "0.000000,0.000000,0.000000",
+     "links": []
+    },
+    {
+     "name": "Pose",
+     "value": "",
+     "links": [
+      "AnimGraphNode_AnimDynamics_1.ComponentPose"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "AnimGraphNode_AnimDynamics_1",
+   "graph": "AnimGraph",
+   "class": "AnimGraphNode_AnimDynamics",
+   "node": "(LinearDampingOverride=0.990000,AngularDampingOverride=0.990000,RelativeSpaceBone=(BoneName=\"\"),BoundBone=(BoneName=\"F_0_1_R\"),ChainEnd=(BoneName=\"F_17_1_R\"),PhysicsBodyDefinitions=((BoundBone=(BoneName=\"F_0_1_R\"),BoxExtents=(X=2.000000,Y=2.000000,Z=2.000000),ConstraintSetup=(TwistAxis=AxisY,AngularTargetAxis=AxisY,AngularLimitsMin=(X=-22.000000,Y=-6.600000,Z=-22.000000),AngularLimitsMax=(X=22.000000,Y=6.600000,Z=22.000000),AngularTarget=(X=0.000000,Y=1.000000,Z=0.000000)),CollisionType=CustomSphere,SphereCollisionRadius=1.000000),(BoundBone=(BoneName=\"F_1_1_R\"),BoxExtents=(X=2.070000,Y=2.070000,Z=2.070000),ConstraintSetup=(TwistAxis=AxisY,AngularTargetAxis=AxisY,AngularLimitsMin=(X=-46.600000,Y=-29.300000,Z=-46.600000),AngularLimitsMax=(X=46.600000,Y=29.300000,Z=46.600000),AngularTarget=(X=0.079400,Y=0.398100,Z=0.913900)),CollisionType=CustomSphere,SphereCollisionRadius=1.040000),(BoundBone=(BoneName=\"F_2_1_R\"),BoxExtents=(X=2.140000,Y=2.140000,Z=2.140000),ConstraintSetup=(TwistAxis=AxisY,AngularTargetAxis=AxisY,AngularLimitsMin=(X=-38.600000,Y=-19.400000,Z=-38.600000),AngularLimitsMax=(X=38.600000,Y=19.400000,Z=38.600000),AngularTarget=(X=0.237300,Y=0.354700,Z=0.904400)),CollisionType=CustomSphere,SphereCollisionRadius=1.070000),(BoundBone=(BoneName=\"F_3_1_R\"),BoxExtents=(X=2.210000,Y=2.210000,Z=2.210000),ConstraintSetup=(TwistAxis=AxisY,AngularTargetAxis=AxisY,AngularLimitsMin=(X=-35.500000,Y=-14.500000,Z=-35.500000),AngularLimitsMax=(X=35.500000,Y=14.500000,Z=35.500000),AngularTarget=(X=0.311200,Y=0.359100,Z=0.879900)),CollisionType=CustomSphere,SphereCollisionRadius=1.110000),(BoundBone=(BoneName=\"F_4_1_R\"),BoxExtents=(X=2.280000,Y=2.280000,Z=2.280000),ConstraintSetup=(TwistAxis=AxisY,AngularTargetAxis=AxisY,AngularLimitsMin=(X=-36.100000,Y=-13.100000,Z=-36.100000),AngularLimitsMax=(X=36.100000,Y=13.100000,Z=36.100000),AngularTarget=(X=0.337400,Y=0.396500,Z=0.853800)),CollisionType=CustomSphere,SphereCollisionRadius=1.140000),(BoundBone=(BoneName=\"F_5_1_R\"),BoxExtents=(X=2.350000,Y=2.350000,Z=2.350000),ConstraintSetup=(TwistAxis=AxisY,AngularTargetAxis=AxisY,AngularLimitsMin=(X=-39.400000,Y=-13.800000,Z=-39.400000),AngularLimitsMax=(X=39.400000,Y=13.800000,Z=39.400000),AngularTarget=(X=0.330900,Y=0.457000,Z=0.825600)),CollisionType=CustomSphere,SphereCollisionRadius=1.180000),(BoundBone=(BoneName=\"F_6_1_R\"),BoxExtents=(X=2.420000,Y=2.420000,Z=2.420000),ConstraintSetup=(TwistAxis=AxisY,AngularTargetAxis=AxisY,AngularLimitsMin=(X=-43.400000,Y=-15.200000,Z=-43.400000),AngularLimitsMax=(X=43.400000,Y=15.200000,Z=43.400000),AngularTarget=(X=0.297900,Y=0.532900,Z=0.792000)),CollisionType=CustomSphere,SphereCollisionRadius=1.210000),(BoundBone=(BoneName=\"F_7_1_R\"),BoxExtents=(X=2.490000,Y=2.490000,Z=2.490000),ConstraintSetup=(TwistAxis=AxisY,AngularTargetAxis=AxisY,AngularLimitsMin=(X=-47.200000,Y=-16.300000,Z=-47.200000),AngularLimitsMax=(X=47.200000,Y=16.300000,Z=47.200000),AngularTarget=(X=0.241900,Y=0.615000,Z=0.750500)),CollisionType=CustomSphere,SphereCollisionRadius=1.250000),(BoundBone=(BoneName=\"F_8_1_R\"),BoxExtents=(X=2.560000,Y=2.560000,Z=2.560000),ConstraintSetup=(TwistAxis=AxisY,AngularTargetAxis=AxisY,AngularLimitsMin=(X=-50.600000,Y=-16.900000,Z=-50.600000),AngularLimitsMax=(X=50.600000,Y=16.900000,Z=50.600000),AngularTarget=(X=0.168300,Y=0.692600,Z=0.701400)),CollisionType=CustomSphere,SphereCollisionRadius=1.280000),(BoundBone=(BoneName=\"F_9_1_R\"),BoxExtents=(X=2.640000,Y=2.640000,Z=2.640000),ConstraintSetup=(TwistAxis=AxisY,AngularTargetAxis=AxisY,AngularLimitsMin=(X=-53.200000,Y=-16.900000,Z=-53.200000),AngularLimitsMax=(X=53.200000,Y=16.900000,Z=53.200000),AngularTarget=(X=0.085100,Y=0.755300,Z=0.649900)),CollisionType=CustomSphere,SphereCollisionRadius=1.320000),(BoundBone=(BoneName=\"F_10_1_R\"),BoxExtents=(X=2.710000,Y=2.710000,Z=2.710000),ConstraintSetup=(TwistAxis=AxisY,AngularTargetAxis=AxisY,AngularLimitsMin=(X=-55.200000,Y=-16.100000,Z=-55.200000),AngularLimitsMax=(X=55.200000,Y=16.100000,Z=55.200000),AngularTarget=(X=0.002200,Y=0.796000,Z=0.605300)),CollisionType=CustomSphere,SphereCollisionRadius=1.350000),(BoundBone=(BoneName=\"F_11_1_R\"),BoxExtents=(X=2.780000,Y=2.780000,Z=2.780000),ConstraintSetup=(TwistAxis=AxisY,AngularTargetAxis=AxisY,AngularLimitsMin=(X=-56.500000,Y=-14.700000,Z=-56.500000),AngularLimitsMax=(X=56.500000,Y=14.700000,Z=56.500000),AngularTarget=(X=-0.070900,Y=0.811500,Z=0.580000)),CollisionType=CustomSphere,SphereCollisionRadius=1.390000),(BoundBone=(BoneName=\"F_12_1_R\"),BoxExtents=(X=2.850000,Y=2.850000,Z=2.850000),ConstraintSetup=(TwistAxis=AxisY,AngularTargetAxis=AxisY,AngularLimitsMin=(X=-57.900000,Y=-13.400000,Z=-57.900000),AngularLimitsMax=(X=57.900000,Y=13.400000,Z=57.900000),AngularTarget=(X=-0.125900,Y=0.799900,Z=0.586800)),CollisionType=CustomSphere,SphereCollisionRadius=1.420000),(BoundBone=(BoneName=\"F_13_1_R\"),BoxExtents=(X=2.920000,Y=2.920000,Z=2.920000),ConstraintSetup=(TwistAxis=AxisY,AngularTargetAxis=AxisY,AngularLimitsMin=(X=-61.500000,Y=-14.300000,Z=-61.500000),AngularLimitsMax=(X=61.500000,Y=14.300000,Z=61.500000),AngularTarget=(X=-0.154200,Y=0.753600,Z=0.639000)),CollisionType=CustomSphere,SphereCollisionRadius=1.460000),(BoundBone=(BoneName=\"F_14_1_R\"),BoxExtents=(X=2.990000,Y=2.990000,Z=2.990000),ConstraintSetup=(TwistAxis=AxisY,AngularTargetAxis=AxisY,AngularLimitsMin=(X=-68.400000,Y=-18.500000,Z=-68.400000),AngularLimitsMax=(X=68.400000,Y=18.500000,Z=68.400000),AngularTarget=(X=-0.142000,Y=0.651400,Z=0.745300)),CollisionType=CustomSphere,SphereCollisionRadius=1.490000),(BoundBone=(BoneName=\"F_15_1_R\"),BoxExtents=(X=3.060000,Y=3.060000,Z=3.060000),ConstraintSetup=(TwistAxis=AxisY,AngularTargetAxis=AxisY,AngularLimitsMin=(X=-77.300000,Y=-24.700000,Z=-77.300000),AngularLimitsMax=(X=77.300000,Y=24.700000,Z=77.300000),AngularTarget=(X=-0.069500,Y=0.456400,Z=0.887100)),CollisionType=CustomSphere,SphereCollisionRadius=1.530000),(BoundBone=(BoneName=\"F_16_1_R\"),BoxExtents=(X=3.130000,Y=3.130000,Z=3.130000),ConstraintSetup=(TwistAxis=AxisY,AngularTargetAxis=AxisY,AngularLimitsMin=(X=-85.300000,Y=-30.000000,Z=-85.300000),AngularLimitsMax=(X=85.300000,Y=30.000000,Z=85.300000),AngularTarget=(X=0.062400,Y=0.165900,Z=0.984200)),CollisionType=CustomSphere,SphereCollisionRadius=1.560000),(BoundBone=(BoneName=\"F_17_1_R\"),BoxExtents=(X=3.200000,Y=3.200000,Z=3.200000),ConstraintSetup=(TwistAxis=AxisY,AngularTargetAxis=AxisY,AngularLimitsMin=(X=-88.000000,Y=-30.000000,Z=-88.000000),AngularLimitsMax=(X=88.000000,Y=30.000000,Z=88.000000),AngularTarget=(X=0.201700,Y=-0.121200,Z=0.971900)),CollisionType=CustomSphere,SphereCollisionRadius=1.600000)),GravityScale=0.162000,GravityOverride=(X=0.000000,Y=0.000000,Z=0.000000),LinearSpringConstant=265.100006,AngularSpringConstant=150.000000,WorldSpaceMinimumScale=0.010000,WindScale=1.000000,ComponentLinearAccScale=(X=0.300000,Y=0.300000,Z=0.300000),ComponentLinearVelScale=(X=0.600000,Y=0.600000,Z=0.300000),ComponentAppliedLinearAccClamp=(X=800.000000,Y=800.000000,Z=800.000000),SimSpaceSettings=(SimSpaceAngularAlpha=0.300000,MaxAngularVelocity=20.000000,MaxAngularAcceleration=200.000000,ExternalAngularVelocity=(X=0.000000,Y=0.000000,Z=0.000000)),AngularBiasOverride=0.000000,NumSolverIterationsPreUpdate=8,NumSolverIterationsPostUpdate=2,SphericalLimits=((DrivingBone=(BoneName=\"Hips\"),SphereLocalOffset=(X=0.000000,Y=-4.451400,Z=-0.017800),LimitRadius=11.500000),(DrivingBone=(BoneName=\"Hips\"),SphereLocalOffset=(X=0.000000,Y=-8.902700,Z=-0.035500),LimitRadius=11.500000),(DrivingBone=(BoneName=\"Hips\"),SphereLocalOffset=(X=0.000000,Y=-13.354100,Z=-0.053300),LimitRadius=11.500000),(DrivingBone=(BoneName=\"Chest\"),SphereLocalOffset=(X=0.000000,Y=-4.416900,Z=0.000000),LimitRadius=9.500000),(DrivingBone=(BoneName=\"Chest\"),SphereLocalOffset=(X=0.000000,Y=-8.833800,Z=0.000000),LimitRadius=9.500000),(DrivingBone=(BoneName=\"Chest\"),SphereLocalOffset=(X=0.000000,Y=-13.250700,Z=0.000000),LimitRadius=9.500000),(DrivingBone=(BoneName=\"Neck\"),SphereLocalOffset=(X=0.000000,Y=-1.902700,Z=-0.000000),LimitRadius=5.000000),(DrivingBone=(BoneName=\"Neck\"),SphereLocalOffset=(X=0.000000,Y=-3.805400,Z=-0.000000),LimitRadius=5.000000),(DrivingBone=(BoneName=\"Neck\"),SphereLocalOffset=(X=0.000000,Y=-5.708000,Z=-0.000000),LimitRadius=5.000000),(DrivingBone=(BoneName=\"Head\"),SphereLocalOffset=(X=-1.390800,Y=-5.138800,Z=1.361700),LimitRadius=8.000000),(DrivingBone=(BoneName=\"Head\"),SphereLocalOffset=(X=-2.781500,Y=-10.277600,Z=2.723500),LimitRadius=8.000000),(DrivingBone=(BoneName=\"Head\"),SphereLocalOffset=(X=-4.172300,Y=-15.416400,Z=4.085200),LimitRadius=8.000000),(DrivingBone=(BoneName=\"Left-shoulder\"),SphereLocalOffset=(X=-0.000000,Y=-2.225800,Z=0.000000),LimitRadius=5.000000),(DrivingBone=(BoneName=\"Left-shoulder\"),SphereLocalOffset=(X=-0.000000,Y=-4.451500,Z=0.000000),LimitRadius=5.000000),(DrivingBone=(BoneName=\"Left-shoulder\"),SphereLocalOffset=(X=-0.000000,Y=-6.677300,Z=0.000000),LimitRadius=5.000000),(DrivingBone=(BoneName=\"Left-arm\"),SphereLocalOffset=(X=0.000000,Y=-5.284800,Z=0.000000),LimitRadius=4.500000),(DrivingBone=(BoneName=\"Left-arm\"),SphereLocalOffset=(X=0.000000,Y=-10.569500,Z=0.000000),LimitRadius=4.500000),(DrivingBone=(BoneName=\"Left-arm\"),SphereLocalOffset=(X=0.000000,Y=-15.854300,Z=0.000000),LimitRadius=4.500000),(DrivingBone=(BoneName=\"Right-shoulder\"),SphereLocalOffset=(X=0.000000,Y=-2.225800,Z=-0.000000),LimitRadius=5.000000),(DrivingBone=(BoneName=\"Right-shoulder\"),SphereLocalOffset=(X=0.000000,Y=-4.451500,Z=-0.000000),LimitRadius=5.000000),(DrivingBone=(BoneName=\"Right-shoulder\"),SphereLocalOffset=(X=0.000000,Y=-6.677300,Z=-0.000000),LimitRadius=5.000000),(DrivingBone=(BoneName=\"Right-arm\"),SphereLocalOffset=(X=0.000000,Y=-5.284800,Z=0.000000),LimitRadius=4.500000),(DrivingBone=(BoneName=\"Right-arm\"),SphereLocalOffset=(X=0.000000,Y=-10.569600,Z=0.000000),LimitRadius=4.500000),(DrivingBone=(BoneName=\"Right-arm\"),SphereLocalOffset=(X=0.000000,Y=-15.854300,Z=0.000000),LimitRadius=4.500000)),ExternalForce=(X=0.000000,Y=0.000000,Z=0.000000),PlanarLimits=,SimulationSpace=Component,bUseSphericalLimits=True,bUsePlanarLimit=False,bDoUpdate=True,bDoEval=True,bOverrideLinearDamping=True,bOverrideAngularBias=False,bOverrideAngularDamping=True,bEnableWind=False,bUseGravityOverride=False,bGravityOverrideInSimSpace=False,bLinearSpring=False,bAngularSpring=True,bChain=True,RetargetingSettings=(bEnabled=False,Source=(Rotation=(X=0.000000,Y=0.000000,Z=0.000000,W=1.000000),Translation=(X=0.000000,Y=0.000000,Z=0.000000),Scale3D=(X=1.000000,Y=1.000000,Z=1.000000)),Target=(Rotation=(X=0.000000,Y=0.000000,Z=0.000000,W=1.000000),Translation=(X=0.000000,Y=0.000000,Z=0.000000),Scale3D=(X=1.000000,Y=1.000000,Z=1.000000)),RotationComponent=SwingAngle,TwistAxis=(X=1.000000,Y=0.000000,Z=0.000000),bUseAbsoluteAngle=False,SourceMinimum=0.000000,SourceMaximum=45.000000,TargetMinimum=0.000000,TargetMaximum=45.000000,EasingType=Linear,CustomCurve=(EditorCurveData=(Keys=,DefaultValue=340282346638528859811704183484516925440.000000,PreInfinityExtrap=RCCE_Constant,PostInfinityExtrap=RCCE_Constant),ExternalCurve=None),bFlipEasing=False,EasingWeight=1.000000,bClamp=False),ComponentPose=(LinkID=-1,SourceLinkID=-1),LODThreshold=-1,AlphaInputType=Curve,bAlphaBoolEnabled=True,Alpha=1.000000,AlphaScaleBias=(Scale=1.000000,Bias=0.000000),AlphaBoolBlend=(BlendInTime=0.000000,BlendOutTime=0.000000,BlendOption=HermiteCubic,CustomCurve=None),AlphaCurveName=\"HairDyn\",AlphaScaleBiasClamp=(bMapRange=False,bClampResult=False,bInterpResult=False,InRange=(Min=0.000000,Max=1.000000),OutRange=(Min=0.000000,Max=1.000000),Scale=1.000000,Bias=0.000000,ClampMin=0.000000,ClampMax=1.000000,InterpSpeedIncreasing=10.000000,InterpSpeedDecreasing=10.000000),InitialUpdateFunction=(ClassName=\"\",FunctionName=\"\"),BecomeRelevantFunction=(ClassName=\"\",FunctionName=\"\"),UpdateFunction=(ClassName=\"\",FunctionName=\"\"))",
+   "pins": [
+    {
+     "name": "ComponentPose",
+     "value": "(LinkID=-1,SourceLinkID=-1)",
+     "links": [
+      "AnimGraphNode_AnimDynamics_0.Pose"
+     ]
+    },
+    {
+     "name": "AlphaCurveName",
+     "value": "HairDyn",
+     "links": []
+    },
+    {
+     "name": "ExternalForce",
+     "value": "0.000000,0.000000,0.000000",
+     "links": []
+    },
+    {
+     "name": "Pose",
+     "value": "",
+     "links": [
+      "AnimGraphNode_AnimDynamics_2.ComponentPose"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "AnimGraphNode_AnimDynamics_2",
+   "graph": "AnimGraph",
+   "class": "AnimGraphNode_AnimDynamics",
+   "node": "(LinearDampingOverride=0.990000,AngularDampingOverride=0.990000,RelativeSpaceBone=(BoneName=\"\"),BoundBone=(BoneName=\"CF_1_L\"),ChainEnd=(BoneName=\"CF_2_L\"),PhysicsBodyDefinitions=((BoundBone=(BoneName=\"CF_1_L\"),BoxExtents=(X=1.600000,Y=1.600000,Z=1.600000),ConstraintSetup=(TwistAxis=AxisY,AngularTargetAxis=AxisY,AngularLimitsMin=(X=-18.000000,Y=-5.400000,Z=-18.000000),AngularLimitsMax=(X=18.000000,Y=5.400000,Z=18.000000),AngularTarget=(X=0.000000,Y=1.000000,Z=0.000000)),CollisionType=CustomSphere,SphereCollisionRadius=0.800000),(BoundBone=(BoneName=\"CF_2_L\"),BoxExtents=(X=2.400000,Y=2.400000,Z=2.400000),ConstraintSetup=(TwistAxis=AxisY,AngularTargetAxis=AxisY,AngularLimitsMin=(X=-91.300000,Y=-51.300000,Z=-91.300000),AngularLimitsMax=(X=91.300000,Y=51.300000,Z=91.300000),AngularTarget=(X=0.358600,Y=-0.597600,Z=0.717100)),CollisionType=CustomSphere,SphereCollisionRadius=1.200000)),GravityScale=0.132000,GravityOverride=(X=0.000000,Y=0.000000,Z=0.000000),LinearSpringConstant=588.000000,AngularSpringConstant=300.000000,WorldSpaceMinimumScale=0.010000,WindScale=1.000000,ComponentLinearAccScale=(X=0.210000,Y=0.210000,Z=0.210000),ComponentLinearVelScale=(X=0.200000,Y=0.200000,Z=0.100000),ComponentAppliedLinearAccClamp=(X=800.000000,Y=800.000000,Z=800.000000),SimSpaceSettings=(SimSpaceAngularAlpha=0.300000,MaxAngularVelocity=20.000000,MaxAngularAcceleration=200.000000,ExternalAngularVelocity=(X=0.000000,Y=0.000000,Z=0.000000)),AngularBiasOverride=0.000000,NumSolverIterationsPreUpdate=8,NumSolverIterationsPostUpdate=2,SphericalLimits=((DrivingBone=(BoneName=\"Hips\"),SphereLocalOffset=(X=0.000000,Y=-4.451400,Z=-0.017800),LimitRadius=11.500000),(DrivingBone=(BoneName=\"Hips\"),SphereLocalOffset=(X=0.000000,Y=-8.902700,Z=-0.035500),LimitRadius=11.500000),(DrivingBone=(BoneName=\"Hips\"),SphereLocalOffset=(X=0.000000,Y=-13.354100,Z=-0.053300),LimitRadius=11.500000),(DrivingBone=(BoneName=\"Chest\"),SphereLocalOffset=(X=0.000000,Y=-4.416900,Z=0.000000),LimitRadius=9.500000),(DrivingBone=(BoneName=\"Chest\"),SphereLocalOffset=(X=0.000000,Y=-8.833800,Z=0.000000),LimitRadius=9.500000),(DrivingBone=(BoneName=\"Chest\"),SphereLocalOffset=(X=0.000000,Y=-13.250700,Z=0.000000),LimitRadius=9.500000),(DrivingBone=(BoneName=\"Neck\"),SphereLocalOffset=(X=0.000000,Y=-1.902700,Z=-0.000000),LimitRadius=5.000000),(DrivingBone=(BoneName=\"Neck\"),SphereLocalOffset=(X=0.000000,Y=-3.805400,Z=-0.000000),LimitRadius=5.000000),(DrivingBone=(BoneName=\"Neck\"),SphereLocalOffset=(X=0.000000,Y=-5.708000,Z=-0.000000),LimitRadius=5.000000),(DrivingBone=(BoneName=\"Head\"),SphereLocalOffset=(X=-1.390800,Y=-5.138800,Z=1.361700),LimitRadius=8.000000),(DrivingBone=(BoneName=\"Head\"),SphereLocalOffset=(X=-2.781500,Y=-10.277600,Z=2.723500),LimitRadius=8.000000),(DrivingBone=(BoneName=\"Head\"),SphereLocalOffset=(X=-4.172300,Y=-15.416400,Z=4.085200),LimitRadius=8.000000),(DrivingBone=(BoneName=\"Left-shoulder\"),SphereLocalOffset=(X=-0.000000,Y=-2.225800,Z=0.000000),LimitRadius=5.000000),(DrivingBone=(BoneName=\"Left-shoulder\"),SphereLocalOffset=(X=-0.000000,Y=-4.451500,Z=0.000000),LimitRadius=5.000000),(DrivingBone=(BoneName=\"Left-shoulder\"),SphereLocalOffset=(X=-0.000000,Y=-6.677300,Z=0.000000),LimitRadius=5.000000),(DrivingBone=(BoneName=\"Left-arm\"),SphereLocalOffset=(X=0.000000,Y=-5.284800,Z=0.000000),LimitRadius=4.500000),(DrivingBone=(BoneName=\"Left-arm\"),SphereLocalOffset=(X=0.000000,Y=-10.569500,Z=0.000000),LimitRadius=4.500000),(DrivingBone=(BoneName=\"Left-arm\"),SphereLocalOffset=(X=0.000000,Y=-15.854300,Z=0.000000),LimitRadius=4.500000),(DrivingBone=(BoneName=\"Right-shoulder\"),SphereLocalOffset=(X=0.000000,Y=-2.225800,Z=-0.000000),LimitRadius=5.000000),(DrivingBone=(BoneName=\"Right-shoulder\"),SphereLocalOffset=(X=0.000000,Y=-4.451500,Z=-0.000000),LimitRadius=5.000000),(DrivingBone=(BoneName=\"Right-shoulder\"),SphereLocalOffset=(X=0.000000,Y=-6.677300,Z=-0.000000),LimitRadius=5.000000),(DrivingBone=(BoneName=\"Right-arm\"),SphereLocalOffset=(X=0.000000,Y=-5.284800,Z=0.000000),LimitRadius=4.500000),(DrivingBone=(BoneName=\"Right-arm\"),SphereLocalOffset=(X=0.000000,Y=-10.569600,Z=0.000000),LimitRadius=4.500000),(DrivingBone=(BoneName=\"Right-arm\"),SphereLocalOffset=(X=0.000000,Y=-15.854300,Z=0.000000),LimitRadius=4.500000)),ExternalForce=(X=0.000000,Y=0.000000,Z=0.000000),PlanarLimits=,SimulationSpace=Component,bUseSphericalLimits=True,bUsePlanarLimit=False,bDoUpdate=True,bDoEval=True,bOverrideLinearDamping=True,bOverrideAngularBias=False,bOverrideAngularDamping=True,bEnableWind=False,bUseGravityOverride=False,bGravityOverrideInSimSpace=False,bLinearSpring=False,bAngularSpring=True,bChain=True,RetargetingSettings=(bEnabled=False,Source=(Rotation=(X=0.000000,Y=0.000000,Z=0.000000,W=1.000000),Translation=(X=0.000000,Y=0.000000,Z=0.000000),Scale3D=(X=1.000000,Y=1.000000,Z=1.000000)),Target=(Rotation=(X=0.000000,Y=0.000000,Z=0.000000,W=1.000000),Translation=(X=0.000000,Y=0.000000,Z=0.000000),Scale3D=(X=1.000000,Y=1.000000,Z=1.000000)),RotationComponent=SwingAngle,TwistAxis=(X=1.000000,Y=0.000000,Z=0.000000),bUseAbsoluteAngle=False,SourceMinimum=0.000000,SourceMaximum=45.000000,TargetMinimum=0.000000,TargetMaximum=45.000000,EasingType=Linear,CustomCurve=(EditorCurveData=(Keys=,DefaultValue=340282346638528859811704183484516925440.000000,PreInfinityExtrap=RCCE_Constant,PostInfinityExtrap=RCCE_Constant),ExternalCurve=None),bFlipEasing=False,EasingWeight=1.000000,bClamp=False),ComponentPose=(LinkID=-1,SourceLinkID=-1),LODThreshold=-1,AlphaInputType=Curve,bAlphaBoolEnabled=True,Alpha=1.000000,AlphaScaleBias=(Scale=1.000000,Bias=0.000000),AlphaBoolBlend=(BlendInTime=0.000000,BlendOutTime=0.000000,BlendOption=HermiteCubic,CustomCurve=None),AlphaCurveName=\"HairDyn\",AlphaScaleBiasClamp=(bMapRange=False,bClampResult=False,bInterpResult=False,InRange=(Min=0.000000,Max=1.000000),OutRange=(Min=0.000000,Max=1.000000),Scale=1.000000,Bias=0.000000,ClampMin=0.000000,ClampMax=1.000000,InterpSpeedIncreasing=10.000000,InterpSpeedDecreasing=10.000000),InitialUpdateFunction=(ClassName=\"\",FunctionName=\"\"),BecomeRelevantFunction=(ClassName=\"\",FunctionName=\"\"),UpdateFunction=(ClassName=\"\",FunctionName=\"\"))",
+   "pins": [
+    {
+     "name": "ComponentPose",
+     "value": "(LinkID=-1,SourceLinkID=-1)",
+     "links": [
+      "AnimGraphNode_AnimDynamics_1.Pose"
+     ]
+    },
+    {
+     "name": "AlphaCurveName",
+     "value": "HairDyn",
+     "links": []
+    },
+    {
+     "name": "ExternalForce",
+     "value": "0.000000,0.000000,0.000000",
+     "links": []
+    },
+    {
+     "name": "Pose",
+     "value": "",
+     "links": [
+      "AnimGraphNode_AnimDynamics_3.ComponentPose"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "AnimGraphNode_AnimDynamics_3",
+   "graph": "AnimGraph",
+   "class": "AnimGraphNode_AnimDynamics",
+   "node": "(LinearDampingOverride=0.990000,AngularDampingOverride=0.990000,RelativeSpaceBone=(BoneName=\"\"),BoundBone=(BoneName=\"CF_1_R\"),ChainEnd=(BoneName=\"CF_2_R\"),PhysicsBodyDefinitions=((BoundBone=(BoneName=\"CF_1_R\"),BoxExtents=(X=1.600000,Y=1.600000,Z=1.600000),ConstraintSetup=(TwistAxis=AxisY,AngularTargetAxis=AxisY,AngularLimitsMin=(X=-18.000000,Y=-5.400000,Z=-18.000000),AngularLimitsMax=(X=18.000000,Y=5.400000,Z=18.000000),AngularTarget=(X=0.000000,Y=1.000000,Z=0.000000)),CollisionType=CustomSphere,SphereCollisionRadius=0.800000),(BoundBone=(BoneName=\"CF_2_R\"),BoxExtents=(X=2.400000,Y=2.400000,Z=2.400000),ConstraintSetup=(TwistAxis=AxisY,AngularTargetAxis=AxisY,AngularLimitsMin=(X=-86.300000,Y=-46.300000,Z=-86.300000),AngularLimitsMax=(X=86.300000,Y=46.300000,Z=86.300000),AngularTarget=(X=-0.329300,Y=-0.548800,Z=0.768400)),CollisionType=CustomSphere,SphereCollisionRadius=1.200000)),GravityScale=0.132000,GravityOverride=(X=0.000000,Y=0.000000,Z=0.000000),LinearSpringConstant=588.000000,AngularSpringConstant=300.000000,WorldSpaceMinimumScale=0.010000,WindScale=1.000000,ComponentLinearAccScale=(X=0.210000,Y=0.210000,Z=0.210000),ComponentLinearVelScale=(X=0.200000,Y=0.200000,Z=0.100000),ComponentAppliedLinearAccClamp=(X=800.000000,Y=800.000000,Z=800.000000),SimSpaceSettings=(SimSpaceAngularAlpha=0.300000,MaxAngularVelocity=20.000000,MaxAngularAcceleration=200.000000,ExternalAngularVelocity=(X=0.000000,Y=0.000000,Z=0.000000)),AngularBiasOverride=0.000000,NumSolverIterationsPreUpdate=8,NumSolverIterationsPostUpdate=2,SphericalLimits=((DrivingBone=(BoneName=\"Hips\"),SphereLocalOffset=(X=0.000000,Y=-4.451400,Z=-0.017800),LimitRadius=11.500000),(DrivingBone=(BoneName=\"Hips\"),SphereLocalOffset=(X=0.000000,Y=-8.902700,Z=-0.035500),LimitRadius=11.500000),(DrivingBone=(BoneName=\"Hips\"),SphereLocalOffset=(X=0.000000,Y=-13.354100,Z=-0.053300),LimitRadius=11.500000),(DrivingBone=(BoneName=\"Chest\"),SphereLocalOffset=(X=0.000000,Y=-4.416900,Z=0.000000),LimitRadius=9.500000),(DrivingBone=(BoneName=\"Chest\"),SphereLocalOffset=(X=0.000000,Y=-8.833800,Z=0.000000),LimitRadius=9.500000),(DrivingBone=(BoneName=\"Chest\"),SphereLocalOffset=(X=0.000000,Y=-13.250700,Z=0.000000),LimitRadius=9.500000),(DrivingBone=(BoneName=\"Neck\"),SphereLocalOffset=(X=0.000000,Y=-1.902700,Z=-0.000000),LimitRadius=5.000000),(DrivingBone=(BoneName=\"Neck\"),SphereLocalOffset=(X=0.000000,Y=-3.805400,Z=-0.000000),LimitRadius=5.000000),(DrivingBone=(BoneName=\"Neck\"),SphereLocalOffset=(X=0.000000,Y=-5.708000,Z=-0.000000),LimitRadius=5.000000),(DrivingBone=(BoneName=\"Head\"),SphereLocalOffset=(X=-1.390800,Y=-5.138800,Z=1.361700),LimitRadius=7.370000),(DrivingBone=(BoneName=\"Head\"),SphereLocalOffset=(X=-2.781500,Y=-10.277600,Z=2.723500),LimitRadius=8.000000),(DrivingBone=(BoneName=\"Head\"),SphereLocalOffset=(X=-4.172300,Y=-15.416400,Z=4.085200),LimitRadius=8.000000),(DrivingBone=(BoneName=\"Left-shoulder\"),SphereLocalOffset=(X=-0.000000,Y=-2.225800,Z=0.000000),LimitRadius=5.000000),(DrivingBone=(BoneName=\"Left-shoulder\"),SphereLocalOffset=(X=-0.000000,Y=-4.451500,Z=0.000000),LimitRadius=5.000000),(DrivingBone=(BoneName=\"Left-shoulder\"),SphereLocalOffset=(X=-0.000000,Y=-6.677300,Z=0.000000),LimitRadius=5.000000),(DrivingBone=(BoneName=\"Left-arm\"),SphereLocalOffset=(X=0.000000,Y=-5.284800,Z=0.000000),LimitRadius=4.500000),(DrivingBone=(BoneName=\"Left-arm\"),SphereLocalOffset=(X=0.000000,Y=-10.569500,Z=0.000000),LimitRadius=4.500000),(DrivingBone=(BoneName=\"Left-arm\"),SphereLocalOffset=(X=0.000000,Y=-15.854300,Z=0.000000),LimitRadius=4.500000),(DrivingBone=(BoneName=\"Right-shoulder\"),SphereLocalOffset=(X=0.000000,Y=-2.225800,Z=-0.000000),LimitRadius=5.000000),(DrivingBone=(BoneName=\"Right-shoulder\"),SphereLocalOffset=(X=0.000000,Y=-4.451500,Z=-0.000000),LimitRadius=5.000000),(DrivingBone=(BoneName=\"Right-shoulder\"),SphereLocalOffset=(X=0.000000,Y=-6.677300,Z=-0.000000),LimitRadius=5.000000),(DrivingBone=(BoneName=\"Right-arm\"),SphereLocalOffset=(X=0.000000,Y=-5.284800,Z=0.000000),LimitRadius=4.500000),(DrivingBone=(BoneName=\"Right-arm\"),SphereLocalOffset=(X=0.000000,Y=-10.569600,Z=0.000000),LimitRadius=4.500000),(DrivingBone=(BoneName=\"Right-arm\"),SphereLocalOffset=(X=0.000000,Y=-15.854300,Z=0.000000),LimitRadius=4.500000)),ExternalForce=(X=0.000000,Y=0.000000,Z=0.000000),PlanarLimits=,SimulationSpace=Component,bUseSphericalLimits=True,bUsePlanarLimit=False,bDoUpdate=True,bDoEval=True,bOverrideLinearDamping=True,bOverrideAngularBias=False,bOverrideAngularDamping=True,bEnableWind=False,bUseGravityOverride=False,bGravityOverrideInSimSpace=False,bLinearSpring=False,bAngularSpring=True,bChain=True,RetargetingSettings=(bEnabled=False,Source=(Rotation=(X=0.000000,Y=0.000000,Z=0.000000,W=1.000000),Translation=(X=0.000000,Y=0.000000,Z=0.000000),Scale3D=(X=1.000000,Y=1.000000,Z=1.000000)),Target=(Rotation=(X=0.000000,Y=0.000000,Z=0.000000,W=1.000000),Translation=(X=0.000000,Y=0.000000,Z=0.000000),Scale3D=(X=1.000000,Y=1.000000,Z=1.000000)),RotationComponent=SwingAngle,TwistAxis=(X=1.000000,Y=0.000000,Z=0.000000),bUseAbsoluteAngle=False,SourceMinimum=0.000000,SourceMaximum=45.000000,TargetMinimum=0.000000,TargetMaximum=45.000000,EasingType=Linear,CustomCurve=(EditorCurveData=(Keys=,DefaultValue=340282346638528859811704183484516925440.000000,PreInfinityExtrap=RCCE_Constant,PostInfinityExtrap=RCCE_Constant),ExternalCurve=None),bFlipEasing=False,EasingWeight=1.000000,bClamp=False),ComponentPose=(LinkID=-1,SourceLinkID=-1),LODThreshold=-1,AlphaInputType=Curve,bAlphaBoolEnabled=True,Alpha=1.000000,AlphaScaleBias=(Scale=1.000000,Bias=0.000000),AlphaBoolBlend=(BlendInTime=0.000000,BlendOutTime=0.000000,BlendOption=HermiteCubic,CustomCurve=None),AlphaCurveName=\"HairDyn\",AlphaScaleBiasClamp=(bMapRange=False,bClampResult=False,bInterpResult=False,InRange=(Min=0.000000,Max=1.000000),OutRange=(Min=0.000000,Max=1.000000),Scale=1.000000,Bias=0.000000,ClampMin=0.000000,ClampMax=1.000000,InterpSpeedIncreasing=10.000000,InterpSpeedDecreasing=10.000000),InitialUpdateFunction=(ClassName=\"\",FunctionName=\"\"),BecomeRelevantFunction=(ClassName=\"\",FunctionName=\"\"),UpdateFunction=(ClassName=\"\",FunctionName=\"\"))",
+   "pins": [
+    {
+     "name": "ComponentPose",
+     "value": "(LinkID=-1,SourceLinkID=-1)",
+     "links": [
+      "AnimGraphNode_AnimDynamics_2.Pose"
+     ]
+    },
+    {
+     "name": "AlphaCurveName",
+     "value": "HairDyn",
+     "links": []
+    },
+    {
+     "name": "ExternalForce",
+     "value": "0.000000,0.000000,0.000000",
+     "links": []
+    },
+    {
+     "name": "Pose",
+     "value": "",
+     "links": [
+      "AnimGraphNode_AnimDynamics_4.ComponentPose"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "AnimGraphNode_AnimDynamics_4",
+   "graph": "AnimGraph",
+   "class": "AnimGraphNode_AnimDynamics",
+   "node": "(LinearDampingOverride=0.930000,AngularDampingOverride=0.930000,RelativeSpaceBone=(BoneName=\"\"),BoundBone=(BoneName=\"DM_0_1\"),ChainEnd=(BoneName=\"DM_5_1\"),PhysicsBodyDefinitions=((BoundBone=(BoneName=\"DM_0_1\"),BoxExtents=(X=1.000000,Y=1.000000,Z=1.000000),ConstraintSetup=(TwistAxis=AxisY,AngularTargetAxis=AxisY,AngularLimitsMin=(X=-12.000000,Y=-3.600000,Z=-12.000000),AngularLimitsMax=(X=12.000000,Y=3.600000,Z=12.000000),AngularTarget=(X=0.000000,Y=1.000000,Z=0.000000)),CollisionType=CustomSphere,SphereCollisionRadius=0.500000),(BoundBone=(BoneName=\"DM_1_1\"),BoxExtents=(X=1.080000,Y=1.080000,Z=1.080000),ConstraintSetup=(TwistAxis=AxisY,AngularTargetAxis=AxisY,AngularLimitsMin=(X=-27.300000,Y=-14.700000,Z=-27.300000),AngularLimitsMax=(X=27.300000,Y=14.700000,Z=27.300000),AngularTarget=(X=0.611100,Y=-0.703900,Z=-0.362000)),CollisionType=CustomSphere,SphereCollisionRadius=0.540000),(BoundBone=(BoneName=\"DM_2_1\"),BoxExtents=(X=1.160000,Y=1.160000,Z=1.160000),ConstraintSetup=(TwistAxis=AxisY,AngularTargetAxis=AxisY,AngularLimitsMin=(X=-65.700000,Y=-48.900000,Z=-65.700000),AngularLimitsMax=(X=65.700000,Y=48.900000,Z=65.700000),AngularTarget=(X=0.457500,Y=-0.642800,Z=-0.614400)),CollisionType=CustomSphere,SphereCollisionRadius=0.580000),(BoundBone=(BoneName=\"DM_3_1\"),BoxExtents=(X=1.240000,Y=1.240000,Z=1.240000),ConstraintSetup=(TwistAxis=AxisY,AngularTargetAxis=AxisY,AngularLimitsMin=(X=-103.300000,Y=-82.300000,Z=-103.300000),AngularLimitsMax=(X=103.300000,Y=82.300000,Z=103.300000),AngularTarget=(X=-0.009400,Y=0.063500,Z=-0.997900)),CollisionType=CustomSphere,SphereCollisionRadius=0.620000),(BoundBone=(BoneName=\"DM_4_1\"),BoxExtents=(X=1.320000,Y=1.320000,Z=1.320000),ConstraintSetup=(TwistAxis=AxisY,AngularTargetAxis=AxisY,AngularLimitsMin=(X=-96.400000,Y=-70.400000,Z=-96.400000),AngularLimitsMax=(X=96.400000,Y=70.400000,Z=96.400000),AngularTarget=(X=-0.409000,Y=0.772900,Z=-0.485100)),CollisionType=CustomSphere,SphereCollisionRadius=0.660000),(BoundBone=(BoneName=\"DM_5_1\"),BoxExtents=(X=1.400000,Y=1.400000,Z=1.400000),ConstraintSetup=(TwistAxis=AxisY,AngularTargetAxis=AxisY,AngularLimitsMin=(X=-105.600000,Y=-73.600000,Z=-105.600000),AngularLimitsMax=(X=105.600000,Y=73.600000,Z=105.600000),AngularTarget=(X=-0.621400,Y=0.610900,Z=0.490500)),CollisionType=CustomSphere,SphereCollisionRadius=0.700000)),GravityScale=0.027000,GravityOverride=(X=0.000000,Y=0.000000,Z=0.000000),LinearSpringConstant=1587.000000,AngularSpringConstant=800.000000,WorldSpaceMinimumScale=0.010000,WindScale=1.000000,ComponentLinearAccScale=(X=0.120000,Y=0.120000,Z=0.120000),ComponentLinearVelScale=(X=0.080000,Y=0.080000,Z=0.040000),ComponentAppliedLinearAccClamp=(X=800.000000,Y=800.000000,Z=800.000000),SimSpaceSettings=(SimSpaceAngularAlpha=0.300000,MaxAngularVelocity=20.000000,MaxAngularAcceleration=200.000000,ExternalAngularVelocity=(X=0.000000,Y=0.000000,Z=0.000000)),AngularBiasOverride=0.000000,NumSolverIterationsPreUpdate=8,NumSolverIterationsPostUpdate=2,SphericalLimits=((DrivingBone=(BoneName=\"Hips\"),SphereLocalOffset=(X=0.000000,Y=-4.451400,Z=-0.017800),LimitRadius=11.500000),(DrivingBone=(BoneName=\"Hips\"),SphereLocalOffset=(X=0.000000,Y=-8.902700,Z=-0.035500),LimitRadius=11.500000),(DrivingBone=(BoneName=\"Hips\"),SphereLocalOffset=(X=0.000000,Y=-13.354100,Z=-0.053300),LimitRadius=11.500000),(DrivingBone=(BoneName=\"Chest\"),SphereLocalOffset=(X=0.000000,Y=-4.416900,Z=0.000000),LimitRadius=9.500000),(DrivingBone=(BoneName=\"Chest\"),SphereLocalOffset=(X=0.000000,Y=-8.833800,Z=0.000000),LimitRadius=9.500000),(DrivingBone=(BoneName=\"Chest\"),SphereLocalOffset=(X=0.000000,Y=-13.250700,Z=0.000000),LimitRadius=9.500000),(DrivingBone=(BoneName=\"Neck\"),SphereLocalOffset=(X=0.000000,Y=-1.902700,Z=-0.000000),LimitRadius=5.000000),(DrivingBone=(BoneName=\"Neck\"),SphereLocalOffset=(X=0.000000,Y=-3.805400,Z=-0.000000),LimitRadius=5.000000),(DrivingBone=(BoneName=\"Neck\"),SphereLocalOffset=(X=0.000000,Y=-5.708000,Z=-0.000000),LimitRadius=5.000000),(DrivingBone=(BoneName=\"Head\"),SphereLocalOffset=(X=-1.390800,Y=-5.138800,Z=1.361700),LimitRadius=8.000000),(DrivingBone=(BoneName=\"Head\"),SphereLocalOffset=(X=-2.781500,Y=-10.277600,Z=2.723500),LimitRadius=8.000000),(DrivingBone=(BoneName=\"Head\"),SphereLocalOffset=(X=-4.172300,Y=-15.416400,Z=4.085200),LimitRadius=6.910000),(DrivingBone=(BoneName=\"Left-shoulder\"),SphereLocalOffset=(X=-0.000000,Y=-2.225800,Z=0.000000),LimitRadius=5.000000),(DrivingBone=(BoneName=\"Left-shoulder\"),SphereLocalOffset=(X=-0.000000,Y=-4.451500,Z=0.000000),LimitRadius=5.000000),(DrivingBone=(BoneName=\"Left-shoulder\"),SphereLocalOffset=(X=-0.000000,Y=-6.677300,Z=0.000000),LimitRadius=5.000000),(DrivingBone=(BoneName=\"Left-arm\"),SphereLocalOffset=(X=0.000000,Y=-5.284800,Z=0.000000),LimitRadius=4.500000),(DrivingBone=(BoneName=\"Left-arm\"),SphereLocalOffset=(X=0.000000,Y=-10.569500,Z=0.000000),LimitRadius=4.500000),(DrivingBone=(BoneName=\"Left-arm\"),SphereLocalOffset=(X=0.000000,Y=-15.854300,Z=0.000000),LimitRadius=4.500000),(DrivingBone=(BoneName=\"Right-shoulder\"),SphereLocalOffset=(X=0.000000,Y=-2.225800,Z=-0.000000),LimitRadius=5.000000),(DrivingBone=(BoneName=\"Right-shoulder\"),SphereLocalOffset=(X=0.000000,Y=-4.451500,Z=-0.000000),LimitRadius=5.000000),(DrivingBone=(BoneName=\"Right-shoulder\"),SphereLocalOffset=(X=0.000000,Y=-6.677300,Z=-0.000000),LimitRadius=5.000000),(DrivingBone=(BoneName=\"Right-arm\"),SphereLocalOffset=(X=0.000000,Y=-5.284800,Z=0.000000),LimitRadius=4.500000),(DrivingBone=(BoneName=\"Right-arm\"),SphereLocalOffset=(X=0.000000,Y=-10.569600,Z=0.000000),LimitRadius=4.500000),(DrivingBone=(BoneName=\"Right-arm\"),SphereLocalOffset=(X=0.000000,Y=-15.854300,Z=0.000000),LimitRadius=4.500000)),ExternalForce=(X=0.000000,Y=0.000000,Z=0.000000),PlanarLimits=,SimulationSpace=Component,bUseSphericalLimits=True,bUsePlanarLimit=False,bDoUpdate=True,bDoEval=True,bOverrideLinearDamping=True,bOverrideAngularBias=False,bOverrideAngularDamping=True,bEnableWind=False,bUseGravityOverride=False,bGravityOverrideInSimSpace=False,bLinearSpring=False,bAngularSpring=True,bChain=True,RetargetingSettings=(bEnabled=False,Source=(Rotation=(X=0.000000,Y=0.000000,Z=0.000000,W=1.000000),Translation=(X=0.000000,Y=0.000000,Z=0.000000),Scale3D=(X=1.000000,Y=1.000000,Z=1.000000)),Target=(Rotation=(X=0.000000,Y=0.000000,Z=0.000000,W=1.000000),Translation=(X=0.000000,Y=0.000000,Z=0.000000),Scale3D=(X=1.000000,Y=1.000000,Z=1.000000)),RotationComponent=SwingAngle,TwistAxis=(X=1.000000,Y=0.000000,Z=0.000000),bUseAbsoluteAngle=False,SourceMinimum=0.000000,SourceMaximum=45.000000,TargetMinimum=0.000000,TargetMaximum=45.000000,EasingType=Linear,CustomCurve=(EditorCurveData=(Keys=,DefaultValue=340282346638528859811704183484516925440.000000,PreInfinityExtrap=RCCE_Constant,PostInfinityExtrap=RCCE_Constant),ExternalCurve=None),bFlipEasing=False,EasingWeight=1.000000,bClamp=False),ComponentPose=(LinkID=-1,SourceLinkID=-1),LODThreshold=-1,AlphaInputType=Curve,bAlphaBoolEnabled=True,Alpha=1.000000,AlphaScaleBias=(Scale=1.000000,Bias=0.000000),AlphaBoolBlend=(BlendInTime=0.000000,BlendOutTime=0.000000,BlendOption=HermiteCubic,CustomCurve=None),AlphaCurveName=\"AhogeDyn\",AlphaScaleBiasClamp=(bMapRange=False,bClampResult=False,bInterpResult=False,InRange=(Min=0.000000,Max=1.000000),OutRange=(Min=0.000000,Max=1.000000),Scale=1.000000,Bias=0.000000,ClampMin=0.000000,ClampMax=1.000000,InterpSpeedIncreasing=10.000000,InterpSpeedDecreasing=10.000000),InitialUpdateFunction=(ClassName=\"\",FunctionName=\"\"),BecomeRelevantFunction=(ClassName=\"\",FunctionName=\"\"),UpdateFunction=(ClassName=\"\",FunctionName=\"\"))",
+   "pins": [
+    {
+     "name": "ComponentPose",
+     "value": "(LinkID=-1,SourceLinkID=-1)",
+     "links": [
+      "AnimGraphNode_AnimDynamics_3.Pose"
+     ]
+    },
+    {
+     "name": "AlphaCurveName",
+     "value": "AhogeDyn",
+     "links": []
+    },
+    {
+     "name": "ExternalForce",
+     "value": "0.000000,0.000000,0.000000",
+     "links": []
+    },
+    {
+     "name": "Pose",
+     "value": "",
+     "links": [
+      "AnimGraphNode_ComponentToLocalSpace_0.ComponentPose"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "AnimGraphNode_ComponentToLocalSpace_0",
+   "graph": "AnimGraph",
+   "class": "AnimGraphNode_ComponentToLocalSpace",
+   "node": "(ComponentPose=(LinkID=-1,SourceLinkID=-1),InitialUpdateFunction=(ClassName=\"\",FunctionName=\"\"),BecomeRelevantFunction=(ClassName=\"\",FunctionName=\"\"),UpdateFunction=(ClassName=\"\",FunctionName=\"\"))",
+   "pins": [
+    {
+     "name": "ComponentPose",
+     "value": "(LinkID=-1,SourceLinkID=-1)",
+     "links": [
+      "AnimGraphNode_AnimDynamics_4.Pose"
+     ]
+    },
+    {
+     "name": "Pose",
+     "value": "",
+     "links": [
+      "AnimGraphNode_Root_0.Result"
+     ]
+    }
+   ]
+  }
+ ],
+ "/Game/3DPlatformerGameBundle/Demo/ThirdPersonAssets/Characters/Mannequins/Animations/Manny_AnimBlueprint": [
+  {
+   "name": "AnimGraphNode_Root_0",
+   "graph": "AnimGraph",
+   "class": "AnimGraphNode_Root",
+   "node": "(Result=(LinkID=-1,SourceLinkID=-1),Name=\"\",LayerGroup=\"\",InitialUpdateFunction=(ClassName=\"\",FunctionName=\"\"),BecomeRelevantFunction=(ClassName=\"\",FunctionName=\"\"),UpdateFunction=(ClassName=\"\",FunctionName=\"\"))",
+   "pins": [
+    {
+     "name": "Result",
+     "value": "(LinkID=-1,SourceLinkID=-1)",
+     "links": [
+      "AnimGraphNode_ControlRig_1.Pose"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "AnimGraphNode_StateMachine_0",
+   "graph": "AnimGraph",
+   "class": "AnimGraphNode_StateMachine",
+   "node": "(StateMachineIndexInClass=0,MaxTransitionsPerFrame=3,MaxTransitionsRequests=32,bSkipFirstUpdateTransition=True,bReinitializeOnBecomingRelevant=True,bCreateNotifyMetaData=True,bAllowConduitEntryStates=False,InitialUpdateFunction=(ClassName=\"\",FunctionName=\"\"),BecomeRelevantFunction=(ClassName=\"\",FunctionName=\"\"),UpdateFunction=(ClassName=\"\",FunctionName=\"\"))",
+   "pins": [
+    {
+     "name": "Pose",
+     "value": "",
+     "links": [
+      "AnimGraphNode_SaveCachedPose_0.Pose"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "AnimGraphNode_SaveCachedPose_0",
+   "graph": "AnimGraph",
+   "class": "AnimGraphNode_SaveCachedPose",
+   "node": "(Pose=(LinkID=-1,SourceLinkID=-1),CachePoseName=\"\",InitialUpdateFunction=(ClassName=\"\",FunctionName=\"\"),BecomeRelevantFunction=(ClassName=\"\",FunctionName=\"\"),UpdateFunction=(ClassName=\"\",FunctionName=\"\"))",
+   "pins": [
+    {
+     "name": "Pose",
+     "value": "(LinkID=-1,SourceLinkID=-1)",
+     "links": [
+      "AnimGraphNode_StateMachine_0.Pose"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "AnimGraphNode_StateMachine_1",
+   "graph": "AnimGraph",
+   "class": "AnimGraphNode_StateMachine",
+   "node": "(StateMachineIndexInClass=0,MaxTransitionsPerFrame=3,MaxTransitionsRequests=32,bSkipFirstUpdateTransition=True,bReinitializeOnBecomingRelevant=True,bCreateNotifyMetaData=True,bAllowConduitEntryStates=False,InitialUpdateFunction=(ClassName=\"\",FunctionName=\"\"),BecomeRelevantFunction=(ClassName=\"\",FunctionName=\"\"),UpdateFunction=(ClassName=\"\",FunctionName=\"\"))",
+   "pins": [
+    {
+     "name": "Pose",
+     "value": "",
+     "links": [
+      "AnimGraphNode_LinkedAnimLayer_1.InPose"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "AnimGraphNode_Slot_0",
+   "graph": "AnimGraph",
+   "class": "AnimGraphNode_Slot",
+   "node": "(Source=(LinkID=-1,SourceLinkID=-1),SlotName=\"DefaultSlot\",bAlwaysUpdateSourcePose=False,InitialUpdateFunction=(ClassName=\"\",FunctionName=\"\"),BecomeRelevantFunction=(ClassName=\"\",FunctionName=\"\"),UpdateFunction=(ClassName=\"\",FunctionName=\"\"))",
+   "pins": [
+    {
+     "name": "Source",
+     "value": "(LinkID=-1,SourceLinkID=-1)",
+     "links": [
+      "AnimGraphNode_LinkedAnimLayer_0.Pose"
+     ]
+    },
+    {
+     "name": "Pose",
+     "value": "",
+     "links": [
+      "AnimGraphNode_ControlRig_1.Source"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "AnimGraphNode_ControlRig_1",
+   "graph": "AnimGraph",
+   "class": "AnimGraphNode_ControlRig",
+   "node": "(ControlRigAssetReference=(BlueprintRigClass=\"/Script/ControlRig.ControlRigBlueprintGeneratedClass'/Game/3DPlatformerGameBundle/Demo/ThirdPersonAssets/Characters/Mannequins/Rigs/Mannequin_BasicFootIK_CR.Mannequin_BasicFootIK_CR_C'\",ControlRigAsset=None),DefaultControlRigAssetReference=(BlueprintRigClass=None,ControlRigAsset=None),Alpha=1.000000,AlphaInputType=Float,bAlphaBoolEnabled=True,bSetRefPoseFromSkeleton=True,AlphaScaleBias=(Scale=1.000000,Bias=0.000000),AlphaBoolBlend=(BlendInTime=0.000000,BlendOutTime=0.000000,BlendOption=Linear,CustomCurve=None),AlphaCurveName=\"\",AlphaScaleBiasClamp=(bMapRange=False,bClampResult=False,bInterpResult=False,InRange=(Min=0.000000,Max=1.000000),OutRange=(Min=0.000000,Max=1.000000),Scale=1.000000,Bias=0.000000,ClampMin=0.000000,ClampMax=1.000000,InterpSpeedIncreasing=10.000000,InterpSpeedDecreasing=10.000000),InputMapping=(),OutputMapping=(),LODThreshold=-1,Source=(LinkID=-1,SourceLinkID=-1),bResetInputPoseToInitial=True,bTransferInputPose=True,bTransferInputCurves=True,bTransferPoseInGlobalSpace=False,InputBonesToTransfer=,OutputBonesToTransfer=,AssetUserData=,EventQueue=,SourcePropertyNames=,DestPropertyNames=,InitialUpdateFunction=(ClassName=\"\",FunctionName=\"\"),BecomeRelevantFunction=(ClassName=\"\",FunctionName=\"\"),UpdateFunction=(ClassName=\"\",FunctionName=\"\"))",
+   "pins": [
+    {
+     "name": "Source",
+     "value": "(LinkID=-1,SourceLinkID=-1)",
+     "links": [
+      "AnimGraphNode_Slot_0.Pose"
+     ]
+    },
+    {
+     "name": "Alpha",
+     "value": "1.000000",
+     "links": [
+      "K2Node_VariableGet_1.Alpha"
+     ]
+    },
+    {
+     "name": "ShouldDoIKTrace",
+     "value": "false",
+     "links": [
+      "K2Node_CallFunction_1.ReturnValue"
+     ]
+    },
+    {
+     "name": "Pose",
+     "value": "",
+     "links": [
+      "AnimGraphNode_Root_0.Result"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "AnimGraphNode_LinkedAnimLayer_0",
+   "graph": "AnimGraph",
+   "class": "AnimGraphNode_LinkedAnimLayer",
+   "node": "(Interface=\"/Script/Engine.AnimBlueprintGeneratedClass'/Game/3DPlatformerGameBundle/Animations/AnimationLayerInterfaces/Grind_Rail_AnimLayerInterface.Grind_Rail_AnimLayerInterface_C'\",Layer=\"Grind_Rail_AnimationLayer\",InputPoses=,InputPoseNames=,InstanceClass=None,bReceiveNotifiesFromLinkedInstances=False,bPropagateNotifiesToLinkedInstances=False,SourcePropertyNames=,DestPropertyNames=,InitialUpdateFunction=(ClassName=\"\",FunctionName=\"\"),BecomeRelevantFunction=(ClassName=\"\",FunctionName=\"\"),UpdateFunction=(ClassName=\"\",FunctionName=\"\"))",
+   "pins": [
+    {
+     "name": "InPose",
+     "value": "",
+     "links": [
+      "AnimGraphNode_LinkedAnimLayer_1.Pose"
+     ]
+    },
+    {
+     "name": "Pose",
+     "value": "",
+     "links": [
+      "AnimGraphNode_Slot_0.Source"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "AnimGraphNode_LinkedAnimLayer_1",
+   "graph": "AnimGraph",
+   "class": "AnimGraphNode_LinkedAnimLayer",
+   "node": "(Interface=\"/Script/Engine.AnimBlueprintGeneratedClass'/Game/3DPlatformerGameBundle/Animations/AnimationLayerInterfaces/Platformer_AnimLayerInterface.Platformer_AnimLayerInterface_C'\",Layer=\"Platformer_Animation_Layer\",InputPoses=,InputPoseNames=,InstanceClass=None,bReceiveNotifiesFromLinkedInstances=False,bPropagateNotifiesToLinkedInstances=False,SourcePropertyNames=,DestPropertyNames=,InitialUpdateFunction=(ClassName=\"\",FunctionName=\"\"),BecomeRelevantFunction=(ClassName=\"\",FunctionName=\"\"),UpdateFunction=(ClassName=\"\",FunctionName=\"\"))",
+   "pins": [
+    {
+     "name": "InPose",
+     "value": "",
+     "links": [
+      "AnimGraphNode_StateMachine_1.Pose"
+     ]
+    },
+    {
+     "name": "Pose",
+     "value": "",
+     "links": [
+      "AnimGraphNode_LinkedAnimLayer_0.InPose"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "AnimGraphNode_StateResult_0",
+   "graph": "Idle",
+   "class": "AnimGraphNode_StateResult",
+   "node": "(StateIndex=-1,StateEntryFunction=(ClassName=\"\",FunctionName=\"\"),StateFullyBlendedInFunction=(ClassName=\"\",FunctionName=\"\"),StateExitFunction=(ClassName=\"\",FunctionName=\"\"),StateFullyBlendedOutFunction=(ClassName=\"\",FunctionName=\"\"),Result=(LinkID=-1,SourceLinkID=-1),Name=\"\",LayerGroup=\"DefaultSharedGroup\",InitialUpdateFunction=(ClassName=\"\",FunctionName=\"\"),BecomeRelevantFunction=(ClassName=\"\",FunctionName=\"\"),UpdateFunction=(ClassName=\"\",FunctionName=\"\"))",
+   "pins": [
+    {
+     "name": "Result",
+     "value": "(LinkID=-1,SourceLinkID=-1)",
+     "links": [
+      "AnimGraphNode_SequencePlayer_0.Pose"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "AnimGraphNode_SequencePlayer_0",
+   "graph": "Idle",
+   "class": "AnimGraphNode_SequencePlayer",
+   "node": "(GroupName=\"\",GroupRole=CanBeLeader,bOverridePositionWhenJoiningSyncGroupAsLeader=False,Method=DoNotSync,bIgnoreForRelevancyTest=False,Sequence=\"/Script/Engine.AnimSequence'/Game/3DPlatformerGameBundle/Demo/ThirdPersonAssets/Characters/Mannequins/Animations/Idle_Anim.Idle_Anim'\",PlayRateBasis=1.000000,PlayRate=1.000000,PlayRateScaleBiasClampConstants=(bMapRange=False,bClampResult=False,bInterpResult=False,InRange=(Min=0.000000,Max=1.000000),OutRange=(Min=0.000000,Max=1.000000),Scale=1.000000,Bias=0.000000,ClampMin=0.000000,ClampMax=1.000000,InterpSpeedIncreasing=10.000000,InterpSpeedDecreasing=10.000000),StartPosition=0.000000,bLoopAnimation=True,bStartFromMatchingPose=False,PlayRateScaleBiasClampState=(),InitialUpdateFunction=(ClassName=\"\",FunctionName=\"\"),BecomeRelevantFunction=(ClassName=\"\",FunctionName=\"\"),UpdateFunction=(ClassName=\"\",FunctionName=\"\"))",
+   "pins": [
+    {
+     "name": "Pose",
+     "value": "",
+     "links": [
+      "AnimGraphNode_StateResult_0.Result"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "AnimGraphNode_StateResult_0",
+   "graph": "Walk / Run",
+   "class": "AnimGraphNode_StateResult",
+   "node": "(StateIndex=-1,StateEntryFunction=(ClassName=\"\",FunctionName=\"\"),StateFullyBlendedInFunction=(ClassName=\"\",FunctionName=\"\"),StateExitFunction=(ClassName=\"\",FunctionName=\"\"),StateFullyBlendedOutFunction=(ClassName=\"\",FunctionName=\"\"),Result=(LinkID=-1,SourceLinkID=-1),Name=\"\",LayerGroup=\"DefaultSharedGroup\",InitialUpdateFunction=(ClassName=\"\",FunctionName=\"\"),BecomeRelevantFunction=(ClassName=\"\",FunctionName=\"\"),UpdateFunction=(ClassName=\"\",FunctionName=\"\"))",
+   "pins": [
+    {
+     "name": "Result",
+     "value": "(LinkID=-1,SourceLinkID=-1)",
+     "links": [
+      "AnimGraphNode_BlendSpacePlayer_0.Pose"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "AnimGraphNode_BlendSpacePlayer_0",
+   "graph": "Walk / Run",
+   "class": "AnimGraphNode_BlendSpacePlayer",
+   "node": "(GroupName=\"\",GroupRole=CanBeLeader,bOverridePositionWhenJoiningSyncGroupAsLeader=False,Method=DoNotSync,bIgnoreForRelevancyTest=False,X=0.000000,Y=0.000000,PlayRate=1.000000,bLoop=True,bResetPlayTimeWhenBlendSpaceChanges=True,StartPosition=0.000000,BlendSpace=\"/Script/Engine.BlendSpace1D'/Game/3DPlatformerGameBundle/Demo/ThirdPersonAssets/Characters/Mannequins/Animations/WalkRun_BlendSpace.WalkRun_BlendSpace'\",InitialUpdateFunction=(ClassName=\"\",FunctionName=\"\"),BecomeRelevantFunction=(ClassName=\"\",FunctionName=\"\"),UpdateFunction=(ClassName=\"\",FunctionName=\"\"))",
+   "pins": [
+    {
+     "name": "X",
+     "value": "0.000000",
+     "links": [
+      "K2Node_VariableGet_1.GroundSpeed"
+     ]
+    },
+    {
+     "name": "Pose",
+     "value": "",
+     "links": [
+      "AnimGraphNode_StateResult_0.Result"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "AnimGraphNode_TransitionResult_0",
+   "graph": "Transition",
+   "class": "AnimGraphNode_TransitionResult",
+   "node": "(bCanEnterTransition=False,InitialUpdateFunction=(ClassName=\"\",FunctionName=\"\"),BecomeRelevantFunction=(ClassName=\"\",FunctionName=\"\"),UpdateFunction=(ClassName=\"\",FunctionName=\"\"))",
+   "pins": [
+    {
+     "name": "bCanEnterTransition",
+     "value": "False",
+     "links": [
+      "K2Node_VariableGet_0.ShouldMove"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "AnimGraphNode_TransitionResult_0",
+   "graph": "Transition",
+   "class": "AnimGraphNode_TransitionResult",
+   "node": "(bCanEnterTransition=False,InitialUpdateFunction=(ClassName=\"\",FunctionName=\"\"),BecomeRelevantFunction=(ClassName=\"\",FunctionName=\"\"),UpdateFunction=(ClassName=\"\",FunctionName=\"\"))",
+   "pins": [
+    {
+     "name": "bCanEnterTransition",
+     "value": "False",
+     "links": [
+      "K2Node_CallFunction_0.ReturnValue"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "AnimGraphNode_StateResult_0",
+   "graph": "Locomotion",
+   "class": "AnimGraphNode_StateResult",
+   "node": "(StateIndex=-1,StateEntryFunction=(ClassName=\"\",FunctionName=\"\"),StateFullyBlendedInFunction=(ClassName=\"\",FunctionName=\"\"),StateExitFunction=(ClassName=\"\",FunctionName=\"\"),StateFullyBlendedOutFunction=(ClassName=\"\",FunctionName=\"\"),Result=(LinkID=-1,SourceLinkID=-1),Name=\"\",LayerGroup=\"DefaultSharedGroup\",InitialUpdateFunction=(ClassName=\"\",FunctionName=\"\"),BecomeRelevantFunction=(ClassName=\"\",FunctionName=\"\"),UpdateFunction=(ClassName=\"\",FunctionName=\"\"))",
+   "pins": [
+    {
+     "name": "Result",
+     "value": "(LinkID=-1,SourceLinkID=-1)",
+     "links": [
+      "AnimGraphNode_UseCachedPose_0.Pose"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "AnimGraphNode_UseCachedPose_0",
+   "graph": "Locomotion",
+   "class": "AnimGraphNode_UseCachedPose",
+   "node": "AnimGraphNode_UseCachedPose: Property 'Node' for attribute 'node' on 'AnimGraphNode_UseCachedPose' is protected and cannot be read",
+   "pins": [
+    {
+     "name": "Pose",
+     "value": "",
+     "links": [
+      "AnimGraphNode_StateResult_0.Result"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "AnimGraphNode_StateResult_0",
+   "graph": "Jump",
+   "class": "AnimGraphNode_StateResult",
+   "node": "(StateIndex=-1,StateEntryFunction=(ClassName=\"\",FunctionName=\"\"),StateFullyBlendedInFunction=(ClassName=\"\",FunctionName=\"\"),StateExitFunction=(ClassName=\"\",FunctionName=\"\"),StateFullyBlendedOutFunction=(ClassName=\"\",FunctionName=\"\"),Result=(LinkID=-1,SourceLinkID=-1),Name=\"\",LayerGroup=\"DefaultSharedGroup\",InitialUpdateFunction=(ClassName=\"\",FunctionName=\"\"),BecomeRelevantFunction=(ClassName=\"\",FunctionName=\"\"),UpdateFunction=(ClassName=\"\",FunctionName=\"\"))",
+   "pins": [
+    {
+     "name": "Result",
+     "value": "(LinkID=-1,SourceLinkID=-1)",
+     "links": [
+      "AnimGraphNode_SequencePlayer_1.Pose"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "AnimGraphNode_SequencePlayer_1",
+   "graph": "Jump",
+   "class": "AnimGraphNode_SequencePlayer",
+   "node": "(GroupName=\"\",GroupRole=CanBeLeader,bOverridePositionWhenJoiningSyncGroupAsLeader=False,Method=DoNotSync,bIgnoreForRelevancyTest=False,Sequence=\"/Script/Engine.AnimSequence'/Game/3DPlatformerGameBundle/Demo/ThirdPersonAssets/Characters/Mannequins/Animations/Jump_Anim.Jump_Anim'\",PlayRateBasis=1.000000,PlayRate=1.000000,PlayRateScaleBiasClampConstants=(bMapRange=False,bClampResult=False,bInterpResult=False,InRange=(Min=0.000000,Max=1.000000),OutRange=(Min=0.000000,Max=1.000000),Scale=1.000000,Bias=0.000000,ClampMin=0.000000,ClampMax=1.000000,InterpSpeedIncreasing=10.000000,InterpSpeedDecreasing=10.000000),StartPosition=0.080000,bLoopAnimation=True,bStartFromMatchingPose=False,PlayRateScaleBiasClampState=(),InitialUpdateFunction=(ClassName=\"\",FunctionName=\"\"),BecomeRelevantFunction=(ClassName=\"\",FunctionName=\"\"),UpdateFunction=(ClassName=\"\",FunctionName=\"\"))",
+   "pins": [
+    {
+     "name": "Pose",
+     "value": "",
+     "links": [
+      "AnimGraphNode_StateResult_0.Result"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "AnimGraphNode_TransitionResult_0",
+   "graph": "Transition",
+   "class": "AnimGraphNode_TransitionResult",
+   "node": "(bCanEnterTransition=False,InitialUpdateFunction=(ClassName=\"\",FunctionName=\"\"),BecomeRelevantFunction=(ClassName=\"\",FunctionName=\"\"),UpdateFunction=(ClassName=\"\",FunctionName=\"\"))",
+   "pins": [
+    {
+     "name": "bCanEnterTransition",
+     "value": "False",
+     "links": [
+      "K2Node_CommutativeAssociativeBinaryOperator_0.ReturnValue"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "AnimGraphNode_StateResult_0",
+   "graph": "Fall Loop",
+   "class": "AnimGraphNode_StateResult",
+   "node": "(StateIndex=-1,StateEntryFunction=(ClassName=\"\",FunctionName=\"\"),StateFullyBlendedInFunction=(ClassName=\"\",FunctionName=\"\"),StateExitFunction=(ClassName=\"\",FunctionName=\"\"),StateFullyBlendedOutFunction=(ClassName=\"\",FunctionName=\"\"),Result=(LinkID=-1,SourceLinkID=-1),Name=\"\",LayerGroup=\"DefaultSharedGroup\",InitialUpdateFunction=(ClassName=\"\",FunctionName=\"\"),BecomeRelevantFunction=(ClassName=\"\",FunctionName=\"\"),UpdateFunction=(ClassName=\"\",FunctionName=\"\"))",
+   "pins": [
+    {
+     "name": "Result",
+     "value": "(LinkID=-1,SourceLinkID=-1)",
+     "links": [
+      "AnimGraphNode_SequencePlayer_3.Pose"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "AnimGraphNode_SequencePlayer_3",
+   "graph": "Fall Loop",
+   "class": "AnimGraphNode_SequencePlayer",
+   "node": "(GroupName=\"\",GroupRole=CanBeLeader,bOverridePositionWhenJoiningSyncGroupAsLeader=False,Method=DoNotSync,bIgnoreForRelevancyTest=False,Sequence=\"/Script/Engine.AnimSequence'/Game/3DPlatformerGameBundle/Demo/ThirdPersonAssets/Characters/Mannequins/Animations/Fall_Loop_Anim.Fall_Loop_Anim'\",PlayRateBasis=1.000000,PlayRate=1.000000,PlayRateScaleBiasClampConstants=(bMapRange=False,bClampResult=False,bInterpResult=False,InRange=(Min=0.000000,Max=1.000000),OutRange=(Min=0.000000,Max=1.000000),Scale=1.000000,Bias=0.000000,ClampMin=0.000000,ClampMax=1.000000,InterpSpeedIncreasing=10.000000,InterpSpeedDecreasing=10.000000),StartPosition=0.000000,bLoopAnimation=True,bStartFromMatchingPose=False,PlayRateScaleBiasClampState=(),InitialUpdateFunction=(ClassName=\"\",FunctionName=\"\"),BecomeRelevantFunction=(ClassName=\"\",FunctionName=\"\"),UpdateFunction=(ClassName=\"\",FunctionName=\"\"))",
+   "pins": [
+    {
+     "name": "Pose",
+     "value": "",
+     "links": [
+      "AnimGraphNode_StateResult_0.Result"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "AnimGraphNode_TransitionResult_0",
+   "graph": "Transition",
+   "class": "AnimGraphNode_TransitionResult",
+   "node": "(bCanEnterTransition=False,InitialUpdateFunction=(ClassName=\"\",FunctionName=\"\"),BecomeRelevantFunction=(ClassName=\"\",FunctionName=\"\"),UpdateFunction=(ClassName=\"\",FunctionName=\"\"))",
+   "pins": [
+    {
+     "name": "bCanEnterTransition",
+     "value": "False",
+     "links": [
+      "K2Node_VariableGet_0.IsFalling"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "AnimGraphNode_TransitionResult_0",
+   "graph": "Transition",
+   "class": "AnimGraphNode_TransitionResult",
+   "node": "(bCanEnterTransition=False,InitialUpdateFunction=(ClassName=\"\",FunctionName=\"\"),BecomeRelevantFunction=(ClassName=\"\",FunctionName=\"\"),UpdateFunction=(ClassName=\"\",FunctionName=\"\"))",
+   "pins": [
+    {
+     "name": "bCanEnterTransition",
+     "value": "False",
+     "links": []
+    }
+   ]
+  },
+  {
+   "name": "AnimGraphNode_StateResult_0",
+   "graph": "Land",
+   "class": "AnimGraphNode_StateResult",
+   "node": "(StateIndex=-1,StateEntryFunction=(ClassName=\"\",FunctionName=\"\"),StateFullyBlendedInFunction=(ClassName=\"\",FunctionName=\"\"),StateExitFunction=(ClassName=\"\",FunctionName=\"\"),StateFullyBlendedOutFunction=(ClassName=\"\",FunctionName=\"\"),Result=(LinkID=-1,SourceLinkID=-1),Name=\"\",LayerGroup=\"DefaultSharedGroup\",InitialUpdateFunction=(ClassName=\"\",FunctionName=\"\"),BecomeRelevantFunction=(ClassName=\"\",FunctionName=\"\"),UpdateFunction=(ClassName=\"\",FunctionName=\"\"))",
+   "pins": [
+    {
+     "name": "Result",
+     "value": "(LinkID=-1,SourceLinkID=-1)",
+     "links": [
+      "AnimGraphNode_ApplyAdditive_1.Pose"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "AnimGraphNode_SequencePlayer_4",
+   "graph": "Land",
+   "class": "AnimGraphNode_SequencePlayer",
+   "node": "(GroupName=\"\",GroupRole=CanBeLeader,bOverridePositionWhenJoiningSyncGroupAsLeader=False,Method=DoNotSync,bIgnoreForRelevancyTest=False,Sequence=\"/Script/Engine.AnimSequence'/Game/3DPlatformerGameBundle/Demo/ThirdPersonAssets/Characters/Mannequins/Animations/Land_Anim.Land_Anim'\",PlayRateBasis=1.000000,PlayRate=1.000000,PlayRateScaleBiasClampConstants=(bMapRange=False,bClampResult=False,bInterpResult=False,InRange=(Min=0.000000,Max=1.000000),OutRange=(Min=0.000000,Max=1.000000),Scale=1.000000,Bias=0.000000,ClampMin=0.000000,ClampMax=1.000000,InterpSpeedIncreasing=10.000000,InterpSpeedDecreasing=10.000000),StartPosition=0.000000,bLoopAnimation=True,bStartFromMatchingPose=False,PlayRateScaleBiasClampState=(),InitialUpdateFunction=(ClassName=\"\",FunctionName=\"\"),BecomeRelevantFunction=(ClassName=\"\",FunctionName=\"\"),UpdateFunction=(ClassName=\"\",FunctionName=\"\"))",
+   "pins": [
+    {
+     "name": "Pose",
+     "value": "",
+     "links": [
+      "AnimGraphNode_ApplyAdditive_1.Additive"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "AnimGraphNode_UseCachedPose_0",
+   "graph": "Land",
+   "class": "AnimGraphNode_UseCachedPose",
+   "node": "AnimGraphNode_UseCachedPose: Property 'Node' for attribute 'node' on 'AnimGraphNode_UseCachedPose' is protected and cannot be read",
+   "pins": [
+    {
+     "name": "Pose",
+     "value": "",
+     "links": [
+      "AnimGraphNode_ApplyAdditive_1.Base"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "AnimGraphNode_ApplyAdditive_1",
+   "graph": "Land",
+   "class": "AnimGraphNode_ApplyAdditive",
+   "node": "(Base=(LinkID=-1,SourceLinkID=-1),Additive=(LinkID=-1,SourceLinkID=-1),Alpha=1.000000,AlphaScaleBias=(Scale=1.000000,Bias=0.000000),LODThreshold=-1,AlphaBoolBlend=(BlendInTime=0.000000,BlendOutTime=0.000000,BlendOption=Linear,CustomCurve=None),AlphaCurveName=\"\",AlphaScaleBiasClamp=(bMapRange=False,bClampResult=False,bInterpResult=False,InRange=(Min=0.000000,Max=1.000000),OutRange=(Min=0.000000,Max=1.000000),Scale=1.000000,Bias=0.000000,ClampMin=0.000000,ClampMax=1.000000,InterpSpeedIncreasing=10.000000,InterpSpeedDecreasing=10.000000),AlphaInputType=Float,bAlphaBoolEnabled=True,InitialUpdateFunction=(ClassName=\"\",FunctionName=\"\"),BecomeRelevantFunction=(ClassName=\"\",FunctionName=\"\"),UpdateFunction=(ClassName=\"\",FunctionName=\"\"))",
+   "pins": [
+    {
+     "name": "Base",
+     "value": "(LinkID=-1,SourceLinkID=-1)",
+     "links": [
+      "AnimGraphNode_UseCachedPose_0.Pose"
+     ]
+    },
+    {
+     "name": "Additive",
+     "value": "(LinkID=-1,SourceLinkID=-1)",
+     "links": [
+      "AnimGraphNode_SequencePlayer_4.Pose"
+     ]
+    },
+    {
+     "name": "Alpha",
+     "value": "1.000000",
+     "links": []
+    },
+    {
+     "name": "Pose",
+     "value": "",
+     "links": [
+      "AnimGraphNode_StateResult_0.Result"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "AnimGraphNode_TransitionResult_0",
+   "graph": "Transition",
+   "class": "AnimGraphNode_TransitionResult",
+   "node": "(bCanEnterTransition=False,InitialUpdateFunction=(ClassName=\"\",FunctionName=\"\"),BecomeRelevantFunction=(ClassName=\"\",FunctionName=\"\"),UpdateFunction=(ClassName=\"\",FunctionName=\"\"))",
+   "pins": [
+    {
+     "name": "bCanEnterTransition",
+     "value": "False",
+     "links": [
+      "K2Node_CallFunction_0.ReturnValue"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "AnimGraphNode_TransitionResult_0",
+   "graph": "Transition",
+   "class": "AnimGraphNode_TransitionResult",
+   "node": "(bCanEnterTransition=False,InitialUpdateFunction=(ClassName=\"\",FunctionName=\"\"),BecomeRelevantFunction=(ClassName=\"\",FunctionName=\"\"),UpdateFunction=(ClassName=\"\",FunctionName=\"\"))",
+   "pins": [
+    {
+     "name": "bCanEnterTransition",
+     "value": "False",
+     "links": []
+    }
+   ]
+  },
+  {
+   "name": "AnimGraphNode_TransitionResult_0",
+   "graph": "Transition",
+   "class": "AnimGraphNode_TransitionResult",
+   "node": "(bCanEnterTransition=False,InitialUpdateFunction=(ClassName=\"\",FunctionName=\"\"),BecomeRelevantFunction=(ClassName=\"\",FunctionName=\"\"),UpdateFunction=(ClassName=\"\",FunctionName=\"\"))",
+   "pins": [
+    {
+     "name": "bCanEnterTransition",
+     "value": "False",
+     "links": [
+      "K2Node_VariableGet_0.ShouldMove"
+     ]
+    }
+   ]
+  }
+ ]
+}

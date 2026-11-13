@@ -1,0 +1,5 @@
+{
+ "error": "Traceback (most recent call last):\n  File \"C:/Users/fromj/Downloads/test/test/abc/FurinaSource/Scripts/Unreal/ue_verify_character_runtime.py\", line 42, in tick\n    state['origin']=pawn.get_actor_location();state['original_speed']=pawn.character_movement.max_walk_speed\n                                                                      ^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: 'SpectatorPawn' object has no attribute 'character_movement'\n",
+ "rows": [],
+ "screenshots": []
+}

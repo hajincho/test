@@ -1,0 +1,66 @@
+{
+ "comps": [
+  [
+   "None",
+   "ThirdPersonCharacter_BP_C"
+  ],
+  [
+   "CameraBoom",
+   "SpringArmComponent",
+   700.0,
+   true,
+   false
+  ],
+  [
+   "FurinaMesh",
+   "SkeletalMeshComponent"
+  ],
+  [
+   "FollowCamera",
+   "CameraComponent"
+  ],
+  [
+   "FollowCamera",
+   "CameraComponent"
+  ],
+  [
+   "Mesh",
+   "SkeletalMeshComponent"
+  ],
+  [
+   "CapsuleComponent",
+   "CapsuleComponent"
+  ],
+  [
+   "ArrowComponent",
+   "ArrowComponent"
+  ],
+  [
+   "Grind_Rail_Component_BP",
+   "Grind_Rail_Component_BP_C"
+  ],
+  [
+   "Homing_Attack_Component_BP",
+   "Homing_Attack_Component_BP_C"
+  ],
+  [
+   "Platformer_Component_BP",
+   "Platformer_Component_BP_C"
+  ],
+  [
+   "CharacterMovement",
+   "CharacterMovementComponent"
+  ]
+ ],
+ "graphs": null,
+ "mappings": [],
+ "imc_props": [
+  "default_key_mappings",
+  "map_key",
+  "mapping_profile_overrides",
+  "mappings",
+  "unmap_all",
+  "unmap_all_keys_from_action",
+  "unmap_key"
+ ]
+}
