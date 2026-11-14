@@ -1,0 +1,64 @@
+{
+ "hud": "<Object '/Game/3DPlatformerGameBundle/Levels/UEDPIE_0_ExampleLevel.ExampleLevel:PersistentLevel.BP_FurinaHUD_C_1' (0x0000018DD085BA00) Class 'BP_FurinaHUD_C'>",
+ "hud_props": {
+  "show_hud": "True",
+  "show_overlays": "False",
+  "show_debug_info": "False"
+ },
+ "components": [
+  "Arrow",
+  "CameraBoom",
+  "CameraProxyMeshComponent_0",
+  "CameraProxyMeshComponent_1",
+  "CameraProxyMeshComponent_4",
+  "CameraProxyMeshComponent_5",
+  "CharacterMesh0",
+  "CollisionCylinder",
+  "DrawFrustumComponent_0",
+  "DrawFrustumComponent_1",
+  "DrawFrustumComponent_4",
+  "DrawFrustumComponent_5",
+  "FPCamera",
+  "FollowCamera",
+  "FurinaMesh",
+  "FurinaRifle"
+ ],
+ "rifle_parent": "FurinaMesh",
+ "rifle_socket": "Right-wrist",
+ "rifle_visible": true,
+ "rifle_in_mesh": [
+  -6.0,
+  19.6,
+  125.5
+ ],
+ "Right-wrist": [
+  -9.5,
+  12.3,
+  118.8
+ ],
+ "Left-wrist": [
+  -2.1,
+  31.5,
+  128.9
+ ],
+ "Head": [
+  0.0,
+  1.1,
+  135.0
+ ],
+ "Neck": [
+  0.0,
+  0.0,
+  127.4
+ ],
+ "FPCamera_active": true,
+ "FollowCamera_active": false,
+ "fpcam_parent": "FurinaMesh",
+ "fpcam_socket": "Head",
+ "curves": {
+  "AimPitch": 18.462,
+  "RifleKick": 0.0,
+  "RifleReload": 0.0
+ },
+ "control_rot": "<Struct 'Rotator' (0x0000018D493707E0) {pitch: 18.462500, yaw: 0.000000, roll: 0.000000}>"
+}

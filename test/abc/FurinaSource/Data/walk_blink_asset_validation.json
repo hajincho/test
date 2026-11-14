@@ -1,0 +1,12 @@
+{
+ "seam_step_cm": 0.5046234130859375,
+ "max_step_cm": 0.63323974609375,
+ "max_acceleration_cm_per_frame2": 0.19632720947265625,
+ "footstep_count": 2,
+ "walk_ok": true,
+ "shader_morph_enabled": true,
+ "shader_skin_enabled": true,
+ "post_evaluate_connected": true,
+ "blueprint_status": "<BlueprintStatus.BS_UP_TO_DATE: 3>",
+ "ok": true
+}

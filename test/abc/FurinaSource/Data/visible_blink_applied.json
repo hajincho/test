@@ -1,0 +1,16 @@
+{
+ "saved": [
+  "/Game/Furina/ABP_Furina.ABP_Furina",
+  "/Game/Furina/Materials/M_Furina_Opaque.M_Furina_Opaque"
+ ],
+ "stage_only": false,
+ "material_before": {
+  "used_with_skeletal_mesh": true,
+  "used_with_morph_targets": true
+ },
+ "material_after": {
+  "used_with_skeletal_mesh": true,
+  "used_with_morph_targets": true
+ },
+ "ok": true
+}

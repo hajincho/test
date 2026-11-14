@@ -1,0 +1,12 @@
+{
+ "pins_found": [
+  true,
+  true
+ ],
+ "linked": true,
+ "mc_source_from": [
+  "AnimGraphNode_LayeredBoneBlend_FP"
+ ],
+ "status": "<BlueprintStatus.BS_UP_TO_DATE: 3>",
+ "saved": true
+}

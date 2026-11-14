@@ -1,0 +1,614 @@
+{
+ "A_FP_AssaultRifle_Aim_Pose.fbx": {
+  "frames": [
+   1,
+   2
+  ],
+  "gun_in_hand_r": {
+   "first_cm": [
+    -1047.83,
+    -239.24,
+    640.72
+   ],
+   "first_q": [
+    0.6738,
+    -0.0583,
+    0.0117,
+    -0.7365
+   ],
+   "max_move_cm": 0.0,
+   "max_rot_deg": 0.0
+  },
+  "hand_l_in_gun": {
+   "first_cm": [
+    459.6,
+    -1447.17,
+    -23.18
+   ],
+   "first_q": [
+    0.1861,
+    0.5824,
+    -0.7506,
+    -0.2504
+   ],
+   "max_move_cm": 0.0,
+   "max_rot_deg": 0.06
+  },
+  "gun_in_head": {
+   "first_cm": [
+    -986.02,
+    -962.15,
+    0.0
+   ],
+   "first_q": [
+    0.7071,
+    0.0,
+    0.7071,
+    0.0
+   ],
+   "max_move_cm": 0.0,
+   "max_rot_deg": 0.0
+  }
+ },
+ "A_FP_AssaultRifle_Equip.fbx": {
+  "frames": [
+   1,
+   32
+  ],
+  "gun_in_hand_r": {
+   "first_cm": [
+    -1047.85,
+    -239.26,
+    640.71
+   ],
+   "first_q": [
+    0.6738,
+    -0.0583,
+    0.0117,
+    -0.7365
+   ],
+   "max_move_cm": 0.56,
+   "max_rot_deg": 0.07
+  },
+  "hand_l_in_gun": {
+   "first_cm": [
+    459.6,
+    -1447.16,
+    -23.19
+   ],
+   "first_q": [
+    0.1861,
+    0.5824,
+    -0.7506,
+    -0.2504
+   ],
+   "max_move_cm": 0.9,
+   "max_rot_deg": 0.06
+  },
+  "gun_in_head": {
+   "first_cm": [
+    -2207.89,
+    -98.76,
+    210.75
+   ],
+   "first_q": [
+    0.3216,
+    0.4036,
+    0.8269,
+    0.2235
+   ],
+   "max_move_cm": 2072.48,
+   "max_rot_deg": 69.67
+  }
+ },
+ "A_FP_AssaultRifle_Fire.fbx": {
+  "frames": [
+   1,
+   24
+  ],
+  "gun_in_hand_r": {
+   "first_cm": [
+    -1047.85,
+    -239.26,
+    640.72
+   ],
+   "first_q": [
+    0.6738,
+    -0.0583,
+    0.0117,
+    -0.7365
+   ],
+   "max_move_cm": 0.01,
+   "max_rot_deg": 0.0
+  },
+  "hand_l_in_gun": {
+   "first_cm": [
+    459.61,
+    -1447.17,
+    -23.17
+   ],
+   "first_q": [
+    0.1861,
+    0.5824,
+    -0.7506,
+    -0.2504
+   ],
+   "max_move_cm": 0.01,
+   "max_rot_deg": 0.06
+  },
+  "gun_in_head": {
+   "first_cm": [
+    -983.53,
+    -1437.48,
+    576.88
+   ],
+   "first_q": [
+    0.6756,
+    0.0,
+    0.7373,
+    0.0
+   ],
+   "max_move_cm": 193.81,
+   "max_rot_deg": 2.71
+  }
+ },
+ "A_FP_AssaultRifle_Fire_Aimed.fbx": {
+  "frames": [
+   1,
+   24
+  ],
+  "gun_in_hand_r": {
+   "first_cm": [
+    -1047.83,
+    -239.26,
+    640.72
+   ],
+   "first_q": [
+    0.6738,
+    -0.0583,
+    0.0117,
+    -0.7365
+   ],
+   "max_move_cm": 0.01,
+   "max_rot_deg": 0.0
+  },
+  "hand_l_in_gun": {
+   "first_cm": [
+    459.61,
+    -1447.17,
+    -23.18
+   ],
+   "first_q": [
+    0.1861,
+    0.5824,
+    -0.7506,
+    -0.2504
+   ],
+   "max_move_cm": 0.01,
+   "max_rot_deg": 0.04
+  },
+  "gun_in_head": {
+   "first_cm": [
+    -986.02,
+    -962.15,
+    0.0
+   ],
+   "first_q": [
+    0.7071,
+    0.0,
+    0.7071,
+    0.0
+   ],
+   "max_move_cm": 232.62,
+   "max_rot_deg": 0.76
+  }
+ },
+ "A_FP_AssaultRifle_Holster.fbx": {
+  "frames": [
+   1,
+   22
+  ],
+  "gun_in_hand_r": {
+   "first_cm": [
+    -1047.85,
+    -239.24,
+    640.73
+   ],
+   "first_q": [
+    0.6738,
+    -0.0583,
+    0.0117,
+    -0.7365
+   ],
+   "max_move_cm": 0.02,
+   "max_rot_deg": 0.06
+  },
+  "hand_l_in_gun": {
+   "first_cm": [
+    459.61,
+    -1447.16,
+    -23.17
+   ],
+   "first_q": [
+    0.1861,
+    0.5824,
+    -0.7506,
+    -0.2504
+   ],
+   "max_move_cm": 0.01,
+   "max_rot_deg": 0.0
+  },
+  "gun_in_head": {
+   "first_cm": [
+    -983.53,
+    -1437.48,
+    576.88
+   ],
+   "first_q": [
+    0.6756,
+    -0.0,
+    0.7373,
+    0.0
+   ],
+   "max_move_cm": 1853.22,
+   "max_rot_deg": 68.52
+  }
+ },
+ "A_FP_AssaultRifle_Idle_Loop.fbx": {
+  "frames": [
+   1,
+   61
+  ],
+  "gun_in_hand_r": {
+   "first_cm": [
+    -1047.85,
+    -239.26,
+    640.71
+   ],
+   "first_q": [
+    0.6738,
+    -0.0583,
+    0.0117,
+    -0.7365
+   ],
+   "max_move_cm": 0.01,
+   "max_rot_deg": 0.0
+  },
+  "hand_l_in_gun": {
+   "first_cm": [
+    459.61,
+    -1447.17,
+    -23.17
+   ],
+   "first_q": [
+    0.1861,
+    0.5824,
+    -0.7506,
+    -0.2504
+   ],
+   "max_move_cm": 0.01,
+   "max_rot_deg": 0.06
+  },
+  "gun_in_head": {
+   "first_cm": [
+    -981.52,
+    -1438.92,
+    576.77
+   ],
+   "first_q": [
+    0.6763,
+    0.0004,
+    0.7366,
+    0.0002
+   ],
+   "max_move_cm": 31.19,
+   "max_rot_deg": 0.28
+  }
+ },
+ "A_FP_AssaultRifle_Idle_Loop_Aimed.fbx": {
+  "frames": [
+   1,
+   61
+  ],
+  "gun_in_hand_r": {
+   "first_cm": [
+    -1047.83,
+    -239.24,
+    640.71
+   ],
+   "first_q": [
+    0.6738,
+    -0.0583,
+    0.0117,
+    -0.7365
+   ],
+   "max_move_cm": 0.01,
+   "max_rot_deg": 0.0
+  },
+  "hand_l_in_gun": {
+   "first_cm": [
+    459.61,
+    -1447.17,
+    -23.18
+   ],
+   "first_q": [
+    0.1861,
+    0.5824,
+    -0.7506,
+    -0.2504
+   ],
+   "max_move_cm": 0.01,
+   "max_rot_deg": 0.04
+  },
+  "gun_in_head": {
+   "first_cm": [
+    -983.5,
+    -965.95,
+    -0.43
+   ],
+   "first_q": [
+    0.7071,
+    -0.0008,
+    0.7071,
+    0.0005
+   ],
+   "max_move_cm": 5.15,
+   "max_rot_deg": 0.07
+  }
+ },
+ "A_FP_AssaultRifle_Idle_Pose.fbx": {
+  "frames": [
+   1,
+   2
+  ],
+  "gun_in_hand_r": {
+   "first_cm": [
+    -1047.84,
+    -239.26,
+    640.71
+   ],
+   "first_q": [
+    0.6738,
+    -0.0583,
+    0.0117,
+    -0.7365
+   ],
+   "max_move_cm": 0.0,
+   "max_rot_deg": 0.0
+  },
+  "hand_l_in_gun": {
+   "first_cm": [
+    459.61,
+    -1447.17,
+    -23.17
+   ],
+   "first_q": [
+    0.1861,
+    0.5824,
+    -0.7506,
+    -0.2504
+   ],
+   "max_move_cm": 0.0,
+   "max_rot_deg": 0.0
+  },
+  "gun_in_head": {
+   "first_cm": [
+    -983.53,
+    -1437.48,
+    576.88
+   ],
+   "first_q": [
+    0.6756,
+    0.0,
+    0.7373,
+    0.0
+   ],
+   "max_move_cm": 0.0,
+   "max_rot_deg": 0.0
+  }
+ },
+ "A_FP_AssaultRifle_Reload.fbx": {
+  "frames": [
+   1,
+   95
+  ],
+  "gun_in_hand_r": {
+   "first_cm": [
+    -1047.85,
+    -239.25,
+    640.72
+   ],
+   "first_q": [
+    0.6738,
+    -0.0583,
+    0.0117,
+    -0.7365
+   ],
+   "max_move_cm": 0.39,
+   "max_rot_deg": 0.0
+  },
+  "hand_l_in_gun": {
+   "first_cm": [
+    459.61,
+    -1447.17,
+    -23.17
+   ],
+   "first_q": [
+    0.1861,
+    0.5824,
+    -0.7506,
+    -0.2504
+   ],
+   "max_move_cm": 5790.06,
+   "max_rot_deg": 72.35
+  },
+  "gun_in_head": {
+   "first_cm": [
+    -983.53,
+    -1437.48,
+    576.88
+   ],
+   "first_q": [
+    0.6756,
+    -0.0,
+    0.7373,
+    0.0
+   ],
+   "max_move_cm": 916.43,
+   "max_rot_deg": 64.39
+  }
+ },
+ "A_FP_AssaultRifle_Run_Loop.fbx": {
+  "frames": [
+   1,
+   21
+  ],
+  "gun_in_hand_r": {
+   "first_cm": [
+    -1047.85,
+    -239.25,
+    640.71
+   ],
+   "first_q": [
+    0.6738,
+    -0.0583,
+    0.0117,
+    -0.7365
+   ],
+   "max_move_cm": 0.01,
+   "max_rot_deg": 0.0
+  },
+  "hand_l_in_gun": {
+   "first_cm": [
+    459.61,
+    -1447.16,
+    -23.18
+   ],
+   "first_q": [
+    0.1861,
+    0.5824,
+    -0.7506,
+    -0.2504
+   ],
+   "max_move_cm": 0.01,
+   "max_rot_deg": 0.0
+  },
+  "gun_in_head": {
+   "first_cm": [
+    -1471.08,
+    -1695.74,
+    -37.75
+   ],
+   "first_q": [
+    0.4708,
+    0.2753,
+    0.8359,
+    0.062
+   ],
+   "max_move_cm": 625.21,
+   "max_rot_deg": 11.67
+  }
+ },
+ "A_FP_AssaultRifle_Walk_F_Loop.fbx": {
+  "frames": [
+   1,
+   25
+  ],
+  "gun_in_hand_r": {
+   "first_cm": [
+    -1047.85,
+    -239.26,
+    640.72
+   ],
+   "first_q": [
+    0.6738,
+    -0.0583,
+    0.0117,
+    -0.7365
+   ],
+   "max_move_cm": 0.01,
+   "max_rot_deg": 0.0
+  },
+  "hand_l_in_gun": {
+   "first_cm": [
+    459.61,
+    -1447.17,
+    -23.18
+   ],
+   "first_q": [
+    0.1861,
+    0.5824,
+    -0.7506,
+    -0.2504
+   ],
+   "max_move_cm": 0.01,
+   "max_rot_deg": 0.06
+  },
+  "gun_in_head": {
+   "first_cm": [
+    -991.44,
+    -1438.61,
+    553.13
+   ],
+   "first_q": [
+    0.6746,
+    -0.0015,
+    0.7382,
+    0.0033
+   ],
+   "max_move_cm": 59.98,
+   "max_rot_deg": 0.81
+  }
+ },
+ "A_FP_AssaultRifle_Walk_F_Loop_Aimed.fbx": {
+  "frames": [
+   1,
+   25
+  ],
+  "gun_in_hand_r": {
+   "first_cm": [
+    -1047.83,
+    -239.26,
+    640.73
+   ],
+   "first_q": [
+    0.6738,
+    -0.0583,
+    0.0117,
+    -0.7365
+   ],
+   "max_move_cm": 0.01,
+   "max_rot_deg": 0.0
+  },
+  "hand_l_in_gun": {
+   "first_cm": [
+    459.61,
+    -1447.16,
+    -23.18
+   ],
+   "first_q": [
+    0.1861,
+    0.5824,
+    -0.7506,
+    -0.2504
+   ],
+   "max_move_cm": 0.01,
+   "max_rot_deg": 0.04
+  },
+  "gun_in_head": {
+   "first_cm": [
+    -986.19,
+    -944.89,
+    -3.52
+   ],
+   "first_q": [
+    0.7074,
+    -0.0005,
+    0.7068,
+    0.0007
+   ],
+   "max_move_cm": 12.69,
+   "max_rot_deg": 0.16
+  }
+ }
+}

@@ -1,0 +1,46 @@
+{
+ "log": [
+  "montage AM_Furina_FP_Fire ['RifleKick']",
+  "montage AM_Furina_FP_Reload ['RifleReload']"
+ ],
+ "mappings": [
+  [
+   "LeftShift",
+   "IA_FurinaSprint"
+  ],
+  [
+   "LeftMouseButton",
+   "Direction_IA"
+  ],
+  [
+   "V",
+   "IA_FurinaView"
+  ],
+  [
+   "LeftMouseButton",
+   "IA_FurinaFire"
+  ],
+  [
+   "R",
+   "IA_FurinaReload"
+  ]
+ ],
+ "status": "<BlueprintStatus.BS_UP_TO_DATE: 3>",
+ "saved": true,
+ "components": [
+  "ArrowComponent",
+  "CameraBoom",
+  "CapsuleComponent",
+  "CharacterMovement",
+  "FPCamera",
+  "FollowCamera",
+  "FurinaMesh",
+  "FurinaRifle",
+  "Grind_Rail_Component_BP",
+  "Homing_Attack_Component_BP",
+  "Mesh",
+  "None",
+  "Platformer_Component_BP"
+ ],
+ "ok": true
+}

@@ -1,0 +1,4 @@
+{
+ "graph": "<Object '/Game/3DPlatformerGameBundle/Demo/ThirdPersonAssets/Blueprints/ThirdPersonCharacter_BP.ThirdPersonCharacter_BP:EventGraph' (0x0000018D8C3CB040) Class 'EdGraph'>",
+ "err": "Exception(\"EdGraph: Property 'Nodes' for attribute 'nodes' on 'EdGraph' is protected and cannot be read\")"
+}

@@ -1,0 +1,11920 @@
+[
+{
+"t": 0.01,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": false,
+"want": false,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 0.02,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": false,
+"want": false,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 0.04,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": false,
+"want": false,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 0.05,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": false,
+"want": false,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 0.07,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": false,
+"want": false,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 0.09,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": false,
+"want": false,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 0.1,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": false,
+"want": false,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 0.12,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": false,
+"want": false,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 0.14,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": false,
+"want": false,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 0.15,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": false,
+"want": false,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 0.17,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": false,
+"want": false,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 0.19,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": false,
+"want": false,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 0.2,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": false,
+"want": false,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 0.23,
+"kick": 0.209,
+"reload": 0.0,
+"aim": 0.0,
+"montage": "AM_Furina_FP_Fire",
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": false,
+"want": false,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 0.24,
+"kick": 0.908,
+"reload": 0.0,
+"aim": 0.0,
+"montage": "AM_Furina_FP_Fire",
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": false,
+"want": false,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 0.25,
+"kick": 0.883,
+"reload": 0.0,
+"aim": 0.0,
+"montage": "AM_Furina_FP_Fire",
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": false,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 0.27,
+"kick": 0.786,
+"reload": 0.0,
+"aim": 0.0,
+"montage": "AM_Furina_FP_Fire",
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": false,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 0.29,
+"kick": 0.689,
+"reload": 0.0,
+"aim": 0.0,
+"montage": "AM_Furina_FP_Fire",
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 0.31,
+"kick": 0.592,
+"reload": 0.0,
+"aim": -0.0,
+"montage": "AM_Furina_FP_Fire",
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 0.32,
+"kick": 0.494,
+"reload": 0.0,
+"aim": -0.0,
+"montage": "AM_Furina_FP_Fire",
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 0.34,
+"kick": 0.397,
+"reload": 0.0,
+"aim": 0.0,
+"montage": "AM_Furina_FP_Fire",
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 0.35,
+"kick": 0.3,
+"reload": 0.0,
+"aim": 0.0,
+"montage": "AM_Furina_FP_Fire",
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 0.37,
+"kick": 0.267,
+"reload": 0.0,
+"aim": -0.0,
+"montage": "AM_Furina_FP_Fire",
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 0.39,
+"kick": 0.233,
+"reload": 0.0,
+"aim": 0.0,
+"montage": "AM_Furina_FP_Fire",
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 0.4,
+"kick": 0.2,
+"reload": 0.0,
+"aim": 0.0,
+"montage": "AM_Furina_FP_Fire",
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 0.42,
+"kick": 0.167,
+"reload": 0.0,
+"aim": -0.0,
+"montage": "AM_Furina_FP_Fire",
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 0.44,
+"kick": 0.133,
+"reload": 0.0,
+"aim": 0.0,
+"montage": "AM_Furina_FP_Fire",
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 0.45,
+"kick": 0.1,
+"reload": 0.0,
+"aim": 0.0,
+"montage": "AM_Furina_FP_Fire",
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 0.47,
+"kick": 0.067,
+"reload": 0.0,
+"aim": 0.0,
+"montage": "AM_Furina_FP_Fire",
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 0.49,
+"kick": 0.033,
+"reload": 0.0,
+"aim": 0.0,
+"montage": "AM_Furina_FP_Fire",
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 0.5,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": "AM_Furina_FP_Fire",
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 0.52,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.0,
+"montage": "AM_Furina_FP_Fire",
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 0.54,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": "AM_Furina_FP_Fire",
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 0.55,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.0,
+"montage": "AM_Furina_FP_Fire",
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 0.57,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": "AM_Furina_FP_Fire",
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 0.59,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": "AM_Furina_FP_Fire",
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 0.6,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": "AM_Furina_FP_Fire",
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 0.62,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.0,
+"montage": "AM_Furina_FP_Fire",
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 0.64,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.0,
+"montage": "AM_Furina_FP_Fire",
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 0.65,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.0,
+"montage": "AM_Furina_FP_Fire",
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 0.67,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": "AM_Furina_FP_Fire",
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 0.69,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": "AM_Furina_FP_Fire",
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 0.7,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": "AM_Furina_FP_Fire",
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 0.72,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.0,
+"montage": "AM_Furina_FP_Fire",
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 0.74,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": "AM_Furina_FP_Fire",
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 0.75,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.0,
+"montage": "AM_Furina_FP_Fire",
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 0.77,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": "AM_Furina_FP_Fire",
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 0.79,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.0,
+"montage": "AM_Furina_FP_Fire",
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 0.8,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.0,
+"montage": "AM_Furina_FP_Fire",
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 0.82,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": "AM_Furina_FP_Fire",
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 0.84,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.0,
+"montage": "AM_Furina_FP_Fire",
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 0.85,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 0.87,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 0.89,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 0.9,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 0.92,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 0.94,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 0.95,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 0.97,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 0.99,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 1.0,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 1.02,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 1.04,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 1.05,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 1.07,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 1.09,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 1.11,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 1.12,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 1.14,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 1.15,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 1.17,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 1.19,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 1.2,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 1.22,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 1.24,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 1.25,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.1,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 1.27,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 1.29,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 1.3,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 1.32,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 34,
+"run": 0.0
+},
+{
+"t": 1.34,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 68,
+"run": 0.0
+},
+{
+"t": 1.35,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 102,
+"run": 0.0
+},
+{
+"t": 1.37,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 137,
+"run": 0.0
+},
+{
+"t": 1.39,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 171,
+"run": 0.0
+},
+{
+"t": 1.41,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 205,
+"run": 0.0
+},
+{
+"t": 1.42,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 239,
+"run": 0.0
+},
+{
+"t": 1.44,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 273,
+"run": 0.0
+},
+{
+"t": 1.46,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 307,
+"run": 0.01
+},
+{
+"t": 1.47,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 341,
+"run": 0.06
+},
+{
+"t": 1.49,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 375,
+"run": 0.1
+},
+{
+"t": 1.51,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 410,
+"run": 0.16
+},
+{
+"t": 1.52,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 444,
+"run": 0.23
+},
+{
+"t": 1.54,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 478,
+"run": 0.3
+},
+{
+"t": 1.55,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 512,
+"run": 0.38
+},
+{
+"t": 1.57,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 546,
+"run": 0.46
+},
+{
+"t": 1.59,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 580,
+"run": 0.54
+},
+{
+"t": 1.6,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 600,
+"run": 0.61
+},
+{
+"t": 1.62,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 600,
+"run": 0.67
+},
+{
+"t": 1.64,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 600,
+"run": 0.72
+},
+{
+"t": 1.65,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 600,
+"run": 0.76
+},
+{
+"t": 1.67,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 600,
+"run": 0.79
+},
+{
+"t": 1.69,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 600,
+"run": 0.82
+},
+{
+"t": 1.7,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 600,
+"run": 0.84
+},
+{
+"t": 1.72,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 600,
+"run": 0.86
+},
+{
+"t": 1.74,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 600,
+"run": 0.87
+},
+{
+"t": 1.76,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 600,
+"run": 0.89
+},
+{
+"t": 1.77,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 600,
+"run": 0.9
+},
+{
+"t": 1.79,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 600,
+"run": 0.91
+},
+{
+"t": 1.8,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 600,
+"run": 0.92
+},
+{
+"t": 1.82,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 600,
+"run": 0.93
+},
+{
+"t": 1.84,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 600,
+"run": 0.94
+},
+{
+"t": 1.85,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 600,
+"run": 0.94
+},
+{
+"t": 1.87,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 600,
+"run": 0.95
+},
+{
+"t": 1.89,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 600,
+"run": 0.95
+},
+{
+"t": 1.9,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 600,
+"run": 0.96
+},
+{
+"t": 1.92,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 600,
+"run": 0.96
+},
+{
+"t": 1.94,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 600,
+"run": 0.97
+},
+{
+"t": 1.95,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 600,
+"run": 0.97
+},
+{
+"t": 1.97,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 600,
+"run": 0.97
+},
+{
+"t": 1.99,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 600,
+"run": 0.98
+},
+{
+"t": 2.0,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 600,
+"run": 0.98
+},
+{
+"t": 2.02,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 600,
+"run": 0.98
+},
+{
+"t": 2.04,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 600,
+"run": 0.98
+},
+{
+"t": 2.05,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 600,
+"run": 0.98
+},
+{
+"t": 2.07,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 600,
+"run": 0.99
+},
+{
+"t": 2.09,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 600,
+"run": 0.99
+},
+{
+"t": 2.1,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 600,
+"run": 0.99
+},
+{
+"t": 2.12,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 600,
+"run": 0.99
+},
+{
+"t": 2.14,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 600,
+"run": 0.99
+},
+{
+"t": 2.15,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 600,
+"run": 0.99
+},
+{
+"t": 2.17,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 600,
+"run": 0.99
+},
+{
+"t": 2.19,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 600,
+"run": 0.99
+},
+{
+"t": 2.2,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 600,
+"run": 0.99
+},
+{
+"t": 2.22,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 600,
+"run": 0.99
+},
+{
+"t": 2.24,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 600,
+"run": 1.0
+},
+{
+"t": 2.25,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 600,
+"run": 1.0
+},
+{
+"t": 2.27,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 600,
+"run": 1.0
+},
+{
+"t": 2.29,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 600,
+"run": 1.0
+},
+{
+"t": 2.3,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 600,
+"run": 1.0
+},
+{
+"t": 2.32,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 600,
+"run": 1.0
+},
+{
+"t": 2.34,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 600,
+"run": 1.0
+},
+{
+"t": 2.35,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 600,
+"run": 1.0
+},
+{
+"t": 2.37,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 600,
+"run": 1.0
+},
+{
+"t": 2.39,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 600,
+"run": 1.0
+},
+{
+"t": 2.4,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 600,
+"run": 1.0
+},
+{
+"t": 2.42,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 600,
+"run": 1.0
+},
+{
+"t": 2.44,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 600,
+"run": 1.0
+},
+{
+"t": 2.45,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 600,
+"run": 1.0
+},
+{
+"t": 2.47,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 600,
+"run": 1.0
+},
+{
+"t": 2.49,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 600,
+"run": 1.0
+},
+{
+"t": 2.5,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 600,
+"run": 1.0
+},
+{
+"t": 2.52,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 600,
+"run": 1.0
+},
+{
+"t": 2.54,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 600,
+"run": 1.0
+},
+{
+"t": 2.55,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 600,
+"run": 1.0
+},
+{
+"t": 2.57,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 600,
+"run": 1.0
+},
+{
+"t": 2.59,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 600,
+"run": 1.0
+},
+{
+"t": 2.6,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 600,
+"run": 1.0
+},
+{
+"t": 2.62,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 600,
+"run": 1.0
+},
+{
+"t": 2.64,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 600,
+"run": 1.0
+},
+{
+"t": 2.65,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 600,
+"run": 1.0
+},
+{
+"t": 2.67,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 600,
+"run": 1.0
+},
+{
+"t": 2.69,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 600,
+"run": 1.0
+},
+{
+"t": 2.7,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 600,
+"run": 1.0
+},
+{
+"t": 2.72,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 600,
+"run": 1.0
+},
+{
+"t": 2.74,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 600,
+"run": 1.0
+},
+{
+"t": 2.75,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 600,
+"run": 1.0
+},
+{
+"t": 2.77,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 600,
+"run": 1.0
+},
+{
+"t": 2.79,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 600,
+"run": 1.0
+},
+{
+"t": 2.8,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 600,
+"run": 1.0
+},
+{
+"t": 2.82,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 600,
+"run": 1.0
+},
+{
+"t": 2.84,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 600,
+"run": 1.0
+},
+{
+"t": 2.85,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 600,
+"run": 1.0
+},
+{
+"t": 2.87,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 600,
+"run": 1.0
+},
+{
+"t": 2.89,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 600,
+"run": 1.0
+},
+{
+"t": 2.9,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 600,
+"run": 1.0
+},
+{
+"t": 2.92,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 600,
+"run": 1.0
+},
+{
+"t": 2.94,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 406,
+"run": 0.96
+},
+{
+"t": 2.96,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_FALLING: ",
+"v": 788,
+"run": 0.9
+},
+{
+"t": 2.97,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_FALLING: ",
+"v": 767,
+"run": 0.83
+},
+{
+"t": 2.99,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_FALLING: ",
+"v": 762,
+"run": 0.78
+},
+{
+"t": 3.0,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_FALLING: ",
+"v": 758,
+"run": 0.76
+},
+{
+"t": 3.02,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_FALLING: ",
+"v": 756,
+"run": 0.74
+},
+{
+"t": 3.04,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_FALLING: ",
+"v": 756,
+"run": 0.73
+},
+{
+"t": 3.05,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_FALLING: ",
+"v": 757,
+"run": 0.73
+},
+{
+"t": 3.07,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_FALLING: ",
+"v": 761,
+"run": 0.74
+},
+{
+"t": 3.09,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_FALLING: ",
+"v": 766,
+"run": 0.77
+},
+{
+"t": 3.1,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_FALLING: ",
+"v": 753,
+"run": 0.8
+},
+{
+"t": 3.12,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_FALLING: ",
+"v": 738,
+"run": 0.82
+},
+{
+"t": 3.14,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_FALLING: ",
+"v": 724,
+"run": 0.85
+},
+{
+"t": 3.15,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_FALLING: ",
+"v": 711,
+"run": 0.87
+},
+{
+"t": 3.17,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_FALLING: ",
+"v": 698,
+"run": 0.9
+},
+{
+"t": 3.19,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_FALLING: ",
+"v": 686,
+"run": 0.92
+},
+{
+"t": 3.2,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_FALLING: ",
+"v": 674,
+"run": 0.93
+},
+{
+"t": 3.22,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_FALLING: ",
+"v": 664,
+"run": 0.95
+},
+{
+"t": 3.24,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_FALLING: ",
+"v": 654,
+"run": 0.96
+},
+{
+"t": 3.25,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_FALLING: ",
+"v": 644,
+"run": 0.97
+},
+{
+"t": 3.27,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_FALLING: ",
+"v": 636,
+"run": 0.98
+},
+{
+"t": 3.29,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_FALLING: ",
+"v": 628,
+"run": 0.99
+},
+{
+"t": 3.3,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_FALLING: ",
+"v": 621,
+"run": 0.99
+},
+{
+"t": 3.32,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_FALLING: ",
+"v": 615,
+"run": 1.0
+},
+{
+"t": 3.34,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_FALLING: ",
+"v": 610,
+"run": 1.0
+},
+{
+"t": 3.35,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_FALLING: ",
+"v": 606,
+"run": 1.0
+},
+{
+"t": 3.37,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_FALLING: ",
+"v": 603,
+"run": 1.0
+},
+{
+"t": 3.39,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_FALLING: ",
+"v": 601,
+"run": 1.0
+},
+{
+"t": 3.4,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_FALLING: ",
+"v": 600,
+"run": 1.0
+},
+{
+"t": 3.42,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_FALLING: ",
+"v": 600,
+"run": 1.0
+},
+{
+"t": 3.44,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_FALLING: ",
+"v": 601,
+"run": 1.0
+},
+{
+"t": 3.45,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_FALLING: ",
+"v": 603,
+"run": 1.0
+},
+{
+"t": 3.47,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_FALLING: ",
+"v": 606,
+"run": 1.0
+},
+{
+"t": 3.49,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_FALLING: ",
+"v": 610,
+"run": 1.0
+},
+{
+"t": 3.5,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_FALLING: ",
+"v": 615,
+"run": 1.0
+},
+{
+"t": 3.52,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_FALLING: ",
+"v": 620,
+"run": 1.0
+},
+{
+"t": 3.54,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_FALLING: ",
+"v": 627,
+"run": 1.0
+},
+{
+"t": 3.55,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_FALLING: ",
+"v": 635,
+"run": 1.0
+},
+{
+"t": 3.57,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_FALLING: ",
+"v": 643,
+"run": 1.0
+},
+{
+"t": 3.59,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_FALLING: ",
+"v": 652,
+"run": 0.99
+},
+{
+"t": 3.6,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_FALLING: ",
+"v": 662,
+"run": 0.99
+},
+{
+"t": 3.62,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_FALLING: ",
+"v": 673,
+"run": 0.98
+},
+{
+"t": 3.64,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_FALLING: ",
+"v": 684,
+"run": 0.98
+},
+{
+"t": 3.65,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_FALLING: ",
+"v": 696,
+"run": 0.97
+},
+{
+"t": 3.67,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_FALLING: ",
+"v": 709,
+"run": 0.97
+},
+{
+"t": 3.69,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_FALLING: ",
+"v": 722,
+"run": 0.97
+},
+{
+"t": 3.7,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_FALLING: ",
+"v": 736,
+"run": 0.97
+},
+{
+"t": 3.72,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_FALLING: ",
+"v": 751,
+"run": 0.97
+},
+{
+"t": 3.74,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_FALLING: ",
+"v": 766,
+"run": 0.97
+},
+{
+"t": 3.75,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_FALLING: ",
+"v": 781,
+"run": 0.97
+},
+{
+"t": 3.77,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_FALLING: ",
+"v": 797,
+"run": 0.98
+},
+{
+"t": 3.79,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_FALLING: ",
+"v": 814,
+"run": 0.98
+},
+{
+"t": 3.8,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_FALLING: ",
+"v": 830,
+"run": 0.98
+},
+{
+"t": 3.82,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_FALLING: ",
+"v": 847,
+"run": 0.98
+},
+{
+"t": 3.84,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_FALLING: ",
+"v": 865,
+"run": 0.98
+},
+{
+"t": 3.85,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_FALLING: ",
+"v": 883,
+"run": 0.98
+},
+{
+"t": 3.87,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_FALLING: ",
+"v": 901,
+"run": 0.98
+},
+{
+"t": 3.89,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_FALLING: ",
+"v": 919,
+"run": 0.98
+},
+{
+"t": 3.9,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 600,
+"run": 1.0
+},
+{
+"t": 3.92,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 600,
+"run": 1.0
+},
+{
+"t": 3.94,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 600,
+"run": 1.0
+},
+{
+"t": 3.96,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 600,
+"run": 1.0
+},
+{
+"t": 3.97,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 600,
+"run": 1.0
+},
+{
+"t": 3.99,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 600,
+"run": 1.0
+},
+{
+"t": 4.01,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 600,
+"run": 1.0
+},
+{
+"t": 4.03,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 600,
+"run": 1.0
+},
+{
+"t": 4.04,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 600,
+"run": 1.0
+},
+{
+"t": 4.06,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 600,
+"run": 1.0
+},
+{
+"t": 4.08,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 600,
+"run": 1.0
+},
+{
+"t": 4.09,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 600,
+"run": 1.0
+},
+{
+"t": 4.11,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 600,
+"run": 1.0
+},
+{
+"t": 4.12,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 600,
+"run": 1.0
+},
+{
+"t": 4.14,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 600,
+"run": 1.0
+},
+{
+"t": 4.16,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 600,
+"run": 1.0
+},
+{
+"t": 4.17,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 600,
+"run": 1.0
+},
+{
+"t": 4.19,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 600,
+"run": 1.0
+},
+{
+"t": 4.21,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 600,
+"run": 1.0
+},
+{
+"t": 4.23,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 600,
+"run": 1.0
+},
+{
+"t": 4.24,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 600,
+"run": 1.0
+},
+{
+"t": 4.26,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 600,
+"run": 1.0
+},
+{
+"t": 4.28,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 600,
+"run": 1.0
+},
+{
+"t": 4.29,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 600,
+"run": 0.99
+},
+{
+"t": 4.31,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 600,
+"run": 0.99
+},
+{
+"t": 4.33,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 600,
+"run": 0.99
+},
+{
+"t": 4.34,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 600,
+"run": 0.99
+},
+{
+"t": 4.36,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 600,
+"run": 0.99
+},
+{
+"t": 4.38,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 600,
+"run": 0.99
+},
+{
+"t": 4.39,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 600,
+"run": 0.99
+},
+{
+"t": 4.41,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 600,
+"run": 0.99
+},
+{
+"t": 4.42,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 600,
+"run": 0.99
+},
+{
+"t": 4.44,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 600,
+"run": 0.99
+},
+{
+"t": 4.46,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 600,
+"run": 0.99
+},
+{
+"t": 4.48,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 600,
+"run": 1.0
+},
+{
+"t": 4.49,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 600,
+"run": 1.0
+},
+{
+"t": 4.51,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 406,
+"run": 0.95
+},
+{
+"t": 4.53,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 264,
+"run": 0.86
+},
+{
+"t": 4.54,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 159,
+"run": 0.76
+},
+{
+"t": 4.56,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 83,
+"run": 0.7
+},
+{
+"t": 4.58,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 26,
+"run": 0.64
+},
+{
+"t": 4.59,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.57
+},
+{
+"t": 4.61,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.51
+},
+{
+"t": 4.63,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.44
+},
+{
+"t": 4.64,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.38
+},
+{
+"t": 4.66,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.32
+},
+{
+"t": 4.68,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.27
+},
+{
+"t": 4.69,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.22
+},
+{
+"t": 4.71,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.18
+},
+{
+"t": 4.73,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.14
+},
+{
+"t": 4.74,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.1
+},
+{
+"t": 4.76,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.07
+},
+{
+"t": 4.78,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.04
+},
+{
+"t": 4.79,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.01
+},
+{
+"t": 4.81,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 4.83,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 4.84,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 4.86,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 4.88,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 4.89,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 4.91,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 4.93,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 4.94,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 4.96,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 4.98,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 4.99,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 5.01,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 5.02,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 5.04,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 5.06,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 5.08,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 5.09,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 5.11,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 5.13,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 5.14,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 5.16,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 5.18,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 5.19,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 5.21,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 5.22,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 5.24,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 5.26,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 5.27,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 5.29,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 5.31,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 5.32,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 5.34,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 5.36,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 5.37,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 5.39,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 5.41,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 5.43,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 5.44,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 5.46,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 5.48,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 5.49,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 5.51,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 5.53,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 5.54,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 5.56,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 5.58,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 5.59,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 5.61,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 5.63,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 5.64,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 5.66,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 5.68,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 5.69,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 5.71,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 5.73,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 5.74,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 5.76,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 5.78,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 5.79,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 5.81,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 5.83,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 5.84,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 5.86,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 5.88,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 5.89,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 5.91,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 5.92,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 5.94,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.1,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 5.96,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 5.97,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 5.99,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 6.01,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 6.02,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 6.04,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 6.06,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.1,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 6.07,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 6.09,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 6.11,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 6.12,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 6.14,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 6.16,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 6.17,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 6.19,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 6.21,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 6.22,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 6.24,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 6.26,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 6.27,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 6.29,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 6.31,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 6.32,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 6.34,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 6.36,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 6.37,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 6.39,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 6.41,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 6.42,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 6.44,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 6.45,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 6.47,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 6.49,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 6.5,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 6.52,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 6.54,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 6.56,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 6.57,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 6.59,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 6.61,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 6.62,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 6.64,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 6.66,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 6.67,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 6.69,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 6.7,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 6.72,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 6.74,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 6.75,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 6.77,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 6.79,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 6.81,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 6.82,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 6.84,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 6.86,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 6.87,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 6.89,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 6.91,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 6.92,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 6.94,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 6.96,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 6.97,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 6.99,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 7.01,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 7.02,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 7.04,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 7.06,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 7.07,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 7.09,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 7.1,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 7.12,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 7.14,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 7.15,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 7.17,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 7.19,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 7.21,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 7.22,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 7.24,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 7.26,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 7.27,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 7.29,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 7.31,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 7.32,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 7.34,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 7.36,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 7.37,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 7.39,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 7.41,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 7.42,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 7.44,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 7.46,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 7.47,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 7.49,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 7.51,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 7.52,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 7.54,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 7.56,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 7.57,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 7.59,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 7.61,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 7.62,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 7.64,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 7.66,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 7.67,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 7.69,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.1,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 7.71,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.1,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 7.72,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.1,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 7.74,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 7.76,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 7.77,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 7.79,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 7.8,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.1,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 7.82,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 7.84,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 7.86,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 7.87,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 7.89,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 7.9,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 7.92,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 7.94,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 7.96,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 7.97,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 7.99,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 8.01,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 8.02,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 8.04,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 8.06,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 8.07,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 8.09,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 8.11,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 8.12,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 8.14,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 8.16,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 8.17,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 8.19,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 8.21,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 8.22,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 8.24,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 8.25,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 8.27,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 8.29,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 8.31,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 8.32,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 8.34,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 8.36,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 8.37,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 8.39,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 8.4,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 8.42,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 8.44,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 8.46,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 8.47,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 8.49,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 8.51,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 8.52,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 8.54,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 8.56,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 8.57,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 8.59,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 8.6,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 8.62,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 8.64,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 8.66,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 8.67,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 8.69,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 8.71,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 8.72,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 8.74,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 8.76,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 8.77,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 8.79,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 8.81,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 8.82,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 8.84,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 8.86,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 8.87,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 8.89,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 8.91,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 8.92,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 8.94,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 8.96,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 8.97,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 8.99,
+"kick": 0.0,
+"reload": 0.0,
+"aim": 0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"t": 9.01,
+"kick": 0.0,
+"reload": 0.0,
+"aim": -0.0,
+"montage": null,
+"lw_in_rifle": [
+4.6,
+14.5,
+-0.2
+],
+"rw_in_rifle": [
+-3.7,
+-10.8,
+-5.1
+],
+"fp": true,
+"want": true,
+"mode": "MOVE_WALKING: ",
+"v": 0,
+"run": 0.0
+},
+{
+"names": [
+"IdleBlink",
+"AhogeDyn",
+"AimPitch",
+"DbgC",
+"DbgL",
+"DbgR",
+"DbgW",
+"FurinaIdle",
+"HairDyn",
+"HairFlow",
+"RifleKick"
+],
+"mweight": "n/a"
+}
+]

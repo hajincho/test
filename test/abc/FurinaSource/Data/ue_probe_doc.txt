@@ -1,0 +1,32 @@
+X.duplicate_and_retarget(assets_to_retarget, source_mesh, target_mesh, ik_retarget_asset, search="", replace="", prefix="", suffix="", target_path="", use_source_path=False, include_referenced_assets=True, overwrite_existing_files=False) -> Array[AssetData]
+
+deprecated: Use RunBatchRetarget instead. It uses a struct for better future-proofing and cleaner Blueprint graphs.
+deprecated: This function is deprecated. Please use RunBatchRetarget which takes a FIKRetargetBatchOperationInputs struct.
+
+Args:
+    assets_to_retarget (Array[AssetData]): 
+    source_mesh (SkeletalMesh): 
+    target_mesh (SkeletalMesh): 
+    ik_retarget_asset (IKRetargeter): 
+    search (str): 
+    replace (str): 
+    prefix (str): 
+    suffix (str): 
+    target_path (str): 
+    use_source_path (bool): 
+    include_referenced_assets (bool): 
+    overwrite_existing_files (bool): 
+
+Returns:
+    Array[AssetData]:
+----
+X.run_batch_retarget(inputs) -> Array[AssetData]
+Convenience function to run a batch animation retarget from Blueprint / Python. This function will duplicate a list of
+AssetsToRetarget and use the supplied IK Retargeter to retarget the animation from the source to the target using the
+settings in the provided IK Retargeter asset.
+
+Args:
+    inputs (IKRetargetBatchOperationInputs): a struct with all the inputs required to run a batch process
+
+Returns:
+    Array[AssetData]: a list of new animation files created

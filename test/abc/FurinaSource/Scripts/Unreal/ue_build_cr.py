@@ -2,6 +2,7 @@
 import unreal, json, traceback, os, math
 S = r"C:\Users\fromj\Downloads\test\test\abc\FurinaSource\Data"
 P = json.load(open(os.path.join(S, 'cr_params.json'), encoding='utf-8'))
+FR = json.load(open(os.path.join(S, 'fp_rig.json'), encoding='utf-8')) if os.path.exists(os.path.join(S, 'fp_rig.json')) else None
 res = {'log': [], 'fail': []}
 STAGE_ONLY = os.path.exists(os.path.join(S, 'hair_stage_only'))
 def log(*a): res['log'].append(' '.join(str(x) for x in a))
@@ -22,7 +23,7 @@ try:
     # Curves used by the graph and by animation/debug probes.
     h = bp.get_hierarchy()
     have = [str(k.name) for k in h.get_all_keys(True) if k.type == unreal.RigElementType.CURVE]
-    for cv in ('IdleBlink', 'FurinaIdle', 'HairDyn', 'AhogeDyn', 'HairFlow', 'DbgL', 'DbgR', 'DbgW', 'DbgC'):
+    for cv in ('IdleBlink', 'FurinaIdle', 'HairDyn', 'AhogeDyn', 'HairFlow', 'DbgL', 'DbgR', 'DbgW', 'DbgC', 'AimPitch', 'RifleKick', 'RifleReload'):
         if cv not in have:
             log('add curve', cv, bp.get_hierarchy_controller().add_curve(cv, 0.0, False))
     c = bp.get_controller_by_name('RigVMModel') or bp.get_controller()
@@ -236,6 +237,82 @@ try:
     link('HipsLow.Result', 'HipsDrop.Value')
     prev = chain_exec(prev, 'HipsDrop')
 
+    # ---------------- rifle stance (free FPS template motions, always held in 1st and 3rd person).
+    # Gun frame G sits in front of the neck in component axes, pitched by the aim (AimPitch curve from ABP_Furina,
+    # degrees) plus recoil (RifleKick curve from the fire montage). Both wrists are placed on the rifle with
+    # two-bone IK; the left hand moves to the magazine well while the reload montage's RifleReload curve is up.
+    if FR:
+        RX2, RY2 = -1800, -7600
+        def Q(q): return '(X=%f,Y=%f,Z=%f,W=%f)' % tuple(q)
+        add('RigUnit_GetCurveValue', 'AimPitchC', RX2, RY2, Curve='AimPitch')
+        add('RigUnit_MathFloatClamp', 'AimPitchDeg', RX2 + 250, RY2, Minimum='-60', Maximum='60')
+        link('AimPitchC.Value', 'AimPitchDeg.Value')
+        add('RigUnit_GetCurveValue', 'KickC', RX2, RY2 + 150, Curve='RifleKick')
+        add('RigUnit_MathFloatMul', 'KickDeg', RX2 + 250, RY2 + 150, B='4')
+        link('KickC.Value', 'KickDeg.A')
+        add('RigUnit_MathFloatAdd', 'PitchDeg', RX2 + 500, RY2)
+        link('AimPitchDeg.Result', 'PitchDeg.A'); link('KickDeg.Result', 'PitchDeg.B')
+        add('RigUnit_MathFloatMul', 'PitchRad', RX2 + 750, RY2, B=str(math.pi / 180))
+        link('PitchDeg.Result', 'PitchRad.A')
+        add('RigUnit_MathQuaternionFromAxisAndAngle', 'AimQ', RX2 + 1000, RY2, Axis=V(1, 0, 0))   # +pitch: forward tilts up
+        link('PitchRad.Result', 'AimQ.Angle')
+        add('RigUnit_MathFloatMul', 'KickBack', RX2 + 500, RY2 + 300, B='-3')
+        link('KickC.Value', 'KickBack.A')
+        add('RigUnit_MathVectorMake', 'GOffV', RX2 + 750, RY2 + 300, X=str(FR['g_off_eye'][0]), Z=str(FR['g_off_eye'][2]))
+        add('RigUnit_MathFloatAdd', 'GOffY', RX2 + 600, RY2 + 400, B=str(FR['g_off_eye'][1]))
+        link('KickBack.Result', 'GOffY.A'); link('GOffY.Result', 'GOffV.Y')
+        # sprint carry: offset + canted rotation in the gun frame, weighted by the sprint ratio (Run 0..1)
+        add('RigUnit_MathVectorScale', 'SprintOff', RX2 + 750, RY2 + 450, Value=V(*FR.get('sprint_off', (0, 0, 0))))
+        link('Run.Result', 'SprintOff.Factor')
+        add('RigUnit_MathVectorAdd', 'GOffS', RX2 + 900, RY2 + 350)
+        link('GOffV.Result', 'GOffS.A'); link('SprintOff.Result', 'GOffS.B')
+        add('RigUnit_MathQuaternionRotateVector', 'GOffR', RX2 + 1000, RY2 + 300)
+        link('AimQ.Result', 'GOffR.Transform'); link('GOffS.Result', 'GOffR.Vector')
+        # anchor = the first-person eye (FPCamera socket point on Head): the rifle rides with the head, so head-bobbing
+        # motions (jump lean: eye moved 11 cm forward / 19 cm down) can no longer push the camera into the rifle
+        add('RigUnit_GetTransform', 'EyeXf', RX2 + 1000, RY2 + 500, Item='(Type=Bone,Name="Head")', Space='GlobalSpace')
+        add('RigUnit_MathTransformTransformVector', 'EyePos', RX2 + 1100, RY2 + 500, Location=V(*FR['cam_head_local']))
+        link('EyeXf.Transform', 'EyePos.Transform')
+        add('RigUnit_MathVectorAdd', 'GPos', RX2 + 1250, RY2 + 300)
+        link('EyePos.Result', 'GPos.A'); link('GOffR.Result', 'GPos.B')
+        add('RigUnit_MathQuaternionSlerp', 'SprintQ', RX2 + 1000, RY2 - 200, A='(X=0,Y=0,Z=0,W=1)', B=Q(FR.get('sprint_q', (0, 0, 0, 1))))
+        link('Run.Result', 'SprintQ.T')
+        add('RigUnit_MathQuaternionMul', 'GunSprint', RX2 + 1100, RY2 - 100, B=Q(FR['gun_q']))
+        link('SprintQ.Result', 'GunSprint.A')
+        add('RigUnit_MathQuaternionMul', 'GRot', RX2 + 1250, RY2)
+        link('AimQ.Result', 'GRot.A'); link('GunSprint.Result', 'GRot.B')
+        add('RigUnit_GetCurveValue', 'ReloadC', RX2, RY2 + 700, Curve='RifleReload')
+        add('RigUnit_MathFloatClamp', 'ReloadW', RX2 + 250, RY2 + 700, Minimum='0', Maximum='1')
+        link('ReloadC.Value', 'ReloadW.Value')
+        add('RigUnit_MathVectorLerp', 'LHandOff', RX2 + 500, RY2 + 700, A=V(*FR['t_l']), B=V(*FR['t_mag']))
+        link('ReloadW.Result', 'LHandOff.T')
+        # head follows half of the aim pitch (runs BEFORE the arms so the eye point below sees the final head) (third-person look; the FP camera uses the control rotation itself)
+        add('RigUnit_MathFloatMul', 'HeadPitch', RX2 + 1000, RY2 + 1800, B=str(0.5 * math.pi / 180))
+        link('AimPitchDeg.Result', 'HeadPitch.A')
+        add('RigUnit_MathQuaternionFromAxisAndAngle', 'HeadQ', RX2 + 1250, RY2 + 1800, Axis=V(1, 0, 0))
+        link('HeadPitch.Result', 'HeadQ.Angle')
+        add('RigUnit_GetTransform', 'HeadXf', RX2 + 1250, RY2 + 1950, Item='(Type=Bone,Name="Head")', Space='GlobalSpace')
+        add('RigUnit_MathQuaternionMul', 'HeadRot', RX2 + 1500, RY2 + 1800)
+        link('HeadQ.Result', 'HeadRot.A'); link('HeadXf.Transform.Rotation', 'HeadRot.B')
+        add('RigUnit_SetRotation', 'HeadAim', RX2 + 1750, RY2 + 1800, Item='(Type=Bone,Name="Head")', Space='GlobalSpace', bPropagateToChildren='True')
+        link('HeadRot.Result', 'HeadAim.Value')
+        prev = chain_exec(prev, 'HeadAim')
+        for side, toff, qoff, pole, y0 in (('Right', None, FR['q_r'], (-1.0, 0.0, -1.5), RY2 + 1000), ('Left', 'LHandOff.Result', FR['q_l'], (1.0, 0.0, -1.5), RY2 + 1400)):
+            s = 'R' + side[0]
+            add('RigUnit_MathQuaternionRotateVector', s + 'HOff', RX2 + 1500, y0, Vector=V(*FR['t_r']) if side == 'Right' else V(0, 0, 0))
+            link('GRot.Result', s + 'HOff.Transform')
+            if toff: link(toff, s + 'HOff.Vector')
+            add('RigUnit_MathVectorAdd', s + 'HPos', RX2 + 1750, y0)
+            link('GPos.Result', s + 'HPos.A'); link(s + 'HOff.Result', s + 'HPos.B')
+            add('RigUnit_MathQuaternionMul', s + 'HRot', RX2 + 1750, y0 + 150, B=Q(qoff))
+            link('GRot.Result', s + 'HRot.A')
+            add('RigUnit_TwoBoneIKSimplePerItem', s + 'ArmIK', RX2 + 2050, y0,
+                ItemA='(Type=Bone,Name="%s-arm")' % side, ItemB='(Type=Bone,Name="%s-elbow")' % side, EffectorItem='(Type=Bone,Name="%s-wrist")' % side,
+                PrimaryAxis=V(0, -1, 0), SecondaryAxis=V(0, 0, 1), SecondaryAxisWeight='0', PoleVectorKind='Direction', PoleVector=V(*pole),
+                bPropagateToChildren='True', ItemALength='21.14', ItemBLength='18.02')
+            link(s + 'HPos.Result', s + 'ArmIK.Effector.Translation'); link(s + 'HRot.Result', s + 'ArmIK.Effector.Rotation')
+            prev = chain_exec(prev, s + 'ArmIK')
+
     # ---------------- hair: actual component travel, independent of animated hip/head bob.
     # A filtered 0..1 signal owns amplitude, backward trail, and phase speed. The
     # old whole-chain physics is disabled so it cannot fight this bounded motion.
@@ -311,6 +388,15 @@ try:
             if not c.set_pin_default_value(n + 'Wave.WaveCurve',
                     '(EditorCurveData=(Keys=((Time=0.000000,Value=1.000000),(Time=1.000000,Value=1.000000))))', True, False):
                 res['fail'].append('hair wave curve ' + n)
+            pd = ch.get('pend')
+            if pd:
+                # every joint lags behind its rest direction (follow-through) -> silky ripple instead of a rigid strand.
+                # UnwindAxis must be perpendicular to the bone length axis (Y for these bones).
+                ptxt = ('(bEnabled=True,PendulumStiffness=%f,PendulumGravity=(X=0,Y=0,Z=%f),PendulumBlend=%f,PendulumDrag=%f,'
+                        'PendulumMinimum=%f,PendulumMaximum=%f,PendulumEase=Linear,UnwindAxis=(X=1,Y=0,Z=0),UnwindMinimum=0.2,UnwindMaximum=0.05)') % (
+                    pd['stiff'], pd['grav'], pd['blend'], pd['drag'], pd['min'], pd['max'])
+                if not c.set_pin_default_value(n + 'Wave.Pendulum', ptxt, True, False):
+                    res['fail'].append('hair pendulum ' + n)
         link(n + 'Amp.Result', n + 'Wave.Wave.WaveAmplitude')
         link(n + 'Spd.Result', n + 'Wave.Speed')
         prev = chain_exec(prev, n + 'Wave')

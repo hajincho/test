@@ -1,0 +1,12 @@
+{
+ "/Game/Furina/FP/Anim/AS_Furina_FP_Fire": [
+  "RifleKick"
+ ],
+ "/Game/Furina/FP/Anim/AS_Furina_FP_Fire keys": "(<Array object at 0x0000018D639AA0F0>, <Array object at 0x0000018D4934BF70>)",
+ "/Game/Furina/FP/Anim/AS_Furina_FP_Reload": [
+  "RifleReload"
+ ],
+ "/Game/Furina/FP/Anim/AS_Furina_FP_Reload keys": "(<Array object at 0x0000018D639AA0F0>, <Array object at 0x0000018D493685B0>)",
+ "/Game/Furina/FP/Anim/AM_Furina_FP_Fire": [],
+ "/Game/Furina/FP/Anim/AM_Furina_FP_Reload": []
+}

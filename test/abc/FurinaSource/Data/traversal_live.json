@@ -1,0 +1,4505 @@
+{
+"vars": {
+"Grind_Rail_Component_BP": [
+"Spline",
+"PreviousSpline",
+"GrindRailSpeed",
+"ZiplineSpeed",
+"Speed Up Percent (Sprint)",
+"Speed Up Percent (Item)",
+"SpeedUpPercent (Max)",
+"LocationRelativeToPulley",
+"Smooth SK Mesh Rotation?",
+"AvoidCollidingWithRail?",
+"ForwardLaunchVelocity (Rail)",
+"ForwardLaunchVel (Zipline)",
+"UpwardLaunchVelocity (Rail)",
+"UpwardLaunchVel (Zipline)",
+"SplineMeshObjectType",
+"TraceObjectType",
+"DrawDebugLineTrace?",
+"SplineLineTraceHeight",
+"SkipPreviousRail (Delay)",
+"SkipPreviousZipline (Delay)",
+"Sparks Niagara System",
+"Speed Lines Niagara System",
+"PlayMontageAfterJumping?",
+"LandOnRailCameraShake",
+"ZiplineCameraShake",
+"RailFootsteps",
+"ZiplineCableFootsteps",
+"On Rail SFX",
+"Zipline SFX",
+"ZiplineActorTag",
+"RailComponentTag",
+"TraceIgnoredComponentTag",
+"UseMirrorLandRecovAnim?",
+"RailJumpArc",
+"RailJumpOffset",
+"RailJumpBoxTraceSizeX",
+"RailJumpBoxTraceSizeZ",
+"SingleInputRailJump?",
+"RailJumpSphereTraceSize",
+"DrawRailJumpDebugTraces?",
+"RailJumpBlockedObjTypes",
+"ProjectGravity",
+"ForwardDirection?",
+"UsingZipline?",
+"CanSwitchPosition?",
+"CanChangeDirection?",
+"Sprint?",
+"UsingRail?",
+"BoxTrace?",
+"JumpToZipline?",
+"IsMontagePlaying?",
+"WasUsingRail?",
+"ContinueExecution?",
+"RailOverlap?",
+"UseSavedHeight?",
+"UpdateRotation?",
+"ContinueJumpFromRail?",
+"SphereTrace?",
+"RailJumpActive?",
+"RailJumpAnimActive?",
+"VerticalLoop?",
+"UpsideDown?",
+"TotalSpeed",
+"CapsuleComponent",
+"SkeletalMeshComponent",
+"CharacterMovementComponent",
+"SpeedBonusPercentage",
+"SplinePosition",
+"PreviousSplineYaw",
+"Previous SK Mesh Roll",
+"InitialCapsuleYaw",
+"CurvePosition",
+"SavedCapsuleHeight",
+"MapDeltaFloat",
+"TempDistance",
+"BrakingDecelerationFalling",
+"FallingLateralFriction",
+"MoveForward",
+"MoveRight",
+"Speed",
+"SplineMeshHeight",
+"SmoothCurve",
+"LinearCurve",
+"SK Mesh Relative Rotation",
+"RailRotation",
+"TargetCapsuleRotation",
+"CurrentCapsuleRotation",
+"FinalCapsuleLocation",
+"CapsuleLocation",
+"HitLocation",
+"PreviousLocation",
+"UpdatedLocation",
+"OtherRailLocation",
+"OutLaunchVelocity",
+"LastUp",
+"RailUp",
+"Selection",
+"PulleyBP",
+"SpeedLinesSystem",
+"HitActor",
+"Land On Rail Anim",
+"Grab Pulley 1 Anim",
+"Grab Pulley 2 Anim",
+"Switch Direction Anim",
+"Jump To Pulley Anim",
+"Jump From Pulley Anim",
+"Sprint Jump Anim",
+"Sprint Jump Mirror Anim",
+"SparksSystem",
+"RailSoundCue",
+"OtherRail",
+"HitActorArray",
+"GrindRailAnimBlueprint",
+"ZiplineSoundCue",
+"FootstepsCue",
+"RightHandLocation",
+"RightLowerArmLocation",
+"RightJointTargetLocation",
+"LeftHandLocation",
+"LeftLowerArmLocation",
+"LeftJointTargetLocation",
+"Release_Pulley_Anim",
+"Jump_Anim",
+"Jump_Mirror_Anim",
+"On Air Anim",
+"Land Recovery 1 Anim",
+"ActiveMontage",
+"Land Recovery 2 Anim",
+"On Component Tick Enabled",
+"On Component Tick Disabled",
+"On Get Rail / Zipline Reference",
+"Land Recovery 2 Mirror Anim",
+"Update Movement Input",
+"Rail Jump Anim",
+"Rail Jump Fall Loop Anim",
+"Key"
+],
+"Homing_Attack_Component_BP": [
+"CharacterMovementComponent",
+"TargetTraceChannel",
+"DirectionalMov.InputAim?",
+"UseCapsuleHalfSize?",
+"TargetMaxDistance",
+"TargetMinDistance",
+"CapsuleComponent",
+"SkeletalMeshComponent",
+"HomingAttackSpeed",
+"UpwardLaunchVelocity",
+"LaunchForward?",
+"ForwardLaunchVelocity",
+"MissTargetUpLaunchVel.",
+"HomingAttack",
+"HomingAttackEnd1",
+"HomingAttackEnd2",
+"FallLoop",
+"MissTargetHit",
+"LandRecovery",
+"TimedHomingAttack?",
+"DelayDuration",
+"SkipTargetCloseToCamera?",
+"TargetAndCameraDistance",
+"Box Trace Y Size (Direction)",
+"Box Trace Y Size (Camera)",
+"Mov.InputAimYawRange",
+"CameraViewAimYawRange",
+"HitCameraShake",
+"TargetInterface",
+"HomingAttackSFX",
+"MissTargetSFX",
+"HitNonValidTargetSFX",
+"NiagaraSystemTemplate",
+"ChangeTimeDilationOnHit?",
+"TimeDilation",
+"TimeDilationDuration",
+"SkipTimeDilationOnHitTag",
+"StopHomingAttackDistance",
+"SkipPreviousTargetDuration",
+"SearchTargetOnInputIgnore?",
+"PlayMirrorLandingAnim?",
+"CanJump?",
+"CanSearchTargets?",
+"MontageAnimPlaying?",
+"MissedTarget?",
+"QuickLandRecovery",
+"DelayActive?",
+"SkipTimeDilationOnHit?",
+"Distance",
+"TempDistance",
+"SavedCapsuleHalfHeight",
+"SavedGravityScale",
+"MoveRight",
+"MoveForward",
+"TraceIgnoreTag",
+"TargetWidget",
+"Target",
+"TempTarget",
+"ActiveTarget",
+"HitActor",
+"IgnoreActor",
+"TempIgnoreActor",
+"TargetsArray",
+"QuickLandRecovery (Mirror)",
+"On Movement Input Ignored",
+"Reticle Widget BP",
+"On Start Homing Attack",
+"On End Homing Attack",
+"Sweep Hit Result",
+"On Landed"
+],
+"Platformer_Component_BP": [
+"CharacterMovementComponent",
+"CapsuleComponent",
+"SkeletalMeshComponent",
+"ProjectGravity",
+"PlayAnimations?",
+"UseDiveSpins?",
+"UseMirrorLandRecovAnim?",
+"AdjustFallingParameters?",
+"AdjustCapsuleSize?",
+"LocationRelativeToPulley",
+"ZiplineSpeed",
+"ShowHitReactions?",
+"LaunchUpwardAfterHit?",
+"UpwardsVelocity OnHit",
+"RestoreInputAfterHit?",
+"HitCameraShake",
+"Hit SFX",
+"TempTags",
+"Tags",
+"UniqueID",
+"CharacterLocation",
+"LaunchLocation",
+"PulleyLocation",
+"EndLocation",
+"PulleySavedLocation",
+"Index",
+"Capsule Radius",
+"Capsule Half Height",
+"AxisValue",
+"InitialCapsuleYaw",
+"CableScaleZ",
+"CurveSpeed",
+"Launch Height",
+"MoveRight",
+"MoveForward",
+"Braking Deceleration Falling",
+"Falling Lateral Friction",
+"Z Location",
+"CurvePosition",
+"AnimCurvePosition",
+"MapDeltaFloat",
+"UpdateAxisValue?",
+"ResetFallingParameters?",
+"SkipUpdatePosition?",
+"IgnoreInput?",
+"Hit?",
+"DashAnimClamped?",
+"LandedOnPlatformerActor?",
+"ComponentActive?",
+"CheckCapsule?",
+"CanLaunchCharacter?",
+"UpdateOverlaps?",
+"OverlapWithPulley?",
+"SavedPulleyLocation?",
+"Skip ID Check?",
+"ContinueExecution?",
+"StartAnimation?",
+"NewRotation",
+"ActorRotation",
+"Spline2",
+"Spline1",
+"Temp Actor",
+"Other Actor",
+"Zipline Actor",
+"Update Movement Input",
+"PlatformerAnimBlueprint",
+"Spin Anim Montage",
+"Land Recovery 1 Anim",
+"Land Recovery 2 Anim",
+"LinearCurve",
+"Land Recovery 2 Mirror Anim",
+"On System Enabled",
+"On System Disabled",
+"On Grabbing Zipline Pulley",
+"On Jumping From Pulley",
+"On Landed On Jump Pad",
+"On Launched From Jump Pad",
+"On Launched From Spring Or Ring",
+"On Landing Animation Starts",
+"On Landing Animation Blends Out"
+]
+},
+"rows": [
+{
+"t": 0.01,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 0.02,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 0.04,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 0.05,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 0.07,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 0.09,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 0.1,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 0.12,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 0.14,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 0.15,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 0.17,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 0.19,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 0.2,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 0.22,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 0.24,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 0.25,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 0.27,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 0.29,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 0.3,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 0.32,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 0.34,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 0.35,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 0.37,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 0.39,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 0.4,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 0.42,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 0.44,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 0.45,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 0.47,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 0.49,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 0.5,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 0.52,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 0.54,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 0.55,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 0.57,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 0.59,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 0.6,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 0.62,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 0.64,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 0.65,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 0.67,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 0.69,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 0.7,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 0.72,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 0.74,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 0.75,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 0.77,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 0.79,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 0.8,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 0.82,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 0.84,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 0.85,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 0.87,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 0.89,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 0.9,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 0.92,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 0.94,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 0.95,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 0.97,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 0.99,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 1.0,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 1.02,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 1.04,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 1.05,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 1.07,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 1.09,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 1.1,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 1.12,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 1.14,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 1.15,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 1.17,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 1.19,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 1.2,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 1.22,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 1.24,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 1.26,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 1.27,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 1.29,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 34,
+"vz": 0
+},
+{
+"t": 1.3,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 68,
+"vz": 0
+},
+{
+"t": 1.32,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 102,
+"vz": 0
+},
+{
+"t": 1.34,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 120,
+"vz": 0
+},
+{
+"t": 1.35,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 120,
+"vz": 0
+},
+{
+"t": 1.37,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 120,
+"vz": 0
+},
+{
+"t": 1.39,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 120,
+"vz": 0
+},
+{
+"t": 1.4,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 120,
+"vz": 0
+},
+{
+"t": 1.42,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 120,
+"vz": 0
+},
+{
+"t": 1.44,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 120,
+"vz": 0
+},
+{
+"t": 1.46,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 120,
+"vz": 0
+},
+{
+"t": 1.47,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 120,
+"vz": 0
+},
+{
+"t": 1.49,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 120,
+"vz": 0
+},
+{
+"t": 1.5,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 120,
+"vz": 0
+},
+{
+"t": 1.52,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 120,
+"vz": 0
+},
+{
+"t": 1.54,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 120,
+"vz": 0
+},
+{
+"t": 1.55,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 120,
+"vz": 0
+},
+{
+"t": 1.57,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 120,
+"vz": 0
+},
+{
+"t": 1.59,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 120,
+"vz": 0
+},
+{
+"t": 1.6,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 120,
+"vz": 0
+},
+{
+"t": 1.62,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 120,
+"vz": 0
+},
+{
+"t": 1.64,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 120,
+"vz": 0
+},
+{
+"t": 1.66,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 120,
+"vz": 0
+},
+{
+"t": 1.67,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 120,
+"vz": 0
+},
+{
+"t": 1.69,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 120,
+"vz": 0
+},
+{
+"t": 1.7,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 120,
+"vz": 0
+},
+{
+"t": 1.72,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 120,
+"vz": 0
+},
+{
+"t": 1.74,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 120,
+"vz": 0
+},
+{
+"t": 1.75,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 120,
+"vz": 0
+},
+{
+"t": 1.77,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 120,
+"vz": 0
+},
+{
+"t": 1.79,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 120,
+"vz": 0
+},
+{
+"t": 1.81,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 120,
+"vz": 0
+},
+{
+"t": 1.82,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 120,
+"vz": 0
+},
+{
+"t": 1.84,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 120,
+"vz": 0
+},
+{
+"t": 1.86,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 120,
+"vz": 0
+},
+{
+"t": 1.87,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 120,
+"vz": 0
+},
+{
+"t": 1.89,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 120,
+"vz": 0
+},
+{
+"t": 1.9,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 120,
+"vz": 0
+},
+{
+"t": 1.92,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 120,
+"vz": 0
+},
+{
+"t": 1.94,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 120,
+"vz": 0
+},
+{
+"t": 1.95,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 120,
+"vz": 0
+},
+{
+"t": 1.97,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 120,
+"vz": 0
+},
+{
+"t": 1.99,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 120,
+"vz": 0
+},
+{
+"t": 2.0,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 120,
+"vz": 0
+},
+{
+"t": 2.02,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 120,
+"vz": 0
+},
+{
+"t": 2.04,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 120,
+"vz": 0
+},
+{
+"t": 2.05,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 120,
+"vz": 0
+},
+{
+"t": 2.07,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 120,
+"vz": 0
+},
+{
+"t": 2.09,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 120,
+"vz": 0
+},
+{
+"t": 2.1,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 120,
+"vz": 0
+},
+{
+"t": 2.12,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 120,
+"vz": 0
+},
+{
+"t": 2.14,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 120,
+"vz": 0
+},
+{
+"t": 2.15,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 120,
+"vz": 0
+},
+{
+"t": 2.17,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 120,
+"vz": 0
+},
+{
+"t": 2.19,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 120,
+"vz": 0
+},
+{
+"t": 2.2,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 120,
+"vz": 0
+},
+{
+"t": 2.22,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 120,
+"vz": 0
+},
+{
+"t": 2.24,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 120,
+"vz": 0
+},
+{
+"t": 2.25,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 120,
+"vz": 0
+},
+{
+"t": 2.27,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 120,
+"vz": 0
+},
+{
+"t": 2.29,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 120,
+"vz": 0
+},
+{
+"t": 2.3,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 120,
+"vz": 0
+},
+{
+"t": 2.32,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 120,
+"vz": 0
+},
+{
+"t": 2.34,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 120,
+"vz": 0
+},
+{
+"t": 2.35,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 120,
+"vz": 0
+},
+{
+"t": 2.37,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 120,
+"vz": 0
+},
+{
+"t": 2.39,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 120,
+"vz": 0
+},
+{
+"t": 2.4,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 120,
+"vz": 0
+},
+{
+"t": 2.42,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 120,
+"vz": 0
+},
+{
+"t": 2.44,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 120,
+"vz": 0
+},
+{
+"t": 2.45,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 120,
+"vz": 0
+},
+{
+"t": 2.47,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 120,
+"vz": 0
+},
+{
+"t": 2.49,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 120,
+"vz": 0
+},
+{
+"t": 2.5,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 120,
+"vz": 0
+},
+{
+"t": 2.52,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 120,
+"vz": 0
+},
+{
+"t": 2.54,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 120,
+"vz": 0
+},
+{
+"t": 2.55,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 120,
+"vz": 0
+},
+{
+"t": 2.57,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 120,
+"vz": 0
+},
+{
+"t": 2.59,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 120,
+"vz": 0
+},
+{
+"t": 2.6,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 120,
+"vz": 0
+},
+{
+"t": 2.62,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 120,
+"vz": 0
+},
+{
+"t": 2.64,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 120,
+"vz": 0
+},
+{
+"t": 2.65,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 120,
+"vz": 0
+},
+{
+"t": 2.67,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 120,
+"vz": 0
+},
+{
+"t": 2.69,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 120,
+"vz": 0
+},
+{
+"t": 2.7,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 120,
+"vz": 0
+},
+{
+"t": 2.72,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 120,
+"vz": 0
+},
+{
+"t": 2.74,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 120,
+"vz": 0
+},
+{
+"t": 2.75,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 120,
+"vz": 0
+},
+{
+"t": 2.77,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 120,
+"vz": 0
+},
+{
+"t": 2.79,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 120,
+"vz": 0
+},
+{
+"t": 2.8,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 120,
+"vz": 0
+},
+{
+"t": 2.82,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 120,
+"vz": 0
+},
+{
+"t": 2.84,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 120,
+"vz": 0
+},
+{
+"t": 2.85,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 120,
+"vz": 0
+},
+{
+"t": 2.87,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 120,
+"vz": 0
+},
+{
+"t": 2.89,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 120,
+"vz": 0
+},
+{
+"t": 2.9,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 120,
+"vz": 0
+},
+{
+"t": 2.92,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 120,
+"vz": 0
+},
+{
+"t": 2.94,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 120,
+"vz": 0
+},
+{
+"t": 2.95,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 120,
+"vz": 0
+},
+{
+"t": 2.97,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 120,
+"vz": 0
+},
+{
+"t": 2.99,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 120,
+"vz": 0
+},
+{
+"t": 3.0,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 120,
+"vz": 0
+},
+{
+"t": 3.02,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 120,
+"vz": 0
+},
+{
+"t": 3.04,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 120,
+"vz": 0
+},
+{
+"t": 3.05,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 120,
+"vz": 0
+},
+{
+"t": 3.07,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 120,
+"vz": 0
+},
+{
+"t": 3.09,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 120,
+"vz": 0
+},
+{
+"t": 3.1,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 120,
+"vz": 0
+},
+{
+"t": 3.12,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 120,
+"vz": 0
+},
+{
+"t": 3.14,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 120,
+"vz": 0
+},
+{
+"t": 3.15,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 120,
+"vz": 0
+},
+{
+"t": 3.17,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 120,
+"vz": 0
+},
+{
+"t": 3.19,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 120,
+"vz": 0
+},
+{
+"t": 3.2,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 120,
+"vz": 0
+},
+{
+"t": 3.22,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 120,
+"vz": 0
+},
+{
+"t": 3.24,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 120,
+"vz": 0
+},
+{
+"t": 3.26,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 120,
+"vz": 0
+},
+{
+"t": 3.27,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 120,
+"vz": 0
+},
+{
+"t": 3.29,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 120,
+"vz": 0
+},
+{
+"t": 3.3,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 120,
+"vz": 0
+},
+{
+"t": 3.32,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 120,
+"vz": 0
+},
+{
+"t": 3.34,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 120,
+"vz": 0
+},
+{
+"t": 3.35,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 120,
+"vz": 0
+},
+{
+"t": 3.37,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 120,
+"vz": 0
+},
+{
+"t": 3.39,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 120,
+"vz": 0
+},
+{
+"t": 3.4,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 120,
+"vz": 0
+},
+{
+"t": 3.42,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 120,
+"vz": 0
+},
+{
+"t": 3.44,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 120,
+"vz": 0
+},
+{
+"t": 3.46,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 120,
+"vz": 0
+},
+{
+"t": 3.47,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 120,
+"vz": 0
+},
+{
+"t": 3.49,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 120,
+"vz": 0
+},
+{
+"t": 3.51,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 120,
+"vz": 0
+},
+{
+"t": 3.52,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 120,
+"vz": 0
+},
+{
+"t": 3.54,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 120,
+"vz": 0
+},
+{
+"t": 3.55,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 120,
+"vz": 0
+},
+{
+"t": 3.57,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 120,
+"vz": 0
+},
+{
+"t": 3.59,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 120,
+"vz": 0
+},
+{
+"t": 3.6,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 120,
+"vz": 0
+},
+{
+"t": 3.62,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 120,
+"vz": 0
+},
+{
+"t": 3.64,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 120,
+"vz": 0
+},
+{
+"t": 3.65,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 120,
+"vz": 0
+},
+{
+"t": 3.67,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 120,
+"vz": 0
+},
+{
+"t": 3.69,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 120,
+"vz": 0
+},
+{
+"t": 3.7,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 120,
+"vz": 0
+},
+{
+"t": 3.72,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 120,
+"vz": 0
+},
+{
+"t": 3.74,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 120,
+"vz": 0
+},
+{
+"t": 3.75,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 120,
+"vz": 0
+},
+{
+"t": 3.77,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 120,
+"vz": 0
+},
+{
+"t": 3.79,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 120,
+"vz": 0
+},
+{
+"t": 3.8,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 120,
+"vz": 0
+},
+{
+"t": 3.82,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 120,
+"vz": 0
+},
+{
+"t": 3.84,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 120,
+"vz": 0
+},
+{
+"t": 3.85,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 120,
+"vz": 0
+},
+{
+"t": 3.87,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 120,
+"vz": 0
+},
+{
+"t": 3.89,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 120,
+"vz": 0
+},
+{
+"t": 3.9,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 120,
+"vz": 0
+},
+{
+"t": 3.92,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 120,
+"vz": 0
+},
+{
+"t": 3.94,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 120,
+"vz": 0
+},
+{
+"t": 3.96,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 120,
+"vz": 0
+},
+{
+"t": 3.97,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 120,
+"vz": 0
+},
+{
+"t": 3.99,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 120,
+"vz": 0
+},
+{
+"t": 4.01,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 120,
+"vz": 0
+},
+{
+"t": 4.02,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 120,
+"vz": 0
+},
+{
+"t": 4.04,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 120,
+"vz": 0
+},
+{
+"t": 4.06,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 120,
+"vz": 0
+},
+{
+"t": 4.07,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 120,
+"vz": 0
+},
+{
+"t": 4.09,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 120,
+"vz": 0
+},
+{
+"t": 4.11,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 120,
+"vz": 0
+},
+{
+"t": 4.13,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 120,
+"vz": 0
+},
+{
+"t": 4.14,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 120,
+"vz": 0
+},
+{
+"t": 4.16,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 120,
+"vz": 0
+},
+{
+"t": 4.17,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 120,
+"vz": 0
+},
+{
+"t": 4.19,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 120,
+"vz": 0
+},
+{
+"t": 4.21,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 120,
+"vz": 0
+},
+{
+"t": 4.22,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 120,
+"vz": 0
+},
+{
+"t": 4.24,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 120,
+"vz": 0
+},
+{
+"t": 4.26,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 120,
+"vz": 0
+},
+{
+"t": 4.28,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 120,
+"vz": 0
+},
+{
+"t": 4.29,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 54,
+"vz": 0
+},
+{
+"t": 4.31,
+"mode": "<MovementMode.MOVE_FALLING: 3>",
+"custom": 0,
+"v": 678,
+"vz": 676
+},
+{
+"t": 4.33,
+"mode": "<MovementMode.MOVE_FALLING: 3>",
+"custom": 0,
+"v": 653,
+"vz": 651
+},
+{
+"t": 4.34,
+"mode": "<MovementMode.MOVE_FALLING: 3>",
+"custom": 0,
+"v": 629,
+"vz": 627
+},
+{
+"t": 4.36,
+"mode": "<MovementMode.MOVE_FALLING: 3>",
+"custom": 0,
+"v": 604,
+"vz": 602
+},
+{
+"t": 4.38,
+"mode": "<MovementMode.MOVE_FALLING: 3>",
+"custom": 0,
+"v": 580,
+"vz": 578
+},
+{
+"t": 4.39,
+"mode": "<MovementMode.MOVE_FALLING: 3>",
+"custom": 0,
+"v": 556,
+"vz": 553
+},
+{
+"t": 4.41,
+"mode": "<MovementMode.MOVE_FALLING: 3>",
+"custom": 0,
+"v": 531,
+"vz": 529
+},
+{
+"t": 4.43,
+"mode": "<MovementMode.MOVE_FALLING: 3>",
+"custom": 0,
+"v": 507,
+"vz": 504
+},
+{
+"t": 4.44,
+"mode": "<MovementMode.MOVE_FALLING: 3>",
+"custom": 0,
+"v": 483,
+"vz": 480
+},
+{
+"t": 4.46,
+"mode": "<MovementMode.MOVE_FALLING: 3>",
+"custom": 0,
+"v": 458,
+"vz": 455
+},
+{
+"t": 4.47,
+"mode": "<MovementMode.MOVE_FALLING: 3>",
+"custom": 0,
+"v": 434,
+"vz": 431
+},
+{
+"t": 4.49,
+"mode": "<MovementMode.MOVE_FALLING: 3>",
+"custom": 0,
+"v": 410,
+"vz": 406
+},
+{
+"t": 4.51,
+"mode": "<MovementMode.MOVE_FALLING: 3>",
+"custom": 0,
+"v": 385,
+"vz": 382
+},
+{
+"t": 4.52,
+"mode": "<MovementMode.MOVE_FALLING: 3>",
+"custom": 0,
+"v": 361,
+"vz": 357
+},
+{
+"t": 4.54,
+"mode": "<MovementMode.MOVE_FALLING: 3>",
+"custom": 0,
+"v": 337,
+"vz": 333
+},
+{
+"t": 4.56,
+"mode": "<MovementMode.MOVE_FALLING: 3>",
+"custom": 0,
+"v": 313,
+"vz": 308
+},
+{
+"t": 4.57,
+"mode": "<MovementMode.MOVE_FALLING: 3>",
+"custom": 0,
+"v": 289,
+"vz": 284
+},
+{
+"t": 4.59,
+"mode": "<MovementMode.MOVE_FALLING: 3>",
+"custom": 0,
+"v": 265,
+"vz": 259
+},
+{
+"t": 4.61,
+"mode": "<MovementMode.MOVE_FALLING: 3>",
+"custom": 0,
+"v": 241,
+"vz": 235
+},
+{
+"t": 4.63,
+"mode": "<MovementMode.MOVE_FALLING: 3>",
+"custom": 0,
+"v": 217,
+"vz": 210
+},
+{
+"t": 4.64,
+"mode": "<MovementMode.MOVE_FALLING: 3>",
+"custom": 0,
+"v": 193,
+"vz": 186
+},
+{
+"t": 4.66,
+"mode": "<MovementMode.MOVE_FALLING: 3>",
+"custom": 0,
+"v": 170,
+"vz": 161
+},
+{
+"t": 4.68,
+"mode": "<MovementMode.MOVE_FALLING: 3>",
+"custom": 0,
+"v": 147,
+"vz": 137
+},
+{
+"t": 4.69,
+"mode": "<MovementMode.MOVE_FALLING: 3>",
+"custom": 0,
+"v": 124,
+"vz": 112
+},
+{
+"t": 4.71,
+"mode": "<MovementMode.MOVE_FALLING: 3>",
+"custom": 0,
+"v": 103,
+"vz": 88
+},
+{
+"t": 4.72,
+"mode": "<MovementMode.MOVE_FALLING: 3>",
+"custom": 0,
+"v": 83,
+"vz": 63
+},
+{
+"t": 4.74,
+"mode": "<MovementMode.MOVE_FALLING: 3>",
+"custom": 0,
+"v": 66,
+"vz": 39
+},
+{
+"t": 4.76,
+"mode": "<MovementMode.MOVE_FALLING: 3>",
+"custom": 0,
+"v": 56,
+"vz": 14
+},
+{
+"t": 4.78,
+"mode": "<MovementMode.MOVE_FALLING: 3>",
+"custom": 0,
+"v": 55,
+"vz": -10
+},
+{
+"t": 4.79,
+"mode": "<MovementMode.MOVE_FALLING: 3>",
+"custom": 0,
+"v": 64,
+"vz": -35
+},
+{
+"t": 4.81,
+"mode": "<MovementMode.MOVE_FALLING: 3>",
+"custom": 0,
+"v": 80,
+"vz": -59
+},
+{
+"t": 4.83,
+"mode": "<MovementMode.MOVE_FALLING: 3>",
+"custom": 0,
+"v": 100,
+"vz": -84
+},
+{
+"t": 4.84,
+"mode": "<MovementMode.MOVE_FALLING: 3>",
+"custom": 0,
+"v": 121,
+"vz": -108
+},
+{
+"t": 4.86,
+"mode": "<MovementMode.MOVE_FALLING: 3>",
+"custom": 0,
+"v": 143,
+"vz": -133
+},
+{
+"t": 4.88,
+"mode": "<MovementMode.MOVE_FALLING: 3>",
+"custom": 0,
+"v": 166,
+"vz": -157
+},
+{
+"t": 4.89,
+"mode": "<MovementMode.MOVE_FALLING: 3>",
+"custom": 0,
+"v": 190,
+"vz": -182
+},
+{
+"t": 4.91,
+"mode": "<MovementMode.MOVE_FALLING: 3>",
+"custom": 0,
+"v": 213,
+"vz": -206
+},
+{
+"t": 4.93,
+"mode": "<MovementMode.MOVE_FALLING: 3>",
+"custom": 0,
+"v": 237,
+"vz": -231
+},
+{
+"t": 4.94,
+"mode": "<MovementMode.MOVE_FALLING: 3>",
+"custom": 0,
+"v": 261,
+"vz": -255
+},
+{
+"t": 4.96,
+"mode": "<MovementMode.MOVE_FALLING: 3>",
+"custom": 0,
+"v": 285,
+"vz": -280
+},
+{
+"t": 4.98,
+"mode": "<MovementMode.MOVE_FALLING: 3>",
+"custom": 0,
+"v": 309,
+"vz": -304
+},
+{
+"t": 4.99,
+"mode": "<MovementMode.MOVE_FALLING: 3>",
+"custom": 0,
+"v": 333,
+"vz": -329
+},
+{
+"t": 5.01,
+"mode": "<MovementMode.MOVE_FALLING: 3>",
+"custom": 0,
+"v": 358,
+"vz": -353
+},
+{
+"t": 5.03,
+"mode": "<MovementMode.MOVE_FALLING: 3>",
+"custom": 0,
+"v": 382,
+"vz": -378
+},
+{
+"t": 5.04,
+"mode": "<MovementMode.MOVE_FALLING: 3>",
+"custom": 0,
+"v": 406,
+"vz": -402
+},
+{
+"t": 5.06,
+"mode": "<MovementMode.MOVE_FALLING: 3>",
+"custom": 0,
+"v": 430,
+"vz": -427
+},
+{
+"t": 5.07,
+"mode": "<MovementMode.MOVE_FALLING: 3>",
+"custom": 0,
+"v": 455,
+"vz": -451
+},
+{
+"t": 5.09,
+"mode": "<MovementMode.MOVE_FALLING: 3>",
+"custom": 0,
+"v": 479,
+"vz": -476
+},
+{
+"t": 5.11,
+"mode": "<MovementMode.MOVE_FALLING: 3>",
+"custom": 0,
+"v": 503,
+"vz": -500
+},
+{
+"t": 5.13,
+"mode": "<MovementMode.MOVE_FALLING: 3>",
+"custom": 0,
+"v": 528,
+"vz": -525
+},
+{
+"t": 5.14,
+"mode": "<MovementMode.MOVE_FALLING: 3>",
+"custom": 0,
+"v": 552,
+"vz": -549
+},
+{
+"t": 5.16,
+"mode": "<MovementMode.MOVE_FALLING: 3>",
+"custom": 0,
+"v": 577,
+"vz": -574
+},
+{
+"t": 5.18,
+"mode": "<MovementMode.MOVE_FALLING: 3>",
+"custom": 0,
+"v": 601,
+"vz": -598
+},
+{
+"t": 5.19,
+"mode": "<MovementMode.MOVE_FALLING: 3>",
+"custom": 0,
+"v": 625,
+"vz": -623
+},
+{
+"t": 5.21,
+"mode": "<MovementMode.MOVE_FALLING: 3>",
+"custom": 0,
+"v": 650,
+"vz": -647
+},
+{
+"t": 5.22,
+"mode": "<MovementMode.MOVE_FALLING: 3>",
+"custom": 0,
+"v": 674,
+"vz": -672
+},
+{
+"t": 5.24,
+"mode": "<MovementMode.MOVE_FALLING: 3>",
+"custom": 0,
+"v": 699,
+"vz": -696
+},
+{
+"t": 5.26,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 17,
+"vz": 0
+},
+{
+"t": 5.27,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 5.29,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 5.31,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 5.33,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 5.34,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 5.36,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 5.38,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 5.39,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 5.41,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 5.43,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 5.44,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 5.46,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 5.48,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 5.49,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 5.51,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 5.53,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 5.54,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 5.56,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 5.58,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 5.59,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 5.61,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 5.63,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 5.64,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 5.66,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 5.67,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 5.69,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 5.71,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 5.72,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 5.74,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 5.75,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 5.77,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 5.79,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 5.8,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 5.82,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 5.84,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 5.86,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 5.87,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 5.89,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 5.91,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 5.92,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 5.94,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 5.96,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 5.97,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 5.99,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 6.01,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 6.02,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 6.04,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 6.06,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 6.07,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 6.09,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 6.1,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 6.12,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 6.14,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 6.15,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 6.17,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 6.19,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 6.21,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 6.22,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 6.24,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 6.26,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 6.27,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 6.29,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 6.3,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 6.32,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 6.34,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 6.35,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 6.37,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 6.39,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 6.4,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 6.42,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 6.44,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 6.46,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 6.47,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 6.49,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 6.5,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 6.52,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 6.54,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 6.55,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 6.57,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 6.59,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 6.6,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 6.62,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 6.64,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 6.66,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 6.67,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 6.69,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 6.7,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 6.72,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 6.74,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 6.75,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 6.77,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 6.79,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 6.81,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 6.82,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 6.84,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 6.85,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 6.87,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 6.89,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 6.9,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 6.92,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 6.94,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 6.95,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 6.97,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 6.99,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 7.0,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 7.02,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 7.04,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 7.06,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 7.07,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 7.09,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 7.11,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 7.12,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 7.14,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 7.15,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 7.17,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 7.19,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 7.2,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 7.22,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 7.24,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 7.26,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 7.27,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 7.29,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 7.3,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 7.32,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 7.34,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 7.35,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 7.37,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 7.39,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 7.4,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 7.42,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 7.44,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 7.46,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 7.47,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 7.49,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 7.5,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 7.52,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 7.54,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 7.55,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 7.57,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 7.59,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 7.6,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 7.62,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 7.64,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 7.66,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 7.67,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 7.69,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 7.7,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 7.72,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 7.74,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 7.75,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 7.77,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 7.79,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 7.8,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 7.82,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 7.84,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 7.85,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 7.87,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 7.89,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 7.9,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 7.92,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 7.94,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 7.95,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 7.97,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 7.99,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 8.0,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 8.02,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 8.04,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 8.06,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 8.07,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 8.09,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 8.1,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 8.12,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 8.14,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 8.16,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 8.17,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 8.19,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 8.21,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 8.22,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 8.24,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 8.26,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 8.27,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 8.29,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 8.3,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 8.32,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 8.34,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 8.35,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 8.37,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 8.39,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 8.41,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 8.42,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 8.44,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 8.46,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 8.47,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 8.49,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 8.5,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 8.52,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 8.54,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 8.56,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 8.57,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 8.59,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 8.6,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 8.62,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 8.64,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 8.66,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 8.67,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 8.69,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 8.71,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 8.72,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 8.74,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 8.76,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 8.77,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 8.79,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 8.8,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 8.82,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 8.84,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 8.86,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 8.87,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 8.89,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 8.9,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 8.92,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 8.94,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 8.95,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 8.97,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 8.99,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 9.0,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 9.02,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 9.04,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 9.06,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 9.07,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 9.09,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 9.1,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 9.12,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 9.14,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 9.15,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 9.17,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 9.19,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 9.2,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 9.22,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 9.24,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 9.26,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 9.27,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 9.29,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 9.31,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 9.32,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 9.34,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 9.35,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 9.37,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 9.39,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 9.4,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 9.42,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 9.44,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 9.46,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 9.47,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 9.49,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 9.5,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 9.52,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 9.54,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 9.55,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 9.57,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 9.59,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 9.61,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 9.62,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 9.64,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 9.66,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 9.67,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 9.69,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 9.71,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 9.72,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 9.74,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 9.76,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 9.77,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 9.79,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 9.8,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 9.82,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 9.84,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 9.86,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 9.87,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 9.89,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 9.91,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 9.92,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 9.94,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 9.96,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 9.97,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 9.99,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+},
+{
+"t": 10.01,
+"mode": "<MovementMode.MOVE_WALKING: 1>",
+"custom": 0,
+"v": 0,
+"vz": 0
+}
+]
+}

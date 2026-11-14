@@ -1,0 +1,1262 @@
+{
+ "frames": [
+  {
+   "n": 1,
+   "curve": 0.0,
+   "override": 0.0,
+   "active": [
+    "IdleBlink"
+   ]
+  },
+  {
+   "n": 2,
+   "curve": 0.0,
+   "override": 0.0,
+   "active": [
+    "IdleBlink"
+   ]
+  },
+  {
+   "n": 3,
+   "curve": 0.0,
+   "override": 0.0,
+   "active": [
+    "IdleBlink"
+   ]
+  },
+  {
+   "n": 4,
+   "curve": 0.0,
+   "override": 0.0,
+   "active": [
+    "IdleBlink"
+   ]
+  },
+  {
+   "n": 5,
+   "curve": 0.0,
+   "override": 0.0,
+   "active": [
+    "IdleBlink"
+   ]
+  },
+  {
+   "n": 6,
+   "curve": 0.0,
+   "override": 0.0,
+   "active": [
+    "IdleBlink"
+   ]
+  },
+  {
+   "n": 7,
+   "curve": 0.0,
+   "override": 0.0,
+   "active": [
+    "IdleBlink"
+   ]
+  },
+  {
+   "n": 8,
+   "curve": 0.0,
+   "override": 0.0,
+   "active": [
+    "IdleBlink"
+   ]
+  },
+  {
+   "n": 9,
+   "curve": 0.0,
+   "override": 0.0,
+   "active": [
+    "IdleBlink"
+   ]
+  },
+  {
+   "n": 10,
+   "curve": 0.0,
+   "override": 0.0,
+   "active": [
+    "IdleBlink"
+   ]
+  },
+  {
+   "n": 11,
+   "curve": 0.0,
+   "override": 0.0,
+   "active": [
+    "IdleBlink"
+   ]
+  },
+  {
+   "n": 12,
+   "curve": 0.0,
+   "override": 0.0,
+   "active": [
+    "IdleBlink"
+   ]
+  },
+  {
+   "n": 13,
+   "curve": 0.0,
+   "override": 0.0,
+   "active": [
+    "IdleBlink"
+   ]
+  },
+  {
+   "n": 14,
+   "curve": 0.0,
+   "override": 0.0,
+   "active": [
+    "IdleBlink"
+   ]
+  },
+  {
+   "n": 15,
+   "curve": 0.0,
+   "override": 0.0,
+   "active": [
+    "IdleBlink"
+   ]
+  },
+  {
+   "n": 16,
+   "curve": 0.0,
+   "override": 0.0,
+   "active": [
+    "IdleBlink"
+   ]
+  },
+  {
+   "n": 17,
+   "curve": 0.0,
+   "override": 0.0,
+   "active": [
+    "IdleBlink"
+   ]
+  },
+  {
+   "n": 18,
+   "curve": 0.0,
+   "override": 0.0,
+   "active": [
+    "IdleBlink"
+   ]
+  },
+  {
+   "n": 19,
+   "curve": 0.0,
+   "override": 0.0,
+   "active": [
+    "IdleBlink"
+   ]
+  },
+  {
+   "n": 20,
+   "curve": 0.0,
+   "override": 0.0,
+   "active": [
+    "IdleBlink"
+   ]
+  },
+  {
+   "n": 21,
+   "curve": 0.0,
+   "override": 0.0,
+   "active": [
+    "IdleBlink"
+   ]
+  },
+  {
+   "n": 22,
+   "curve": 0.0,
+   "override": 0.0,
+   "active": [
+    "IdleBlink"
+   ]
+  },
+  {
+   "n": 23,
+   "curve": 0.0,
+   "override": 0.0,
+   "active": [
+    "IdleBlink"
+   ]
+  },
+  {
+   "n": 24,
+   "curve": 0.0,
+   "override": 0.0,
+   "active": [
+    "IdleBlink"
+   ]
+  },
+  {
+   "n": 25,
+   "curve": 0.0,
+   "override": 0.0,
+   "active": [
+    "IdleBlink"
+   ]
+  },
+  {
+   "n": 26,
+   "curve": 0.0,
+   "override": 0.0,
+   "active": [
+    "IdleBlink"
+   ]
+  },
+  {
+   "n": 27,
+   "curve": 0.0,
+   "override": 0.0,
+   "active": [
+    "IdleBlink"
+   ]
+  },
+  {
+   "n": 28,
+   "curve": 0.0,
+   "override": 0.0,
+   "active": [
+    "IdleBlink"
+   ]
+  },
+  {
+   "n": 29,
+   "curve": 0.0,
+   "override": 0.0,
+   "active": [
+    "IdleBlink"
+   ]
+  },
+  {
+   "n": 30,
+   "curve": 0.0,
+   "override": 0.0,
+   "active": [
+    "IdleBlink"
+   ]
+  },
+  {
+   "n": 31,
+   "curve": 0.0,
+   "override": 0.0,
+   "active": [
+    "IdleBlink"
+   ]
+  },
+  {
+   "n": 32,
+   "curve": 0.0,
+   "override": 0.0,
+   "active": [
+    "IdleBlink"
+   ]
+  },
+  {
+   "n": 33,
+   "curve": 0.0,
+   "override": 0.0,
+   "active": [
+    "IdleBlink"
+   ]
+  },
+  {
+   "n": 34,
+   "curve": 0.0,
+   "override": 0.0,
+   "active": [
+    "IdleBlink"
+   ]
+  },
+  {
+   "n": 35,
+   "curve": 0.0,
+   "override": 0.0,
+   "active": [
+    "IdleBlink"
+   ]
+  },
+  {
+   "n": 36,
+   "curve": 0.0,
+   "override": 0.0,
+   "active": [
+    "IdleBlink"
+   ]
+  },
+  {
+   "n": 37,
+   "curve": 0.0,
+   "override": 0.0,
+   "active": [
+    "IdleBlink"
+   ]
+  },
+  {
+   "n": 38,
+   "curve": 0.0,
+   "override": 0.0,
+   "active": [
+    "IdleBlink"
+   ]
+  },
+  {
+   "n": 39,
+   "curve": 0.0,
+   "override": 0.0,
+   "active": [
+    "IdleBlink"
+   ]
+  },
+  {
+   "n": 40,
+   "curve": 0.0,
+   "override": 0.0,
+   "active": [
+    "IdleBlink"
+   ]
+  },
+  {
+   "n": 41,
+   "curve": 0.0,
+   "override": 0.0,
+   "active": [
+    "IdleBlink"
+   ]
+  },
+  {
+   "n": 42,
+   "curve": 0.0,
+   "override": 0.0,
+   "active": [
+    "IdleBlink"
+   ]
+  },
+  {
+   "n": 43,
+   "curve": 0.0,
+   "override": 0.0,
+   "active": [
+    "IdleBlink"
+   ]
+  },
+  {
+   "n": 44,
+   "curve": 0.0,
+   "override": 0.0,
+   "active": [
+    "IdleBlink"
+   ]
+  },
+  {
+   "n": 45,
+   "curve": 0.0,
+   "override": 0.0,
+   "active": [
+    "IdleBlink"
+   ]
+  },
+  {
+   "n": 46,
+   "curve": 0.0,
+   "override": 0.0,
+   "active": [
+    "IdleBlink"
+   ]
+  },
+  {
+   "n": 47,
+   "curve": 0.0,
+   "override": 0.0,
+   "active": [
+    "IdleBlink"
+   ]
+  },
+  {
+   "n": 48,
+   "curve": 0.0,
+   "override": 0.0,
+   "active": [
+    "IdleBlink"
+   ]
+  },
+  {
+   "n": 49,
+   "curve": 0.0,
+   "override": 0.0,
+   "active": [
+    "IdleBlink"
+   ]
+  },
+  {
+   "n": 50,
+   "curve": 0.0,
+   "override": 0.0,
+   "active": [
+    "IdleBlink"
+   ]
+  },
+  {
+   "n": 51,
+   "curve": 0.0,
+   "override": 0.0,
+   "active": [
+    "IdleBlink"
+   ]
+  },
+  {
+   "n": 52,
+   "curve": 0.0,
+   "override": 0.0,
+   "active": [
+    "IdleBlink"
+   ]
+  },
+  {
+   "n": 53,
+   "curve": 0.0,
+   "override": 0.0,
+   "active": [
+    "IdleBlink"
+   ]
+  },
+  {
+   "n": 54,
+   "curve": 0.0,
+   "override": 0.0,
+   "active": [
+    "IdleBlink"
+   ]
+  },
+  {
+   "n": 55,
+   "curve": 0.0,
+   "override": 0.0,
+   "active": [
+    "IdleBlink"
+   ]
+  },
+  {
+   "n": 56,
+   "curve": 0.0,
+   "override": 0.0,
+   "active": [
+    "IdleBlink"
+   ]
+  },
+  {
+   "n": 57,
+   "curve": 0.0,
+   "override": 0.0,
+   "active": [
+    "IdleBlink"
+   ]
+  },
+  {
+   "n": 58,
+   "curve": 0.0,
+   "override": 0.0,
+   "active": [
+    "IdleBlink"
+   ]
+  },
+  {
+   "n": 59,
+   "curve": 0.0,
+   "override": 0.0,
+   "active": [
+    "IdleBlink"
+   ]
+  },
+  {
+   "n": 60,
+   "curve": 0.0,
+   "override": 0.0,
+   "active": [
+    "IdleBlink"
+   ]
+  },
+  {
+   "n": 61,
+   "curve": 0.0,
+   "override": 0.0,
+   "active": [
+    "IdleBlink"
+   ]
+  },
+  {
+   "n": 62,
+   "curve": 0.0,
+   "override": 0.0,
+   "active": [
+    "IdleBlink"
+   ]
+  },
+  {
+   "n": 63,
+   "curve": 0.0,
+   "override": 0.0,
+   "active": [
+    "IdleBlink"
+   ]
+  },
+  {
+   "n": 64,
+   "curve": 0.0,
+   "override": 0.0,
+   "active": [
+    "IdleBlink"
+   ]
+  },
+  {
+   "n": 65,
+   "curve": 0.0,
+   "override": 0.0,
+   "active": [
+    "IdleBlink"
+   ]
+  },
+  {
+   "n": 66,
+   "curve": 0.0,
+   "override": 0.0,
+   "active": [
+    "IdleBlink"
+   ]
+  },
+  {
+   "n": 67,
+   "curve": 0.0,
+   "override": 0.0,
+   "active": [
+    "IdleBlink"
+   ]
+  },
+  {
+   "n": 68,
+   "curve": 0.0,
+   "override": 0.0,
+   "active": [
+    "IdleBlink"
+   ]
+  },
+  {
+   "n": 69,
+   "curve": 0.0,
+   "override": 0.0,
+   "active": [
+    "IdleBlink"
+   ]
+  },
+  {
+   "n": 70,
+   "curve": 0.0,
+   "override": 0.0,
+   "active": [
+    "IdleBlink"
+   ]
+  },
+  {
+   "n": 71,
+   "curve": 0.0,
+   "override": 0.0,
+   "active": [
+    "IdleBlink"
+   ]
+  },
+  {
+   "n": 72,
+   "curve": 0.0,
+   "override": 0.0,
+   "active": [
+    "IdleBlink"
+   ]
+  },
+  {
+   "n": 73,
+   "curve": 0.0,
+   "override": 0.0,
+   "active": [
+    "IdleBlink"
+   ]
+  },
+  {
+   "n": 74,
+   "curve": 0.0,
+   "override": 0.0,
+   "active": [
+    "IdleBlink"
+   ]
+  },
+  {
+   "n": 75,
+   "curve": 0.0,
+   "override": 0.0,
+   "active": [
+    "IdleBlink"
+   ]
+  },
+  {
+   "n": 76,
+   "curve": 0.0,
+   "override": 0.0,
+   "active": [
+    "IdleBlink"
+   ]
+  },
+  {
+   "n": 77,
+   "curve": 0.0,
+   "override": 0.0,
+   "active": [
+    "IdleBlink"
+   ]
+  },
+  {
+   "n": 78,
+   "curve": 0.0,
+   "override": 0.0,
+   "active": [
+    "IdleBlink"
+   ]
+  },
+  {
+   "n": 79,
+   "curve": 0.0,
+   "override": 0.0,
+   "active": [
+    "IdleBlink"
+   ]
+  },
+  {
+   "n": 80,
+   "curve": 0.0,
+   "override": 0.0,
+   "active": [
+    "IdleBlink"
+   ]
+  },
+  {
+   "n": 81,
+   "curve": 0.0,
+   "override": 0.0,
+   "active": [
+    "IdleBlink"
+   ]
+  },
+  {
+   "n": 82,
+   "curve": 0.0,
+   "override": 0.0,
+   "active": [
+    "IdleBlink"
+   ]
+  },
+  {
+   "n": 83,
+   "curve": 0.0,
+   "override": 0.0,
+   "active": [
+    "IdleBlink"
+   ]
+  },
+  {
+   "n": 84,
+   "curve": 0.0,
+   "override": 0.0,
+   "active": [
+    "IdleBlink"
+   ]
+  },
+  {
+   "n": 85,
+   "curve": 0.0,
+   "override": 0.0,
+   "active": [
+    "IdleBlink"
+   ]
+  },
+  {
+   "n": 86,
+   "curve": 0.0,
+   "override": 0.0,
+   "active": [
+    "IdleBlink"
+   ]
+  },
+  {
+   "n": 87,
+   "curve": 0.0,
+   "override": 0.0,
+   "active": [
+    "IdleBlink"
+   ]
+  },
+  {
+   "n": 88,
+   "curve": 0.0,
+   "override": 0.0,
+   "active": [
+    "IdleBlink"
+   ]
+  },
+  {
+   "n": 89,
+   "curve": 0.0,
+   "override": 0.0,
+   "active": [
+    "IdleBlink"
+   ]
+  },
+  {
+   "n": 90,
+   "curve": 0.0,
+   "override": 0.0,
+   "active": [
+    "IdleBlink"
+   ]
+  },
+  {
+   "n": 91,
+   "curve": 0.0,
+   "override": 0.0,
+   "active": [
+    "IdleBlink"
+   ]
+  },
+  {
+   "n": 92,
+   "curve": 0.0,
+   "override": 0.0,
+   "active": [
+    "IdleBlink"
+   ]
+  },
+  {
+   "n": 93,
+   "curve": 0.0,
+   "override": 0.0,
+   "active": [
+    "IdleBlink"
+   ]
+  },
+  {
+   "n": 94,
+   "curve": 0.0,
+   "override": 0.0,
+   "active": [
+    "IdleBlink"
+   ]
+  },
+  {
+   "n": 95,
+   "curve": 0.0,
+   "override": 0.0,
+   "active": [
+    "IdleBlink"
+   ]
+  },
+  {
+   "n": 96,
+   "curve": 0.0,
+   "override": 0.0,
+   "active": [
+    "IdleBlink"
+   ]
+  },
+  {
+   "n": 97,
+   "curve": 0.0,
+   "override": 0.0,
+   "active": [
+    "IdleBlink"
+   ]
+  },
+  {
+   "n": 98,
+   "curve": 0.0,
+   "override": 0.0,
+   "active": [
+    "IdleBlink"
+   ]
+  },
+  {
+   "n": 99,
+   "curve": 0.0,
+   "override": 0.0,
+   "active": [
+    "IdleBlink"
+   ]
+  },
+  {
+   "n": 100,
+   "curve": 0.0,
+   "override": 0.0,
+   "active": [
+    "IdleBlink"
+   ]
+  },
+  {
+   "n": 101,
+   "curve": 0.0,
+   "override": 0.0,
+   "active": [
+    "IdleBlink"
+   ]
+  },
+  {
+   "n": 102,
+   "curve": 0.0,
+   "override": 0.0,
+   "active": [
+    "IdleBlink"
+   ]
+  },
+  {
+   "n": 103,
+   "curve": 0.0,
+   "override": 0.0,
+   "active": [
+    "IdleBlink"
+   ]
+  },
+  {
+   "n": 104,
+   "curve": 0.0,
+   "override": 0.0,
+   "active": [
+    "IdleBlink"
+   ]
+  },
+  {
+   "n": 105,
+   "curve": 0.0,
+   "override": 0.0,
+   "active": [
+    "IdleBlink"
+   ]
+  },
+  {
+   "n": 106,
+   "curve": 0.0,
+   "override": 0.0,
+   "active": [
+    "IdleBlink"
+   ]
+  },
+  {
+   "n": 107,
+   "curve": 0.0,
+   "override": 0.0,
+   "active": [
+    "IdleBlink"
+   ]
+  },
+  {
+   "n": 108,
+   "curve": 0.0,
+   "override": 0.0,
+   "active": [
+    "IdleBlink"
+   ]
+  },
+  {
+   "n": 109,
+   "curve": 0.0,
+   "override": 0.0,
+   "active": [
+    "IdleBlink"
+   ]
+  },
+  {
+   "n": 110,
+   "curve": 0.0,
+   "override": 0.0,
+   "active": [
+    "IdleBlink"
+   ]
+  },
+  {
+   "n": 111,
+   "curve": 0.0,
+   "override": 0.0,
+   "active": [
+    "IdleBlink"
+   ]
+  },
+  {
+   "n": 112,
+   "curve": 0.0,
+   "override": 0.0,
+   "active": [
+    "IdleBlink"
+   ]
+  },
+  {
+   "n": 113,
+   "curve": 0.0,
+   "override": 0.0,
+   "active": [
+    "IdleBlink"
+   ]
+  },
+  {
+   "n": 114,
+   "curve": 0.0,
+   "override": 0.0,
+   "active": [
+    "IdleBlink"
+   ]
+  },
+  {
+   "n": 115,
+   "curve": 0.0,
+   "override": 0.0,
+   "active": [
+    "IdleBlink"
+   ]
+  },
+  {
+   "n": 116,
+   "curve": 0.0,
+   "override": 0.0,
+   "active": [
+    "IdleBlink"
+   ]
+  },
+  {
+   "n": 117,
+   "curve": 0.0,
+   "override": 0.0,
+   "active": [
+    "IdleBlink"
+   ]
+  },
+  {
+   "n": 118,
+   "curve": 0.0,
+   "override": 0.0,
+   "active": [
+    "IdleBlink"
+   ]
+  },
+  {
+   "n": 119,
+   "curve": 0.0,
+   "override": 0.0,
+   "active": [
+    "IdleBlink"
+   ]
+  },
+  {
+   "n": 120,
+   "curve": 0.0,
+   "override": 0.0,
+   "active": [
+    "IdleBlink"
+   ]
+  },
+  {
+   "n": 121,
+   "curve": 0.0,
+   "override": 0.0,
+   "active": [
+    "IdleBlink"
+   ]
+  },
+  {
+   "n": 122,
+   "curve": 0.0,
+   "override": 0.0,
+   "active": [
+    "IdleBlink"
+   ]
+  },
+  {
+   "n": 123,
+   "curve": 0.0,
+   "override": 0.0,
+   "active": [
+    "IdleBlink"
+   ]
+  },
+  {
+   "n": 124,
+   "curve": 0.0,
+   "override": 0.0,
+   "active": [
+    "IdleBlink"
+   ]
+  },
+  {
+   "n": 125,
+   "curve": 0.0,
+   "override": 0.0,
+   "active": [
+    "IdleBlink"
+   ]
+  },
+  {
+   "n": 126,
+   "curve": 0.0,
+   "override": 0.0,
+   "active": [
+    "IdleBlink"
+   ]
+  },
+  {
+   "n": 127,
+   "curve": 0.0,
+   "override": 0.0,
+   "active": [
+    "IdleBlink"
+   ]
+  },
+  {
+   "n": 128,
+   "curve": 0.0,
+   "override": 0.0,
+   "active": [
+    "IdleBlink"
+   ]
+  },
+  {
+   "n": 129,
+   "curve": 0.0,
+   "override": 0.0,
+   "active": [
+    "IdleBlink"
+   ]
+  },
+  {
+   "n": 130,
+   "curve": 0.0,
+   "override": 0.0,
+   "active": [
+    "IdleBlink"
+   ]
+  },
+  {
+   "n": 131,
+   "curve": 0.0,
+   "override": 0.0,
+   "active": [
+    "IdleBlink"
+   ]
+  },
+  {
+   "n": 132,
+   "curve": 0.0,
+   "override": 0.0,
+   "active": [
+    "IdleBlink"
+   ]
+  },
+  {
+   "n": 133,
+   "curve": 0.0,
+   "override": 0.0,
+   "active": [
+    "IdleBlink"
+   ]
+  },
+  {
+   "n": 134,
+   "curve": 0.0,
+   "override": 0.0,
+   "active": [
+    "IdleBlink"
+   ]
+  },
+  {
+   "n": 135,
+   "curve": 0.0,
+   "override": 0.0,
+   "active": [
+    "IdleBlink"
+   ]
+  },
+  {
+   "n": 136,
+   "curve": 0.0,
+   "override": 0.0,
+   "active": [
+    "IdleBlink"
+   ]
+  },
+  {
+   "n": 137,
+   "curve": 0.0,
+   "override": 0.0,
+   "active": [
+    "IdleBlink"
+   ]
+  },
+  {
+   "n": 138,
+   "curve": 0.0,
+   "override": 0.0,
+   "active": [
+    "IdleBlink"
+   ]
+  },
+  {
+   "n": 139,
+   "curve": 0.0,
+   "override": 0.0,
+   "active": [
+    "IdleBlink"
+   ]
+  },
+  {
+   "n": 140,
+   "curve": 0.0,
+   "override": 0.0,
+   "active": [
+    "IdleBlink"
+   ]
+  },
+  {
+   "n": 141,
+   "curve": 0.0,
+   "override": 0.0,
+   "active": [
+    "IdleBlink"
+   ]
+  },
+  {
+   "n": 142,
+   "curve": 0.0,
+   "override": 0.0,
+   "active": [
+    "IdleBlink"
+   ]
+  },
+  {
+   "n": 143,
+   "curve": 0.0,
+   "override": 0.0,
+   "active": [
+    "IdleBlink"
+   ]
+  },
+  {
+   "n": 144,
+   "curve": 0.0,
+   "override": 0.0,
+   "active": [
+    "IdleBlink"
+   ]
+  },
+  {
+   "n": 145,
+   "curve": 0.0,
+   "override": 0.0,
+   "active": [
+    "IdleBlink"
+   ]
+  },
+  {
+   "n": 146,
+   "curve": 0.0,
+   "override": 0.0,
+   "active": [
+    "IdleBlink"
+   ]
+  },
+  {
+   "n": 147,
+   "curve": 0.014103000052273273,
+   "override": 0.014103000052273273,
+   "active": [
+    "IdleBlink"
+   ]
+  },
+  {
+   "n": 148,
+   "curve": 0.3803863823413849,
+   "override": 0.3803863823413849,
+   "active": [
+    "IdleBlink"
+   ]
+  },
+  {
+   "n": 149,
+   "curve": 0.8646324872970581,
+   "override": 0.8646324872970581,
+   "active": [
+    "IdleBlink"
+   ]
+  },
+  {
+   "n": 150,
+   "curve": 1.0,
+   "override": 1.0,
+   "active": [
+    "IdleBlink"
+   ]
+  }
+ ],
+ "screenshots": [
+  "C:\\Users\\fromj\\Downloads\\test\\test\\abc\\Saved\\Screenshots\\WindowsEditor\\BlinkDiag_Open.png",
+  "C:\\Users\\fromj\\Downloads\\test\\test\\abc\\Saved\\Screenshots\\WindowsEditor\\BlinkDiag_ForcedClosed.png",
+  "C:\\Users\\fromj\\Downloads\\test\\test\\abc\\Saved\\Screenshots\\WindowsEditor\\BlinkDiag_ForcedClosedCPU.png",
+  "C:\\Users\\fromj\\Downloads\\test\\test\\abc\\Saved\\Screenshots\\WindowsEditor\\BlinkDiag_AutoClosed.png"
+ ],
+ "render_static_before": "False",
+ "mesh": {
+  "post_process_anim_blueprint": "None",
+  "nanite_settings": "<Struct 'MeshNaniteSettings' (0x0000012DB79A7A60) {enabled: False, explicit_tangents: False, lerp_u_vs: True, separable: False, voxel_ndf: True, voxel_opacity: False, shape_preservation: None, position_precision: -2147483648, normal_precision: -1, tangent_precision: -1, bone_weight_precision: -1, keep_percent_triangles: 1.000000, trim_relative_error: 0.000000, generate_fallback: PlatformDefault, fallback_target: Auto, fallback_percent_triangles: 1.000000, fallback_relative_error: 1.000000, max_edge_length_factor: 0.000000, num_rays: 64, voxel_level: 0, ray_back_up: 0.000000, displacement_uv_channel: 0}>",
+  "lod_info": "SkeletalMesh: Failed to find property 'lod_info' for attribute 'lod_info' on 'SkeletalMesh'"
+ },
+ "component": {
+  "disable_morph_target": "False",
+  "morph_target_curves": "SkeletalMeshComponent: Failed to find property 'morph_target_curves' for attribute 'morph_target_curves' on 'SkeletalMeshComponent'",
+  "force_disable_nanite": "SkeletalMeshComponent: Failed to find property 'force_disable_nanite' for attribute 'force_disable_nanite' on 'SkeletalMeshComponent'"
+ },
+ "mesh_api": [
+  "get_all_morph_target_names",
+  "get_min_lod_for_quality_levels",
+  "lod_settings",
+  "morph_targets",
+  "regenerate_lod",
+  "remove_morph_target",
+  "rename_morph_target",
+  "set_min_lod_for_quality_levels"
+ ],
+ "mesh_editor_api": [
+  "get_lod_build_settings",
+  "get_lod_count",
+  "get_lod_material_slot",
+  "get_morph_targets_generated_by_engine",
+  "import_lod",
+  "regenerate_lod",
+  "reimport_all_custom_lods",
+  "remove_lods",
+  "set_lod_build_settings",
+  "set_morph_targets_to_generated_by_engine",
+  "set_morph_targets_to_generated_by_engine_for_all_skeletal_mesh",
+  "strip_lod_geometry"
+ ],
+ "cvars": {
+  "r.EnableMorphTargets": 1,
+  "r.MorphTarget.Mode": 1,
+  "r.SkinCache.Mode": 0
+ },
+ "forced_morph": 1.0,
+ "forced_component": "/Temp/UEDPIE_0_Untitled_2.Untitled:PersistentLevel.SkeletalMeshActor_0.SkeletalMeshComponent0",
+ "forced_hips": "<Struct 'Vector' (0x0000012D93E969F0) {x: 0.001427, y: 5.400908, z: 93.175018}>",
+ "forced_instance": "<Object '/Temp/UEDPIE_0_Untitled_2.Untitled:PersistentLevel.SkeletalMeshActor_0.SkeletalMeshComponent0.AnimSingleNodeInstance_1' (0x0000012DB88DCD00) Class 'AnimSingleNodeInstance'>",
+ "material_after_render": {
+  "used_with_morph_targets": "True",
+  "used_with_skeletal_mesh": "True"
+ },
+ "auto_render_settings": {
+  "r.MorphTarget.Mode": 1,
+  "r.SkinCache.Mode": 1
+ }
+}

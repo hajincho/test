@@ -2,7 +2,7 @@
 import unreal, json, os, time
 D = r"C:\Users\fromj\Downloads\test\test\abc\FurinaSource\Data"
 HAIR = ['F_17_1_L', 'F_17_1_R', 'F_8_1_L', 'CF_2_L', 'CF_2_R', 'DM_5_1', 'DM_3_1']
-CURVES = ['FurinaIdle', 'FurinaWalk', 'HairDyn', 'IdleBlink', 'DbgL', 'DbgR', 'DbgW', 'DbgC']
+CURVES = ['AimPitch', 'RifleKick', 'RifleReload', 'FurinaIdle', 'FurinaWalk', 'HairDyn', 'IdleBlink', 'DbgL', 'DbgR', 'DbgW', 'DbgC']
 state = {'t0': time.time(), 'rows': [], 'n': 0}
 def r2(v): return [round(x, 1) for x in v.to_tuple()]
 def tick(dt):
@@ -18,7 +18,7 @@ def tick(dt):
             row = {'t': round(time.time() - state['t0'], 2), 'v': round(pawn.get_velocity().length(), 1),
                    'mws': round(pawn.character_movement.get_editor_property('max_walk_speed'), 1)}
             for cv in CURVES: row[cv] = round(ai.get_curve_value(cv), 3)
-            for b in ('Left-ankle', 'Right-ankle', 'Left-toe', 'Right-toe', 'Left-knee', 'Right-knee', 'Hips'):
+            for b in ('Left-ankle', 'Right-ankle', 'Left-toe', 'Right-toe', 'Left-knee', 'Right-knee', 'Hips', 'Right-wrist', 'Left-wrist', 'Neck', 'Head', 'Right-elbow', 'Left-elbow'):
                 row[b] = r2(xf.inverse_transform_location(comp.get_socket_location(b)))
             for b in HAIR: row['h_' + b] = r2(hx.inverse_transform_location(comp.get_socket_location(b)))
             state['rows'].append(row)

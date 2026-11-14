@@ -1,0 +1,33 @@
+{
+ "log": [],
+ "rifle_bounds": "<Struct 'BoxSphereBounds' (0x00000214D15A52C0) {origin: {x: -0.107845, y: 10.827896, z: -0.349992}, box_extent: {x: 2.624595, y: 37.418594, z: 10.694480}, sphere_radius: 39.005277}>",
+ "manny_anims": {
+  "A_FP_AssaultRifle_Aim_Pose": 0.03333333507180214,
+  "A_FP_AssaultRifle_Equip": 1.0333333015441895,
+  "A_FP_AssaultRifle_Fire": 0.7666666507720947,
+  "A_FP_AssaultRifle_Fire_Aimed": 0.7666666507720947,
+  "A_FP_AssaultRifle_Holster": 0.699999988079071,
+  "A_FP_AssaultRifle_Idle_Loop": 2.0,
+  "A_FP_AssaultRifle_Idle_Loop_Aimed": 2.0,
+  "A_FP_AssaultRifle_Idle_Pose": 0.03333333507180214,
+  "A_FP_AssaultRifle_Reload": 3.133333444595337,
+  "A_FP_AssaultRifle_Run_Loop": 0.6666666865348816,
+  "A_FP_AssaultRifle_Walk_F_Loop": 0.800000011920929,
+  "A_FP_AssaultRifle_Walk_F_Loop_Aimed": 0.800000011920929
+ },
+ "furina_anims": [
+  "/Game/Furina/FP/Anim/AS_Furina_FP_Aim_Pose.AS_Furina_FP_Aim_Pose",
+  "/Game/Furina/FP/Anim/AS_Furina_FP_Equip.AS_Furina_FP_Equip",
+  "/Game/Furina/FP/Anim/AS_Furina_FP_Fire.AS_Furina_FP_Fire",
+  "/Game/Furina/FP/Anim/AS_Furina_FP_Fire_Aimed.AS_Furina_FP_Fire_Aimed",
+  "/Game/Furina/FP/Anim/AS_Furina_FP_Holster.AS_Furina_FP_Holster",
+  "/Game/Furina/FP/Anim/AS_Furina_FP_Idle_Loop.AS_Furina_FP_Idle_Loop",
+  "/Game/Furina/FP/Anim/AS_Furina_FP_Idle_Loop_Aimed.AS_Furina_FP_Idle_Loop_Aimed",
+  "/Game/Furina/FP/Anim/AS_Furina_FP_Idle_Pose.AS_Furina_FP_Idle_Pose",
+  "/Game/Furina/FP/Anim/AS_Furina_FP_Reload.AS_Furina_FP_Reload",
+  "/Game/Furina/FP/Anim/AS_Furina_FP_Run_Loop.AS_Furina_FP_Run_Loop",
+  "/Game/Furina/FP/Anim/AS_Furina_FP_Walk_F_Loop.AS_Furina_FP_Walk_F_Loop",
+  "/Game/Furina/FP/Anim/AS_Furina_FP_Walk_F_Loop_Aimed.AS_Furina_FP_Walk_F_Loop_Aimed"
+ ],
+ "ok": true
+}

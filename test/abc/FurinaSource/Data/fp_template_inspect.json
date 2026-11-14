@@ -1,0 +1,4543 @@
+{
+ "A_FP_AssaultRifle_Aim_Pose.fbx": {
+  "objects": [
+   [
+    "Armature",
+    "ARMATURE"
+   ]
+  ],
+  "meshes": [],
+  "Armature": {
+   "n_bones": 89,
+   "bones": [
+    "root",
+    "pelvis",
+    "spine_01",
+    "spine_02",
+    "spine_03",
+    "spine_04",
+    "spine_05",
+    "neck_01",
+    "neck_02",
+    "head",
+    "clavicle_l",
+    "upperarm_l",
+    "lowerarm_l",
+    "lowerarm_twist_02_l",
+    "lowerarm_twist_01_l",
+    "hand_l",
+    "index_metacarpal_l",
+    "index_01_l",
+    "index_02_l",
+    "index_03_l",
+    "middle_metacarpal_l",
+    "middle_01_l",
+    "middle_02_l",
+    "middle_03_l",
+    "thumb_01_l",
+    "thumb_02_l",
+    "thumb_03_l",
+    "pinky_metacarpal_l",
+    "pinky_01_l",
+    "pinky_02_l",
+    "pinky_03_l",
+    "ring_metacarpal_l",
+    "ring_01_l",
+    "ring_02_l",
+    "ring_03_l",
+    "upperarm_twist_01_l",
+    "upperarm_twist_02_l",
+    "clavicle_r",
+    "upperarm_r",
+    "lowerarm_r",
+    "lowerarm_twist_02_r",
+    "lowerarm_twist_01_r",
+    "hand_r",
+    "pinky_metacarpal_r",
+    "pinky_01_r",
+    "pinky_02_r",
+    "pinky_03_r",
+    "ring_metacarpal_r",
+    "ring_01_r",
+    "ring_02_r",
+    "ring_03_r",
+    "middle_metacarpal_r",
+    "middle_01_r",
+    "middle_02_r",
+    "middle_03_r",
+    "index_metacarpal_r",
+    "index_01_r",
+    "index_02_r",
+    "index_03_r",
+    "thumb_01_r",
+    "thumb_02_r",
+    "thumb_03_r",
+    "upperarm_twist_01_r",
+    "upperarm_twist_02_r",
+    "thigh_r",
+    "calf_r",
+    "foot_r",
+    "ball_r",
+    "calf_twist_02_r",
+    "calf_twist_01_r",
+    "thigh_twist_01_r",
+    "thigh_twist_02_r",
+    "thigh_l",
+    "calf_l",
+    "foot_l",
+    "ball_l",
+    "calf_twist_02_l",
+    "calf_twist_01_l",
+    "thigh_twist_01_l",
+    "thigh_twist_02_l",
+    "ik_foot_root",
+    "ik_foot_l",
+    "ik_foot_r",
+    "ik_hand_root",
+    "ik_hand_gun",
+    "ik_hand_l",
+    "ik_hand_r",
+    "interaction",
+    "center_of_mass"
+   ],
+   "scale": [
+    0.009999999776482582,
+    0.009999999776482582,
+    0.009999999776482582
+   ],
+   "rot": [
+    -1.6292067073209182e-07,
+    0.0,
+    0.0
+   ],
+   "action": "Armature|Scene",
+   "frames": [
+    1.0,
+    2.0
+   ],
+   "fps": 30,
+   "animated": [
+    "ball_l",
+    "ball_r",
+    "calf_l",
+    "calf_r",
+    "calf_twist_01_l",
+    "calf_twist_01_r",
+    "calf_twist_02_l",
+    "calf_twist_02_r",
+    "center_of_mass",
+    "clavicle_l",
+    "clavicle_r",
+    "foot_l",
+    "foot_r",
+    "hand_l",
+    "hand_r",
+    "head",
+    "ik_foot_l",
+    "ik_foot_r",
+    "ik_foot_root",
+    "ik_hand_gun",
+    "ik_hand_l",
+    "ik_hand_r",
+    "ik_hand_root",
+    "index_01_l",
+    "index_01_r",
+    "index_02_l",
+    "index_02_r",
+    "index_03_l",
+    "index_03_r",
+    "index_metacarpal_l",
+    "index_metacarpal_r",
+    "interaction",
+    "location",
+    "lowerarm_l",
+    "lowerarm_r",
+    "lowerarm_twist_01_l",
+    "lowerarm_twist_01_r",
+    "lowerarm_twist_02_l",
+    "lowerarm_twist_02_r",
+    "middle_01_l",
+    "middle_01_r",
+    "middle_02_l",
+    "middle_02_r",
+    "middle_03_l",
+    "middle_03_r",
+    "middle_metacarpal_l",
+    "middle_metacarpal_r",
+    "neck_01",
+    "neck_02",
+    "pelvis",
+    "pinky_01_l",
+    "pinky_01_r",
+    "pinky_02_l",
+    "pinky_02_r",
+    "pinky_03_l",
+    "pinky_03_r",
+    "pinky_metacarpal_l",
+    "pinky_metacarpal_r",
+    "ring_01_l",
+    "ring_01_r",
+    "ring_02_l",
+    "ring_02_r",
+    "ring_03_l",
+    "ring_03_r",
+    "ring_metacarpal_l",
+    "ring_metacarpal_r",
+    "root",
+    "rotation_euler",
+    "scale",
+    "spine_01",
+    "spine_02",
+    "spine_03",
+    "spine_04",
+    "spine_05",
+    "thigh_l",
+    "thigh_r",
+    "thigh_twist_01_l",
+    "thigh_twist_01_r",
+    "thigh_twist_02_l",
+    "thigh_twist_02_r",
+    "thumb_01_l",
+    "thumb_01_r",
+    "thumb_02_l",
+    "thumb_02_r",
+    "thumb_03_l",
+    "thumb_03_r",
+    "upperarm_l",
+    "upperarm_r",
+    "upperarm_twist_01_l",
+    "upperarm_twist_01_r",
+    "upperarm_twist_02_l",
+    "upperarm_twist_02_r"
+   ],
+   "poses": {
+    "1": {
+     "root": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "pelvis": [
+      0.0,
+      -0.02,
+      0.96
+     ],
+     "spine_01": [
+      0.0,
+      -0.02,
+      1.0
+     ],
+     "spine_05": [
+      0.0,
+      -0.01,
+      1.41
+     ],
+     "neck_01": [
+      0.0,
+      0.02,
+      1.53
+     ],
+     "head": [
+      0.0,
+      -0.01,
+      1.63
+     ],
+     "clavicle_r": [
+      0.13,
+      0.18,
+      1.76
+     ],
+     "upperarm_r": [
+      -0.04,
+      0.19,
+      1.73
+     ],
+     "hand_r": [
+      -0.04,
+      0.0,
+      1.48
+     ],
+     "hand_l": [
+      0.05,
+      -0.25,
+      1.52
+     ],
+     "ik_hand_gun": [
+      0.0,
+      -0.1,
+      1.53
+     ],
+     "ik_hand_r": [
+      -0.04,
+      0.0,
+      1.48
+     ],
+     "ik_hand_l": [
+      0.05,
+      -0.25,
+      1.52
+     ],
+     "thigh_l": [
+      0.1,
+      -0.03,
+      0.94
+     ],
+     "foot_l": [
+      0.14,
+      0.01,
+      0.08
+     ]
+    }
+   }
+  }
+ },
+ "A_FP_AssaultRifle_Equip.fbx": {
+  "objects": [
+   [
+    "Armature",
+    "ARMATURE"
+   ]
+  ],
+  "meshes": [],
+  "Armature": {
+   "n_bones": 89,
+   "bones": [
+    "root",
+    "pelvis",
+    "spine_01",
+    "spine_02",
+    "spine_03",
+    "spine_04",
+    "spine_05",
+    "neck_01",
+    "neck_02",
+    "head",
+    "clavicle_l",
+    "upperarm_l",
+    "lowerarm_l",
+    "lowerarm_twist_02_l",
+    "lowerarm_twist_01_l",
+    "hand_l",
+    "index_metacarpal_l",
+    "index_01_l",
+    "index_02_l",
+    "index_03_l",
+    "middle_metacarpal_l",
+    "middle_01_l",
+    "middle_02_l",
+    "middle_03_l",
+    "thumb_01_l",
+    "thumb_02_l",
+    "thumb_03_l",
+    "pinky_metacarpal_l",
+    "pinky_01_l",
+    "pinky_02_l",
+    "pinky_03_l",
+    "ring_metacarpal_l",
+    "ring_01_l",
+    "ring_02_l",
+    "ring_03_l",
+    "upperarm_twist_01_l",
+    "upperarm_twist_02_l",
+    "clavicle_r",
+    "upperarm_r",
+    "lowerarm_r",
+    "lowerarm_twist_02_r",
+    "lowerarm_twist_01_r",
+    "hand_r",
+    "pinky_metacarpal_r",
+    "pinky_01_r",
+    "pinky_02_r",
+    "pinky_03_r",
+    "ring_metacarpal_r",
+    "ring_01_r",
+    "ring_02_r",
+    "ring_03_r",
+    "middle_metacarpal_r",
+    "middle_01_r",
+    "middle_02_r",
+    "middle_03_r",
+    "index_metacarpal_r",
+    "index_01_r",
+    "index_02_r",
+    "index_03_r",
+    "thumb_01_r",
+    "thumb_02_r",
+    "thumb_03_r",
+    "upperarm_twist_01_r",
+    "upperarm_twist_02_r",
+    "thigh_r",
+    "calf_r",
+    "foot_r",
+    "ball_r",
+    "calf_twist_02_r",
+    "calf_twist_01_r",
+    "thigh_twist_01_r",
+    "thigh_twist_02_r",
+    "thigh_l",
+    "calf_l",
+    "foot_l",
+    "ball_l",
+    "calf_twist_02_l",
+    "calf_twist_01_l",
+    "thigh_twist_01_l",
+    "thigh_twist_02_l",
+    "ik_foot_root",
+    "ik_foot_l",
+    "ik_foot_r",
+    "ik_hand_root",
+    "ik_hand_gun",
+    "ik_hand_l",
+    "ik_hand_r",
+    "interaction",
+    "center_of_mass"
+   ],
+   "scale": [
+    0.009999999776482582,
+    0.009999999776482582,
+    0.009999999776482582
+   ],
+   "rot": [
+    -1.6292067073209182e-07,
+    0.0,
+    0.0
+   ],
+   "action": "Armature|Scene",
+   "frames": [
+    1.0,
+    32.0
+   ],
+   "fps": 30,
+   "animated": [
+    "ball_l",
+    "ball_r",
+    "calf_l",
+    "calf_r",
+    "calf_twist_01_l",
+    "calf_twist_01_r",
+    "calf_twist_02_l",
+    "calf_twist_02_r",
+    "center_of_mass",
+    "clavicle_l",
+    "clavicle_r",
+    "foot_l",
+    "foot_r",
+    "hand_l",
+    "hand_r",
+    "head",
+    "ik_foot_l",
+    "ik_foot_r",
+    "ik_foot_root",
+    "ik_hand_gun",
+    "ik_hand_l",
+    "ik_hand_r",
+    "ik_hand_root",
+    "index_01_l",
+    "index_01_r",
+    "index_02_l",
+    "index_02_r",
+    "index_03_l",
+    "index_03_r",
+    "index_metacarpal_l",
+    "index_metacarpal_r",
+    "interaction",
+    "location",
+    "lowerarm_l",
+    "lowerarm_r",
+    "lowerarm_twist_01_l",
+    "lowerarm_twist_01_r",
+    "lowerarm_twist_02_l",
+    "lowerarm_twist_02_r",
+    "middle_01_l",
+    "middle_01_r",
+    "middle_02_l",
+    "middle_02_r",
+    "middle_03_l",
+    "middle_03_r",
+    "middle_metacarpal_l",
+    "middle_metacarpal_r",
+    "neck_01",
+    "neck_02",
+    "pelvis",
+    "pinky_01_l",
+    "pinky_01_r",
+    "pinky_02_l",
+    "pinky_02_r",
+    "pinky_03_l",
+    "pinky_03_r",
+    "pinky_metacarpal_l",
+    "pinky_metacarpal_r",
+    "ring_01_l",
+    "ring_01_r",
+    "ring_02_l",
+    "ring_02_r",
+    "ring_03_l",
+    "ring_03_r",
+    "ring_metacarpal_l",
+    "ring_metacarpal_r",
+    "root",
+    "rotation_euler",
+    "scale",
+    "spine_01",
+    "spine_02",
+    "spine_03",
+    "spine_04",
+    "spine_05",
+    "thigh_l",
+    "thigh_r",
+    "thigh_twist_01_l",
+    "thigh_twist_01_r",
+    "thigh_twist_02_l",
+    "thigh_twist_02_r",
+    "thumb_01_l",
+    "thumb_01_r",
+    "thumb_02_l",
+    "thumb_02_r",
+    "thumb_03_l",
+    "thumb_03_r",
+    "upperarm_l",
+    "upperarm_r",
+    "upperarm_twist_01_l",
+    "upperarm_twist_01_r",
+    "upperarm_twist_02_l",
+    "upperarm_twist_02_r"
+   ],
+   "poses": {
+    "1": {
+     "root": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "pelvis": [
+      0.0,
+      -0.02,
+      0.96
+     ],
+     "spine_01": [
+      0.0,
+      -0.02,
+      1.0
+     ],
+     "spine_05": [
+      0.0,
+      -0.01,
+      1.41
+     ],
+     "neck_01": [
+      0.0,
+      0.02,
+      1.53
+     ],
+     "head": [
+      0.0,
+      -0.01,
+      1.63
+     ],
+     "clavicle_r": [
+      0.13,
+      0.18,
+      1.76
+     ],
+     "upperarm_r": [
+      -0.04,
+      0.19,
+      1.73
+     ],
+     "hand_r": [
+      -0.14,
+      0.01,
+      1.44
+     ],
+     "hand_l": [
+      0.08,
+      -0.06,
+      1.31
+     ],
+     "ik_hand_gun": [
+      -0.02,
+      -0.02,
+      1.4
+     ],
+     "ik_hand_r": [
+      -0.14,
+      0.01,
+      1.44
+     ],
+     "ik_hand_l": [
+      0.08,
+      -0.06,
+      1.31
+     ],
+     "thigh_l": [
+      0.1,
+      -0.03,
+      0.94
+     ],
+     "foot_l": [
+      0.14,
+      0.01,
+      0.08
+     ]
+    },
+    "16": {
+     "root": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "pelvis": [
+      0.0,
+      -0.02,
+      0.96
+     ],
+     "spine_01": [
+      0.0,
+      -0.02,
+      1.0
+     ],
+     "spine_05": [
+      0.0,
+      -0.01,
+      1.41
+     ],
+     "neck_01": [
+      0.0,
+      0.02,
+      1.53
+     ],
+     "head": [
+      0.0,
+      -0.01,
+      1.63
+     ],
+     "clavicle_r": [
+      0.13,
+      0.18,
+      1.76
+     ],
+     "upperarm_r": [
+      -0.04,
+      0.19,
+      1.73
+     ],
+     "hand_r": [
+      -0.1,
+      -0.04,
+      1.48
+     ],
+     "hand_l": [
+      -0.02,
+      -0.29,
+      1.52
+     ],
+     "ik_hand_gun": [
+      -0.06,
+      -0.15,
+      1.53
+     ],
+     "ik_hand_r": [
+      -0.1,
+      -0.04,
+      1.48
+     ],
+     "ik_hand_l": [
+      -0.02,
+      -0.29,
+      1.52
+     ],
+     "thigh_l": [
+      0.1,
+      -0.03,
+      0.94
+     ],
+     "foot_l": [
+      0.14,
+      0.01,
+      0.08
+     ]
+    }
+   }
+  }
+ },
+ "A_FP_AssaultRifle_Fire.fbx": {
+  "objects": [
+   [
+    "Armature",
+    "ARMATURE"
+   ]
+  ],
+  "meshes": [],
+  "Armature": {
+   "n_bones": 89,
+   "bones": [
+    "root",
+    "pelvis",
+    "spine_01",
+    "spine_02",
+    "spine_03",
+    "spine_04",
+    "spine_05",
+    "neck_01",
+    "neck_02",
+    "head",
+    "clavicle_l",
+    "upperarm_l",
+    "lowerarm_l",
+    "lowerarm_twist_02_l",
+    "lowerarm_twist_01_l",
+    "hand_l",
+    "index_metacarpal_l",
+    "index_01_l",
+    "index_02_l",
+    "index_03_l",
+    "middle_metacarpal_l",
+    "middle_01_l",
+    "middle_02_l",
+    "middle_03_l",
+    "thumb_01_l",
+    "thumb_02_l",
+    "thumb_03_l",
+    "pinky_metacarpal_l",
+    "pinky_01_l",
+    "pinky_02_l",
+    "pinky_03_l",
+    "ring_metacarpal_l",
+    "ring_01_l",
+    "ring_02_l",
+    "ring_03_l",
+    "upperarm_twist_01_l",
+    "upperarm_twist_02_l",
+    "clavicle_r",
+    "upperarm_r",
+    "lowerarm_r",
+    "lowerarm_twist_02_r",
+    "lowerarm_twist_01_r",
+    "hand_r",
+    "pinky_metacarpal_r",
+    "pinky_01_r",
+    "pinky_02_r",
+    "pinky_03_r",
+    "ring_metacarpal_r",
+    "ring_01_r",
+    "ring_02_r",
+    "ring_03_r",
+    "middle_metacarpal_r",
+    "middle_01_r",
+    "middle_02_r",
+    "middle_03_r",
+    "index_metacarpal_r",
+    "index_01_r",
+    "index_02_r",
+    "index_03_r",
+    "thumb_01_r",
+    "thumb_02_r",
+    "thumb_03_r",
+    "upperarm_twist_01_r",
+    "upperarm_twist_02_r",
+    "thigh_r",
+    "calf_r",
+    "foot_r",
+    "ball_r",
+    "calf_twist_02_r",
+    "calf_twist_01_r",
+    "thigh_twist_01_r",
+    "thigh_twist_02_r",
+    "thigh_l",
+    "calf_l",
+    "foot_l",
+    "ball_l",
+    "calf_twist_02_l",
+    "calf_twist_01_l",
+    "thigh_twist_01_l",
+    "thigh_twist_02_l",
+    "ik_foot_root",
+    "ik_foot_l",
+    "ik_foot_r",
+    "ik_hand_root",
+    "ik_hand_gun",
+    "ik_hand_l",
+    "ik_hand_r",
+    "interaction",
+    "center_of_mass"
+   ],
+   "scale": [
+    0.009999999776482582,
+    0.009999999776482582,
+    0.009999999776482582
+   ],
+   "rot": [
+    -1.6292067073209182e-07,
+    0.0,
+    0.0
+   ],
+   "action": "Armature|Scene",
+   "frames": [
+    1.0,
+    24.0
+   ],
+   "fps": 30,
+   "animated": [
+    "ball_l",
+    "ball_r",
+    "calf_l",
+    "calf_r",
+    "calf_twist_01_l",
+    "calf_twist_01_r",
+    "calf_twist_02_l",
+    "calf_twist_02_r",
+    "center_of_mass",
+    "clavicle_l",
+    "clavicle_r",
+    "foot_l",
+    "foot_r",
+    "hand_l",
+    "hand_r",
+    "head",
+    "ik_foot_l",
+    "ik_foot_r",
+    "ik_foot_root",
+    "ik_hand_gun",
+    "ik_hand_l",
+    "ik_hand_r",
+    "ik_hand_root",
+    "index_01_l",
+    "index_01_r",
+    "index_02_l",
+    "index_02_r",
+    "index_03_l",
+    "index_03_r",
+    "index_metacarpal_l",
+    "index_metacarpal_r",
+    "interaction",
+    "location",
+    "lowerarm_l",
+    "lowerarm_r",
+    "lowerarm_twist_01_l",
+    "lowerarm_twist_01_r",
+    "lowerarm_twist_02_l",
+    "lowerarm_twist_02_r",
+    "middle_01_l",
+    "middle_01_r",
+    "middle_02_l",
+    "middle_02_r",
+    "middle_03_l",
+    "middle_03_r",
+    "middle_metacarpal_l",
+    "middle_metacarpal_r",
+    "neck_01",
+    "neck_02",
+    "pelvis",
+    "pinky_01_l",
+    "pinky_01_r",
+    "pinky_02_l",
+    "pinky_02_r",
+    "pinky_03_l",
+    "pinky_03_r",
+    "pinky_metacarpal_l",
+    "pinky_metacarpal_r",
+    "ring_01_l",
+    "ring_01_r",
+    "ring_02_l",
+    "ring_02_r",
+    "ring_03_l",
+    "ring_03_r",
+    "ring_metacarpal_l",
+    "ring_metacarpal_r",
+    "root",
+    "rotation_euler",
+    "scale",
+    "spine_01",
+    "spine_02",
+    "spine_03",
+    "spine_04",
+    "spine_05",
+    "thigh_l",
+    "thigh_r",
+    "thigh_twist_01_l",
+    "thigh_twist_01_r",
+    "thigh_twist_02_l",
+    "thigh_twist_02_r",
+    "thumb_01_l",
+    "thumb_01_r",
+    "thumb_02_l",
+    "thumb_02_r",
+    "thumb_03_l",
+    "thumb_03_r",
+    "upperarm_l",
+    "upperarm_r",
+    "upperarm_twist_01_l",
+    "upperarm_twist_01_r",
+    "upperarm_twist_02_l",
+    "upperarm_twist_02_r"
+   ],
+   "poses": {
+    "1": {
+     "root": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "pelvis": [
+      0.0,
+      -0.02,
+      0.96
+     ],
+     "spine_01": [
+      0.0,
+      -0.02,
+      1.0
+     ],
+     "spine_05": [
+      0.0,
+      -0.01,
+      1.41
+     ],
+     "neck_01": [
+      0.0,
+      0.02,
+      1.53
+     ],
+     "head": [
+      0.0,
+      -0.01,
+      1.63
+     ],
+     "clavicle_r": [
+      0.13,
+      0.18,
+      1.76
+     ],
+     "upperarm_r": [
+      -0.04,
+      0.19,
+      1.73
+     ],
+     "hand_r": [
+      -0.1,
+      -0.04,
+      1.48
+     ],
+     "hand_l": [
+      -0.01,
+      -0.3,
+      1.52
+     ],
+     "ik_hand_gun": [
+      -0.06,
+      -0.15,
+      1.53
+     ],
+     "ik_hand_r": [
+      -0.1,
+      -0.04,
+      1.48
+     ],
+     "ik_hand_l": [
+      -0.01,
+      -0.3,
+      1.52
+     ],
+     "thigh_l": [
+      0.1,
+      -0.03,
+      0.94
+     ],
+     "foot_l": [
+      0.14,
+      0.01,
+      0.08
+     ]
+    },
+    "12": {
+     "root": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "pelvis": [
+      0.0,
+      -0.02,
+      0.96
+     ],
+     "spine_01": [
+      0.0,
+      -0.02,
+      1.0
+     ],
+     "spine_05": [
+      0.0,
+      -0.01,
+      1.41
+     ],
+     "neck_01": [
+      0.0,
+      0.02,
+      1.53
+     ],
+     "head": [
+      0.0,
+      -0.01,
+      1.63
+     ],
+     "clavicle_r": [
+      0.13,
+      0.18,
+      1.76
+     ],
+     "upperarm_r": [
+      -0.04,
+      0.19,
+      1.73
+     ],
+     "hand_r": [
+      -0.1,
+      -0.04,
+      1.48
+     ],
+     "hand_l": [
+      -0.01,
+      -0.3,
+      1.52
+     ],
+     "ik_hand_gun": [
+      -0.06,
+      -0.15,
+      1.53
+     ],
+     "ik_hand_r": [
+      -0.1,
+      -0.04,
+      1.48
+     ],
+     "ik_hand_l": [
+      -0.01,
+      -0.3,
+      1.52
+     ],
+     "thigh_l": [
+      0.1,
+      -0.03,
+      0.94
+     ],
+     "foot_l": [
+      0.14,
+      0.01,
+      0.08
+     ]
+    }
+   }
+  }
+ },
+ "A_FP_AssaultRifle_Fire_Aimed.fbx": {
+  "objects": [
+   [
+    "Armature",
+    "ARMATURE"
+   ]
+  ],
+  "meshes": [],
+  "Armature": {
+   "n_bones": 89,
+   "bones": [
+    "root",
+    "pelvis",
+    "spine_01",
+    "spine_02",
+    "spine_03",
+    "spine_04",
+    "spine_05",
+    "neck_01",
+    "neck_02",
+    "head",
+    "clavicle_l",
+    "upperarm_l",
+    "lowerarm_l",
+    "lowerarm_twist_02_l",
+    "lowerarm_twist_01_l",
+    "hand_l",
+    "index_metacarpal_l",
+    "index_01_l",
+    "index_02_l",
+    "index_03_l",
+    "middle_metacarpal_l",
+    "middle_01_l",
+    "middle_02_l",
+    "middle_03_l",
+    "thumb_01_l",
+    "thumb_02_l",
+    "thumb_03_l",
+    "pinky_metacarpal_l",
+    "pinky_01_l",
+    "pinky_02_l",
+    "pinky_03_l",
+    "ring_metacarpal_l",
+    "ring_01_l",
+    "ring_02_l",
+    "ring_03_l",
+    "upperarm_twist_01_l",
+    "upperarm_twist_02_l",
+    "clavicle_r",
+    "upperarm_r",
+    "lowerarm_r",
+    "lowerarm_twist_02_r",
+    "lowerarm_twist_01_r",
+    "hand_r",
+    "pinky_metacarpal_r",
+    "pinky_01_r",
+    "pinky_02_r",
+    "pinky_03_r",
+    "ring_metacarpal_r",
+    "ring_01_r",
+    "ring_02_r",
+    "ring_03_r",
+    "middle_metacarpal_r",
+    "middle_01_r",
+    "middle_02_r",
+    "middle_03_r",
+    "index_metacarpal_r",
+    "index_01_r",
+    "index_02_r",
+    "index_03_r",
+    "thumb_01_r",
+    "thumb_02_r",
+    "thumb_03_r",
+    "upperarm_twist_01_r",
+    "upperarm_twist_02_r",
+    "thigh_r",
+    "calf_r",
+    "foot_r",
+    "ball_r",
+    "calf_twist_02_r",
+    "calf_twist_01_r",
+    "thigh_twist_01_r",
+    "thigh_twist_02_r",
+    "thigh_l",
+    "calf_l",
+    "foot_l",
+    "ball_l",
+    "calf_twist_02_l",
+    "calf_twist_01_l",
+    "thigh_twist_01_l",
+    "thigh_twist_02_l",
+    "ik_foot_root",
+    "ik_foot_l",
+    "ik_foot_r",
+    "ik_hand_root",
+    "ik_hand_gun",
+    "ik_hand_l",
+    "ik_hand_r",
+    "interaction",
+    "center_of_mass"
+   ],
+   "scale": [
+    0.009999999776482582,
+    0.009999999776482582,
+    0.009999999776482582
+   ],
+   "rot": [
+    -1.6292067073209182e-07,
+    0.0,
+    0.0
+   ],
+   "action": "Armature|Scene",
+   "frames": [
+    1.0,
+    24.0
+   ],
+   "fps": 30,
+   "animated": [
+    "ball_l",
+    "ball_r",
+    "calf_l",
+    "calf_r",
+    "calf_twist_01_l",
+    "calf_twist_01_r",
+    "calf_twist_02_l",
+    "calf_twist_02_r",
+    "center_of_mass",
+    "clavicle_l",
+    "clavicle_r",
+    "foot_l",
+    "foot_r",
+    "hand_l",
+    "hand_r",
+    "head",
+    "ik_foot_l",
+    "ik_foot_r",
+    "ik_foot_root",
+    "ik_hand_gun",
+    "ik_hand_l",
+    "ik_hand_r",
+    "ik_hand_root",
+    "index_01_l",
+    "index_01_r",
+    "index_02_l",
+    "index_02_r",
+    "index_03_l",
+    "index_03_r",
+    "index_metacarpal_l",
+    "index_metacarpal_r",
+    "interaction",
+    "location",
+    "lowerarm_l",
+    "lowerarm_r",
+    "lowerarm_twist_01_l",
+    "lowerarm_twist_01_r",
+    "lowerarm_twist_02_l",
+    "lowerarm_twist_02_r",
+    "middle_01_l",
+    "middle_01_r",
+    "middle_02_l",
+    "middle_02_r",
+    "middle_03_l",
+    "middle_03_r",
+    "middle_metacarpal_l",
+    "middle_metacarpal_r",
+    "neck_01",
+    "neck_02",
+    "pelvis",
+    "pinky_01_l",
+    "pinky_01_r",
+    "pinky_02_l",
+    "pinky_02_r",
+    "pinky_03_l",
+    "pinky_03_r",
+    "pinky_metacarpal_l",
+    "pinky_metacarpal_r",
+    "ring_01_l",
+    "ring_01_r",
+    "ring_02_l",
+    "ring_02_r",
+    "ring_03_l",
+    "ring_03_r",
+    "ring_metacarpal_l",
+    "ring_metacarpal_r",
+    "root",
+    "rotation_euler",
+    "scale",
+    "spine_01",
+    "spine_02",
+    "spine_03",
+    "spine_04",
+    "spine_05",
+    "thigh_l",
+    "thigh_r",
+    "thigh_twist_01_l",
+    "thigh_twist_01_r",
+    "thigh_twist_02_l",
+    "thigh_twist_02_r",
+    "thumb_01_l",
+    "thumb_01_r",
+    "thumb_02_l",
+    "thumb_02_r",
+    "thumb_03_l",
+    "thumb_03_r",
+    "upperarm_l",
+    "upperarm_r",
+    "upperarm_twist_01_l",
+    "upperarm_twist_01_r",
+    "upperarm_twist_02_l",
+    "upperarm_twist_02_r"
+   ],
+   "poses": {
+    "1": {
+     "root": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "pelvis": [
+      0.0,
+      -0.02,
+      0.96
+     ],
+     "spine_01": [
+      0.0,
+      -0.02,
+      1.0
+     ],
+     "spine_05": [
+      0.0,
+      -0.01,
+      1.41
+     ],
+     "neck_01": [
+      0.0,
+      0.02,
+      1.53
+     ],
+     "head": [
+      0.0,
+      -0.01,
+      1.63
+     ],
+     "clavicle_r": [
+      0.13,
+      0.18,
+      1.76
+     ],
+     "upperarm_r": [
+      -0.04,
+      0.19,
+      1.73
+     ],
+     "hand_r": [
+      -0.04,
+      0.0,
+      1.48
+     ],
+     "hand_l": [
+      0.05,
+      -0.25,
+      1.52
+     ],
+     "ik_hand_gun": [
+      -0.0,
+      -0.1,
+      1.53
+     ],
+     "ik_hand_r": [
+      -0.04,
+      0.0,
+      1.48
+     ],
+     "ik_hand_l": [
+      0.05,
+      -0.25,
+      1.52
+     ],
+     "thigh_l": [
+      0.1,
+      -0.03,
+      0.94
+     ],
+     "foot_l": [
+      0.14,
+      0.01,
+      0.08
+     ]
+    },
+    "12": {
+     "root": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "pelvis": [
+      0.0,
+      -0.02,
+      0.96
+     ],
+     "spine_01": [
+      0.0,
+      -0.02,
+      1.0
+     ],
+     "spine_05": [
+      0.0,
+      -0.01,
+      1.41
+     ],
+     "neck_01": [
+      0.0,
+      0.02,
+      1.53
+     ],
+     "head": [
+      0.0,
+      -0.01,
+      1.63
+     ],
+     "clavicle_r": [
+      0.13,
+      0.18,
+      1.76
+     ],
+     "upperarm_r": [
+      -0.04,
+      0.19,
+      1.73
+     ],
+     "hand_r": [
+      -0.04,
+      0.0,
+      1.48
+     ],
+     "hand_l": [
+      0.05,
+      -0.25,
+      1.52
+     ],
+     "ik_hand_gun": [
+      0.0,
+      -0.1,
+      1.53
+     ],
+     "ik_hand_r": [
+      -0.04,
+      0.0,
+      1.48
+     ],
+     "ik_hand_l": [
+      0.05,
+      -0.25,
+      1.52
+     ],
+     "thigh_l": [
+      0.1,
+      -0.03,
+      0.94
+     ],
+     "foot_l": [
+      0.14,
+      0.01,
+      0.08
+     ]
+    }
+   }
+  }
+ },
+ "A_FP_AssaultRifle_Holster.fbx": {
+  "objects": [
+   [
+    "Armature",
+    "ARMATURE"
+   ]
+  ],
+  "meshes": [],
+  "Armature": {
+   "n_bones": 89,
+   "bones": [
+    "root",
+    "pelvis",
+    "spine_01",
+    "spine_02",
+    "spine_03",
+    "spine_04",
+    "spine_05",
+    "neck_01",
+    "neck_02",
+    "head",
+    "clavicle_l",
+    "upperarm_l",
+    "lowerarm_l",
+    "lowerarm_twist_02_l",
+    "lowerarm_twist_01_l",
+    "hand_l",
+    "index_metacarpal_l",
+    "index_01_l",
+    "index_02_l",
+    "index_03_l",
+    "middle_metacarpal_l",
+    "middle_01_l",
+    "middle_02_l",
+    "middle_03_l",
+    "thumb_01_l",
+    "thumb_02_l",
+    "thumb_03_l",
+    "pinky_metacarpal_l",
+    "pinky_01_l",
+    "pinky_02_l",
+    "pinky_03_l",
+    "ring_metacarpal_l",
+    "ring_01_l",
+    "ring_02_l",
+    "ring_03_l",
+    "upperarm_twist_01_l",
+    "upperarm_twist_02_l",
+    "clavicle_r",
+    "upperarm_r",
+    "lowerarm_r",
+    "lowerarm_twist_02_r",
+    "lowerarm_twist_01_r",
+    "hand_r",
+    "pinky_metacarpal_r",
+    "pinky_01_r",
+    "pinky_02_r",
+    "pinky_03_r",
+    "ring_metacarpal_r",
+    "ring_01_r",
+    "ring_02_r",
+    "ring_03_r",
+    "middle_metacarpal_r",
+    "middle_01_r",
+    "middle_02_r",
+    "middle_03_r",
+    "index_metacarpal_r",
+    "index_01_r",
+    "index_02_r",
+    "index_03_r",
+    "thumb_01_r",
+    "thumb_02_r",
+    "thumb_03_r",
+    "upperarm_twist_01_r",
+    "upperarm_twist_02_r",
+    "thigh_r",
+    "calf_r",
+    "foot_r",
+    "ball_r",
+    "calf_twist_02_r",
+    "calf_twist_01_r",
+    "thigh_twist_01_r",
+    "thigh_twist_02_r",
+    "thigh_l",
+    "calf_l",
+    "foot_l",
+    "ball_l",
+    "calf_twist_02_l",
+    "calf_twist_01_l",
+    "thigh_twist_01_l",
+    "thigh_twist_02_l",
+    "ik_foot_root",
+    "ik_foot_l",
+    "ik_foot_r",
+    "ik_hand_root",
+    "ik_hand_gun",
+    "ik_hand_l",
+    "ik_hand_r",
+    "interaction",
+    "center_of_mass"
+   ],
+   "scale": [
+    0.009999999776482582,
+    0.009999999776482582,
+    0.009999999776482582
+   ],
+   "rot": [
+    -1.6292067073209182e-07,
+    0.0,
+    0.0
+   ],
+   "action": "Armature|Scene",
+   "frames": [
+    1.0,
+    22.0
+   ],
+   "fps": 30,
+   "animated": [
+    "ball_l",
+    "ball_r",
+    "calf_l",
+    "calf_r",
+    "calf_twist_01_l",
+    "calf_twist_01_r",
+    "calf_twist_02_l",
+    "calf_twist_02_r",
+    "center_of_mass",
+    "clavicle_l",
+    "clavicle_r",
+    "foot_l",
+    "foot_r",
+    "hand_l",
+    "hand_r",
+    "head",
+    "ik_foot_l",
+    "ik_foot_r",
+    "ik_foot_root",
+    "ik_hand_gun",
+    "ik_hand_l",
+    "ik_hand_r",
+    "ik_hand_root",
+    "index_01_l",
+    "index_01_r",
+    "index_02_l",
+    "index_02_r",
+    "index_03_l",
+    "index_03_r",
+    "index_metacarpal_l",
+    "index_metacarpal_r",
+    "interaction",
+    "location",
+    "lowerarm_l",
+    "lowerarm_r",
+    "lowerarm_twist_01_l",
+    "lowerarm_twist_01_r",
+    "lowerarm_twist_02_l",
+    "lowerarm_twist_02_r",
+    "middle_01_l",
+    "middle_01_r",
+    "middle_02_l",
+    "middle_02_r",
+    "middle_03_l",
+    "middle_03_r",
+    "middle_metacarpal_l",
+    "middle_metacarpal_r",
+    "neck_01",
+    "neck_02",
+    "pelvis",
+    "pinky_01_l",
+    "pinky_01_r",
+    "pinky_02_l",
+    "pinky_02_r",
+    "pinky_03_l",
+    "pinky_03_r",
+    "pinky_metacarpal_l",
+    "pinky_metacarpal_r",
+    "ring_01_l",
+    "ring_01_r",
+    "ring_02_l",
+    "ring_02_r",
+    "ring_03_l",
+    "ring_03_r",
+    "ring_metacarpal_l",
+    "ring_metacarpal_r",
+    "root",
+    "rotation_euler",
+    "scale",
+    "spine_01",
+    "spine_02",
+    "spine_03",
+    "spine_04",
+    "spine_05",
+    "thigh_l",
+    "thigh_r",
+    "thigh_twist_01_l",
+    "thigh_twist_01_r",
+    "thigh_twist_02_l",
+    "thigh_twist_02_r",
+    "thumb_01_l",
+    "thumb_01_r",
+    "thumb_02_l",
+    "thumb_02_r",
+    "thumb_03_l",
+    "thumb_03_r",
+    "upperarm_l",
+    "upperarm_r",
+    "upperarm_twist_01_l",
+    "upperarm_twist_01_r",
+    "upperarm_twist_02_l",
+    "upperarm_twist_02_r"
+   ],
+   "poses": {
+    "1": {
+     "root": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "pelvis": [
+      0.0,
+      -0.02,
+      0.96
+     ],
+     "spine_01": [
+      0.0,
+      -0.02,
+      1.0
+     ],
+     "spine_05": [
+      0.0,
+      -0.01,
+      1.41
+     ],
+     "neck_01": [
+      0.0,
+      0.02,
+      1.53
+     ],
+     "head": [
+      0.0,
+      -0.01,
+      1.63
+     ],
+     "clavicle_r": [
+      0.13,
+      0.18,
+      1.76
+     ],
+     "upperarm_r": [
+      -0.04,
+      0.19,
+      1.73
+     ],
+     "hand_r": [
+      -0.1,
+      -0.04,
+      1.48
+     ],
+     "hand_l": [
+      -0.01,
+      -0.3,
+      1.52
+     ],
+     "ik_hand_gun": [
+      -0.06,
+      -0.15,
+      1.53
+     ],
+     "ik_hand_r": [
+      -0.1,
+      -0.04,
+      1.48
+     ],
+     "ik_hand_l": [
+      -0.01,
+      -0.3,
+      1.52
+     ],
+     "thigh_l": [
+      0.1,
+      -0.03,
+      0.94
+     ],
+     "foot_l": [
+      0.14,
+      0.01,
+      0.08
+     ]
+    },
+    "11": {
+     "root": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "pelvis": [
+      0.0,
+      -0.02,
+      0.96
+     ],
+     "spine_01": [
+      0.0,
+      -0.02,
+      1.0
+     ],
+     "spine_05": [
+      0.0,
+      -0.01,
+      1.41
+     ],
+     "neck_01": [
+      0.0,
+      0.02,
+      1.53
+     ],
+     "head": [
+      0.0,
+      -0.01,
+      1.63
+     ],
+     "clavicle_r": [
+      0.1,
+      0.19,
+      1.78
+     ],
+     "upperarm_r": [
+      -0.08,
+      0.2,
+      1.76
+     ],
+     "hand_r": [
+      -0.14,
+      -0.0,
+      1.45
+     ],
+     "hand_l": [
+      0.09,
+      -0.09,
+      1.33
+     ],
+     "ik_hand_gun": [
+      -0.02,
+      -0.04,
+      1.42
+     ],
+     "ik_hand_r": [
+      -0.14,
+      -0.0,
+      1.45
+     ],
+     "ik_hand_l": [
+      0.09,
+      -0.09,
+      1.33
+     ],
+     "thigh_l": [
+      0.1,
+      -0.03,
+      0.94
+     ],
+     "foot_l": [
+      0.14,
+      0.01,
+      0.08
+     ]
+    }
+   }
+  }
+ },
+ "A_FP_AssaultRifle_Idle_Loop.fbx": {
+  "objects": [
+   [
+    "Armature",
+    "ARMATURE"
+   ]
+  ],
+  "meshes": [],
+  "Armature": {
+   "n_bones": 89,
+   "bones": [
+    "root",
+    "pelvis",
+    "spine_01",
+    "spine_02",
+    "spine_03",
+    "spine_04",
+    "spine_05",
+    "neck_01",
+    "neck_02",
+    "head",
+    "clavicle_l",
+    "upperarm_l",
+    "lowerarm_l",
+    "lowerarm_twist_02_l",
+    "lowerarm_twist_01_l",
+    "hand_l",
+    "index_metacarpal_l",
+    "index_01_l",
+    "index_02_l",
+    "index_03_l",
+    "middle_metacarpal_l",
+    "middle_01_l",
+    "middle_02_l",
+    "middle_03_l",
+    "thumb_01_l",
+    "thumb_02_l",
+    "thumb_03_l",
+    "pinky_metacarpal_l",
+    "pinky_01_l",
+    "pinky_02_l",
+    "pinky_03_l",
+    "ring_metacarpal_l",
+    "ring_01_l",
+    "ring_02_l",
+    "ring_03_l",
+    "upperarm_twist_01_l",
+    "upperarm_twist_02_l",
+    "clavicle_r",
+    "upperarm_r",
+    "lowerarm_r",
+    "lowerarm_twist_02_r",
+    "lowerarm_twist_01_r",
+    "hand_r",
+    "pinky_metacarpal_r",
+    "pinky_01_r",
+    "pinky_02_r",
+    "pinky_03_r",
+    "ring_metacarpal_r",
+    "ring_01_r",
+    "ring_02_r",
+    "ring_03_r",
+    "middle_metacarpal_r",
+    "middle_01_r",
+    "middle_02_r",
+    "middle_03_r",
+    "index_metacarpal_r",
+    "index_01_r",
+    "index_02_r",
+    "index_03_r",
+    "thumb_01_r",
+    "thumb_02_r",
+    "thumb_03_r",
+    "upperarm_twist_01_r",
+    "upperarm_twist_02_r",
+    "thigh_r",
+    "calf_r",
+    "foot_r",
+    "ball_r",
+    "calf_twist_02_r",
+    "calf_twist_01_r",
+    "thigh_twist_01_r",
+    "thigh_twist_02_r",
+    "thigh_l",
+    "calf_l",
+    "foot_l",
+    "ball_l",
+    "calf_twist_02_l",
+    "calf_twist_01_l",
+    "thigh_twist_01_l",
+    "thigh_twist_02_l",
+    "ik_foot_root",
+    "ik_foot_l",
+    "ik_foot_r",
+    "ik_hand_root",
+    "ik_hand_gun",
+    "ik_hand_l",
+    "ik_hand_r",
+    "interaction",
+    "center_of_mass"
+   ],
+   "scale": [
+    0.009999999776482582,
+    0.009999999776482582,
+    0.009999999776482582
+   ],
+   "rot": [
+    -1.6292067073209182e-07,
+    0.0,
+    0.0
+   ],
+   "action": "Armature|Scene",
+   "frames": [
+    1.0,
+    61.0
+   ],
+   "fps": 30,
+   "animated": [
+    "ball_l",
+    "ball_r",
+    "calf_l",
+    "calf_r",
+    "calf_twist_01_l",
+    "calf_twist_01_r",
+    "calf_twist_02_l",
+    "calf_twist_02_r",
+    "center_of_mass",
+    "clavicle_l",
+    "clavicle_r",
+    "foot_l",
+    "foot_r",
+    "hand_l",
+    "hand_r",
+    "head",
+    "ik_foot_l",
+    "ik_foot_r",
+    "ik_foot_root",
+    "ik_hand_gun",
+    "ik_hand_l",
+    "ik_hand_r",
+    "ik_hand_root",
+    "index_01_l",
+    "index_01_r",
+    "index_02_l",
+    "index_02_r",
+    "index_03_l",
+    "index_03_r",
+    "index_metacarpal_l",
+    "index_metacarpal_r",
+    "interaction",
+    "location",
+    "lowerarm_l",
+    "lowerarm_r",
+    "lowerarm_twist_01_l",
+    "lowerarm_twist_01_r",
+    "lowerarm_twist_02_l",
+    "lowerarm_twist_02_r",
+    "middle_01_l",
+    "middle_01_r",
+    "middle_02_l",
+    "middle_02_r",
+    "middle_03_l",
+    "middle_03_r",
+    "middle_metacarpal_l",
+    "middle_metacarpal_r",
+    "neck_01",
+    "neck_02",
+    "pelvis",
+    "pinky_01_l",
+    "pinky_01_r",
+    "pinky_02_l",
+    "pinky_02_r",
+    "pinky_03_l",
+    "pinky_03_r",
+    "pinky_metacarpal_l",
+    "pinky_metacarpal_r",
+    "ring_01_l",
+    "ring_01_r",
+    "ring_02_l",
+    "ring_02_r",
+    "ring_03_l",
+    "ring_03_r",
+    "ring_metacarpal_l",
+    "ring_metacarpal_r",
+    "root",
+    "rotation_euler",
+    "scale",
+    "spine_01",
+    "spine_02",
+    "spine_03",
+    "spine_04",
+    "spine_05",
+    "thigh_l",
+    "thigh_r",
+    "thigh_twist_01_l",
+    "thigh_twist_01_r",
+    "thigh_twist_02_l",
+    "thigh_twist_02_r",
+    "thumb_01_l",
+    "thumb_01_r",
+    "thumb_02_l",
+    "thumb_02_r",
+    "thumb_03_l",
+    "thumb_03_r",
+    "upperarm_l",
+    "upperarm_r",
+    "upperarm_twist_01_l",
+    "upperarm_twist_01_r",
+    "upperarm_twist_02_l",
+    "upperarm_twist_02_r"
+   ],
+   "poses": {
+    "1": {
+     "root": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "pelvis": [
+      0.0,
+      -0.02,
+      0.96
+     ],
+     "spine_01": [
+      0.0,
+      -0.02,
+      1.0
+     ],
+     "spine_05": [
+      0.0,
+      -0.01,
+      1.41
+     ],
+     "neck_01": [
+      0.0,
+      0.02,
+      1.53
+     ],
+     "head": [
+      0.0,
+      -0.01,
+      1.63
+     ],
+     "clavicle_r": [
+      0.13,
+      0.18,
+      1.76
+     ],
+     "upperarm_r": [
+      -0.04,
+      0.19,
+      1.73
+     ],
+     "hand_r": [
+      -0.1,
+      -0.04,
+      1.48
+     ],
+     "hand_l": [
+      -0.01,
+      -0.3,
+      1.52
+     ],
+     "ik_hand_gun": [
+      -0.06,
+      -0.15,
+      1.53
+     ],
+     "ik_hand_r": [
+      -0.1,
+      -0.04,
+      1.48
+     ],
+     "ik_hand_l": [
+      -0.01,
+      -0.3,
+      1.52
+     ],
+     "thigh_l": [
+      0.1,
+      -0.03,
+      0.94
+     ],
+     "foot_l": [
+      0.14,
+      0.01,
+      0.08
+     ]
+    },
+    "31": {
+     "root": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "pelvis": [
+      0.0,
+      -0.02,
+      0.96
+     ],
+     "spine_01": [
+      0.0,
+      -0.02,
+      1.0
+     ],
+     "spine_05": [
+      0.0,
+      -0.01,
+      1.41
+     ],
+     "neck_01": [
+      0.0,
+      0.02,
+      1.53
+     ],
+     "head": [
+      0.0,
+      -0.01,
+      1.63
+     ],
+     "clavicle_r": [
+      0.13,
+      0.18,
+      1.76
+     ],
+     "upperarm_r": [
+      -0.04,
+      0.19,
+      1.73
+     ],
+     "hand_r": [
+      -0.1,
+      -0.04,
+      1.48
+     ],
+     "hand_l": [
+      -0.01,
+      -0.3,
+      1.52
+     ],
+     "ik_hand_gun": [
+      -0.06,
+      -0.15,
+      1.52
+     ],
+     "ik_hand_r": [
+      -0.1,
+      -0.04,
+      1.48
+     ],
+     "ik_hand_l": [
+      -0.01,
+      -0.3,
+      1.52
+     ],
+     "thigh_l": [
+      0.1,
+      -0.03,
+      0.94
+     ],
+     "foot_l": [
+      0.14,
+      0.01,
+      0.08
+     ]
+    }
+   }
+  }
+ },
+ "A_FP_AssaultRifle_Idle_Loop_Aimed.fbx": {
+  "objects": [
+   [
+    "Armature",
+    "ARMATURE"
+   ]
+  ],
+  "meshes": [],
+  "Armature": {
+   "n_bones": 89,
+   "bones": [
+    "root",
+    "pelvis",
+    "spine_01",
+    "spine_02",
+    "spine_03",
+    "spine_04",
+    "spine_05",
+    "neck_01",
+    "neck_02",
+    "head",
+    "clavicle_l",
+    "upperarm_l",
+    "lowerarm_l",
+    "lowerarm_twist_02_l",
+    "lowerarm_twist_01_l",
+    "hand_l",
+    "index_metacarpal_l",
+    "index_01_l",
+    "index_02_l",
+    "index_03_l",
+    "middle_metacarpal_l",
+    "middle_01_l",
+    "middle_02_l",
+    "middle_03_l",
+    "thumb_01_l",
+    "thumb_02_l",
+    "thumb_03_l",
+    "pinky_metacarpal_l",
+    "pinky_01_l",
+    "pinky_02_l",
+    "pinky_03_l",
+    "ring_metacarpal_l",
+    "ring_01_l",
+    "ring_02_l",
+    "ring_03_l",
+    "upperarm_twist_01_l",
+    "upperarm_twist_02_l",
+    "clavicle_r",
+    "upperarm_r",
+    "lowerarm_r",
+    "lowerarm_twist_02_r",
+    "lowerarm_twist_01_r",
+    "hand_r",
+    "pinky_metacarpal_r",
+    "pinky_01_r",
+    "pinky_02_r",
+    "pinky_03_r",
+    "ring_metacarpal_r",
+    "ring_01_r",
+    "ring_02_r",
+    "ring_03_r",
+    "middle_metacarpal_r",
+    "middle_01_r",
+    "middle_02_r",
+    "middle_03_r",
+    "index_metacarpal_r",
+    "index_01_r",
+    "index_02_r",
+    "index_03_r",
+    "thumb_01_r",
+    "thumb_02_r",
+    "thumb_03_r",
+    "upperarm_twist_01_r",
+    "upperarm_twist_02_r",
+    "thigh_r",
+    "calf_r",
+    "foot_r",
+    "ball_r",
+    "calf_twist_02_r",
+    "calf_twist_01_r",
+    "thigh_twist_01_r",
+    "thigh_twist_02_r",
+    "thigh_l",
+    "calf_l",
+    "foot_l",
+    "ball_l",
+    "calf_twist_02_l",
+    "calf_twist_01_l",
+    "thigh_twist_01_l",
+    "thigh_twist_02_l",
+    "ik_foot_root",
+    "ik_foot_l",
+    "ik_foot_r",
+    "ik_hand_root",
+    "ik_hand_gun",
+    "ik_hand_l",
+    "ik_hand_r",
+    "interaction",
+    "center_of_mass"
+   ],
+   "scale": [
+    0.009999999776482582,
+    0.009999999776482582,
+    0.009999999776482582
+   ],
+   "rot": [
+    -1.6292067073209182e-07,
+    0.0,
+    0.0
+   ],
+   "action": "Armature|Scene",
+   "frames": [
+    1.0,
+    61.0
+   ],
+   "fps": 30,
+   "animated": [
+    "ball_l",
+    "ball_r",
+    "calf_l",
+    "calf_r",
+    "calf_twist_01_l",
+    "calf_twist_01_r",
+    "calf_twist_02_l",
+    "calf_twist_02_r",
+    "center_of_mass",
+    "clavicle_l",
+    "clavicle_r",
+    "foot_l",
+    "foot_r",
+    "hand_l",
+    "hand_r",
+    "head",
+    "ik_foot_l",
+    "ik_foot_r",
+    "ik_foot_root",
+    "ik_hand_gun",
+    "ik_hand_l",
+    "ik_hand_r",
+    "ik_hand_root",
+    "index_01_l",
+    "index_01_r",
+    "index_02_l",
+    "index_02_r",
+    "index_03_l",
+    "index_03_r",
+    "index_metacarpal_l",
+    "index_metacarpal_r",
+    "interaction",
+    "location",
+    "lowerarm_l",
+    "lowerarm_r",
+    "lowerarm_twist_01_l",
+    "lowerarm_twist_01_r",
+    "lowerarm_twist_02_l",
+    "lowerarm_twist_02_r",
+    "middle_01_l",
+    "middle_01_r",
+    "middle_02_l",
+    "middle_02_r",
+    "middle_03_l",
+    "middle_03_r",
+    "middle_metacarpal_l",
+    "middle_metacarpal_r",
+    "neck_01",
+    "neck_02",
+    "pelvis",
+    "pinky_01_l",
+    "pinky_01_r",
+    "pinky_02_l",
+    "pinky_02_r",
+    "pinky_03_l",
+    "pinky_03_r",
+    "pinky_metacarpal_l",
+    "pinky_metacarpal_r",
+    "ring_01_l",
+    "ring_01_r",
+    "ring_02_l",
+    "ring_02_r",
+    "ring_03_l",
+    "ring_03_r",
+    "ring_metacarpal_l",
+    "ring_metacarpal_r",
+    "root",
+    "rotation_euler",
+    "scale",
+    "spine_01",
+    "spine_02",
+    "spine_03",
+    "spine_04",
+    "spine_05",
+    "thigh_l",
+    "thigh_r",
+    "thigh_twist_01_l",
+    "thigh_twist_01_r",
+    "thigh_twist_02_l",
+    "thigh_twist_02_r",
+    "thumb_01_l",
+    "thumb_01_r",
+    "thumb_02_l",
+    "thumb_02_r",
+    "thumb_03_l",
+    "thumb_03_r",
+    "upperarm_l",
+    "upperarm_r",
+    "upperarm_twist_01_l",
+    "upperarm_twist_01_r",
+    "upperarm_twist_02_l",
+    "upperarm_twist_02_r"
+   ],
+   "poses": {
+    "1": {
+     "root": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "pelvis": [
+      0.0,
+      -0.02,
+      0.96
+     ],
+     "spine_01": [
+      0.0,
+      -0.02,
+      1.0
+     ],
+     "spine_05": [
+      0.0,
+      -0.01,
+      1.41
+     ],
+     "neck_01": [
+      0.0,
+      0.02,
+      1.53
+     ],
+     "head": [
+      0.0,
+      -0.01,
+      1.63
+     ],
+     "clavicle_r": [
+      0.13,
+      0.18,
+      1.76
+     ],
+     "upperarm_r": [
+      -0.04,
+      0.19,
+      1.73
+     ],
+     "hand_r": [
+      -0.04,
+      0.0,
+      1.48
+     ],
+     "hand_l": [
+      0.05,
+      -0.25,
+      1.53
+     ],
+     "ik_hand_gun": [
+      0.0,
+      -0.1,
+      1.53
+     ],
+     "ik_hand_r": [
+      -0.04,
+      0.0,
+      1.48
+     ],
+     "ik_hand_l": [
+      0.05,
+      -0.25,
+      1.53
+     ],
+     "thigh_l": [
+      0.1,
+      -0.03,
+      0.94
+     ],
+     "foot_l": [
+      0.14,
+      0.01,
+      0.08
+     ]
+    },
+    "31": {
+     "root": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "pelvis": [
+      0.0,
+      -0.02,
+      0.96
+     ],
+     "spine_01": [
+      0.0,
+      -0.02,
+      1.0
+     ],
+     "spine_05": [
+      0.0,
+      -0.01,
+      1.41
+     ],
+     "neck_01": [
+      0.0,
+      0.02,
+      1.53
+     ],
+     "head": [
+      0.0,
+      -0.01,
+      1.63
+     ],
+     "clavicle_r": [
+      0.13,
+      0.18,
+      1.76
+     ],
+     "upperarm_r": [
+      -0.04,
+      0.19,
+      1.73
+     ],
+     "hand_r": [
+      -0.04,
+      0.0,
+      1.48
+     ],
+     "hand_l": [
+      0.05,
+      -0.25,
+      1.52
+     ],
+     "ik_hand_gun": [
+      0.0,
+      -0.1,
+      1.53
+     ],
+     "ik_hand_r": [
+      -0.04,
+      0.0,
+      1.48
+     ],
+     "ik_hand_l": [
+      0.05,
+      -0.25,
+      1.52
+     ],
+     "thigh_l": [
+      0.1,
+      -0.03,
+      0.94
+     ],
+     "foot_l": [
+      0.14,
+      0.01,
+      0.08
+     ]
+    }
+   }
+  }
+ },
+ "A_FP_AssaultRifle_Idle_Pose.fbx": {
+  "objects": [
+   [
+    "Armature",
+    "ARMATURE"
+   ]
+  ],
+  "meshes": [],
+  "Armature": {
+   "n_bones": 89,
+   "bones": [
+    "root",
+    "pelvis",
+    "spine_01",
+    "spine_02",
+    "spine_03",
+    "spine_04",
+    "spine_05",
+    "neck_01",
+    "neck_02",
+    "head",
+    "clavicle_l",
+    "upperarm_l",
+    "lowerarm_l",
+    "lowerarm_twist_02_l",
+    "lowerarm_twist_01_l",
+    "hand_l",
+    "index_metacarpal_l",
+    "index_01_l",
+    "index_02_l",
+    "index_03_l",
+    "middle_metacarpal_l",
+    "middle_01_l",
+    "middle_02_l",
+    "middle_03_l",
+    "thumb_01_l",
+    "thumb_02_l",
+    "thumb_03_l",
+    "pinky_metacarpal_l",
+    "pinky_01_l",
+    "pinky_02_l",
+    "pinky_03_l",
+    "ring_metacarpal_l",
+    "ring_01_l",
+    "ring_02_l",
+    "ring_03_l",
+    "upperarm_twist_01_l",
+    "upperarm_twist_02_l",
+    "clavicle_r",
+    "upperarm_r",
+    "lowerarm_r",
+    "lowerarm_twist_02_r",
+    "lowerarm_twist_01_r",
+    "hand_r",
+    "pinky_metacarpal_r",
+    "pinky_01_r",
+    "pinky_02_r",
+    "pinky_03_r",
+    "ring_metacarpal_r",
+    "ring_01_r",
+    "ring_02_r",
+    "ring_03_r",
+    "middle_metacarpal_r",
+    "middle_01_r",
+    "middle_02_r",
+    "middle_03_r",
+    "index_metacarpal_r",
+    "index_01_r",
+    "index_02_r",
+    "index_03_r",
+    "thumb_01_r",
+    "thumb_02_r",
+    "thumb_03_r",
+    "upperarm_twist_01_r",
+    "upperarm_twist_02_r",
+    "thigh_r",
+    "calf_r",
+    "foot_r",
+    "ball_r",
+    "calf_twist_02_r",
+    "calf_twist_01_r",
+    "thigh_twist_01_r",
+    "thigh_twist_02_r",
+    "thigh_l",
+    "calf_l",
+    "foot_l",
+    "ball_l",
+    "calf_twist_02_l",
+    "calf_twist_01_l",
+    "thigh_twist_01_l",
+    "thigh_twist_02_l",
+    "ik_foot_root",
+    "ik_foot_l",
+    "ik_foot_r",
+    "ik_hand_root",
+    "ik_hand_gun",
+    "ik_hand_l",
+    "ik_hand_r",
+    "interaction",
+    "center_of_mass"
+   ],
+   "scale": [
+    0.009999999776482582,
+    0.009999999776482582,
+    0.009999999776482582
+   ],
+   "rot": [
+    -1.6292067073209182e-07,
+    0.0,
+    0.0
+   ],
+   "action": "Armature|Scene",
+   "frames": [
+    1.0,
+    2.0
+   ],
+   "fps": 30,
+   "animated": [
+    "ball_l",
+    "ball_r",
+    "calf_l",
+    "calf_r",
+    "calf_twist_01_l",
+    "calf_twist_01_r",
+    "calf_twist_02_l",
+    "calf_twist_02_r",
+    "center_of_mass",
+    "clavicle_l",
+    "clavicle_r",
+    "foot_l",
+    "foot_r",
+    "hand_l",
+    "hand_r",
+    "head",
+    "ik_foot_l",
+    "ik_foot_r",
+    "ik_foot_root",
+    "ik_hand_gun",
+    "ik_hand_l",
+    "ik_hand_r",
+    "ik_hand_root",
+    "index_01_l",
+    "index_01_r",
+    "index_02_l",
+    "index_02_r",
+    "index_03_l",
+    "index_03_r",
+    "index_metacarpal_l",
+    "index_metacarpal_r",
+    "interaction",
+    "location",
+    "lowerarm_l",
+    "lowerarm_r",
+    "lowerarm_twist_01_l",
+    "lowerarm_twist_01_r",
+    "lowerarm_twist_02_l",
+    "lowerarm_twist_02_r",
+    "middle_01_l",
+    "middle_01_r",
+    "middle_02_l",
+    "middle_02_r",
+    "middle_03_l",
+    "middle_03_r",
+    "middle_metacarpal_l",
+    "middle_metacarpal_r",
+    "neck_01",
+    "neck_02",
+    "pelvis",
+    "pinky_01_l",
+    "pinky_01_r",
+    "pinky_02_l",
+    "pinky_02_r",
+    "pinky_03_l",
+    "pinky_03_r",
+    "pinky_metacarpal_l",
+    "pinky_metacarpal_r",
+    "ring_01_l",
+    "ring_01_r",
+    "ring_02_l",
+    "ring_02_r",
+    "ring_03_l",
+    "ring_03_r",
+    "ring_metacarpal_l",
+    "ring_metacarpal_r",
+    "root",
+    "rotation_euler",
+    "scale",
+    "spine_01",
+    "spine_02",
+    "spine_03",
+    "spine_04",
+    "spine_05",
+    "thigh_l",
+    "thigh_r",
+    "thigh_twist_01_l",
+    "thigh_twist_01_r",
+    "thigh_twist_02_l",
+    "thigh_twist_02_r",
+    "thumb_01_l",
+    "thumb_01_r",
+    "thumb_02_l",
+    "thumb_02_r",
+    "thumb_03_l",
+    "thumb_03_r",
+    "upperarm_l",
+    "upperarm_r",
+    "upperarm_twist_01_l",
+    "upperarm_twist_01_r",
+    "upperarm_twist_02_l",
+    "upperarm_twist_02_r"
+   ],
+   "poses": {
+    "1": {
+     "root": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "pelvis": [
+      0.0,
+      -0.02,
+      0.96
+     ],
+     "spine_01": [
+      0.0,
+      -0.02,
+      1.0
+     ],
+     "spine_05": [
+      0.0,
+      -0.01,
+      1.41
+     ],
+     "neck_01": [
+      0.0,
+      0.02,
+      1.53
+     ],
+     "head": [
+      0.0,
+      -0.01,
+      1.63
+     ],
+     "clavicle_r": [
+      0.13,
+      0.18,
+      1.76
+     ],
+     "upperarm_r": [
+      -0.04,
+      0.19,
+      1.73
+     ],
+     "hand_r": [
+      -0.1,
+      -0.04,
+      1.48
+     ],
+     "hand_l": [
+      -0.01,
+      -0.3,
+      1.52
+     ],
+     "ik_hand_gun": [
+      -0.06,
+      -0.15,
+      1.53
+     ],
+     "ik_hand_r": [
+      -0.1,
+      -0.04,
+      1.48
+     ],
+     "ik_hand_l": [
+      -0.01,
+      -0.3,
+      1.52
+     ],
+     "thigh_l": [
+      0.1,
+      -0.03,
+      0.94
+     ],
+     "foot_l": [
+      0.14,
+      0.01,
+      0.08
+     ]
+    }
+   }
+  }
+ },
+ "A_FP_AssaultRifle_Reload.fbx": {
+  "objects": [
+   [
+    "Armature",
+    "ARMATURE"
+   ]
+  ],
+  "meshes": [],
+  "Armature": {
+   "n_bones": 89,
+   "bones": [
+    "root",
+    "pelvis",
+    "spine_01",
+    "spine_02",
+    "spine_03",
+    "spine_04",
+    "spine_05",
+    "neck_01",
+    "neck_02",
+    "head",
+    "clavicle_l",
+    "upperarm_l",
+    "lowerarm_l",
+    "lowerarm_twist_02_l",
+    "lowerarm_twist_01_l",
+    "hand_l",
+    "index_metacarpal_l",
+    "index_01_l",
+    "index_02_l",
+    "index_03_l",
+    "middle_metacarpal_l",
+    "middle_01_l",
+    "middle_02_l",
+    "middle_03_l",
+    "thumb_01_l",
+    "thumb_02_l",
+    "thumb_03_l",
+    "pinky_metacarpal_l",
+    "pinky_01_l",
+    "pinky_02_l",
+    "pinky_03_l",
+    "ring_metacarpal_l",
+    "ring_01_l",
+    "ring_02_l",
+    "ring_03_l",
+    "upperarm_twist_01_l",
+    "upperarm_twist_02_l",
+    "clavicle_r",
+    "upperarm_r",
+    "lowerarm_r",
+    "lowerarm_twist_02_r",
+    "lowerarm_twist_01_r",
+    "hand_r",
+    "pinky_metacarpal_r",
+    "pinky_01_r",
+    "pinky_02_r",
+    "pinky_03_r",
+    "ring_metacarpal_r",
+    "ring_01_r",
+    "ring_02_r",
+    "ring_03_r",
+    "middle_metacarpal_r",
+    "middle_01_r",
+    "middle_02_r",
+    "middle_03_r",
+    "index_metacarpal_r",
+    "index_01_r",
+    "index_02_r",
+    "index_03_r",
+    "thumb_01_r",
+    "thumb_02_r",
+    "thumb_03_r",
+    "upperarm_twist_01_r",
+    "upperarm_twist_02_r",
+    "thigh_r",
+    "calf_r",
+    "foot_r",
+    "ball_r",
+    "calf_twist_02_r",
+    "calf_twist_01_r",
+    "thigh_twist_01_r",
+    "thigh_twist_02_r",
+    "thigh_l",
+    "calf_l",
+    "foot_l",
+    "ball_l",
+    "calf_twist_02_l",
+    "calf_twist_01_l",
+    "thigh_twist_01_l",
+    "thigh_twist_02_l",
+    "ik_foot_root",
+    "ik_foot_l",
+    "ik_foot_r",
+    "ik_hand_root",
+    "ik_hand_gun",
+    "ik_hand_l",
+    "ik_hand_r",
+    "interaction",
+    "center_of_mass"
+   ],
+   "scale": [
+    0.009999999776482582,
+    0.009999999776482582,
+    0.009999999776482582
+   ],
+   "rot": [
+    -1.6292067073209182e-07,
+    0.0,
+    0.0
+   ],
+   "action": "Armature|Scene",
+   "frames": [
+    1.0,
+    95.0
+   ],
+   "fps": 30,
+   "animated": [
+    "ball_l",
+    "ball_r",
+    "calf_l",
+    "calf_r",
+    "calf_twist_01_l",
+    "calf_twist_01_r",
+    "calf_twist_02_l",
+    "calf_twist_02_r",
+    "center_of_mass",
+    "clavicle_l",
+    "clavicle_r",
+    "foot_l",
+    "foot_r",
+    "hand_l",
+    "hand_r",
+    "head",
+    "ik_foot_l",
+    "ik_foot_r",
+    "ik_foot_root",
+    "ik_hand_gun",
+    "ik_hand_l",
+    "ik_hand_r",
+    "ik_hand_root",
+    "index_01_l",
+    "index_01_r",
+    "index_02_l",
+    "index_02_r",
+    "index_03_l",
+    "index_03_r",
+    "index_metacarpal_l",
+    "index_metacarpal_r",
+    "interaction",
+    "location",
+    "lowerarm_l",
+    "lowerarm_r",
+    "lowerarm_twist_01_l",
+    "lowerarm_twist_01_r",
+    "lowerarm_twist_02_l",
+    "lowerarm_twist_02_r",
+    "middle_01_l",
+    "middle_01_r",
+    "middle_02_l",
+    "middle_02_r",
+    "middle_03_l",
+    "middle_03_r",
+    "middle_metacarpal_l",
+    "middle_metacarpal_r",
+    "neck_01",
+    "neck_02",
+    "pelvis",
+    "pinky_01_l",
+    "pinky_01_r",
+    "pinky_02_l",
+    "pinky_02_r",
+    "pinky_03_l",
+    "pinky_03_r",
+    "pinky_metacarpal_l",
+    "pinky_metacarpal_r",
+    "ring_01_l",
+    "ring_01_r",
+    "ring_02_l",
+    "ring_02_r",
+    "ring_03_l",
+    "ring_03_r",
+    "ring_metacarpal_l",
+    "ring_metacarpal_r",
+    "root",
+    "rotation_euler",
+    "scale",
+    "spine_01",
+    "spine_02",
+    "spine_03",
+    "spine_04",
+    "spine_05",
+    "thigh_l",
+    "thigh_r",
+    "thigh_twist_01_l",
+    "thigh_twist_01_r",
+    "thigh_twist_02_l",
+    "thigh_twist_02_r",
+    "thumb_01_l",
+    "thumb_01_r",
+    "thumb_02_l",
+    "thumb_02_r",
+    "thumb_03_l",
+    "thumb_03_r",
+    "upperarm_l",
+    "upperarm_r",
+    "upperarm_twist_01_l",
+    "upperarm_twist_01_r",
+    "upperarm_twist_02_l",
+    "upperarm_twist_02_r"
+   ],
+   "poses": {
+    "1": {
+     "root": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "pelvis": [
+      0.0,
+      -0.02,
+      0.96
+     ],
+     "spine_01": [
+      0.0,
+      -0.02,
+      1.0
+     ],
+     "spine_05": [
+      0.0,
+      -0.01,
+      1.41
+     ],
+     "neck_01": [
+      0.0,
+      0.02,
+      1.53
+     ],
+     "head": [
+      0.0,
+      -0.01,
+      1.63
+     ],
+     "clavicle_r": [
+      0.13,
+      0.18,
+      1.76
+     ],
+     "upperarm_r": [
+      -0.04,
+      0.19,
+      1.73
+     ],
+     "hand_r": [
+      -0.1,
+      -0.04,
+      1.48
+     ],
+     "hand_l": [
+      -0.01,
+      -0.3,
+      1.52
+     ],
+     "ik_hand_gun": [
+      -0.06,
+      -0.15,
+      1.53
+     ],
+     "ik_hand_r": [
+      -0.1,
+      -0.04,
+      1.48
+     ],
+     "ik_hand_l": [
+      -0.01,
+      -0.3,
+      1.52
+     ],
+     "thigh_l": [
+      0.1,
+      -0.03,
+      0.94
+     ],
+     "foot_l": [
+      0.14,
+      0.01,
+      0.08
+     ]
+    },
+    "48": {
+     "root": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "pelvis": [
+      0.0,
+      -0.02,
+      0.96
+     ],
+     "spine_01": [
+      0.0,
+      -0.02,
+      1.0
+     ],
+     "spine_05": [
+      0.0,
+      -0.01,
+      1.41
+     ],
+     "neck_01": [
+      0.0,
+      0.02,
+      1.53
+     ],
+     "head": [
+      0.0,
+      -0.01,
+      1.63
+     ],
+     "clavicle_r": [
+      0.13,
+      0.18,
+      1.76
+     ],
+     "upperarm_r": [
+      -0.04,
+      0.19,
+      1.73
+     ],
+     "hand_r": [
+      -0.09,
+      -0.13,
+      1.44
+     ],
+     "hand_l": [
+      0.14,
+      -0.27,
+      1.36
+     ],
+     "ik_hand_gun": [
+      -0.09,
+      -0.2,
+      1.54
+     ],
+     "ik_hand_r": [
+      -0.09,
+      -0.13,
+      1.44
+     ],
+     "ik_hand_l": [
+      0.14,
+      -0.27,
+      1.36
+     ],
+     "thigh_l": [
+      0.1,
+      -0.03,
+      0.94
+     ],
+     "foot_l": [
+      0.14,
+      0.01,
+      0.08
+     ]
+    }
+   }
+  }
+ },
+ "A_FP_AssaultRifle_Run_Loop.fbx": {
+  "objects": [
+   [
+    "Armature",
+    "ARMATURE"
+   ]
+  ],
+  "meshes": [],
+  "Armature": {
+   "n_bones": 89,
+   "bones": [
+    "root",
+    "pelvis",
+    "spine_01",
+    "spine_02",
+    "spine_03",
+    "spine_04",
+    "spine_05",
+    "neck_01",
+    "neck_02",
+    "head",
+    "clavicle_l",
+    "upperarm_l",
+    "lowerarm_l",
+    "lowerarm_twist_02_l",
+    "lowerarm_twist_01_l",
+    "hand_l",
+    "index_metacarpal_l",
+    "index_01_l",
+    "index_02_l",
+    "index_03_l",
+    "middle_metacarpal_l",
+    "middle_01_l",
+    "middle_02_l",
+    "middle_03_l",
+    "thumb_01_l",
+    "thumb_02_l",
+    "thumb_03_l",
+    "pinky_metacarpal_l",
+    "pinky_01_l",
+    "pinky_02_l",
+    "pinky_03_l",
+    "ring_metacarpal_l",
+    "ring_01_l",
+    "ring_02_l",
+    "ring_03_l",
+    "upperarm_twist_01_l",
+    "upperarm_twist_02_l",
+    "clavicle_r",
+    "upperarm_r",
+    "lowerarm_r",
+    "lowerarm_twist_02_r",
+    "lowerarm_twist_01_r",
+    "hand_r",
+    "pinky_metacarpal_r",
+    "pinky_01_r",
+    "pinky_02_r",
+    "pinky_03_r",
+    "ring_metacarpal_r",
+    "ring_01_r",
+    "ring_02_r",
+    "ring_03_r",
+    "middle_metacarpal_r",
+    "middle_01_r",
+    "middle_02_r",
+    "middle_03_r",
+    "index_metacarpal_r",
+    "index_01_r",
+    "index_02_r",
+    "index_03_r",
+    "thumb_01_r",
+    "thumb_02_r",
+    "thumb_03_r",
+    "upperarm_twist_01_r",
+    "upperarm_twist_02_r",
+    "thigh_r",
+    "calf_r",
+    "foot_r",
+    "ball_r",
+    "calf_twist_02_r",
+    "calf_twist_01_r",
+    "thigh_twist_01_r",
+    "thigh_twist_02_r",
+    "thigh_l",
+    "calf_l",
+    "foot_l",
+    "ball_l",
+    "calf_twist_02_l",
+    "calf_twist_01_l",
+    "thigh_twist_01_l",
+    "thigh_twist_02_l",
+    "ik_foot_root",
+    "ik_foot_l",
+    "ik_foot_r",
+    "ik_hand_root",
+    "ik_hand_gun",
+    "ik_hand_l",
+    "ik_hand_r",
+    "interaction",
+    "center_of_mass"
+   ],
+   "scale": [
+    0.009999999776482582,
+    0.009999999776482582,
+    0.009999999776482582
+   ],
+   "rot": [
+    -1.6292067073209182e-07,
+    0.0,
+    0.0
+   ],
+   "action": "Armature|Scene",
+   "frames": [
+    1.0,
+    21.0
+   ],
+   "fps": 30,
+   "animated": [
+    "ball_l",
+    "ball_r",
+    "calf_l",
+    "calf_r",
+    "calf_twist_01_l",
+    "calf_twist_01_r",
+    "calf_twist_02_l",
+    "calf_twist_02_r",
+    "center_of_mass",
+    "clavicle_l",
+    "clavicle_r",
+    "foot_l",
+    "foot_r",
+    "hand_l",
+    "hand_r",
+    "head",
+    "ik_foot_l",
+    "ik_foot_r",
+    "ik_foot_root",
+    "ik_hand_gun",
+    "ik_hand_l",
+    "ik_hand_r",
+    "ik_hand_root",
+    "index_01_l",
+    "index_01_r",
+    "index_02_l",
+    "index_02_r",
+    "index_03_l",
+    "index_03_r",
+    "index_metacarpal_l",
+    "index_metacarpal_r",
+    "interaction",
+    "location",
+    "lowerarm_l",
+    "lowerarm_r",
+    "lowerarm_twist_01_l",
+    "lowerarm_twist_01_r",
+    "lowerarm_twist_02_l",
+    "lowerarm_twist_02_r",
+    "middle_01_l",
+    "middle_01_r",
+    "middle_02_l",
+    "middle_02_r",
+    "middle_03_l",
+    "middle_03_r",
+    "middle_metacarpal_l",
+    "middle_metacarpal_r",
+    "neck_01",
+    "neck_02",
+    "pelvis",
+    "pinky_01_l",
+    "pinky_01_r",
+    "pinky_02_l",
+    "pinky_02_r",
+    "pinky_03_l",
+    "pinky_03_r",
+    "pinky_metacarpal_l",
+    "pinky_metacarpal_r",
+    "ring_01_l",
+    "ring_01_r",
+    "ring_02_l",
+    "ring_02_r",
+    "ring_03_l",
+    "ring_03_r",
+    "ring_metacarpal_l",
+    "ring_metacarpal_r",
+    "root",
+    "rotation_euler",
+    "scale",
+    "spine_01",
+    "spine_02",
+    "spine_03",
+    "spine_04",
+    "spine_05",
+    "thigh_l",
+    "thigh_r",
+    "thigh_twist_01_l",
+    "thigh_twist_01_r",
+    "thigh_twist_02_l",
+    "thigh_twist_02_r",
+    "thumb_01_l",
+    "thumb_01_r",
+    "thumb_02_l",
+    "thumb_02_r",
+    "thumb_03_l",
+    "thumb_03_r",
+    "upperarm_l",
+    "upperarm_r",
+    "upperarm_twist_01_l",
+    "upperarm_twist_01_r",
+    "upperarm_twist_02_l",
+    "upperarm_twist_02_r"
+   ],
+   "poses": {
+    "1": {
+     "root": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "pelvis": [
+      0.0,
+      -0.02,
+      0.96
+     ],
+     "spine_01": [
+      0.0,
+      -0.02,
+      1.0
+     ],
+     "spine_05": [
+      0.0,
+      -0.01,
+      1.41
+     ],
+     "neck_01": [
+      0.0,
+      0.02,
+      1.53
+     ],
+     "head": [
+      0.0,
+      -0.01,
+      1.63
+     ],
+     "clavicle_r": [
+      0.13,
+      0.18,
+      1.76
+     ],
+     "upperarm_r": [
+      -0.04,
+      0.19,
+      1.73
+     ],
+     "hand_r": [
+      -0.09,
+      -0.1,
+      1.49
+     ],
+     "hand_l": [
+      0.09,
+      -0.27,
+      1.4
+     ],
+     "ik_hand_gun": [
+      0.0,
+      -0.18,
+      1.48
+     ],
+     "ik_hand_r": [
+      -0.09,
+      -0.1,
+      1.49
+     ],
+     "ik_hand_l": [
+      0.09,
+      -0.27,
+      1.4
+     ],
+     "thigh_l": [
+      0.1,
+      -0.03,
+      0.94
+     ],
+     "foot_l": [
+      0.14,
+      0.01,
+      0.08
+     ]
+    },
+    "11": {
+     "root": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "pelvis": [
+      0.0,
+      -0.02,
+      0.96
+     ],
+     "spine_01": [
+      0.0,
+      -0.02,
+      1.0
+     ],
+     "spine_05": [
+      0.0,
+      -0.01,
+      1.41
+     ],
+     "neck_01": [
+      0.0,
+      0.02,
+      1.53
+     ],
+     "head": [
+      0.0,
+      -0.01,
+      1.63
+     ],
+     "clavicle_r": [
+      0.13,
+      0.18,
+      1.76
+     ],
+     "upperarm_r": [
+      -0.04,
+      0.19,
+      1.73
+     ],
+     "hand_r": [
+      -0.14,
+      -0.08,
+      1.5
+     ],
+     "hand_l": [
+      0.0,
+      -0.29,
+      1.4
+     ],
+     "ik_hand_gun": [
+      -0.06,
+      -0.18,
+      1.48
+     ],
+     "ik_hand_r": [
+      -0.14,
+      -0.08,
+      1.5
+     ],
+     "ik_hand_l": [
+      0.0,
+      -0.29,
+      1.4
+     ],
+     "thigh_l": [
+      0.1,
+      -0.03,
+      0.94
+     ],
+     "foot_l": [
+      0.14,
+      0.01,
+      0.08
+     ]
+    }
+   }
+  }
+ },
+ "A_FP_AssaultRifle_Walk_F_Loop.fbx": {
+  "objects": [
+   [
+    "Armature",
+    "ARMATURE"
+   ]
+  ],
+  "meshes": [],
+  "Armature": {
+   "n_bones": 89,
+   "bones": [
+    "root",
+    "pelvis",
+    "spine_01",
+    "spine_02",
+    "spine_03",
+    "spine_04",
+    "spine_05",
+    "neck_01",
+    "neck_02",
+    "head",
+    "clavicle_l",
+    "upperarm_l",
+    "lowerarm_l",
+    "lowerarm_twist_02_l",
+    "lowerarm_twist_01_l",
+    "hand_l",
+    "index_metacarpal_l",
+    "index_01_l",
+    "index_02_l",
+    "index_03_l",
+    "middle_metacarpal_l",
+    "middle_01_l",
+    "middle_02_l",
+    "middle_03_l",
+    "thumb_01_l",
+    "thumb_02_l",
+    "thumb_03_l",
+    "pinky_metacarpal_l",
+    "pinky_01_l",
+    "pinky_02_l",
+    "pinky_03_l",
+    "ring_metacarpal_l",
+    "ring_01_l",
+    "ring_02_l",
+    "ring_03_l",
+    "upperarm_twist_01_l",
+    "upperarm_twist_02_l",
+    "clavicle_r",
+    "upperarm_r",
+    "lowerarm_r",
+    "lowerarm_twist_02_r",
+    "lowerarm_twist_01_r",
+    "hand_r",
+    "pinky_metacarpal_r",
+    "pinky_01_r",
+    "pinky_02_r",
+    "pinky_03_r",
+    "ring_metacarpal_r",
+    "ring_01_r",
+    "ring_02_r",
+    "ring_03_r",
+    "middle_metacarpal_r",
+    "middle_01_r",
+    "middle_02_r",
+    "middle_03_r",
+    "index_metacarpal_r",
+    "index_01_r",
+    "index_02_r",
+    "index_03_r",
+    "thumb_01_r",
+    "thumb_02_r",
+    "thumb_03_r",
+    "upperarm_twist_01_r",
+    "upperarm_twist_02_r",
+    "thigh_r",
+    "calf_r",
+    "foot_r",
+    "ball_r",
+    "calf_twist_02_r",
+    "calf_twist_01_r",
+    "thigh_twist_01_r",
+    "thigh_twist_02_r",
+    "thigh_l",
+    "calf_l",
+    "foot_l",
+    "ball_l",
+    "calf_twist_02_l",
+    "calf_twist_01_l",
+    "thigh_twist_01_l",
+    "thigh_twist_02_l",
+    "ik_foot_root",
+    "ik_foot_l",
+    "ik_foot_r",
+    "ik_hand_root",
+    "ik_hand_gun",
+    "ik_hand_l",
+    "ik_hand_r",
+    "interaction",
+    "center_of_mass"
+   ],
+   "scale": [
+    0.009999999776482582,
+    0.009999999776482582,
+    0.009999999776482582
+   ],
+   "rot": [
+    -1.6292067073209182e-07,
+    0.0,
+    0.0
+   ],
+   "action": "Armature|Scene",
+   "frames": [
+    1.0,
+    25.0
+   ],
+   "fps": 30,
+   "animated": [
+    "ball_l",
+    "ball_r",
+    "calf_l",
+    "calf_r",
+    "calf_twist_01_l",
+    "calf_twist_01_r",
+    "calf_twist_02_l",
+    "calf_twist_02_r",
+    "center_of_mass",
+    "clavicle_l",
+    "clavicle_r",
+    "foot_l",
+    "foot_r",
+    "hand_l",
+    "hand_r",
+    "head",
+    "ik_foot_l",
+    "ik_foot_r",
+    "ik_foot_root",
+    "ik_hand_gun",
+    "ik_hand_l",
+    "ik_hand_r",
+    "ik_hand_root",
+    "index_01_l",
+    "index_01_r",
+    "index_02_l",
+    "index_02_r",
+    "index_03_l",
+    "index_03_r",
+    "index_metacarpal_l",
+    "index_metacarpal_r",
+    "interaction",
+    "location",
+    "lowerarm_l",
+    "lowerarm_r",
+    "lowerarm_twist_01_l",
+    "lowerarm_twist_01_r",
+    "lowerarm_twist_02_l",
+    "lowerarm_twist_02_r",
+    "middle_01_l",
+    "middle_01_r",
+    "middle_02_l",
+    "middle_02_r",
+    "middle_03_l",
+    "middle_03_r",
+    "middle_metacarpal_l",
+    "middle_metacarpal_r",
+    "neck_01",
+    "neck_02",
+    "pelvis",
+    "pinky_01_l",
+    "pinky_01_r",
+    "pinky_02_l",
+    "pinky_02_r",
+    "pinky_03_l",
+    "pinky_03_r",
+    "pinky_metacarpal_l",
+    "pinky_metacarpal_r",
+    "ring_01_l",
+    "ring_01_r",
+    "ring_02_l",
+    "ring_02_r",
+    "ring_03_l",
+    "ring_03_r",
+    "ring_metacarpal_l",
+    "ring_metacarpal_r",
+    "root",
+    "rotation_euler",
+    "scale",
+    "spine_01",
+    "spine_02",
+    "spine_03",
+    "spine_04",
+    "spine_05",
+    "thigh_l",
+    "thigh_r",
+    "thigh_twist_01_l",
+    "thigh_twist_01_r",
+    "thigh_twist_02_l",
+    "thigh_twist_02_r",
+    "thumb_01_l",
+    "thumb_01_r",
+    "thumb_02_l",
+    "thumb_02_r",
+    "thumb_03_l",
+    "thumb_03_r",
+    "upperarm_l",
+    "upperarm_r",
+    "upperarm_twist_01_l",
+    "upperarm_twist_01_r",
+    "upperarm_twist_02_l",
+    "upperarm_twist_02_r"
+   ],
+   "poses": {
+    "1": {
+     "root": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "pelvis": [
+      0.0,
+      -0.02,
+      0.96
+     ],
+     "spine_01": [
+      0.0,
+      -0.02,
+      1.0
+     ],
+     "spine_05": [
+      0.0,
+      -0.01,
+      1.41
+     ],
+     "neck_01": [
+      0.0,
+      0.02,
+      1.53
+     ],
+     "head": [
+      0.0,
+      -0.01,
+      1.63
+     ],
+     "clavicle_r": [
+      0.13,
+      0.18,
+      1.76
+     ],
+     "upperarm_r": [
+      -0.04,
+      0.19,
+      1.73
+     ],
+     "hand_r": [
+      -0.1,
+      -0.04,
+      1.48
+     ],
+     "hand_l": [
+      -0.01,
+      -0.3,
+      1.52
+     ],
+     "ik_hand_gun": [
+      -0.06,
+      -0.15,
+      1.53
+     ],
+     "ik_hand_r": [
+      -0.1,
+      -0.04,
+      1.48
+     ],
+     "ik_hand_l": [
+      -0.01,
+      -0.3,
+      1.52
+     ],
+     "thigh_l": [
+      0.1,
+      -0.03,
+      0.94
+     ],
+     "foot_l": [
+      0.14,
+      0.01,
+      0.08
+     ]
+    },
+    "13": {
+     "root": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "pelvis": [
+      0.0,
+      -0.02,
+      0.96
+     ],
+     "spine_01": [
+      0.0,
+      -0.02,
+      1.0
+     ],
+     "spine_05": [
+      0.0,
+      -0.01,
+      1.41
+     ],
+     "neck_01": [
+      0.0,
+      0.02,
+      1.53
+     ],
+     "head": [
+      0.0,
+      -0.01,
+      1.63
+     ],
+     "clavicle_r": [
+      0.13,
+      0.18,
+      1.76
+     ],
+     "upperarm_r": [
+      -0.04,
+      0.19,
+      1.73
+     ],
+     "hand_r": [
+      -0.1,
+      -0.04,
+      1.48
+     ],
+     "hand_l": [
+      -0.02,
+      -0.3,
+      1.52
+     ],
+     "ik_hand_gun": [
+      -0.06,
+      -0.15,
+      1.53
+     ],
+     "ik_hand_r": [
+      -0.1,
+      -0.04,
+      1.48
+     ],
+     "ik_hand_l": [
+      -0.02,
+      -0.3,
+      1.52
+     ],
+     "thigh_l": [
+      0.1,
+      -0.03,
+      0.94
+     ],
+     "foot_l": [
+      0.14,
+      0.01,
+      0.08
+     ]
+    }
+   }
+  }
+ },
+ "A_FP_AssaultRifle_Walk_F_Loop_Aimed.fbx": {
+  "objects": [
+   [
+    "Armature",
+    "ARMATURE"
+   ]
+  ],
+  "meshes": [],
+  "Armature": {
+   "n_bones": 89,
+   "bones": [
+    "root",
+    "pelvis",
+    "spine_01",
+    "spine_02",
+    "spine_03",
+    "spine_04",
+    "spine_05",
+    "neck_01",
+    "neck_02",
+    "head",
+    "clavicle_l",
+    "upperarm_l",
+    "lowerarm_l",
+    "lowerarm_twist_02_l",
+    "lowerarm_twist_01_l",
+    "hand_l",
+    "index_metacarpal_l",
+    "index_01_l",
+    "index_02_l",
+    "index_03_l",
+    "middle_metacarpal_l",
+    "middle_01_l",
+    "middle_02_l",
+    "middle_03_l",
+    "thumb_01_l",
+    "thumb_02_l",
+    "thumb_03_l",
+    "pinky_metacarpal_l",
+    "pinky_01_l",
+    "pinky_02_l",
+    "pinky_03_l",
+    "ring_metacarpal_l",
+    "ring_01_l",
+    "ring_02_l",
+    "ring_03_l",
+    "upperarm_twist_01_l",
+    "upperarm_twist_02_l",
+    "clavicle_r",
+    "upperarm_r",
+    "lowerarm_r",
+    "lowerarm_twist_02_r",
+    "lowerarm_twist_01_r",
+    "hand_r",
+    "pinky_metacarpal_r",
+    "pinky_01_r",
+    "pinky_02_r",
+    "pinky_03_r",
+    "ring_metacarpal_r",
+    "ring_01_r",
+    "ring_02_r",
+    "ring_03_r",
+    "middle_metacarpal_r",
+    "middle_01_r",
+    "middle_02_r",
+    "middle_03_r",
+    "index_metacarpal_r",
+    "index_01_r",
+    "index_02_r",
+    "index_03_r",
+    "thumb_01_r",
+    "thumb_02_r",
+    "thumb_03_r",
+    "upperarm_twist_01_r",
+    "upperarm_twist_02_r",
+    "thigh_r",
+    "calf_r",
+    "foot_r",
+    "ball_r",
+    "calf_twist_02_r",
+    "calf_twist_01_r",
+    "thigh_twist_01_r",
+    "thigh_twist_02_r",
+    "thigh_l",
+    "calf_l",
+    "foot_l",
+    "ball_l",
+    "calf_twist_02_l",
+    "calf_twist_01_l",
+    "thigh_twist_01_l",
+    "thigh_twist_02_l",
+    "ik_foot_root",
+    "ik_foot_l",
+    "ik_foot_r",
+    "ik_hand_root",
+    "ik_hand_gun",
+    "ik_hand_l",
+    "ik_hand_r",
+    "interaction",
+    "center_of_mass"
+   ],
+   "scale": [
+    0.009999999776482582,
+    0.009999999776482582,
+    0.009999999776482582
+   ],
+   "rot": [
+    -1.6292067073209182e-07,
+    0.0,
+    0.0
+   ],
+   "action": "Armature|Scene",
+   "frames": [
+    1.0,
+    25.0
+   ],
+   "fps": 30,
+   "animated": [
+    "ball_l",
+    "ball_r",
+    "calf_l",
+    "calf_r",
+    "calf_twist_01_l",
+    "calf_twist_01_r",
+    "calf_twist_02_l",
+    "calf_twist_02_r",
+    "center_of_mass",
+    "clavicle_l",
+    "clavicle_r",
+    "foot_l",
+    "foot_r",
+    "hand_l",
+    "hand_r",
+    "head",
+    "ik_foot_l",
+    "ik_foot_r",
+    "ik_foot_root",
+    "ik_hand_gun",
+    "ik_hand_l",
+    "ik_hand_r",
+    "ik_hand_root",
+    "index_01_l",
+    "index_01_r",
+    "index_02_l",
+    "index_02_r",
+    "index_03_l",
+    "index_03_r",
+    "index_metacarpal_l",
+    "index_metacarpal_r",
+    "interaction",
+    "location",
+    "lowerarm_l",
+    "lowerarm_r",
+    "lowerarm_twist_01_l",
+    "lowerarm_twist_01_r",
+    "lowerarm_twist_02_l",
+    "lowerarm_twist_02_r",
+    "middle_01_l",
+    "middle_01_r",
+    "middle_02_l",
+    "middle_02_r",
+    "middle_03_l",
+    "middle_03_r",
+    "middle_metacarpal_l",
+    "middle_metacarpal_r",
+    "neck_01",
+    "neck_02",
+    "pelvis",
+    "pinky_01_l",
+    "pinky_01_r",
+    "pinky_02_l",
+    "pinky_02_r",
+    "pinky_03_l",
+    "pinky_03_r",
+    "pinky_metacarpal_l",
+    "pinky_metacarpal_r",
+    "ring_01_l",
+    "ring_01_r",
+    "ring_02_l",
+    "ring_02_r",
+    "ring_03_l",
+    "ring_03_r",
+    "ring_metacarpal_l",
+    "ring_metacarpal_r",
+    "root",
+    "rotation_euler",
+    "scale",
+    "spine_01",
+    "spine_02",
+    "spine_03",
+    "spine_04",
+    "spine_05",
+    "thigh_l",
+    "thigh_r",
+    "thigh_twist_01_l",
+    "thigh_twist_01_r",
+    "thigh_twist_02_l",
+    "thigh_twist_02_r",
+    "thumb_01_l",
+    "thumb_01_r",
+    "thumb_02_l",
+    "thumb_02_r",
+    "thumb_03_l",
+    "thumb_03_r",
+    "upperarm_l",
+    "upperarm_r",
+    "upperarm_twist_01_l",
+    "upperarm_twist_01_r",
+    "upperarm_twist_02_l",
+    "upperarm_twist_02_r"
+   ],
+   "poses": {
+    "1": {
+     "root": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "pelvis": [
+      0.0,
+      -0.02,
+      0.96
+     ],
+     "spine_01": [
+      0.0,
+      -0.02,
+      1.0
+     ],
+     "spine_05": [
+      0.0,
+      -0.01,
+      1.41
+     ],
+     "neck_01": [
+      0.0,
+      0.02,
+      1.53
+     ],
+     "head": [
+      0.0,
+      -0.01,
+      1.63
+     ],
+     "clavicle_r": [
+      0.13,
+      0.18,
+      1.76
+     ],
+     "upperarm_r": [
+      -0.04,
+      0.19,
+      1.73
+     ],
+     "hand_r": [
+      -0.04,
+      0.01,
+      1.48
+     ],
+     "hand_l": [
+      0.05,
+      -0.25,
+      1.52
+     ],
+     "ik_hand_gun": [
+      0.0,
+      -0.1,
+      1.53
+     ],
+     "ik_hand_r": [
+      -0.04,
+      0.01,
+      1.48
+     ],
+     "ik_hand_l": [
+      0.05,
+      -0.25,
+      1.52
+     ],
+     "thigh_l": [
+      0.1,
+      -0.03,
+      0.94
+     ],
+     "foot_l": [
+      0.14,
+      0.01,
+      0.08
+     ]
+    },
+    "13": {
+     "root": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "pelvis": [
+      0.0,
+      -0.02,
+      0.96
+     ],
+     "spine_01": [
+      0.0,
+      -0.02,
+      1.0
+     ],
+     "spine_05": [
+      0.0,
+      -0.01,
+      1.41
+     ],
+     "neck_01": [
+      0.0,
+      0.02,
+      1.53
+     ],
+     "head": [
+      0.0,
+      -0.01,
+      1.63
+     ],
+     "clavicle_r": [
+      0.13,
+      0.18,
+      1.76
+     ],
+     "upperarm_r": [
+      -0.04,
+      0.19,
+      1.73
+     ],
+     "hand_r": [
+      -0.04,
+      0.01,
+      1.48
+     ],
+     "hand_l": [
+      0.05,
+      -0.25,
+      1.53
+     ],
+     "ik_hand_gun": [
+      -0.0,
+      -0.1,
+      1.53
+     ],
+     "ik_hand_r": [
+      -0.04,
+      0.01,
+      1.48
+     ],
+     "ik_hand_l": [
+      0.05,
+      -0.25,
+      1.53
+     ],
+     "thigh_l": [
+      0.1,
+      -0.03,
+      0.94
+     ],
+     "foot_l": [
+      0.14,
+      0.01,
+      0.08
+     ]
+    }
+   }
+  }
+ },
+ "A_FP_WEP_AssaultRifle_Fire.fbx": {
+  "objects": [
+   [
+    "SKEL_AssaultRifle",
+    "ARMATURE"
+   ]
+  ],
+  "meshes": [],
+  "SKEL_AssaultRifle": {
+   "n_bones": 4,
+   "bones": [
+    "Grip",
+    "Trigger",
+    "Bolt",
+    "Magazine"
+   ],
+   "scale": [
+    0.009999999776482582,
+    0.009999999776482582,
+    0.009999999776482582
+   ],
+   "rot": [
+    -1.6292067073209182e-07,
+    0.0,
+    0.0
+   ],
+   "action": "SKEL_AssaultRifle|Scene",
+   "frames": [
+    1.0,
+    24.0
+   ],
+   "fps": 30,
+   "animated": [
+    "Bolt",
+    "Grip",
+    "Magazine",
+    "Trigger",
+    "location",
+    "rotation_euler",
+    "scale"
+   ],
+   "poses": {
+    "1": {},
+    "12": {}
+   }
+  }
+ },
+ "A_FP_WEP_AssaultRifle_Reload.fbx": {
+  "objects": [
+   [
+    "SKEL_AssaultRifle",
+    "ARMATURE"
+   ]
+  ],
+  "meshes": [],
+  "SKEL_AssaultRifle": {
+   "n_bones": 4,
+   "bones": [
+    "Grip",
+    "Trigger",
+    "Bolt",
+    "Magazine"
+   ],
+   "scale": [
+    0.009999999776482582,
+    0.009999999776482582,
+    0.009999999776482582
+   ],
+   "rot": [
+    -1.6292067073209182e-07,
+    0.0,
+    0.0
+   ],
+   "action": "SKEL_AssaultRifle|Scene",
+   "frames": [
+    1.0,
+    95.0
+   ],
+   "fps": 30,
+   "animated": [
+    "Bolt",
+    "Grip",
+    "Magazine",
+    "Trigger",
+    "location",
+    "rotation_euler",
+    "scale"
+   ],
+   "poses": {
+    "1": {},
+    "48": {}
+   }
+  }
+ },
+ "SK_FP_Manny_Simple.fbx": {
+  "objects": [
+   [
+    "Armature",
+    "ARMATURE"
+   ],
+   [
+    "SK_Manny_Arms",
+    "MESH"
+   ]
+  ],
+  "meshes": [
+   [
+    "SK_Manny_Arms",
+    20326,
+    [
+     "clavicle_l",
+     "clavicle_r",
+     "hand_l",
+     "hand_r",
+     "index_01_l"
+    ],
+    52
+   ]
+  ],
+  "Armature": {
+   "n_bones": 89,
+   "bones": [
+    "root",
+    "pelvis",
+    "spine_01",
+    "spine_02",
+    "spine_03",
+    "spine_04",
+    "spine_05",
+    "neck_01",
+    "neck_02",
+    "head",
+    "clavicle_l",
+    "upperarm_l",
+    "lowerarm_l",
+    "lowerarm_twist_02_l",
+    "lowerarm_twist_01_l",
+    "hand_l",
+    "index_metacarpal_l",
+    "index_01_l",
+    "index_02_l",
+    "index_03_l",
+    "middle_metacarpal_l",
+    "middle_01_l",
+    "middle_02_l",
+    "middle_03_l",
+    "thumb_01_l",
+    "thumb_02_l",
+    "thumb_03_l",
+    "pinky_metacarpal_l",
+    "pinky_01_l",
+    "pinky_02_l",
+    "pinky_03_l",
+    "ring_metacarpal_l",
+    "ring_01_l",
+    "ring_02_l",
+    "ring_03_l",
+    "upperarm_twist_01_l",
+    "upperarm_twist_02_l",
+    "clavicle_r",
+    "upperarm_r",
+    "lowerarm_r",
+    "lowerarm_twist_02_r",
+    "lowerarm_twist_01_r",
+    "hand_r",
+    "pinky_metacarpal_r",
+    "pinky_01_r",
+    "pinky_02_r",
+    "pinky_03_r",
+    "ring_metacarpal_r",
+    "ring_01_r",
+    "ring_02_r",
+    "ring_03_r",
+    "middle_metacarpal_r",
+    "middle_01_r",
+    "middle_02_r",
+    "middle_03_r",
+    "index_metacarpal_r",
+    "index_01_r",
+    "index_02_r",
+    "index_03_r",
+    "thumb_01_r",
+    "thumb_02_r",
+    "thumb_03_r",
+    "upperarm_twist_01_r",
+    "upperarm_twist_02_r",
+    "thigh_r",
+    "calf_r",
+    "foot_r",
+    "ball_r",
+    "calf_twist_02_r",
+    "calf_twist_01_r",
+    "thigh_twist_01_r",
+    "thigh_twist_02_r",
+    "thigh_l",
+    "calf_l",
+    "foot_l",
+    "ball_l",
+    "calf_twist_02_l",
+    "calf_twist_01_l",
+    "thigh_twist_01_l",
+    "thigh_twist_02_l",
+    "ik_foot_root",
+    "ik_foot_l",
+    "ik_foot_r",
+    "ik_hand_root",
+    "ik_hand_gun",
+    "ik_hand_l",
+    "ik_hand_r",
+    "interaction",
+    "center_of_mass"
+   ],
+   "scale": [
+    0.009999999776482582,
+    0.009999999776482582,
+    0.009999999776482582
+   ],
+   "rot": [
+    -1.6292067073209182e-07,
+    0.0,
+    0.0
+   ]
+  }
+ },
+ "SK_AssaultRifle.fbx": {
+  "objects": [
+   [
+    "SKEL_AssaultRifle",
+    "ARMATURE"
+   ],
+   [
+    "SK_AssaultRifle",
+    "MESH"
+   ]
+  ],
+  "meshes": [
+   [
+    "SK_AssaultRifle",
+    5004,
+    [
+     "Bolt",
+     "Grip",
+     "Trigger"
+    ],
+    3
+   ]
+  ],
+  "SKEL_AssaultRifle": {
+   "n_bones": 4,
+   "bones": [
+    "Grip",
+    "Trigger",
+    "Bolt",
+    "Magazine"
+   ],
+   "scale": [
+    0.009999999776482582,
+    0.009999999776482582,
+    0.009999999776482582
+   ],
+   "rot": [
+    -1.6292067073209182e-07,
+    0.0,
+    0.0
+   ]
+  }
+ }
+}

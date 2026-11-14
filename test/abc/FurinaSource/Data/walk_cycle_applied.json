@@ -1,0 +1,18 @@
+{
+ "walk_notifies": [
+  {
+   "bone": "Right-ankle",
+   "time": 0.9666666666666667
+  },
+  {
+   "bone": "Left-ankle",
+   "time": 0.3
+  }
+ ],
+ "length": 1.3333333730697632,
+ "notify_tracks": [
+  "1",
+  "FurinaWalkSteps"
+ ],
+ "ok": true
+}

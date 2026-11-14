@@ -1,0 +1,144 @@
+{
+ "AnimGraphNode_Slot_FP": {
+  "Source": [
+   "AnimGraphNode_TwoWayBlend_FPIdle"
+  ],
+  "SourcePose": [],
+  "BasePose": [],
+  "BlendPoses_0": [],
+  "A": [],
+  "B": [],
+  "Result": [],
+  "Pose": [],
+  "CurveValues_0": []
+ },
+ "AnimGraphNode_LayeredBoneBlend_0": {
+  "Source": [],
+  "SourcePose": [],
+  "BasePose": [
+   "AnimGraphNode_RetargetPoseFromMesh_1"
+  ],
+  "BlendPoses_0": [
+   "AnimGraphNode_TwoWayBlend_0"
+  ],
+  "A": [],
+  "B": [],
+  "Result": [],
+  "Pose": [],
+  "CurveValues_0": []
+ },
+ "AnimGraphNode_LayeredBoneBlend_FP": {
+  "Source": [],
+  "SourcePose": [],
+  "BasePose": [
+   "AnimGraphNode_LayeredBoneBlend_0"
+  ],
+  "BlendPoses_0": [
+   "AnimGraphNode_Slot_FP"
+  ],
+  "A": [],
+  "B": [],
+  "Result": [],
+  "Pose": [],
+  "CurveValues_0": []
+ },
+ "AnimGraphNode_ModifyCurve_Aim": {
+  "Source": [],
+  "SourcePose": [],
+  "BasePose": [],
+  "BlendPoses_0": [],
+  "A": [],
+  "B": [],
+  "Result": [],
+  "Pose": [],
+  "CurveValues_0": [
+   "K2Node_CallFunction_FPNorm"
+  ]
+ },
+ "AnimGraphNode_ControlRig_0": {
+  "Source": [
+   "AnimGraphNode_ModifyCurve_Aim"
+  ],
+  "SourcePose": [],
+  "BasePose": [],
+  "BlendPoses_0": [],
+  "A": [],
+  "B": [],
+  "Result": [],
+  "Pose": [],
+  "CurveValues_0": []
+ },
+ "AnimGraphNode_TwoWayBlend_1": {
+  "Source": [],
+  "SourcePose": [],
+  "BasePose": [],
+  "BlendPoses_0": [],
+  "A": [
+   "AnimGraphNode_RetargetPoseFromMesh_0"
+  ],
+  "B": [
+   "AnimGraphNode_SequencePlayer_1"
+  ],
+  "Result": [],
+  "Pose": [],
+  "CurveValues_0": []
+ },
+ "AnimGraphNode_TwoWayBlend_0": {
+  "Source": [],
+  "SourcePose": [],
+  "BasePose": [],
+  "BlendPoses_0": [],
+  "A": [
+   "AnimGraphNode_TwoWayBlend_1"
+  ],
+  "B": [
+   "AnimGraphNode_SequencePlayer_0"
+  ],
+  "Result": [],
+  "Pose": [],
+  "CurveValues_0": []
+ },
+ "AnimGraphNode_TwoWayBlend_FPWalk": {
+  "Source": [],
+  "SourcePose": [],
+  "BasePose": [],
+  "BlendPoses_0": [],
+  "A": [
+   "AnimGraphNode_SequencePlayer_FPRun"
+  ],
+  "B": [
+   "AnimGraphNode_SequencePlayer_FPWalk"
+  ],
+  "Result": [],
+  "Pose": [],
+  "CurveValues_0": []
+ },
+ "AnimGraphNode_TwoWayBlend_FPIdle": {
+  "Source": [],
+  "SourcePose": [],
+  "BasePose": [],
+  "BlendPoses_0": [],
+  "A": [
+   "AnimGraphNode_TwoWayBlend_FPWalk"
+  ],
+  "B": [
+   "AnimGraphNode_SequencePlayer_FPIdle"
+  ],
+  "Result": [],
+  "Pose": [],
+  "CurveValues_0": []
+ },
+ "AnimGraphNode_Root_0": {
+  "Source": [],
+  "SourcePose": [],
+  "BasePose": [],
+  "BlendPoses_0": [],
+  "A": [],
+  "B": [],
+  "Result": [
+   "AnimGraphNode_ControlRig_0"
+  ],
+  "Pose": [],
+  "CurveValues_0": []
+ }
+}

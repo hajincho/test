@@ -1,0 +1,19 @@
+{
+ "lbs": [
+  "AnimGraphNode_LayeredBoneBlend_0",
+  "AnimGraphNode_LayeredBoneBlend_FP"
+ ],
+ "found": {
+  "fp": 1,
+  "base": 1,
+  "mc": 1,
+  "cr": 1
+ },
+ "base_to_fp": true,
+ "mc_to_cr": true,
+ "cr_source_from": [
+  "AnimGraphNode_ModifyCurve_Aim"
+ ],
+ "mc_pins": "CurveValues_0 ok",
+ "status": "<BlueprintStatus.BS_ERROR: 2>"
+}
