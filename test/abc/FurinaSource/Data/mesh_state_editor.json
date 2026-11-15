@@ -1,0 +1,46 @@
+{
+ "template": {
+  "asset": "/Game/Saori/SK_Saori.SK_Saori",
+  "scale": "<Struct 'Vector' (0x0000022A7DFD3DB0) {x: 1.116310, y: 1.116310, z: 1.116310}>"
+ },
+ "instances": [
+  {
+   "actor": "ThirdPersonCharacter_BP_2",
+   "asset": "/Game/Furina/SK_Furina.SK_Furina",
+   "scale": "<Struct 'Vector' (0x0000022B48FF65B0) {x: 1.116310, y: 1.116310, z: 1.116310}>"
+  }
+ ],
+ "world": "/Game/3DPlatformerGameBundle/Levels/ExampleLevel.ExampleLevel",
+ "refs_to_SK_Furina": [
+  "/Game/3DPlatformerGameBundle/Levels/ExampleLevel",
+  "/Game/3DPlatformerGameBundle/Demo/ThirdPersonAssets/Blueprints/ThirdPersonCharacter_BP",
+  "/Game/3DPlatformerGameBundle/Demo/ThirdPersonAssets/Blueprints/GrindRailCharacterBP/Ver_2_ThirdPersonCharacter_BP",
+  "/Game/3DPlatformerGameBundle/Demo/ThirdPersonAssets/Blueprints/HomingAttackCharacterBP/ThirdPersonCharacter_BP",
+  "/Game/3DPlatformerGameBundle/Demo/ThirdPersonAssets/Blueprints/JumpPadCharacterBP/ThirdPersonCharacter_BP",
+  "/Game/Furina/CR_FurinaSecondary",
+  "/Game/Furina/SK_Furina_Skeleton",
+  "/Game/Furina/ABP_Furina",
+  "/Game/Furina/Anim/AS_Furina_Idle",
+  "/Game/Furina/Anim/AS_Furina_Walk",
+  "/Game/Furina/Retarget/IK_Furina",
+  "/Game/Furina/Retarget/RTG_Manny_To_Furina",
+  "/Game/Furina/FP/Anim/AS_Furina_FP_Fire",
+  "/Game/Furina/FP/Anim/AS_Furina_FP_Aim_Pose",
+  "/Game/Furina/FP/Anim/AS_Furina_FP_Equip",
+  "/Game/Furina/FP/Anim/AS_Furina_FP_Fire_Aimed",
+  "/Game/Furina/FP/Anim/AS_Furina_FP_Holster",
+  "/Game/Furina/FP/Anim/AS_Furina_FP_Idle_Loop",
+  "/Game/Furina/FP/Anim/AS_Furina_FP_Idle_Loop_Aimed",
+  "/Game/Furina/FP/Anim/AS_Furina_FP_Idle_Pose",
+  "/Game/Furina/FP/Anim/AS_Furina_FP_Run_Loop",
+  "/Game/Furina/FP/Anim/AS_Furina_FP_Walk_F_Loop",
+  "/Game/Furina/FP/Anim/AS_Furina_FP_Walk_F_Loop_Aimed",
+  "/Game/Furina/TFP/Anim/AS_Furina_TFP_C_Idle_Additive",
+  "/Game/Furina/TFP/Anim/AS_Furina_TFP_C_Walk_B",
+  "/Game/Furina/TFP/Anim/AS_Furina_TFP_C_Walk_F",
+  "/Game/Furina/TFP/Anim/AS_Furina_TFP_C_Walk_L",
+  "/Game/Furina/TFP/Anim/AS_Furina_TFP_C_Walk_R",
+  "/Game/Furina/TFP/RTG_TFPToFurina",
+  "/Game/Furina/TFP/Anim/AO_Unarmed"
+ ]
+}

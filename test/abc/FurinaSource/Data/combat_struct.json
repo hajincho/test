@@ -1,0 +1,22 @@
+{
+ "struct": "(SourcePose=(LinkID=-1,SourceLinkID=-1),CurveMap=(),CurveValues=(0.000000),CurveNames=(\"AimPitch\"),Alpha=1.000000,ApplyMode=Blend,InitialUpdateFunction=(ClassName=\"\",FunctionName=\"\"),BecomeRelevantFunction=(ClassName=\"\",FunctionName=\"\"),UpdateFunction=(ClassName=\"\",FunctionName=\"\"))",
+ "api": [
+  "alpha",
+  "apply_mode",
+  "assign",
+  "cast",
+  "copy",
+  "curve_map",
+  "curve_values",
+  "export_text",
+  "get_editor_property",
+  "import_text",
+  "set_editor_properties",
+  "set_editor_property",
+  "source_pose",
+  "static_struct",
+  "to_dict",
+  "to_tuple"
+ ],
+ "import": "import_text(self, content: str) -> bool -- imports the provided string into the Unreal struct"
+}

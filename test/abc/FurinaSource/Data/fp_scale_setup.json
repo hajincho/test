@@ -1,0 +1,8 @@
+{
+ "rifle": [
+  "<Struct 'Vector' (0x0000017488BB1580) {x: -1.954539, y: -10.600776, z: -6.354046}>",
+  "<Struct 'Vector' (0x0000017488BB15B0) {x: 1.000000, y: 1.000000, z: 1.000000}>"
+ ],
+ "status": "<BlueprintStatus.BS_UP_TO_DATE: 3>",
+ "saved": true
+}

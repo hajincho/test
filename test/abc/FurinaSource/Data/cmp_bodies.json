@@ -1,0 +1,35 @@
+{
+ "BP_223Case": {
+  "None": "Actor",
+  "DefaultSceneRoot": "SceneComponent",
+  "FXRoot": "SceneComponent",
+  "FXMesh": {
+   "mesh": "SM_223Case",
+   "ce": "<CollisionEnabled.QUERY_AND_PHYSICS: 3>",
+   "obj": "<CollisionChannel.ECC_PHYSICS_BODY: 5>",
+   "sim": true,
+   "grav": true,
+   "profile": "Custom",
+   "ws": "<CollisionResponseType.ECR_BLOCK: 2>",
+   "mass": "100.0",
+   "scale": "<Struct 'Vector' (0x0000022A72EEE7B0) {x: 1.350000, y: 1.350000, z: 1.350000}>",
+   "parent": null
+  }
+ },
+ "BP_M4MagDrop": {
+  "None": "Actor",
+  "DefaultSceneRoot": "SceneComponent",
+  "MagBody": {
+   "mesh": "SM_M4Mag",
+   "ce": "<CollisionEnabled.QUERY_AND_PHYSICS: 3>",
+   "obj": "<CollisionChannel.ECC_WORLD_DYNAMIC: 1>",
+   "sim": true,
+   "grav": true,
+   "profile": "Custom",
+   "ws": "<CollisionResponseType.ECR_BLOCK: 2>",
+   "mass": "100.0",
+   "scale": "<Struct 'Vector' (0x0000022A73BD15B0) {x: 1.000000, y: 1.000000, z: 1.000000}>",
+   "parent": null
+  }
+ }
+}

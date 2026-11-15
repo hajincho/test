@@ -1,0 +1,2 @@
+import runpy,os,json
+R=r'C:\Users\fromj\Downloads\test\test\abc\FurinaSource';runpy.run_path(os.path.join(R,'Scripts','Unreal','ue_combat_merge.py'),run_name='__main__');assert json.load(open(os.path.join(R,'Data','combat_merge.json')))['ok'];runpy.run_path(os.path.join(R,'Scripts','Unreal','ue_combat_ammo_fx.py'),run_name='__main__');assert json.load(open(os.path.join(R,'Data','combat_ammo_fx.json')))['ok']

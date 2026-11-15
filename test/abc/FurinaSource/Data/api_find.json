@@ -1,0 +1,25 @@
+{
+ "SkeletalMeshComponent": [
+  "clear_vertex_color_override",
+  "get_skinned_asset",
+  "set_skinned_asset_and_update",
+  "set_vertex_color_override_linear_color",
+  "skinned_asset"
+ ],
+ "SkinnedMeshComponent": [
+  "clear_vertex_color_override",
+  "get_skinned_asset",
+  "set_skinned_asset_and_update",
+  "set_vertex_color_override_linear_color",
+  "skinned_asset"
+ ],
+ "SkeletalMesh": [
+  "has_vertex_colors"
+ ],
+ "SkeletalMeshEditorSubsystem": [
+  "get_section_recompute_tangents_vertex_mask_channel",
+  "set_section_recompute_tangents_vertex_mask_channel"
+ ],
+ "MeshComponent": [],
+ "PrimitiveComponent": []
+}

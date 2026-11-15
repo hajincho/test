@@ -1,0 +1,17 @@
+{
+ "comp": "added",
+ "flag": "added",
+ "char_status": "<BlueprintStatus.BS_UP_TO_DATE: 3>",
+ "char_saved": true,
+ "text_before": "(SourcePose=(LinkID=-1,SourceLinkID=-1),CurveMap=(),CurveValues=(0.000000,0.000000),CurveNames=(\"ViewTP\",\"Crouch\"),Alpha=1.000000,ApplyMode=Blend,InitialUpdateFunction=(ClassName=\"\",FunctionName=\"\"),BecomeRelevantFunction=(ClassName=\"\",FunctionName=\"\"),UpdateFunction=(ClassName=\"\",FunctionName=\"\"))",
+ "pins": [
+  "SourcePose",
+  "CurveValues_0",
+  "CurveValues_1",
+  "CurveValues_2",
+  "Alpha",
+  "Pose"
+ ],
+ "abp_status": "<BlueprintStatus.BS_UP_TO_DATE: 3>",
+ "abp_saved": true
+}

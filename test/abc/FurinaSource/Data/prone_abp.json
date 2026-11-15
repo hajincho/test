@@ -1,0 +1,15 @@
+{
+ "event": "added",
+ "pins": [
+  "SourcePose",
+  "CurveValues_0",
+  "CurveValues_1",
+  "CurveValues_2",
+  "CurveValues_3",
+  "CurveValues_4",
+  "Alpha",
+  "Pose"
+ ],
+ "abp_status": "<BlueprintStatus.BS_UP_TO_DATE: 3>",
+ "abp_saved": true
+}

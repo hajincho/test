@@ -1,0 +1,2 @@
+import unreal,json
+bp=unreal.load_asset('/Game/Furina/ABP_Furina');n=next(n for n in unreal.AnimationLibrary.get_nodes_of_class(bp,unreal.AnimGraphNode_SequencePlayer,True) if 'AS_Furina_Walk' in n.get_editor_property('node').export_text());R={'pins':[str(p.get_pin_name()) for p in n.list_all_pins()],'options':[x.export_text() for x in n.get_editor_property('show_pin_for_properties')],'node':n.get_editor_property('node').export_text()};json.dump(R,open(r'C:\Users\fromj\Downloads\test\test\abc\FurinaSource\Data\combat_walk_pins.json','w'),indent=1)

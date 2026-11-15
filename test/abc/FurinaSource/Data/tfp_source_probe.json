@@ -1,0 +1,53 @@
+{
+ "assets": {
+  "AS_N_Idle": {
+   "exists": true,
+   "length": 2.6666667461395264,
+   "skeleton": "<Object '/Game/TFPMovement/Demo/Character/Mannequins/Meshes/SK_Mannequin.SK_Mannequin' (0x000001CC2CE25400) Class 'Skeleton'>",
+   "additive": "<AdditiveAnimationType.AAT_NONE: 0>"
+  },
+  "AS_N_Walk_F": {
+   "exists": true,
+   "length": 1.1333333253860474,
+   "skeleton": "<Object '/Game/TFPMovement/Demo/Character/Mannequins/Meshes/SK_Mannequin.SK_Mannequin' (0x000001CC2CE25400) Class 'Skeleton'>",
+   "additive": "<AdditiveAnimationType.AAT_NONE: 0>"
+  },
+  "AS_N_Run_F": {
+   "exists": true,
+   "length": 0.800000011920929,
+   "skeleton": "<Object '/Game/TFPMovement/Demo/Character/Mannequins/Meshes/SK_Mannequin.SK_Mannequin' (0x000001CC2CE25400) Class 'Skeleton'>",
+   "additive": "<AdditiveAnimationType.AAT_NONE: 0>"
+  },
+  "AS_N_Walk_B": {
+   "exists": true,
+   "length": 1.1333333253860474,
+   "skeleton": "<Object '/Game/TFPMovement/Demo/Character/Mannequins/Meshes/SK_Mannequin.SK_Mannequin' (0x000001CC2CE25400) Class 'Skeleton'>",
+   "additive": "<AdditiveAnimationType.AAT_NONE: 0>"
+  },
+  "Crouch/AS_C_Walk_F": {
+   "exists": true,
+   "length": 1.1333333253860474,
+   "skeleton": "<Object '/Game/TFPMovement/Demo/Character/Mannequins/Meshes/SK_Mannequin.SK_Mannequin' (0x000001CC2CE25400) Class 'Skeleton'>",
+   "additive": "<AdditiveAnimationType.AAT_NONE: 0>"
+  },
+  "Crouch/AS_C_Idle_Additive": {
+   "exists": true,
+   "length": 2.6666667461395264,
+   "skeleton": "<Object '/Game/TFPMovement/Demo/Character/Mannequins/Meshes/SK_Mannequin.SK_Mannequin' (0x000001CC2CE25400) Class 'Skeleton'>",
+   "additive": "<AdditiveAnimationType.AAT_NONE: 0>"
+  },
+  "Crouch/AS_N_to_C_Idle": {
+   "exists": true,
+   "length": 0.6666666865348816,
+   "skeleton": "<Object '/Game/TFPMovement/Demo/Character/Mannequins/Meshes/SK_Mannequin.SK_Mannequin' (0x000001CC2CE25400) Class 'Skeleton'>",
+   "additive": "<AdditiveAnimationType.AAT_NONE: 0>"
+  }
+ },
+ "bs_api": {},
+ "bs_props": {
+  "SampleData": "[{}, {}, {}, {}, {}]",
+  "BlendParameters": "[{}, {}, {}]",
+  "blend_parameters": "[{}, {}, {}]",
+  "sample_data": "[{}, {}, {}, {}, {}]"
+ }
+}

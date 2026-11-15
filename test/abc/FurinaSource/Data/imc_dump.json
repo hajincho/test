@@ -1,0 +1,14 @@
+{
+ "props": [
+  "default_key_mappings",
+  "mapping_profile_overrides",
+  "mappings"
+ ],
+ "mappings": [
+  [
+   "default_key_mappings",
+   "IA_FurinaCrouch",
+   "C"
+  ]
+ ]
+}

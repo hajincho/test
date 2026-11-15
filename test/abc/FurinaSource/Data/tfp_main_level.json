@@ -1,0 +1,35 @@
+{
+ "checks": {
+  "main_guide_collapsed": true,
+  "world_notes_hidden": true,
+  "C_toggles_on_actual_map": true,
+  "actual_crouch_pose": true
+ },
+ "diagnostics": {
+  "pawn": "/Game/3DPlatformerGameBundle/Levels/UEDPIE_0_ExampleLevel.ExampleLevel:PersistentLevel.ThirdPersonCharacter_BP_2",
+  "rail": false,
+  "mode": "<MovementMode.MOVE_WALKING: 1>",
+  "can_crouch": true,
+  "nav": "<Struct 'NavAgentProperties' (0x000001562B05C970) {can_crouch: True, can_jump: True, can_walk: True, can_swim: True, can_fly: False, agent_radius: 42.000000, agent_height: 192.000000, agent_step_height: -1.000000, nav_walking_search_height_scale: 0.500000, preferred_nav_data: {}}>",
+  "guide_count": 1,
+  "widgets": [
+   [
+    "/Game/3DPlatformerGameBundle/Widgets/Guide_Widget_WBP.Guide_Widget_WBP_C",
+    "<SlateVisibility.COLLAPSED: 1>"
+   ],
+   [
+    "/Game/3DPlatformerGameBundle/Widgets/Reticle_Widget_WBP.Reticle_Widget_WBP_C",
+    "<SlateVisibility.SELF_HIT_TEST_INVISIBLE: 4>"
+   ]
+  ],
+  "text_actor_count": 8,
+  "subsystems": [
+   "/Engine/Transient.UnrealEdEngine_0:LocalPlayer_9.EnhancedInputLocalPlayerSubsystem_0"
+  ],
+  "wants_crouch": true,
+  "crouch_weight": 0.9998681381400356,
+  "capsule_half_height": 58.0
+ },
+ "error": null,
+ "ok": true
+}

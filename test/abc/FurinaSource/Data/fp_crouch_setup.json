@@ -1,0 +1,24 @@
+{
+ "log": [
+  "added FurinaCrouch",
+  "added FurinaShoulderAuto"
+ ],
+ "before_C": [
+  [
+   "LeftControl",
+   "Sprint_IA"
+  ]
+ ],
+ "C": [
+  [
+   "C",
+   "IA_FurinaCrouch"
+  ]
+ ],
+ "nav_prop": "can_crouch",
+ "standing_half_height": 96.0,
+ "crouched_half_height": 58.0,
+ "can_crouch": "<Struct 'NavAgentProperties' (0x000001757D5EC970) {can_crouch: True, can_jump: True, can_walk: True, can_swim: True, can_fly: False, agent_radius: 42.000000, agent_height: 192.000000, agent_step_height: -1.000000, nav_walking_search_height_scale: 0.500000, preferred_nav_data: {}}>",
+ "status": "<BlueprintStatus.BS_UP_TO_DATE: 3>",
+ "saved": true
+}

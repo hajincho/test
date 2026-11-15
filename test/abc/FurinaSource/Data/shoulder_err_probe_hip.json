@@ -1,0 +1,67 @@
+{
+ "summary": {
+  "mode": "hip",
+  "shots": 12,
+  "bullets": 9,
+  "mean_deg": 1.41,
+  "max_deg": 2.146,
+  "mean_tan_pct": 2.46,
+  "max_tan_pct": 3.75
+ },
+ "rows": [
+  {
+   "dyaw": -0.845,
+   "dpitch": 0.443,
+   "radius_deg": 0.954,
+   "tan_pct": 1.66
+  },
+  {
+   "dyaw": -0.327,
+   "dpitch": 2.121,
+   "radius_deg": 2.146,
+   "tan_pct": 3.75
+  },
+  {
+   "dyaw": 0.257,
+   "dpitch": 1.727,
+   "radius_deg": 1.746,
+   "tan_pct": 3.05
+  },
+  {
+   "dyaw": -0.904,
+   "dpitch": 0.294,
+   "radius_deg": 0.95,
+   "tan_pct": 1.66
+  },
+  {
+   "dyaw": -1.828,
+   "dpitch": -0.105,
+   "radius_deg": 1.831,
+   "tan_pct": 3.2
+  },
+  {
+   "dyaw": 0.878,
+   "dpitch": -0.211,
+   "radius_deg": 0.903,
+   "tan_pct": 1.58
+  },
+  {
+   "dyaw": -0.633,
+   "dpitch": 0.887,
+   "radius_deg": 1.09,
+   "tan_pct": 1.9
+  },
+  {
+   "dyaw": -0.251,
+   "dpitch": 1.314,
+   "radius_deg": 1.338,
+   "tan_pct": 2.34
+  },
+  {
+   "dyaw": -0.775,
+   "dpitch": 1.553,
+   "radius_deg": 1.735,
+   "tan_pct": 3.03
+  }
+ ]
+}

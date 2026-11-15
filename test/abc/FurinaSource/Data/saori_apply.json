@@ -1,0 +1,16 @@
+{
+ "scale": 1.0,
+ "before": "SK_Saori",
+ "scale_before": "<Struct 'Vector' (0x0000022A7DFD3DB0) {x: 1.116310, y: 1.116310, z: 1.116310}>",
+ "status": "<BlueprintStatus.BS_UP_TO_DATE: 3>",
+ "saved": true,
+ "after": "SK_Furina",
+ "instances": [
+  {
+   "actor": "ThirdPersonCharacter_BP_2",
+   "mesh": "SK_Furina",
+   "scale": "<Struct 'Vector' (0x0000022A36FD3DB0) {x: 1.000000, y: 1.000000, z: 1.000000}>"
+  }
+ ],
+ "level_saved": true
+}

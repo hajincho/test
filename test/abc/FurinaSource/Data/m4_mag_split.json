@@ -1,0 +1,34 @@
+{
+ "parts": [
+  {
+   "name": "Plane.001",
+   "verts": 7184,
+   "mag_verts": 128
+  },
+  {
+   "name": "Plane.002",
+   "verts": 3046,
+   "mag_verts": 0
+  },
+  {
+   "name": "Plane.003",
+   "verts": 3763,
+   "mag_verts": 1570
+  },
+  {
+   "name": "Plane.015",
+   "verts": 1252,
+   "mag_verts": 0
+  }
+ ],
+ "mag_min": [
+  -1.27,
+  -1.53,
+  -13.68
+ ],
+ "mag_max": [
+  1.49,
+  6.26,
+  3.31
+ ]
+}

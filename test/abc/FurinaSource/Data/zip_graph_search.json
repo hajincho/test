@@ -1,0 +1,336 @@
+{
+ "/Game/3DPlatformerGameBundle/Blueprints/Components/Grind_Rail_Component_BP": [],
+ "/Game/3DPlatformerGameBundle/Blueprints/Components/Platformer_Component_BP": [
+  {
+   "graph": "Set Ignore Move Input?",
+   "node": "K2Node_FunctionEntry_0",
+   "title": "Set Ignore Move Input?",
+   "exec_from": [],
+   "pins": []
+  },
+  {
+   "graph": "Can Component Be Interrupted?",
+   "node": "K2Node_VariableGet_373",
+   "title": "Get Zipline Actor",
+   "exec_from": [],
+   "pins": [
+    "Zipline Actor"
+   ]
+  },
+  {
+   "graph": "Zipline Actor Not Valid?",
+   "node": "K2Node_FunctionEntry_0",
+   "title": "Zipline Actor Not Valid?",
+   "exec_from": [],
+   "pins": []
+  },
+  {
+   "graph": "Zipline Actor Not Valid?",
+   "node": "K2Node_VariableGet_43",
+   "title": "Get Zipline Actor",
+   "exec_from": [],
+   "pins": [
+    "Zipline Actor"
+   ]
+  },
+  {
+   "graph": "EventGraph",
+   "node": "K2Node_VariableSet_125",
+   "title": "Set Zipline Actor",
+   "exec_from": [
+    "K2Node_VariableSet_16:then"
+   ],
+   "pins": [
+    "Zipline Actor"
+   ]
+  },
+  {
+   "graph": "EventGraph",
+   "node": "K2Node_VariableGet_249",
+   "title": "Get Zipline Actor",
+   "exec_from": [],
+   "pins": [
+    "Zipline Actor"
+   ]
+  },
+  {
+   "graph": "EventGraph",
+   "node": "K2Node_VariableSet_157",
+   "title": "Set Zipline Actor",
+   "exec_from": [
+    "K2Node_IfThenElse_71:then",
+    "K2Node_Knot_112:OutputPin"
+   ],
+   "pins": [
+    "Zipline Actor"
+   ]
+  },
+  {
+   "graph": "EventGraph",
+   "node": "K2Node_VariableGet_179",
+   "title": "Get Zipline Actor",
+   "exec_from": [],
+   "pins": [
+    "Zipline Actor"
+   ]
+  },
+  {
+   "graph": "EventGraph",
+   "node": "K2Node_VariableGet_253",
+   "title": "Get Zipline Actor",
+   "exec_from": [],
+   "pins": [
+    "Zipline Actor"
+   ]
+  },
+  {
+   "graph": "EventGraph",
+   "node": "K2Node_VariableGet_248",
+   "title": "Get Zipline Actor",
+   "exec_from": [],
+   "pins": [
+    "Zipline Actor"
+   ]
+  },
+  {
+   "graph": "EventGraph",
+   "node": "K2Node_VariableGet_156",
+   "title": "Get Zipline Actor",
+   "exec_from": [],
+   "pins": [
+    "Zipline Actor"
+   ]
+  },
+  {
+   "graph": "EventGraph",
+   "node": "K2Node_VariableGet_141",
+   "title": "Get Zipline Actor",
+   "exec_from": [],
+   "pins": [
+    "Zipline Actor"
+   ]
+  },
+  {
+   "graph": "EventGraph",
+   "node": "K2Node_VariableGet_313",
+   "title": "Get Zipline Actor",
+   "exec_from": [],
+   "pins": [
+    "Zipline Actor"
+   ]
+  },
+  {
+   "graph": "EventGraph",
+   "node": "K2Node_VariableGet_258",
+   "title": "Get Zipline Actor",
+   "exec_from": [],
+   "pins": [
+    "Zipline Actor"
+   ]
+  },
+  {
+   "graph": "EventGraph",
+   "node": "K2Node_VariableGet_297",
+   "title": "Get Zipline Actor",
+   "exec_from": [],
+   "pins": [
+    "Zipline Actor"
+   ]
+  },
+  {
+   "graph": "EventGraph",
+   "node": "K2Node_VariableSet_127",
+   "title": "Set Zipline Actor",
+   "exec_from": [
+    "K2Node_CallFunction_356:then"
+   ],
+   "pins": [
+    "Zipline Actor"
+   ]
+  },
+  {
+   "graph": "EventGraph",
+   "node": "K2Node_VariableGet_2",
+   "title": "Get Zipline Actor",
+   "exec_from": [],
+   "pins": [
+    "Zipline Actor"
+   ]
+  },
+  {
+   "graph": "EventGraph",
+   "node": "K2Node_VariableGet_320",
+   "title": "Get Zipline Actor",
+   "exec_from": [],
+   "pins": [
+    "Zipline Actor"
+   ]
+  },
+  {
+   "graph": "EventGraph",
+   "node": "K2Node_VariableGet_310",
+   "title": "Get Zipline Actor",
+   "exec_from": [],
+   "pins": [
+    "Zipline Actor"
+   ]
+  },
+  {
+   "graph": "EventGraph",
+   "node": "K2Node_VariableGet_283",
+   "title": "Get Zipline Actor",
+   "exec_from": [],
+   "pins": [
+    "Zipline Actor"
+   ]
+  },
+  {
+   "graph": "EventGraph",
+   "node": "K2Node_VariableGet_316",
+   "title": "Get Zipline Actor",
+   "exec_from": [],
+   "pins": [
+    "Zipline Actor"
+   ]
+  },
+  {
+   "graph": "EventGraph",
+   "node": "K2Node_VariableGet_318",
+   "title": "Get Zipline Actor",
+   "exec_from": [],
+   "pins": [
+    "Zipline Actor"
+   ]
+  },
+  {
+   "graph": "EventGraph",
+   "node": "K2Node_VariableGet_311",
+   "title": "Get Zipline Actor",
+   "exec_from": [],
+   "pins": [
+    "Zipline Actor"
+   ]
+  },
+  {
+   "graph": "EventGraph",
+   "node": "K2Node_VariableGet_309",
+   "title": "Get Zipline Actor",
+   "exec_from": [],
+   "pins": [
+    "Zipline Actor"
+   ]
+  },
+  {
+   "graph": "EventGraph",
+   "node": "K2Node_VariableGet_347",
+   "title": "Get OverlapWithPulley?",
+   "exec_from": [],
+   "pins": [
+    "OverlapWithPulley?"
+   ]
+  },
+  {
+   "graph": "EventGraph",
+   "node": "K2Node_VariableSet_177",
+   "title": "Set OverlapWithPulley?",
+   "exec_from": [
+    "K2Node_IfThenElse_97:then"
+   ],
+   "pins": [
+    "OverlapWithPulley?"
+   ]
+  },
+  {
+   "graph": "EventGraph",
+   "node": "K2Node_VariableGet_340",
+   "title": "Get OverlapWithPulley?",
+   "exec_from": [],
+   "pins": [
+    "OverlapWithPulley?"
+   ]
+  },
+  {
+   "graph": "EventGraph",
+   "node": "K2Node_VariableSet_173",
+   "title": "Set OverlapWithPulley?",
+   "exec_from": [
+    "K2Node_IfThenElse_95:then"
+   ],
+   "pins": [
+    "OverlapWithPulley?"
+   ]
+  },
+  {
+   "graph": "EventGraph",
+   "node": "K2Node_VariableGet_345",
+   "title": "Get OverlapWithPulley?",
+   "exec_from": [],
+   "pins": [
+    "OverlapWithPulley?"
+   ]
+  },
+  {
+   "graph": "EventGraph",
+   "node": "K2Node_VariableSet_175",
+   "title": "Set OverlapWithPulley?",
+   "exec_from": [
+    "K2Node_IfThenElse_96:then"
+   ],
+   "pins": [
+    "OverlapWithPulley?"
+   ]
+  },
+  {
+   "graph": "EventGraph",
+   "node": "K2Node_VariableGet_348",
+   "title": "Get OverlapWithPulley?",
+   "exec_from": [],
+   "pins": [
+    "OverlapWithPulley?"
+   ]
+  },
+  {
+   "graph": "EventGraph",
+   "node": "K2Node_VariableSet_171",
+   "title": "Set OverlapWithPulley?",
+   "exec_from": [
+    "K2Node_IfThenElse_94:then"
+   ],
+   "pins": [
+    "OverlapWithPulley?"
+   ]
+  },
+  {
+   "graph": "EventGraph",
+   "node": "K2Node_VariableGet_339",
+   "title": "Get OverlapWithPulley?",
+   "exec_from": [],
+   "pins": [
+    "OverlapWithPulley?"
+   ]
+  },
+  {
+   "graph": "EventGraph",
+   "node": "K2Node_CallFunction_456",
+   "title": "Set Ignore Move Input?",
+   "exec_from": [],
+   "pins": []
+  },
+  {
+   "graph": "EventGraph",
+   "node": "K2Node_CallFunction_453",
+   "title": "Set Ignore Move Input?",
+   "exec_from": [],
+   "pins": []
+  },
+  {
+   "graph": "EventGraph",
+   "node": "K2Node_VariableGet_5",
+   "title": "Get Zipline Actor",
+   "exec_from": [],
+   "pins": [
+    "Zipline Actor"
+   ]
+  }
+ ]
+}

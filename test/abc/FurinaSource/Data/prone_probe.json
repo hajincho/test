@@ -1,0 +1,43 @@
+{
+ "capsule": {
+  "radius": 42.0,
+  "half": 96.0
+ },
+ "cmc": {
+  "crouched_half_height": 58.0,
+  "max_walk_speed": 120.0,
+  "max_walk_speed_crouched": 300.0,
+  "jump_z_velocity": 700.0,
+  "can_walk_off_ledges_when_crouching": false,
+  "braking_deceleration_walking": 2048.0
+ },
+ "n_bones": 240,
+ "bones": {
+  "Hips": null,
+  "Spine": "Hips",
+  "Chest": "Spine",
+  "Neck": "Chest",
+  "Head": "Neck",
+  "Left-shoulder": "Chest",
+  "Left-arm": "Left-shoulder",
+  "zArmTwist_L": "Left-arm",
+  "Left-elbow": "Left-arm",
+  "Left-wrist": "Left-elbow",
+  "Right-shoulder": "Chest",
+  "Right-arm": "Right-shoulder",
+  "zArmTwist_R": "Right-arm",
+  "Right-elbow": "Right-arm",
+  "Right-wrist": "Right-elbow",
+  "Left-leg": "Hips",
+  "Left-knee": "Left-leg",
+  "Left-ankle": "Left-knee",
+  "Left-toe": "Left-ankle",
+  "Right-leg": "Hips",
+  "Right-knee": "Right-leg",
+  "Right-ankle": "Right-knee",
+  "Right-toe": "Right-ankle"
+ },
+ "root_children": [
+  "Hips"
+ ]
+}

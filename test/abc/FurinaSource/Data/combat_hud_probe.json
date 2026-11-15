@@ -1,0 +1,81 @@
+{
+ "actions": [
+  "Utilities|Casting|CastToCharacter"
+ ],
+ "nodes": [
+  [
+   "K2Node_FPAH_Draw",
+   "ReceiveDrawHUD 이벤트"
+  ],
+  [
+   "K2Node_FPAH_Pawn",
+   "GetOwningPawn"
+  ],
+  [
+   "K2Node_FPAH_AdsFF",
+   "FindComponentByTag"
+  ],
+  [
+   "K2Node_FPAH_AdsF",
+   "IsActive"
+  ],
+  [
+   "K2Node_FPAH_IsAds",
+   "Branch"
+  ],
+  [
+   "K2Node_FPAH_CXD",
+   "To Float (Integer)"
+  ],
+  [
+   "K2Node_FPAH_CX",
+   "float * float"
+  ],
+  [
+   "K2Node_FPAH_CYD",
+   "To Float (Integer)"
+  ],
+  [
+   "K2Node_FPAH_CY",
+   "float * float"
+  ],
+  [
+   "K2Node_FPAH_XL",
+   "float + float"
+  ],
+  [
+   "K2Node_FPAH_XR",
+   "float + float"
+  ],
+  [
+   "K2Node_FPAH_YT",
+   "float + float"
+  ],
+  [
+   "K2Node_FPAH_YB",
+   "float + float"
+  ],
+  [
+   "K2Node_FPAH_LineH",
+   "DrawLine"
+  ],
+  [
+   "K2Node_FPAH_LineV",
+   "DrawLine"
+  ]
+ ],
+ "eventpins": [
+  "OutputDelegate",
+  "then",
+  "SizeX",
+  "SizeY"
+ ],
+ "castpins": [
+  "execute",
+  "Object",
+  "then",
+  "CastFailed",
+  "As캐릭터"
+ ],
+ "error": "Traceback (most recent call last):\n  File \"C:\\Users\\fromj\\Downloads\\test\\test\\abc\\FurinaSource\\Scripts\\Unreal\\ue_combat_hud_probe.py\", line 10, in <module>\n    try:main()\n        ^^^^^^\n  File \"C:\\Users\\fromj\\Downloads\\test\\test\\abc\\FurinaSource\\Scripts\\Unreal\\ue_combat_hud_probe.py\", line 7, in main\n    cast=ed.create_node_from_name(R['actions'][0],unreal.Vector2D(0,1000),[]);R['castpins']=[str(p.get_pin_name()) for p in cast.list_all_pins()];R['castclass']=str(cast.get_editor_property('target_type'));cast.rename('M4_AmmoCast')\n                                                                                                                                                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nException: K2Node_DynamicCast: Failed to find property 'target_type' for attribute 'target_type' on 'K2Node_DynamicCast'\n"
+}

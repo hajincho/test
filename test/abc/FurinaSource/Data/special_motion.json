@@ -1,0 +1,11 @@
+{
+ "log": [
+  "added component",
+  "special flag node",
+  "abp ground gate"
+ ],
+ "char_status": "<BlueprintStatus.BS_UP_TO_DATE: 3>",
+ "char_saved": true,
+ "abp_status": "<BlueprintStatus.BS_UP_TO_DATE: 3>",
+ "abp_saved": true
+}

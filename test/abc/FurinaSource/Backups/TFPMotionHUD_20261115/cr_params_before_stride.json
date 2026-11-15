@@ -1,0 +1,398 @@
+{
+ "walk": 120,
+ "sprint": 600,
+ "run_narrow_cm": 0,
+ "run_stride": 1,
+ "run_kick": 1,
+ "hair_motion_mode": "bounded_speed_sway",
+ "hair_speed_blend": 3.8,
+ "hair_idle_alpha": 0.0,
+ "chains": [
+  {
+   "root": "HB1_1_0",
+   "kind": "cloth",
+   "lift": 15.8,
+   "bob": 7.0,
+   "amp": [
+    0.12,
+    0.06
+   ],
+   "idle": [
+    0,
+    0
+   ],
+   "tempo": 4.5,
+   "spatial": 2.0,
+   "phase": 0.0,
+   "rootAmp": 0.15
+  },
+  {
+   "root": "HB1_1_6",
+   "kind": "cloth",
+   "lift": 28.8,
+   "bob": 7.0,
+   "amp": [
+    0.12,
+    0.06
+   ],
+   "idle": [
+    0,
+    0
+   ],
+   "tempo": 4.5,
+   "spatial": 2.0,
+   "phase": 0.7,
+   "rootAmp": 0.15
+  },
+  {
+   "root": "HB1_2_1",
+   "kind": "cloth",
+   "lift": 37.0,
+   "bob": 7.0,
+   "amp": [
+    0.12,
+    0.06
+   ],
+   "idle": [
+    0,
+    0
+   ],
+   "tempo": 4.5,
+   "spatial": 2.0,
+   "phase": 1.4,
+   "rootAmp": 0.15
+  },
+  {
+   "root": "HB1_1_5",
+   "kind": "cloth",
+   "lift": 36.2,
+   "bob": 7.0,
+   "amp": [
+    0.12,
+    0.06
+   ],
+   "idle": [
+    0,
+    0
+   ],
+   "tempo": 4.5,
+   "spatial": 2.0,
+   "phase": 2.1,
+   "rootAmp": 0.15
+  },
+  {
+   "root": "HB1_2_7",
+   "kind": "cloth",
+   "lift": 37.0,
+   "bob": 7.0,
+   "amp": [
+    0.12,
+    0.06
+   ],
+   "idle": [
+    0,
+    0
+   ],
+   "tempo": 4.5,
+   "spatial": 2.0,
+   "phase": 2.8,
+   "rootAmp": 0.15
+  },
+  {
+   "root": "HB2_0_1",
+   "kind": "cloth",
+   "lift": 55.0,
+   "bob": 8.0,
+   "amp": [
+    0.08,
+    0.04
+   ],
+   "idle": [
+    0,
+    0
+   ],
+   "tempo": 4.5,
+   "spatial": 4.0,
+   "phase": 3.5,
+   "rootAmp": 0.15
+  },
+  {
+   "root": "HB3_0_1",
+   "kind": "cloth",
+   "lift": 55.0,
+   "bob": 8.0,
+   "amp": [
+    0.08,
+    0.04
+   ],
+   "idle": [
+    0,
+    0
+   ],
+   "tempo": 4.5,
+   "spatial": 4.0,
+   "phase": 4.2,
+   "rootAmp": 0.15
+  },
+  {
+   "root": "HB1_1_3",
+   "kind": "cloth",
+   "lift": 36.2,
+   "bob": 7.0,
+   "amp": [
+    0.12,
+    0.06
+   ],
+   "idle": [
+    0,
+    0
+   ],
+   "tempo": 4.5,
+   "spatial": 2.0,
+   "phase": 4.9,
+   "rootAmp": 0.15
+  },
+  {
+   "root": "HB4_0_1",
+   "kind": "cloth",
+   "lift": 55.0,
+   "bob": 8.0,
+   "amp": [
+    0.08,
+    0.04
+   ],
+   "idle": [
+    0,
+    0
+   ],
+   "tempo": 4.5,
+   "spatial": 4.0,
+   "phase": 5.6,
+   "rootAmp": 0.15
+  },
+  {
+   "root": "HB1_1_4",
+   "kind": "cloth",
+   "lift": 37.0,
+   "bob": 7.0,
+   "amp": [
+    0.12,
+    0.06
+   ],
+   "idle": [
+    0,
+    0
+   ],
+   "tempo": 4.5,
+   "spatial": 2.0,
+   "phase": 6.3,
+   "rootAmp": 0.15
+  },
+  {
+   "root": "HB1_1_8",
+   "kind": "cloth",
+   "lift": 15.8,
+   "bob": 7.0,
+   "amp": [
+    0.12,
+    0.06
+   ],
+   "idle": [
+    0,
+    0
+   ],
+   "tempo": 4.5,
+   "spatial": 2.0,
+   "phase": 7.0,
+   "rootAmp": 0.15
+  },
+  {
+   "root": "HB1_1_2",
+   "kind": "cloth",
+   "lift": 28.8,
+   "bob": 7.0,
+   "amp": [
+    0.12,
+    0.06
+   ],
+   "idle": [
+    0,
+    0
+   ],
+   "tempo": 4.5,
+   "spatial": 2.0,
+   "phase": 7.7,
+   "rootAmp": 0.15
+  },
+  {
+   "root": "\u9886\u5dfe",
+   "kind": "cloth",
+   "lift": 60.0,
+   "bob": 10.0,
+   "wave": false,
+   "amp": [
+    0,
+    0
+   ],
+   "idle": [
+    0,
+    0
+   ],
+   "tempo": 0,
+   "spatial": 0,
+   "phase": 0,
+   "rootAmp": 0
+  },
+  {
+   "root": "\u5e3dD1_1",
+   "kind": "cloth",
+   "lift": 35.0,
+   "bob": 8.0,
+   "amp": [
+    0.1,
+    0.05
+   ],
+   "idle": [
+    0,
+    0
+   ],
+   "tempo": 5.0,
+   "spatial": 1.5,
+   "phase": 0.3,
+   "rootAmp": 0.4
+  },
+  {
+   "root": "F_0_1_L",
+   "kind": "hair",
+   "lift": 8,
+   "bob": 0.0,
+   "amp": [
+    0.016,
+    0.0085
+   ],
+   "idle": [
+    0.003,
+    0.00225
+   ],
+   "tempo": 1.0,
+   "spatial": 2.0,
+   "phase": 0.0,
+   "rootAmp": 0.02,
+   "pend": {
+    "stiff": 7.0,
+    "blend": 0.55,
+    "drag": 0.94,
+    "min": 0.1,
+    "max": 0.45,
+    "grav": -4.0
+   }
+  },
+  {
+   "root": "F_0_1_R",
+   "kind": "hair",
+   "lift": 8,
+   "bob": 0.0,
+   "amp": [
+    0.016,
+    0.0085
+   ],
+   "idle": [
+    0.003,
+    0.00225
+   ],
+   "tempo": 1.0,
+   "spatial": 2.0,
+   "phase": 0.75,
+   "rootAmp": 0.02,
+   "pend": {
+    "stiff": 7.0,
+    "blend": 0.55,
+    "drag": 0.94,
+    "min": 0.1,
+    "max": 0.45,
+    "grav": -4.0
+   }
+  },
+  {
+   "root": "CF_1_L",
+   "kind": "hair",
+   "lift": 2,
+   "bob": 0.0,
+   "amp": [
+    0.07,
+    0.04
+   ],
+   "idle": [
+    0.01,
+    0.006
+   ],
+   "tempo": 1.1,
+   "spatial": 0.8,
+   "phase": 0.5,
+   "rootAmp": 0.35,
+   "pend": {
+    "stiff": 6.0,
+    "blend": 0.6,
+    "drag": 0.96,
+    "min": 0.17,
+    "max": 0.45,
+    "grav": -1.5
+   }
+  },
+  {
+   "root": "CF_1_R",
+   "kind": "hair",
+   "lift": 2,
+   "bob": 0.0,
+   "amp": [
+    0.07,
+    0.04
+   ],
+   "idle": [
+    0.01,
+    0.006
+   ],
+   "tempo": 1.1,
+   "spatial": 0.8,
+   "phase": 1.25,
+   "rootAmp": 0.35,
+   "pend": {
+    "stiff": 6.0,
+    "blend": 0.6,
+    "drag": 0.96,
+    "min": 0.17,
+    "max": 0.45,
+    "grav": -1.5
+   }
+  },
+  {
+   "root": "DM_0_1",
+   "kind": "hair",
+   "lift": 0,
+   "bob": 0.0,
+   "amp": [
+    0.024,
+    0.014
+   ],
+   "idle": [
+    0.004,
+    0.0025
+   ],
+   "tempo": 1.2,
+   "spatial": 1.2,
+   "phase": 0.9,
+   "rootAmp": 0.1,
+   "pend": {
+    "stiff": 10.0,
+    "blend": 0.7,
+    "drag": 0.95,
+    "min": 0.03,
+    "max": 0.27,
+    "grav": 0.0
+   }
+  }
+ ],
+ "tfp_locomotion": true,
+ "crouch_drop_cm": 0,
+ "crouch_back_cm": 0
+}

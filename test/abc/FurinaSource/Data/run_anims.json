@@ -1,0 +1,306 @@
+{
+ "furina": [
+  {
+   "pos": [
+    -180.0,
+    0.0
+   ],
+   "rate": 1.0,
+   "anim": "AS_Furina_TFP_N_Idle",
+   "len": 2.667,
+   "notifies": "ERR AnimSequence: Property 'Notifies' for attribute 'notifies' o"
+  },
+  {
+   "pos": [
+    -135.0,
+    0.0
+   ],
+   "rate": 1.0,
+   "anim": "AS_Furina_TFP_N_Idle",
+   "len": 2.667,
+   "notifies": "ERR AnimSequence: Property 'Notifies' for attribute 'notifies' o"
+  },
+  {
+   "pos": [
+    -90.0,
+    0.0
+   ],
+   "rate": 1.0,
+   "anim": "AS_Furina_TFP_N_Idle",
+   "len": 2.667,
+   "notifies": "ERR AnimSequence: Property 'Notifies' for attribute 'notifies' o"
+  },
+  {
+   "pos": [
+    -45.0,
+    0.0
+   ],
+   "rate": 1.0,
+   "anim": "AS_Furina_TFP_N_Idle",
+   "len": 2.667,
+   "notifies": "ERR AnimSequence: Property 'Notifies' for attribute 'notifies' o"
+  },
+  {
+   "pos": [
+    0.0,
+    0.0
+   ],
+   "rate": 1.0,
+   "anim": "AS_Furina_TFP_N_Idle",
+   "len": 2.667,
+   "notifies": "ERR AnimSequence: Property 'Notifies' for attribute 'notifies' o"
+  },
+  {
+   "pos": [
+    45.0,
+    0.0
+   ],
+   "rate": 1.0,
+   "anim": "AS_Furina_TFP_N_Idle",
+   "len": 2.667,
+   "notifies": "ERR AnimSequence: Property 'Notifies' for attribute 'notifies' o"
+  },
+  {
+   "pos": [
+    90.0,
+    0.0
+   ],
+   "rate": 1.0,
+   "anim": "AS_Furina_TFP_N_Idle",
+   "len": 2.667,
+   "notifies": "ERR AnimSequence: Property 'Notifies' for attribute 'notifies' o"
+  },
+  {
+   "pos": [
+    135.0,
+    0.0
+   ],
+   "rate": 1.0,
+   "anim": "AS_Furina_TFP_N_Idle",
+   "len": 2.667,
+   "notifies": "ERR AnimSequence: Property 'Notifies' for attribute 'notifies' o"
+  },
+  {
+   "pos": [
+    180.0,
+    0.0
+   ],
+   "rate": 1.0,
+   "anim": "AS_Furina_TFP_N_Idle",
+   "len": 2.667,
+   "notifies": "ERR AnimSequence: Property 'Notifies' for attribute 'notifies' o"
+  },
+  {
+   "pos": [
+    -180.0,
+    120.0
+   ],
+   "rate": 1.23,
+   "anim": "AS_Furina_TFP_N_Walk_B",
+   "len": 1.133,
+   "notifies": "ERR AnimSequence: Property 'Notifies' for attribute 'notifies' o"
+  },
+  {
+   "pos": [
+    -180.0,
+    600.0
+   ],
+   "rate": 1.974,
+   "anim": "AS_Furina_TFP_N_Run_B",
+   "len": 0.667,
+   "notifies": "ERR AnimSequence: Property 'Notifies' for attribute 'notifies' o"
+  },
+  {
+   "pos": [
+    -135.0,
+    120.0
+   ],
+   "rate": 1.219,
+   "anim": "AS_Furina_TFP_N_Walk_BL_135",
+   "len": 1.133,
+   "notifies": "ERR AnimSequence: Property 'Notifies' for attribute 'notifies' o"
+  },
+  {
+   "pos": [
+    -135.0,
+    600.0
+   ],
+   "rate": 2.144,
+   "anim": "AS_Furina_TFP_N_Run_FL",
+   "len": 0.8,
+   "notifies": "ERR AnimSequence: Property 'Notifies' for attribute 'notifies' o"
+  },
+  {
+   "pos": [
+    -90.0,
+    120.0
+   ],
+   "rate": 1.234,
+   "anim": "AS_Furina_TFP_N_Walk_FL",
+   "len": 1.133,
+   "notifies": "ERR AnimSequence: Property 'Notifies' for attribute 'notifies' o"
+  },
+  {
+   "pos": [
+    -90.0,
+    600.0
+   ],
+   "rate": 2.144,
+   "anim": "AS_Furina_TFP_N_Run_FL",
+   "len": 0.8,
+   "notifies": "ERR AnimSequence: Property 'Notifies' for attribute 'notifies' o"
+  },
+  {
+   "pos": [
+    -45.0,
+    120.0
+   ],
+   "rate": 1.259,
+   "anim": "AS_Furina_TFP_N_Walk_FL_45",
+   "len": 1.133,
+   "notifies": "ERR AnimSequence: Property 'Notifies' for attribute 'notifies' o"
+  },
+  {
+   "pos": [
+    -45.0,
+    600.0
+   ],
+   "rate": 2.144,
+   "anim": "AS_Furina_TFP_N_Run_FL",
+   "len": 0.8,
+   "notifies": "ERR AnimSequence: Property 'Notifies' for attribute 'notifies' o"
+  },
+  {
+   "pos": [
+    0.0,
+    120.0
+   ],
+   "rate": 1.228,
+   "anim": "AS_Furina_TFP_N_Walk_F",
+   "len": 1.133,
+   "notifies": "ERR AnimSequence: Property 'Notifies' for attribute 'notifies' o"
+  },
+  {
+   "pos": [
+    0.0,
+    600.0
+   ],
+   "rate": 1.935,
+   "anim": "AS_Furina_TFP_N_Run_F",
+   "len": 0.8,
+   "notifies": "ERR AnimSequence: Property 'Notifies' for attribute 'notifies' o"
+  },
+  {
+   "pos": [
+    45.0,
+    120.0
+   ],
+   "rate": 1.259,
+   "anim": "AS_Furina_TFP_N_Walk_FR_45",
+   "len": 1.133,
+   "notifies": "ERR AnimSequence: Property 'Notifies' for attribute 'notifies' o"
+  },
+  {
+   "pos": [
+    45.0,
+    600.0
+   ],
+   "rate": 2.144,
+   "anim": "AS_Furina_TFP_N_Run_FR",
+   "len": 0.8,
+   "notifies": "ERR AnimSequence: Property 'Notifies' for attribute 'notifies' o"
+  },
+  {
+   "pos": [
+    90.0,
+    120.0
+   ],
+   "rate": 1.234,
+   "anim": "AS_Furina_TFP_N_Walk_FR",
+   "len": 1.133,
+   "notifies": "ERR AnimSequence: Property 'Notifies' for attribute 'notifies' o"
+  },
+  {
+   "pos": [
+    90.0,
+    600.0
+   ],
+   "rate": 2.144,
+   "anim": "AS_Furina_TFP_N_Run_FR",
+   "len": 0.8,
+   "notifies": "ERR AnimSequence: Property 'Notifies' for attribute 'notifies' o"
+  },
+  {
+   "pos": [
+    135.0,
+    120.0
+   ],
+   "rate": 1.21,
+   "anim": "AS_Furina_TFP_N_Walk_BR_135",
+   "len": 1.133,
+   "notifies": "ERR AnimSequence: Property 'Notifies' for attribute 'notifies' o"
+  },
+  {
+   "pos": [
+    135.0,
+    600.0
+   ],
+   "rate": 2.144,
+   "anim": "AS_Furina_TFP_N_Run_FR",
+   "len": 0.8,
+   "notifies": "ERR AnimSequence: Property 'Notifies' for attribute 'notifies' o"
+  },
+  {
+   "pos": [
+    180.0,
+    120.0
+   ],
+   "rate": 1.23,
+   "anim": "AS_Furina_TFP_N_Walk_B",
+   "len": 1.133,
+   "notifies": "ERR AnimSequence: Property 'Notifies' for attribute 'notifies' o"
+  },
+  {
+   "pos": [
+    180.0,
+    600.0
+   ],
+   "rate": 1.974,
+   "anim": "AS_Furina_TFP_N_Run_B",
+   "len": 0.667,
+   "notifies": "ERR AnimSequence: Property 'Notifies' for attribute 'notifies' o"
+  }
+ ],
+ "manny": [
+  {
+   "pos": [
+    500.0,
+    0.0
+   ],
+   "rate": 1.0,
+   "anim": "Run_Fwd_Anim",
+   "len": 1.9,
+   "notifies": "ERR AnimSequence: Property 'Notifies' for attribute 'notifies' o"
+  },
+  {
+   "pos": [
+    230.0,
+    0.0
+   ],
+   "rate": 1.0,
+   "anim": "Walk_Fwd_Anim",
+   "len": 2.733,
+   "notifies": "ERR AnimSequence: Property 'Notifies' for attribute 'notifies' o"
+  },
+  {
+   "pos": [
+    0.0,
+    0.0
+   ],
+   "rate": 1.0,
+   "anim": "Walk_InPlace_Anim",
+   "len": 2.733,
+   "notifies": "ERR AnimSequence: Property 'Notifies' for attribute 'notifies' o"
+  }
+ ]
+}

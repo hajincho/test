@@ -1,0 +1,16 @@
+{
+ "event": "added",
+ "pins": {
+  "idle": [
+   "Pose"
+  ],
+  "blend": [
+   "A",
+   "B",
+   "Alpha",
+   "Pose"
+  ]
+ },
+ "abp_status": "<BlueprintStatus.BS_UP_TO_DATE: 3>",
+ "abp_saved": true
+}

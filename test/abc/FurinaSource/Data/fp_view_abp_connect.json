@@ -1,0 +1,22 @@
+{
+ "mcs": [
+  "AnimGraphNode_ModifyCurve_Aim",
+  "AnimGraphNode_ModifyCurve_AimState",
+  "AnimGraphNode_ModifyCurve_ViewState"
+ ],
+ "old_targets": [
+  "AnimGraphNode_ControlRig_0"
+ ],
+ "in": true,
+ "out": [
+  true
+ ],
+ "st_out_to": [
+  "AnimGraphNode_ControlRig_0"
+ ],
+ "aim_out_to": [
+  "AnimGraphNode_ModifyCurve_ViewState"
+ ],
+ "status": "<BlueprintStatus.BS_UP_TO_DATE: 3>",
+ "saved": true
+}

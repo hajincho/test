@@ -1,0 +1,22 @@
+{
+ "saved": [
+  "/Game/Furina/CR_FurinaSecondary",
+  "/Game/Furina/ABP_Furina",
+  "/Game/3DPlatformerGameBundle/Demo/ThirdPersonAssets/Blueprints/ThirdPersonCharacter_BP",
+  "/Game/Furina/FP/BP_FurinaHUD",
+  "/Game/Furina/FP/BP_FurinaBullet",
+  "ExampleLevel"
+ ],
+ "failed": [],
+ "hidden_notes": [
+  "TextRenderActor2_4",
+  "TextRenderActor3",
+  "TextRenderActor4",
+  "TextRenderActor5",
+  "TextRenderActor6",
+  "TextRenderActor7_0",
+  "TextRenderActor8_1",
+  "TextRenderActor10_0"
+ ],
+ "ok": true
+}

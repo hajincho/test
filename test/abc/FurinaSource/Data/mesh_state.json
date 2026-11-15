@@ -1,0 +1,23 @@
+[
+ {
+  "name": "CharacterMesh0",
+  "asset": "/Game/3DPlatformerGameBundle/Demo/ThirdPersonAssets/Characters/Mannequins/Meshes/Manny_Simple_SK.Manny_Simple_SK",
+  "scale": "<Struct 'Vector' (0x0000022ADD5065B0) {x: 1.000000, y: 1.000000, z: 1.000000}>",
+  "visible": false,
+  "anim": "Manny_AnimBlueprint_C"
+ },
+ {
+  "name": "FurinaMesh",
+  "asset": "/Game/Saori/SK_Saori.SK_Saori",
+  "scale": "<Struct 'Vector' (0x0000022A33CF65B0) {x: 1.116310, y: 1.116310, z: 1.116310}>",
+  "visible": true,
+  "anim": "ABP_Furina_C"
+ },
+ {
+  "name": "FurinaRifle",
+  "asset": "/Game/Furina/M4/SK_M4A1.SK_M4A1",
+  "scale": "<Struct 'Vector' (0x0000022A33CF8DB0) {x: 1.000000, y: 1.000000, z: 1.000000}>",
+  "visible": true,
+  "anim": null
+ }
+]

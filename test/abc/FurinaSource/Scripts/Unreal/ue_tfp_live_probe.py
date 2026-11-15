@@ -1,0 +1,3 @@
+import unreal,json,os
+D=r'C:\Users\fromj\Downloads\test\test\abc\FurinaSource\Data'
+R={'classes':[n for n in dir(unreal) if 'Subsystem' in n or 'SubSystem' in n],'helpers':[n for n in dir(unreal) if 'subsystem' in n.lower()],'shot':unreal.AutomationLibrary.take_high_res_screenshot.__doc__,'pc':[n for n in dir(unreal.PlayerController) if 'player' in n or 'subsystem' in n],'sub':[n for n in dir(unreal.EnhancedInputLocalPlayerSubsystem) if 'local' in n or 'player' in n]};w=unreal.get_editor_subsystem(unreal.UnrealEditorSubsystem).get_editor_world();R['mode']=str(w.get_world_settings().default_game_mode);json.dump(R,open(os.path.join(D,'tfp_live_probe.json'),'w'),indent=1)

@@ -1,0 +1,36 @@
+{
+ "text": [
+  {
+   "actor": "TextRenderActor2_4",
+   "text": "If you would like to learn more about each individual<br>component, please open their respective example<br>level for more detailed information as this level is<br>about how they can interact and how to make those<br>interactions possible."
+  },
+  {
+   "actor": "TextRenderActor3",
+   "text": "This Hidden Target BP can be used to select Actors<br>like Springs, Vertical Ziplines, Jump Pads and Rails<br>so the Character can interact with those Actors with<br>the Homing Attack.<br><br>The Hidden Target BP is attached to those Actors."
+  },
+  {
+   "actor": "TextRenderActor4",
+   "text": "To attach the Hidden Target BP to other Actors first<br>we add the parent Actor reference. The Hidden Target<br>will be attached to the root component of the parent<br>Actor. You can set -Snap to Target?- False to move<br>the Hidden Target to a different location relative to<br>the parent Actor."
+  },
+  {
+   "actor": "TextRenderActor5",
+   "text": "The Vertical Zipline will attach the Hidden Target to<br>the Sphere Collision (Pulley).<br><br>The Hidden Target only has collision with the custom<br>Trace Channel used by the Homing Attack component<br>so it won't be destroyed."
+  },
+  {
+   "actor": "TextRenderActor6",
+   "text": "Please use this level as reference and see how the<br>different Actors can be added so they can interact with<br>each other. For example, we can add a Hidden Target<br>to an end of a Rail close to the surface but for Ziplines<br>it needs to be moved below the cable. With Springs we<br>can place the Hidden Target also at the surface."
+  },
+  {
+   "actor": "TextRenderActor7_0",
+   "text": "Parallel Rail Jumps<br><br>Jumping between rails in this demo is done by pressing<br>Q or the Gamepad Right Shoulder button while holding<br>the movement input and aiming at the desired direction."
+  },
+  {
+   "actor": "TextRenderActor8_1",
+   "text": "Rail Loops<br><br>Rail loops can be created by selecting the option [Create<br>Closed Loop Rail?] on each individual rail. This will close <br>the rail spline using the first and last spline points. The <br>spline mesh needs to be adjusted using the spline tool<br>so that the spline aligns with the mesh.<br><br>To create circle loops set the option [Circle Loop Rail?]<br>to True."
+  },
+  {
+   "actor": "TextRenderActor10_0",
+   "text": "Vertical Rail Loops<br><br>Vertical Rail loops can be created by selecting the option <br>[Create Vertical Rail Loop?] on each individual rail. The<br>character will be able to grind on rails upside down. Make<br>sure to rotate the spline points so they do not twist or<br>bend incorrectly. If not then the character will rotate to<br>the sides while using the rails.<br><br>Select [Closed Vertical Loop?] to close the spline rail."
+  }
+ ]
+}

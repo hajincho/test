@@ -1,0 +1,21 @@
+{
+ "checks": {
+  "magazine_30": true,
+  "crouch_allowed": true,
+  "crouch_height_58": true,
+  "diagnostics_removed": true,
+  "m4_equipped": true,
+  "camera_fixed_700": true,
+  "tutorial_notes_hidden": true
+ },
+ "note_count": 8,
+ "statuses": {
+  "/Game/Furina/CR_FurinaSecondary": "<BlueprintStatus.BS_UP_TO_DATE: 3>",
+  "/Game/Furina/ABP_Furina": "<BlueprintStatus.BS_UP_TO_DATE: 3>",
+  "/Game/Furina/FP/BP_FurinaHUD": "<BlueprintStatus.BS_UP_TO_DATE: 3>",
+  "/Game/Furina/FP/BP_FurinaBullet": "<BlueprintStatus.BS_UP_TO_DATE: 3>",
+  "/Game/Furina/M4/BP_223Case": "<BlueprintStatus.BS_UP_TO_DATE: 3>",
+  "/Game/Furina/M4/BP_M4Flash": "<BlueprintStatus.BS_UP_TO_DATE: 3>"
+ },
+ "ok": true
+}

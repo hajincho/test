@@ -1,0 +1,16 @@
+{
+ "FMG_ShowHand": true,
+ "FMG_ShowHand2": true,
+ "FMG_HideMag": true,
+ "FMG_ShowSeated": true,
+ "setlast_inputs": [
+  "FMG_ShowHand",
+  "FMG_ShowHand2",
+  "FMG_HideMag",
+  "FMG_ShowSeated"
+ ],
+ "status": "<BlueprintStatus.BS_UP_TO_DATE: 3>",
+ "saved": true,
+ "drop_profile": "Custom",
+ "drop_saved": true
+}

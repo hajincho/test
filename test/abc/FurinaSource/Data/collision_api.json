@@ -1,0 +1,10 @@
+{
+ "CollisionResponse": [],
+ "CollisionResponseContainer": [],
+ "CollisionResponseType": [
+  "ECR_BLOCK",
+  "ECR_IGNORE",
+  "ECR_OVERLAP"
+ ],
+ "doc": "x.set_collision_response_to_channel(channel, new_response) -> None\r\nChanges a member of the ResponseToChannels container for this PrimitiveComponent.\r\n\r\nArgs:\r\n    channel (CollisionChannel): The channel to change the response of\r\n    new_response (CollisionResponseType): What the new response should be to the supplied Channel"
+}

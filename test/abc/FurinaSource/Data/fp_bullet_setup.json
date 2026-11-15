@@ -1,0 +1,31 @@
+{
+ "log": [],
+ "before": [
+  "None",
+  "Bullet",
+  "Tracer",
+  "Ballistics"
+ ],
+ "after": [
+  "None",
+  "Bullet",
+  "Tracer",
+  "Ballistics"
+ ],
+ "roots": [
+  "Bullet",
+  "Ballistics"
+ ],
+ "status": "<BlueprintStatus.BS_UP_TO_DATE: 3>",
+ "saved": true,
+ "lmb": [
+  [
+   "LeftMouseButton",
+   "Direction_IA"
+  ],
+  [
+   "LeftMouseButton",
+   "IA_FurinaFireAuto"
+  ]
+ ]
+}

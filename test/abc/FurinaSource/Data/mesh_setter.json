@@ -1,0 +1,19 @@
+{
+ "hits": [],
+ "graphs": [
+  "UserConstructionScript",
+  "Get Key Array",
+  "Is Using Mouse?",
+  "Get Look Rate",
+  "EventGraph",
+  "Custom Graph 1",
+  "Custom Graph 2",
+  "Custom Graph 3",
+  "Custom Graph 4",
+  "Jump Graph",
+  "Hit Graph",
+  "Walking Off Ledge Graph",
+  "Overlap Graph",
+  "On Landed Graph"
+ ]
+}

@@ -1,0 +1,69 @@
+{
+ "checks": {
+  "starts_with_30": true,
+  "muzzle_flash_spawns": true,
+  "five_shots_consume_five": true,
+  "empty_cases_spawn": true,
+  "reload_blocks_shot": true,
+  "reload_refills_30": true,
+  "moving_hip_blocked": true,
+  "sprint_enters_shoulder_without_shot": true,
+  "moving_shoulder_can_fire": true,
+  "crouch_walk_speed_90": true,
+  "crouch_capsule_58": true,
+  "empty_magazine_stops_at_zero": true
+ },
+ "images": [
+  "C:\\Users\\fromj\\Downloads\\test\\test\\abc\\Saved\\Screenshots\\WindowsEditor\\Combat_Standing.png",
+  "C:\\Users\\fromj\\Downloads\\test\\test\\abc\\Saved\\Screenshots\\WindowsEditor\\Combat_Shoulder.png",
+  "C:\\Users\\fromj\\Downloads\\test\\test\\abc\\Saved\\Screenshots\\WindowsEditor\\Combat_Crouching.png"
+ ],
+ "error": null,
+ "ok": true,
+ "initial_rounds": 30,
+ "reload_rounds": 30,
+ "foot_error_cm": 0.7496720608461693,
+ "crouch_speed": 90.0,
+ "case_count": 5,
+ "rounds_after_five": 25,
+ "diagnostics": {
+  "gun_asset": "<Object '/Game/Furina/M4/SK_M4A1.SK_M4A1' (0x000002283E9CB400) Class 'SkeletalMesh'>",
+  "gun_scale": "<Struct 'Transform' (0x000002282DDFBD20) {rotation: {x: -0.030141, y: -0.030098, z: 0.706741, w: -0.706189}, translation: {x: 38.136413, y: 12.614048, z: 122.808901}, scale3d: {x: 1.000000, y: 1.000000, z: 1.000000}}>",
+  "gun_grip": "<Struct 'Transform' (0x000002282DDFBD20) {rotation: {x: 0.030141, y: 0.030098, z: -0.706741, w: 0.706189}, translation: {x: 38.136413, y: 12.614048, z: 122.808901}, scale3d: {x: 1.000000, y: 1.000000, z: 1.000000}}>",
+  "can_crouch": "True",
+  "nav": "<Struct 'NavAgentProperties' (0x0000022851012970) {can_crouch: True, can_jump: True, can_walk: True, can_swim: True, can_fly: False, agent_radius: 42.000000, agent_height: 192.000000, agent_step_height: -1.000000, nav_walking_search_height_scale: 0.500000, preferred_nav_data: {}}>",
+  "gun_standing": "<Struct 'Transform' (0x000002282DDFBD20) {rotation: {x: -0.030141, y: -0.030098, z: 0.706741, w: -0.706189}, translation: {x: 39.001473, y: 7.987854, z: 122.867904}, scale3d: {x: 1.000000, y: 1.000000, z: 1.000000}}>",
+  "mesh_standing": "<Struct 'Transform' (0x000002282DDFBD20) {rotation: {x: 0.000000, y: 0.000000, z: -0.707107, w: 0.707107}, translation: {x: 0.000000, y: 0.000000, z: 3.149999}, scale3d: {x: 1.000000, y: 1.000000, z: 1.000000}}>",
+  "cm_active": true,
+  "fire_conditions": {
+   "DiagAim": true,
+   "DiagCanFire": true,
+   "DiagShoulder": true,
+   "DiagReady": true
+  },
+  "shoulder_component": "/Temp/UEDPIE_0_Untitled_5.Untitled:PersistentLevel.ThirdPersonCharacter_BP_C_0.FurinaShoulder",
+  "shoulder_property": "/Temp/UEDPIE_0_Untitled_5.Untitled:PersistentLevel.ThirdPersonCharacter_BP_C_0.FurinaShoulder",
+  "shoulder_active": true,
+  "gun_after_reload": "<Struct 'Transform' (0x000002285B688210) {rotation: {x: -0.035011, y: -0.025229, z: 0.706594, w: -0.706302}, translation: {x: 39.328627, y: 8.186659, z: 124.934618}, scale3d: {x: 1.000000, y: 1.000000, z: 1.000000}}>",
+  "grip_after_reload": "<Struct 'Transform' (0x000002285B688210) {rotation: {x: 0.035011, y: 0.025229, z: -0.706594, w: 0.706302}, translation: {x: 39.328627, y: 8.186659, z: 124.934618}, scale3d: {x: 1.000000, y: 1.000000, z: 1.000000}}>",
+  "feet_before": {
+   "Left-ankle": 13.171336543114187,
+   "Right-ankle": 13.138401147735259
+  },
+  "mode_before_crouch": "<MovementMode.MOVE_WALKING: 1>",
+  "can_crouch_now": true,
+  "wants_crouch": "True",
+  "feet_crouched": {
+   "Left-ankle": 13.921008603960356,
+   "Right-ankle": 13.888073179806302
+  },
+  "crouch_curves": {
+   "Crouch": 1.0,
+   "FurinaIdle": 1.0,
+   "FurinaWalk": 0.0
+  },
+  "mesh_crouched": "<Struct 'Transform' (0x000002285B688210) {rotation: {x: 0.000000, y: 0.000000, z: -0.707288, w: 0.706926}, translation: {x: 0.000000, y: 0.000000, z: 3.149999}, scale3d: {x: 1.000000, y: 1.000000, z: 1.000000}}>",
+  "crouching": true,
+  "mode_crouched": "<MovementMode.MOVE_WALKING: 1>"
+ }
+}

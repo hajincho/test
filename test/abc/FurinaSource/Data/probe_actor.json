@@ -1,0 +1,102 @@
+{
+ "player": "<Struct 'Vector' (0x000001748561BF80) {x: 0.000000, y: 0.000000, z: 148.275198}>",
+ "actor": {
+  "cls": "Spline_Mesh_BP_C",
+  "loc": "<Struct 'Vector' (0x000001748561B5D0) {x: 375.000000, y: 0.000000, z: 70.000000}>",
+  "origin": "<Struct 'Vector' (0x000001748561BF80) {x: 1235.000000, y: 0.000000, z: 124.725048}>",
+  "extent": "<Struct 'Vector' (0x0000017485618920) {x: 860.000000, y: 27.375000, z: 74.724949}>",
+  "label": "Spline_Mesh_BP"
+ },
+ "comps": [
+  {
+   "n": "Spline",
+   "cls": "SplineComponent",
+   "profile": "Custom",
+   "enabled": "<CollisionEnabled.NO_COLLISION: 0>",
+   "obj": "<CollisionChannel.ECC_WORLD_STATIC: 0>",
+   "mesh": null,
+   "visible": true
+  },
+  {
+   "n": "NODE_AddSplineMeshComponent-0",
+   "cls": "SplineMeshComponent",
+   "profile": "Custom",
+   "enabled": "<CollisionEnabled.QUERY_AND_PHYSICS: 3>",
+   "obj": "<CollisionChannel.ECC_WORLD_STATIC: 0>",
+   "mesh": "Rail_SM",
+   "visible": true
+  },
+  {
+   "n": "NODE_AddSplineMeshComponent-0_0",
+   "cls": "SplineMeshComponent",
+   "profile": "Custom",
+   "enabled": "<CollisionEnabled.QUERY_AND_PHYSICS: 3>",
+   "obj": "<CollisionChannel.ECC_WORLD_STATIC: 0>",
+   "mesh": "Rail_SM",
+   "visible": true
+  },
+  {
+   "n": "NODE_AddSplineMeshComponent-0_1",
+   "cls": "SplineMeshComponent",
+   "profile": "Custom",
+   "enabled": "<CollisionEnabled.QUERY_AND_PHYSICS: 3>",
+   "obj": "<CollisionChannel.ECC_WORLD_STATIC: 0>",
+   "mesh": "Rail_SM",
+   "visible": true
+  },
+  {
+   "n": "NODE_AddSplineMeshComponent-2",
+   "cls": "SplineMeshComponent",
+   "profile": "Custom",
+   "enabled": "<CollisionEnabled.QUERY_AND_PHYSICS: 3>",
+   "obj": "<CollisionChannel.ECC_WORLD_STATIC: 0>",
+   "mesh": "Overlap_Rail_SM",
+   "visible": false
+  },
+  {
+   "n": "NODE_AddSplineMeshComponent-2_0",
+   "cls": "SplineMeshComponent",
+   "profile": "Custom",
+   "enabled": "<CollisionEnabled.QUERY_AND_PHYSICS: 3>",
+   "obj": "<CollisionChannel.ECC_WORLD_STATIC: 0>",
+   "mesh": "Overlap_Rail_SM",
+   "visible": false
+  },
+  {
+   "n": "NODE_AddSplineMeshComponent-2_1",
+   "cls": "SplineMeshComponent",
+   "profile": "Custom",
+   "enabled": "<CollisionEnabled.QUERY_AND_PHYSICS: 3>",
+   "obj": "<CollisionChannel.ECC_WORLD_STATIC: 0>",
+   "mesh": "Overlap_Rail_SM",
+   "visible": false
+  },
+  {
+   "n": "NODE_AddHierarchicalInstancedStaticMeshComponent-10",
+   "cls": "HierarchicalInstancedStaticMeshComponent",
+   "profile": "Custom",
+   "enabled": "<CollisionEnabled.QUERY_AND_PHYSICS: 3>",
+   "obj": "<CollisionChannel.ECC_WORLD_STATIC: 0>",
+   "mesh": "Cylinder_SM",
+   "visible": true
+  },
+  {
+   "n": "NODE_AddHierarchicalInstancedStaticMeshComponent-11",
+   "cls": "HierarchicalInstancedStaticMeshComponent",
+   "profile": "NoCollision",
+   "enabled": "<CollisionEnabled.NO_COLLISION: 0>",
+   "obj": "<CollisionChannel.ECC_WORLD_STATIC: 0>",
+   "mesh": "Cylinder_SM",
+   "visible": true
+  },
+  {
+   "n": "NODE_AddHierarchicalInstancedStaticMeshComponent-12",
+   "cls": "HierarchicalInstancedStaticMeshComponent",
+   "profile": "NoCollision",
+   "enabled": "<CollisionEnabled.NO_COLLISION: 0>",
+   "obj": "<CollisionChannel.ECC_WORLD_STATIC: 0>",
+   "mesh": "Base_Plate_SM",
+   "visible": true
+  }
+ ]
+}

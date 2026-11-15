@@ -1,0 +1,124 @@
+{
+ "checks": {
+  "fp_active": true,
+  "visible_case_actor": true
+ },
+ "images": [
+  "C:\\Users\\fromj\\Downloads\\test\\test\\abc\\Saved\\Screenshots\\WindowsEditor\\Combat_TFPADS_Actual.png",
+  "C:\\Users\\fromj\\Downloads\\test\\test\\abc\\Saved\\Screenshots\\WindowsEditor\\Combat_TFPActualCase01.png",
+  "C:\\Users\\fromj\\Downloads\\test\\test\\abc\\Saved\\Screenshots\\WindowsEditor\\Combat_TFPActualCase05.png",
+  "C:\\Users\\fromj\\Downloads\\test\\test\\abc\\Saved\\Screenshots\\WindowsEditor\\Combat_TFPActualCase12.png"
+ ],
+ "error": null,
+ "ok": true,
+ "initial_rounds": 30,
+ "reload_rounds": null,
+ "foot_error_cm": null,
+ "crouch_speed": null,
+ "case_count": null,
+ "rounds_after_five": null,
+ "samples": [],
+ "diagnostics": {
+  "gun_asset": "<Object '/Game/Furina/M4/SK_M4A1.SK_M4A1' (0x00000156E0490A00) Class 'SkeletalMesh'>",
+  "gun_scale": "<Struct 'Transform' (0x00000156D11FBDB0) {rotation: {x: -0.030141, y: -0.030098, z: 0.706741, w: -0.706189}, translation: {x: 36.587858, y: 10.783214, z: 125.375713}, scale3d: {x: 1.000000, y: 1.000000, z: 1.000000}}>",
+  "gun_grip": "<Struct 'Transform' (0x00000156D11FBDB0) {rotation: {x: 0.030141, y: 0.030098, z: -0.706741, w: 0.706189}, translation: {x: 36.587858, y: 10.783214, z: 125.375713}, scale3d: {x: 1.000000, y: 1.000000, z: 1.000000}}>",
+  "can_crouch": "True",
+  "nav": "<Struct 'NavAgentProperties' (0x000001567FF11570) {can_crouch: True, can_jump: True, can_walk: True, can_swim: True, can_fly: False, agent_radius: 42.000000, agent_height: 192.000000, agent_step_height: -1.000000, nav_walking_search_height_scale: 0.500000, preferred_nav_data: {}}>",
+  "components": [
+   [
+    "FollowCamera",
+    false,
+    []
+   ],
+   [
+    "FurinaMesh",
+    true,
+    []
+   ],
+   [
+    "FurinaRifle",
+    true,
+    []
+   ],
+   [
+    "FPCamera",
+    true,
+    [
+     "FurinaFPCamera"
+    ]
+   ],
+   [
+    "FurinaFPWanted",
+    true,
+    []
+   ],
+   [
+    "FurinaADS",
+    true,
+    [
+     "FurinaADS"
+    ]
+   ],
+   [
+    "FurinaShoulder",
+    false,
+    [
+     "FurinaShoulder"
+    ]
+   ],
+   [
+    "FurinaADSRestoreTP",
+    false,
+    [
+     "FurinaADSRestoreTP"
+    ]
+   ],
+   [
+    "FurinaSpeedCap",
+    true,
+    [
+     "FurinaSpeedCap"
+    ]
+   ],
+   [
+    "FurinaShoulderLeft",
+    false,
+    [
+     "FurinaShoulderLeft"
+    ]
+   ],
+   [
+    "FurinaCrouch",
+    false,
+    [
+     "FurinaCrouch"
+    ]
+   ],
+   [
+    "FurinaShoulderAuto",
+    false,
+    [
+     "FurinaShoulderAuto"
+    ]
+   ]
+  ],
+  "grind": {
+   "UsingRail?": false,
+   "UsingZipline?": false,
+   "RailJumpActive?": false
+  },
+  "ground": true,
+  "cam": "<Struct 'Transform' (0x00000156D11FBDB0) {rotation: {x: 0.000000, y: -0.000000, z: -0.000000, w: 1.000000}, translation: {x: 18.337999, y: 0.000169, z: 143.882470}, scale3d: {x: 1.000000, y: 1.000000, z: 1.000000}}>",
+  "curves": {
+   "AimADS": 1.0,
+   "ViewTP": 0.0
+  },
+  "sight_points": {
+   "rear": "<Struct 'Vector' (0x0000015708AED280) {x: 8.202805, y: -0.000044, z: -0.000047}>",
+   "front": "<Struct 'Vector' (0x0000015708AED280) {x: 50.570350, y: -0.000069, z: -0.000036}>"
+  },
+  "case_positions": [
+   "<Struct 'Vector' (0x0000015708AB6B30) {x: 68.673166, y: 31.411825, z: 143.715677}>"
+  ]
+ }
+}

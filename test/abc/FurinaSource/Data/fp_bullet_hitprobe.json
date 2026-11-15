@@ -1,0 +1,111 @@
+{
+ "spawns": [
+  {
+   "n": "BP_FurinaBullet_C_120",
+   "instigator": "ThirdPersonCharacter_BP_2",
+   "owner": "ThirdPersonCharacter_BP_2",
+   "profile": "BlockAllDynamic",
+   "loc": "<Struct 'Vector' (0x00000173FB0DFDF0) {x: 1125.410482, y: 4.392087, z: 162.382735}>"
+  },
+  {
+   "n": "BP_FurinaBullet_C_121",
+   "instigator": "ThirdPersonCharacter_BP_2",
+   "owner": "ThirdPersonCharacter_BP_2",
+   "profile": "BlockAllDynamic",
+   "loc": "<Struct 'Vector' (0x00000173FB0DD690) {x: 1125.607858, y: 13.167854, z: 164.618942}>"
+  },
+  {
+   "n": "BP_FurinaBullet_C_122",
+   "instigator": "ThirdPersonCharacter_BP_2",
+   "owner": "ThirdPersonCharacter_BP_2",
+   "profile": "BlockAllDynamic",
+   "loc": "<Struct 'Vector' (0x00000173FB0DD460) {x: 1123.534639, y: -3.455287, z: 148.552546}>"
+  },
+  {
+   "n": "BP_FurinaBullet_C_123",
+   "instigator": "ThirdPersonCharacter_BP_2",
+   "owner": "ThirdPersonCharacter_BP_2",
+   "profile": "BlockAllDynamic",
+   "loc": "<Struct 'Vector' (0x00000173FB0DE450) {x: 1123.755243, y: 13.397618, z: 159.869913}>"
+  },
+  {
+   "n": "BP_FurinaBullet_C_124",
+   "instigator": "ThirdPersonCharacter_BP_2",
+   "owner": "ThirdPersonCharacter_BP_2",
+   "profile": "BlockAllDynamic",
+   "loc": "<Struct 'Vector' (0x00000173FB0DE0E0) {x: 1123.284203, y: 20.955808, z: 154.669505}>"
+  },
+  {
+   "n": "BP_FurinaBullet_C_125",
+   "instigator": "ThirdPersonCharacter_BP_2",
+   "owner": "ThirdPersonCharacter_BP_2",
+   "profile": "BlockAllDynamic",
+   "loc": "<Struct 'Vector' (0x00000173FB0DC330) {x: 1124.176312, y: 7.671640, z: 171.888455}>"
+  },
+  {
+   "n": "BP_FurinaBullet_C_126",
+   "instigator": "ThirdPersonCharacter_BP_2",
+   "owner": "ThirdPersonCharacter_BP_2",
+   "profile": "BlockAllDynamic",
+   "loc": "<Struct 'Vector' (0x00000173FB0DC970) {x: 1123.226574, y: -2.334580, z: 148.736442}>"
+  }
+ ],
+ "hits": [
+  {
+   "n": "BP_FurinaBullet_C_120",
+   "blocking": true,
+   "initial_overlap": false,
+   "dist": 76.30683135986328,
+   "actor": "Spline_Mesh_BP_2",
+   "comp": "NODE_AddSplineMeshComponent-0_0"
+  },
+  {
+   "n": "BP_FurinaBullet_C_121",
+   "blocking": true,
+   "initial_overlap": false,
+   "dist": 80.06564331054688,
+   "actor": "Spline_Mesh_BP_2",
+   "comp": "NODE_AddSplineMeshComponent-0_0"
+  },
+  {
+   "n": "BP_FurinaBullet_C_122",
+   "blocking": true,
+   "initial_overlap": false,
+   "dist": 59.231414794921875,
+   "actor": "Spline_Mesh_BP_2",
+   "comp": "NODE_AddSplineMeshComponent-0_0"
+  },
+  {
+   "n": "BP_FurinaBullet_C_123",
+   "blocking": true,
+   "initial_overlap": false,
+   "dist": 74.22281646728516,
+   "actor": "Spline_Mesh_BP_2",
+   "comp": "NODE_AddSplineMeshComponent-0_0"
+  },
+  {
+   "n": "BP_FurinaBullet_C_124",
+   "blocking": true,
+   "initial_overlap": false,
+   "dist": 560.6289672851562,
+   "actor": "Cube_SM_8",
+   "comp": "StaticMeshComponent0"
+  },
+  {
+   "n": "BP_FurinaBullet_C_125",
+   "blocking": true,
+   "initial_overlap": false,
+   "dist": 94.65089416503906,
+   "actor": "Spline_Mesh_BP_2",
+   "comp": "NODE_AddSplineMeshComponent-0_0"
+  },
+  {
+   "n": "BP_FurinaBullet_C_126",
+   "blocking": true,
+   "initial_overlap": false,
+   "dist": 59.70533752441406,
+   "actor": "Spline_Mesh_BP_2",
+   "comp": "NODE_AddSplineMeshComponent-0_0"
+  }
+ ]
+}

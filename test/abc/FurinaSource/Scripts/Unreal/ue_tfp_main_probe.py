@@ -1,0 +1,5 @@
+import unreal,json,os
+D=r'C:\Users\fromj\Downloads\test\test\abc\FurinaSource\Data'
+b=unreal.load_asset('/Game/3DPlatformerGameBundle/Demo/ThirdPersonAssets/Blueprints/ThirdPersonCharacter_BP');e=unreal.BlueprintGraphEditor.get_graph_editor_by_name(b,'EventGraph')
+R=[(n.get_name(),str(n.get_node_title()),[(str(p.get_pin_name()),str(p.get_pin_value()),[(x.get_owning_node().get_name(),str(x.get_pin_name())) for x in p.list_connected_pins()]) for p in n.list_all_pins()]) for n in e.list_all_nodes() if n.get_name().startswith(('K2Node_FPF','K2Node_FPT','TFP_','M4_'))]
+json.dump(R,open(os.path.join(D,'tfp_main_nodes.json'),'w'),indent=1)

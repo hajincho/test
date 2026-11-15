@@ -1,0 +1,105 @@
+{
+ "rifle": "AAC Honey Badger (.300 AAC Blackout, 125 gr supersonic tracer)",
+ "muzzle_ms": 640.1,
+ "muzzle_cms": 64008,
+ "k_per_m": 0.001223271514702806,
+ "k_per_cm": 1.2232715147028059e-05,
+ "zero_m": 100.0,
+ "zero_elev_rad": 0.001302084917707824,
+ "zero50_m": 50.0,
+ "zero50_elev_rad": 0.0006249569669393072,
+ "zero_elev_deg": 0.07460397035229742,
+ "rpm": 800,
+ "interval_s": 0.075,
+ "check_sig_200yd_in": -6.4,
+ "sig_published_200yd_in": -7.5,
+ "spread_half_deg": {
+  "base": 0.15,
+  "per_cm_s": 0.0015
+ },
+ "state_mult": {
+  "hip": 1.1,
+  "shoulder": 1.05,
+  "ads": 0.9,
+  "crouch": 0.9
+ },
+ "recoil": {
+  "impulse_ns": 6.6,
+  "free_recoil_ms": 2.64,
+  "energy_j": 8.7,
+  "ratio_vs_m4": 1.47,
+  "vertical_deg": 0.66,
+  "vertical_jitter": 0.15,
+  "horizontal_min_deg": -0.297,
+  "horizontal_max_deg": 0.363,
+  "first_shot_rise_deg": 1.46,
+  "ads_vertical_deg": 1.02,
+  "ads_gain": 1.72,
+  "tp_gain": 0.3
+ },
+ "table": [
+  {
+   "m": 25,
+   "impact_cm": 2.5,
+   "drop_flat_cm": -0.8,
+   "tof_s": 0.04,
+   "v_ms": 621
+  },
+  {
+   "m": 50,
+   "impact_cm": 3.4,
+   "drop_flat_cm": -3.1,
+   "tof_s": 0.081,
+   "v_ms": 602
+  },
+  {
+   "m": 100,
+   "impact_cm": -0.0,
+   "drop_flat_cm": -13.0,
+   "tof_s": 0.166,
+   "v_ms": 566
+  },
+  {
+   "m": 150,
+   "impact_cm": -11.1,
+   "drop_flat_cm": -30.6,
+   "tof_s": 0.257,
+   "v_ms": 533
+  },
+  {
+   "m": 200,
+   "impact_cm": -30.8,
+   "drop_flat_cm": -56.8,
+   "tof_s": 0.354,
+   "v_ms": 501
+  },
+  {
+   "m": 250,
+   "impact_cm": -60.2,
+   "drop_flat_cm": -92.8,
+   "tof_s": 0.457,
+   "v_ms": 471
+  },
+  {
+   "m": 300,
+   "impact_cm": -100.7,
+   "drop_flat_cm": -139.8,
+   "tof_s": 0.566,
+   "v_ms": 443
+  },
+  {
+   "m": 400,
+   "impact_cm": -220.9,
+   "drop_flat_cm": -273.0,
+   "tof_s": 0.806,
+   "v_ms": 392
+  },
+  {
+   "m": 500,
+   "impact_cm": -405.1,
+   "drop_flat_cm": -470.2,
+   "tof_s": 1.077,
+   "v_ms": 347
+  }
+ ]
+}

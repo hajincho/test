@@ -1,0 +1,13 @@
+{
+ "error": "Traceback (most recent call last):\n  File \"C:/Users/fromj/Downloads/test/test/abc/FurinaSource/Scripts/Unreal/ue_mesh_persist_test.py\", line 16, in tick\n    elif S['step'] == 1 and t > 0.5: S['log'].append(('after 0.5s', nm(c.get_editor_property('skinned_asset')))); a.rerun_construction_scripts(); S['log'].append(('after rerun_construction', nm(a.get_editor_property('FurinaMesh').get_editor_property('skinned_asset')))); S['step'] = 2\n                                                                                                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: 'Character' object has no attribute 'rerun_construction_scripts'\n",
+ "log": [
+  [
+   "set",
+   "/Game/Furina/SK_Furina.SK_Furina"
+  ],
+  [
+   "after 0.5s",
+   "/Game/Furina/SK_Furina.SK_Furina"
+  ]
+ ]
+}

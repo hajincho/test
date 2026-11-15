@@ -1,0 +1,79 @@
+{
+ "source": "/Game/Free_Crawl_Animation/Demo/Characters/Mannequins/Meshes/SKM_Manny_Simple",
+ "skeleton": "/Game/Free_Crawl_Animation/Demo/Characters/Mannequins/Meshes/SK_Mannequin.SK_Mannequin",
+ "source_anims": [
+  "anim_Idle",
+  "anim_Prone_Idle",
+  "anim_Prone_Fwd_Loop_L",
+  "anim_Prone_Fwd_Loop_R",
+  "anim_Prone_Fwd_Start_L",
+  "anim_Prone_Fwd_Start_R",
+  "anim_Prone_Fwd_Stop_L",
+  "anim_Prone_Fwd_Stop_R",
+  "anim_Prone_To_Stand",
+  "anim_Stand_To_Prone"
+ ],
+ "assets": [
+  {
+   "name": "AS_Furina_Crawl_Idle",
+   "length": 5.667,
+   "root_motion": false,
+   "rate_scale": 1.0
+  },
+  {
+   "name": "AS_Furina_Crawl_Prone_Idle",
+   "length": 1.0,
+   "root_motion": false,
+   "rate_scale": 1.0
+  },
+  {
+   "name": "AS_Furina_Crawl_Prone_Fwd_Loop_L",
+   "length": 1.0,
+   "root_motion": false,
+   "rate_scale": 1.0
+  },
+  {
+   "name": "AS_Furina_Crawl_Prone_Fwd_Loop_R",
+   "length": 1.0,
+   "root_motion": false,
+   "rate_scale": 1.0
+  },
+  {
+   "name": "AS_Furina_Crawl_Prone_Fwd_Start_L",
+   "length": 2.633,
+   "root_motion": false,
+   "rate_scale": 1.0
+  },
+  {
+   "name": "AS_Furina_Crawl_Prone_Fwd_Start_R",
+   "length": 2.633,
+   "root_motion": false,
+   "rate_scale": 1.0
+  },
+  {
+   "name": "AS_Furina_Crawl_Prone_Fwd_Stop_L",
+   "length": 1.633,
+   "root_motion": false,
+   "rate_scale": 1.0
+  },
+  {
+   "name": "AS_Furina_Crawl_Prone_Fwd_Stop_R",
+   "length": 1.633,
+   "root_motion": false,
+   "rate_scale": 1.0
+  },
+  {
+   "name": "AS_Furina_Crawl_Prone_To_Stand",
+   "length": 2.5,
+   "root_motion": false,
+   "rate_scale": 1.0
+  },
+  {
+   "name": "AS_Furina_Crawl_Stand_To_Prone",
+   "length": 2.5,
+   "root_motion": false,
+   "rate_scale": 1.0
+  }
+ ],
+ "ok": true
+}

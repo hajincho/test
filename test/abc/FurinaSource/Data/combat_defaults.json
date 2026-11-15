@@ -1,0 +1,5 @@
+{
+ "nav": "<Struct 'NavAgentProperties' (0x00000288391BDD70) {can_crouch: True, can_jump: True, can_walk: True, can_swim: True, can_fly: False, agent_radius: 42.000000, agent_height: 192.000000, agent_step_height: -1.000000, nav_walking_search_height_scale: 0.500000, preferred_nav_data: {}}>",
+ "crouched_height": 58.0,
+ "ammo": 30
+}

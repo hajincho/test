@@ -1,0 +1,16 @@
+{
+ "log": [
+  "added FPN_AimFinal",
+  "added FPN_AimDist",
+  "added FPN_AimDist50",
+  "added FPN_AimDistClamp",
+  "added FPN_AimElev",
+  "added var",
+  "added FPN_ShotCountLess",
+  "added FPN_InitRecoil",
+  "added FPN_RecGainInit",
+  "added FPN_ShotCountAdd"
+ ],
+ "status": "<BlueprintStatus.BS_UP_TO_DATE: 3>",
+ "saved": true
+}

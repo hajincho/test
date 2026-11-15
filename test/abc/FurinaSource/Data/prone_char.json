@@ -1,0 +1,24 @@
+{
+ "input": "ok",
+ "comp": "added",
+ "var_added": true,
+ "tm_pins": [
+  "execute",
+  "Object",
+  "FunctionName",
+  "Time",
+  "bLooping",
+  "bMaxOncePerFrame",
+  "InitialStartDelay",
+  "InitialStartDelayVariance",
+  "then",
+  "ReturnValue"
+ ],
+ "toggle": "added",
+ "flag": "added",
+ "walk_consumers": 3,
+ "run_consumers": 2,
+ "mul_consumers": 2,
+ "char_status": "<BlueprintStatus.BS_UP_TO_DATE: 3>",
+ "char_saved": true
+}

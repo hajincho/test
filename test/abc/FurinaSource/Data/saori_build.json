@@ -1,0 +1,245 @@
+{
+ "scale_k": 7.1379591483760585,
+ "joint_residual_cm": {
+  "Hips": 6.49,
+  "Spine": 1.81,
+  "Chest": 0.96,
+  "Neck": 0.98,
+  "Head": 1.48,
+  "Left leg": 1.95,
+  "Right leg": 1.95,
+  "Left knee": 3.52,
+  "Right knee": 3.51,
+  "Left shoulder": 2.69,
+  "Right shoulder": 2.69,
+  "Left arm": 1.7,
+  "Right arm": 1.69,
+  "Left elbow": 1.5,
+  "Right elbow": 1.5,
+  "Left wrist": 3.55,
+  "Right wrist": 3.55
+ },
+ "fit_height_m": [
+  -0.020862219855189323,
+  1.4752888679504395
+ ],
+ "unmapped_to_ancestor": {
+  "bone_Mask": "Head",
+  "右目戻": "Eye_R",
+  "左目戻": "Eye_L",
+  "bone_hair_B_00": "Head",
+  "bone_hair_B_01": "Head",
+  "bone_hair_BL_01": "Head",
+  "bone_hair_BL_02": "Head",
+  "bone_hair_BR_01": "Head",
+  "bone_hair_BR_02": "Head",
+  "bone_hair_F_F_00": "Head",
+  "bone_hair_F_L_00": "Head",
+  "bone_hair_F_R_00": "Head",
+  "bone_hair_L_00": "Head",
+  "bone_hair_L_01": "Head",
+  "bone_hair_R_00": "Head",
+  "bone_hair_R_01": "Head",
+  "bone_Head_Hat": "Head",
+  "スカート_0_0": "Hips",
+  "スカート_1_0": "Hips",
+  "スカート_2_0": "Hips",
+  "スカート_0_1": "Hips",
+  "スカート_1_1": "Hips",
+  "スカート_2_1": "Hips",
+  "スカート_0_2": "Hips",
+  "スカート_1_2": "Hips",
+  "スカート_2_2": "Hips",
+  "スカート_0_3": "Hips",
+  "スカート_1_3": "Hips",
+  "スカート_2_3": "Hips",
+  "スカート_0_4": "Hips",
+  "スカート_1_4": "Hips",
+  "スカート_2_4": "Hips",
+  "スカート_0_5": "Hips",
+  "スカート_1_5": "Hips",
+  "スカート_2_5": "Hips",
+  "スカート_0_6": "Hips",
+  "スカート_1_6": "Hips",
+  "スカート_2_6": "Hips"
+ },
+ "n_unmapped": 38,
+ "body_bbox_cm": [
+  [
+   -53.89,
+   -25.32,
+   -2.09
+  ],
+  [
+   53.89,
+   34.83,
+   164.81
+  ]
+ ],
+ "materials": [
+  "Body",
+  "Body.004",
+  "Mask",
+  "whites",
+  "eye",
+  "eyebrow crease",
+  "cheek",
+  "Halo",
+  "Pants",
+  "Body.003",
+  "Nails2",
+  "face",
+  "en",
+  "eyebrow",
+  "en.001",
+  "Facial Line",
+  "Belt",
+  "Shoes",
+  "Body.002",
+  "Nails1",
+  "Hair",
+  "eyelash",
+  "eye lid",
+  "teeth",
+  "Material",
+  "Shirt",
+  "Gloves",
+  "Body.001",
+  "Neck",
+  "Hat",
+  "tears",
+  "eye extra",
+  "mouth",
+  "eye_hi",
+  "Coat",
+  "Pants Accessories"
+ ],
+ "verts": 38598,
+ "groups": 57,
+ "material_images": {
+  "Body": [
+   "C:\\Users\\fromj\\Downloads\\joumae-saori\\source\\Joumae Saori From Blue Archive\\t000.png",
+   "C:\\Users\\fromj\\Downloads\\joumae-saori\\source\\Joumae Saori From Blue Archive\\t000.png"
+  ],
+  "Body.004": [
+   "C:\\Users\\fromj\\Downloads\\joumae-saori\\source\\Joumae Saori From Blue Archive\\t000.png",
+   "C:\\Users\\fromj\\Downloads\\joumae-saori\\source\\Joumae Saori From Blue Archive\\t000.png"
+  ],
+  "Mask": [
+   "C:\\Users\\fromj\\Downloads\\joumae-saori\\source\\Joumae Saori From Blue Archive\\Saori_Original_Body.png",
+   "C:\\Users\\fromj\\Downloads\\joumae-saori\\source\\Joumae Saori From Blue Archive\\Saori_Original_Body.png"
+  ],
+  "whites": [
+   "C:\\Users\\fromj\\Downloads\\joumae-saori\\source\\Joumae Saori From Blue Archive\\fac1.png"
+  ],
+  "eye": [
+   "C:\\Users\\fromj\\Downloads\\joumae-saori\\source\\Joumae Saori From Blue Archive\\Saori_Original_EyeMouth.png",
+   "C:\\Users\\fromj\\Downloads\\joumae-saori\\source\\Joumae Saori From Blue Archive\\Saori_Original_EyeMouth.png"
+  ],
+  "eyebrow crease": [
+   "C:\\Users\\fromj\\Downloads\\joumae-saori\\source\\Joumae Saori From Blue Archive\\fac1.png"
+  ],
+  "cheek": [
+   "C:\\Users\\fromj\\Downloads\\joumae-saori\\source\\Joumae Saori From Blue Archive\\face5.png"
+  ],
+  "Halo": [
+   "C:\\Users\\fromj\\Downloads\\joumae-saori\\source\\Joumae Saori From Blue Archive\\Saori_Original_Halo.png",
+   "C:\\Users\\fromj\\Downloads\\joumae-saori\\source\\Joumae Saori From Blue Archive\\Saori_Original_Halo.png"
+  ],
+  "Pants": [
+   "C:\\Users\\fromj\\Downloads\\joumae-saori\\source\\Joumae Saori From Blue Archive\\textures\\Saori_Original_Body2.png"
+  ],
+  "Body.003": [
+   "C:\\Users\\fromj\\Downloads\\joumae-saori\\source\\Joumae Saori From Blue Archive\\t000.png",
+   "C:\\Users\\fromj\\Downloads\\joumae-saori\\source\\Joumae Saori From Blue Archive\\t000.png"
+  ],
+  "Nails2": [
+   "C:\\Users\\fromj\\Downloads\\joumae-saori\\source\\Joumae Saori From Blue Archive\\t000.png",
+   "C:\\Users\\fromj\\Downloads\\joumae-saori\\source\\Joumae Saori From Blue Archive\\t000.png"
+  ],
+  "face": [
+   "C:\\Users\\fromj\\Downloads\\joumae-saori\\source\\Joumae Saori From Blue Archive\\Saori_Original_Face.png",
+   "C:\\Users\\fromj\\Downloads\\joumae-saori\\source\\Joumae Saori From Blue Archive\\Saori_Original_Face.png"
+  ],
+  "en": [
+   "C:\\Users\\fromj\\Downloads\\joumae-saori\\source\\Joumae Saori From Blue Archive\\fac1.png"
+  ],
+  "eyebrow": [
+   "C:\\Users\\fromj\\Downloads\\joumae-saori\\source\\Joumae Saori From Blue Archive\\Saori_Original_Face.png",
+   "C:\\Users\\fromj\\Downloads\\joumae-saori\\source\\Joumae Saori From Blue Archive\\Saori_Original_Face.png"
+  ],
+  "en.001": [
+   "C:\\Users\\fromj\\Downloads\\joumae-saori\\source\\Joumae Saori From Blue Archive\\face5.png"
+  ],
+  "Facial Line": [
+   "C:\\Users\\fromj\\Downloads\\joumae-saori\\source\\Joumae Saori From Blue Archive\\lip.png"
+  ],
+  "Belt": [
+   "C:\\Users\\fromj\\Downloads\\joumae-saori\\source\\Joumae Saori From Blue Archive\\textures\\Saori_Original_Body2.png"
+  ],
+  "Shoes": [
+   "C:\\Users\\fromj\\Downloads\\joumae-saori\\source\\Joumae Saori From Blue Archive\\textures\\Saori_Original_Body2.png"
+  ],
+  "Body.002": [
+   "C:\\Users\\fromj\\Downloads\\joumae-saori\\source\\Joumae Saori From Blue Archive\\t000.png",
+   "C:\\Users\\fromj\\Downloads\\joumae-saori\\source\\Joumae Saori From Blue Archive\\t000.png"
+  ],
+  "Nails1": [
+   "C:\\Users\\fromj\\Downloads\\joumae-saori\\source\\Joumae Saori From Blue Archive\\t000.png",
+   "C:\\Users\\fromj\\Downloads\\joumae-saori\\source\\Joumae Saori From Blue Archive\\t000.png"
+  ],
+  "Hair": [
+   "C:\\Users\\fromj\\Downloads\\joumae-saori\\source\\Joumae Saori From Blue Archive\\textures\\Hair.png"
+  ],
+  "eyelash": [
+   "C:\\Users\\fromj\\Downloads\\joumae-saori\\source\\Joumae Saori From Blue Archive\\Saori_Original_Face.png",
+   "C:\\Users\\fromj\\Downloads\\joumae-saori\\source\\Joumae Saori From Blue Archive\\Saori_Original_Face.png"
+  ],
+  "eye lid": [
+   "C:\\Users\\fromj\\Downloads\\joumae-saori\\source\\Joumae Saori From Blue Archive\\Saori_Original_Face.png",
+   "C:\\Users\\fromj\\Downloads\\joumae-saori\\source\\Joumae Saori From Blue Archive\\Saori_Original_Face.png"
+  ],
+  "teeth": [
+   "C:\\Users\\fromj\\Downloads\\joumae-saori\\source\\Joumae Saori From Blue Archive\\fac1.png"
+  ],
+  "Material": [
+   "C:\\Users\\fromj\\Downloads\\joumae-saori\\source\\Joumae Saori From Blue Archive\\Saori_Original_Face.png",
+   "C:\\Users\\fromj\\Downloads\\joumae-saori\\source\\Joumae Saori From Blue Archive\\Saori_Original_Face.png"
+  ],
+  "Shirt": [
+   "C:\\Users\\fromj\\Downloads\\joumae-saori\\source\\Joumae Saori From Blue Archive\\textures\\Saori_Original_Body2.png"
+  ],
+  "Gloves": [
+   "C:\\Users\\fromj\\Downloads\\joumae-saori\\source\\Joumae Saori From Blue Archive\\textures\\Saori_Original_Body2.png"
+  ],
+  "Body.001": [
+   "C:\\Users\\fromj\\Downloads\\joumae-saori\\source\\Joumae Saori From Blue Archive\\t000.png",
+   "C:\\Users\\fromj\\Downloads\\joumae-saori\\source\\Joumae Saori From Blue Archive\\t000.png"
+  ],
+  "Neck": [
+   "C:\\Users\\fromj\\Downloads\\joumae-saori\\source\\Joumae Saori From Blue Archive\\t000.png",
+   "C:\\Users\\fromj\\Downloads\\joumae-saori\\source\\Joumae Saori From Blue Archive\\t000.png"
+  ],
+  "Hat": [
+   "C:\\Users\\fromj\\Downloads\\joumae-saori\\source\\Joumae Saori From Blue Archive\\textures\\Saori_Original_Body2.png"
+  ],
+  "tears": [
+   "C:\\Users\\fromj\\Downloads\\joumae-saori\\source\\Joumae Saori From Blue Archive\\fac1.png"
+  ],
+  "eye extra": [
+   "C:\\Users\\fromj\\Downloads\\joumae-saori\\source\\Joumae Saori From Blue Archive\\fac1.png"
+  ],
+  "mouth": [
+   "C:\\Users\\fromj\\Downloads\\joumae-saori\\source\\Joumae Saori From Blue Archive\\fac1.png"
+  ],
+  "eye_hi": [
+   "C:\\Users\\fromj\\Downloads\\joumae-saori\\source\\Joumae Saori From Blue Archive\\fac1.png"
+  ],
+  "Coat": [
+   "C:\\Users\\fromj\\Downloads\\joumae-saori\\source\\Joumae Saori From Blue Archive\\textures\\Saori_Original_Body2.png"
+  ],
+  "Pants Accessories": [
+   "C:\\Users\\fromj\\Downloads\\joumae-saori\\source\\Joumae Saori From Blue Archive\\textures\\Saori_Original_Body2.png"
+  ]
+ }
+}

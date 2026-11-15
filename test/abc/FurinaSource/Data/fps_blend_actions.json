@@ -1,0 +1,22 @@
+{
+ "C:\\Users\\fromj\\Downloads\\blender_source_files_freefpstemplate\\Blender_Source_Files_FreeFpsTemplate\\Animations\\Animations_Assault_Rifle.blend": [
+  "A_WEP_Reference",
+  "A_Reference",
+  "A_FP_WEP_AssaultRifle_Reload",
+  "A_FP_WEP_AssaultRifle_Fire",
+  "A_FP_AssaultRifle_Walk_F_Loop_Aimed",
+  "A_FP_AssaultRifle_Walk_F_Loop",
+  "A_FP_AssaultRifle_Run_Loop",
+  "A_FP_AssaultRifle_Reload",
+  "A_FP_AssaultRifle_Idle_Pose",
+  "A_FP_AssaultRifle_Idle_Loop_Aimed",
+  "A_FP_AssaultRifle_Idle_Loop",
+  "A_FP_AssaultRifle_Holster",
+  "A_FP_AssaultRifle_Fire_Aimed",
+  "A_FP_AssaultRifle_Fire",
+  "A_FP_AssaultRifle_Equip",
+  "A_FP_AssaultRifle_Aim_Pose"
+ ],
+ "C:\\Users\\fromj\\Downloads\\blender_source_files_freefpstemplate\\Blender_Source_Files_FreeFpsTemplate\\Rigs\\AssaultRifle\\RIG_AssaultRifle.blend": [],
+ "C:\\Users\\fromj\\Downloads\\blender_source_files_freefpstemplate\\Blender_Source_Files_FreeFpsTemplate\\Rigs\\Manny\\RIG_UE5_Manny.blend": []
+}

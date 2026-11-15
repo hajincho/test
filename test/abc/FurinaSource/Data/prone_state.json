@@ -1,0 +1,9 @@
+{
+ "crouching": false,
+ "prone_flag": false,
+ "want": false,
+ "half_height": 96.0,
+ "max_walk": 600.0,
+ "max_crouched": 90.0,
+ "speed": 0.0
+}

@@ -1,0 +1,10 @@
+{
+ "/Game/Furina/CR_FurinaSecondary": {
+  "save_loaded": true,
+  "save_asset": true
+ },
+ "/Game/Furina/SK_Furina_Skeleton": {
+  "save_loaded": true,
+  "save_asset": true
+ }
+}

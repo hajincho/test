@@ -6,7 +6,7 @@ frame come from the retargeted Furina pose (constant over every FP motion)."""
 import json, math, sys
 D = sys.argv[1]
 m = json.load(open(D + r'\fp_measure.json'))['Idle_Loop']
-SCALE = 0.85                     # rifle + hand offsets scaled to Furina's size (Manny 180 cm, Furina ~150 cm)
+SCALE = 1.0                      # real size: the mesh is the AAC Honey Badger at 1:1 (74.8 cm, real 74 cm stock extended); Furina is ~165 cm in UE
 G_OFF = (-8.0, 18.0, 3.0)        # gun origin from the Neck: 8 right, 18 forward, 3 up (component axes, cm) -> visible lower right in 1st person, shouldered in 3rd
 # sprint carry (PUBG-like canted low ready), applied in the gun frame with the sprint weight (CR 'Run' 0..1):
 # barrel yawed 20 deg inward (left), rifle top rolled 30 deg to the left, muzzle 6 deg down; whole rifle 2 cm right, 3 cm back, 7 cm down

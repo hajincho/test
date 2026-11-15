@@ -1,0 +1,46 @@
+{
+ "/Game/Furina/TFP/BS_FurinaStanding": {
+  "samples": [
+   "(Animation=\"/Script/Engine.AnimSequence'/Game/Furina/TFP/Anim/AS_Furina_TFP_N_Idle.AS_Furina_TFP_N_Idle'\",SampleValue=(X=-180.000000,Y=0.000000,Z=0.000000),RateScale=1.000000,bMirror=False,bUseSingleFrameForBlending=False,FrameIndexToSample=0,bIncludeInAnalyseAll=True)",
+   "(Animation=\"/Script/Engine.AnimSequence'/Game/Furina/TFP/Anim/AS_Furina_TFP_N_Idle.AS_Furina_TFP_N_Idle'\",SampleValue=(X=-135.000000,Y=0.000000,Z=0.000000),RateScale=1.000000,bMirror=False,bUseSingleFrameForBlending=False,FrameIndexToSample=0,bIncludeInAnalyseAll=True)",
+   "(Animation=\"/Script/Engine.AnimSequence'/Game/Furina/TFP/Anim/AS_Furina_TFP_N_Idle.AS_Furina_TFP_N_Idle'\",SampleValue=(X=-90.000000,Y=0.000000,Z=0.000000),RateScale=1.000000,bMirror=False,bUseSingleFrameForBlending=False,FrameIndexToSample=0,bIncludeInAnalyseAll=True)",
+   "(Animation=\"/Script/Engine.AnimSequence'/Game/Furina/TFP/Anim/AS_Furina_TFP_N_Idle.AS_Furina_TFP_N_Idle'\",SampleValue=(X=-45.000000,Y=0.000000,Z=0.000000),RateScale=1.000000,bMirror=False,bUseSingleFrameForBlending=False,FrameIndexToSample=0,bIncludeInAnalyseAll=True)",
+   "(Animation=\"/Script/Engine.AnimSequence'/Game/Furina/TFP/Anim/AS_Furina_TFP_N_Idle.AS_Furina_TFP_N_Idle'\",SampleValue=(X=0.000000,Y=0.000000,Z=0.000000),RateScale=1.000000,bMirror=False,bUseSingleFrameForBlending=False,FrameIndexToSample=0,bIncludeInAnalyseAll=True)",
+   "(Animation=\"/Script/Engine.AnimSequence'/Game/Furina/TFP/Anim/AS_Furina_TFP_N_Idle.AS_Furina_TFP_N_Idle'\",SampleValue=(X=45.000000,Y=0.000000,Z=0.000000),RateScale=1.000000,bMirror=False,bUseSingleFrameForBlending=False,FrameIndexToSample=0,bIncludeInAnalyseAll=True)",
+   "(Animation=\"/Script/Engine.AnimSequence'/Game/Furina/TFP/Anim/AS_Furina_TFP_N_Idle.AS_Furina_TFP_N_Idle'\",SampleValue=(X=90.000000,Y=0.000000,Z=0.000000),RateScale=1.000000,bMirror=False,bUseSingleFrameForBlending=False,FrameIndexToSample=0,bIncludeInAnalyseAll=True)",
+   "(Animation=\"/Script/Engine.AnimSequence'/Game/Furina/TFP/Anim/AS_Furina_TFP_N_Idle.AS_Furina_TFP_N_Idle'\",SampleValue=(X=135.000000,Y=0.000000,Z=0.000000),RateScale=1.000000,bMirror=False,bUseSingleFrameForBlending=False,FrameIndexToSample=0,bIncludeInAnalyseAll=True)",
+   "(Animation=\"/Script/Engine.AnimSequence'/Game/Furina/TFP/Anim/AS_Furina_TFP_N_Idle.AS_Furina_TFP_N_Idle'\",SampleValue=(X=180.000000,Y=0.000000,Z=0.000000),RateScale=1.000000,bMirror=False,bUseSingleFrameForBlending=False,FrameIndexToSample=0,bIncludeInAnalyseAll=True)",
+   "(Animation=\"/Script/Engine.AnimSequence'/Game/Furina/TFP/Anim/AS_Furina_TFP_N_Walk_B.AS_Furina_TFP_N_Walk_B'\",SampleValue=(X=-180.000000,Y=120.000000,Z=0.000000),RateScale=0.885263,bMirror=False,bUseSingleFrameForBlending=False,FrameIndexToSample=0,bIncludeInAnalyseAll=True)",
+   "(Animation=\"/Script/Engine.AnimSequence'/Game/Furina/TFP/Anim/AS_Furina_TFP_N_Run_B.AS_Furina_TFP_N_Run_B'\",SampleValue=(X=-180.000000,Y=600.000000,Z=0.000000),RateScale=1.816378,bMirror=False,bUseSingleFrameForBlending=False,FrameIndexToSample=0,bIncludeInAnalyseAll=True)",
+   "(Animation=\"/Script/Engine.AnimSequence'/Game/Furina/TFP/Anim/AS_Furina_TFP_N_Walk_BL_135.AS_Furina_TFP_N_Walk_BL_135'\",SampleValue=(X=-135.000000,Y=120.000000,Z=0.000000),RateScale=0.877371,bMirror=False,bUseSingleFrameForBlending=False,FrameIndexToSample=0,bIncludeInAnalyseAll=True)"
+  ],
+  "api": []
+ },
+ "/Game/Furina/TFP/BS_FurinaCrouching": {
+  "samples": [
+   "(Animation=\"/Script/Engine.AnimSequence'/Game/Furina/TFP/Anim/AS_Furina_TFP_C_Idle_Additive.AS_Furina_TFP_C_Idle_Additive'\",SampleValue=(X=-180.000000,Y=0.000000,Z=0.000000),RateScale=1.000000,bMirror=False,bUseSingleFrameForBlending=False,FrameIndexToSample=0,bIncludeInAnalyseAll=True)",
+   "(Animation=\"/Script/Engine.AnimSequence'/Game/Furina/TFP/Anim/AS_Furina_TFP_C_Idle_Additive.AS_Furina_TFP_C_Idle_Additive'\",SampleValue=(X=-135.000000,Y=0.000000,Z=0.000000),RateScale=1.000000,bMirror=False,bUseSingleFrameForBlending=False,FrameIndexToSample=0,bIncludeInAnalyseAll=True)",
+   "(Animation=\"/Script/Engine.AnimSequence'/Game/Furina/TFP/Anim/AS_Furina_TFP_C_Idle_Additive.AS_Furina_TFP_C_Idle_Additive'\",SampleValue=(X=-90.000000,Y=0.000000,Z=0.000000),RateScale=1.000000,bMirror=False,bUseSingleFrameForBlending=False,FrameIndexToSample=0,bIncludeInAnalyseAll=True)",
+   "(Animation=\"/Script/Engine.AnimSequence'/Game/Furina/TFP/Anim/AS_Furina_TFP_C_Idle_Additive.AS_Furina_TFP_C_Idle_Additive'\",SampleValue=(X=-45.000000,Y=0.000000,Z=0.000000),RateScale=1.000000,bMirror=False,bUseSingleFrameForBlending=False,FrameIndexToSample=0,bIncludeInAnalyseAll=True)",
+   "(Animation=\"/Script/Engine.AnimSequence'/Game/Furina/TFP/Anim/AS_Furina_TFP_C_Idle_Additive.AS_Furina_TFP_C_Idle_Additive'\",SampleValue=(X=0.000000,Y=0.000000,Z=0.000000),RateScale=1.000000,bMirror=False,bUseSingleFrameForBlending=False,FrameIndexToSample=0,bIncludeInAnalyseAll=True)",
+   "(Animation=\"/Script/Engine.AnimSequence'/Game/Furina/TFP/Anim/AS_Furina_TFP_C_Idle_Additive.AS_Furina_TFP_C_Idle_Additive'\",SampleValue=(X=45.000000,Y=0.000000,Z=0.000000),RateScale=1.000000,bMirror=False,bUseSingleFrameForBlending=False,FrameIndexToSample=0,bIncludeInAnalyseAll=True)",
+   "(Animation=\"/Script/Engine.AnimSequence'/Game/Furina/TFP/Anim/AS_Furina_TFP_C_Idle_Additive.AS_Furina_TFP_C_Idle_Additive'\",SampleValue=(X=90.000000,Y=0.000000,Z=0.000000),RateScale=1.000000,bMirror=False,bUseSingleFrameForBlending=False,FrameIndexToSample=0,bIncludeInAnalyseAll=True)",
+   "(Animation=\"/Script/Engine.AnimSequence'/Game/Furina/TFP/Anim/AS_Furina_TFP_C_Idle_Additive.AS_Furina_TFP_C_Idle_Additive'\",SampleValue=(X=135.000000,Y=0.000000,Z=0.000000),RateScale=1.000000,bMirror=False,bUseSingleFrameForBlending=False,FrameIndexToSample=0,bIncludeInAnalyseAll=True)",
+   "(Animation=\"/Script/Engine.AnimSequence'/Game/Furina/TFP/Anim/AS_Furina_TFP_C_Idle_Additive.AS_Furina_TFP_C_Idle_Additive'\",SampleValue=(X=180.000000,Y=0.000000,Z=0.000000),RateScale=1.000000,bMirror=False,bUseSingleFrameForBlending=False,FrameIndexToSample=0,bIncludeInAnalyseAll=True)",
+   "(Animation=\"/Script/Engine.AnimSequence'/Game/Furina/TFP/Anim/AS_Furina_TFP_C_Walk_B.AS_Furina_TFP_C_Walk_B'\",SampleValue=(X=-180.000000,Y=90.000000,Z=0.000000),RateScale=0.649335,bMirror=False,bUseSingleFrameForBlending=False,FrameIndexToSample=0,bIncludeInAnalyseAll=True)",
+   "(Animation=\"/Script/Engine.AnimSequence'/Game/Furina/TFP/Anim/AS_Furina_TFP_C_Walk_B.AS_Furina_TFP_C_Walk_B'\",SampleValue=(X=-180.000000,Y=360.000000,Z=0.000000),RateScale=2.597341,bMirror=False,bUseSingleFrameForBlending=False,FrameIndexToSample=0,bIncludeInAnalyseAll=True)",
+   "(Animation=\"/Script/Engine.AnimSequence'/Game/Furina/TFP/Anim/AS_Furina_TFP_C_Walk_L.AS_Furina_TFP_C_Walk_L'\",SampleValue=(X=-135.000000,Y=90.000000,Z=0.000000),RateScale=0.663269,bMirror=False,bUseSingleFrameForBlending=False,FrameIndexToSample=0,bIncludeInAnalyseAll=True)"
+  ],
+  "api": []
+ },
+ "nodes": [
+  [
+   "TFPStanding",
+   "(GroupName=\"\",GroupRole=CanBeLeader,bOverridePositionWhenJoiningSyncGroupAsLeader=False,Method=DoNotSync,bIgnoreForRelevancyTest=False,X=0.000000,Y=0.000000,PlayRate=1.000000,bLoop=True,bResetPlayTimeWhenBlendSpaceChanges=True,StartPosition=0.000000,BlendSpace=\"/Script/Engine.BlendSpace'/Game/Furina/TFP/BS_FurinaStanding.BS_FurinaStanding'\",InitialUpdateFunction=(ClassName=\"\",FunctionName=\"\"),BecomeRelevantFunction=(ClassName=\"\",FunctionName=\"\"),UpdateFunction=(ClassName=\"\",FunctionName=\"\"))"
+  ],
+  [
+   "TFPCrouching",
+   "(GroupName=\"\",GroupRole=CanBeLeader,bOverridePositionWhenJoiningSyncGroupAsLeader=False,Method=DoNotSync,bIgnoreForRelevancyTest=False,X=0.000000,Y=0.000000,PlayRate=1.000000,bLoop=True,bResetPlayTimeWhenBlendSpaceChanges=True,StartPosition=0.000000,BlendSpace=\"/Script/Engine.BlendSpace'/Game/Furina/TFP/BS_FurinaCrouching.BS_FurinaCrouching'\",InitialUpdateFunction=(ClassName=\"\",FunctionName=\"\"),BecomeRelevantFunction=(ClassName=\"\",FunctionName=\"\"),UpdateFunction=(ClassName=\"\",FunctionName=\"\"))"
+  ]
+ ]
+}

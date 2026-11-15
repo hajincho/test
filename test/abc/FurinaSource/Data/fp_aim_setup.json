@@ -1,0 +1,35 @@
+{
+ "log": [
+  [
+   "IA_FurinaADS",
+   [
+    "InputTriggerTap"
+   ]
+  ],
+  [
+   "IA_FurinaShoulder",
+   [
+    "InputTriggerHold"
+   ]
+  ],
+  "added FurinaADS",
+  "added FurinaShoulder",
+  "added FurinaADSRestoreTP"
+ ],
+ "rmb": [
+  [
+   "RightMouseButton",
+   "Position_IA"
+  ],
+  [
+   "RightMouseButton",
+   "IA_FurinaADS"
+  ],
+  [
+   "RightMouseButton",
+   "IA_FurinaShoulder"
+  ]
+ ],
+ "status": "<BlueprintStatus.BS_UP_TO_DATE: 3>",
+ "saved": true
+}

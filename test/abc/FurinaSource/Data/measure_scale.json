@@ -1,0 +1,39 @@
+{
+ "FurinaRifle_GEN_VARIABLE": {
+  "mesh": "SK_AssaultRifle",
+  "comp_scale": "<Struct 'Vector' (0x0000017488BB15B0) {x: 0.850000, y: 0.850000, z: 0.850000}>",
+  "origin": [
+   -0.1,
+   10.8,
+   -0.3
+  ],
+  "extent": [
+   2.6,
+   37.4,
+   10.7
+  ]
+ },
+ "FurinaMesh_GEN_VARIABLE": {
+  "mesh": "SK_Furina",
+  "comp_scale": "<Struct 'Vector' (0x0000017488BB29B0) {x: 1.000000, y: 1.000000, z: 1.000000}>",
+  "origin": [
+   0.0,
+   -16.2,
+   87.0
+  ],
+  "extent": [
+   52.9,
+   34.5,
+   86.1
+  ]
+ },
+ "anims": {
+  "/Game/Furina/FP/Anim/AS_Furina_FP_Run_Loop": 0.667,
+  "/Game/Furina/FP/Anim/AS_Furina_FP_Walk_F_Loop": 0.8,
+  "/Game/Furina/Anim/AS_Furina_Walk": 1.333,
+  "/Game/Furina/FP/Anim/AS_Furina_FP_Walk_F_Loop_Aimed": 0.8,
+  "/Game/Furina/FP/Manny/A_FP_AssaultRifle_Run_Loop": 0.667,
+  "/Game/Furina/FP/Manny/A_FP_AssaultRifle_Walk_F_Loop": 0.8,
+  "/Game/Furina/FP/Manny/A_FP_AssaultRifle_Walk_F_Loop_Aimed": 0.8
+ }
+}

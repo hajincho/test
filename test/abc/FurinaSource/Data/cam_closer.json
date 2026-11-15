@@ -1,0 +1,12 @@
+{
+ "boom": [
+  330.0,
+  "<Struct 'Vector' (0x000001B08577BEB0) {x: 0.000000, y: 0.000000, z: 55.000000}>"
+ ],
+ "TFP_ArmTarget.A": true,
+ "TFP_ArmTarget.B": true,
+ "K2Node_FPT_Lat1.B": true,
+ "K2Node_FPT_TgtZ.A": true,
+ "status": "<BlueprintStatus.BS_UP_TO_DATE: 3>",
+ "saved": true
+}

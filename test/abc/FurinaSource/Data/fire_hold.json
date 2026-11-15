@@ -1,0 +1,32 @@
+{
+ "comp": "added",
+ "var_type": "double",
+ "var_added": true,
+ "default": -100.0,
+ "set_pins": [
+  "execute",
+  "FurinaLastFire",
+  "then",
+  "Output_Get"
+ ],
+ "shot_hooked": true,
+ "sub_pins": [
+  "A",
+  "B",
+  "ReturnValue"
+ ],
+ "flag": "added",
+ "char_status": "<BlueprintStatus.BS_UP_TO_DATE: 3>",
+ "char_saved": false,
+ "pins": [
+  "SourcePose",
+  "CurveValues_0",
+  "CurveValues_1",
+  "CurveValues_2",
+  "CurveValues_3",
+  "Alpha",
+  "Pose"
+ ],
+ "abp_status": "<BlueprintStatus.BS_UP_TO_DATE: 3>",
+ "abp_saved": false
+}

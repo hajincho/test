@@ -1,0 +1,30 @@
+{
+ "AS_Furina_Crawl_Prone_Idle": {
+  "length": 1.0,
+  "drift": [
+   0.0,
+   0.0,
+   0.0
+  ]
+ },
+ "AS_Furina_Crawl_Prone_Fwd_Loop_R": {
+  "length": 1.0,
+  "drift": [
+   0.0,
+   60.99,
+   0.0
+  ]
+ },
+ "drift_cm_per_loop": 60.98723602294922,
+ "speed_cm_s": 60.98723602294922,
+ "keys": 31,
+ "hips_swing_deg_before": 17.38,
+ "hips_swing_deg_after": 8.69,
+ "rot_scale": 0.5,
+ "after_drift": [
+  0.0,
+  0.0,
+  0.0
+ ],
+ "saved": true
+}

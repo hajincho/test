@@ -1,0 +1,13 @@
+{
+ "BlueprintEditorLibrary": {
+  "get_comment_text": "X.get_comment_text(comment_node) -> str\r\nReturns the comment text of a comment node.\r\n\r\nArgs:\r\n    comment_node (EdGraphNode_Comment): \r\n\r\nReturns:\r\n    str:",
+  "set_comment_text": "X.set_comment_text(comment_node, new_text) -> None\r\nSets the comment text of a comment node.\r\n\r\nArgs:\r\n    comment_node (EdGraphNode_Comment): \r\n    new_text (str):"
+ },
+ "BlueprintGraphLibrary": {},
+ "EditorUtilityLibrary": {},
+ "UnrealClipboard": {},
+ "SystemLibrary": {
+  "make_literal_text": "X.make_literal_text(value) -> Text\r\nCreates a literal FText\r\n\r\nArgs:\r\n    value (Text): value to set the FText to\r\n\r\nReturns:\r\n    Text: The literal FText",
+  "print_text": "X.print_text(world_context_object, text=\"Hello\", print_to_screen=True, print_to_log=True, text_color=[0.000000, 0.660000, 1.000000, 1.000000], duration=2.000000, key=\"None\") -> None\r\nPrints text to the log, and optionally, to the screen\nIf Print To Log is true, it will be visible in the Output Log window.  Otherwise it will be logged only as 'Verbose', so it generally won't show up.\r\n\r\nArgs:\r\n    world_context_object (Object): \r\n    text (Text): The text to log out\r\n    print_to_screen (bool): Whether or not to print the output to the screen\r\n    print_to_log (bool): Whether or not to print the output to the log\r\n    text_color (LinearColor): The color of the text to display\r\n    duration (float): The display duration (if Print to Screen is True). Using negative number will result in loading the duration time from the config.\r\n    key (Name): If a non-empty key is provided, the message will replace any existing on-screen messages with the same key."
+ }
+}

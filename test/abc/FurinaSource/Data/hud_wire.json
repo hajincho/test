@@ -1,0 +1,12 @@
+{
+ "set_pins": [
+  "execute",
+  "Collection",
+  "ParameterName",
+  "ParameterValue",
+  "then"
+ ],
+ "status": "<BlueprintStatus.BS_UP_TO_DATE: 3>",
+ "ok": true,
+ "saved": true
+}

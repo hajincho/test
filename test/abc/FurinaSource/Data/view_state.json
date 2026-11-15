@@ -1,0 +1,50 @@
+{
+ "ads_then_v": {
+  "fp_camera": true,
+  "fp_wanted": false,
+  "ads": true,
+  "restore_tp": false
+ },
+ "after_ads_exit": {
+  "fp_camera": true,
+  "fp_wanted": false,
+  "ads": false,
+  "restore_tp": false
+ },
+ "later": {
+  "fp_camera": true,
+  "fp_wanted": false,
+  "ads": false,
+  "restore_tp": false
+ },
+ "t0_start": {
+  "fp_camera": false,
+  "fp_wanted": false,
+  "ads": false,
+  "restore_tp": false
+ },
+ "t1_in_ads": {
+  "fp_camera": true,
+  "fp_wanted": false,
+  "ads": true,
+  "restore_tp": true
+ },
+ "t2_ads_then_v": {
+  "fp_camera": true,
+  "fp_wanted": true,
+  "ads": true,
+  "restore_tp": false
+ },
+ "t3_after_exit": {
+  "fp_camera": true,
+  "fp_wanted": true,
+  "ads": false,
+  "restore_tp": false
+ },
+ "t4_v_no_ads": {
+  "fp_camera": false,
+  "fp_wanted": false,
+  "ads": false,
+  "restore_tp": false
+ }
+}

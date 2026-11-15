@@ -1,0 +1,44 @@
+{
+ "Bullet": {
+  "cls": "SphereComponent",
+  "ce": "<CollisionEnabled.QUERY_AND_PHYSICS: 3>",
+  "obj": "<CollisionChannel.ECC_WORLD_DYNAMIC: 1>",
+  "profile": "BlockAllDynamic",
+  "resp": {
+   "ECC_WORLD_STATIC: 0>": "ECR_BLOCK: 2>",
+   "ECC_WORLD_DYNAMIC: 1>": "ECR_BLOCK: 2>",
+   "ECC_PAWN: 2>": "ECR_BLOCK: 2>",
+   "ECC_PHYSICS_BODY: 5>": "ECR_BLOCK: 2>",
+   "ECC_VEHICLE: 6>": "ECR_BLOCK: 2>",
+   "ECC_DESTRUCTIBLE: 7>": "ECR_BLOCK: 2>"
+  }
+ },
+ "ProjectileVisual": {
+  "cls": "StaticMeshComponent",
+  "ce": "<CollisionEnabled.NO_COLLISION: 0>",
+  "obj": "<CollisionChannel.ECC_WORLD_STATIC: 0>",
+  "profile": "NoCollision",
+  "resp": {
+   "ECC_WORLD_STATIC: 0>": "ECR_BLOCK: 2>",
+   "ECC_WORLD_DYNAMIC: 1>": "ECR_BLOCK: 2>",
+   "ECC_PAWN: 2>": "ECR_BLOCK: 2>",
+   "ECC_PHYSICS_BODY: 5>": "ECR_BLOCK: 2>",
+   "ECC_VEHICLE: 6>": "ECR_BLOCK: 2>",
+   "ECC_DESTRUCTIBLE: 7>": "ECR_BLOCK: 2>"
+  }
+ },
+ "Tracer": {
+  "cls": "StaticMeshComponent",
+  "ce": "<CollisionEnabled.NO_COLLISION: 0>",
+  "obj": "<CollisionChannel.ECC_WORLD_STATIC: 0>",
+  "profile": "NoCollision",
+  "resp": {
+   "ECC_WORLD_STATIC: 0>": "ECR_BLOCK: 2>",
+   "ECC_WORLD_DYNAMIC: 1>": "ECR_BLOCK: 2>",
+   "ECC_PAWN: 2>": "ECR_BLOCK: 2>",
+   "ECC_PHYSICS_BODY: 5>": "ECR_BLOCK: 2>",
+   "ECC_VEHICLE: 6>": "ECR_BLOCK: 2>",
+   "ECC_DESTRUCTIBLE: 7>": "ECR_BLOCK: 2>"
+  }
+ }
+}

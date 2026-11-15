@@ -1,0 +1,31 @@
+{
+ "total": 33430,
+ "matches": [
+  "Utilities|Casting|CastToUMGSequencePlayer",
+  "Utilities|Casting|CastToUMGSequencePlayerClass",
+  "Utilities|Struct|BreakLevelSequencePlayerSnapshot",
+  "Utilities|Struct|MakeSequenceEvaluatorReference",
+  "Utilities|Struct|MakeSequencePlayerReference",
+  "Utilities|Struct|MakeLevelSequencePlayerSnapshot",
+  "Utilities|Struct|SetmembersinSequenceEvaluatorReference",
+  "Utilities|Struct|SetmembersinSequencePlayerReference",
+  "Utilities|Struct|SetmembersinLevelSequencePlayerSnapshot",
+  "애니메이션|시퀀스|RandomSequencePlayer",
+  "애니메이션|시퀀스|시퀀스플레이어",
+  "애니메이션|블렌드|양방향블렌드",
+  "애니메이션|시퀀스|ConverttoSequenceEvaluator",
+  "애니메이션|시퀀스|ConverttoSequencePlayer",
+  "Utilities|Casting|CastToMovieSceneSequencePlayer",
+  "Utilities|Casting|CastToMovieSceneSequencePlayerClass",
+  "Class|레벨시퀀스액터|GetSequencePlayer",
+  "Utilities|Casting|CastToLevelSequencePlayer",
+  "Utilities|Casting|CastToLevelSequencePlayerClass",
+  "Class|액터시퀀스컴포넌트|GetSequencePlayer",
+  "Utilities|Casting|CastToActorSequencePlayer",
+  "Utilities|Casting|CastToActorSequencePlayerClass",
+  "애니메이션|컨트롤릭|ConverttoSequencePlayer",
+  "Class|템플릿시퀀스액터|GetSequencePlayer",
+  "Utilities|Casting|CastToTemplateSequencePlayer",
+  "Utilities|Casting|CastToTemplateSequencePlayerClass"
+ ]
+}

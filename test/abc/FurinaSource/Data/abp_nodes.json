@@ -1,0 +1,3912 @@
+{
+ "AnimGraph": {
+  "AnimGraphNode_Root_0": {
+   "cls": "AnimGraphNode_Root",
+   "title": "출력 포즈",
+   "pins": [
+    [
+     "Result",
+     "(LinkID=-1,SourceLinkID=-1)",
+     [
+      [
+       "AnimGraphNode_ControlRig_0",
+       "Pose"
+      ]
+     ]
+    ]
+   ]
+  },
+  "AnimGraphNode_RetargetPoseFromMesh_0": {
+   "cls": "AnimGraphNode_RetargetPoseFromMesh",
+   "title": "메시에서 포즈 리타깃",
+   "pins": [
+    [
+     "Pose",
+     "",
+     [
+      [
+       "AnimGraphNode_TwoWayBlend_1",
+       "A"
+      ]
+     ]
+    ]
+   ]
+  },
+  "AnimGraphNode_SequencePlayer_1": {
+   "cls": "AnimGraphNode_SequencePlayer",
+   "title": "시퀀스 플레이어 'AS_Furina_Walk'",
+   "pins": [
+    [
+     "PlayRate",
+     "1.000000",
+     [
+      [
+       "K2Node_CallFunction_294",
+       "ReturnValue"
+      ]
+     ]
+    ]
+   ]
+  },
+  "AnimGraphNode_TwoWayBlend_1": {
+   "cls": "AnimGraphNode_TwoWayBlend",
+   "title": "양방향 블렌드",
+   "pins": [
+    [
+     "A",
+     "(LinkID=-1,SourceLinkID=-1)",
+     [
+      [
+       "AnimGraphNode_RetargetPoseFromMesh_0",
+       "Pose"
+      ]
+     ]
+    ],
+    [
+     "B",
+     "(LinkID=-1,SourceLinkID=-1)",
+     [
+      [
+       "AnimGraphNode_TwoWayBlend_0",
+       "Pose"
+      ]
+     ]
+    ],
+    [
+     "Alpha",
+     "0.000000",
+     [
+      [
+       "K2Node_VariableGet_4",
+       "TFPGround"
+      ]
+     ]
+    ],
+    [
+     "Pose",
+     "",
+     [
+      [
+       "AnimGraphNode_LayeredBoneBlend_FP",
+       "BasePose"
+      ]
+     ]
+    ]
+   ]
+  },
+  "AnimGraphNode_SequencePlayer_0": {
+   "cls": "AnimGraphNode_SequencePlayer",
+   "title": "시퀀스 플레이어 'AS_Furina_Idle'",
+   "pins": []
+  },
+  "AnimGraphNode_TwoWayBlend_0": {
+   "cls": "AnimGraphNode_TwoWayBlend",
+   "title": "양방향 블렌드",
+   "pins": [
+    [
+     "A",
+     "(LinkID=-1,SourceLinkID=-1)",
+     [
+      [
+       "TFPStanding",
+       "Pose"
+      ]
+     ]
+    ],
+    [
+     "B",
+     "(LinkID=-1,SourceLinkID=-1)",
+     [
+      [
+       "TFPCrouching",
+       "Pose"
+      ]
+     ]
+    ],
+    [
+     "Alpha",
+     "0.000000",
+     [
+      [
+       "K2Node_VariableGet_5",
+       "TFPCrouch"
+      ]
+     ]
+    ],
+    [
+     "Pose",
+     "",
+     [
+      [
+       "AnimGraphNode_LayeredBoneBlend_0",
+       "BlendPoses_0"
+      ],
+      [
+       "AnimGraphNode_TwoWayBlend_1",
+       "B"
+      ]
+     ]
+    ]
+   ]
+  },
+  "AnimGraphNode_RetargetPoseFromMesh_1": {
+   "cls": "AnimGraphNode_RetargetPoseFromMesh",
+   "title": "메시에서 포즈 리타깃",
+   "pins": [
+    [
+     "Pose",
+     "",
+     [
+      [
+       "AnimGraphNode_LayeredBoneBlend_0",
+       "BasePose"
+      ]
+     ]
+    ]
+   ]
+  },
+  "AnimGraphNode_LayeredBoneBlend_0": {
+   "cls": "AnimGraphNode_LayeredBoneBlend",
+   "title": "본 별로 레이어드 블렌딩",
+   "pins": [
+    [
+     "BasePose",
+     "(LinkID=-1,SourceLinkID=-1)",
+     [
+      [
+       "AnimGraphNode_RetargetPoseFromMesh_1",
+       "Pose"
+      ]
+     ]
+    ],
+    [
+     "BlendPoses_0",
+     "(LinkID=-1,SourceLinkID=-1)",
+     [
+      [
+       "AnimGraphNode_TwoWayBlend_0",
+       "Pose"
+      ]
+     ]
+    ],
+    [
+     "BlendWeights_0",
+     "1.000000",
+     []
+    ]
+   ]
+  },
+  "AnimGraphNode_ControlRig_0": {
+   "cls": "AnimGraphNode_ControlRig",
+   "title": "컨트롤 릭",
+   "pins": [
+    [
+     "Source",
+     "(LinkID=-1,SourceLinkID=-1)",
+     [
+      [
+       "AnimGraphNode_ModifyCurve_ViewState",
+       "Pose"
+      ]
+     ]
+    ],
+    [
+     "Alpha",
+     "1.000000",
+     []
+    ],
+    [
+     "Pose",
+     "",
+     [
+      [
+       "AnimGraphNode_LocalToComponentSpace_0",
+       "LocalPose"
+      ],
+      [
+       "AnimGraphNode_Root_0",
+       "Result"
+      ]
+     ]
+    ]
+   ]
+  },
+  "AnimGraphNode_LocalToComponentSpace_0": {
+   "cls": "AnimGraphNode_LocalToComponentSpace",
+   "title": "로컬을 컴포넌트로",
+   "pins": [
+    [
+     "LocalPose",
+     "(LinkID=-1,SourceLinkID=-1)",
+     [
+      [
+       "AnimGraphNode_ControlRig_0",
+       "Pose"
+      ]
+     ]
+    ],
+    [
+     "ComponentPose",
+     "",
+     [
+      [
+       "AnimGraphNode_AnimDynamics_0",
+       "ComponentPose"
+      ]
+     ]
+    ]
+   ]
+  },
+  "AnimGraphNode_AnimDynamics_0": {
+   "cls": "AnimGraphNode_AnimDynamics",
+   "title": "Anim Dynamics - Chain: F_0_1_L -> F_17_1_L",
+   "pins": [
+    [
+     "ComponentPose",
+     "(LinkID=-1,SourceLinkID=-1)",
+     [
+      [
+       "AnimGraphNode_LocalToComponentSpace_0",
+       "ComponentPose"
+      ]
+     ]
+    ],
+    [
+     "AlphaCurveName",
+     "HairDyn",
+     []
+    ],
+    [
+     "ExternalForce",
+     "0.000000,0.000000,0.000000",
+     []
+    ],
+    [
+     "Pose",
+     "",
+     [
+      [
+       "AnimGraphNode_AnimDynamics_1",
+       "ComponentPose"
+      ]
+     ]
+    ]
+   ]
+  },
+  "AnimGraphNode_AnimDynamics_1": {
+   "cls": "AnimGraphNode_AnimDynamics",
+   "title": "Anim Dynamics - Chain: F_0_1_R -> F_17_1_R",
+   "pins": [
+    [
+     "ComponentPose",
+     "(LinkID=-1,SourceLinkID=-1)",
+     [
+      [
+       "AnimGraphNode_AnimDynamics_0",
+       "Pose"
+      ]
+     ]
+    ],
+    [
+     "AlphaCurveName",
+     "HairDyn",
+     []
+    ],
+    [
+     "ExternalForce",
+     "0.000000,0.000000,0.000000",
+     []
+    ],
+    [
+     "Pose",
+     "",
+     [
+      [
+       "AnimGraphNode_AnimDynamics_2",
+       "ComponentPose"
+      ]
+     ]
+    ]
+   ]
+  },
+  "AnimGraphNode_AnimDynamics_2": {
+   "cls": "AnimGraphNode_AnimDynamics",
+   "title": "Anim Dynamics - Chain: CF_1_L -> CF_2_L",
+   "pins": [
+    [
+     "ComponentPose",
+     "(LinkID=-1,SourceLinkID=-1)",
+     [
+      [
+       "AnimGraphNode_AnimDynamics_1",
+       "Pose"
+      ]
+     ]
+    ],
+    [
+     "AlphaCurveName",
+     "HairDyn",
+     []
+    ],
+    [
+     "ExternalForce",
+     "0.000000,0.000000,0.000000",
+     []
+    ],
+    [
+     "Pose",
+     "",
+     [
+      [
+       "AnimGraphNode_AnimDynamics_3",
+       "ComponentPose"
+      ]
+     ]
+    ]
+   ]
+  },
+  "AnimGraphNode_AnimDynamics_3": {
+   "cls": "AnimGraphNode_AnimDynamics",
+   "title": "Anim Dynamics - Chain: CF_1_R -> CF_2_R",
+   "pins": [
+    [
+     "ComponentPose",
+     "(LinkID=-1,SourceLinkID=-1)",
+     [
+      [
+       "AnimGraphNode_AnimDynamics_2",
+       "Pose"
+      ]
+     ]
+    ],
+    [
+     "AlphaCurveName",
+     "HairDyn",
+     []
+    ],
+    [
+     "ExternalForce",
+     "0.000000,0.000000,0.000000",
+     []
+    ],
+    [
+     "Pose",
+     "",
+     [
+      [
+       "AnimGraphNode_AnimDynamics_4",
+       "ComponentPose"
+      ]
+     ]
+    ]
+   ]
+  },
+  "AnimGraphNode_AnimDynamics_4": {
+   "cls": "AnimGraphNode_AnimDynamics",
+   "title": "Anim Dynamics - Chain: DM_0_1 -> DM_5_1",
+   "pins": [
+    [
+     "ComponentPose",
+     "(LinkID=-1,SourceLinkID=-1)",
+     [
+      [
+       "AnimGraphNode_AnimDynamics_3",
+       "Pose"
+      ]
+     ]
+    ],
+    [
+     "AlphaCurveName",
+     "AhogeDyn",
+     []
+    ],
+    [
+     "ExternalForce",
+     "0.000000,0.000000,0.000000",
+     []
+    ],
+    [
+     "Pose",
+     "",
+     [
+      [
+       "AnimGraphNode_ComponentToLocalSpace_0",
+       "ComponentPose"
+      ]
+     ]
+    ]
+   ]
+  },
+  "AnimGraphNode_ComponentToLocalSpace_0": {
+   "cls": "AnimGraphNode_ComponentToLocalSpace",
+   "title": "컴포넌트에서 로컬로",
+   "pins": [
+    [
+     "ComponentPose",
+     "(LinkID=-1,SourceLinkID=-1)",
+     [
+      [
+       "AnimGraphNode_AnimDynamics_4",
+       "Pose"
+      ]
+     ]
+    ]
+   ]
+  },
+  "AnimGraphNode_SequencePlayer_FPRun": {
+   "cls": "AnimGraphNode_SequencePlayer",
+   "title": "시퀀스 플레이어 'AS_Furina_FP_Run_Loop'",
+   "pins": [
+    [
+     "Pose",
+     "",
+     [
+      [
+       "AnimGraphNode_TwoWayBlend_FPWalk",
+       "A"
+      ]
+     ]
+    ]
+   ]
+  },
+  "AnimGraphNode_SequencePlayer_FPWalk": {
+   "cls": "AnimGraphNode_SequencePlayer",
+   "title": "시퀀스 플레이어 'AS_Furina_FP_Walk_F_Loop'",
+   "pins": [
+    [
+     "Pose",
+     "",
+     [
+      [
+       "AnimGraphNode_TwoWayBlend_FPWalk",
+       "B"
+      ]
+     ]
+    ]
+   ]
+  },
+  "AnimGraphNode_SequencePlayer_FPIdle": {
+   "cls": "AnimGraphNode_SequencePlayer",
+   "title": "시퀀스 플레이어 'AS_Furina_FP_Idle_Loop'",
+   "pins": [
+    [
+     "Pose",
+     "",
+     [
+      [
+       "AnimGraphNode_TwoWayBlend_FPIdle",
+       "B"
+      ]
+     ]
+    ]
+   ]
+  },
+  "AnimGraphNode_TwoWayBlend_FPWalk": {
+   "cls": "AnimGraphNode_TwoWayBlend",
+   "title": "양방향 블렌드",
+   "pins": [
+    [
+     "A",
+     "(LinkID=-1,SourceLinkID=-1)",
+     [
+      [
+       "AnimGraphNode_SequencePlayer_FPRun",
+       "Pose"
+      ]
+     ]
+    ],
+    [
+     "B",
+     "(LinkID=-1,SourceLinkID=-1)",
+     [
+      [
+       "AnimGraphNode_SequencePlayer_FPWalk",
+       "Pose"
+      ]
+     ]
+    ],
+    [
+     "Alpha",
+     "0.000000",
+     [
+      [
+       "K2Node_VariableGet_6",
+       "TFPHandWalk"
+      ]
+     ]
+    ],
+    [
+     "Pose",
+     "",
+     [
+      [
+       "AnimGraphNode_TwoWayBlend_FPIdle",
+       "A"
+      ]
+     ]
+    ]
+   ]
+  },
+  "AnimGraphNode_TwoWayBlend_FPIdle": {
+   "cls": "AnimGraphNode_TwoWayBlend",
+   "title": "양방향 블렌드",
+   "pins": [
+    [
+     "A",
+     "(LinkID=-1,SourceLinkID=-1)",
+     [
+      [
+       "AnimGraphNode_TwoWayBlend_FPWalk",
+       "Pose"
+      ]
+     ]
+    ],
+    [
+     "B",
+     "(LinkID=-1,SourceLinkID=-1)",
+     [
+      [
+       "AnimGraphNode_SequencePlayer_FPIdle",
+       "Pose"
+      ]
+     ]
+    ],
+    [
+     "Alpha",
+     "0.000000",
+     [
+      [
+       "K2Node_VariableGet_7",
+       "TFPHandIdle"
+      ]
+     ]
+    ],
+    [
+     "Pose",
+     "",
+     [
+      [
+       "AnimGraphNode_Slot_FP",
+       "Source"
+      ]
+     ]
+    ]
+   ]
+  },
+  "AnimGraphNode_Slot_FP": {
+   "cls": "AnimGraphNode_Slot",
+   "title": "Slot 'DefaultSlot'",
+   "pins": [
+    [
+     "Source",
+     "(LinkID=-1,SourceLinkID=-1)",
+     [
+      [
+       "AnimGraphNode_TwoWayBlend_FPIdle",
+       "Pose"
+      ]
+     ]
+    ],
+    [
+     "Pose",
+     "",
+     [
+      [
+       "AnimGraphNode_LayeredBoneBlend_FP",
+       "BlendPoses_0"
+      ]
+     ]
+    ]
+   ]
+  },
+  "AnimGraphNode_LayeredBoneBlend_FP": {
+   "cls": "AnimGraphNode_LayeredBoneBlend",
+   "title": "본 별로 레이어드 블렌딩",
+   "pins": [
+    [
+     "BasePose",
+     "(LinkID=-1,SourceLinkID=-1)",
+     [
+      [
+       "AnimGraphNode_TwoWayBlend_1",
+       "Pose"
+      ]
+     ]
+    ],
+    [
+     "BlendPoses_0",
+     "(LinkID=-1,SourceLinkID=-1)",
+     [
+      [
+       "AnimGraphNode_Slot_FP",
+       "Pose"
+      ]
+     ]
+    ],
+    [
+     "BlendWeights_0",
+     "1.000000",
+     []
+    ],
+    [
+     "Pose",
+     "",
+     [
+      [
+       "AnimGraphNode_ModifyCurve_Aim",
+       "SourcePose"
+      ]
+     ]
+    ]
+   ]
+  },
+  "AnimGraphNode_ModifyCurve_Aim": {
+   "cls": "AnimGraphNode_ModifyCurve",
+   "title": "커브 변경",
+   "pins": [
+    [
+     "SourcePose",
+     "(LinkID=-1,SourceLinkID=-1)",
+     [
+      [
+       "AnimGraphNode_LayeredBoneBlend_FP",
+       "Pose"
+      ]
+     ]
+    ],
+    [
+     "CurveValues_0",
+     "0.0",
+     [
+      [
+       "K2Node_CallFunction_FPNorm",
+       "ReturnValue"
+      ]
+     ]
+    ],
+    [
+     "Alpha",
+     "1.000000",
+     []
+    ],
+    [
+     "Pose",
+     "",
+     [
+      [
+       "AnimGraphNode_ModifyCurve_AimState",
+       "SourcePose"
+      ]
+     ]
+    ]
+   ]
+  },
+  "K2Node_CallFunction_FPOwner": {
+   "cls": "K2Node_CallFunction",
+   "title": "TryGetPawnOwner",
+   "pins": [
+    [
+     "ReturnValue",
+     "",
+     [
+      [
+       "K2Node_CallFunction_FPAim",
+       "self"
+      ]
+     ]
+    ]
+   ]
+  },
+  "K2Node_CallFunction_FPAim": {
+   "cls": "K2Node_CallFunction",
+   "title": "GetBaseAimRotation",
+   "pins": [
+    [
+     "self",
+     "",
+     [
+      [
+       "K2Node_CallFunction_FPOwner",
+       "ReturnValue"
+      ]
+     ]
+    ],
+    [
+     "ReturnValue",
+     "0, 0, 0",
+     [
+      [
+       "K2Node_CallFunction_FPBreak",
+       "InRot"
+      ]
+     ]
+    ]
+   ]
+  },
+  "K2Node_CallFunction_FPBreak": {
+   "cls": "K2Node_CallFunction",
+   "title": "BreakRotator",
+   "pins": [
+    [
+     "InRot",
+     "0, 0, 0",
+     [
+      [
+       "K2Node_CallFunction_FPAim",
+       "ReturnValue"
+      ]
+     ]
+    ],
+    [
+     "Roll",
+     "0.0",
+     []
+    ],
+    [
+     "Pitch",
+     "0.0",
+     [
+      [
+       "K2Node_CallFunction_FPNorm",
+       "Angle"
+      ]
+     ]
+    ],
+    [
+     "Yaw",
+     "0.0",
+     []
+    ]
+   ]
+  },
+  "K2Node_CallFunction_FPNorm": {
+   "cls": "K2Node_CallFunction",
+   "title": "NormalizeAxis",
+   "pins": [
+    [
+     "Angle",
+     "0.0",
+     [
+      [
+       "K2Node_CallFunction_FPBreak",
+       "Pitch"
+      ]
+     ]
+    ],
+    [
+     "ReturnValue",
+     "0.0",
+     [
+      [
+       "AnimGraphNode_ModifyCurve_Aim",
+       "CurveValues_0"
+      ]
+     ]
+    ]
+   ]
+  },
+  "K2Node_FPAA_Owner": {
+   "cls": "K2Node_CallFunction",
+   "title": "TryGetPawnOwner",
+   "pins": [
+    [
+     "ReturnValue",
+     "",
+     [
+      [
+       "K2Node_FPAA_Flag0F",
+       "self"
+      ],
+      [
+       "K2Node_FPAA_Flag1F",
+       "self"
+      ]
+     ]
+    ]
+   ]
+  },
+  "K2Node_FPAA_Flag0F": {
+   "cls": "K2Node_CallFunction",
+   "title": "FindComponentByTag",
+   "pins": [
+    [
+     "self",
+     "",
+     [
+      [
+       "K2Node_FPAA_Owner",
+       "ReturnValue"
+      ]
+     ]
+    ],
+    [
+     "ComponentClass",
+     "/Script/Engine.ActorComponent",
+     []
+    ],
+    [
+     "Tag",
+     "FurinaADS",
+     []
+    ],
+    [
+     "ReturnValue",
+     "",
+     [
+      [
+       "K2Node_FPAA_Flag0",
+       "self"
+      ]
+     ]
+    ]
+   ]
+  },
+  "K2Node_FPAA_Flag0": {
+   "cls": "K2Node_CallFunction",
+   "title": "IsActive",
+   "pins": [
+    [
+     "self",
+     "",
+     [
+      [
+       "K2Node_FPAA_Flag0F",
+       "ReturnValue"
+      ]
+     ]
+    ],
+    [
+     "ReturnValue",
+     "false",
+     [
+      [
+       "K2Node_FPAA_ToF0",
+       "InBool"
+      ]
+     ]
+    ]
+   ]
+  },
+  "K2Node_FPAA_ToF0": {
+   "cls": "K2Node_CallFunction",
+   "title": "To Float (Boolean)",
+   "pins": [
+    [
+     "InBool",
+     "false",
+     [
+      [
+       "K2Node_FPAA_Flag0",
+       "ReturnValue"
+      ]
+     ]
+    ],
+    [
+     "ReturnValue",
+     "0.0",
+     [
+      [
+       "AnimGraphNode_ModifyCurve_AimState",
+       "CurveValues_0"
+      ]
+     ]
+    ]
+   ]
+  },
+  "K2Node_FPAA_Flag1F": {
+   "cls": "K2Node_CallFunction",
+   "title": "FindComponentByTag",
+   "pins": [
+    [
+     "self",
+     "",
+     [
+      [
+       "K2Node_FPAA_Owner",
+       "ReturnValue"
+      ]
+     ]
+    ],
+    [
+     "ComponentClass",
+     "/Script/Engine.ActorComponent",
+     []
+    ],
+    [
+     "Tag",
+     "FurinaShoulder",
+     []
+    ],
+    [
+     "ReturnValue",
+     "",
+     [
+      [
+       "K2Node_FPAA_Flag1",
+       "self"
+      ]
+     ]
+    ]
+   ]
+  },
+  "K2Node_FPAA_Flag1": {
+   "cls": "K2Node_CallFunction",
+   "title": "IsActive",
+   "pins": [
+    [
+     "self",
+     "",
+     [
+      [
+       "K2Node_FPAA_Flag1F",
+       "ReturnValue"
+      ]
+     ]
+    ],
+    [
+     "ReturnValue",
+     "false",
+     [
+      [
+       "K2Node_FPAA_ToF1",
+       "InBool"
+      ]
+     ]
+    ]
+   ]
+  },
+  "K2Node_FPAA_ToF1": {
+   "cls": "K2Node_CallFunction",
+   "title": "To Float (Boolean)",
+   "pins": [
+    [
+     "InBool",
+     "false",
+     [
+      [
+       "K2Node_FPAA_Flag1",
+       "ReturnValue"
+      ]
+     ]
+    ],
+    [
+     "ReturnValue",
+     "0.0",
+     [
+      [
+       "AnimGraphNode_ModifyCurve_AimState",
+       "CurveValues_1"
+      ]
+     ]
+    ]
+   ]
+  },
+  "AnimGraphNode_ModifyCurve_AimState": {
+   "cls": "AnimGraphNode_ModifyCurve",
+   "title": "커브 변경",
+   "pins": [
+    [
+     "SourcePose",
+     "(LinkID=-1,SourceLinkID=-1)",
+     [
+      [
+       "AnimGraphNode_ModifyCurve_Aim",
+       "Pose"
+      ]
+     ]
+    ],
+    [
+     "CurveValues_0",
+     "0.0",
+     [
+      [
+       "K2Node_FPAA_ToF0",
+       "ReturnValue"
+      ]
+     ]
+    ],
+    [
+     "CurveValues_1",
+     "0.0",
+     [
+      [
+       "K2Node_FPAA_ToF1",
+       "ReturnValue"
+      ]
+     ]
+    ],
+    [
+     "Alpha",
+     "1.000000",
+     []
+    ],
+    [
+     "Pose",
+     "",
+     [
+      [
+       "AnimGraphNode_ModifyCurve_ViewState",
+       "SourcePose"
+      ]
+     ]
+    ]
+   ]
+  },
+  "K2Node_FPVW_Owner": {
+   "cls": "K2Node_CallFunction",
+   "title": "TryGetPawnOwner",
+   "pins": [
+    [
+     "ReturnValue",
+     "",
+     [
+      [
+       "K2Node_FPVW_FPOnF",
+       "self"
+      ]
+     ]
+    ]
+   ]
+  },
+  "K2Node_FPVW_FPOnF": {
+   "cls": "K2Node_CallFunction",
+   "title": "FindComponentByTag",
+   "pins": [
+    [
+     "self",
+     "",
+     [
+      [
+       "K2Node_FPVW_Owner",
+       "ReturnValue"
+      ]
+     ]
+    ],
+    [
+     "ComponentClass",
+     "/Script/Engine.ActorComponent",
+     []
+    ],
+    [
+     "Tag",
+     "FurinaFPCamera",
+     []
+    ],
+    [
+     "ReturnValue",
+     "",
+     [
+      [
+       "K2Node_FPVW_FPOn",
+       "self"
+      ]
+     ]
+    ]
+   ]
+  },
+  "K2Node_FPVW_FPOn": {
+   "cls": "K2Node_CallFunction",
+   "title": "IsActive",
+   "pins": [
+    [
+     "self",
+     "",
+     [
+      [
+       "K2Node_FPVW_FPOnF",
+       "ReturnValue"
+      ]
+     ]
+    ],
+    [
+     "ReturnValue",
+     "false",
+     [
+      [
+       "K2Node_FPVW_NotFP",
+       "A"
+      ]
+     ]
+    ]
+   ]
+  },
+  "K2Node_FPVW_NotFP": {
+   "cls": "K2Node_CallFunction",
+   "title": "NOT Boolean",
+   "pins": [
+    [
+     "A",
+     "false",
+     [
+      [
+       "K2Node_FPVW_FPOn",
+       "ReturnValue"
+      ]
+     ]
+    ],
+    [
+     "ReturnValue",
+     "false",
+     [
+      [
+       "K2Node_FPVW_ToF",
+       "InBool"
+      ]
+     ]
+    ]
+   ]
+  },
+  "K2Node_FPVW_ToF": {
+   "cls": "K2Node_CallFunction",
+   "title": "To Float (Boolean)",
+   "pins": [
+    [
+     "InBool",
+     "false",
+     [
+      [
+       "K2Node_FPVW_NotFP",
+       "ReturnValue"
+      ]
+     ]
+    ],
+    [
+     "ReturnValue",
+     "0.0",
+     [
+      [
+       "AnimGraphNode_ModifyCurve_ViewState",
+       "CurveValues_0"
+      ]
+     ]
+    ]
+   ]
+  },
+  "AnimGraphNode_ModifyCurve_ViewState": {
+   "cls": "AnimGraphNode_ModifyCurve",
+   "title": "커브 변경",
+   "pins": [
+    [
+     "SourcePose",
+     "(LinkID=-1,SourceLinkID=-1)",
+     [
+      [
+       "AnimGraphNode_ModifyCurve_AimState",
+       "Pose"
+      ]
+     ]
+    ],
+    [
+     "CurveValues_0",
+     "0.0",
+     [
+      [
+       "K2Node_FPVW_ToF",
+       "ReturnValue"
+      ]
+     ]
+    ],
+    [
+     "CurveValues_1",
+     "0.0",
+     [
+      [
+       "FurinaCrouchFloat",
+       "ReturnValue"
+      ]
+     ]
+    ],
+    [
+     "CurveValues_2",
+     "0.0",
+     [
+      [
+       "FurinaZipFloat",
+       "ReturnValue"
+      ]
+     ]
+    ],
+    [
+     "CurveValues_3",
+     "0.0",
+     [
+      [
+       "FurinaFireFloat",
+       "ReturnValue"
+      ]
+     ]
+    ],
+    [
+     "CurveValues_4",
+     "0.0",
+     [
+      [
+       "FurinaProneFloat",
+       "ReturnValue"
+      ]
+     ]
+    ],
+    [
+     "Alpha",
+     "1.000000",
+     []
+    ],
+    [
+     "Pose",
+     "",
+     [
+      [
+       "AnimGraphNode_ControlRig_0",
+       "Source"
+      ]
+     ]
+    ]
+   ]
+  },
+  "FurinaCrouchOwner": {
+   "cls": "K2Node_CallFunction",
+   "title": "TryGetPawnOwner",
+   "pins": [
+    [
+     "ReturnValue",
+     "",
+     [
+      [
+       "FurinaCrouchMovement",
+       "self"
+      ],
+      [
+       "FurinaZipFind",
+       "self"
+      ],
+      [
+       "FurinaFireFind",
+       "self"
+      ],
+      [
+       "FurinaProneFind",
+       "self"
+      ]
+     ]
+    ]
+   ]
+  },
+  "FurinaCrouchMovement": {
+   "cls": "K2Node_CallFunction",
+   "title": "GetMovementComponent",
+   "pins": [
+    [
+     "self",
+     "",
+     [
+      [
+       "FurinaCrouchOwner",
+       "ReturnValue"
+      ]
+     ]
+    ],
+    [
+     "ReturnValue",
+     "",
+     [
+      [
+       "FurinaCrouchActual",
+       "self"
+      ]
+     ]
+    ]
+   ]
+  },
+  "FurinaCrouchActual": {
+   "cls": "K2Node_CallFunction",
+   "title": "IsCrouching",
+   "pins": [
+    [
+     "self",
+     "",
+     [
+      [
+       "FurinaCrouchMovement",
+       "ReturnValue"
+      ]
+     ]
+    ],
+    [
+     "ReturnValue",
+     "false",
+     [
+      [
+       "FurinaCrouchFloat",
+       "InBool"
+      ]
+     ]
+    ]
+   ]
+  },
+  "FurinaCrouchFloat": {
+   "cls": "K2Node_CallFunction",
+   "title": "To Float (Boolean)",
+   "pins": [
+    [
+     "InBool",
+     "false",
+     [
+      [
+       "FurinaCrouchActual",
+       "ReturnValue"
+      ]
+     ]
+    ],
+    [
+     "ReturnValue",
+     "0.0",
+     [
+      [
+       "AnimGraphNode_ModifyCurve_ViewState",
+       "CurveValues_1"
+      ]
+     ]
+    ]
+   ]
+  },
+  "CachedWalkRate": {
+   "cls": "K2Node_VariableGet",
+   "title": "Get FurinaWalkRate",
+   "pins": [
+    [
+     "FurinaWalkRate",
+     "0",
+     [
+      [
+       "K2Node_CallFunction_294",
+       "InInt"
+      ]
+     ]
+    ]
+   ]
+  },
+  "K2Node_CallFunction_294": {
+   "cls": "K2Node_CallFunction",
+   "title": "To Float (Integer)",
+   "pins": [
+    [
+     "InInt",
+     "0",
+     [
+      [
+       "CachedWalkRate",
+       "FurinaWalkRate"
+      ]
+     ]
+    ],
+    [
+     "ReturnValue",
+     "0.0",
+     [
+      [
+       "AnimGraphNode_SequencePlayer_1",
+       "PlayRate"
+      ]
+     ]
+    ]
+   ]
+  },
+  "TFPStanding": {
+   "cls": "AnimGraphNode_BlendSpacePlayer",
+   "title": "블렌드 스페이스 플레이어 'BS_FurinaStanding'",
+   "pins": [
+    [
+     "X",
+     "0.000000",
+     [
+      [
+       "K2Node_VariableGet_0",
+       "TFPDirection"
+      ]
+     ]
+    ],
+    [
+     "Y",
+     "0.000000",
+     [
+      [
+       "K2Node_VariableGet_1",
+       "TFPSpeed"
+      ]
+     ]
+    ],
+    [
+     "Pose",
+     "",
+     [
+      [
+       "AnimGraphNode_TwoWayBlend_0",
+       "A"
+      ]
+     ]
+    ]
+   ]
+  },
+  "TFPCrouching": {
+   "cls": "AnimGraphNode_BlendSpacePlayer",
+   "title": "블렌드 스페이스 플레이어 'BS_FurinaCrouching'",
+   "pins": [
+    [
+     "X",
+     "0.000000",
+     [
+      [
+       "K2Node_VariableGet_2",
+       "TFPDirection"
+      ]
+     ]
+    ],
+    [
+     "Y",
+     "0.000000",
+     [
+      [
+       "K2Node_VariableGet_3",
+       "TFPSpeed"
+      ]
+     ]
+    ],
+    [
+     "Pose",
+     "",
+     [
+      [
+       "AnimGraphNode_TwoWayBlend_0",
+       "B"
+      ]
+     ]
+    ]
+   ]
+  },
+  "K2Node_CallFunction_36": {
+   "cls": "K2Node_CallFunction",
+   "title": "To Float (Integer)",
+   "pins": [
+    [
+     "InInt",
+     "0",
+     []
+    ],
+    [
+     "ReturnValue",
+     "0.0",
+     []
+    ]
+   ]
+  },
+  "K2Node_CallFunction_37": {
+   "cls": "K2Node_CallFunction",
+   "title": "To Float (Integer)",
+   "pins": [
+    [
+     "InInt",
+     "0",
+     []
+    ],
+    [
+     "ReturnValue",
+     "0.0",
+     []
+    ]
+   ]
+  },
+  "K2Node_CallFunction_38": {
+   "cls": "K2Node_CallFunction",
+   "title": "To Float (Integer)",
+   "pins": [
+    [
+     "InInt",
+     "0",
+     []
+    ],
+    [
+     "ReturnValue",
+     "0.0",
+     []
+    ]
+   ]
+  },
+  "K2Node_CallFunction_39": {
+   "cls": "K2Node_CallFunction",
+   "title": "To Float (Integer)",
+   "pins": [
+    [
+     "InInt",
+     "0",
+     []
+    ],
+    [
+     "ReturnValue",
+     "0.0",
+     []
+    ]
+   ]
+  },
+  "K2Node_CallFunction_76": {
+   "cls": "K2Node_CallFunction",
+   "title": "To Float (Integer)",
+   "pins": [
+    [
+     "InInt",
+     "0",
+     []
+    ],
+    [
+     "ReturnValue",
+     "0.0",
+     []
+    ]
+   ]
+  },
+  "K2Node_CallFunction_77": {
+   "cls": "K2Node_CallFunction",
+   "title": "To Float (Integer)",
+   "pins": [
+    [
+     "InInt",
+     "0",
+     []
+    ],
+    [
+     "ReturnValue",
+     "0.0",
+     []
+    ]
+   ]
+  },
+  "K2Node_CallFunction_78": {
+   "cls": "K2Node_CallFunction",
+   "title": "To Float (Integer)",
+   "pins": [
+    [
+     "InInt",
+     "0",
+     []
+    ],
+    [
+     "ReturnValue",
+     "0.0",
+     []
+    ]
+   ]
+  },
+  "K2Node_CallFunction_79": {
+   "cls": "K2Node_CallFunction",
+   "title": "To Float (Integer)",
+   "pins": [
+    [
+     "InInt",
+     "0",
+     []
+    ],
+    [
+     "ReturnValue",
+     "0.0",
+     []
+    ]
+   ]
+  },
+  "K2Node_CallFunction_80": {
+   "cls": "K2Node_CallFunction",
+   "title": "To Float (Integer)",
+   "pins": [
+    [
+     "InInt",
+     "0",
+     []
+    ],
+    [
+     "ReturnValue",
+     "0.0",
+     []
+    ]
+   ]
+  },
+  "K2Node_CallFunction_81": {
+   "cls": "K2Node_CallFunction",
+   "title": "To Float (Integer)",
+   "pins": [
+    [
+     "InInt",
+     "0",
+     []
+    ],
+    [
+     "ReturnValue",
+     "0.0",
+     []
+    ]
+   ]
+  },
+  "K2Node_CallFunction_155": {
+   "cls": "K2Node_CallFunction",
+   "title": "To Float (Integer)",
+   "pins": [
+    [
+     "InInt",
+     "0",
+     []
+    ],
+    [
+     "ReturnValue",
+     "0.0",
+     []
+    ]
+   ]
+  },
+  "K2Node_CallFunction_156": {
+   "cls": "K2Node_CallFunction",
+   "title": "To Float (Integer)",
+   "pins": [
+    [
+     "InInt",
+     "0",
+     []
+    ],
+    [
+     "ReturnValue",
+     "0.0",
+     []
+    ]
+   ]
+  },
+  "K2Node_VariableGet_0": {
+   "cls": "K2Node_VariableGet",
+   "title": "Get TFPDirection",
+   "pins": [
+    [
+     "TFPDirection",
+     "0.0",
+     [
+      [
+       "TFPStanding",
+       "X"
+      ]
+     ]
+    ]
+   ]
+  },
+  "K2Node_VariableGet_1": {
+   "cls": "K2Node_VariableGet",
+   "title": "Get TFPSpeed",
+   "pins": [
+    [
+     "TFPSpeed",
+     "0.0",
+     [
+      [
+       "TFPStanding",
+       "Y"
+      ]
+     ]
+    ]
+   ]
+  },
+  "K2Node_VariableGet_2": {
+   "cls": "K2Node_VariableGet",
+   "title": "Get TFPDirection",
+   "pins": [
+    [
+     "TFPDirection",
+     "0.0",
+     [
+      [
+       "TFPCrouching",
+       "X"
+      ]
+     ]
+    ]
+   ]
+  },
+  "K2Node_VariableGet_3": {
+   "cls": "K2Node_VariableGet",
+   "title": "Get TFPSpeed",
+   "pins": [
+    [
+     "TFPSpeed",
+     "0.0",
+     [
+      [
+       "TFPCrouching",
+       "Y"
+      ]
+     ]
+    ]
+   ]
+  },
+  "K2Node_VariableGet_4": {
+   "cls": "K2Node_VariableGet",
+   "title": "Get TFPGround",
+   "pins": [
+    [
+     "TFPGround",
+     "0.0",
+     [
+      [
+       "AnimGraphNode_TwoWayBlend_1",
+       "Alpha"
+      ]
+     ]
+    ]
+   ]
+  },
+  "K2Node_VariableGet_5": {
+   "cls": "K2Node_VariableGet",
+   "title": "Get TFPCrouch",
+   "pins": [
+    [
+     "TFPCrouch",
+     "0.0",
+     [
+      [
+       "AnimGraphNode_TwoWayBlend_0",
+       "Alpha"
+      ]
+     ]
+    ]
+   ]
+  },
+  "K2Node_VariableGet_6": {
+   "cls": "K2Node_VariableGet",
+   "title": "Get TFPHandWalk",
+   "pins": [
+    [
+     "TFPHandWalk",
+     "0.0",
+     [
+      [
+       "AnimGraphNode_TwoWayBlend_FPWalk",
+       "Alpha"
+      ]
+     ]
+    ]
+   ]
+  },
+  "K2Node_VariableGet_7": {
+   "cls": "K2Node_VariableGet",
+   "title": "Get TFPHandIdle",
+   "pins": [
+    [
+     "TFPHandIdle",
+     "0.0",
+     [
+      [
+       "AnimGraphNode_TwoWayBlend_FPIdle",
+       "Alpha"
+      ]
+     ]
+    ]
+   ]
+  },
+  "FurinaZipFind": {
+   "cls": "K2Node_CallFunction",
+   "title": "FindComponentByTag",
+   "pins": [
+    [
+     "self",
+     "",
+     [
+      [
+       "FurinaCrouchOwner",
+       "ReturnValue"
+      ]
+     ]
+    ],
+    [
+     "ComponentClass",
+     "/Script/Engine.ActorComponent",
+     []
+    ],
+    [
+     "Tag",
+     "FurinaZip",
+     []
+    ],
+    [
+     "ReturnValue",
+     "",
+     [
+      [
+       "FurinaZipActive",
+       "self"
+      ]
+     ]
+    ]
+   ]
+  },
+  "FurinaZipActive": {
+   "cls": "K2Node_CallFunction",
+   "title": "IsActive",
+   "pins": [
+    [
+     "self",
+     "",
+     [
+      [
+       "FurinaZipFind",
+       "ReturnValue"
+      ]
+     ]
+    ],
+    [
+     "ReturnValue",
+     "false",
+     [
+      [
+       "FurinaZipFloat",
+       "InBool"
+      ]
+     ]
+    ]
+   ]
+  },
+  "FurinaZipFloat": {
+   "cls": "K2Node_CallFunction",
+   "title": "To Float (Boolean)",
+   "pins": [
+    [
+     "InBool",
+     "false",
+     [
+      [
+       "FurinaZipActive",
+       "ReturnValue"
+      ]
+     ]
+    ],
+    [
+     "ReturnValue",
+     "0.0",
+     [
+      [
+       "AnimGraphNode_ModifyCurve_ViewState",
+       "CurveValues_2"
+      ]
+     ]
+    ]
+   ]
+  },
+  "FurinaFireFind": {
+   "cls": "K2Node_CallFunction",
+   "title": "FindComponentByTag",
+   "pins": [
+    [
+     "self",
+     "",
+     [
+      [
+       "FurinaCrouchOwner",
+       "ReturnValue"
+      ]
+     ]
+    ],
+    [
+     "ComponentClass",
+     "/Script/Engine.ActorComponent",
+     []
+    ],
+    [
+     "Tag",
+     "FurinaFireHold",
+     []
+    ],
+    [
+     "ReturnValue",
+     "",
+     [
+      [
+       "FurinaFireActive",
+       "self"
+      ]
+     ]
+    ]
+   ]
+  },
+  "FurinaFireActive": {
+   "cls": "K2Node_CallFunction",
+   "title": "IsActive",
+   "pins": [
+    [
+     "self",
+     "",
+     [
+      [
+       "FurinaFireFind",
+       "ReturnValue"
+      ]
+     ]
+    ],
+    [
+     "ReturnValue",
+     "false",
+     [
+      [
+       "FurinaFireFloat",
+       "InBool"
+      ]
+     ]
+    ]
+   ]
+  },
+  "FurinaFireFloat": {
+   "cls": "K2Node_CallFunction",
+   "title": "To Float (Boolean)",
+   "pins": [
+    [
+     "InBool",
+     "false",
+     [
+      [
+       "FurinaFireActive",
+       "ReturnValue"
+      ]
+     ]
+    ],
+    [
+     "ReturnValue",
+     "0.0",
+     [
+      [
+       "AnimGraphNode_ModifyCurve_ViewState",
+       "CurveValues_3"
+      ]
+     ]
+    ]
+   ]
+  },
+  "FurinaProneFind": {
+   "cls": "K2Node_CallFunction",
+   "title": "FindComponentByTag",
+   "pins": [
+    [
+     "self",
+     "",
+     [
+      [
+       "FurinaCrouchOwner",
+       "ReturnValue"
+      ]
+     ]
+    ],
+    [
+     "ComponentClass",
+     "/Script/Engine.ActorComponent",
+     []
+    ],
+    [
+     "Tag",
+     "FurinaProne",
+     []
+    ],
+    [
+     "ReturnValue",
+     "",
+     [
+      [
+       "FurinaProneActive",
+       "self"
+      ]
+     ]
+    ]
+   ]
+  },
+  "FurinaProneActive": {
+   "cls": "K2Node_CallFunction",
+   "title": "IsActive",
+   "pins": [
+    [
+     "self",
+     "",
+     [
+      [
+       "FurinaProneFind",
+       "ReturnValue"
+      ]
+     ]
+    ],
+    [
+     "ReturnValue",
+     "false",
+     [
+      [
+       "FurinaProneFloat",
+       "InBool"
+      ]
+     ]
+    ]
+   ]
+  },
+  "FurinaProneFloat": {
+   "cls": "K2Node_CallFunction",
+   "title": "To Float (Boolean)",
+   "pins": [
+    [
+     "InBool",
+     "false",
+     [
+      [
+       "FurinaProneActive",
+       "ReturnValue"
+      ]
+     ]
+    ],
+    [
+     "ReturnValue",
+     "0.0",
+     [
+      [
+       "AnimGraphNode_ModifyCurve_ViewState",
+       "CurveValues_4"
+      ]
+     ]
+    ]
+   ]
+  }
+ },
+ "EventGraph": {
+  "K2Node_Event_0": {
+   "cls": "K2Node_Event",
+   "title": "BlueprintUpdateAnimation 이벤트",
+   "pins": [
+    [
+     "then",
+     "",
+     [
+      [
+       "CacheTFPSpeed",
+       "execute"
+      ]
+     ]
+    ],
+    [
+     "DeltaTimeX",
+     "0.0",
+     [
+      [
+       "TFPSpeedSmooth",
+       "DeltaTime"
+      ],
+      [
+       "TFPCrouchSmooth",
+       "DeltaTime"
+      ],
+      [
+       "TFPGroundSmooth",
+       "DeltaTime"
+      ]
+     ]
+    ]
+   ]
+  },
+  "K2Node_CallFunction_0": {
+   "cls": "K2Node_CallFunction",
+   "title": "TryGetPawnOwner",
+   "pins": []
+  },
+  "K2Node_Event_1": {
+   "cls": "K2Node_Event",
+   "title": "BlueprintPostEvaluateAnimation 이벤트",
+   "pins": [
+    [
+     "then",
+     "",
+     [
+      [
+       "K2Node_CallFunction_3",
+       "execute"
+      ]
+     ]
+    ]
+   ]
+  },
+  "K2Node_CallFunction_1": {
+   "cls": "K2Node_CallFunction",
+   "title": "GetOwningComponent",
+   "pins": [
+    [
+     "ReturnValue",
+     "",
+     [
+      [
+       "K2Node_CallFunction_3",
+       "self"
+      ]
+     ]
+    ]
+   ]
+  },
+  "K2Node_CallFunction_2": {
+   "cls": "K2Node_CallFunction",
+   "title": "GetCurveValue",
+   "pins": [
+    [
+     "CurveName",
+     "IdleBlink",
+     []
+    ],
+    [
+     "ReturnValue",
+     "0.0",
+     [
+      [
+       "K2Node_CallFunction_3",
+       "Value"
+      ]
+     ]
+    ]
+   ]
+  },
+  "K2Node_CallFunction_3": {
+   "cls": "K2Node_CallFunction",
+   "title": "SetMorphTarget",
+   "pins": [
+    [
+     "execute",
+     "",
+     [
+      [
+       "K2Node_Event_1",
+       "then"
+      ]
+     ]
+    ],
+    [
+     "self",
+     "",
+     [
+      [
+       "K2Node_CallFunction_1",
+       "ReturnValue"
+      ]
+     ]
+    ],
+    [
+     "MorphTargetName",
+     "IdleBlink",
+     []
+    ],
+    [
+     "Value",
+     "0.0",
+     [
+      [
+       "K2Node_CallFunction_2",
+       "ReturnValue"
+      ]
+     ]
+    ],
+    [
+     "bRemoveZeroWeight",
+     "true",
+     []
+    ]
+   ]
+  },
+  "WalkRateOwner": {
+   "cls": "K2Node_CallFunction",
+   "title": "TryGetPawnOwner",
+   "pins": [
+    [
+     "ReturnValue",
+     "",
+     [
+      [
+       "WalkRateVelocity",
+       "self"
+      ]
+     ]
+    ]
+   ]
+  },
+  "WalkRateVelocity": {
+   "cls": "K2Node_CallFunction",
+   "title": "GetVelocity",
+   "pins": [
+    [
+     "self",
+     "",
+     [
+      [
+       "WalkRateOwner",
+       "ReturnValue"
+      ]
+     ]
+    ],
+    [
+     "ReturnValue",
+     "0, 0, 0",
+     [
+      [
+       "WalkRateSpeed",
+       "A"
+      ]
+     ]
+    ]
+   ]
+  },
+  "WalkRateSpeed": {
+   "cls": "K2Node_CallFunction",
+   "title": "Vector Length XY",
+   "pins": [
+    [
+     "A",
+     "0, 0, 0",
+     [
+      [
+       "WalkRateVelocity",
+       "ReturnValue"
+      ]
+     ]
+    ],
+    [
+     "ReturnValue",
+     "0.0",
+     [
+      [
+       "WalkRateRatio",
+       "A"
+      ]
+     ]
+    ]
+   ]
+  },
+  "WalkRateRatio": {
+   "cls": "K2Node_PromotableOperator",
+   "title": "float / float",
+   "pins": [
+    [
+     "A",
+     "",
+     [
+      [
+       "WalkRateSpeed",
+       "ReturnValue"
+      ]
+     ]
+    ],
+    [
+     "B",
+     "120",
+     []
+    ],
+    [
+     "ReturnValue",
+     "",
+     [
+      [
+       "WalkRateClamp",
+       "Value"
+      ]
+     ]
+    ]
+   ]
+  },
+  "WalkRateClamp": {
+   "cls": "K2Node_CallFunction",
+   "title": "Clamp (Float)",
+   "pins": [
+    [
+     "Value",
+     "0.0",
+     [
+      [
+       "WalkRateRatio",
+       "ReturnValue"
+      ]
+     ]
+    ],
+    [
+     "Min",
+     ".05",
+     []
+    ],
+    [
+     "Max",
+     "1.5",
+     []
+    ],
+    [
+     "ReturnValue",
+     "0.0",
+     [
+      [
+       "K2Node_CallFunction_293",
+       "A"
+      ]
+     ]
+    ]
+   ]
+  },
+  "CacheWalkRate": {
+   "cls": "K2Node_VariableSet",
+   "title": "Set FurinaWalkRate",
+   "pins": [
+    [
+     "execute",
+     "",
+     [
+      [
+       "CacheTFPHandIdle",
+       "then"
+      ]
+     ]
+    ],
+    [
+     "FurinaWalkRate",
+     "0",
+     [
+      [
+       "K2Node_CallFunction_293",
+       "ReturnValue"
+      ]
+     ]
+    ],
+    [
+     "Output_Get",
+     "0",
+     []
+    ]
+   ]
+  },
+  "K2Node_CallFunction_293": {
+   "cls": "K2Node_CallFunction",
+   "title": "Truncate",
+   "pins": [
+    [
+     "A",
+     "0.0",
+     [
+      [
+       "WalkRateClamp",
+       "ReturnValue"
+      ]
+     ]
+    ],
+    [
+     "ReturnValue",
+     "0",
+     [
+      [
+       "CacheWalkRate",
+       "FurinaWalkRate"
+      ]
+     ]
+    ]
+   ]
+  },
+  "TFPOwner": {
+   "cls": "K2Node_CallFunction",
+   "title": "TryGetPawnOwner",
+   "pins": [
+    [
+     "ReturnValue",
+     "",
+     [
+      [
+       "TFPVelocity",
+       "self"
+      ],
+      [
+       "TFPRotation",
+       "self"
+      ],
+      [
+       "TFPMovement",
+       "self"
+      ],
+      [
+       "FurinaSpecialFind",
+       "self"
+      ],
+      [
+       "ProneEvFind",
+       "self"
+      ]
+     ]
+    ]
+   ]
+  },
+  "TFPVelocity": {
+   "cls": "K2Node_CallFunction",
+   "title": "GetVelocity",
+   "pins": [
+    [
+     "self",
+     "",
+     [
+      [
+       "TFPOwner",
+       "ReturnValue"
+      ]
+     ]
+    ],
+    [
+     "ReturnValue",
+     "0, 0, 0",
+     [
+      [
+       "TFPHorizontalSpeed",
+       "A"
+      ],
+      [
+       "TFPDirectionCalc",
+       "Velocity"
+      ]
+     ]
+    ]
+   ]
+  },
+  "TFPRotation": {
+   "cls": "K2Node_CallFunction",
+   "title": "Get Actor Rotation",
+   "pins": [
+    [
+     "self",
+     "",
+     [
+      [
+       "TFPOwner",
+       "ReturnValue"
+      ]
+     ]
+    ],
+    [
+     "ReturnValue",
+     "0, 0, 0",
+     [
+      [
+       "TFPDirectionCalc",
+       "BaseRotation"
+      ]
+     ]
+    ]
+   ]
+  },
+  "TFPHorizontalSpeed": {
+   "cls": "K2Node_CallFunction",
+   "title": "Vector Length XY",
+   "pins": [
+    [
+     "A",
+     "0, 0, 0",
+     [
+      [
+       "TFPVelocity",
+       "ReturnValue"
+      ]
+     ]
+    ],
+    [
+     "ReturnValue",
+     "0.0",
+     [
+      [
+       "TFPSpeedSmooth",
+       "Target"
+      ]
+     ]
+    ]
+   ]
+  },
+  "TFPDirectionCalc": {
+   "cls": "K2Node_CallFunction",
+   "title": "CalculateDirection",
+   "pins": [
+    [
+     "Velocity",
+     "0, 0, 0",
+     [
+      [
+       "TFPVelocity",
+       "ReturnValue"
+      ]
+     ]
+    ],
+    [
+     "BaseRotation",
+     "0, 0, 0",
+     [
+      [
+       "TFPRotation",
+       "ReturnValue"
+      ]
+     ]
+    ],
+    [
+     "ReturnValue",
+     "0.0",
+     [
+      [
+       "K2Node_CallFunction_31",
+       "A"
+      ],
+      [
+       "K2Node_CallFunction_71",
+       "A"
+      ],
+      [
+       "CacheTFPDirection",
+       "TFPDirection"
+      ]
+     ]
+    ]
+   ]
+  },
+  "TFPMovement": {
+   "cls": "K2Node_CallFunction",
+   "title": "GetMovementComponent",
+   "pins": [
+    [
+     "self",
+     "",
+     [
+      [
+       "TFPOwner",
+       "ReturnValue"
+      ]
+     ]
+    ],
+    [
+     "ReturnValue",
+     "",
+     [
+      [
+       "TFPOnGround",
+       "self"
+      ],
+      [
+       "TFPIsCrouched",
+       "self"
+      ]
+     ]
+    ]
+   ]
+  },
+  "TFPOnGround": {
+   "cls": "K2Node_CallFunction",
+   "title": "IsMovingOnGround",
+   "pins": [
+    [
+     "self",
+     "",
+     [
+      [
+       "TFPMovement",
+       "ReturnValue"
+      ]
+     ]
+    ],
+    [
+     "ReturnValue",
+     "false",
+     [
+      [
+       "FurinaGroundAnd",
+       "A"
+      ]
+     ]
+    ]
+   ]
+  },
+  "TFPIsCrouched": {
+   "cls": "K2Node_CallFunction",
+   "title": "IsCrouching",
+   "pins": [
+    [
+     "self",
+     "",
+     [
+      [
+       "TFPMovement",
+       "ReturnValue"
+      ]
+     ]
+    ],
+    [
+     "ReturnValue",
+     "false",
+     [
+      [
+       "ProneNotAnd",
+       "A"
+      ]
+     ]
+    ]
+   ]
+  },
+  "TFPSpeedSmooth": {
+   "cls": "K2Node_CallFunction",
+   "title": "FInterpTo",
+   "pins": [
+    [
+     "Current",
+     "0.0",
+     [
+      [
+       "K2Node_VariableGet_0",
+       "TFPSpeed"
+      ]
+     ]
+    ],
+    [
+     "Target",
+     "0.0",
+     [
+      [
+       "TFPHorizontalSpeed",
+       "ReturnValue"
+      ]
+     ]
+    ],
+    [
+     "DeltaTime",
+     "0.0",
+     [
+      [
+       "K2Node_Event_0",
+       "DeltaTimeX"
+      ]
+     ]
+    ],
+    [
+     "InterpSpeed",
+     "12",
+     []
+    ],
+    [
+     "ReturnValue",
+     "0.0",
+     [
+      [
+       "K2Node_CallFunction_30",
+       "A"
+      ],
+      [
+       "K2Node_CallFunction_70",
+       "A"
+      ],
+      [
+       "CacheTFPSpeed",
+       "TFPSpeed"
+      ]
+     ]
+    ]
+   ]
+  },
+  "K2Node_CallFunction_29": {
+   "cls": "K2Node_CallFunction",
+   "title": "To Float (Integer)",
+   "pins": [
+    [
+     "InInt",
+     "0",
+     []
+    ],
+    [
+     "ReturnValue",
+     "0.0",
+     []
+    ]
+   ]
+  },
+  "K2Node_CallFunction_30": {
+   "cls": "K2Node_CallFunction",
+   "title": "Truncate",
+   "pins": [
+    [
+     "A",
+     "0.0",
+     [
+      [
+       "TFPSpeedSmooth",
+       "ReturnValue"
+      ]
+     ]
+    ],
+    [
+     "ReturnValue",
+     "0",
+     []
+    ]
+   ]
+  },
+  "K2Node_CallFunction_31": {
+   "cls": "K2Node_CallFunction",
+   "title": "Truncate",
+   "pins": [
+    [
+     "A",
+     "0.0",
+     [
+      [
+       "TFPDirectionCalc",
+       "ReturnValue"
+      ]
+     ]
+    ],
+    [
+     "ReturnValue",
+     "0",
+     []
+    ]
+   ]
+  },
+  "TFPCrouchFloat": {
+   "cls": "K2Node_CallFunction",
+   "title": "To Float (Boolean)",
+   "pins": [
+    [
+     "InBool",
+     "false",
+     [
+      [
+       "ProneNotAnd",
+       "ReturnValue"
+      ]
+     ]
+    ],
+    [
+     "ReturnValue",
+     "0.0",
+     [
+      [
+       "TFPCrouchSmooth",
+       "Target"
+      ]
+     ]
+    ]
+   ]
+  },
+  "TFPCrouchSmooth": {
+   "cls": "K2Node_CallFunction",
+   "title": "FInterpTo",
+   "pins": [
+    [
+     "Current",
+     "0.0",
+     [
+      [
+       "K2Node_VariableGet_1",
+       "TFPCrouch"
+      ]
+     ]
+    ],
+    [
+     "Target",
+     "0.0",
+     [
+      [
+       "TFPCrouchFloat",
+       "ReturnValue"
+      ]
+     ]
+    ],
+    [
+     "DeltaTime",
+     "0.0",
+     [
+      [
+       "K2Node_Event_0",
+       "DeltaTimeX"
+      ]
+     ]
+    ],
+    [
+     "InterpSpeed",
+     "10",
+     []
+    ],
+    [
+     "ReturnValue",
+     "0.0",
+     [
+      [
+       "K2Node_CallFunction_33",
+       "A"
+      ],
+      [
+       "K2Node_CallFunction_73",
+       "A"
+      ],
+      [
+       "CacheTFPCrouch",
+       "TFPCrouch"
+      ]
+     ]
+    ]
+   ]
+  },
+  "K2Node_CallFunction_32": {
+   "cls": "K2Node_CallFunction",
+   "title": "To Float (Integer)",
+   "pins": [
+    [
+     "InInt",
+     "0",
+     []
+    ],
+    [
+     "ReturnValue",
+     "0.0",
+     []
+    ]
+   ]
+  },
+  "K2Node_CallFunction_33": {
+   "cls": "K2Node_CallFunction",
+   "title": "Truncate",
+   "pins": [
+    [
+     "A",
+     "0.0",
+     [
+      [
+       "TFPCrouchSmooth",
+       "ReturnValue"
+      ]
+     ]
+    ],
+    [
+     "ReturnValue",
+     "0",
+     []
+    ]
+   ]
+  },
+  "TFPGroundFloat": {
+   "cls": "K2Node_CallFunction",
+   "title": "To Float (Boolean)",
+   "pins": [
+    [
+     "InBool",
+     "false",
+     [
+      [
+       "FurinaGroundAnd",
+       "ReturnValue"
+      ]
+     ]
+    ],
+    [
+     "ReturnValue",
+     "0.0",
+     [
+      [
+       "TFPGroundSmooth",
+       "Target"
+      ]
+     ]
+    ]
+   ]
+  },
+  "TFPGroundSmooth": {
+   "cls": "K2Node_CallFunction",
+   "title": "FInterpTo",
+   "pins": [
+    [
+     "Current",
+     "0.0",
+     [
+      [
+       "K2Node_VariableGet_2",
+       "TFPGround"
+      ]
+     ]
+    ],
+    [
+     "Target",
+     "0.0",
+     [
+      [
+       "TFPGroundFloat",
+       "ReturnValue"
+      ]
+     ]
+    ],
+    [
+     "DeltaTime",
+     "0.0",
+     [
+      [
+       "K2Node_Event_0",
+       "DeltaTimeX"
+      ]
+     ]
+    ],
+    [
+     "InterpSpeed",
+     "15",
+     []
+    ],
+    [
+     "ReturnValue",
+     "0.0",
+     [
+      [
+       "K2Node_CallFunction_35",
+       "A"
+      ],
+      [
+       "K2Node_CallFunction_75",
+       "A"
+      ],
+      [
+       "CacheTFPGround",
+       "TFPGround"
+      ]
+     ]
+    ]
+   ]
+  },
+  "K2Node_CallFunction_34": {
+   "cls": "K2Node_CallFunction",
+   "title": "To Float (Integer)",
+   "pins": [
+    [
+     "InInt",
+     "0",
+     []
+    ],
+    [
+     "ReturnValue",
+     "0.0",
+     []
+    ]
+   ]
+  },
+  "K2Node_CallFunction_35": {
+   "cls": "K2Node_CallFunction",
+   "title": "Truncate",
+   "pins": [
+    [
+     "A",
+     "0.0",
+     [
+      [
+       "TFPGroundSmooth",
+       "ReturnValue"
+      ]
+     ]
+    ],
+    [
+     "ReturnValue",
+     "0",
+     []
+    ]
+   ]
+  },
+  "K2Node_CallFunction_69": {
+   "cls": "K2Node_CallFunction",
+   "title": "To Float (Integer)",
+   "pins": [
+    [
+     "InInt",
+     "0",
+     []
+    ],
+    [
+     "ReturnValue",
+     "0.0",
+     []
+    ]
+   ]
+  },
+  "K2Node_CallFunction_70": {
+   "cls": "K2Node_CallFunction",
+   "title": "Truncate",
+   "pins": [
+    [
+     "A",
+     "0.0",
+     [
+      [
+       "TFPSpeedSmooth",
+       "ReturnValue"
+      ]
+     ]
+    ],
+    [
+     "ReturnValue",
+     "0",
+     []
+    ]
+   ]
+  },
+  "K2Node_CallFunction_71": {
+   "cls": "K2Node_CallFunction",
+   "title": "Truncate",
+   "pins": [
+    [
+     "A",
+     "0.0",
+     [
+      [
+       "TFPDirectionCalc",
+       "ReturnValue"
+      ]
+     ]
+    ],
+    [
+     "ReturnValue",
+     "0",
+     []
+    ]
+   ]
+  },
+  "K2Node_CallFunction_72": {
+   "cls": "K2Node_CallFunction",
+   "title": "To Float (Integer)",
+   "pins": [
+    [
+     "InInt",
+     "0",
+     []
+    ],
+    [
+     "ReturnValue",
+     "0.0",
+     []
+    ]
+   ]
+  },
+  "K2Node_CallFunction_73": {
+   "cls": "K2Node_CallFunction",
+   "title": "Truncate",
+   "pins": [
+    [
+     "A",
+     "0.0",
+     [
+      [
+       "TFPCrouchSmooth",
+       "ReturnValue"
+      ]
+     ]
+    ],
+    [
+     "ReturnValue",
+     "0",
+     []
+    ]
+   ]
+  },
+  "K2Node_CallFunction_74": {
+   "cls": "K2Node_CallFunction",
+   "title": "To Float (Integer)",
+   "pins": [
+    [
+     "InInt",
+     "0",
+     []
+    ],
+    [
+     "ReturnValue",
+     "0.0",
+     []
+    ]
+   ]
+  },
+  "K2Node_CallFunction_75": {
+   "cls": "K2Node_CallFunction",
+   "title": "Truncate",
+   "pins": [
+    [
+     "A",
+     "0.0",
+     [
+      [
+       "TFPGroundSmooth",
+       "ReturnValue"
+      ]
+     ]
+    ],
+    [
+     "ReturnValue",
+     "0",
+     []
+    ]
+   ]
+  },
+  "TFPHandWalkRange": {
+   "cls": "K2Node_CallFunction",
+   "title": "MapRangeClamped",
+   "pins": [
+    [
+     "Value",
+     "0.0",
+     [
+      [
+       "K2Node_VariableGet_3",
+       "TFPSpeed"
+      ]
+     ]
+    ],
+    [
+     "InRangeA",
+     "120",
+     []
+    ],
+    [
+     "InRangeB",
+     "600",
+     []
+    ],
+    [
+     "OutRangeA",
+     "1",
+     []
+    ],
+    [
+     "OutRangeB",
+     "0.0",
+     []
+    ],
+    [
+     "ReturnValue",
+     "0.0",
+     [
+      [
+       "K2Node_CallFunction_152",
+       "A"
+      ],
+      [
+       "CacheTFPHandWalk",
+       "TFPHandWalk"
+      ]
+     ]
+    ]
+   ]
+  },
+  "K2Node_CallFunction_151": {
+   "cls": "K2Node_CallFunction",
+   "title": "To Float (Integer)",
+   "pins": [
+    [
+     "InInt",
+     "0",
+     []
+    ],
+    [
+     "ReturnValue",
+     "0.0",
+     []
+    ]
+   ]
+  },
+  "K2Node_CallFunction_152": {
+   "cls": "K2Node_CallFunction",
+   "title": "Truncate",
+   "pins": [
+    [
+     "A",
+     "0.0",
+     [
+      [
+       "TFPHandWalkRange",
+       "ReturnValue"
+      ]
+     ]
+    ],
+    [
+     "ReturnValue",
+     "0",
+     []
+    ]
+   ]
+  },
+  "TFPHandIdleRange": {
+   "cls": "K2Node_CallFunction",
+   "title": "MapRangeClamped",
+   "pins": [
+    [
+     "Value",
+     "0.0",
+     [
+      [
+       "K2Node_VariableGet_4",
+       "TFPSpeed"
+      ]
+     ]
+    ],
+    [
+     "InRangeA",
+     "0.0",
+     []
+    ],
+    [
+     "InRangeB",
+     "20",
+     []
+    ],
+    [
+     "OutRangeA",
+     "1",
+     []
+    ],
+    [
+     "OutRangeB",
+     "0.0",
+     []
+    ],
+    [
+     "ReturnValue",
+     "0.0",
+     [
+      [
+       "K2Node_CallFunction_154",
+       "A"
+      ],
+      [
+       "CacheTFPHandIdle",
+       "TFPHandIdle"
+      ]
+     ]
+    ]
+   ]
+  },
+  "K2Node_CallFunction_153": {
+   "cls": "K2Node_CallFunction",
+   "title": "To Float (Integer)",
+   "pins": [
+    [
+     "InInt",
+     "0",
+     []
+    ],
+    [
+     "ReturnValue",
+     "0.0",
+     []
+    ]
+   ]
+  },
+  "K2Node_CallFunction_154": {
+   "cls": "K2Node_CallFunction",
+   "title": "Truncate",
+   "pins": [
+    [
+     "A",
+     "0.0",
+     [
+      [
+       "TFPHandIdleRange",
+       "ReturnValue"
+      ]
+     ]
+    ],
+    [
+     "ReturnValue",
+     "0",
+     []
+    ]
+   ]
+  },
+  "CacheTFPSpeed": {
+   "cls": "K2Node_VariableSet",
+   "title": "Set TFPSpeed",
+   "pins": [
+    [
+     "execute",
+     "",
+     [
+      [
+       "K2Node_Event_0",
+       "then"
+      ]
+     ]
+    ],
+    [
+     "TFPSpeed",
+     "0.0",
+     [
+      [
+       "TFPSpeedSmooth",
+       "ReturnValue"
+      ]
+     ]
+    ],
+    [
+     "then",
+     "",
+     [
+      [
+       "CacheTFPDirection",
+       "execute"
+      ]
+     ]
+    ],
+    [
+     "Output_Get",
+     "0.0",
+     []
+    ]
+   ]
+  },
+  "K2Node_VariableGet_0": {
+   "cls": "K2Node_VariableGet",
+   "title": "Get TFPSpeed",
+   "pins": [
+    [
+     "TFPSpeed",
+     "0.0",
+     [
+      [
+       "TFPSpeedSmooth",
+       "Current"
+      ]
+     ]
+    ]
+   ]
+  },
+  "CacheTFPDirection": {
+   "cls": "K2Node_VariableSet",
+   "title": "Set TFPDirection",
+   "pins": [
+    [
+     "execute",
+     "",
+     [
+      [
+       "CacheTFPSpeed",
+       "then"
+      ]
+     ]
+    ],
+    [
+     "TFPDirection",
+     "0.0",
+     [
+      [
+       "TFPDirectionCalc",
+       "ReturnValue"
+      ]
+     ]
+    ],
+    [
+     "then",
+     "",
+     [
+      [
+       "CacheTFPCrouch",
+       "execute"
+      ]
+     ]
+    ],
+    [
+     "Output_Get",
+     "0.0",
+     []
+    ]
+   ]
+  },
+  "CacheTFPCrouch": {
+   "cls": "K2Node_VariableSet",
+   "title": "Set TFPCrouch",
+   "pins": [
+    [
+     "execute",
+     "",
+     [
+      [
+       "CacheTFPDirection",
+       "then"
+      ]
+     ]
+    ],
+    [
+     "TFPCrouch",
+     "0.0",
+     [
+      [
+       "TFPCrouchSmooth",
+       "ReturnValue"
+      ]
+     ]
+    ],
+    [
+     "then",
+     "",
+     [
+      [
+       "CacheTFPGround",
+       "execute"
+      ]
+     ]
+    ],
+    [
+     "Output_Get",
+     "0.0",
+     []
+    ]
+   ]
+  },
+  "K2Node_VariableGet_1": {
+   "cls": "K2Node_VariableGet",
+   "title": "Get TFPCrouch",
+   "pins": [
+    [
+     "TFPCrouch",
+     "0.0",
+     [
+      [
+       "TFPCrouchSmooth",
+       "Current"
+      ]
+     ]
+    ]
+   ]
+  },
+  "CacheTFPGround": {
+   "cls": "K2Node_VariableSet",
+   "title": "Set TFPGround",
+   "pins": [
+    [
+     "execute",
+     "",
+     [
+      [
+       "CacheTFPCrouch",
+       "then"
+      ]
+     ]
+    ],
+    [
+     "TFPGround",
+     "0.0",
+     [
+      [
+       "TFPGroundSmooth",
+       "ReturnValue"
+      ]
+     ]
+    ],
+    [
+     "then",
+     "",
+     [
+      [
+       "CacheTFPHandWalk",
+       "execute"
+      ]
+     ]
+    ],
+    [
+     "Output_Get",
+     "0.0",
+     []
+    ]
+   ]
+  },
+  "K2Node_VariableGet_2": {
+   "cls": "K2Node_VariableGet",
+   "title": "Get TFPGround",
+   "pins": [
+    [
+     "TFPGround",
+     "0.0",
+     [
+      [
+       "TFPGroundSmooth",
+       "Current"
+      ]
+     ]
+    ]
+   ]
+  },
+  "K2Node_VariableGet_3": {
+   "cls": "K2Node_VariableGet",
+   "title": "Get TFPSpeed",
+   "pins": [
+    [
+     "TFPSpeed",
+     "0.0",
+     [
+      [
+       "TFPHandWalkRange",
+       "Value"
+      ]
+     ]
+    ]
+   ]
+  },
+  "CacheTFPHandWalk": {
+   "cls": "K2Node_VariableSet",
+   "title": "Set TFPHandWalk",
+   "pins": [
+    [
+     "execute",
+     "",
+     [
+      [
+       "CacheTFPGround",
+       "then"
+      ]
+     ]
+    ],
+    [
+     "TFPHandWalk",
+     "0.0",
+     [
+      [
+       "TFPHandWalkRange",
+       "ReturnValue"
+      ]
+     ]
+    ],
+    [
+     "then",
+     "",
+     [
+      [
+       "CacheTFPHandIdle",
+       "execute"
+      ]
+     ]
+    ],
+    [
+     "Output_Get",
+     "0.0",
+     []
+    ]
+   ]
+  },
+  "K2Node_VariableGet_4": {
+   "cls": "K2Node_VariableGet",
+   "title": "Get TFPSpeed",
+   "pins": [
+    [
+     "TFPSpeed",
+     "0.0",
+     [
+      [
+       "TFPHandIdleRange",
+       "Value"
+      ]
+     ]
+    ]
+   ]
+  },
+  "CacheTFPHandIdle": {
+   "cls": "K2Node_VariableSet",
+   "title": "Set TFPHandIdle",
+   "pins": [
+    [
+     "execute",
+     "",
+     [
+      [
+       "CacheTFPHandWalk",
+       "then"
+      ]
+     ]
+    ],
+    [
+     "TFPHandIdle",
+     "0.0",
+     [
+      [
+       "TFPHandIdleRange",
+       "ReturnValue"
+      ]
+     ]
+    ],
+    [
+     "then",
+     "",
+     [
+      [
+       "CacheWalkRate",
+       "execute"
+      ]
+     ]
+    ],
+    [
+     "Output_Get",
+     "0.0",
+     []
+    ]
+   ]
+  },
+  "FurinaSpecialFind": {
+   "cls": "K2Node_CallFunction",
+   "title": "FindComponentByTag",
+   "pins": [
+    [
+     "self",
+     "",
+     [
+      [
+       "TFPOwner",
+       "ReturnValue"
+      ]
+     ]
+    ],
+    [
+     "ComponentClass",
+     "/Script/Engine.ActorComponent",
+     []
+    ],
+    [
+     "Tag",
+     "FurinaSpecial",
+     []
+    ],
+    [
+     "ReturnValue",
+     "",
+     [
+      [
+       "FurinaSpecialActive",
+       "self"
+      ]
+     ]
+    ]
+   ]
+  },
+  "FurinaSpecialActive": {
+   "cls": "K2Node_CallFunction",
+   "title": "IsActive",
+   "pins": [
+    [
+     "self",
+     "",
+     [
+      [
+       "FurinaSpecialFind",
+       "ReturnValue"
+      ]
+     ]
+    ],
+    [
+     "ReturnValue",
+     "false",
+     [
+      [
+       "FurinaNotSpecial",
+       "A"
+      ]
+     ]
+    ]
+   ]
+  },
+  "FurinaNotSpecial": {
+   "cls": "K2Node_CallFunction",
+   "title": "NOT Boolean",
+   "pins": [
+    [
+     "A",
+     "false",
+     [
+      [
+       "FurinaSpecialActive",
+       "ReturnValue"
+      ]
+     ]
+    ],
+    [
+     "ReturnValue",
+     "false",
+     [
+      [
+       "FurinaGroundAnd",
+       "B"
+      ]
+     ]
+    ]
+   ]
+  },
+  "FurinaGroundAnd": {
+   "cls": "K2Node_CommutativeAssociativeBinaryOperator",
+   "title": "AND Boolean",
+   "pins": [
+    [
+     "A",
+     "false",
+     [
+      [
+       "TFPOnGround",
+       "ReturnValue"
+      ]
+     ]
+    ],
+    [
+     "B",
+     "false",
+     [
+      [
+       "FurinaNotSpecial",
+       "ReturnValue"
+      ]
+     ]
+    ],
+    [
+     "ReturnValue",
+     "false",
+     [
+      [
+       "TFPGroundFloat",
+       "InBool"
+      ]
+     ]
+    ]
+   ]
+  },
+  "ProneEvFind": {
+   "cls": "K2Node_CallFunction",
+   "title": "FindComponentByTag",
+   "pins": [
+    [
+     "self",
+     "",
+     [
+      [
+       "TFPOwner",
+       "ReturnValue"
+      ]
+     ]
+    ],
+    [
+     "ComponentClass",
+     "/Script/Engine.ActorComponent",
+     []
+    ],
+    [
+     "Tag",
+     "FurinaProne",
+     []
+    ],
+    [
+     "ReturnValue",
+     "",
+     [
+      [
+       "ProneEvActive",
+       "self"
+      ]
+     ]
+    ]
+   ]
+  },
+  "ProneEvActive": {
+   "cls": "K2Node_CallFunction",
+   "title": "IsActive",
+   "pins": [
+    [
+     "self",
+     "",
+     [
+      [
+       "ProneEvFind",
+       "ReturnValue"
+      ]
+     ]
+    ],
+    [
+     "ReturnValue",
+     "false",
+     [
+      [
+       "ProneEvNot",
+       "A"
+      ]
+     ]
+    ]
+   ]
+  },
+  "ProneEvNot": {
+   "cls": "K2Node_CallFunction",
+   "title": "NOT Boolean",
+   "pins": [
+    [
+     "A",
+     "false",
+     [
+      [
+       "ProneEvActive",
+       "ReturnValue"
+      ]
+     ]
+    ],
+    [
+     "ReturnValue",
+     "false",
+     [
+      [
+       "ProneNotAnd",
+       "B"
+      ]
+     ]
+    ]
+   ]
+  },
+  "ProneNotAnd": {
+   "cls": "K2Node_CommutativeAssociativeBinaryOperator",
+   "title": "AND Boolean",
+   "pins": [
+    [
+     "A",
+     "false",
+     [
+      [
+       "TFPIsCrouched",
+       "ReturnValue"
+      ]
+     ]
+    ],
+    [
+     "B",
+     "false",
+     [
+      [
+       "ProneEvNot",
+       "ReturnValue"
+      ]
+     ]
+    ],
+    [
+     "ReturnValue",
+     "false",
+     [
+      [
+       "TFPCrouchFloat",
+       "InBool"
+      ]
+     ]
+    ]
+   ]
+  }
+ },
+ "vars": [
+  "FurinaWalkRate",
+  "TFPSpeed",
+  "TFPDirection",
+  "TFPCrouch",
+  "TFPGround",
+  "TFPHandWalk",
+  "TFPHandIdle",
+  "/Script/Engine.AnimInstance.CurrentSkeleton",
+  "/Script/Engine.AnimInstance.RootMotionMode",
+  "/Script/Engine.AnimInstance.bUseMultiThreadedAnimationUpdate",
+  "/Script/Engine.AnimInstance.bUsingCopyPoseFromMesh",
+  "/Script/Engine.AnimInstance.bReceiveNotifiesFromLinkedInstances",
+  "/Script/Engine.AnimInstance.bPropagateNotifiesToLinkedInstances",
+  "/Script/Engine.AnimInstance.bUseMainInstanceMontageEvaluationData",
+  "/Script/Engine.AnimInstance.bQueueMontageEvents",
+  "/Script/Engine.AnimInstance.OnMontageBlendingOut",
+  "/Script/Engine.AnimInstance.OnMontageBlendedIn",
+  "/Script/Engine.AnimInstance.OnMontageStarted",
+  "/Script/Engine.AnimInstance.OnMontageEnded",
+  "/Script/Engine.AnimInstance.OnAllMontageInstancesEnded",
+  "/Script/Engine.AnimInstance.OnMontageSectionChanged",
+  "/Script/Engine.AnimInstance.SlotGroupInertializationRequestDataMap",
+  "/Script/Engine.AnimInstance.PostCompileValidationClassName",
+  "/Script/Engine.AnimInstance.NotifyQueue",
+  "/Script/Engine.AnimInstance.ActiveAnimNotifyState",
+  "/Script/Engine.AnimInstance.ActiveAnimNotifyEventReference"
+ ]
+}

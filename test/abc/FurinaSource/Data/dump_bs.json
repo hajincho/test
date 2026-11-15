@@ -1,0 +1,556 @@
+{
+ "/Game/Furina/TFP/BS_FurinaStanding": {
+  "axes": [
+   "<BlendSpaceAxis.BSA_NONE: 0>"
+  ],
+  "rows": [
+   {
+    "anim": "AS_Furina_TFP_N_Idle",
+    "v": [
+     -180.0,
+     0.0
+    ],
+    "sample_rate": 1.0,
+    "anim_rate": 1.0,
+    "length": 2.667
+   },
+   {
+    "anim": "AS_Furina_TFP_N_Idle",
+    "v": [
+     -135.0,
+     0.0
+    ],
+    "sample_rate": 1.0,
+    "anim_rate": 1.0,
+    "length": 2.667
+   },
+   {
+    "anim": "AS_Furina_TFP_N_Idle",
+    "v": [
+     -90.0,
+     0.0
+    ],
+    "sample_rate": 1.0,
+    "anim_rate": 1.0,
+    "length": 2.667
+   },
+   {
+    "anim": "AS_Furina_TFP_N_Idle",
+    "v": [
+     -45.0,
+     0.0
+    ],
+    "sample_rate": 1.0,
+    "anim_rate": 1.0,
+    "length": 2.667
+   },
+   {
+    "anim": "AS_Furina_TFP_N_Idle",
+    "v": [
+     0.0,
+     0.0
+    ],
+    "sample_rate": 1.0,
+    "anim_rate": 1.0,
+    "length": 2.667
+   },
+   {
+    "anim": "AS_Furina_TFP_N_Idle",
+    "v": [
+     45.0,
+     0.0
+    ],
+    "sample_rate": 1.0,
+    "anim_rate": 1.0,
+    "length": 2.667
+   },
+   {
+    "anim": "AS_Furina_TFP_N_Idle",
+    "v": [
+     90.0,
+     0.0
+    ],
+    "sample_rate": 1.0,
+    "anim_rate": 1.0,
+    "length": 2.667
+   },
+   {
+    "anim": "AS_Furina_TFP_N_Idle",
+    "v": [
+     135.0,
+     0.0
+    ],
+    "sample_rate": 1.0,
+    "anim_rate": 1.0,
+    "length": 2.667
+   },
+   {
+    "anim": "AS_Furina_TFP_N_Idle",
+    "v": [
+     180.0,
+     0.0
+    ],
+    "sample_rate": 1.0,
+    "anim_rate": 1.0,
+    "length": 2.667
+   },
+   {
+    "anim": "AS_Furina_TFP_N_Walk_B",
+    "v": [
+     -180.0,
+     120.0
+    ],
+    "sample_rate": 0.8852630257606506,
+    "anim_rate": 1.0,
+    "length": 1.133
+   },
+   {
+    "anim": "AS_Furina_TFP_N_Run_B",
+    "v": [
+     -180.0,
+     600.0
+    ],
+    "sample_rate": 1.8163779973983765,
+    "anim_rate": 1.0,
+    "length": 0.667
+   },
+   {
+    "anim": "AS_Furina_TFP_N_Walk_BL_135",
+    "v": [
+     -135.0,
+     120.0
+    ],
+    "sample_rate": 0.8773710131645203,
+    "anim_rate": 1.0,
+    "length": 1.133
+   },
+   {
+    "anim": "AS_Furina_TFP_N_Run_FL",
+    "v": [
+     -135.0,
+     600.0
+    ],
+    "sample_rate": 1.9727970361709595,
+    "anim_rate": 1.0,
+    "length": 0.8
+   },
+   {
+    "anim": "AS_Furina_TFP_N_Walk_FL",
+    "v": [
+     -90.0,
+     120.0
+    ],
+    "sample_rate": 0.8885279893875122,
+    "anim_rate": 1.0,
+    "length": 1.133
+   },
+   {
+    "anim": "AS_Furina_TFP_N_Run_FL",
+    "v": [
+     -90.0,
+     600.0
+    ],
+    "sample_rate": 1.9727970361709595,
+    "anim_rate": 1.0,
+    "length": 0.8
+   },
+   {
+    "anim": "AS_Furina_TFP_N_Walk_FL_45",
+    "v": [
+     -45.0,
+     120.0
+    ],
+    "sample_rate": 0.9067729711532593,
+    "anim_rate": 1.0,
+    "length": 1.133
+   },
+   {
+    "anim": "AS_Furina_TFP_N_Run_FL",
+    "v": [
+     -45.0,
+     600.0
+    ],
+    "sample_rate": 1.9727970361709595,
+    "anim_rate": 1.0,
+    "length": 0.8
+   },
+   {
+    "anim": "AS_Furina_TFP_N_Walk_F",
+    "v": [
+     0.0,
+     120.0
+    ],
+    "sample_rate": 0.8841350078582764,
+    "anim_rate": 1.0,
+    "length": 1.133
+   },
+   {
+    "anim": "AS_Furina_TFP_N_Run_F",
+    "v": [
+     0.0,
+     600.0
+    ],
+    "sample_rate": 1.7800649404525757,
+    "anim_rate": 1.0,
+    "length": 0.8
+   },
+   {
+    "anim": "AS_Furina_TFP_N_Walk_FR_45",
+    "v": [
+     45.0,
+     120.0
+    ],
+    "sample_rate": 0.906790018081665,
+    "anim_rate": 1.0,
+    "length": 1.133
+   },
+   {
+    "anim": "AS_Furina_TFP_N_Run_FR",
+    "v": [
+     45.0,
+     600.0
+    ],
+    "sample_rate": 1.9728070497512817,
+    "anim_rate": 1.0,
+    "length": 0.8
+   },
+   {
+    "anim": "AS_Furina_TFP_N_Walk_FR",
+    "v": [
+     90.0,
+     120.0
+    ],
+    "sample_rate": 0.8885520100593567,
+    "anim_rate": 1.0,
+    "length": 1.133
+   },
+   {
+    "anim": "AS_Furina_TFP_N_Run_FR",
+    "v": [
+     90.0,
+     600.0
+    ],
+    "sample_rate": 1.9728070497512817,
+    "anim_rate": 1.0,
+    "length": 0.8
+   },
+   {
+    "anim": "AS_Furina_TFP_N_Walk_BR_135",
+    "v": [
+     135.0,
+     120.0
+    ],
+    "sample_rate": 0.8714749813079834,
+    "anim_rate": 1.0,
+    "length": 1.133
+   },
+   {
+    "anim": "AS_Furina_TFP_N_Run_FR",
+    "v": [
+     135.0,
+     600.0
+    ],
+    "sample_rate": 1.9728070497512817,
+    "anim_rate": 1.0,
+    "length": 0.8
+   },
+   {
+    "anim": "AS_Furina_TFP_N_Walk_B",
+    "v": [
+     180.0,
+     120.0
+    ],
+    "sample_rate": 0.8852630257606506,
+    "anim_rate": 1.0,
+    "length": 1.133
+   },
+   {
+    "anim": "AS_Furina_TFP_N_Run_B",
+    "v": [
+     180.0,
+     600.0
+    ],
+    "sample_rate": 1.8163779973983765,
+    "anim_rate": 1.0,
+    "length": 0.667
+   }
+  ]
+ },
+ "/Game/Furina/TFP/BS_FurinaCrouching": {
+  "axes": [
+   "<BlendSpaceAxis.BSA_NONE: 0>"
+  ],
+  "rows": [
+   {
+    "anim": "AS_Furina_TFP_C_Idle_Additive",
+    "v": [
+     -180.0,
+     0.0
+    ],
+    "sample_rate": 1.0,
+    "anim_rate": 1.0,
+    "length": 2.667
+   },
+   {
+    "anim": "AS_Furina_TFP_C_Idle_Additive",
+    "v": [
+     -135.0,
+     0.0
+    ],
+    "sample_rate": 1.0,
+    "anim_rate": 1.0,
+    "length": 2.667
+   },
+   {
+    "anim": "AS_Furina_TFP_C_Idle_Additive",
+    "v": [
+     -90.0,
+     0.0
+    ],
+    "sample_rate": 1.0,
+    "anim_rate": 1.0,
+    "length": 2.667
+   },
+   {
+    "anim": "AS_Furina_TFP_C_Idle_Additive",
+    "v": [
+     -45.0,
+     0.0
+    ],
+    "sample_rate": 1.0,
+    "anim_rate": 1.0,
+    "length": 2.667
+   },
+   {
+    "anim": "AS_Furina_TFP_C_Idle_Additive",
+    "v": [
+     0.0,
+     0.0
+    ],
+    "sample_rate": 1.0,
+    "anim_rate": 1.0,
+    "length": 2.667
+   },
+   {
+    "anim": "AS_Furina_TFP_C_Idle_Additive",
+    "v": [
+     45.0,
+     0.0
+    ],
+    "sample_rate": 1.0,
+    "anim_rate": 1.0,
+    "length": 2.667
+   },
+   {
+    "anim": "AS_Furina_TFP_C_Idle_Additive",
+    "v": [
+     90.0,
+     0.0
+    ],
+    "sample_rate": 1.0,
+    "anim_rate": 1.0,
+    "length": 2.667
+   },
+   {
+    "anim": "AS_Furina_TFP_C_Idle_Additive",
+    "v": [
+     135.0,
+     0.0
+    ],
+    "sample_rate": 1.0,
+    "anim_rate": 1.0,
+    "length": 2.667
+   },
+   {
+    "anim": "AS_Furina_TFP_C_Idle_Additive",
+    "v": [
+     180.0,
+     0.0
+    ],
+    "sample_rate": 1.0,
+    "anim_rate": 1.0,
+    "length": 2.667
+   },
+   {
+    "anim": "AS_Furina_TFP_C_Walk_B",
+    "v": [
+     -180.0,
+     90.0
+    ],
+    "sample_rate": 0.6493350267410278,
+    "anim_rate": 1.0,
+    "length": 1.133
+   },
+   {
+    "anim": "AS_Furina_TFP_C_Walk_B",
+    "v": [
+     -180.0,
+     360.0
+    ],
+    "sample_rate": 2.5973410606384277,
+    "anim_rate": 1.0,
+    "length": 1.133
+   },
+   {
+    "anim": "AS_Furina_TFP_C_Walk_L",
+    "v": [
+     -135.0,
+     90.0
+    ],
+    "sample_rate": 0.6632689833641052,
+    "anim_rate": 1.0,
+    "length": 1.133
+   },
+   {
+    "anim": "AS_Furina_TFP_C_Walk_L",
+    "v": [
+     -135.0,
+     360.0
+    ],
+    "sample_rate": 2.6530749797821045,
+    "anim_rate": 1.0,
+    "length": 1.133
+   },
+   {
+    "anim": "AS_Furina_TFP_C_Walk_L",
+    "v": [
+     -90.0,
+     90.0
+    ],
+    "sample_rate": 0.6632689833641052,
+    "anim_rate": 1.0,
+    "length": 1.133
+   },
+   {
+    "anim": "AS_Furina_TFP_C_Walk_L",
+    "v": [
+     -90.0,
+     360.0
+    ],
+    "sample_rate": 2.6530749797821045,
+    "anim_rate": 1.0,
+    "length": 1.133
+   },
+   {
+    "anim": "AS_Furina_TFP_C_Walk_L",
+    "v": [
+     -45.0,
+     90.0
+    ],
+    "sample_rate": 0.6632689833641052,
+    "anim_rate": 1.0,
+    "length": 1.133
+   },
+   {
+    "anim": "AS_Furina_TFP_C_Walk_L",
+    "v": [
+     -45.0,
+     360.0
+    ],
+    "sample_rate": 2.6530749797821045,
+    "anim_rate": 1.0,
+    "length": 1.133
+   },
+   {
+    "anim": "AS_Furina_TFP_C_Walk_F",
+    "v": [
+     0.0,
+     90.0
+    ],
+    "sample_rate": 0.6413530111312866,
+    "anim_rate": 1.0,
+    "length": 1.133
+   },
+   {
+    "anim": "AS_Furina_TFP_C_Walk_F",
+    "v": [
+     0.0,
+     360.0
+    ],
+    "sample_rate": 2.565412998199463,
+    "anim_rate": 1.0,
+    "length": 1.133
+   },
+   {
+    "anim": "AS_Furina_TFP_C_Walk_R",
+    "v": [
+     45.0,
+     90.0
+    ],
+    "sample_rate": 0.6736869812011719,
+    "anim_rate": 1.0,
+    "length": 1.133
+   },
+   {
+    "anim": "AS_Furina_TFP_C_Walk_R",
+    "v": [
+     45.0,
+     360.0
+    ],
+    "sample_rate": 2.694746971130371,
+    "anim_rate": 1.0,
+    "length": 1.133
+   },
+   {
+    "anim": "AS_Furina_TFP_C_Walk_R",
+    "v": [
+     90.0,
+     90.0
+    ],
+    "sample_rate": 0.6736869812011719,
+    "anim_rate": 1.0,
+    "length": 1.133
+   },
+   {
+    "anim": "AS_Furina_TFP_C_Walk_R",
+    "v": [
+     90.0,
+     360.0
+    ],
+    "sample_rate": 2.694746971130371,
+    "anim_rate": 1.0,
+    "length": 1.133
+   },
+   {
+    "anim": "AS_Furina_TFP_C_Walk_R",
+    "v": [
+     135.0,
+     90.0
+    ],
+    "sample_rate": 0.6736869812011719,
+    "anim_rate": 1.0,
+    "length": 1.133
+   },
+   {
+    "anim": "AS_Furina_TFP_C_Walk_R",
+    "v": [
+     135.0,
+     360.0
+    ],
+    "sample_rate": 2.694746971130371,
+    "anim_rate": 1.0,
+    "length": 1.133
+   },
+   {
+    "anim": "AS_Furina_TFP_C_Walk_B",
+    "v": [
+     180.0,
+     90.0
+    ],
+    "sample_rate": 0.6493350267410278,
+    "anim_rate": 1.0,
+    "length": 1.133
+   },
+   {
+    "anim": "AS_Furina_TFP_C_Walk_B",
+    "v": [
+     180.0,
+     360.0
+    ],
+    "sample_rate": 2.5973410606384277,
+    "anim_rate": 1.0,
+    "length": 1.133
+   }
+  ]
+ }
+}

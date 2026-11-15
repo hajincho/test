@@ -1,0 +1,5 @@
+import unreal
+b=unreal.load_asset('/Game/3DPlatformerGameBundle/Demo/ThirdPersonAssets/Blueprints/ThirdPersonCharacter_BP')
+def setup():
+ e=unreal.BlueprintGraphEditor.get_graph_editor_by_name(b,'EventGraph');ev=e.add_custom_event_node('FurinaTestClearTraversal');ev.rename('TFPTest_ClearTraversal');get=e.add_get_member_variable_node('Grind_Rail_Component_BP');get.rename('TFPTest_Grind');cls=unreal.load_asset('/Game/3DPlatformerGameBundle/Blueprints/Components/Grind_Rail_Component_BP').generated_class();s=e.add_set_member_variable_node('UsingRail?',cls.get_path_name());s.rename('TFPTest_ClearRail');s.find_input_pin('UsingRail?').set_pin_value('false');assert unreal.BlueprintGraphPinLibrary.try_create_connection(ev.find_then_pin(),s.find_execute_pin());assert unreal.BlueprintGraphPinLibrary.try_create_connection(get.find_output_pin('Grind_Rail_Component_BP'),s.find_self_pin())
+setup();unreal.BlueprintEditorLibrary.compile_blueprint(b);assert b.get_editor_property('status')!=unreal.BlueprintStatus.BS_ERROR

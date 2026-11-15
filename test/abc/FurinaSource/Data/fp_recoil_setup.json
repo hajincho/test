@@ -1,0 +1,15 @@
+{
+ "log": [],
+ "lmb": [
+  [
+   "LeftMouseButton",
+   "Direction_IA"
+  ],
+  [
+   "LeftMouseButton",
+   "IA_FurinaFireRifle"
+  ]
+ ],
+ "status": "<BlueprintStatus.BS_UP_TO_DATE: 3>",
+ "saved": true
+}

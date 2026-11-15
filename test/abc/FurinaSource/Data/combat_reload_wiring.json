@@ -1,0 +1,185 @@
+{
+ "life": 0.0,
+ "nodes": {
+  "K2Node_FP_ReloadMontage": {
+   "title": "Montage_Play",
+   "inputs": [
+    [
+     "execute",
+     "",
+     [
+      [
+       "M4_ReloadTimer",
+       "Set Timer by Function Name"
+      ]
+     ]
+    ],
+    [
+     "self",
+     "",
+     [
+      [
+       "K2Node_FP_ReloadAnimInst",
+       "GetAnimInstance"
+      ]
+     ]
+    ],
+    [
+     "MontageToPlay",
+     "/Game/Furina/FP/Anim/AM_Furina_FP_Reload.AM_Furina_FP_Reload",
+     []
+    ],
+    [
+     "InPlayRate",
+     "1.000000",
+     []
+    ],
+    [
+     "ReturnValueType",
+     "MontageLength",
+     []
+    ],
+    [
+     "InTimeToStartMontageAt",
+     "0.000000",
+     []
+    ],
+    [
+     "bStopAllMontages",
+     "true",
+     []
+    ]
+   ]
+  },
+  "K2Node_FP_ReloadRifle": {
+   "title": "PlayAnimation",
+   "inputs": [
+    [
+     "execute",
+     "",
+     [
+      [
+       "K2Node_FP_ReloadMontage",
+       "Montage_Play"
+      ]
+     ]
+    ],
+    [
+     "self",
+     "",
+     [
+      [
+       "K2Node_FP_GetRifle4",
+       "Get FurinaRifle"
+      ]
+     ]
+    ],
+    [
+     "NewAnimToPlay",
+     "",
+     []
+    ],
+    [
+     "bLooping",
+     "false",
+     []
+    ]
+   ]
+  },
+  "K2Node_FPF_Bolt": {
+   "title": "PlayAnimation",
+   "inputs": [
+    [
+     "execute",
+     "",
+     [
+      [
+       "K2Node_FPF_Kick",
+       "Montage_Play"
+      ]
+     ]
+    ],
+    [
+     "self",
+     "",
+     [
+      [
+       "K2Node_FPF_GetRifleF",
+       "Get FurinaRifle"
+      ]
+     ]
+    ],
+    [
+     "NewAnimToPlay",
+     "",
+     []
+    ],
+    [
+     "bLooping",
+     "false",
+     []
+    ]
+   ]
+  },
+  "K2Node_FPF_Spawn": {
+   "title": "SpawnActor BP Furina Bullet",
+   "inputs": [
+    [
+     "execute",
+     "",
+     [
+      [
+       "K2Node_FPF_Aim",
+       "Line Trace By Channel"
+      ]
+     ]
+    ],
+    [
+     "Class",
+     "/Game/Furina/FP/BP_FurinaBullet.BP_FurinaBullet_C",
+     []
+    ],
+    [
+     "SpawnTransform",
+     "",
+     [
+      [
+       "K2Node_FPF_ShotXf",
+       "MakeTransform"
+      ]
+     ]
+    ],
+    [
+     "CollisionHandlingOverride",
+     "AlwaysSpawn",
+     []
+    ],
+    [
+     "TransformScaleMethod",
+     "MultiplyWithRoot",
+     []
+    ],
+    [
+     "Owner",
+     "",
+     [
+      [
+       "K2Node_FPF_Self",
+       "셀프-레퍼런스"
+      ]
+     ]
+    ],
+    [
+     "Instigator",
+     "",
+     [
+      [
+       "K2Node_FPF_Self",
+       "셀프-레퍼런스"
+      ]
+     ]
+    ]
+   ]
+  }
+ }
+}

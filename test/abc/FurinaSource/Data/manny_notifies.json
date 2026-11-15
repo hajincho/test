@@ -1,0 +1,27 @@
+{
+ "Run_Fwd_Anim": {
+  "len": 1.899999976158142,
+  "rate_scale": 1.0,
+  "events": [
+   "<Struct 'AnimNotifyEvent' (0x000001B080B764A0) {trigger_weight_threshold: 0.000010, notify_name: \"Footstep\", notify: None, notify_state_class: None, montage_tick_type: Queued, notify_trigger_chance: 1.000000, notify_filter_type: NoFiltering, notify_filter_lod: 0, can_be_filtered_via_request: True, trigger_on_dedicated_server: True, trigger_on_follower: False}>",
+   "<Struct 'AnimNotifyEvent' (0x000001B080B732C0) {trigger_weight_threshold: 0.000010, notify_name: \"Footstep\", notify: None, notify_state_class: None, montage_tick_type: Queued, notify_trigger_chance: 1.000000, notify_filter_type: NoFiltering, notify_filter_lod: 0, can_be_filtered_via_request: True, trigger_on_dedicated_server: True, trigger_on_follower: False}>",
+   "<Struct 'AnimNotifyEvent' (0x000001B080B7A020) {trigger_weight_threshold: 0.000010, notify_name: \"Footstep\", notify: None, notify_state_class: None, montage_tick_type: Queued, notify_trigger_chance: 1.000000, notify_filter_type: NoFiltering, notify_filter_lod: 0, can_be_filtered_via_request: True, trigger_on_dedicated_server: True, trigger_on_follower: False}>",
+   "<Struct 'AnimNotifyEvent' (0x000001B080B7EB60) {trigger_weight_threshold: 0.000010, notify_name: \"Footstep\", notify: None, notify_state_class: None, montage_tick_type: Queued, notify_trigger_chance: 1.000000, notify_filter_type: NoFiltering, notify_filter_lod: 0, can_be_filtered_via_request: True, trigger_on_dedicated_server: True, trigger_on_follower: False}>",
+   "<Struct 'AnimNotifyEvent' (0x000001B080B786C0) {trigger_weight_threshold: 0.000010, notify_name: \"Footstep\", notify: None, notify_state_class: None, montage_tick_type: Queued, notify_trigger_chance: 1.000000, notify_filter_type: NoFiltering, notify_filter_lod: 0, can_be_filtered_via_request: True, trigger_on_dedicated_server: True, trigger_on_follower: False}>",
+   "<Struct 'AnimNotifyEvent' (0x000001B080B76AC0) {trigger_weight_threshold: 0.000010, notify_name: \"Footstep\", notify: None, notify_state_class: None, montage_tick_type: Queued, notify_trigger_chance: 1.000000, notify_filter_type: NoFiltering, notify_filter_lod: 0, can_be_filtered_via_request: True, trigger_on_dedicated_server: True, trigger_on_follower: False}>"
+  ]
+ },
+ "Walk_Fwd_Anim": {
+  "len": 2.7333333492279053,
+  "rate_scale": 1.0,
+  "events": [
+   "<Struct 'AnimNotifyEvent' (0x000001B080B7EA80) {trigger_weight_threshold: 0.000010, notify_name: \"Footstep\", notify: None, notify_state_class: None, montage_tick_type: Queued, notify_trigger_chance: 1.000000, notify_filter_type: NoFiltering, notify_filter_lod: 0, can_be_filtered_via_request: True, trigger_on_dedicated_server: True, trigger_on_follower: False}>",
+   "<Struct 'AnimNotifyEvent' (0x000001B080B75B00) {trigger_weight_threshold: 0.000010, notify_name: \"Footstep\", notify: None, notify_state_class: None, montage_tick_type: Queued, notify_trigger_chance: 1.000000, notify_filter_type: NoFiltering, notify_filter_lod: 0, can_be_filtered_via_request: True, trigger_on_dedicated_server: True, trigger_on_follower: False}>",
+   "<Struct 'AnimNotifyEvent' (0x000001B080B7A480) {trigger_weight_threshold: 0.000010, notify_name: \"Footstep\", notify: None, notify_state_class: None, montage_tick_type: Queued, notify_trigger_chance: 1.000000, notify_filter_type: NoFiltering, notify_filter_lod: 0, can_be_filtered_via_request: True, trigger_on_dedicated_server: True, trigger_on_follower: False}>",
+   "<Struct 'AnimNotifyEvent' (0x000001B080B7E380) {trigger_weight_threshold: 0.000010, notify_name: \"Footstep\", notify: None, notify_state_class: None, montage_tick_type: Queued, notify_trigger_chance: 1.000000, notify_filter_type: NoFiltering, notify_filter_lod: 0, can_be_filtered_via_request: True, trigger_on_dedicated_server: True, trigger_on_follower: False}>",
+   "<Struct 'AnimNotifyEvent' (0x000001B080B75940) {trigger_weight_threshold: 0.000010, notify_name: \"Footstep\", notify: None, notify_state_class: None, montage_tick_type: Queued, notify_trigger_chance: 1.000000, notify_filter_type: NoFiltering, notify_filter_lod: 0, can_be_filtered_via_request: True, trigger_on_dedicated_server: True, trigger_on_follower: False}>",
+   "<Struct 'AnimNotifyEvent' (0x000001B080B7A3A0) {trigger_weight_threshold: 0.000010, notify_name: \"Footstep\", notify: None, notify_state_class: None, montage_tick_type: Queued, notify_trigger_chance: 1.000000, notify_filter_type: NoFiltering, notify_filter_lod: 0, can_be_filtered_via_request: True, trigger_on_dedicated_server: True, trigger_on_follower: False}>"
+  ]
+ },
+ "error": "Traceback (most recent call last):\n  File \"C:/Users/fromj/Downloads/test/test/abc/FurinaSource/Scripts/Unreal/ue_dump_manny_notifies.py\", line 13, in <module>\n    R['bs'] = {k: str(bs.get_editor_property(k)) for k in ('axis_to_scale_animation', 'notify_trigger_mode', 'interpolation_time')}\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:/Users/fromj/Downloads/test/test/abc/FurinaSource/Scripts/Unreal/ue_dump_manny_notifies.py\", line 13, in <dictcomp>\n    R['bs'] = {k: str(bs.get_editor_property(k)) for k in ('axis_to_scale_animation', 'notify_trigger_mode', 'interpolation_time')}\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^\nException: BlendSpace1D: Failed to find property 'interpolation_time' for attribute 'interpolation_time' on 'BlendSpace1D'\n"
+}

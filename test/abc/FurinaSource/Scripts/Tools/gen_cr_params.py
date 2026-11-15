@@ -44,7 +44,9 @@ PEND = {'F_0_1': dict(stiff=7.0, blend=.55, drag=.94, min=.1, max=.45, grav=-4.0
 for root, lift, amp, idle, tempo, spatial, rootAmp, phase in hair:
     pend = next(v for k, v in PEND.items() if root.startswith(k))
     out.append(dict(root=root, kind='hair', lift=lift, bob=0.0, amp=amp, idle=idle, tempo=tempo, spatial=spatial, phase=phase, rootAmp=rootAmp, pend=pend))
-json.dump(dict(walk=120, sprint=600, run_narrow_cm=2.0, run_stride=0.55, run_kick=0.6,
+# stride warp (2026-11-15): feet stay 28 % closer to the pelvis when walking and 8 % when running (run is limited: 600 cm/s already needs a 2x play rate; 0.80 made the feet too fast) (ue_tfp_stride.py raises the rates by 1/s)
+json.dump(dict(walk=120, sprint=600, run_narrow_cm=0.0, stride_warp=True, walk_stride=0.72, run_stride=0.92, run_kick=1.0,
+               tfp_locomotion=True, crouch_drop_cm=0.0, crouch_back_cm=0.0,
                hair_motion_mode='bounded_speed_sway', hair_speed_blend=3.8, hair_idle_alpha=0.0, chains=out),
           open(S + r'\cr_params.json', 'w', encoding='utf-8'), indent=1)
 for o in out: print(ascii(o['root']), o['kind'], o['lift'])

@@ -1,0 +1,33 @@
+{
+ "rates": {
+  "AS_Furina_TFP_N_Walk_B": 135.55291456706902,
+  "AS_Furina_TFP_N_Run_B": 330.3276530681379,
+  "AS_Furina_TFP_N_Walk_BL_135": 136.7722025828449,
+  "AS_Furina_TFP_N_Run_FL": 304.1367214148041,
+  "AS_Furina_TFP_N_Walk_FL": 135.05476125739438,
+  "AS_Furina_TFP_N_Walk_FL_45": 132.33739558242615,
+  "AS_Furina_TFP_N_Walk_F": 135.72585985498512,
+  "AS_Furina_TFP_N_Run_F": 337.06632803061194,
+  "AS_Furina_TFP_N_Walk_FR_45": 132.33493480943406,
+  "AS_Furina_TFP_N_Run_FR": 304.1351966396965,
+  "AS_Furina_TFP_N_Walk_FR": 135.05116476020154,
+  "AS_Furina_TFP_N_Walk_BR_135": 137.69756635297583,
+  "AS_Furina_TFP_C_Walk_B": 138.6032802978682,
+  "AS_Furina_TFP_C_Walk_L": 135.6916285751867,
+  "AS_Furina_TFP_C_Walk_F": 140.3282771757771,
+  "AS_Furina_TFP_C_Walk_R": 133.5932603644966
+ },
+ "nodes": {
+  "TFPStanding": [
+   "X",
+   "Y",
+   "Pose"
+  ],
+  "TFPCrouching": [
+   "X",
+   "Y",
+   "Pose"
+  ]
+ },
+ "ok": true
+}

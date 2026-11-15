@@ -1,0 +1,10 @@
+{
+ "actors": [
+  {
+   "name": "ThirdPersonCharacter_BP_2",
+   "before": false,
+   "after": true
+  }
+ ],
+ "ok": true
+}

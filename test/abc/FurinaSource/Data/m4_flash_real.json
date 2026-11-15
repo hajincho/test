@@ -1,0 +1,18 @@
+{
+ "graph": "added",
+ "status": "<BlueprintStatus.BS_UP_TO_DATE: 3>",
+ "saved": true,
+ "parts": [
+  "DefaultSceneRoot",
+  "FXMesh",
+  "FXRoot",
+  "FlashCore",
+  "FlashLight",
+  "FlashPetalD",
+  "FlashPetalL",
+  "FlashPetalR",
+  "FlashPetalU",
+  "FlashRing",
+  "None"
+ ]
+}
