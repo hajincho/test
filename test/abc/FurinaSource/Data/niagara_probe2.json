@@ -1,0 +1,505 @@
+{
+ "hits": {},
+ "ext": {
+  "NiagaraExt_ApplyStackIssueFixResult": [
+   "assign",
+   "copy",
+   "export_text",
+   "import_text",
+   "static_struct",
+   "to_dict",
+   "to_tuple"
+  ],
+  "NiagaraExt_CompileEvent": [
+   "assign",
+   "copy",
+   "export_text",
+   "import_text",
+   "static_struct",
+   "to_dict",
+   "to_tuple"
+  ],
+  "NiagaraExt_CompileEventSeverity": [
+   "DISPLAY",
+   "ERROR",
+   "LOG",
+   "WARNING",
+   "get_display_name",
+   "name",
+   "static_enum",
+   "value"
+  ],
+  "NiagaraExt_DataInterfaceSchema": [
+   "assign",
+   "copy",
+   "export_text",
+   "import_text",
+   "static_struct",
+   "to_dict",
+   "to_tuple"
+  ],
+  "NiagaraExt_DynamicInputChain": [
+   "assign",
+   "copy",
+   "export_text",
+   "import_text",
+   "static_struct",
+   "to_dict",
+   "to_tuple"
+  ],
+  "NiagaraExt_DynamicInputChainRef": [
+   "assign",
+   "copy",
+   "export_text",
+   "import_text",
+   "static_struct",
+   "to_dict",
+   "to_tuple"
+  ],
+  "NiagaraExt_DynamicInputSchema": [
+   "assign",
+   "copy",
+   "export_text",
+   "import_text",
+   "static_struct",
+   "to_dict",
+   "to_tuple"
+  ],
+  "NiagaraExt_EmitterData": [
+   "assign",
+   "copy",
+   "export_text",
+   "import_text",
+   "static_struct",
+   "to_dict",
+   "to_tuple"
+  ],
+  "NiagaraExt_EmitterSchema": [
+   "assign",
+   "copy",
+   "export_text",
+   "import_text",
+   "static_struct",
+   "to_dict",
+   "to_tuple"
+  ],
+  "NiagaraExt_EmitterSummary": [
+   "assign",
+   "copy",
+   "export_text",
+   "import_text",
+   "static_struct",
+   "to_dict",
+   "to_tuple"
+  ],
+  "NiagaraExt_EmitterTopology": [
+   "assign",
+   "copy",
+   "export_text",
+   "import_text",
+   "static_struct",
+   "to_dict",
+   "to_tuple"
+  ],
+  "NiagaraExt_InstancedValue": [
+   "assign",
+   "copy",
+   "export_text",
+   "import_text",
+   "static_struct",
+   "to_dict",
+   "to_tuple"
+  ],
+  "NiagaraExt_ModuleData": [
+   "assign",
+   "copy",
+   "export_text",
+   "import_text",
+   "static_struct",
+   "to_dict",
+   "to_tuple"
+  ],
+  "NiagaraExt_ModuleInputValues": [
+   "assign",
+   "copy",
+   "export_text",
+   "import_text",
+   "static_struct",
+   "to_dict",
+   "to_tuple"
+  ],
+  "NiagaraExt_ModuleSchema": [
+   "assign",
+   "copy",
+   "export_text",
+   "import_text",
+   "static_struct",
+   "to_dict",
+   "to_tuple"
+  ],
+  "NiagaraExt_ModuleTopology": [
+   "assign",
+   "copy",
+   "export_text",
+   "import_text",
+   "static_struct",
+   "to_dict",
+   "to_tuple"
+  ],
+  "NiagaraExt_RendererData": [
+   "assign",
+   "copy",
+   "export_text",
+   "import_text",
+   "static_struct",
+   "to_dict",
+   "to_tuple"
+  ],
+  "NiagaraExt_RendererRef": [
+   "assign",
+   "copy",
+   "export_text",
+   "import_text",
+   "static_struct",
+   "to_dict",
+   "to_tuple"
+  ],
+  "NiagaraExt_RendererSchema": [
+   "assign",
+   "copy",
+   "export_text",
+   "import_text",
+   "static_struct",
+   "to_dict",
+   "to_tuple"
+  ],
+  "NiagaraExt_ScriptCompileInfo": [
+   "assign",
+   "copy",
+   "export_text",
+   "import_text",
+   "static_struct",
+   "to_dict",
+   "to_tuple"
+  ],
+  "NiagaraExt_ScriptCompileStatus": [
+   "BEING_CREATED",
+   "COMPUTE_UP_TO_DATE_WITH_WARNINGS",
+   "DIRTY",
+   "ERROR",
+   "UNKNOWN",
+   "UP_TO_DATE",
+   "UP_TO_DATE_WITH_WARNINGS",
+   "get_display_name",
+   "name",
+   "static_enum",
+   "value"
+  ],
+  "NiagaraExt_ScriptStackTopology": [
+   "assign",
+   "copy",
+   "export_text",
+   "import_text",
+   "static_struct",
+   "to_dict",
+   "to_tuple"
+  ],
+  "NiagaraExt_SetParameterEntry": [
+   "assign",
+   "copy",
+   "export_text",
+   "import_text",
+   "static_struct",
+   "to_dict",
+   "to_tuple"
+  ],
+  "NiagaraExt_StackInputData": [
+   "assign",
+   "copy",
+   "export_text",
+   "import_text",
+   "static_struct",
+   "to_dict",
+   "to_tuple"
+  ],
+  "NiagaraExt_StackInputData_DataInterface": [
+   "assign",
+   "copy",
+   "export_text",
+   "import_text",
+   "static_struct",
+   "to_dict",
+   "to_tuple"
+  ],
+  "NiagaraExt_StackInputData_DynamicInput": [
+   "assign",
+   "copy",
+   "export_text",
+   "import_text",
+   "static_struct",
+   "to_dict",
+   "to_tuple"
+  ],
+  "NiagaraExt_StackInputData_Enum": [
+   "assign",
+   "copy",
+   "export_text",
+   "import_text",
+   "static_struct",
+   "to_dict",
+   "to_tuple"
+  ],
+  "NiagaraExt_StackInputData_HlslExpression": [
+   "assign",
+   "copy",
+   "export_text",
+   "import_text",
+   "static_struct",
+   "to_dict",
+   "to_tuple"
+  ],
+  "NiagaraExt_StackInputData_Linked": [
+   "assign",
+   "copy",
+   "export_text",
+   "import_text",
+   "static_struct",
+   "to_dict",
+   "to_tuple"
+  ],
+  "NiagaraExt_StackInputData_Unsupported": [
+   "assign",
+   "copy",
+   "export_text",
+   "import_text",
+   "static_struct",
+   "to_dict",
+   "to_tuple"
+  ],
+  "NiagaraExt_StackInputSchema": [
+   "assign",
+   "copy",
+   "export_text",
+   "import_text",
+   "static_struct",
+   "to_dict",
+   "to_tuple"
+  ],
+  "NiagaraExt_StackInputTopology": [
+   "assign",
+   "copy",
+   "export_text",
+   "import_text",
+   "static_struct",
+   "to_dict",
+   "to_tuple"
+  ],
+  "NiagaraExt_StackInputValue": [
+   "assign",
+   "copy",
+   "export_text",
+   "import_text",
+   "static_struct",
+   "to_dict",
+   "to_tuple"
+  ],
+  "NiagaraExt_StackInputValueEntry": [
+   "assign",
+   "copy",
+   "export_text",
+   "import_text",
+   "static_struct",
+   "to_dict",
+   "to_tuple"
+  ],
+  "NiagaraExt_StackIssue": [
+   "assign",
+   "copy",
+   "export_text",
+   "import_text",
+   "static_struct",
+   "to_dict",
+   "to_tuple"
+  ],
+  "NiagaraExt_StackIssueFix": [
+   "assign",
+   "copy",
+   "export_text",
+   "import_text",
+   "static_struct",
+   "to_dict",
+   "to_tuple"
+  ],
+  "NiagaraExt_StackIssueFixStyle": [
+   "FIX",
+   "LINK",
+   "get_display_name",
+   "name",
+   "static_enum",
+   "value"
+  ],
+  "NiagaraExt_StackIssueSeverity": [
+   "ERROR",
+   "INFO",
+   "NONE",
+   "WARNING",
+   "get_display_name",
+   "name",
+   "static_enum",
+   "value"
+  ],
+  "NiagaraExt_StackIssues": [
+   "assign",
+   "copy",
+   "export_text",
+   "import_text",
+   "static_struct",
+   "to_dict",
+   "to_tuple"
+  ],
+  "NiagaraExt_StackItemReference": [
+   "assign",
+   "copy",
+   "export_text",
+   "import_text",
+   "static_struct",
+   "to_dict",
+   "to_tuple"
+  ],
+  "NiagaraExt_SystemCompileState": [
+   "assign",
+   "copy",
+   "export_text",
+   "import_text",
+   "static_struct",
+   "to_dict",
+   "to_tuple"
+  ],
+  "NiagaraExt_SystemData": [
+   "assign",
+   "copy",
+   "export_text",
+   "import_text",
+   "static_struct",
+   "to_dict",
+   "to_tuple"
+  ],
+  "NiagaraExt_SystemDependencies": [
+   "assign",
+   "copy",
+   "export_text",
+   "import_text",
+   "static_struct",
+   "to_dict",
+   "to_tuple"
+  ],
+  "NiagaraExt_SystemSchema": [
+   "assign",
+   "copy",
+   "export_text",
+   "import_text",
+   "static_struct",
+   "to_dict",
+   "to_tuple"
+  ],
+  "NiagaraExt_SystemSummary": [
+   "assign",
+   "copy",
+   "export_text",
+   "import_text",
+   "static_struct",
+   "to_dict",
+   "to_tuple"
+  ],
+  "NiagaraExt_UserVariable": [
+   "assign",
+   "copy",
+   "export_text",
+   "import_text",
+   "static_struct",
+   "to_dict",
+   "to_tuple"
+  ],
+  "NiagaraExt_UserVariables": [
+   "assign",
+   "copy",
+   "export_text",
+   "import_text",
+   "static_struct",
+   "to_dict",
+   "to_tuple"
+  ],
+  "NiagaraExt_Variable": [
+   "assign",
+   "copy",
+   "export_text",
+   "import_text",
+   "static_struct",
+   "to_dict",
+   "to_tuple"
+  ],
+  "NiagaraExt_VariableInst": [
+   "assign",
+   "copy",
+   "export_text",
+   "import_text",
+   "static_struct",
+   "to_dict",
+   "to_tuple"
+  ],
+  "NiagaraExt_VariableValue": [
+   "assign",
+   "copy",
+   "export_text",
+   "import_text",
+   "static_struct",
+   "to_dict",
+   "to_tuple"
+  ],
+  "NiagaraExt_VariableValueBase": [
+   "assign",
+   "copy",
+   "export_text",
+   "import_text",
+   "static_struct",
+   "to_dict",
+   "to_tuple"
+  ],
+  "NiagaraExt_VariableValue_DataInterface": [
+   "assign",
+   "copy",
+   "export_text",
+   "import_text",
+   "static_struct",
+   "to_dict",
+   "to_tuple"
+  ],
+  "NiagaraExt_VariableValue_Enum": [
+   "assign",
+   "copy",
+   "export_text",
+   "import_text",
+   "static_struct",
+   "to_dict",
+   "to_tuple"
+  ],
+  "NiagaraExt_VariableValue_Object": [
+   "assign",
+   "copy",
+   "export_text",
+   "import_text",
+   "static_struct",
+   "to_dict",
+   "to_tuple"
+  ],
+  "NiagaraExternalEditContext": [
+   "assign",
+   "copy",
+   "export_text",
+   "import_text",
+   "static_struct",
+   "to_dict",
+   "to_tuple"
+  ]
+ }
+}

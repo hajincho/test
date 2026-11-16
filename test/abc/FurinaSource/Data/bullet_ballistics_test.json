@@ -1,0 +1,4 @@
+{
+ "error": "Traceback (most recent call last):\n  File \"C:/Users/fromj/Downloads/test/test/abc/FurinaSource/Scripts/Unreal/ue_bullet_ballistics_test.py\", line 18, in tick\n    try: _tick()\n         ^^^^^^^\n  File \"C:/Users/fromj/Downloads/test/test/abc/FurinaSource/Scripts/Unreal/ue_bullet_ballistics_test.py\", line 26, in _tick\n    S['bullet'] = spawn(w, cls, unreal.Vector(0, 0, 100000), unreal.Rotator(0, 0, 0))\n                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:/Users/fromj/Downloads/test/test/abc/FurinaSource/Scripts/Unreal/ue_bullet_ballistics_test.py\", line 15, in spawn\n    a = begin(w, cls, xf)\n        ^^^^^^^^^^^^^^^^^\nTypeError: 'NoneType' object is not callable\n",
+ "api": []
+}

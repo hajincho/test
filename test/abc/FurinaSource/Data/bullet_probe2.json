@@ -1,0 +1,120 @@
+{
+ "None": {
+  "class": "BP_FurinaBullet_C"
+ },
+ "Bullet": {
+  "class": "SphereComponent",
+  "relative_location": "<Struct 'Vector' (0x0000022A732FDA80) {x: 0.000000, y: 0.000000, z: 0.000000}>",
+  "relative_rotation": "<Struct 'Rotator' (0x0000022A732FDA98) {pitch: 0.000000, yaw: 0.000000, roll: 0.000000}>",
+  "relative_scale3d": "<Struct 'Vector' (0x0000022A732FDAB0) {x: 1.000000, y: 1.000000, z: 1.000000}>",
+  "radius": 0.2849999964237213
+ },
+ "ProjectileVisual": {
+  "class": "StaticMeshComponent",
+  "relative_location": "<Struct 'Vector' (0x0000022A72EEDD80) {x: 0.000000, y: 0.000000, z: 0.000000}>",
+  "relative_rotation": "<Struct 'Rotator' (0x0000022A72EEDD98) {pitch: 0.000000, yaw: -90.000000, roll: 0.000000}>",
+  "relative_scale3d": "<Struct 'Vector' (0x0000022A72EEDDB0) {x: 1.000000, y: 1.000000, z: 1.000000}>",
+  "mesh": "SM_223Projectile",
+  "mat": [
+   "/Game/Furina/M4/M_Copper.M_Copper"
+  ]
+ },
+ "Tracer": {
+  "class": "StaticMeshComponent",
+  "relative_location": "<Struct 'Vector' (0x0000022A72EEC980) {x: 0.000000, y: 0.000000, z: 0.000000}>",
+  "relative_rotation": "<Struct 'Rotator' (0x0000022A72EEC998) {pitch: 90.000000, yaw: 0.000000, roll: 0.000000}>",
+  "relative_scale3d": "<Struct 'Vector' (0x0000022A72EEC9B0) {x: 0.020000, y: 0.020000, z: 0.000000}>",
+  "mesh": "Cylinder",
+  "mat": [
+   "/Game/Furina/FP/Weapon/M_FurinaTracer.M_FurinaTracer"
+  ]
+ },
+ "Ballistics": {
+  "class": "ProjectileMovementComponent",
+  "initial_speed": "91000.0",
+  "max_speed": "0.0",
+  "projectile_gravity_scale": "1.0",
+  "rotation_follows_velocity": "True",
+  "bounce": "ERR"
+ },
+ "SM_223Projectile": {
+  "origin": "<Struct 'Vector' (0x0000022C3F0BC600) {x: 0.000000, y: -0.007643, z: 0.000000}>",
+  "extent": "<Struct 'Vector' (0x0000022C3F0BC618) {x: 0.269335, y: 0.625694, z: 0.269335}>"
+ },
+ "SM_223Case": {
+  "origin": "<Struct 'Vector' (0x0000022C3F0BAB40) {x: 0.000000, y: -1.507629, z: 0.000000}>",
+  "extent": "<Struct 'Vector' (0x0000022C3F0BAB58) {x: 0.449408, y: 2.234306, z: 0.449408}>"
+ },
+ "char.K2Node_FPF_Far": [
+  [
+   "A",
+   "0, 0, 0"
+  ],
+  [
+   "B",
+   "5000"
+  ],
+  [
+   "ReturnValue",
+   "0, 0, 0"
+  ]
+ ],
+ "char.K2Node_FPF_Muzzle": [
+  [
+   "Location",
+   "0.000000,40.625201,4.849452"
+  ],
+  [
+   "ReturnValue",
+   "0, 0, 0"
+  ]
+ ],
+ "char.K2Node_FPF_Lift": [
+  [
+   "A",
+   "0, 0, 0"
+  ],
+  [
+   "B",
+   "0.0"
+  ],
+  [
+   "ReturnValue",
+   "0, 0, 0"
+  ]
+ ],
+ "char.K2Node_FPF_MySpd": [
+  [
+   "A",
+   "0, 0, 0"
+  ],
+  [
+   "ReturnValue",
+   "0.0"
+  ]
+ ],
+ "char.K2Node_FPF_Spawn": [
+  [
+   "Class",
+   "/Game/Furina/FP/BP_FurinaBullet.BP_FurinaBullet_C"
+  ],
+  [
+   "CollisionHandlingOverride",
+   "AlwaysSpawn"
+  ],
+  [
+   "TransformScaleMethod",
+   "MultiplyWithRoot"
+  ]
+ ],
+ "char.K2Node_FPF_FSpd": [
+  [
+   "A",
+   "0, 0, 0"
+  ],
+  [
+   "ReturnValue",
+   "0.0"
+  ]
+ ]
+}

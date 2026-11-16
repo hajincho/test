@@ -1,0 +1,137 @@
+{
+ "unit_scale": 1.0,
+ "objects": [
+  {
+   "name": "m4a1.001",
+   "type": "MESH",
+   "parent": null,
+   "loc": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "rot_deg": [
+    8.9,
+    0.0,
+    0.0
+   ],
+   "verts": 33410,
+   "faces": 66792,
+   "bbox_min": [
+    -0.3281,
+    -4.041,
+    -0.6396
+   ],
+   "bbox_max": [
+    0.2558,
+    3.3665,
+    2.3288
+   ],
+   "materials": [
+    "colt_m4_main",
+    "colt_m4_furniture",
+    "stanag_mag",
+    "matech_rear_sight"
+   ],
+   "groups": 0,
+   "shape_keys": 0
+  },
+  {
+   "name": "ammo",
+   "type": "MESH",
+   "parent": null,
+   "loc": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "rot_deg": [
+    160.7,
+    -90.0,
+    0.0
+   ],
+   "verts": 1632,
+   "faces": 3240,
+   "bbox_min": [
+    -0.7943,
+    -0.0466,
+    0.0002
+   ],
+   "bbox_max": [
+    -0.4449,
+    0.3837,
+    0.4603
+   ],
+   "materials": [
+    "stanag_mag"
+   ],
+   "groups": 0,
+   "shape_keys": 0
+  },
+  {
+   "name": "mag_20rnd",
+   "type": "MESH",
+   "parent": null,
+   "loc": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "rot_deg": [
+    44.4,
+    -90.0,
+    0.0
+   ],
+   "verts": 7024,
+   "faces": 13909,
+   "bbox_min": [
+    -0.5824,
+    -0.5549,
+    0.0001
+   ],
+   "bbox_max": [
+    0.5064,
+    0.5269,
+    0.1964
+   ],
+   "materials": [
+    "stanag_mag"
+   ],
+   "groups": 0,
+   "shape_keys": 0
+  }
+ ],
+ "overall_bbox": [
+  [
+   -0.7943,
+   -4.041,
+   -0.6396
+  ],
+  [
+   0.5064,
+   3.3665,
+   2.3288
+  ]
+ ],
+ "materials": {
+  "colt_m4_furniture": [],
+  "colt_m4_main": [],
+  "matech_rear_sight": [],
+  "stanag_mag": []
+ }
+}

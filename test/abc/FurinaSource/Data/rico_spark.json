@@ -1,0 +1,12 @@
+{
+ "spark_saved": true,
+ "life": 0.10000000149011612,
+ "added": [
+  "FRC_RXf",
+  "FRC_RSpawn",
+  "FRC_RFinish"
+ ],
+ "rewired": true,
+ "bullet_status": "<BlueprintStatus.BS_UP_TO_DATE: 3>",
+ "bullet_saved": true
+}

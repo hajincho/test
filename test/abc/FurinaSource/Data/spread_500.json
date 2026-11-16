@@ -1,0 +1,18 @@
+{
+ "half_deg_at_500m": 0.057295760414500616,
+ "base": 0.0636619560161118,
+ "kv_before": "1.38007535e-05",
+ "kv_after": "1.4261805540956367e-05",
+ "bullet_status": "<BlueprintStatus.BS_UP_TO_DATE: 3>",
+ "bullet_saved": true,
+ "before": {
+  "FPN_AimElev": "0.000307816",
+  "K2Node_FPF_SprBase": "0.15"
+ },
+ "after": {
+  "FPN_AimElev": "0.000307423138019658",
+  "K2Node_FPF_SprBase": "0.0636619560161118"
+ },
+ "char_status": "<BlueprintStatus.BS_UP_TO_DATE: 3>",
+ "char_saved": true
+}

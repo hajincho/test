@@ -1,0 +1,22 @@
+{
+ "start": [
+  20,
+  600,
+  false
+ ],
+ "after_6_shots": [
+  14,
+  600,
+  false
+ ],
+ "mid_reload": [
+  14,
+  600,
+  true
+ ],
+ "after_reload": [
+  20,
+  594,
+  false
+ ]
+}

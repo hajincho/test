@@ -1,0 +1,128 @@
+{
+ "/Game/Furina/FP/BP_FurinaBullet": {
+  "ProjectileVisual": {
+   "class": "StaticMeshComponent",
+   "mesh": "SM_223Projectile",
+   "mat": [
+    "/Game/Furina/M4/M_Copper.M_Copper"
+   ],
+   "hidden": false
+  },
+  "Tracer": {
+   "class": "StaticMeshComponent",
+   "mesh": "Cylinder",
+   "mat": [
+    "/Game/Furina/FP/Weapon/M_FurinaTracer.M_FurinaTracer"
+   ],
+   "hidden": false
+  }
+ },
+ "/Game/Furina/M4/BP_M4Flash": {
+  "FlashPetalU": {
+   "class": "StaticMeshComponent",
+   "mesh": "Cone",
+   "mat": [
+    "/Game/Furina/M4/M_MuzzleFlash.M_MuzzleFlash"
+   ],
+   "hidden": true
+  },
+  "FlashPetalR": {
+   "class": "StaticMeshComponent",
+   "mesh": "Cone",
+   "mat": [
+    "/Game/Furina/M4/M_MuzzleFlash.M_MuzzleFlash"
+   ],
+   "hidden": true
+  },
+  "FlashPetalL": {
+   "class": "StaticMeshComponent",
+   "mesh": "Cone",
+   "mat": [
+    "/Game/Furina/M4/M_MuzzleFlash.M_MuzzleFlash"
+   ],
+   "hidden": true
+  },
+  "FlashCore": {
+   "class": "StaticMeshComponent",
+   "mesh": "Sphere",
+   "mat": [
+    "/Game/Furina/M4/M_MuzzleFlashCore.M_MuzzleFlashCore"
+   ],
+   "hidden": true
+  },
+  "FlashLight": {
+   "class": "PointLightComponent",
+   "color": "<Struct 'Color' (0x0000022A725470B8) {b: 255, g: 150, r: 55, a: 255}>",
+   "intensity": 1800.0,
+   "visible": true
+  },
+  "FXMesh": {
+   "class": "StaticMeshComponent",
+   "mesh": "Cone",
+   "mat": [
+    "/Game/Furina/M4/M_MuzzleFlash.M_MuzzleFlash"
+   ],
+   "hidden": true
+  },
+  "FlashStreakB": {
+   "class": "StaticMeshComponent",
+   "mesh": "Plane",
+   "mat": [
+    "/Game/Furina/M4/M_MuzzleStreak.M_MuzzleStreak"
+   ],
+   "hidden": false
+  },
+  "FlashStar": {
+   "class": "StaticMeshComponent",
+   "mesh": "Plane",
+   "mat": [
+    "/Game/Furina/M4/M_MuzzleStar.M_MuzzleStar"
+   ],
+   "hidden": false
+  },
+  "FlashPetalD": {
+   "class": "StaticMeshComponent",
+   "mesh": "Cone",
+   "mat": [
+    "/Game/Furina/M4/M_MuzzleFlash.M_MuzzleFlash"
+   ],
+   "hidden": true
+  },
+  "FlashStreakA": {
+   "class": "StaticMeshComponent",
+   "mesh": "Plane",
+   "mat": [
+    "/Game/Furina/M4/M_MuzzleStreak.M_MuzzleStreak"
+   ],
+   "hidden": false
+  },
+  "FlashRing": {
+   "class": "StaticMeshComponent",
+   "mesh": "Sphere",
+   "mat": [
+    "/Game/Furina/M4/M_MuzzleFlash.M_MuzzleFlash"
+   ],
+   "hidden": true
+  }
+ },
+ "/Game/Furina/M4/BP_M4MagDrop": {
+  "MagBody": {
+   "class": "StaticMeshComponent",
+   "mesh": "SM_M4Mag",
+   "mat": [
+    "/Game/Furina/M4/M_Colt_Mag.M_Colt_Mag"
+   ],
+   "hidden": false
+  }
+ },
+ "/Game/3DPlatformerGameBundle/Demo/ThirdPersonAssets/Blueprints/ThirdPersonCharacter_BP": {
+  "FurinaMag": {
+   "class": "StaticMeshComponent",
+   "mesh": "SM_M4Mag",
+   "mat": [
+    "/Game/Furina/M4/M_Colt_Mag.M_Colt_Mag"
+   ],
+   "hidden": false
+  }
+ }
+}

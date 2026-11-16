@@ -1,0 +1,11 @@
+{
+ "/Game/Furina/M4/M_BulletGlow": true,
+ "/Game/Furina/FP/Weapon/M_FurinaTracer": true,
+ "bounce": [
+  true,
+  0.5,
+  0.30000001192092896
+ ],
+ "status": "<BlueprintStatus.BS_UP_TO_DATE: 3>",
+ "saved": true
+}

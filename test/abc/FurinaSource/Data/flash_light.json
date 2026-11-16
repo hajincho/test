@@ -1,0 +1,7 @@
+{
+ "before": "<Struct 'Color' (0x0000022A725470B8) {b: 45, g: 140, r: 255, a: 255}>",
+ "after": "<Struct 'Color' (0x0000022A725470B8) {b: 45, g: 140, r: 255, a: 255}>",
+ "intensity": 1800.0,
+ "status": "<BlueprintStatus.BS_UP_TO_DATE: 3>",
+ "saved": true
+}

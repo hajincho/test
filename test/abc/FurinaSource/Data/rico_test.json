@@ -1,0 +1,13 @@
+{
+ "shallow": {
+  "shots": 40,
+  "ricochets": 0,
+  "rate": 0.0
+ },
+ "steep": {
+  "shots": 20,
+  "ricochets": 0,
+  "rate": 0.0
+ },
+ "ricochet_first_velocity_cms": {}
+}

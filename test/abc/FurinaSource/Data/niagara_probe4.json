@@ -1,0 +1,68 @@
+{
+ "/Niagara/DefaultAssets/Templates/Systems/DirectionalBurst": {
+  "class": "NiagaraSystem",
+  "attrs": [
+   "asset_tags",
+   "cast_shadow",
+   "custom_depth_stencil_value",
+   "custom_depth_stencil_write_mask",
+   "receives_decals",
+   "render_custom_depth",
+   "translucency_sort_distance_offset",
+   "translucency_sort_priority"
+  ],
+  "emitter_handles": "ERR NiagaraSystem: Failed to find property 'emitter_handles' for attribute 'emitter_",
+  "exposed_parameters": "ERR NiagaraSystem: Failed to find property 'exposed_parameters' for attribute 'expos",
+  "user_parameters": "ERR NiagaraSystem: Failed to find property 'user_parameters' for attribute 'user_par",
+  "fixed_bounds": "<Struct 'Box' (0x00000229F20A0B90) {min: {x: -100.000000, y: -100.000000, z: -100.000000}, max: {x: 100.000000, y: 100.000000, z: 100.000000}, is_valid: True}>",
+  "warmup_time": "0.0",
+  "effect_type": "None",
+  "system_spawn_script": "ERR NiagaraSystem: Failed to find property 'system_spawn_script' for attribute 'syst",
+  "system_update_script": "ERR NiagaraSystem: Failed to find property 'system_update_script' for attribute 'sys",
+  "hderr": "NiagaraSystem: Failed to find property 'emitter_handles' for attribute 'emitter_handles' on 'NiagaraSystem'"
+ },
+ "/Niagara/DefaultAssets/Templates/Systems/SimpleExplosion": {
+  "class": "NiagaraSystem",
+  "attrs": [
+   "asset_tags",
+   "cast_shadow",
+   "custom_depth_stencil_value",
+   "custom_depth_stencil_write_mask",
+   "receives_decals",
+   "render_custom_depth",
+   "translucency_sort_distance_offset",
+   "translucency_sort_priority"
+  ],
+  "emitter_handles": "ERR NiagaraSystem: Failed to find property 'emitter_handles' for attribute 'emitter_",
+  "exposed_parameters": "ERR NiagaraSystem: Failed to find property 'exposed_parameters' for attribute 'expos",
+  "user_parameters": "ERR NiagaraSystem: Failed to find property 'user_parameters' for attribute 'user_par",
+  "fixed_bounds": "<Struct 'Box' (0x0000022A5B583B90) {min: {x: -100.000000, y: -100.000000, z: -100.000000}, max: {x: 100.000000, y: 100.000000, z: 100.000000}, is_valid: True}>",
+  "warmup_time": "0.0",
+  "effect_type": "None",
+  "system_spawn_script": "ERR NiagaraSystem: Failed to find property 'system_spawn_script' for attribute 'syst",
+  "system_update_script": "ERR NiagaraSystem: Failed to find property 'system_update_script' for attribute 'sys",
+  "hderr": "NiagaraSystem: Failed to find property 'emitter_handles' for attribute 'emitter_handles' on 'NiagaraSystem'"
+ },
+ "/Game/3DPlatformerGameBundle/NiagaraSystems/Sparks_FXS": {
+  "class": "NiagaraSystem",
+  "attrs": [
+   "asset_tags",
+   "cast_shadow",
+   "custom_depth_stencil_value",
+   "custom_depth_stencil_write_mask",
+   "receives_decals",
+   "render_custom_depth",
+   "translucency_sort_distance_offset",
+   "translucency_sort_priority"
+  ],
+  "emitter_handles": "ERR NiagaraSystem: Failed to find property 'emitter_handles' for attribute 'emitter_",
+  "exposed_parameters": "ERR NiagaraSystem: Failed to find property 'exposed_parameters' for attribute 'expos",
+  "user_parameters": "ERR NiagaraSystem: Failed to find property 'user_parameters' for attribute 'user_par",
+  "fixed_bounds": "<Struct 'Box' (0x0000022A7CE33B90) {min: {x: -100.000000, y: -100.000000, z: -100.000000}, max: {x: 100.000000, y: 100.000000, z: 100.000000}, is_valid: True}>",
+  "warmup_time": "0.0",
+  "effect_type": "None",
+  "system_spawn_script": "ERR NiagaraSystem: Failed to find property 'system_spawn_script' for attribute 'syst",
+  "system_update_script": "ERR NiagaraSystem: Failed to find property 'system_update_script' for attribute 'sys",
+  "hderr": "NiagaraSystem: Failed to find property 'emitter_handles' for attribute 'emitter_handles' on 'NiagaraSystem'"
+ }
+}

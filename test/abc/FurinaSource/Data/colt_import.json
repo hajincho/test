@@ -1,0 +1,44 @@
+{
+ "materials": {
+  "Main": true,
+  "Furniture": true,
+  "Rear": true,
+  "Mag": true
+ },
+ "slots": {
+  "sk": [
+   "colt_m4_main",
+   "colt_m4_furniture",
+   "matech_rear_sight"
+  ],
+  "mag": [
+   "stanag_mag"
+  ]
+ },
+ "sk_saved": true,
+ "mag_saved": true,
+ "mag_bounds": [
+  [
+   0.04,
+   -2.14,
+   -2.55
+  ],
+  [
+   1.09,
+   2.95,
+   5.61
+  ]
+ ],
+ "sk_bounds": [
+  [
+   -0.4,
+   0.84,
+   0.06
+  ],
+  [
+   3.24,
+   40.0,
+   10.42
+  ]
+ ]
+}

@@ -1,0 +1,32 @@
+{
+ "before": {
+  "FPN_SightRear.Location": "0.0,-11.757,9.984",
+  "FPN_SightFront.Location": "0.0,23.381,9.844",
+  "M4_FlashPoint.Location": "-0.0,40.515,3.383",
+  "M4_CasePoint.Location": "-2.2,-3.5,4.5",
+  "TFP_MagRoom.A": "20"
+ },
+ "after": {
+  "FPN_SightRear.Location": "0.0,-11.757,9.984",
+  "FPN_SightFront.Location": "0.0,23.381,9.844",
+  "M4_FlashPoint.Location": "-0.0,40.515,3.383",
+  "M4_CasePoint.Location": "-2.2,-3.5,4.5",
+  "TFP_MagRoom.A": "20"
+ },
+ "status": "<BlueprintStatus.BS_UP_TO_DATE: 3>",
+ "cdo_before": [
+  20,
+  600
+ ],
+ "cdo_after": [
+  20,
+  600
+ ],
+ "level_values": [
+  [
+   20,
+   600
+  ]
+ ],
+ "saved": true
+}

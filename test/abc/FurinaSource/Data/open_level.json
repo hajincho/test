@@ -1,0 +1,78 @@
+{
+ "saved_current": true,
+ "loaded": true,
+ "world": "/Game/UndergroundTunnel/Maps/Demonstration.Demonstration",
+ "actor_count": 2508,
+ "classes": {
+  "StaticMeshActor": 2128,
+  "GroupActor": 142,
+  "CineCameraActor": 56,
+  "NiagaraActor": 40,
+  "SphereReflectionCapture": 37,
+  "DecalActor": 20,
+  "BP_LightFixture01a_C": 19,
+  "BP_Decal_C": 14,
+  "BP_LightFixture02a_C": 11,
+  "CameraActor": 7,
+  "BP_LightFixture01b_tunnel_C": 7,
+  "LightmassPortal": 5,
+  "PointLight": 4,
+  "TextRenderActor": 3,
+  "SpotLight": 2,
+  "PostProcessVolume": 2,
+  "BP_LightFixture02b_C": 2,
+  "LevelSequenceActor": 2,
+  "LightmassImportanceVolume": 1,
+  "ExponentialHeightFog": 1,
+  "InstancedFoliageActor": 1,
+  "BoxReflectionCapture": 1,
+  "BP_Spline_Tunnel_C": 1,
+  "RectLight": 1,
+  "BP_SceneCapture_C": 1
+ },
+ "notable": [
+  [
+   "PostProcessVolume",
+   "PostProcess_Main",
+   [
+    -3053,
+    -122,
+    -199
+   ],
+   0
+  ],
+  [
+   "ExponentialHeightFog",
+   "ExponentialHeightFog",
+   [
+    -3020,
+    -20,
+    -110
+   ],
+   0
+  ],
+  [
+   "PostProcessVolume",
+   "PostProcessVolume2",
+   [
+    -3052,
+    -121,
+    -199
+   ],
+   0
+  ]
+ ],
+ "game_mode_override": "None",
+ "static_mesh_bounds": [
+  [
+   -8314,
+   -5214,
+   -812
+  ],
+  [
+   2480,
+   4330,
+   6786
+  ]
+ ]
+}

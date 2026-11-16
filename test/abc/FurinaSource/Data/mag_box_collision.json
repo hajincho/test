@@ -1,7 +1,7 @@
 {
  "bounds": [
-  "<Struct 'Vector' (0x0000022AC9A09140) {x: 0.109739, y: -2.362793, z: -5.184332}>",
-  "<Struct 'Vector' (0x0000022AC9A09158) {x: 1.384414, y: 3.897658, z: 8.490805}>"
+  "<Struct 'Vector' (0x0000022ADD54CCC0) {x: 0.040807, y: -2.142507, z: -2.548179}>",
+  "<Struct 'Vector' (0x0000022ADD54CCD8) {x: 1.089842, y: 2.947275, z: 5.605644}>"
  ],
  "convex_before": 1,
  "saved": true,

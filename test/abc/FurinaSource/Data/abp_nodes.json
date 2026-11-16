@@ -87,8 +87,8 @@
      "",
      [
       [
-       "AnimGraphNode_LayeredBoneBlend_FP",
-       "BasePose"
+       "ProneBlend",
+       "A"
       ]
      ]
     ]
@@ -628,7 +628,7 @@
      "(LinkID=-1,SourceLinkID=-1)",
      [
       [
-       "AnimGraphNode_TwoWayBlend_1",
+       "ProneBlend",
        "Pose"
       ]
      ]
@@ -2066,6 +2066,162 @@
      ]
     ]
    ]
+  },
+  "ProneIdlePlayer": {
+   "cls": "AnimGraphNode_SequencePlayer",
+   "title": "시퀀스 플레이어 'AS_Furina_Crawl_Prone_Idle'",
+   "pins": [
+    [
+     "Pose",
+     "",
+     [
+      [
+       "ProneMoveBlend",
+       "A"
+      ]
+     ]
+    ]
+   ]
+  },
+  "ProneMovePlayer": {
+   "cls": "AnimGraphNode_SequencePlayer",
+   "title": "시퀀스 플레이어 'AS_Furina_Crawl_Move'",
+   "pins": [
+    [
+     "Pose",
+     "",
+     [
+      [
+       "ProneMoveBlend",
+       "B"
+      ]
+     ]
+    ]
+   ]
+  },
+  "ProneMoveBlend": {
+   "cls": "AnimGraphNode_TwoWayBlend",
+   "title": "양방향 블렌드",
+   "pins": [
+    [
+     "A",
+     "(LinkID=-1,SourceLinkID=-1)",
+     [
+      [
+       "ProneIdlePlayer",
+       "Pose"
+      ]
+     ]
+    ],
+    [
+     "B",
+     "(LinkID=-1,SourceLinkID=-1)",
+     [
+      [
+       "ProneMovePlayer",
+       "Pose"
+      ]
+     ]
+    ],
+    [
+     "Alpha",
+     "0.000000",
+     [
+      [
+       "K2Node_VariableGet_8",
+       "TFPProneMove"
+      ]
+     ]
+    ],
+    [
+     "Pose",
+     "",
+     [
+      [
+       "ProneBlend",
+       "B"
+      ]
+     ]
+    ]
+   ]
+  },
+  "K2Node_VariableGet_8": {
+   "cls": "K2Node_VariableGet",
+   "title": "Get TFPProneMove",
+   "pins": [
+    [
+     "TFPProneMove",
+     "0.0",
+     [
+      [
+       "ProneMoveBlend",
+       "Alpha"
+      ]
+     ]
+    ]
+   ]
+  },
+  "ProneBlend": {
+   "cls": "AnimGraphNode_TwoWayBlend",
+   "title": "양방향 블렌드",
+   "pins": [
+    [
+     "A",
+     "(LinkID=-1,SourceLinkID=-1)",
+     [
+      [
+       "AnimGraphNode_TwoWayBlend_1",
+       "Pose"
+      ]
+     ]
+    ],
+    [
+     "B",
+     "(LinkID=-1,SourceLinkID=-1)",
+     [
+      [
+       "ProneMoveBlend",
+       "Pose"
+      ]
+     ]
+    ],
+    [
+     "Alpha",
+     "0.000000",
+     [
+      [
+       "K2Node_VariableGet_9",
+       "TFPProne"
+      ]
+     ]
+    ],
+    [
+     "Pose",
+     "",
+     [
+      [
+       "AnimGraphNode_LayeredBoneBlend_FP",
+       "BasePose"
+      ]
+     ]
+    ]
+   ]
+  },
+  "K2Node_VariableGet_9": {
+   "cls": "K2Node_VariableGet",
+   "title": "Get TFPProne",
+   "pins": [
+    [
+     "TFPProne",
+     "0.0",
+     [
+      [
+       "ProneBlend",
+       "Alpha"
+      ]
+     ]
+    ]
+   ]
   }
  },
  "EventGraph": {
@@ -2097,6 +2253,10 @@
       ],
       [
        "TFPGroundSmooth",
+       "DeltaTime"
+      ],
+      [
+       "TFPProneSmooth",
        "DeltaTime"
       ]
      ]
@@ -2351,7 +2511,7 @@
      "",
      [
       [
-       "CacheTFPHandIdle",
+       "CacheTFPProneMove",
        "then"
       ]
      ]
@@ -3620,7 +3780,7 @@
      "",
      [
       [
-       "CacheWalkRate",
+       "CacheTFPProne",
        "execute"
       ]
      ]
@@ -3813,6 +3973,10 @@
       [
        "ProneEvNot",
        "A"
+      ],
+      [
+       "TFPProneFlagF",
+       "InBool"
       ]
      ]
     ]
@@ -3879,6 +4043,243 @@
      ]
     ]
    ]
+  },
+  "TFPProneFlagF": {
+   "cls": "K2Node_CallFunction",
+   "title": "To Float (Boolean)",
+   "pins": [
+    [
+     "InBool",
+     "false",
+     [
+      [
+       "ProneEvActive",
+       "ReturnValue"
+      ]
+     ]
+    ],
+    [
+     "ReturnValue",
+     "0.0",
+     [
+      [
+       "TFPProneSmooth",
+       "Target"
+      ]
+     ]
+    ]
+   ]
+  },
+  "K2Node_VariableGet_5": {
+   "cls": "K2Node_VariableGet",
+   "title": "Get TFPProne",
+   "pins": [
+    [
+     "TFPProne",
+     "0.0",
+     [
+      [
+       "TFPProneSmooth",
+       "Current"
+      ]
+     ]
+    ]
+   ]
+  },
+  "TFPProneSmooth": {
+   "cls": "K2Node_CallFunction",
+   "title": "FInterpTo",
+   "pins": [
+    [
+     "Current",
+     "0.0",
+     [
+      [
+       "K2Node_VariableGet_5",
+       "TFPProne"
+      ]
+     ]
+    ],
+    [
+     "Target",
+     "0.0",
+     [
+      [
+       "TFPProneFlagF",
+       "ReturnValue"
+      ]
+     ]
+    ],
+    [
+     "DeltaTime",
+     "0.0",
+     [
+      [
+       "K2Node_Event_0",
+       "DeltaTimeX"
+      ]
+     ]
+    ],
+    [
+     "InterpSpeed",
+     "7",
+     []
+    ],
+    [
+     "ReturnValue",
+     "0.0",
+     [
+      [
+       "CacheTFPProne",
+       "TFPProne"
+      ]
+     ]
+    ]
+   ]
+  },
+  "CacheTFPProne": {
+   "cls": "K2Node_VariableSet",
+   "title": "Set TFPProne",
+   "pins": [
+    [
+     "execute",
+     "",
+     [
+      [
+       "CacheTFPHandIdle",
+       "then"
+      ]
+     ]
+    ],
+    [
+     "TFPProne",
+     "0.0",
+     [
+      [
+       "TFPProneSmooth",
+       "ReturnValue"
+      ]
+     ]
+    ],
+    [
+     "then",
+     "",
+     [
+      [
+       "CacheTFPProneMove",
+       "execute"
+      ]
+     ]
+    ],
+    [
+     "Output_Get",
+     "0.0",
+     []
+    ]
+   ]
+  },
+  "K2Node_VariableGet_6": {
+   "cls": "K2Node_VariableGet",
+   "title": "Get TFPSpeed",
+   "pins": [
+    [
+     "TFPSpeed",
+     "0.0",
+     [
+      [
+       "TFPProneMoveRange",
+       "Value"
+      ]
+     ]
+    ]
+   ]
+  },
+  "TFPProneMoveRange": {
+   "cls": "K2Node_CallFunction",
+   "title": "MapRangeClamped",
+   "pins": [
+    [
+     "Value",
+     "0.0",
+     [
+      [
+       "K2Node_VariableGet_6",
+       "TFPSpeed"
+      ]
+     ]
+    ],
+    [
+     "InRangeA",
+     "5",
+     []
+    ],
+    [
+     "InRangeB",
+     "30",
+     []
+    ],
+    [
+     "OutRangeA",
+     "0",
+     []
+    ],
+    [
+     "OutRangeB",
+     "1",
+     []
+    ],
+    [
+     "ReturnValue",
+     "0.0",
+     [
+      [
+       "CacheTFPProneMove",
+       "TFPProneMove"
+      ]
+     ]
+    ]
+   ]
+  },
+  "CacheTFPProneMove": {
+   "cls": "K2Node_VariableSet",
+   "title": "Set TFPProneMove",
+   "pins": [
+    [
+     "execute",
+     "",
+     [
+      [
+       "CacheTFPProne",
+       "then"
+      ]
+     ]
+    ],
+    [
+     "TFPProneMove",
+     "0.0",
+     [
+      [
+       "TFPProneMoveRange",
+       "ReturnValue"
+      ]
+     ]
+    ],
+    [
+     "then",
+     "",
+     [
+      [
+       "CacheWalkRate",
+       "execute"
+      ]
+     ]
+    ],
+    [
+     "Output_Get",
+     "0.0",
+     []
+    ]
+   ]
   }
  },
  "vars": [
@@ -3889,6 +4290,8 @@
   "TFPGround",
   "TFPHandWalk",
   "TFPHandIdle",
+  "TFPProne",
+  "TFPProneMove",
   "/Script/Engine.AnimInstance.CurrentSkeleton",
   "/Script/Engine.AnimInstance.RootMotionMode",
   "/Script/Engine.AnimInstance.bUseMultiThreadedAnimationUpdate",

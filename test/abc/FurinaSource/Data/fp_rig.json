@@ -124,7 +124,7 @@
    -11.0
   ],
   "ads": [
-   -0.12457521357758426,
+   0.0168,
    20,
    -9.936582091139769
   ],
@@ -269,33 +269,131 @@
  },
  "weapon": "M4A1",
  "muzzle_local": [
-  0,
-  40.62520094580961,
-  4.849451571289375
+  -0.0,
+  40.515,
+  3.383
  ],
  "ejection_local": [
-  -2,
-  -6.758790357258856,
-  4.526154799870083
+  -2.2,
+  -3.5,
+  4.5
  ],
  "sight_alignment": {
   "rear": [
-   0.14139,
-   -11.757165,
-   9.98355
+   0.0,
+   -11.757,
+   9.984
   ],
   "front": [
-   0.0809,
-   30.61,
-   9.814586283448246
+   0.0,
+   23.381,
+   9.844
   ],
-  "pitch_deg": 0.2284989234460095,
+  "pitch_deg": 0.2285,
   "aperture_radius_cm": 0.2651,
-  "method": "Rear aperture circle fit, front post tip; rotate their measured line onto camera forward."
+  "method": "Colt M4A1 (2026-11-15): rear aperture = gap in the rear sight plate, front post tip; model levelled so that the sight line matches the old rifle (build_colt_rifle.py)"
  },
  "left_grip_tweak": [
   -1.4,
   -1.87,
   2.23
- ]
+ ],
+ "fingers_l": {
+  "IndexFinger1_L": {
+   "axis": [
+    -0.80852,
+    -0.00204,
+    -0.5877
+   ],
+   "deg": 62.001
+  },
+  "IndexFinger2_L": {
+   "axis": [
+    0.96405,
+    0.00208,
+    0.26723
+   ],
+   "deg": 11.587
+  },
+  "IndexFinger3_L": {
+   "axis": [
+    0.61934,
+    0.18872,
+    -0.76248
+   ],
+   "deg": 29.996
+  },
+  "MiddleFinger1_L": {
+   "axis": [
+    -0.77353,
+    -0.0009,
+    -0.63448
+   ],
+   "deg": 56.023
+  },
+  "MiddleFinger2_L": {
+   "axis": [
+    0.99877,
+    0.00098,
+    -0.06004
+   ],
+   "deg": 34.721
+  },
+  "MiddleFinger3_L": {
+   "axis": [
+    0.95904,
+    0.20349,
+    -0.1962
+   ],
+   "deg": 36.261
+  },
+  "RingFinger1_L": {
+   "axis": [
+    -0.89792,
+    0.00187,
+    -0.44034
+   ],
+   "deg": 35.392
+  },
+  "RingFinger2_L": {
+   "axis": [
+    0.99892,
+    -0.00163,
+    0.04081
+   ],
+   "deg": 25.505
+  },
+  "RingFinger3_L": {
+   "axis": [
+    0.98626,
+    0.12948,
+    0.10331
+   ],
+   "deg": 32.906
+  },
+  "LittleFinger1_L": {
+   "axis": [
+    -0.95079,
+    -0.00291,
+    -0.31127
+   ],
+   "deg": 24.611
+  },
+  "LittleFinger2_L": {
+   "axis": [
+    -0.75517,
+    0.00172,
+    0.65576
+   ],
+   "deg": 19.766
+  },
+  "LittleFinger3_L": {
+   "axis": [
+    0.98578,
+    -0.03929,
+    0.16079
+   ],
+   "deg": 22.453
+  }
+ }
 }

@@ -565,6 +565,21 @@ try:
                 add('RigUnit_SetTranslation', 'LShSet', RX2 + 3600, y0 + 300, Item='(Type=Bone,Name="Left-arm")', Space='GlobalSpace', bPropagateToChildren='True'); link('LShNew.Result', 'LShSet.Value')
                 prev = chain_exec(prev, 'LShSet')
             prev = chain_exec(prev, s + 'ArmIK')
+        # ---- first person: the four left-hand fingers wrap around the handguard (2026-11-16). fp_rig.json 'fingers_l' = {bone: {axis: bone-local unit axis, deg}} from Scripts/Tools/fit_finger_curl.py
+        # (measured finger joints ran through the handguard). Local additive rotation (RigUnit_AddBoneTransform, post multiply), weight = first person x not reloading x not on the zipline.
+        if FR.get('fingers_l'):
+            add('RigUnit_MathFloatRemap', 'FingFp', RX2 + 3900, RY2 + 1400, SourceMinimum='0', SourceMaximum='1', TargetMinimum='1', TargetMaximum='0', bClamp='True'); link('ViewTPC.Value', 'FingFp.Value')
+            add('RigUnit_MathFloatMul', 'FingW1', RX2 + 4100, RY2 + 1400); link('FingFp.Result', 'FingW1.A'); link('NotReload.Result', 'FingW1.B')
+            add('RigUnit_MathFloatMul', 'FingW', RX2 + 4300, RY2 + 1400); link('FingW1.Result', 'FingW.A'); link('ZipInv.Result', 'FingW.B')
+            for fi, (bone, fv) in enumerate(FR['fingers_l'].items()):
+                ax = fv['axis']; th = math.radians(fv['deg'] * FR.get('fingers_l_scale', 1.0)); sn = math.sin(th / 2); q = (ax[0] * sn, ax[1] * sn, ax[2] * sn, math.cos(th / 2))
+                nm = 'Fing_' + bone; bk = '(Type=Bone,Name="%s")' % bone
+                # explicit local-space version of "local_new = local_anim * delta": GetTransform(Local) -> quaternion mul -> SetRotation(Local, weight)
+                add('RigUnit_GetTransform', nm + 'Get', RX2 + 4500, RY2 + 1400 + 200 * fi, Item=bk, Space='LocalSpace')
+                add('RigUnit_MathQuaternionMul', nm + 'Mul', RX2 + 4750, RY2 + 1400 + 200 * fi, B='(X=%f,Y=%f,Z=%f,W=%f)' % q); link(nm + 'Get.Transform.Rotation', nm + 'Mul.A')
+                add('RigUnit_SetRotation', nm, RX2 + 5000, RY2 + 1400 + 200 * fi, Item=bk, Space='LocalSpace', bPropagateToChildren='True'); link(nm + 'Mul.Result', nm + '.Value')
+                link('FingW.Result', nm + '.Weight')
+                prev = chain_exec(prev, nm)
 
     # ---------------- hair: actual component travel, independent of animated hip/head bob.
     # A filtered 0..1 signal owns amplitude, backward trail, and phase speed. The

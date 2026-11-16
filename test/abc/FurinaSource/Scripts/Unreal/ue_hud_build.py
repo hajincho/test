@@ -1,7 +1,7 @@
 """Self-made HUD assets (2026-11-15), replaces the supplied M4 HUD frame image:
  - /Game/Furina/UI/T_M4HUDSilhouette  (Textures/M4HUD_Silhouette.png, white side-view silhouette rendered from our SK_M4A1 + SM_M4Mag by render_m4_hud_silhouette.py)
  - /Game/Furina/UI/MPC_FurinaHUD      (scalars Ammo, Reserve, Reloading, written every frame by BP_FurinaHUD)
- - /Game/Furina/UI/M_FurinaHUD        (unlit translucent; one Custom HLSL node draws the whole panel: chamfered plate, silhouette, 30 round pips, seven-segment ammo / reserve digits)
+ - /Game/Furina/UI/M_FurinaHUD        (unlit translucent; one Custom HLSL node draws the whole panel: chamfered plate, silhouette, 20 round pips, seven-segment ammo / reserve digits)
  usage: py ue_hud_build.py   (re-run to rebuild the material after editing HLSL below)"""
 import unreal, json, os, traceback
 D = r'C:\Users\fromj\Downloads\test\test\abc\FurinaSource\Data'
@@ -13,7 +13,7 @@ float3 acc = float3(0.20, 0.72, 1.0);
 float3 warn = float3(1.0, 0.45, 0.12);
 float ammoI = clamp(floor(Ammo + 0.5), 0.0, 99.0);
 float resI = clamp(floor(Reserve + 0.5), 0.0, 999.0);
-float low = (ammoI <= 8.0) ? 1.0 : 0.0;
+float low = (ammoI <= 5.0) ? 1.0 : 0.0;
 float3 mainc = lerp(ink, warn, low);
 float aa = 0.006;
 // plate: rectangle with the top-left and bottom-right corners cut
@@ -33,19 +33,19 @@ col = lerp(col, ink, cutE); alpha = max(alpha, cutE);
 float dv = (1.0 - smoothstep(0.004, 0.004 + aa, abs(p.x - 1.47))) * step(0.17, p.y) * step(p.y, 0.74);
 col = lerp(col, acc, dv * 0.6); alpha = max(alpha, dv * 0.55);
 // weapon silhouette (our own M4 model)
-float su = (p.x - 0.14) / 1.27; float sv = (p.y - 0.30) / (1.27 / 3.3333);
+float su = (p.x - 0.14) / 1.27; float sv = (p.y - 0.325) / (1.27 / 3.8398);
 float insd = step(0.0, su) * step(su, 1.0) * step(0.0, sv) * step(sv, 1.0);
 float4 tx = Texture2DSample(Tex, TexSampler, float2(saturate(su), saturate(sv)));
 float sa = tx.a * insd;
 col = lerp(col, ink, sa); alpha = max(alpha, sa * 0.95);
-// round pips: 30 bars, filled = rounds in the magazine; while reloading a light runs along them
-for (int i = 0; i < 30; i++)
+// round pips: 20 bars (magazine capacity 20), filled = rounds in the magazine; while reloading a light runs along them
+for (int i = 0; i < 20; i++)
 {
-    float x0 = 0.17 + i * 0.0875;
-    float m = step(x0, p.x) * step(p.x, x0 + 0.060) * step(0.855, p.y) * step(p.y, 0.915);
+    float x0 = 0.17 + i * 0.132;
+    float m = step(x0, p.x) * step(p.x, x0 + 0.090) * step(0.855, p.y) * step(p.y, 0.915);
     float lit = (i + 0.5 < Ammo) ? 1.0 : 0.0;
     // reloading: the pips fill from empty to full in step with the reload time (ReloadP 0..1 = elapsed / reload duration), the pip being filled fades in
-    if (Reload > 0.5) lit = saturate(ReloadP * 30.0 - i);
+    if (Reload > 0.5) lit = saturate(ReloadP * 20.0 - i);
     float3 pc = lerp(float3(0.16, 0.26, 0.36), (Reload > 0.5) ? ink : mainc, lit);
     col = lerp(col, pc, m); alpha = max(alpha, m * lerp(0.45, 1.0, lit));
 }
@@ -97,8 +97,8 @@ def main():
     R = {}
     E = unreal.EditorAssetLibrary; T = unreal.AssetToolsHelpers.get_asset_tools(); M = unreal.MaterialEditingLibrary; dest = '/Game/Furina/UI'
     tp = dest + '/T_M4HUDSilhouette'
-    if not E.does_asset_exist(tp):
-        task = unreal.AssetImportTask(); task.filename = SRC; task.destination_path = dest; task.destination_name = 'T_M4HUDSilhouette'; task.automated = True; task.save = True; T.import_asset_tasks([task])
+    if True:      # always re-import (the silhouette is rendered from the current rifle model, Colt M4A1 since 2026-11-15)
+        task = unreal.AssetImportTask(); task.filename = SRC; task.destination_path = dest; task.destination_name = 'T_M4HUDSilhouette'; task.automated = True; task.save = True; task.replace_existing = True; T.import_asset_tasks([task])
     tex = unreal.load_asset(tp); assert tex, 'texture'
     tex.set_editor_property('compression_settings', unreal.TextureCompressionSettings.TC_EDITOR_ICON); tex.set_editor_property('lod_group', unreal.TextureGroup.TEXTUREGROUP_UI)
     tex.set_editor_property('never_stream', True); tex.set_editor_property('srgb', True); E.save_loaded_asset(tex, False)
@@ -106,7 +106,7 @@ def main():
     mpc = unreal.load_asset(mp) if E.does_asset_exist(mp) else T.create_asset('MPC_FurinaHUD', dest, unreal.MaterialParameterCollection, unreal.MaterialParameterCollectionFactoryNew())
     assert mpc, 'mpc'
     ps = []
-    for n, v in (('Ammo', 30.0), ('Reserve', 120.0), ('Reloading', 0.0), ('ReloadP', 0.0)):
+    for n, v in (('Ammo', 20.0), ('Reserve', 600.0), ('Reloading', 0.0), ('ReloadP', 0.0)):
         p = unreal.CollectionScalarParameter(); p.set_editor_property('parameter_name', n); p.set_editor_property('default_value', v); ps.append(p)
     mpc.set_editor_property('scalar_parameters', ps); E.save_loaded_asset(mpc, False)
     p = dest + '/M_FurinaHUD'

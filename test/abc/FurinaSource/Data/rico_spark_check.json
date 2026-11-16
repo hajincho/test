@@ -1,0 +1,26 @@
+{
+ "cdo_life": 0.10000000149011612,
+ "class": "<Object '/Game/Furina/M4/BP_RicoSpark.BP_RicoSpark_C' (0x0000022C7C532300) Class 'BlueprintGeneratedClass'>",
+ "instances": [
+  [
+   "BP_RicoSpark_C_0",
+   0.0,
+   0.0
+  ],
+  [
+   "BP_RicoSpark_C_1",
+   0.0,
+   0.0
+  ],
+  [
+   "BP_RicoSpark_C_2",
+   0.0,
+   0.0
+  ],
+  [
+   "BP_RicoSpark_C_3",
+   0.0,
+   0.0
+  ]
+ ]
+}

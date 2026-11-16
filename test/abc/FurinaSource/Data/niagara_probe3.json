@@ -1,0 +1,51 @@
+{
+ "ControlRigBlueprintLibrary": [
+  "get_available_rig_modules"
+ ],
+ "NiagaraComponent": [
+  "clear_emitter_fixed_bounds",
+  "get_emitter_fixed_bounds",
+  "set_emitter_enable",
+  "set_emitter_fixed_bounds"
+ ],
+ "NiagaraCullProxyComponent": [
+  "clear_emitter_fixed_bounds",
+  "get_emitter_fixed_bounds",
+  "set_emitter_enable",
+  "set_emitter_fixed_bounds"
+ ],
+ "NiagaraEmitter": [
+  "emitter_spawn_script_props",
+  "emitter_update_script_props"
+ ],
+ "NiagaraEmitterProperties": [
+  "emitter_spawn_script_props",
+  "emitter_update_script_props"
+ ],
+ "NiagaraFunctionLibrary": [
+  "get_all_emitters"
+ ],
+ "NiagaraMinimalEmitterInfo": [
+  "emitter_name"
+ ],
+ "NiagaraPythonEmitter": [
+  "get_module",
+  "get_modules",
+  "has_module"
+ ],
+ "NiagaraRendererSourceDataMode": [
+  "EMITTER"
+ ],
+ "NiagaraScript": [
+  "module_usage_bitmask"
+ ],
+ "NiagaraSimCache": [
+  "get_emitter_name",
+  "get_emitter_names",
+  "get_num_emitters"
+ ],
+ "UpgradeNiagaraEmitterContext": [
+  "new_emitter",
+  "old_emitter"
+ ]
+}

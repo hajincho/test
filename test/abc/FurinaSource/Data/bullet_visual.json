@@ -1,0 +1,20 @@
+{
+ "mat_saved": true,
+ "visual_scale": 20.0,
+ "before": {
+  "K2Node_FPB_Kv": "1.38007535e-05",
+  "K2Node_FPB_Flown": "90000.0",
+  "K2Node_FPF_Muzzle": "-0.0,40.515,3.383",
+  "FPN_AimElev": "0.000307816"
+ },
+ "after": {
+  "K2Node_FPB_Kv": "1.38007535e-05",
+  "K2Node_FPB_Flown": "90000.0",
+  "K2Node_FPF_Muzzle": "-0.0,40.515,3.383",
+  "FPN_AimElev": "0.000307816"
+ },
+ "bullet_status": "<BlueprintStatus.BS_UP_TO_DATE: 3>",
+ "bullet_saved": true,
+ "char_status": "<BlueprintStatus.BS_UP_TO_DATE: 3>",
+ "char_saved": true
+}

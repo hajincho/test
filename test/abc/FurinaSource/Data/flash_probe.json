@@ -1,0 +1,134 @@
+{
+ "None": {
+  "class": "BP_M4Flash_C"
+ },
+ "FlashPetalU": {
+  "class": "StaticMeshComponent",
+  "mesh": "Cone",
+  "mat": [
+   "/Game/Furina/M4/M_MuzzleFlash.M_MuzzleFlash"
+  ],
+  "scale": "<Struct 'Vector' (0x0000022A722FBFB0) {x: 0.028000, y: 0.028000, z: 0.100000}>",
+  "loc": "<Struct 'Vector' (0x0000022A722FBF80) {x: 0.000000, y: 0.300000, z: 0.000000}>",
+  "rot": "<Struct 'Rotator' (0x0000022A722FBF98) {pitch: 0.000000, yaw: 180.000000, roll: -58.201087}>",
+  "hidden": false,
+  "visible": true
+ },
+ "FlashPetalR": {
+  "class": "StaticMeshComponent",
+  "mesh": "Cone",
+  "mat": [
+   "/Game/Furina/M4/M_MuzzleFlash.M_MuzzleFlash"
+  ],
+  "scale": "<Struct 'Vector' (0x0000022A722FB5B0) {x: 0.028000, y: 0.028000, z: 0.100000}>",
+  "loc": "<Struct 'Vector' (0x0000022A722FB580) {x: 0.000000, y: 0.300000, z: 0.000000}>",
+  "rot": "<Struct 'Rotator' (0x0000022A722FB598) {pitch: 0.000000, yaw: -148.201087, roll: -90.000000}>",
+  "hidden": false,
+  "visible": true
+ },
+ "FlashPetalL": {
+  "class": "StaticMeshComponent",
+  "mesh": "Cone",
+  "mat": [
+   "/Game/Furina/M4/M_MuzzleFlash.M_MuzzleFlash"
+  ],
+  "scale": "<Struct 'Vector' (0x0000022A722FABB0) {x: 0.028000, y: 0.028000, z: 0.100000}>",
+  "loc": "<Struct 'Vector' (0x0000022A722FAB80) {x: 0.000000, y: 0.300000, z: 0.000000}>",
+  "rot": "<Struct 'Rotator' (0x0000022A722FAB98) {pitch: 0.000000, yaw: 148.201087, roll: -90.000000}>",
+  "hidden": false,
+  "visible": true
+ },
+ "FlashCore": {
+  "class": "StaticMeshComponent",
+  "mesh": "Sphere",
+  "mat": [
+   "/Game/Furina/M4/M_MuzzleFlashCore.M_MuzzleFlashCore"
+  ],
+  "scale": "<Struct 'Vector' (0x0000022A722FA1B0) {x: 0.070000, y: 0.090000, z: 0.070000}>",
+  "loc": "<Struct 'Vector' (0x0000022A722FA180) {x: 0.000000, y: 0.800000, z: 0.000000}>",
+  "rot": "<Struct 'Rotator' (0x0000022A722FA198) {pitch: 0.000000, yaw: 180.000000, roll: -90.000000}>",
+  "hidden": false,
+  "visible": true
+ },
+ "FlashLight": {
+  "class": "PointLightComponent"
+ },
+ "FXMesh": {
+  "class": "StaticMeshComponent",
+  "mesh": "Cone",
+  "mat": [
+   "/Game/Furina/M4/M_MuzzleFlash.M_MuzzleFlash"
+  ],
+  "scale": "<Struct 'Vector' (0x0000022A722F97B0) {x: 0.030000, y: 0.030000, z: 0.100000}>",
+  "loc": "<Struct 'Vector' (0x0000022A722F9780) {x: 0.000000, y: 0.000000, z: 0.000000}>",
+  "rot": "<Struct 'Rotator' (0x0000022A722F9798) {pitch: 0.000000, yaw: 180.000000, roll: -90.000000}>",
+  "hidden": true,
+  "visible": true
+ },
+ "FXRoot": {
+  "class": "SceneComponent"
+ },
+ "FlashStreakB": {
+  "class": "StaticMeshComponent",
+  "mesh": "Plane",
+  "mat": [
+   "/Game/Furina/M4/M_MuzzleStreak.M_MuzzleStreak"
+  ],
+  "scale": "<Struct 'Vector' (0x0000022B421101B0) {x: 0.100000, y: 0.240000, z: 1.000000}>",
+  "loc": "<Struct 'Vector' (0x0000022B42110180) {x: 0.000000, y: 12.000000, z: 0.000000}>",
+  "rot": "<Struct 'Rotator' (0x0000022B42110198) {pitch: 90.000000, yaw: 0.000000, roll: 0.000000}>",
+  "hidden": false,
+  "visible": true
+ },
+ "DefaultSceneRoot": {
+  "class": "SceneComponent"
+ },
+ "FlashStar": {
+  "class": "StaticMeshComponent",
+  "mesh": "Plane",
+  "mat": [
+   "/Game/Furina/M4/M_MuzzleStar.M_MuzzleStar"
+  ],
+  "scale": "<Struct 'Vector' (0x0000022B4211B5B0) {x: 0.170000, y: 0.170000, z: 1.000000}>",
+  "loc": "<Struct 'Vector' (0x0000022B4211B580) {x: 0.000000, y: 1.500000, z: 0.000000}>",
+  "rot": "<Struct 'Rotator' (0x0000022B4211B598) {pitch: 0.000000, yaw: 0.000000, roll: 90.000000}>",
+  "hidden": false,
+  "visible": true
+ },
+ "FlashPetalD": {
+  "class": "StaticMeshComponent",
+  "mesh": "Cone",
+  "mat": [
+   "/Game/Furina/M4/M_MuzzleFlash.M_MuzzleFlash"
+  ],
+  "scale": "<Struct 'Vector' (0x0000022A722FC9B0) {x: 0.028000, y: 0.028000, z: 0.100000}>",
+  "loc": "<Struct 'Vector' (0x0000022A722FC980) {x: 0.000000, y: 0.300000, z: 0.000000}>",
+  "rot": "<Struct 'Rotator' (0x0000022A722FC998) {pitch: 0.000000, yaw: 180.000000, roll: -121.798913}>",
+  "hidden": false,
+  "visible": true
+ },
+ "FlashStreakA": {
+  "class": "StaticMeshComponent",
+  "mesh": "Plane",
+  "mat": [
+   "/Game/Furina/M4/M_MuzzleStreak.M_MuzzleStreak"
+  ],
+  "scale": "<Struct 'Vector' (0x0000022B421183B0) {x: 0.100000, y: 0.240000, z: 1.000000}>",
+  "loc": "<Struct 'Vector' (0x0000022B42118380) {x: 0.000000, y: 12.000000, z: 0.000000}>",
+  "rot": "<Struct 'Rotator' (0x0000022B42118398) {pitch: 0.000000, yaw: 0.000000, roll: 0.000000}>",
+  "hidden": false,
+  "visible": true
+ },
+ "FlashRing": {
+  "class": "StaticMeshComponent",
+  "mesh": "Sphere",
+  "mat": [
+   "/Game/Furina/M4/M_MuzzleFlash.M_MuzzleFlash"
+  ],
+  "scale": "<Struct 'Vector' (0x0000022A722FD3B0) {x: 0.170000, y: 0.012000, z: 0.170000}>",
+  "loc": "<Struct 'Vector' (0x0000022A722FD380) {x: 0.000000, y: 0.500000, z: 0.000000}>",
+  "rot": "<Struct 'Rotator' (0x0000022A722FD398) {pitch: 0.000000, yaw: 180.000000, roll: -90.000000}>",
+  "hidden": false,
+  "visible": true
+ }
+}

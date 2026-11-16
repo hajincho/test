@@ -1,0 +1,13 @@
+{
+ "flash_nodes": [
+  "M4_FlashFinish",
+  "M4_FlashPoint",
+  "M4_FlashRotation",
+  "M4_FlashSpawn",
+  "M4_FlashTransform"
+ ],
+ "added": true,
+ "scale": "0.07",
+ "status": "<BlueprintStatus.BS_UP_TO_DATE: 3>",
+ "saved": true
+}

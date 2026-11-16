@@ -1,0 +1,50 @@
+{
+ "shots": 18,
+ "sparks": {
+  "BP_RicoSpark_C_0": {
+   "first": 8.433,
+   "last_seen": 8.533,
+   "seen_for_s": 0.1
+  },
+  "BP_RicoSpark_C_1": {
+   "first": 8.883,
+   "last_seen": 8.983,
+   "seen_for_s": 0.1
+  },
+  "BP_RicoSpark_C_2": {
+   "first": 9.35,
+   "last_seen": 9.45,
+   "seen_for_s": 0.1
+  },
+  "BP_RicoSpark_C_3": {
+   "first": 10.267,
+   "last_seen": 10.367,
+   "seen_for_s": 0.1
+  },
+  "BP_RicoSpark_C_4": {
+   "first": 10.733,
+   "last_seen": 10.833,
+   "seen_for_s": 0.1
+  },
+  "BP_RicoSpark_C_5": {
+   "first": 11.65,
+   "last_seen": 11.75,
+   "seen_for_s": 0.1
+  },
+  "BP_RicoSpark_C_6": {
+   "first": 12.117,
+   "last_seen": 12.217,
+   "seen_for_s": 0.1
+  },
+  "BP_RicoSpark_C_7": {
+   "first": 13.033,
+   "last_seen": 13.133,
+   "seen_for_s": 0.1
+  },
+  "BP_RicoSpark_C_8": {
+   "first": 14.417,
+   "last_seen": 14.517,
+   "seen_for_s": 0.1
+  }
+ }
+}
