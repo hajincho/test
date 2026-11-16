@@ -1,0 +1,9 @@
+{
+ "free": [
+  "ThirdPersonCharacter_BP_C_0"
+ ],
+ "after": "<Object '/ShooterMaps/Maps/UEDPIE_0_L_FiringRange_WP.L_FiringRange_WP:PersistentLevel.ThirdPersonCharacter_BP_C_0' (0x000001D2C110D200) Class 'ThirdPersonCharacter_BP_C'>",
+ "controller_of_free": "<Object '/ShooterMaps/Maps/UEDPIE_0_L_FiringRange_WP.L_FiringRange_WP:PersistentLevel.LyraPlayerController_0' (0x000001D2CA7CC800) Class 'LyraPlayerController'>",
+ "auto_possess_player": "<AutoReceiveInput.PLAYER0: 1>",
+ "auto_possess_ai": "<AutoPossessAI.PLACED_IN_WORLD: 1>"
+}

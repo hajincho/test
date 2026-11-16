@@ -537,3 +537,62 @@ Control Rig이 들어 올리는 회전은 컴포넌트 +X축 기준 음수 각�
   - 검증(`ue_bullet_hit_test.py`): ASC를 붙인 큐브 표적(임시 BP)을 푸리나 앞 6 m에 두고 임시 무한 지속 GE를 이 변수에 지정한 채 `FurinaRifleShot` 3발을 쐈더니 표적 ASC에 이펙트가 3개 적용됐습니다(`Data/bullet_hit_test.json`). 검증 뒤 임시 GE/표적/변수 기본값은 `ue_bullet_hit_test_cleanup.py`로 모두 제거했습니다. 본 프로젝트에는 Lyra의 `LyraHealthSet`이 없어서 실제 체력 감소는 확인하지 못했습니다.
   - 한계: 총알은 `BlockAllDynamic` 구체라 Lyra 캐릭터의 캡슐/메시 충돌 채널(`Lyra_TraceChannel_Weapon`, 팀/부위별 배율)은 쓰지 않습니다. 부위(헤드샷) 배율과 팀 판정은 아직 없습니다. 피해량과 이 값들을 받으면 추가합니다.
 - **GitHub:** 아직 커밋/푸시하지 않았습니다(동굴 맵 삭제 687개 포함).
+
+## 2026-11-17 푸리나를 Lyra Starter Game 프로젝트로 이전 (이 저장소의 기준 프로젝트)
+
+- **기준 프로젝트가 바뀌었습니다.** 이제 작업과 git은 `Downloads/test/test/abc`(= Lyra Starter Game UE 5.8, C++ `LyraGame` 포함, 프로젝트 파일 `LyraStarterGame.uproject`)에서 합니다. 이전 BP 전용 프로젝트는 `Downloads/abc_before_lyra`에 백업으로 남겼고 더 이상 갱신하지 않습니다(옛 기록은 위 섹션들, git 히스토리에도 있음). 이 README의 위쪽 내용 중 `/Game/...` 경로와 `Scripts/Unreal/*.py`는 그대로 Lyra 프로젝트에서 쓸 수 있습니다(스크립트 안의 출력 경로만 abc를 가리키는 것이 많아 새로 만든 `lyra_*.py`는 Lyra 쪽 `FurinaSource/Data`를 씁니다).
+- **복사한 콘텐츠(`Scripts/Tools/abc_dep_closure.py`로 의존 폐포 계산, 661개 1.2 GB):** `Content/Furina`, `3DPlatformerGameBundle`(푸리나 폰 `Demo/ThirdPersonAssets/Blueprints/ThirdPersonCharacter_BP` 와 컴포넌트·애니메이션), `TFPMovement`, `Free_Crawl_Animation`, `NiagaraExamples` 일부. Lyra의 폴더 이름과 겹치는 것이 없어 같은 `/Game/...` 경로로 복사했습니다. Saori는 제외.
+- **플레이어를 푸리나로 (`lyra_furina_setup.py`, `lyra_furina_experience.py`, `lyra_fix_pawn.py`, `lyra_pawn_autopossess.py`; Lyra 에디터 `-ExecutePythonScript -nullrhi` 로 실행):**
+  - `/Game/Furina/Lyra/HeroData_Furina`: Lyra의 `HeroData_ShooterGame`을 복제하고 `PawnClass`만 푸리나 폰(`.../Blueprints/ThirdPersonCharacter_BP`)으로 바꿨습니다. (처음에 `JumpPadCharacterBP/` 변종을 잘못 지정했다가 고쳤습니다. 푸리나 폰은 폴더 바로 아래의 것입니다.)
+  - `/Game/System/Experiences/B_Furina_Experience`: `B_ShooterGame_Elimination`을 복제하고 `DefaultPawnData`를 위 PawnData로 바꿨습니다(Lyra가 스캔하는 `/Game/System/Experiences` 에 있어야 `FPrimaryAssetId`로 찾습니다). 사격장 맵 월드 설정의 `DefaultGameplayExperience`는 Python에서 "인스턴스에서 편집 불가"라 건드리지 않고, `Config/DefaultEditorPerProjectUserSettings.ini` 의 `[/Script/LyraGame.LyraDeveloperSettings] ExperienceOverride=LyraExperienceDefinition:B_Furina_Experience` 로 **에디터 PIE에서만** 푸리나 Experience를 쓰게 했습니다. 패키지 빌드용으로는 맵의 월드 설정에서 직접 지정해야 합니다.
+  - 푸리나 폰 BP의 기본값 `AutoPossessPlayer`를 Player0 → Disabled로 바꿨습니다. 이전 BP 전용 프로젝트는 레벨에 놓인 폰(인스턴스 값 Player0)이 쓰이지만 Lyra에서는 게임 모드가 폰을 스폰하는데, Player0 상태에서는 폰이 컨트롤러 없이 남아 카메라가 벽 속에서 시작했습니다(`lyra_pie_pawns.py`로 폰/컨트롤러 확인). 바꾼 뒤 플레이어가 자동으로 푸리나 폰을 조종합니다.
+  - 봇: Elimination의 봇도 같은 PawnData라 푸리나 폰으로 스폰되고, Lyra 봇 AI가 ASC 없는 폰에 `InputTag.Weapon.Reload` 이벤트를 보내 로그에 오류가 쌓입니다. PIE 봇 수를 0으로 두었습니다(`bOverrideBotCount=True`, `OverrideNumPlayerBotsToSpawn=0`; 에디터를 다시 열어야 적용).
+  - 총알 BP의 `FurinaDamageEffect`는 Lyra의 `/Game/GameplayEffects/Damage/GE_Damage_Basic_SetByCaller`로 지정했고 `FurinaDamage`는 0입니다.
+- **PIE 확인(Lyra 에디터, `L_FiringRange_WP`):** 푸리나가 위층에서 시작해 이동, HUD 20/600, 1·3인칭, 사격과 재장전이 동작합니다(`lyra_pie_probe.py`계열, `lyra_reload_probe.py`). Lyra의 팀 점수판, 텔레포터, 점프대, 무기 스포너, 조준 보조 표적 같은 Lyra 요소가 그대로 있습니다. 첫 실행은 셰이더 컴파일로 느려서 게임 시간이 실시간보다 느리게 흐릅니다(스크립트는 게임 시간으로 잽니다).
+  - **미확인:** 푸리나 폰에는 Lyra의 ASC/체력(`LyraPawnExtensionComponent`)이 없어서, 푸리나 총알이 Lyra 영웅 캐릭터(`LyraHealthSet`)의 체력을 실제로 깎는지는 확인하지 못했습니다(현재 맵에는 `LyraHealthComponent`가 달린 액터가 없습니다). BP 전용 프로젝트에서 ASC를 붙인 임시 표적으로 이펙트 적용 3/3은 확인했습니다. 푸리나 본인의 체력/팀/피격도 아직 없습니다.
+
+## 2026-11-17 재장전: M4 애니메이션 팩의 Reload 반영 (3초 유지, 탄창 교체 사이에 허리춤 구간 추가)
+
+- **원본:** `Downloads/m4-fps-weapon-animations-pack-v1/source/M4.fbx`(총 모델은 쓰지 않음). 55개 본(양팔 손가락 포함) + 총/탄창1·2/볼트 본, 액션 Reload(프레임 1~110), Reload_Empty(111~225), Fire, Draw, Holster, Idle(30 fps). `Scripts/Blender/inspect_m4_pack.py` → `Data/m4_pack_inspect.json`.
+- **학습(`Scripts/Blender/m4_reload_extract.py` → `Data/m4_reload_extract.json`):** Reload의 왼손/오른손/탄창1·2 본을 총(Main_j) 기준 좌표(푸리나 규칙: X=왼쪽, Y=앞, Z=위, 총 길이 80 cm 기준 배율)로 프레임별 추출했습니다. 오른손은 내내 고정(그립), 총은 거의 기울지 않고, 왼손만 움직입니다.
+  - 팩의 Reload는 한 탄창을 뽑았다가 곧바로 같은 자리에 다시 끼우는 약 2.5초 동작입니다: f7~13 왼손이 탄창으로 이동, f13~26 잡고 대기, f27~34 아래로 뽑음(탄창이 약 8 cm 내려옴), f34~43 손이 뒤로, f43~64 탄창을 다시 위로 끼움, f64~82 핸드가드로 복귀.
+- **푸리나용 재구성(`Scripts/Tools/build_reload_curves.py` → `Data/reload_curves_new.json`):** 총 3.0초. 새 탄창을 허리춤에서 꺼내는 구간(0.70초)을 뽑기와 끼우기 사이에 넣었습니다. 푸리나 팔이 짧아 이동량은 기존과 같이 0.9배입니다.
+
+  | 구간 | 시간(초) | 내용 | 원본 프레임 |
+  |---|---|---|---|
+  | 대기 | 0.00–0.05 | | |
+  | 잡기까지 | 0.05–0.68 | 왼손이 탄창으로 | f7→26 |
+  | 뽑기 | 0.68–1.01 | 탄창을 잡고(0.71 `MagState`=1) 아래로 뽑아 놓음(1.01 → 2, 낙하) | f26→36 |
+  | 허리춤 | 1.01–1.71 | 허리춤으로 0.25 이동 → 0.20 새 탄창 꺼냄(1.36 → 1, 손에 쥠) → 0.25 올림 | 새 구간 |
+  | 끼우기 | 1.71–2.40 | 새 탄창을 총으로 가져가 끼움(2.34 → 0, 장착) | f43→64 |
+  | 복귀 | 2.40–3.00 | 왼손이 핸드가드로 | f64→82 |
+
+  허리춤 점은 기존 템플릿 재장전의 새 탄창 자세(총 기준 델타 (16.4, −36.9, −32.8) cm)입니다. 팩 구간 속도는 0.99배입니다(합계 2.25초에 맞춤).
+- **적용(`lyra_reload_apply.py`):** `AS_Furina_FP_Reload`/`AM_Furina_FP_Reload`(1·3인칭 공용)의 `ReloadLX/LY/LZ`와 `MagState`를 교체했습니다. AS의 기존 곡선 이름은 소문자(`reloadlx` 등)라 처음에는 옛 키가 남아 95개가 아니라 156개가 되었고(대소문자 구분 때문), 대소문자 무시로 지우고 다시 넣어 두 애셋 모두 키 95/95·MagState 10/10, 오차 0임을 확인했습니다(`lyra_reload_verify.py`). `FurinaMag` 처리(`FurinaMagUpdate`)와 재장전 3초 타이머는 그대로입니다.
+- **Lyra PIE 측정(`lyra_reload_probe.py`, 게임 시간, 6발 사격 후 재장전):** 탄약이 14에서 20으로 차는 시점이 3인칭 3.10초, 1인칭 3.02초(샘플 간격 약 0.4초 안). `MagState`가 0 → 2(1.07초) → 1(1.49초) → 0(2.7초 이전)로 바뀌고, 왼손목의 총 기준 변위가 설계 곡선과 맞습니다(잡기 (6.1, −15.5, −7.0), 허리춤 (16.3, −36.8, −31.9)).
+  - **미확인:** 1인칭 화면에서는 왼손이 프레임 아래로 나가서 손 모양을 눈으로 확인하지 못했고, 3인칭 스크린샷은 캐릭터 뒷모습이라 손이 가려집니다. 손가락 모양(팩의 손가락 애니메이션)은 푸리나에 손가락 본이 없어 반영하지 않았습니다. 총이 재장전 중 기울지는 않습니다(팩도 거의 안 기웁니다).
+
+- **Lyra에서 키 입력이 전혀 안 먹던 문제 (`lyra_input_dump.py`, `lyra_fix_input.py`):** 푸리나 폰은 `BeginPlay`에서 `GetController → Cast To PlayerController → EnhancedInputLocalPlayerSubsystem → AddMappingContext`(기본 IMC와 `IMC_FurinaStance`, 우선순위 100)로 입력 매핑을 추가합니다. 이전 BP 전용 프로젝트는 레벨에 놓인 폰이라 `BeginPlay` 전에 조종이 연결됐지만, Lyra는 폰을 스폰해 `BeginPlay`가 돈 뒤에 possess 하므로 그 시점의 컨트롤러가 비어 캐스트가 실패하고 이동·시점·사격·재장전·조준·앉기 키 매핑이 전부 빠졌습니다. 캐스트의 입력을 `GetPlayerController(0)`(노드 `FIN_GetPC0`)로 바꿔 고쳤습니다. Lyra PIE에서 W 누름 2초 후 푸리나가 앞으로 달려가고 V(시점 전환)와 클릭 사격이 반응하는 것을 확인했습니다.
+  - 주의: 다른 에디터가 같은 프로젝트를 열어 둔 상태에서 `-ExecutePythonScript` 헤드리스 에디터로 저장하면 저장이 실패합니다(`save_loaded_asset`이 False). 에디터가 열려 있으면 그 에디터의 Cmd 상자에서 `py <파일> keep`(스크립트가 `keep`이면 종료하지 않음)으로 실행하세요.
+  - 미확인: 총알 BP(`BP_FurinaBullet`)가 맞은 뒤 `Hit_OtherComp`/`Bullet` 접근 None 런타임 오류가 PIE 로그에 남습니다(이전부터 있던 것으로 이번에 조사하지 않았습니다).
+
+## 2026-11-17 Lyra 1인칭/견착 사격 수정 모음 (마우스 반전, 가득 찬 탄창 재장전, 총알 충돌, 최적화)
+
+- **마우스 상하 반전 + 감도 (`lyra_look_dump.py`, `lyra_fix_look.py`):** 푸리나 폰의 `Get Look Rate`는 이전 프로젝트의 레거시 입력 배율(`bEnableLegacyInputScales`, 요 +2.5 / 피치 −2.5)을 전제로 만들어져 있었습니다. Lyra는 `DefaultGame.ini`에서 `InputYawScale=1.0`, `InputPitchScale=1.0`이라 상하가 뒤집히고 감도가 2.5분의 1이 됩니다. 프로젝트 설정(Lyra 영웅들이 의존)은 건드리지 않고 함수의 상수를 바꿨습니다: 상하 선택(`K2Node_CallFunction_10`) A(반전 켬) −1 → +2.5, B(반전 끔) +1 → −2.5, 좌우(`K2Node_CallFunction_0` B) 1.0 → 2.5. Tab(InvertLookUp?)은 그대로 동작합니다.
+- **가득 찬 탄창에서도 재장전되던 버그 (`lyra_fix_reload_full.py`):** 재장전 허용 조건 `M4_NotFull`(잔탄 < N)의 N이 예전 30발 탄창 값(30)으로 남아 있었습니다(탄창을 20발로 바꿀 때 `TFP_MagRoom`의 20만 바꿨음). 20/20이면 `20 < 30`이 참이라 재장전이 시작됐습니다. N을 20으로 고쳤습니다.
+- **총알이 총구/코앞에 박힌다는 신고 (`lyra_fp_bullet_probe*.py`, `lyra_shoulder_probe.py`, `lyra_slowmo_probe.py`, `lyra_fx_collision_dump.py`, `lyra_bullet_resp_dump.py`, `lyra_shot_nodes_dump.py`):**
+  - **재현하지 못했습니다.** 1인칭 연사 12발과 TP / 견착 / 1인칭 / 1인칭 정조준 각 3발(글로벌 타임 딜레이션 0.01 슬로모션으로 매 프레임 추적)에서 총알이 총구 앞(150 cm 이내)에서 멈춘 경우가 없었습니다. 정면에 가까운 장애물(예: 140 cm 앞의 기둥)이 있으면 당연히 그 앞에서 멈춥니다. 12발 중 4발이 스폰 프레임에 사라진 것은 낮은 프레임에서 한 틱(최대 약 30 m)에 벽에 닿아서였습니다.
+  - 조사로 확인한 것: 조준점은 카메라에서 쏜 Visibility 라인 트레이스의 첫 맞는 점이고(자신 무시, 없으면 100 m), 총알은 `Muzzle(소총 로컬 (0, 40.5, 3.4)) → 조준점`으로 날아갑니다. 총알 `Bullet` 구는 Visibility와 Camera 채널을 Block하고 있었습니다(PhysicsBody만 무시). 탄피/버린 탄창은 PhysicsBody 물리 바디, 총구 화염은 충돌 없음.
+  - **가능한 원인을 막는 방향으로 고쳤습니다**(`lyra_fix_shots.py`): (1) 총알의 Visibility/Camera 응답을 Ignore로 바꿔 날아가는 총알이 다음 조준선이나 카메라 붐에 걸리지 않게 했습니다. (2) 총구 가드: 발사 때 카메라 → 총구 선분(Visibility, 자신 무시)이 막혀 있으면(총구가 벽 반대편에 걸친 경우) 총알을 카메라 위치에서 생성합니다(노드 `FSG_Trace`, `FSG_Select`). 수정 후 같은 슬로모션 시험에서 견착/1인칭/정조준 모두 총알이 약 8000 cm를 날아갔습니다(TP의 140 cm는 앞 기둥에 맞은 것).
+  - 아직 확실하지 않습니다. 재현 조건(어느 벽/물체 앞인지, 이동 중인지, 연사 몇 번째인지)을 알려 주면 다시 봅니다. PIE 로그의 `Hit_OtherComp ... Bullet 유효하지 않습니다` 경고는 같은 프레임에 이미 파괴된 총알에 Hit 이벤트가 한 번 더 들어와 나는 것이며(14회), 무해합니다.
+- **최적화(적용한 것만):**
+  - 총알 BP의 적중 경로에서 디버그 `PrintString` 2개(`FRC_PrintHit`, `FRC_PrintTrue`)를 실행 경로에서 뺐습니다. 맞을 때마다 문자열 약 20개를 이어 붙여 화면에 출력하던 디버그 출력입니다(노드는 남아 있으나 연결되지 않습니다). 조준점/도탄 로직은 그대로입니다.
+  - `FurinaMagUpdate` 타이머를 0.016초에서 0.033초로 줄였습니다(`MagState` 전환 폭 0.06초라 충분).
+  - **측정하지 않았습니다.** 프레임 수 비교는 하지 않았고, 이 개발 PC의 Lyra PIE는 셰이더 컴파일 등으로 원래 15~30 fps라서 이 두 가지의 효과는 작을 것입니다. 큰 비용은 Lyra의 렌더링 설정(Lumen/가상 섀도 맵 등)입니다.
+- **1인칭 재장전 모션이 반영되지 않았다는 신고:** 확인하지 못했습니다. 1인칭 화면에서는 재장전 동안 왼손이 카메라 아래로 나가 소총만 보이므로(총 기준으로 −37 cm 뒤, −33 cm 아래) 변화가 보이지 않을 수 있습니다. 곡선과 `MagState` 값은 1인칭에서도 측정과 일치했습니다(위 재장전 섹션).
+
+## 2026-11-17 연사 총알이 총구에서 사라지는 버그 수정 + 견착 카메라 낮춤
+
+- **원인 확인 (`lyra_samefame_probe.py`, 글로벌 타임 딜레이션 0.01 슬로모션에서 총알을 매 틱 추적):** 발사 타이머(`FurinaRifleShot`)는 `bMaxOncePerFrame=false`라서 프레임이 느리면(이 PC의 Lyra PIE는 15~30 fps) 한 프레임 안에서 여러 번 실행됩니다. 그러면 같은 총구 위치에 총알이 동시에 여러 발 생깁니다. 총알의 오브젝트 타입이 `WorldDynamic`이고 `WorldDynamic`을 Block 하므로 총알끼리 서로 막아서 첫 틱에 사라졌습니다. 프레임당 1발 4그룹은 4발 모두 약 2800 cm를 날아갔고, 프레임당 3발 그룹은 3발 중 0발·1발만 관측(나머지는 생성 즉시 소멸)되거나 약 1100 cm에서 멈췄습니다. 20발 연사에서 몇 발이 총구에서 막히던 증상과 맞습니다.
+- **수정(`lyra_bullet_objtype.py`):** `BP_FurinaBullet`의 `Bullet` 구 오브젝트 타입을 `WorldDynamic` → `PhysicsBody`로 바꿨습니다. 총알은 `PhysicsBody` 응답이 이미 Ignore라서 총알끼리(그리고 탄피/버린 탄창과) 충돌하지 않고 벽/액터/폰은 그대로 맞춥니다(응답 Block 유지). 수정 뒤 같은 시험에서 프레임당 3발 그룹 4개 모두 3발이 약 2800 cm를 날아갔습니다(프레임당 1발과 같음). 위 `lyra_fix_shots.py`의 (Visibility/Camera 무시, 총구 가드)와 함께 적용됩니다.
+- **견착 카메라 높이(`lyra_shoulder_cam_lower.py`):** 노드 `K2Node_FPT_TgtZ`(`CameraBoom.TargetOffset.Z` 선택, 견착 3인칭일 때 값) 30 → 20 cm로 10 cm 낮췄습니다. 더 낮추거나 되돌리려면 이 노드 A 값을 바꾸면 됩니다.

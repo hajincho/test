@@ -1,0 +1,554 @@
+{
+ "shots": [
+  {
+   "mode": "TP",
+   "bullet": "BP_FurinaBullet_C_0",
+   "spawn": [
+    -1216.6,
+    -1078.3,
+    777.4
+   ],
+   "fwd": [
+    0.012,
+    -0.999,
+    0.034
+   ],
+   "cam": [
+    -1180.3,
+    -715.1,
+    857.6
+   ],
+   "cam_fwd": [
+    -0.0,
+    -1.0,
+    0.0
+   ],
+   "pawn": [
+    -1180.3,
+    -1045.1,
+    802.6
+   ],
+   "ctrl_yaw": -90.0,
+   "pawn_yaw": -90.0,
+   "spawn_to_cam": 373.7,
+   "cam_ray": null,
+   "bullet_path": null
+  },
+  {
+   "mode": "TP",
+   "bullet": "BP_FurinaBullet_C_1",
+   "spawn": [
+    -1172.7,
+    -1121.5,
+    826.7
+   ],
+   "fwd": [
+    -0.028,
+    -0.999,
+    0.018
+   ],
+   "cam": [
+    -1180.4,
+    -715.1,
+    856.6
+   ],
+   "cam_fwd": [
+    0.0,
+    -1.0,
+    0.003
+   ],
+   "pawn": [
+    -1180.3,
+    -1045.1,
+    802.6
+   ],
+   "ctrl_yaw": -90.0,
+   "pawn_yaw": -90.0,
+   "spawn_to_cam": 407.6,
+   "cam_ray": null,
+   "bullet_path": null
+  },
+  {
+   "mode": "TP",
+   "bullet": "BP_FurinaBullet_C_2",
+   "spawn": [
+    -1172.8,
+    -1121.8,
+    827.0
+   ],
+   "fwd": [
+    -0.027,
+    -1.0,
+    0.01
+   ],
+   "cam": [
+    -1180.2,
+    -715.1,
+    855.5
+   ],
+   "cam_fwd": [
+    -0.0,
+    -1.0,
+    0.006
+   ],
+   "pawn": [
+    -1180.3,
+    -1045.1,
+    802.6
+   ],
+   "ctrl_yaw": -90.1,
+   "pawn_yaw": -90.0,
+   "spawn_to_cam": 407.8,
+   "cam_ray": null,
+   "bullet_path": null
+  },
+  {
+   "mode": "TP",
+   "bullet": "BP_FurinaBullet_C_3",
+   "spawn": [
+    -1172.8,
+    -1121.2,
+    827.8
+   ],
+   "fwd": [
+    -0.015,
+    -1.0,
+    0.024
+   ],
+   "cam": [
+    -1179.9,
+    -715.1,
+    854.5
+   ],
+   "cam_fwd": [
+    -0.001,
+    -1.0,
+    0.009
+   ],
+   "pawn": [
+    -1180.3,
+    -1045.1,
+    802.6
+   ],
+   "ctrl_yaw": -90.1,
+   "pawn_yaw": -90.1,
+   "spawn_to_cam": 407.0,
+   "cam_ray": null,
+   "bullet_path": null
+  },
+  {
+   "mode": "SHOULDER",
+   "bullet": "BP_FurinaBullet_C_4",
+   "spawn": [
+    -1172.4,
+    -1121.6,
+    828.8
+   ],
+   "fwd": [
+    0.005,
+    -1.0,
+    0.031
+   ],
+   "cam": [
+    -1120.0,
+    -879.9,
+    885.6
+   ],
+   "cam_fwd": [
+    -0.002,
+    -1.0,
+    0.012
+   ],
+   "pawn": [
+    -1180.3,
+    -1045.1,
+    802.6
+   ],
+   "ctrl_yaw": -90.1,
+   "pawn_yaw": -90.1,
+   "spawn_to_cam": 253.8,
+   "cam_ray": null,
+   "bullet_path": null
+  },
+  {
+   "mode": "SHOULDER",
+   "bullet": "BP_FurinaBullet_C_5",
+   "spawn": [
+    -1172.4,
+    -1122.0,
+    829.1
+   ],
+   "fwd": [
+    0.006,
+    -1.0,
+    0.026
+   ],
+   "cam": [
+    -1120.0,
+    -879.8,
+    885.2
+   ],
+   "cam_fwd": [
+    -0.002,
+    -1.0,
+    0.015
+   ],
+   "pawn": [
+    -1180.3,
+    -1045.1,
+    802.6
+   ],
+   "ctrl_yaw": -90.2,
+   "pawn_yaw": -90.1,
+   "spawn_to_cam": 254.0,
+   "cam_ray": null,
+   "bullet_path": null
+  },
+  {
+   "mode": "SHOULDER",
+   "bullet": "BP_FurinaBullet_C_6",
+   "spawn": [
+    -1172.5,
+    -1121.4,
+    829.7
+   ],
+   "fwd": [
+    0.013,
+    -0.999,
+    0.033
+   ],
+   "cam": [
+    -1119.8,
+    -879.8,
+    884.7
+   ],
+   "cam_fwd": [
+    -0.003,
+    -1.0,
+    0.017
+   ],
+   "pawn": [
+    -1180.3,
+    -1045.1,
+    802.6
+   ],
+   "ctrl_yaw": -90.2,
+   "pawn_yaw": -90.2,
+   "spawn_to_cam": 253.3,
+   "cam_ray": null,
+   "bullet_path": null
+  },
+  {
+   "mode": "SHOULDER",
+   "bullet": "BP_FurinaBullet_C_7",
+   "spawn": [
+    -1172.5,
+    -1120.1,
+    830.6
+   ],
+   "fwd": [
+    0.002,
+    -1.0,
+    0.028
+   ],
+   "cam": [
+    -1119.7,
+    -879.8,
+    884.3
+   ],
+   "cam_fwd": [
+    -0.004,
+    -1.0,
+    0.02
+   ],
+   "pawn": [
+    -1180.3,
+    -1045.1,
+    802.6
+   ],
+   "ctrl_yaw": -90.3,
+   "pawn_yaw": -90.2,
+   "spawn_to_cam": 251.8,
+   "cam_ray": null,
+   "bullet_path": null
+  },
+  {
+   "mode": "FP",
+   "bullet": "BP_FurinaBullet_C_8",
+   "spawn": [
+    -1173.9,
+    -1115.7,
+    842.4
+   ],
+   "fwd": [
+    -0.01,
+    -0.999,
+    0.052
+   ],
+   "cam": [
+    -1180.4,
+    -1065.1,
+    847.9
+   ],
+   "cam_fwd": [
+    -0.004,
+    -1.0,
+    0.022
+   ],
+   "pawn": [
+    -1180.3,
+    -1045.1,
+    802.6
+   ],
+   "ctrl_yaw": -90.0,
+   "pawn_yaw": -90.3,
+   "spawn_to_cam": 51.4,
+   "cam_ray": null,
+   "bullet_path": null
+  },
+  {
+   "mode": "FP",
+   "bullet": "BP_FurinaBullet_C_9",
+   "spawn": [
+    -1173.6,
+    -1115.1,
+    843.4
+   ],
+   "fwd": [
+    0.02,
+    -0.999,
+    0.029
+   ],
+   "cam": [
+    -1180.3,
+    -1064.4,
+    848.4
+   ],
+   "cam_fwd": [
+    -0.0,
+    -1.0,
+    0.031
+   ],
+   "pawn": [
+    -1180.3,
+    -1045.1,
+    802.6
+   ],
+   "ctrl_yaw": -89.8,
+   "pawn_yaw": -90.0,
+   "spawn_to_cam": 51.4,
+   "cam_ray": null,
+   "bullet_path": null
+  },
+  {
+   "mode": "FP",
+   "bullet": "BP_FurinaBullet_C_10",
+   "spawn": [
+    -1173.4,
+    -1113.8,
+    844.5
+   ],
+   "fwd": [
+    0.025,
+    -0.999,
+    0.033
+   ],
+   "cam": [
+    -1180.2,
+    -1063.1,
+    849.1
+   ],
+   "cam_fwd": [
+    0.003,
+    -0.999,
+    0.039
+   ],
+   "pawn": [
+    -1180.3,
+    -1045.1,
+    802.6
+   ],
+   "ctrl_yaw": -90.0,
+   "pawn_yaw": -89.8,
+   "spawn_to_cam": 51.4,
+   "cam_ray": null,
+   "bullet_path": null
+  },
+  {
+   "mode": "FP",
+   "bullet": "BP_FurinaBullet_C_11",
+   "spawn": [
+    -1173.6,
+    -1112.8,
+    845.3
+   ],
+   "fwd": [
+    0.0,
+    -1.0,
+    0.03
+   ],
+   "cam": [
+    -1180.3,
+    -1062.0,
+    849.5
+   ],
+   "cam_fwd": [
+    0.0,
+    -0.999,
+    0.048
+   ],
+   "pawn": [
+    -1180.3,
+    -1045.1,
+    802.6
+   ],
+   "ctrl_yaw": -90.0,
+   "pawn_yaw": -90.0,
+   "spawn_to_cam": 51.4,
+   "cam_ray": null,
+   "bullet_path": null
+  },
+  {
+   "mode": "FP_ADS",
+   "bullet": "BP_FurinaBullet_C_12",
+   "spawn": [
+    -1180.3,
+    -1125.1,
+    845.6
+   ],
+   "fwd": [
+    -0.001,
+    -0.998,
+    0.057
+   ],
+   "cam": [
+    -1180.3,
+    -1064.3,
+    848.6
+   ],
+   "cam_fwd": [
+    0.001,
+    -0.998,
+    0.056
+   ],
+   "pawn": [
+    -1180.3,
+    -1045.1,
+    802.6
+   ],
+   "ctrl_yaw": -90.2,
+   "pawn_yaw": -90.0,
+   "spawn_to_cam": 60.8,
+   "cam_ray": null,
+   "bullet_path": null
+  },
+  {
+   "mode": "FP_ADS",
+   "bullet": "BP_FurinaBullet_C_13",
+   "spawn": [
+    -1180.6,
+    -1123.1,
+    847.3
+   ],
+   "fwd": [
+    -0.005,
+    -0.997,
+    0.071
+   ],
+   "cam": [
+    -1180.4,
+    -1062.3,
+    849.5
+   ],
+   "cam_fwd": [
+    -0.003,
+    -0.998,
+    0.069
+   ],
+   "pawn": [
+    -1180.3,
+    -1045.1,
+    802.6
+   ],
+   "ctrl_yaw": -90.0,
+   "pawn_yaw": -90.2,
+   "spawn_to_cam": 60.8,
+   "cam_ray": null,
+   "bullet_path": null
+  },
+  {
+   "mode": "FP_ADS",
+   "bullet": "BP_FurinaBullet_C_14",
+   "spawn": [
+    -1180.4,
+    -1122.4,
+    848.2
+   ],
+   "fwd": [
+    -0.002,
+    -0.997,
+    0.083
+   ],
+   "cam": [
+    -1180.3,
+    -1061.6,
+    849.6
+   ],
+   "cam_fwd": [
+    -0.001,
+    -0.997,
+    0.082
+   ],
+   "pawn": [
+    -1180.3,
+    -1045.1,
+    802.6
+   ],
+   "ctrl_yaw": -90.2,
+   "pawn_yaw": -90.0,
+   "spawn_to_cam": 60.8,
+   "cam_ray": null,
+   "bullet_path": null
+  },
+  {
+   "mode": "FP_ADS",
+   "bullet": "BP_FurinaBullet_C_15",
+   "spawn": [
+    -1180.6,
+    -1123.6,
+    848.2
+   ],
+   "fwd": [
+    -0.005,
+    -0.996,
+    0.094
+   ],
+   "cam": [
+    -1180.4,
+    -1062.8,
+    848.9
+   ],
+   "cam_fwd": [
+    -0.003,
+    -0.996,
+    0.093
+   ],
+   "pawn": [
+    -1180.3,
+    -1045.1,
+    802.6
+   ],
+   "ctrl_yaw": -89.9,
+   "pawn_yaw": -90.2,
+   "spawn_to_cam": 60.8,
+   "cam_ray": null,
+   "bullet_path": null
+  }
+ ],
+ "heartbeat": [
+  252,
+  2,
+  3,
+  23.1
+ ]
+}

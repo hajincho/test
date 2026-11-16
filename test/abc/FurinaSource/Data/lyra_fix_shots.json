@@ -1,0 +1,34 @@
+{
+ "log": [
+  "pawn: muzzle guard linked"
+ ],
+ "before": {
+  "ECC_VISIBILITY": "ECR_IGNORE: 0>",
+  "ECC_CAMERA": "ECR_IGNORE: 0>"
+ },
+ "after": {
+  "ECC_VISIBILITY": "ECR_IGNORE: 0>",
+  "ECC_CAMERA": "ECR_IGNORE: 0>"
+ },
+ "bullet_status": "<BlueprintStatus.BS_UP_TO_DATE_WITH_WARNINGS: 5>",
+ "bullet_saved": true,
+ "timer_before": "0.033",
+ "trace_pins": [
+  "execute",
+  "Start",
+  "End",
+  "TraceChannel",
+  "bTraceComplex",
+  "ActorsToIgnore",
+  "DrawDebugType",
+  "bIgnoreSelf",
+  "TraceColor",
+  "TraceHitColor",
+  "DrawTime",
+  "then",
+  "OutHit",
+  "ReturnValue"
+ ],
+ "pawn_status": "<BlueprintStatus.BS_UP_TO_DATE_WITH_WARNINGS: 5>",
+ "pawn_saved": true
+}

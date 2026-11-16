@@ -1,0 +1,19 @@
+{
+ "before": {
+  "sel10": [
+   "-1.000000",
+   "1.000000"
+  ],
+  "sel0_B": "1.000000"
+ },
+ "changed": true,
+ "after": {
+  "sel10": [
+   "2.5",
+   "-2.5"
+  ],
+  "sel0_B": "2.5"
+ },
+ "status": "<BlueprintStatus.BS_UP_TO_DATE_WITH_WARNINGS: 5>",
+ "saved": true
+}

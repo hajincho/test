@@ -1,0 +1,10 @@
+{
+ "old_deleted": true,
+ "dup": "<Object '/Game/System/Experiences/B_Furina_Experience.B_Furina_Experience' (0x00000171B1153C00) Class 'Blueprint'>",
+ "saved": true,
+ "pawn_data": "<Object '/Game/Furina/Lyra/HeroData_Furina.HeroData_Furina' (0x000001722E2B6660) Class 'LyraPawnData'>",
+ "listing": [
+  "/Game/System/Experiences/B_Furina_Experience.B_Furina_Experience",
+  "/Game/System/Experiences/B_LyraDefaultExperience.B_LyraDefaultExperience"
+ ]
+}

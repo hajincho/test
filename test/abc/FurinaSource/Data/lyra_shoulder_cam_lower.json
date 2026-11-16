@@ -1,0 +1,124 @@
+{
+ "before": {
+  "title": "SelectFloat",
+  "pins": [
+   [
+    "A",
+    "30",
+    []
+   ],
+   [
+    "B",
+    "0.0",
+    []
+   ],
+   [
+    "bPickA",
+    "false",
+    [
+     "K2Node_FPT_TPSh [AND Boolean].ReturnValue"
+    ]
+   ],
+   [
+    "ReturnValue",
+    "0.0",
+    [
+     "K2Node_FPT_TgtOff [MakeVector].Z"
+    ]
+   ]
+  ]
+ },
+ "changed_pin": "A",
+ "after": {
+  "title": "SelectFloat",
+  "pins": [
+   [
+    "A",
+    "20.000000",
+    []
+   ],
+   [
+    "B",
+    "0.0",
+    []
+   ],
+   [
+    "bPickA",
+    "false",
+    [
+     "K2Node_FPT_TPSh [AND Boolean].ReturnValue"
+    ]
+   ],
+   [
+    "ReturnValue",
+    "0.0",
+    [
+     "K2Node_FPT_TgtOff [MakeVector].Z"
+    ]
+   ]
+  ]
+ },
+ "neighbors": {
+  "K2Node_FPT_TgtOff": {
+   "title": "MakeVector",
+   "pins": [
+    [
+     "X",
+     "0.0",
+     []
+    ],
+    [
+     "Y",
+     "0.0",
+     [
+      "K2Node_FPT_TgtY [SelectFloat].ReturnValue"
+     ]
+    ],
+    [
+     "Z",
+     "0.0",
+     [
+      "K2Node_FPT_TgtZ [SelectFloat].ReturnValue"
+     ]
+    ],
+    [
+     "ReturnValue",
+     "0, 0, 0",
+     [
+      "K2Node_FPT_NewOff [VInterpTo].Target"
+     ]
+    ]
+   ]
+  },
+  "K2Node_FPT_TPSh": {
+   "title": "AND Boolean",
+   "pins": [
+    [
+     "A",
+     "false",
+     [
+      "K2Node_FPT_ShOnT [IsActive].ReturnValue"
+     ]
+    ],
+    [
+     "B",
+     "false",
+     [
+      "K2Node_FPT_NotFPT [NOT Boolean].ReturnValue"
+     ]
+    ],
+    [
+     "ReturnValue",
+     "false",
+     [
+      "K2Node_FPT_TgtY [SelectFloat].bPickA",
+      "K2Node_FPT_TgtZ [SelectFloat].bPickA",
+      "K2Node_FPT_TgtFov [SelectFloat].bPickA"
+     ]
+    ]
+   ]
+  }
+ },
+ "status": "<BlueprintStatus.BS_UP_TO_DATE_WITH_WARNINGS: 5>",
+ "saved": true
+}

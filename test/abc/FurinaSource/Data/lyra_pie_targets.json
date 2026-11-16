@@ -1,0 +1,31 @@
+{
+ "health": [],
+ "asc_only": [
+  [
+   "LyraGameState_0",
+   "LyraGameState",
+   1329
+  ],
+  [
+   "LyraPlayerState_0",
+   "LyraPlayerState",
+   1329
+  ],
+  [
+   "LyraPlayerState_1",
+   "LyraPlayerState",
+   1329
+  ],
+  [
+   "LyraPlayerState_2",
+   "LyraPlayerState",
+   1329
+  ],
+  [
+   "LyraPlayerState_3",
+   "LyraPlayerState",
+   1329
+  ]
+ ],
+ "player": "<Struct 'Vector' (0x000001D19241ED60) {x: 169.703518, y: -1045.117313, z: 802.580481}>"
+}

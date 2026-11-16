@@ -1,0 +1,59 @@
+{
+ "BP_FurinaBullet.Bullet": {
+  "profile": "Custom",
+  "obj_type": "<CollisionChannel.ECC_WORLD_DYNAMIC: 1>",
+  "responses": {
+   "ECC_WORLD_STATIC": "ECR_BLOCK",
+   "ECC_WORLD_DYNAMIC": "ECR_BLOCK",
+   "ECC_PAWN": "ECR_BLOCK",
+   "ECC_VISIBILITY": "ECR_BLOCK",
+   "ECC_CAMERA": "ECR_BLOCK",
+   "ECC_PHYSICS_BODY": "ECR_IGNORE",
+   "ECC_VEHICLE": "ECR_BLOCK",
+   "ECC_DESTRUCTIBLE": "ECR_BLOCK",
+   "ECC_GAME_TRACE_CHANNEL1": "ERR",
+   "ECC_GAME_TRACE_CHANNEL2": "ERR",
+   "ECC_GAME_TRACE_CHANNEL3": "ERR",
+   "ECC_GAME_TRACE_CHANNEL4": "ERR",
+   "ECC_GAME_TRACE_CHANNEL5": "ERR"
+  }
+ },
+ "BP_223Case.FXMesh": {
+  "profile": "Custom",
+  "obj_type": "<CollisionChannel.ECC_PHYSICS_BODY: 5>",
+  "responses": {
+   "ECC_WORLD_STATIC": "ECR_BLOCK",
+   "ECC_WORLD_DYNAMIC": "ECR_BLOCK",
+   "ECC_PAWN": "ECR_IGNORE",
+   "ECC_VISIBILITY": "ECR_IGNORE",
+   "ECC_CAMERA": "ECR_BLOCK",
+   "ECC_PHYSICS_BODY": "ECR_BLOCK",
+   "ECC_VEHICLE": "ECR_BLOCK",
+   "ECC_DESTRUCTIBLE": "ECR_BLOCK",
+   "ECC_GAME_TRACE_CHANNEL1": "ERR",
+   "ECC_GAME_TRACE_CHANNEL2": "ERR",
+   "ECC_GAME_TRACE_CHANNEL3": "ERR",
+   "ECC_GAME_TRACE_CHANNEL4": "ERR",
+   "ECC_GAME_TRACE_CHANNEL5": "ERR"
+  }
+ },
+ "BP_M4MagDrop.MagBody": {
+  "profile": "Custom",
+  "obj_type": "<CollisionChannel.ECC_PHYSICS_BODY: 5>",
+  "responses": {
+   "ECC_WORLD_STATIC": "ECR_BLOCK",
+   "ECC_WORLD_DYNAMIC": "ECR_IGNORE",
+   "ECC_PAWN": "ECR_IGNORE",
+   "ECC_VISIBILITY": "ECR_IGNORE",
+   "ECC_CAMERA": "ECR_IGNORE",
+   "ECC_PHYSICS_BODY": "ECR_BLOCK",
+   "ECC_VEHICLE": "ECR_BLOCK",
+   "ECC_DESTRUCTIBLE": "ECR_BLOCK",
+   "ECC_GAME_TRACE_CHANNEL1": "ERR",
+   "ECC_GAME_TRACE_CHANNEL2": "ERR",
+   "ECC_GAME_TRACE_CHANNEL3": "ERR",
+   "ECC_GAME_TRACE_CHANNEL4": "ERR",
+   "ECC_GAME_TRACE_CHANNEL5": "ERR"
+  }
+ }
+}

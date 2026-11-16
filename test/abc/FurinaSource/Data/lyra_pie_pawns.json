@@ -1,0 +1,60 @@
+{
+ "world": "/ShooterMaps/Maps/UEDPIE_0_L_FiringRange_WP.L_FiringRange_WP",
+ "pawns": [
+  [
+   "ThirdPersonCharacter_BP_C_0",
+   "ThirdPersonCharacter_BP_C",
+   "LyraPlayerController",
+   [
+    170,
+    -1045,
+    803
+   ],
+   true
+  ],
+  [
+   "ThirdPersonCharacter_BP_C_1",
+   "ThirdPersonCharacter_BP_C",
+   "B_AI_Controller_LyraShooter_C",
+   [
+    -1130,
+    -3400,
+    803
+   ],
+   false
+  ],
+  [
+   "ThirdPersonCharacter_BP_C_2",
+   "ThirdPersonCharacter_BP_C",
+   "B_AI_Controller_LyraShooter_C",
+   [
+    -280,
+    -1045,
+    803
+   ],
+   false
+  ],
+  [
+   "ThirdPersonCharacter_BP_C_3",
+   "ThirdPersonCharacter_BP_C",
+   "B_AI_Controller_LyraShooter_C",
+   [
+    -680,
+    -3400,
+    803
+   ],
+   false
+  ]
+ ],
+ "pcs": [
+  [
+   "LyraPlayerController_0",
+   "LyraPlayerController",
+   "<Object '/ShooterMaps/Maps/UEDPIE_0_L_FiringRange_WP.L_FiringRange_WP:PersistentLevel.ThirdPersonCharacter_BP_C_0' (0x000001D3703D1400) Class 'ThirdPersonCharacter_BP_C'>",
+   "ThirdPersonCharacter_BP_C_0",
+   "<Object '/ShooterMaps/Maps/UEDPIE_0_L_FiringRange_WP.L_FiringRange_WP:PersistentLevel.LyraPlayerState_0' (0x000001D36D41B800) Class 'LyraPlayerState'>"
+  ]
+ ],
+ "player_pawn0": "<Object '/ShooterMaps/Maps/UEDPIE_0_L_FiringRange_WP.L_FiringRange_WP:PersistentLevel.ThirdPersonCharacter_BP_C_0' (0x000001D3703D1400) Class 'ThirdPersonCharacter_BP_C'>",
+ "player_ctrl0": "<Object '/ShooterMaps/Maps/UEDPIE_0_L_FiringRange_WP.L_FiringRange_WP:PersistentLevel.LyraPlayerController_0' (0x000001D3B1B70A00) Class 'LyraPlayerController'>"
+}

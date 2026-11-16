@@ -1,0 +1,635 @@
+{
+ "fps": 30,
+ "fps_base": 1.0,
+ "frame_range": [
+  1,
+  250
+ ],
+ "objects": [
+  {
+   "name": "Armature",
+   "type": "ARMATURE",
+   "parent": null,
+   "loc": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "rot": [
+    1.571,
+    -0.0,
+    0.0
+   ],
+   "scale": [
+    0.01,
+    0.01,
+    0.01
+   ],
+   "bones": [
+    [
+     "M4_Root",
+     null
+    ],
+    [
+     "FPS_Camera_j",
+     "M4_Root"
+    ],
+    [
+     "Spine",
+     "M4_Root"
+    ],
+    [
+     "RightArm",
+     "Spine"
+    ],
+    [
+     "RightForeArm",
+     "RightArm"
+    ],
+    [
+     "RightHand",
+     "RightForeArm"
+    ],
+    [
+     "RightHandThumb1",
+     "RightHand"
+    ],
+    [
+     "RightHandThumb2",
+     "RightHandThumb1"
+    ],
+    [
+     "RightHandThumb3",
+     "RightHandThumb2"
+    ],
+    [
+     "RightHandThumb4",
+     "RightHandThumb3"
+    ],
+    [
+     "RightHandIndex1",
+     "RightHand"
+    ],
+    [
+     "RightHandIndex2",
+     "RightHandIndex1"
+    ],
+    [
+     "RightHandIndex3",
+     "RightHandIndex2"
+    ],
+    [
+     "RightHandIndex4",
+     "RightHandIndex3"
+    ],
+    [
+     "RightHandMiddle1",
+     "RightHand"
+    ],
+    [
+     "RightHandMiddle2",
+     "RightHandMiddle1"
+    ],
+    [
+     "RightHandMiddle3",
+     "RightHandMiddle2"
+    ],
+    [
+     "RightHandMiddle4",
+     "RightHandMiddle3"
+    ],
+    [
+     "RightHandRing1",
+     "RightHand"
+    ],
+    [
+     "RightHandRing2",
+     "RightHandRing1"
+    ],
+    [
+     "RightHandRing3",
+     "RightHandRing2"
+    ],
+    [
+     "RightHandRing4",
+     "RightHandRing3"
+    ],
+    [
+     "RightHandPinky1",
+     "RightHand"
+    ],
+    [
+     "RightHandPinky2",
+     "RightHandPinky1"
+    ],
+    [
+     "RightHandPinky3",
+     "RightHandPinky2"
+    ],
+    [
+     "RightHandPinky4",
+     "RightHandPinky3"
+    ],
+    [
+     "LeftArm",
+     "Spine"
+    ],
+    [
+     "LeftForeArm",
+     "LeftArm"
+    ],
+    [
+     "LeftHand",
+     "LeftForeArm"
+    ],
+    [
+     "LeftHandThumb1",
+     "LeftHand"
+    ],
+    [
+     "LeftHandThumb2",
+     "LeftHandThumb1"
+    ],
+    [
+     "LeftHandThumb3",
+     "LeftHandThumb2"
+    ],
+    [
+     "LeftHandThumb4",
+     "LeftHandThumb3"
+    ],
+    [
+     "LeftHandIndex1",
+     "LeftHand"
+    ],
+    [
+     "LeftHandIndex2",
+     "LeftHandIndex1"
+    ],
+    [
+     "LeftHandIndex3",
+     "LeftHandIndex2"
+    ],
+    [
+     "LeftHandIndex4",
+     "LeftHandIndex3"
+    ],
+    [
+     "LeftHandMiddle1",
+     "LeftHand"
+    ],
+    [
+     "LeftHandMiddle2",
+     "LeftHandMiddle1"
+    ],
+    [
+     "LeftHandMiddle3",
+     "LeftHandMiddle2"
+    ],
+    [
+     "LeftHandMiddle4",
+     "LeftHandMiddle3"
+    ],
+    [
+     "LeftHandRing1",
+     "LeftHand"
+    ],
+    [
+     "LeftHandRing2",
+     "LeftHandRing1"
+    ],
+    [
+     "LeftHandRing3",
+     "LeftHandRing2"
+    ],
+    [
+     "LeftHandRing4",
+     "LeftHandRing3"
+    ],
+    [
+     "LeftHandPinky1",
+     "LeftHand"
+    ],
+    [
+     "LeftHandPinky2",
+     "LeftHandPinky1"
+    ],
+    [
+     "LeftHandPinky3",
+     "LeftHandPinky2"
+    ],
+    [
+     "LeftHandPinky4",
+     "LeftHandPinky3"
+    ],
+    [
+     "Main_j",
+     "M4_Root"
+    ],
+    [
+     "Mag1_j",
+     "Main_j"
+    ],
+    [
+     "Mag2_j",
+     "Main_j"
+    ],
+    [
+     "Bolt_j",
+     "Main_j"
+    ],
+    [
+     "BoltCatch_j",
+     "Main_j"
+    ],
+    [
+     "Trigger_j",
+     "Main_j"
+    ]
+   ],
+   "action": "Armature|Reload|BaseLayer"
+  },
+  {
+   "name": "Bolt",
+   "type": "MESH",
+   "parent": "Armature",
+   "loc": [
+    0.0,
+    -15.193,
+    0.0
+   ],
+   "rot": [
+    0.0,
+    -0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "verts": 45,
+   "vgroups": 0
+  },
+  {
+   "name": "BoltCatch",
+   "type": "MESH",
+   "parent": "Armature",
+   "loc": [
+    4.004,
+    -159.311,
+    -13.989
+   ],
+   "rot": [
+    0.0,
+    -0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "verts": 60,
+   "vgroups": 0
+  },
+  {
+   "name": "Bullet5_56x45mm",
+   "type": "MESH",
+   "parent": "Mag1",
+   "loc": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "rot": [
+    0.0,
+    -0.0,
+    0.0
+   ],
+   "scale": [
+    0.227,
+    0.232,
+    0.232
+   ],
+   "verts": 276,
+   "vgroups": 0
+  },
+  {
+   "name": "Bullet5_56x45mm.001",
+   "type": "MESH",
+   "parent": "Mag2",
+   "loc": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "rot": [
+    0.0,
+    -0.0,
+    0.0
+   ],
+   "scale": [
+    0.227,
+    0.232,
+    0.232
+   ],
+   "verts": 276,
+   "vgroups": 0
+  },
+  {
+   "name": "FPS_Camera",
+   "type": "CAMERA",
+   "parent": "Armature",
+   "loc": [
+    0.0,
+    -144.984,
+    0.0
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "name": "Hand",
+   "type": "EMPTY",
+   "parent": null,
+   "loc": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "rot": [
+    1.571,
+    -0.0,
+    0.0
+   ],
+   "scale": [
+    0.01,
+    0.01,
+    0.01
+   ]
+  },
+  {
+   "name": "Hand_Mesh",
+   "type": "MESH",
+   "parent": "Armature",
+   "loc": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "rot": [
+    0.0,
+    -0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "verts": 2346,
+   "vgroups": 41
+  },
+  {
+   "name": "Mag1",
+   "type": "MESH",
+   "parent": "Armature",
+   "loc": [
+    1.346,
+    -47.912,
+    -4.605
+   ],
+   "rot": [
+    0.0,
+    -0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "verts": 460,
+   "vgroups": 0
+  },
+  {
+   "name": "Mag2",
+   "type": "MESH",
+   "parent": "Armature",
+   "loc": [
+    1.346,
+    -47.912,
+    -4.605
+   ],
+   "rot": [
+    0.0,
+    -0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "verts": 460,
+   "vgroups": 0
+  },
+  {
+   "name": "Main",
+   "type": "MESH",
+   "parent": "Armature",
+   "loc": [
+    6.023,
+    -159.799,
+    -11.809
+   ],
+   "rot": [
+    0.0,
+    -0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "verts": 8564,
+   "vgroups": 0
+  },
+  {
+   "name": "Safety",
+   "type": "MESH",
+   "parent": "Main",
+   "loc": [
+    0.0,
+    285.206,
+    14.095
+   ],
+   "rot": [
+    -3.142,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.024,
+    1.0,
+    1.0
+   ],
+   "verts": 150,
+   "vgroups": 0
+  },
+  {
+   "name": "Trigger",
+   "type": "MESH",
+   "parent": "Armature",
+   "loc": [
+    5.547,
+    -156.422,
+    -11.152
+   ],
+   "rot": [
+    0.0,
+    -0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "verts": 48,
+   "vgroups": 0
+  }
+ ],
+ "actions": {
+  "Armature|Draw|BaseLayer": {
+   "range": [
+    269.0,
+    300.0
+   ],
+   "users": 1,
+   "slots": [
+    "Slot"
+   ]
+  },
+  "Armature|Fire|BaseLayer": {
+   "range": [
+    226.0,
+    250.0
+   ],
+   "users": 1,
+   "slots": [
+    "Slot"
+   ]
+  },
+  "Armature|Holster|BaseLayer": {
+   "range": [
+    251.0,
+    268.0
+   ],
+   "users": 1,
+   "slots": [
+    "Slot"
+   ]
+  },
+  "Armature|Idle|BaseLayer": {
+   "range": [
+    225.0,
+    226.0
+   ],
+   "users": 1,
+   "slots": [
+    "Slot"
+   ]
+  },
+  "Armature|Reload_Empty|BaseLayer": {
+   "range": [
+    111.0,
+    225.0
+   ],
+   "users": 1,
+   "slots": [
+    "Slot"
+   ]
+  },
+  "Armature|Reload|BaseLayer": {
+   "range": [
+    1.0,
+    110.0
+   ],
+   "users": 2,
+   "slots": [
+    "Slot"
+   ]
+  },
+  "Bullet5_56x45mm|Draw|BaseLayer": {
+   "range": [
+    269.0,
+    300.0
+   ],
+   "users": 1,
+   "slots": [
+    "Slot"
+   ]
+  },
+  "Bullet5_56x45mm|Fire|BaseLayer": {
+   "range": [
+    226.0,
+    250.0
+   ],
+   "users": 1,
+   "slots": [
+    "Slot"
+   ]
+  },
+  "Bullet5_56x45mm|Holster|BaseLayer": {
+   "range": [
+    251.0,
+    268.0
+   ],
+   "users": 1,
+   "slots": [
+    "Slot"
+   ]
+  },
+  "Bullet5_56x45mm|Idle|BaseLayer": {
+   "range": [
+    225.0,
+    226.0
+   ],
+   "users": 1,
+   "slots": [
+    "Slot"
+   ]
+  },
+  "Bullet5_56x45mm|Reload_Empty|BaseLayer": {
+   "range": [
+    111.0,
+    225.0
+   ],
+   "users": 1,
+   "slots": [
+    "Slot"
+   ]
+  },
+  "Bullet5_56x45mm|Reload|BaseLayer": {
+   "range": [
+    1.0,
+    110.0
+   ],
+   "users": 2,
+   "slots": [
+    "Slot"
+   ]
+  }
+ }
+}

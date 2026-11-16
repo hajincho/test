@@ -1,0 +1,239 @@
+{
+ "BP_M4Flash": {
+  "None": {
+   "class": "BP_M4Flash_C"
+  },
+  "FlashPetalU": {
+   "class": "StaticMeshComponent",
+   "profile": "NoCollision",
+   "enabled": "<CollisionEnabled.NO_COLLISION: 0>",
+   "obj_type": "<CollisionChannel.ECC_WORLD_STATIC: 0>",
+   "simulate": false
+  },
+  "FlashPetalR": {
+   "class": "StaticMeshComponent",
+   "profile": "NoCollision",
+   "enabled": "<CollisionEnabled.NO_COLLISION: 0>",
+   "obj_type": "<CollisionChannel.ECC_WORLD_STATIC: 0>",
+   "simulate": false
+  },
+  "FlashPetalL": {
+   "class": "StaticMeshComponent",
+   "profile": "NoCollision",
+   "enabled": "<CollisionEnabled.NO_COLLISION: 0>",
+   "obj_type": "<CollisionChannel.ECC_WORLD_STATIC: 0>",
+   "simulate": false
+  },
+  "FlashCore": {
+   "class": "StaticMeshComponent",
+   "profile": "NoCollision",
+   "enabled": "<CollisionEnabled.NO_COLLISION: 0>",
+   "obj_type": "<CollisionChannel.ECC_WORLD_STATIC: 0>",
+   "simulate": false
+  },
+  "FlashLight": {
+   "class": "PointLightComponent"
+  },
+  "FXMesh": {
+   "class": "StaticMeshComponent",
+   "profile": "NoCollision",
+   "enabled": "<CollisionEnabled.NO_COLLISION: 0>",
+   "obj_type": "<CollisionChannel.ECC_WORLD_STATIC: 0>",
+   "simulate": false
+  },
+  "FXRoot": {
+   "class": "SceneComponent"
+  },
+  "FlashStreakB": {
+   "class": "StaticMeshComponent",
+   "profile": "NoCollision",
+   "enabled": "<CollisionEnabled.NO_COLLISION: 0>",
+   "obj_type": "<CollisionChannel.ECC_WORLD_STATIC: 0>",
+   "simulate": false
+  },
+  "DefaultSceneRoot": {
+   "class": "SceneComponent"
+  },
+  "FlashStar": {
+   "class": "StaticMeshComponent",
+   "profile": "NoCollision",
+   "enabled": "<CollisionEnabled.NO_COLLISION: 0>",
+   "obj_type": "<CollisionChannel.ECC_WORLD_STATIC: 0>",
+   "simulate": false
+  },
+  "FlashPetalD": {
+   "class": "StaticMeshComponent",
+   "profile": "NoCollision",
+   "enabled": "<CollisionEnabled.NO_COLLISION: 0>",
+   "obj_type": "<CollisionChannel.ECC_WORLD_STATIC: 0>",
+   "simulate": false
+  },
+  "FlashStreakA": {
+   "class": "StaticMeshComponent",
+   "profile": "NoCollision",
+   "enabled": "<CollisionEnabled.NO_COLLISION: 0>",
+   "obj_type": "<CollisionChannel.ECC_WORLD_STATIC: 0>",
+   "simulate": false
+  },
+  "FlashRing": {
+   "class": "StaticMeshComponent",
+   "profile": "NoCollision",
+   "enabled": "<CollisionEnabled.NO_COLLISION: 0>",
+   "obj_type": "<CollisionChannel.ECC_WORLD_STATIC: 0>",
+   "simulate": false
+  }
+ },
+ "BP_223Case": {
+  "None": {
+   "class": "BP_223Case_C"
+  },
+  "DefaultSceneRoot": {
+   "class": "SceneComponent"
+  },
+  "FXRoot": {
+   "class": "SceneComponent"
+  },
+  "FXMesh": {
+   "class": "StaticMeshComponent",
+   "profile": "Custom",
+   "enabled": "<CollisionEnabled.QUERY_AND_PHYSICS: 3>",
+   "obj_type": "<CollisionChannel.ECC_PHYSICS_BODY: 5>",
+   "simulate": true
+  }
+ },
+ "BP_M4MagDrop": {
+  "None": {
+   "class": "BP_M4MagDrop_C"
+  },
+  "DefaultSceneRoot": {
+   "class": "SceneComponent"
+  },
+  "MagBody": {
+   "class": "StaticMeshComponent",
+   "profile": "Custom",
+   "enabled": "<CollisionEnabled.QUERY_AND_PHYSICS: 3>",
+   "obj_type": "<CollisionChannel.ECC_PHYSICS_BODY: 5>",
+   "simulate": true
+  }
+ },
+ "BP_RicoSpark": {
+  "None": {
+   "class": "BP_RicoSpark_C"
+  },
+  "DefaultSceneRoot": {
+   "class": "SceneComponent"
+  },
+  "Sparks": {
+   "class": "NiagaraComponent",
+   "profile": "NoCollision",
+   "enabled": "<CollisionEnabled.NO_COLLISION: 0>",
+   "obj_type": "<CollisionChannel.ECC_WORLD_STATIC: 0>",
+   "simulate": false
+  }
+ },
+ "BP_FurinaBullet": {
+  "None": {
+   "class": "BP_FurinaBullet_C"
+  },
+  "Bullet": {
+   "class": "SphereComponent",
+   "profile": "Custom",
+   "enabled": "<CollisionEnabled.QUERY_AND_PHYSICS: 3>",
+   "obj_type": "<CollisionChannel.ECC_WORLD_DYNAMIC: 1>",
+   "simulate": false
+  },
+  "ProjectileVisual": {
+   "class": "StaticMeshComponent",
+   "profile": "NoCollision",
+   "enabled": "<CollisionEnabled.NO_COLLISION: 0>",
+   "obj_type": "<CollisionChannel.ECC_WORLD_STATIC: 0>",
+   "simulate": false
+  },
+  "Tracer": {
+   "class": "StaticMeshComponent",
+   "profile": "NoCollision",
+   "enabled": "<CollisionEnabled.NO_COLLISION: 0>",
+   "obj_type": "<CollisionChannel.ECC_WORLD_STATIC: 0>",
+   "simulate": false
+  },
+  "Ballistics": {
+   "class": "ProjectileMovementComponent"
+  }
+ },
+ "pawn_relevant": {
+  "FurinaShoulder": {
+   "class": "SceneComponent"
+  },
+  "FurinaADSRestoreTP": {
+   "class": "SceneComponent"
+  },
+  "FurinaSpeedCap": {
+   "class": "SceneComponent"
+  },
+  "FurinaShoulderLeft": {
+   "class": "SceneComponent"
+  },
+  "FurinaCrouch": {
+   "class": "SceneComponent"
+  },
+  "FurinaShoulderAuto": {
+   "class": "SceneComponent"
+  },
+  "FurinaRifle": {
+   "class": "SkeletalMeshComponent",
+   "profile": "NoCollision",
+   "enabled": "<CollisionEnabled.NO_COLLISION: 0>",
+   "obj_type": "<CollisionChannel.ECC_WORLD_STATIC: 0>",
+   "simulate": false
+  },
+  "FurinaMag": {
+   "class": "StaticMeshComponent",
+   "profile": "NoCollision",
+   "enabled": "<CollisionEnabled.NO_COLLISION: 0>",
+   "obj_type": "<CollisionChannel.ECC_WORLD_STATIC: 0>",
+   "simulate": false
+  },
+  "FurinaADS": {
+   "class": "SceneComponent"
+  },
+  "FurinaFPWanted": {
+   "class": "SceneComponent"
+  },
+  "FurinaProne": {
+   "class": "SceneComponent"
+  },
+  "CapsuleComponent": {
+   "class": "CapsuleComponent",
+   "profile": "Custom",
+   "enabled": "<CollisionEnabled.QUERY_AND_PHYSICS: 3>",
+   "obj_type": "<CollisionChannel.ECC_PAWN: 2>",
+   "simulate": false
+  },
+  "Mesh": {
+   "class": "SkeletalMeshComponent",
+   "profile": "NoCollision",
+   "enabled": "<CollisionEnabled.NO_COLLISION: 0>",
+   "obj_type": "<CollisionChannel.ECC_WORLD_STATIC: 0>",
+   "simulate": false
+  },
+  "FurinaSpecial": {
+   "class": "SceneComponent"
+  },
+  "FurinaMesh": {
+   "class": "SkeletalMeshComponent",
+   "profile": "NoCollision",
+   "enabled": "<CollisionEnabled.NO_COLLISION: 0>",
+   "obj_type": "<CollisionChannel.ECC_WORLD_STATIC: 0>",
+   "simulate": false
+  },
+  "FurinaMagHandRef": {
+   "class": "SceneComponent"
+  },
+  "FurinaZip": {
+   "class": "SceneComponent"
+  },
+  "FurinaFireHold": {
+   "class": "SceneComponent"
+  }
+ }
+}

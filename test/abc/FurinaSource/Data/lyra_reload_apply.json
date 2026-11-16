@@ -1,0 +1,38 @@
+{
+ "AS_Furina_FP_Reload": {
+  "length": 3.133333444595337,
+  "curves": [
+   "riflereload",
+   "ReloadLX",
+   "ReloadLY",
+   "ReloadLZ",
+   "MagState"
+  ],
+  "saved": true
+ },
+ "AM_Furina_FP_Reload": {
+  "length": 3.133333444595337,
+  "curves": [
+   "RifleReload",
+   "ReloadLX",
+   "ReloadLY",
+   "ReloadLZ",
+   "MagState"
+  ],
+  "saved": true
+ },
+ "events": {
+  "grab": 0.712,
+  "release": 1.01,
+  "belt_arrive": 1.26,
+  "fresh_in_hand": 1.36,
+  "gap_end": 1.71,
+  "seated": 2.338,
+  "home": 3.0
+ },
+ "max_abs": [
+  21.9,
+  36.9,
+  34.8
+ ]
+}

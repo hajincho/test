@@ -1,0 +1,13 @@
+{
+ "before": "<Object '/Game/3DPlatformerGameBundle/Demo/ThirdPersonAssets/Blueprints/JumpPadCharacterBP/ThirdPersonCharacter_BP.ThirdPersonCharacter_BP_C' (0x000001D2F0E2F500) Class 'BlueprintGeneratedClass'>",
+ "saved": true,
+ "after": "<Object '/Game/3DPlatformerGameBundle/Demo/ThirdPersonAssets/Blueprints/ThirdPersonCharacter_BP.ThirdPersonCharacter_BP_C' (0x000001D32584EE00) Class 'BlueprintGeneratedClass'>",
+ "has_ammo_prop": [
+  "FurinaAmmo",
+  "FurinaReserve",
+  "FurinaReloading"
+ ],
+ "auto_possess_player": "<AutoReceiveInput.PLAYER0: 1>",
+ "auto_possess_ai": "<AutoPossessAI.PLACED_IN_WORLD: 1>",
+ "ai_controller_class": "<Object '/Script/AIModule.AIController' (0x00007FF3D966A670) Class 'Class'>"
+}

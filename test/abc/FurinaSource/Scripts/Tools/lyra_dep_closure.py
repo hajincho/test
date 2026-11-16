@@ -1,7 +1,7 @@
 """Lyra L_FiringRange_WP 의존 에셋 폐포 계산 (uasset 이름 테이블의 패키지 경로 문자열을 스캔).
 사용: python lyra_dep_closure.py [최대깊이] -> Data/lyra_closure.json (files, depth, sizes)"""
 import re, os, json, sys
-L = r'C:\Users\fromj\OneDrive\문서\Unreal Projects\LyraStarterGame'
+L = r'C:\Users\fromj\Downloads\test\test\abc'
 OUT = r'C:\Users\fromj\Downloads\test\test\abc\FurinaSource\Data\lyra_closure.json'
 MOUNT = {'Game': os.path.join(L, 'Content')}
 for dp in (os.path.join(L, 'Plugins'), os.path.join(L, 'Plugins', 'GameFeatures')):

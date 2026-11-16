@@ -1,0 +1,175 @@
+{
+ "shots": [
+  {
+   "bullet": "BP_FurinaBullet_C_0",
+   "pitch_set": 0.0,
+   "spawn": [
+    -699.2,
+    -2107.5,
+    855.7
+   ],
+   "ctrl_rot": "<Struct 'Rotator' (0x000001D33925EA90) {pitch: 0.668087, yaw: 89.906090, roll: -0.000000}>",
+   "dir": [
+    -0.01,
+    1.0,
+    0.011
+   ],
+   "cam_loc": [
+    -680.4,
+    -3381.4,
+    848.8
+   ]
+  },
+  {
+   "bullet": "BP_FurinaBullet_C_1",
+   "pitch_set": 0.0,
+   "spawn": [
+    -713.1,
+    -1779.9,
+    863.0
+   ],
+   "ctrl_rot": "<Struct 'Rotator' (0x000001D33925FC10) {pitch: 1.326603, yaw: 89.820602, roll: -0.000000}>",
+   "dir": [
+    -0.017,
+    1.0,
+    0.013
+   ],
+   "cam_loc": [
+    -680.4,
+    -3382.7,
+    849.3
+   ]
+  },
+  {
+   "bullet": "BP_FurinaBullet_C_2",
+   "pitch_set": 0.0,
+   "spawn": [
+    -707.4,
+    -1791.9,
+    886.3
+   ],
+   "ctrl_rot": "<Struct 'Rotator' (0x000001D33925ED60) {pitch: 1.905329, yaw: 89.741356, roll: -0.000000}>",
+   "dir": [
+    -0.013,
+    1.0,
+    0.028
+   ],
+   "cam_loc": [
+    -680.4,
+    -3382.9,
+    849.2
+   ]
+  },
+  {
+   "bullet": "BP_FurinaBullet_C_3",
+   "pitch_set": 0.0,
+   "spawn": [
+    -721.4,
+    -1385.6,
+    913.3
+   ],
+   "ctrl_rot": "<Struct 'Rotator' (0x000001D33925FD50) {pitch: 2.561310, yaw: 89.871346, roll: -0.000000}>",
+   "dir": [
+    -0.018,
+    0.999,
+    0.036
+   ],
+   "cam_loc": [
+    -680.4,
+    -3381.4,
+    848.4
+   ]
+  },
+  {
+   "bullet": "BP_FurinaBullet_C_4",
+   "pitch_set": 0.0,
+   "spawn": [
+    -709.7,
+    -1812.8,
+    882.0
+   ],
+   "ctrl_rot": "<Struct 'Rotator' (0x000001D33925FFD0) {pitch: 3.008395, yaw: 89.967384, roll: -0.000000}>",
+   "dir": [
+    -0.015,
+    1.0,
+    0.025
+   ],
+   "cam_loc": [
+    -680.5,
+    -3380.1,
+    847.9
+   ]
+  },
+  {
+   "bullet": "BP_FurinaBullet_C_5",
+   "pitch_set": -20.0,
+   "spawn": [
+    -623.5,
+    -1014.3,
+    1181.0
+   ],
+   "ctrl_rot": "<Struct 'Rotator' (0x000001D33925FB20) {pitch: -19.456373, yaw: 89.895905, roll: -0.000000}>",
+   "dir": [
+    0.027,
+    0.972,
+    0.234
+   ],
+   "cam_loc": [
+    -680.4,
+    -3382.0,
+    847.6
+   ]
+  },
+  {
+   "bullet": "BP_FurinaBullet_C_6",
+   "pitch_set": -20.0,
+   "spawn": [
+    -664.0,
+    -2197.8,
+    878.6
+   ],
+   "ctrl_rot": "<Struct 'Rotator' (0x000001D33925F6C0) {pitch: -18.930218, yaw: 90.022705, roll: -0.000000}>",
+   "dir": [
+    0.02,
+    0.975,
+    0.221
+   ],
+   "cam_loc": [
+    -680.5,
+    -3381.2,
+    847.1
+   ]
+  },
+  {
+   "bullet": "BP_FurinaBullet_C_8",
+   "pitch_set": -20.0,
+   "spawn": [
+    -702.4,
+    -2307.6,
+    852.3
+   ],
+   "ctrl_rot": "<Struct 'Rotator' (0x000001D33925E9F0) {pitch: -17.925724, yaw: 90.353348, roll: -0.000000}>",
+   "dir": [
+    -0.014,
+    0.975,
+    0.221
+   ],
+   "cam_loc": [
+    -680.6,
+    -3379.0,
+    846.1
+   ]
+  }
+ ],
+ "heartbeat": [
+  363,
+  2,
+  4,
+  17.1
+ ],
+ "muzzle_world": [
+  -687.2,
+  -3321.4,
+  840.8
+ ]
+}

@@ -1,0 +1,1416 @@
+{
+ "components": {
+  "CollisionCylinder": {
+   "class": "CapsuleComponent",
+   "parent": null,
+   "socket": "None",
+   "rel_loc": "<Struct 'Vector' (0x000001D48B2A9480) {x: 0.000000, y: 0.000000, z: 0.000000}>",
+   "rel_rot": "<Struct 'Rotator' (0x000001D48B2A9498) {pitch: 0.000000, yaw: 0.000000, roll: 0.000000}>"
+  },
+  "Arrow": {
+   "class": "ArrowComponent",
+   "parent": "CollisionCylinder",
+   "socket": "None",
+   "rel_loc": "<Struct 'Vector' (0x000001D48B2A7880) {x: 0.000000, y: 0.000000, z: 0.000000}>",
+   "rel_rot": "<Struct 'Rotator' (0x000001D48B2A7898) {pitch: 0.000000, yaw: 0.000000, roll: 0.000000}>"
+  },
+  "CharacterMesh0": {
+   "class": "SkeletalMeshComponent",
+   "parent": "CollisionCylinder",
+   "socket": "None",
+   "rel_loc": "<Struct 'Vector' (0x000001D491EA6580) {x: 0.000000, y: 0.000000, z: -95.000000}>",
+   "rel_rot": "<Struct 'Rotator' (0x000001D491EA6598) {pitch: 0.000000, yaw: -90.000000, roll: 0.000000}>"
+  }
+ },
+ "use_controller_rotation_pitch": "False",
+ "use_controller_rotation_yaw": "False",
+ "use_controller_rotation_roll": "False",
+ "nodes": {
+  "K2Node_CallFunction_40": {
+   "title": "SpawnEmitterAtLocation",
+   "pins": [
+    [
+     "execute",
+     "",
+     [
+      "K2Node_CallFunction_28.then"
+     ]
+    ],
+    [
+     "EmitterTemplate",
+     "/Game/3DPlatformerGameBundle/Particles/Smoke_PS.Smoke_PS",
+     []
+    ],
+    [
+     "Location",
+     "0, 0, 0",
+     [
+      "K2Node_CallFunction_516.ReturnValue"
+     ]
+    ],
+    [
+     "Rotation",
+     "0, 0, 0",
+     []
+    ],
+    [
+     "Scale",
+     "1.000000,1.000000,1.000000",
+     []
+    ],
+    [
+     "bAutoDestroy",
+     "true",
+     []
+    ],
+    [
+     "PoolingMethod",
+     "None",
+     []
+    ],
+    [
+     "bAutoActivateSystem",
+     "true",
+     []
+    ]
+   ]
+  },
+  "K2Node_CallFunction_8428": {
+   "title": "AddControllerPitchInput",
+   "pins": [
+    [
+     "execute",
+     "",
+     [
+      "K2Node_CallFunction_8427.then"
+     ]
+    ],
+    [
+     "Val",
+     "0.0",
+     [
+      "K2Node_CallFunction_49.ReturnValue"
+     ]
+    ]
+   ]
+  },
+  "K2Node_VariableSet_2": {
+   "title": "Set MouseCamera?",
+   "pins": [
+    [
+     "execute",
+     "",
+     [
+      "K2Node_IfThenElse_1.else"
+     ]
+    ],
+    [
+     "MouseCamera?",
+     "false",
+     []
+    ],
+    [
+     "Output_Get",
+     "false",
+     []
+    ]
+   ]
+  },
+  "K2Node_VariableSet_3": {
+   "title": "Set MouseCamera?",
+   "pins": [
+    [
+     "execute",
+     "",
+     [
+      "K2Node_IfThenElse_1.then"
+     ]
+    ],
+    [
+     "MouseCamera?",
+     "true",
+     []
+    ],
+    [
+     "then",
+     "",
+     [
+      "K2Node_Knot_18.InputPin"
+     ]
+    ],
+    [
+     "Output_Get",
+     "false",
+     []
+    ]
+   ]
+  },
+  "K2Node_VariableSet_5": {
+   "title": "Set InvertLookUp?",
+   "pins": [
+    [
+     "execute",
+     "",
+     [
+      "K2Node_MacroInstance_1.A",
+      "K2Node_MacroInstance_1.B"
+     ]
+    ],
+    [
+     "InvertLookUp?",
+     "false",
+     [
+      "K2Node_MacroInstance_1.IsA"
+     ]
+    ],
+    [
+     "then",
+     "",
+     [
+      "K2Node_CallFunction_23.execute"
+     ]
+    ],
+    [
+     "Output_Get",
+     "false",
+     []
+    ]
+   ]
+  },
+  "K2Node_CallFunction_49": {
+   "title": "Get Look Rate",
+   "pins": [
+    [
+     "Action Value",
+     "0.0",
+     [
+      "K2Node_Knot_21.OutputPin"
+     ]
+    ],
+    [
+     "Up/Down?",
+     "true",
+     []
+    ],
+    [
+     "ReturnValue",
+     "0.0",
+     [
+      "K2Node_CallFunction_8428.Val"
+     ]
+    ]
+   ]
+  },
+  "K2Node_CallFunction_48": {
+   "title": "Get Look Rate",
+   "pins": [
+    [
+     "Action Value",
+     "0.0",
+     [
+      "K2Node_Knot_19.OutputPin"
+     ]
+    ],
+    [
+     "Up/Down?",
+     "false",
+     []
+    ],
+    [
+     "ReturnValue",
+     "0.0",
+     [
+      "K2Node_CallFunction_8427.Val"
+     ]
+    ]
+   ]
+  },
+  "K2Node_EnhancedInputAction_6": {
+   "title": "EnhancedInputAction Look_IA",
+   "pins": [
+    [
+     "Triggered",
+     "",
+     [
+      "K2Node_CallFunction_8427.execute"
+     ]
+    ],
+    [
+     "Started",
+     "",
+     [
+      "K2Node_MacroInstance_3.Exec"
+     ]
+    ],
+    [
+     "ActionValue_X",
+     "0.0",
+     [
+      "K2Node_Knot_19.InputPin"
+     ]
+    ],
+    [
+     "ActionValue_Y",
+     "0.0",
+     [
+      "K2Node_Knot_20.InputPin"
+     ]
+    ],
+    [
+     "InputAction",
+     "/Game/3DPlatformerGameBundle/Demo/ThirdPersonAssets/Input/Actions/Look",
+     []
+    ]
+   ]
+  },
+  "K2Node_CallFunction_87": {
+   "title": "Adjusted Camera Movement Speed",
+   "pins": [
+    [
+     "self",
+     "",
+     [
+      "K2Node_VariableGet_9.Homing_Attack_Component_BP"
+     ]
+    ],
+    [
+     "Default Value",
+     "0.0",
+     [
+      "K2Node_CallFunction_84.ReturnValue"
+     ]
+    ],
+    [
+     "Adjusted Value",
+     "0.0",
+     []
+    ]
+   ]
+  },
+  "K2Node_CallFunction_19": {
+   "title": "Adjusted Camera Movement Speed",
+   "pins": [
+    [
+     "self",
+     "",
+     [
+      "K2Node_VariableGet_19.Homing_Attack_Component_BP"
+     ]
+    ],
+    [
+     "Default Value",
+     "0.0",
+     [
+      "K2Node_CallFunction_36.ReturnValue"
+     ]
+    ],
+    [
+     "Adjusted Value",
+     "0.0",
+     []
+    ]
+   ]
+  },
+  "K2Node_CallFunction_474": {
+   "title": "GetControlRotation",
+   "pins": [
+    [
+     "ReturnValue",
+     "0, 0, 0",
+     [
+      "K2Node_CallFunction_476.InRot"
+     ]
+    ]
+   ]
+  },
+  "K2Node_CallFunction_57": {
+   "title": "GetControlRotation",
+   "pins": [
+    [
+     "ReturnValue_Roll",
+     "0.0",
+     []
+    ],
+    [
+     "ReturnValue_Pitch",
+     "0.0",
+     []
+    ],
+    [
+     "ReturnValue_Yaw",
+     "0.0",
+     [
+      "K2Node_CallFunction_6.InRot_Yaw"
+     ]
+    ]
+   ]
+  },
+  "K2Node_CallFunction_8160": {
+   "title": "GetControlRotation",
+   "pins": [
+    [
+     "ReturnValue_Roll",
+     "0.0",
+     [
+      "K2Node_CallFunction_55.InRot_Roll"
+     ]
+    ],
+    [
+     "ReturnValue_Pitch",
+     "0.0",
+     []
+    ],
+    [
+     "ReturnValue_Yaw",
+     "0.0",
+     [
+      "K2Node_CallFunction_55.InRot_Yaw"
+     ]
+    ]
+   ]
+  },
+  "K2Node_EnhancedInputAction_Zoom": {
+   "title": "EnhancedInputAction IA_CameraZoom",
+   "pins": [
+    [
+     "ActionValue",
+     "0.0",
+     [
+      "K2Node_CallFunction_ZoomMul.A"
+     ]
+    ],
+    [
+     "InputAction",
+     "/Game/Furina/Input/IA_CameraZoom.IA_CameraZoom",
+     []
+    ]
+   ]
+  },
+  "K2Node_VariableGet_ZoomBoom": {
+   "title": "Get CameraBoom",
+   "pins": [
+    [
+     "CameraBoom",
+     "",
+     [
+      "K2Node_VariableGet_ZoomLen.self",
+      "K2Node_VariableSet_ZoomSet.self"
+     ]
+    ]
+   ]
+  },
+  "K2Node_FP_GetFPCam": {
+   "title": "Get FPCamera",
+   "pins": [
+    [
+     "FPCamera",
+     "",
+     [
+      "K2Node_FP_AttachCam.self"
+     ]
+    ]
+   ]
+  },
+  "K2Node_FP_GetFollow": {
+   "title": "Get FollowCamera",
+   "pins": []
+  },
+  "K2Node_FP_GetFPCam2": {
+   "title": "Get FPCamera",
+   "pins": [
+    [
+     "FPCamera",
+     "",
+     [
+      "K2Node_FP_IsFP.self",
+      "K2Node_FP_TP_CamOff.self",
+      "K2Node_FP_FP_CamOn.self"
+     ]
+    ]
+   ]
+  },
+  "K2Node_FP_GetFollow2": {
+   "title": "Get FollowCamera",
+   "pins": [
+    [
+     "FollowCamera",
+     "",
+     [
+      "K2Node_FP_TP_FollowOn.self",
+      "K2Node_FP_FP_FollowOff.self"
+     ]
+    ]
+   ]
+  },
+  "K2Node_FP_CtrlRot": {
+   "title": "GetControlRotation",
+   "pins": [
+    [
+     "ReturnValue",
+     "0, 0, 0",
+     [
+      "K2Node_FP_BreakCtrl.InRot"
+     ]
+    ]
+   ]
+  },
+  "K2Node_FP_CamMgr": {
+   "title": "GetPlayerCameraManager",
+   "pins": [
+    [
+     "PlayerIndex",
+     "0",
+     []
+    ],
+    [
+     "ReturnValue",
+     "",
+     [
+      "K2Node_FP_CamLoc.self",
+      "K2Node_FP_CamRot.self"
+     ]
+    ]
+   ]
+  },
+  "K2Node_FP_CamLoc": {
+   "title": "GetCameraLocation",
+   "pins": [
+    [
+     "self",
+     "",
+     [
+      "K2Node_FP_CamMgr.ReturnValue"
+     ]
+    ],
+    [
+     "ReturnValue",
+     "0, 0, 0",
+     [
+      "K2Node_FP_TraceEnd.A",
+      "K2Node_FP_Trace.Start"
+     ]
+    ]
+   ]
+  },
+  "K2Node_FP_CamRot": {
+   "title": "GetCameraRotation",
+   "pins": [
+    [
+     "self",
+     "",
+     [
+      "K2Node_FP_CamMgr.ReturnValue"
+     ]
+    ],
+    [
+     "ReturnValue",
+     "0, 0, 0",
+     [
+      "K2Node_FP_CamFwd.InRot"
+     ]
+    ]
+   ]
+  },
+  "K2Node_FP_ReloadIA": {
+   "title": "EnhancedInputAction IA_FurinaReload",
+   "pins": [
+    [
+     "Started",
+     "",
+     [
+      "M4_ReloadGate.execute"
+     ]
+    ],
+    [
+     "ActionValue",
+     "false",
+     []
+    ],
+    [
+     "InputAction",
+     "/Game/Furina/Input/IA_FurinaReload.IA_FurinaReload",
+     []
+    ]
+   ]
+  },
+  "K2Node_FPV_GetFPCam": {
+   "title": "Get FPCamera",
+   "pins": [
+    [
+     "FPCamera",
+     "",
+     [
+      "K2Node_FPV_IsFP.self"
+     ]
+    ]
+   ]
+  },
+  "K2Node_FPV_GetFollow": {
+   "title": "Get FollowCamera",
+   "pins": [
+    [
+     "FollowCamera",
+     "",
+     [
+      "K2Node_FPV_TP_FollowOn.self",
+      "K2Node_FPV_FP_FollowOff.self"
+     ]
+    ]
+   ]
+  },
+  "K2Node_FPV_GetFPCam2": {
+   "title": "Get FPCamera",
+   "pins": [
+    [
+     "FPCamera",
+     "",
+     [
+      "K2Node_FPV_TP_CamOff.self",
+      "K2Node_FPV_FP_CamOn.self"
+     ]
+    ]
+   ]
+  },
+  "K2Node_FPVH_HGetCam": {
+   "title": "Get FPCamera",
+   "pins": [
+    [
+     "FPCamera",
+     "",
+     [
+      "K2Node_FPVH_HIsFP.self"
+     ]
+    ]
+   ]
+  },
+  "K2Node_FPAC_GetCam": {
+   "title": "Get FPCamera",
+   "pins": [
+    [
+     "FPCamera",
+     "",
+     [
+      "K2Node_FPAC_Fov60.self",
+      "K2Node_FPAC_Fov85.self"
+     ]
+    ]
+   ]
+  },
+  "K2Node_FPAC_GetCam2": {
+   "title": "Get FPCamera",
+   "pins": [
+    [
+     "FPCamera",
+     "",
+     [
+      "K2Node_FPAC_CamIsOn.self"
+     ]
+    ]
+   ]
+  },
+  "K2Node_CallFunction_35": {
+   "title": "GetControlRotation",
+   "pins": [
+    [
+     "ReturnValue",
+     "0, 0, 0",
+     [
+      "K2Node_CallFunction_41.InRot"
+     ]
+    ]
+   ]
+  },
+  "K2Node_CallFunction_60": {
+   "title": "GetPlayerCameraManager",
+   "pins": [
+    [
+     "PlayerIndex",
+     "0",
+     []
+    ],
+    [
+     "ReturnValue",
+     "",
+     [
+      "K2Node_CallFunction_61.self",
+      "K2Node_CallFunction_63.self"
+     ]
+    ]
+   ]
+  },
+  "K2Node_CallFunction_61": {
+   "title": "GetCameraLocation",
+   "pins": [
+    [
+     "self",
+     "",
+     [
+      "K2Node_CallFunction_60.ReturnValue"
+     ]
+    ],
+    [
+     "ReturnValue",
+     "0, 0, 0",
+     [
+      "K2Node_CallFunction_68.A",
+      "K2Node_CallFunction_71.Start"
+     ]
+    ]
+   ]
+  },
+  "K2Node_CallFunction_63": {
+   "title": "GetCameraRotation",
+   "pins": [
+    [
+     "self",
+     "",
+     [
+      "K2Node_CallFunction_60.ReturnValue"
+     ]
+    ],
+    [
+     "ReturnValue",
+     "0, 0, 0",
+     [
+      "K2Node_CallFunction_64.InRot",
+      "K2Node_CallFunction_65.InRot"
+     ]
+    ]
+   ]
+  },
+  "K2Node_SpawnActorFromClass_0": {
+   "title": "SpawnActor BP Furina Bullet",
+   "pins": [
+    [
+     "execute",
+     "",
+     [
+      "K2Node_CallFunction_71.then"
+     ]
+    ],
+    [
+     "Class",
+     "/Game/Furina/FP/BP_FurinaBullet.BP_FurinaBullet_C",
+     []
+    ],
+    [
+     "SpawnTransform",
+     "",
+     [
+      "K2Node_CallFunction_102.ReturnValue"
+     ]
+    ],
+    [
+     "CollisionHandlingOverride",
+     "AlwaysSpawn",
+     []
+    ],
+    [
+     "TransformScaleMethod",
+     "MultiplyWithRoot",
+     []
+    ],
+    [
+     "FurinaDamage",
+     "0",
+     []
+    ]
+   ]
+  },
+  "K2Node_FPF_CtrlRot": {
+   "title": "GetControlRotation",
+   "pins": [
+    [
+     "ReturnValue",
+     "0, 0, 0",
+     [
+      "K2Node_FPF_BreakCtrl.InRot"
+     ]
+    ]
+   ]
+  },
+  "K2Node_FPF_CamMgr": {
+   "title": "GetPlayerCameraManager",
+   "pins": [
+    [
+     "PlayerIndex",
+     "0",
+     []
+    ],
+    [
+     "ReturnValue",
+     "",
+     [
+      "K2Node_FPF_CamLoc.self",
+      "K2Node_FPF_CamRot.self"
+     ]
+    ]
+   ]
+  },
+  "K2Node_FPF_CamLoc": {
+   "title": "GetCameraLocation",
+   "pins": [
+    [
+     "self",
+     "",
+     [
+      "K2Node_FPF_CamMgr.ReturnValue"
+     ]
+    ],
+    [
+     "ReturnValue",
+     "0, 0, 0",
+     [
+      "K2Node_FPF_End.A",
+      "K2Node_FPF_Aim.Start"
+     ]
+    ]
+   ]
+  },
+  "K2Node_FPF_CamRot": {
+   "title": "GetCameraRotation",
+   "pins": [
+    [
+     "self",
+     "",
+     [
+      "K2Node_FPF_CamMgr.ReturnValue"
+     ]
+    ],
+    [
+     "ReturnValue",
+     "0, 0, 0",
+     [
+      "K2Node_FPF_CamFwd.InRot",
+      "K2Node_FPF_CamUp.InRot"
+     ]
+    ]
+   ]
+  },
+  "K2Node_FPF_Spawn": {
+   "title": "SpawnActor BP Furina Bullet",
+   "pins": [
+    [
+     "execute",
+     "",
+     [
+      "K2Node_FPF_Aim.then"
+     ]
+    ],
+    [
+     "Class",
+     "/Game/Furina/FP/BP_FurinaBullet.BP_FurinaBullet_C",
+     []
+    ],
+    [
+     "SpawnTransform",
+     "",
+     [
+      "K2Node_FPF_ShotXf.ReturnValue"
+     ]
+    ],
+    [
+     "CollisionHandlingOverride",
+     "AlwaysSpawn",
+     []
+    ],
+    [
+     "TransformScaleMethod",
+     "MultiplyWithRoot",
+     []
+    ],
+    [
+     "Owner",
+     "",
+     [
+      "K2Node_FPF_Self.self"
+     ]
+    ],
+    [
+     "FurinaDamage",
+     "0",
+     []
+    ],
+    [
+     "Instigator",
+     "",
+     [
+      "K2Node_FPF_Self.self"
+     ]
+    ],
+    [
+     "then",
+     "",
+     [
+      "K2Node_FPF_Recoil.execute"
+     ]
+    ]
+   ]
+  },
+  "K2Node_FPF_CtrlRot2": {
+   "title": "GetControlRotation",
+   "pins": [
+    [
+     "ReturnValue",
+     "0, 0, 0",
+     [
+      "K2Node_FPF_BreakCtrl2.InRot"
+     ]
+    ]
+   ]
+  },
+  "K2Node_FPF_Recoil": {
+   "title": "SetControlRotation",
+   "pins": [
+    [
+     "execute",
+     "",
+     [
+      "K2Node_FPF_Spawn.then"
+     ]
+    ],
+    [
+     "self",
+     "",
+     [
+      "K2Node_FPF_MyCtrl.ReturnValue"
+     ]
+    ],
+    [
+     "NewRotation",
+     "0, 0, 0",
+     [
+      "K2Node_FPF_MakeRec.ReturnValue"
+     ]
+    ],
+    [
+     "then",
+     "",
+     [
+      "FPN_ShotCountInc.execute"
+     ]
+    ]
+   ]
+  },
+  "K2Node_FPT_GetFPCamT": {
+   "title": "Get FPCamera",
+   "pins": [
+    [
+     "FPCamera",
+     "",
+     [
+      "K2Node_FPT_FPOnT.self"
+     ]
+    ]
+   ]
+  },
+  "K2Node_FPT_GetFollowT": {
+   "title": "Get FollowCamera",
+   "pins": [
+    [
+     "FollowCamera",
+     "",
+     [
+      "K2Node_FPT_CamLocT.self",
+      "K2Node_FPT_CurFov.self",
+      "K2Node_FPT_SetFov.self"
+     ]
+    ]
+   ]
+  },
+  "K2Node_FPT_GetBoomT": {
+   "title": "Get CameraBoom",
+   "pins": [
+    [
+     "CameraBoom",
+     "",
+     [
+      "K2Node_FPT_ArmLen.self",
+      "K2Node_FPT_CurOff.self",
+      "K2Node_FPT_SetOff.self"
+     ]
+    ]
+   ]
+  },
+  "K2Node_FPF_GetFPCamR": {
+   "title": "Get FPCamera",
+   "pins": [
+    [
+     "FPCamera",
+     "",
+     [
+      "K2Node_FPF_FPOnR.self"
+     ]
+    ]
+   ]
+  },
+  "M4_GetFurinaReloading": {
+   "title": "Get FurinaReloading",
+   "pins": [
+    [
+     "FurinaReloading",
+     "false",
+     [
+      "M4_NotReloading.A"
+     ]
+    ]
+   ]
+  },
+  "M4_SetFurinaReloading": {
+   "title": "Set FurinaReloading",
+   "pins": [
+    [
+     "execute",
+     "",
+     [
+      "M4_ReloadGate.then"
+     ]
+    ],
+    [
+     "FurinaReloading",
+     "true",
+     []
+    ],
+    [
+     "then",
+     "",
+     [
+      "TFP_SetFurinaReloadAmount.execute"
+     ]
+    ],
+    [
+     "Output_Get",
+     "false",
+     []
+    ]
+   ]
+  },
+  "M4_ReloadFinish": {
+   "title": "FurinaFinishReload",
+   "pins": [
+    [
+     "then",
+     "",
+     [
+      "M4_FillMagazine.execute"
+     ]
+    ]
+   ]
+  },
+  "M4_ReloadDone": {
+   "title": "Set FurinaReloading",
+   "pins": [
+    [
+     "execute",
+     "",
+     [
+      "TFP_SetFurinaReserve.then"
+     ]
+    ],
+    [
+     "FurinaReloading",
+     "false",
+     []
+    ],
+    [
+     "Output_Get",
+     "false",
+     []
+    ]
+   ]
+  },
+  "M4_FlashSpawn": {
+   "title": "BeginDeferredActorSpawnFromClass",
+   "pins": [
+    [
+     "execute",
+     "",
+     [
+      "M4_SetFurinaAmmo.then"
+     ]
+    ],
+    [
+     "ActorClass",
+     "/Game/Furina/M4/BP_M4Flash.BP_M4Flash_C",
+     []
+    ],
+    [
+     "SpawnTransform",
+     "",
+     [
+      "M4_FlashTransform.ReturnValue"
+     ]
+    ],
+    [
+     "CollisionHandlingOverride",
+     "AlwaysSpawn",
+     []
+    ],
+    [
+     "Owner",
+     "",
+     [
+      "K2Node_Self_0.self"
+     ]
+    ],
+    [
+     "TransformScaleMethod",
+     "MultiplyWithRoot",
+     []
+    ],
+    [
+     "then",
+     "",
+     [
+      "M4_FlashFinish.execute"
+     ]
+    ],
+    [
+     "ReturnValue",
+     "",
+     [
+      "M4_FlashFinish.Actor"
+     ]
+    ]
+   ]
+  },
+  "M4_FlashFinish": {
+   "title": "FinishSpawningActor",
+   "pins": [
+    [
+     "execute",
+     "",
+     [
+      "M4_FlashSpawn.then"
+     ]
+    ],
+    [
+     "Actor",
+     "",
+     [
+      "M4_FlashSpawn.ReturnValue"
+     ]
+    ],
+    [
+     "SpawnTransform",
+     "",
+     [
+      "M4_FlashTransform.ReturnValue"
+     ]
+    ],
+    [
+     "TransformScaleMethod",
+     "MultiplyWithRoot",
+     []
+    ],
+    [
+     "then",
+     "",
+     [
+      "FNS_SparkSpawn.execute"
+     ]
+    ]
+   ]
+  },
+  "M4_CaseSpawn": {
+   "title": "BeginDeferredActorSpawnFromClass",
+   "pins": [
+    [
+     "execute",
+     "",
+     [
+      "FNS_SetUseShell.then"
+     ]
+    ],
+    [
+     "ActorClass",
+     "/Game/Furina/M4/BP_223Case.BP_223Case_C",
+     []
+    ],
+    [
+     "SpawnTransform",
+     "",
+     [
+      "M4_CaseTransform.ReturnValue"
+     ]
+    ],
+    [
+     "CollisionHandlingOverride",
+     "AlwaysSpawn",
+     []
+    ],
+    [
+     "Owner",
+     "",
+     [
+      "K2Node_Self_0.self"
+     ]
+    ],
+    [
+     "TransformScaleMethod",
+     "MultiplyWithRoot",
+     []
+    ],
+    [
+     "then",
+     "",
+     [
+      "M4_CaseFinish.execute"
+     ]
+    ],
+    [
+     "ReturnValue",
+     "",
+     [
+      "M4_CaseFinish.Actor"
+     ]
+    ]
+   ]
+  },
+  "M4_CaseFinish": {
+   "title": "FinishSpawningActor",
+   "pins": [
+    [
+     "execute",
+     "",
+     [
+      "M4_CaseSpawn.then"
+     ]
+    ],
+    [
+     "Actor",
+     "",
+     [
+      "M4_CaseSpawn.ReturnValue"
+     ]
+    ],
+    [
+     "SpawnTransform",
+     "",
+     [
+      "M4_CaseTransform.ReturnValue"
+     ]
+    ],
+    [
+     "TransformScaleMethod",
+     "MultiplyWithRoot",
+     []
+    ]
+   ]
+  },
+  "M4_RequestReload": {
+   "title": "FurinaRequestReload",
+   "pins": [
+    [
+     "then",
+     "",
+     [
+      "M4_ReloadGate.execute"
+     ]
+    ]
+   ]
+  },
+  "TFP_GetFurinaReloadAmount": {
+   "title": "Get FurinaReloadAmount",
+   "pins": [
+    [
+     "FurinaReloadAmount",
+     "0",
+     [
+      "TFP_FilledRounds.B",
+      "TFP_ReserveAfter.B"
+     ]
+    ]
+   ]
+  },
+  "TFP_SetFurinaReloadAmount": {
+   "title": "Set FurinaReloadAmount",
+   "pins": [
+    [
+     "execute",
+     "",
+     [
+      "M4_SetFurinaReloading.then"
+     ]
+    ],
+    [
+     "FurinaReloadAmount",
+     "0",
+     [
+      "TFP_Transfer.ReturnValue"
+     ]
+    ],
+    [
+     "then",
+     "",
+     [
+      "M4_ReloadTimer.execute"
+     ]
+    ],
+    [
+     "Output_Get",
+     "0",
+     []
+    ]
+   ]
+  },
+  "FMG_DropSpawn": {
+   "title": "BeginDeferredActorSpawnFromClass",
+   "pins": [
+    [
+     "execute",
+     "",
+     [
+      "FMG_BrGone.then"
+     ]
+    ],
+    [
+     "ActorClass",
+     "/Game/Furina/M4/BP_M4MagDrop.BP_M4MagDrop_C",
+     []
+    ],
+    [
+     "SpawnTransform",
+     "",
+     [
+      "FMG_MagWorld.ReturnValue"
+     ]
+    ],
+    [
+     "CollisionHandlingOverride",
+     "AlwaysSpawn",
+     []
+    ],
+    [
+     "TransformScaleMethod",
+     "MultiplyWithRoot",
+     []
+    ],
+    [
+     "then",
+     "",
+     [
+      "FMG_DropFinish.execute"
+     ]
+    ],
+    [
+     "ReturnValue",
+     "",
+     [
+      "FMG_DropFinish.Actor"
+     ]
+    ]
+   ]
+  },
+  "FMG_DropFinish": {
+   "title": "FinishSpawningActor",
+   "pins": [
+    [
+     "execute",
+     "",
+     [
+      "FMG_DropSpawn.then"
+     ]
+    ],
+    [
+     "Actor",
+     "",
+     [
+      "FMG_DropSpawn.ReturnValue"
+     ]
+    ],
+    [
+     "SpawnTransform",
+     "",
+     [
+      "FMG_MagWorld.ReturnValue"
+     ]
+    ],
+    [
+     "TransformScaleMethod",
+     "MultiplyWithRoot",
+     []
+    ],
+    [
+     "then",
+     "",
+     [
+      "FMG_HideMag.execute"
+     ]
+    ]
+   ]
+  },
+  "FNS_SparkSpawn": {
+   "title": "SpawnSystemAtLocation",
+   "pins": [
+    [
+     "execute",
+     "",
+     [
+      "M4_FlashFinish.then"
+     ]
+    ],
+    [
+     "SystemTemplate",
+     "/Game/NiagaraExamples/FX_Weapons/MuzzleFlashes/NS_MuzzleFlash.NS_Muzzl",
+     []
+    ],
+    [
+     "Location",
+     "0, 0, 0",
+     [
+      "M4_FlashPoint.ReturnValue"
+     ]
+    ],
+    [
+     "Rotation",
+     "0, 0, 0",
+     [
+      "FNS_ComposeYaw.ReturnValue"
+     ]
+    ],
+    [
+     "Scale",
+     "1.000000,1.000000,1.000000",
+     []
+    ],
+    [
+     "bAutoDestroy",
+     "true",
+     []
+    ],
+    [
+     "bAutoActivate",
+     "true",
+     []
+    ],
+    [
+     "PoolingMethod",
+     "None",
+     []
+    ],
+    [
+     "bPreCullCheck",
+     "true",
+     []
+    ],
+    [
+     "then",
+     "",
+     [
+      "FNS_SetGlobalScale.execute"
+     ]
+    ],
+    [
+     "ReturnValue",
+     "",
+     [
+      "FNS_SetGlobalScale.self",
+      "FNS_SetUseShell.self"
+     ]
+    ]
+   ]
+  }
+ },
+ "node_count": 60
+}

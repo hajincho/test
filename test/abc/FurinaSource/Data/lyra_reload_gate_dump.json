@@ -1,0 +1,1661 @@
+{
+ "graphs": [
+  "UserConstructionScript",
+  "Get Key Array",
+  "Is Using Mouse?",
+  "Get Look Rate",
+  "EventGraph",
+  "Custom Graph 1",
+  "Custom Graph 2",
+  "Custom Graph 3",
+  "Custom Graph 4",
+  "Jump Graph",
+  "Hit Graph",
+  "Walking Off Ledge Graph",
+  "Overlap Graph",
+  "On Landed Graph"
+ ],
+ "nodes": {
+  "TFP_GetFurinaReloadAmount": {
+   "title": "Get FurinaReloadAmount",
+   "pins": [
+    [
+     "FurinaReloadAmount",
+     "0",
+     [
+      "TFP_FilledRounds.B",
+      "TFP_ReserveAfter.B"
+     ]
+    ]
+   ],
+   "depth": 0
+  },
+  "M4_ReloadTimer": {
+   "title": "Set Timer by Function Name",
+   "pins": [
+    [
+     "execute",
+     "",
+     [
+      "TFP_SetFurinaReloadAmount.then"
+     ]
+    ],
+    [
+     "Object",
+     "",
+     [
+      "K2Node_Self_0.self"
+     ]
+    ],
+    [
+     "FunctionName",
+     "FurinaFinishReload",
+     []
+    ],
+    [
+     "Time",
+     "3.0",
+     []
+    ],
+    [
+     "bLooping",
+     "false",
+     []
+    ],
+    [
+     "bMaxOncePerFrame",
+     "false",
+     []
+    ],
+    [
+     "InitialStartDelay",
+     "0.000000",
+     []
+    ],
+    [
+     "InitialStartDelayVariance",
+     "0.000000",
+     []
+    ],
+    [
+     "then",
+     "",
+     [
+      "K2Node_FP_ReloadMontage.execute"
+     ]
+    ]
+   ],
+   "depth": 0
+  },
+  "TFP_SetFurinaReloadAmount": {
+   "title": "Set FurinaReloadAmount",
+   "pins": [
+    [
+     "execute",
+     "",
+     [
+      "M4_SetFurinaReloading.then"
+     ]
+    ],
+    [
+     "FurinaReloadAmount",
+     "0",
+     [
+      "TFP_Transfer.ReturnValue"
+     ]
+    ],
+    [
+     "then",
+     "",
+     [
+      "M4_ReloadTimer.execute"
+     ]
+    ],
+    [
+     "Output_Get",
+     "0",
+     []
+    ]
+   ],
+   "depth": 0
+  },
+  "M4_GetFurinaReloading": {
+   "title": "Get FurinaReloading",
+   "pins": [
+    [
+     "FurinaReloading",
+     "false",
+     [
+      "M4_NotReloading.A"
+     ]
+    ]
+   ],
+   "depth": 0
+  },
+  "M4_SetFurinaReloading": {
+   "title": "Set FurinaReloading",
+   "pins": [
+    [
+     "execute",
+     "",
+     [
+      "M4_ReloadGate.then"
+     ]
+    ],
+    [
+     "FurinaReloading",
+     "true",
+     []
+    ],
+    [
+     "then",
+     "",
+     [
+      "TFP_SetFurinaReloadAmount.execute"
+     ]
+    ],
+    [
+     "Output_Get",
+     "false",
+     []
+    ]
+   ],
+   "depth": 0
+  },
+  "M4_ReloadFinish": {
+   "title": "FurinaFinishReload",
+   "pins": [
+    [
+     "then",
+     "",
+     [
+      "M4_FillMagazine.execute"
+     ]
+    ]
+   ],
+   "depth": 0
+  },
+  "K2Node_FP_ReloadIA": {
+   "title": "EnhancedInputAction IA_FurinaReload",
+   "pins": [
+    [
+     "Started",
+     "",
+     [
+      "M4_ReloadGate.execute"
+     ]
+    ],
+    [
+     "ActionValue",
+     "false",
+     []
+    ],
+    [
+     "InputAction",
+     "/Game/Furina/Input/IA_FurinaReload.IA_FurinaReload",
+     []
+    ]
+   ],
+   "depth": 0
+  },
+  "M4_ReloadReady": {
+   "title": "AND Boolean",
+   "pins": [
+    [
+     "A",
+     "false",
+     [
+      "M4_NotFull.ReturnValue"
+     ]
+    ],
+    [
+     "B",
+     "false",
+     [
+      "M4_NotReloading.ReturnValue"
+     ]
+    ],
+    [
+     "ReturnValue",
+     "false",
+     [
+      "TFP_ReloadHasAmmo.B"
+     ]
+    ]
+   ],
+   "depth": 0
+  },
+  "M4_ReloadGate": {
+   "title": "Branch",
+   "pins": [
+    [
+     "execute",
+     "",
+     [
+      "K2Node_FP_ReloadIA.Started",
+      "M4_RequestReload.then"
+     ]
+    ],
+    [
+     "Condition",
+     "true",
+     [
+      "TFP_ReloadHasAmmo.ReturnValue"
+     ]
+    ],
+    [
+     "then",
+     "",
+     [
+      "M4_SetFurinaReloading.execute"
+     ]
+    ]
+   ],
+   "depth": 0
+  },
+  "M4_ReloadDone": {
+   "title": "Set FurinaReloading",
+   "pins": [
+    [
+     "execute",
+     "",
+     [
+      "TFP_SetFurinaReserve.then"
+     ]
+    ],
+    [
+     "FurinaReloading",
+     "false",
+     []
+    ],
+    [
+     "Output_Get",
+     "false",
+     []
+    ]
+   ],
+   "depth": 0
+  },
+  "M4_RequestReload": {
+   "title": "FurinaRequestReload",
+   "pins": [
+    [
+     "then",
+     "",
+     [
+      "M4_ReloadGate.execute"
+     ]
+    ]
+   ],
+   "depth": 0
+  },
+  "K2Node_Self_0": {
+   "title": "셀프-레퍼런스",
+   "pins": [
+    [
+     "self",
+     "",
+     [
+      "K2Node_FPT_TimerOnT.Object",
+      "K2Node_FPT_DoStand.self",
+      "K2Node_FPT_DoCrouch.self",
+      "M4_ReloadTimer.Object"
+     ]
+    ]
+   ],
+   "depth": 1
+  },
+  "TFP_ReloadHasAmmo": {
+   "title": "AND Boolean",
+   "pins": [
+    [
+     "A",
+     "false",
+     [
+      "TFP_HasReserve.ReturnValue"
+     ]
+    ],
+    [
+     "B",
+     "false",
+     [
+      "M4_ReloadReady.ReturnValue"
+     ]
+    ],
+    [
+     "ReturnValue",
+     "false",
+     [
+      "M4_ReloadGate.Condition"
+     ]
+    ]
+   ],
+   "depth": 1
+  },
+  "TFP_Transfer": {
+   "title": "Min (Integer)",
+   "pins": [
+    [
+     "A",
+     "0",
+     [
+      "TFP_MagRoom.ReturnValue"
+     ]
+    ],
+    [
+     "B",
+     "0",
+     [
+      "TFP_GetFurinaReserve.FurinaReserve"
+     ]
+    ],
+    [
+     "ReturnValue",
+     "0",
+     [
+      "TFP_SetFurinaReloadAmount.FurinaReloadAmount"
+     ]
+    ]
+   ],
+   "depth": 1
+  },
+  "M4_NotFull": {
+   "title": "integer < integer",
+   "pins": [
+    [
+     "A",
+     "",
+     [
+      "M4_GetFurinaAmmo.FurinaAmmo"
+     ]
+    ],
+    [
+     "B",
+     "30",
+     []
+    ],
+    [
+     "ReturnValue",
+     "",
+     [
+      "M4_ReloadReady.A"
+     ]
+    ]
+   ],
+   "depth": 1
+  },
+  "M4_NotReloading": {
+   "title": "NOT Boolean",
+   "pins": [
+    [
+     "A",
+     "false",
+     [
+      "M4_GetFurinaReloading.FurinaReloading"
+     ]
+    ],
+    [
+     "ReturnValue",
+     "false",
+     [
+      "M4_Ready.B",
+      "M4_ReloadReady.B"
+     ]
+    ]
+   ],
+   "depth": 1
+  },
+  "M4_FillMagazine": {
+   "title": "Set FurinaAmmo",
+   "pins": [
+    [
+     "execute",
+     "",
+     [
+      "M4_ReloadFinish.then"
+     ]
+    ],
+    [
+     "FurinaAmmo",
+     "0",
+     [
+      "TFP_FilledRounds.ReturnValue"
+     ]
+    ],
+    [
+     "then",
+     "",
+     [
+      "TFP_SetFurinaReserve.execute"
+     ]
+    ],
+    [
+     "Output_Get",
+     "0",
+     []
+    ]
+   ],
+   "depth": 1
+  },
+  "TFP_FilledRounds": {
+   "title": "int + int",
+   "pins": [
+    [
+     "A",
+     "",
+     [
+      "TFP_GetFurinaAmmo.FurinaAmmo"
+     ]
+    ],
+    [
+     "B",
+     "",
+     [
+      "TFP_GetFurinaReloadAmount.FurinaReloadAmount"
+     ]
+    ],
+    [
+     "ReturnValue",
+     "",
+     [
+      "M4_FillMagazine.FurinaAmmo"
+     ]
+    ]
+   ],
+   "depth": 1
+  },
+  "TFP_SetFurinaReserve": {
+   "title": "Set FurinaReserve",
+   "pins": [
+    [
+     "execute",
+     "",
+     [
+      "M4_FillMagazine.then"
+     ]
+    ],
+    [
+     "FurinaReserve",
+     "0",
+     [
+      "TFP_ReserveAfter.ReturnValue"
+     ]
+    ],
+    [
+     "then",
+     "",
+     [
+      "M4_ReloadDone.execute"
+     ]
+    ],
+    [
+     "Output_Get",
+     "0",
+     []
+    ]
+   ],
+   "depth": 1
+  },
+  "TFP_ReserveAfter": {
+   "title": "int - int",
+   "pins": [
+    [
+     "A",
+     "",
+     [
+      "TFP_GetFurinaReserve.FurinaReserve"
+     ]
+    ],
+    [
+     "B",
+     "",
+     [
+      "TFP_GetFurinaReloadAmount.FurinaReloadAmount"
+     ]
+    ],
+    [
+     "ReturnValue",
+     "",
+     [
+      "TFP_SetFurinaReserve.FurinaReserve"
+     ]
+    ]
+   ],
+   "depth": 1
+  },
+  "K2Node_FP_ReloadMontage": {
+   "title": "Montage_Play",
+   "pins": [
+    [
+     "execute",
+     "",
+     [
+      "M4_ReloadTimer.then"
+     ]
+    ],
+    [
+     "self",
+     "",
+     [
+      "K2Node_FP_ReloadAnimInst.ReturnValue"
+     ]
+    ],
+    [
+     "MontageToPlay",
+     "/Game/Furina/FP/Anim/AM_Furina_FP_Reload.AM_Furina_FP_Reload",
+     []
+    ],
+    [
+     "InPlayRate",
+     "1.000000",
+     []
+    ],
+    [
+     "ReturnValueType",
+     "MontageLength",
+     []
+    ],
+    [
+     "InTimeToStartMontageAt",
+     "0.000000",
+     []
+    ],
+    [
+     "bStopAllMontages",
+     "true",
+     []
+    ],
+    [
+     "then",
+     "",
+     [
+      "K2Node_FP_ReloadRifle.execute"
+     ]
+    ],
+    [
+     "ReturnValue",
+     "0.0",
+     []
+    ]
+   ],
+   "depth": 1
+  },
+  "K2Node_FP_ReloadAnimInst": {
+   "title": "GetAnimInstance",
+   "pins": [
+    [
+     "self",
+     "",
+     [
+      "K2Node_FP_GetMesh4.FurinaMesh"
+     ]
+    ],
+    [
+     "ReturnValue",
+     "",
+     [
+      "K2Node_FP_ReloadMontage.self"
+     ]
+    ]
+   ],
+   "depth": 2
+  },
+  "K2Node_FPT_DoCrouch": {
+   "title": "Crouch",
+   "pins": [
+    [
+     "execute",
+     "",
+     [
+      "K2Node_FPT_CrB.else"
+     ]
+    ],
+    [
+     "self",
+     "",
+     [
+      "K2Node_Self_0.self"
+     ]
+    ]
+   ],
+   "depth": 2
+  },
+  "TFP_MagRoom": {
+   "title": "int - int",
+   "pins": [
+    [
+     "A",
+     "20",
+     []
+    ],
+    [
+     "B",
+     "",
+     [
+      "TFP_GetFurinaAmmo.FurinaAmmo"
+     ]
+    ],
+    [
+     "ReturnValue",
+     "",
+     [
+      "TFP_Transfer.A"
+     ]
+    ]
+   ],
+   "depth": 2
+  },
+  "M4_FlashSpawn": {
+   "title": "BeginDeferredActorSpawnFromClass",
+   "pins": [
+    [
+     "execute",
+     "",
+     [
+      "M4_SetFurinaAmmo.then"
+     ]
+    ],
+    [
+     "ActorClass",
+     "/Game/Furina/M4/BP_M4Flash.BP_M4Flash_C",
+     []
+    ],
+    [
+     "SpawnTransform",
+     "",
+     [
+      "M4_FlashTransform.ReturnValue"
+     ]
+    ],
+    [
+     "CollisionHandlingOverride",
+     "AlwaysSpawn",
+     []
+    ],
+    [
+     "Owner",
+     "",
+     [
+      "K2Node_Self_0.self"
+     ]
+    ],
+    [
+     "TransformScaleMethod",
+     "MultiplyWithRoot",
+     []
+    ],
+    [
+     "then",
+     "",
+     [
+      "M4_FlashFinish.execute"
+     ]
+    ],
+    [
+     "ReturnValue",
+     "",
+     [
+      "M4_FlashFinish.Actor"
+     ]
+    ]
+   ],
+   "depth": 2
+  },
+  "K2Node_FPT_DoStand": {
+   "title": "UnCrouch",
+   "pins": [
+    [
+     "execute",
+     "",
+     [
+      "K2Node_FPT_CrB.then"
+     ]
+    ],
+    [
+     "self",
+     "",
+     [
+      "K2Node_Self_0.self"
+     ]
+    ]
+   ],
+   "depth": 2
+  },
+  "K2Node_FPT_TimerOnT": {
+   "title": "Is Timer Active by Function Name",
+   "pins": [
+    [
+     "Object",
+     "",
+     [
+      "K2Node_Self_0.self"
+     ]
+    ],
+    [
+     "FunctionName",
+     "FurinaRifleShot",
+     []
+    ],
+    [
+     "ReturnValue",
+     "false",
+     [
+      "K2Node_FPT_NoTimerT.A"
+     ]
+    ]
+   ],
+   "depth": 2
+  },
+  "TFP_GetFurinaReserve": {
+   "title": "Get FurinaReserve",
+   "pins": [
+    [
+     "FurinaReserve",
+     "0",
+     [
+      "TFP_Transfer.B",
+      "TFP_ReserveAfter.A",
+      "TFP_HasReserve.A"
+     ]
+    ]
+   ],
+   "depth": 2
+  },
+  "TFP_GetFurinaAmmo": {
+   "title": "Get FurinaAmmo",
+   "pins": [
+    [
+     "FurinaAmmo",
+     "0",
+     [
+      "TFP_MagRoom.B",
+      "TFP_FilledRounds.A"
+     ]
+    ]
+   ],
+   "depth": 2
+  },
+  "M4_Ready": {
+   "title": "AND Boolean",
+   "pins": [
+    [
+     "A",
+     "false",
+     [
+      "M4_HasAmmo.ReturnValue"
+     ]
+    ],
+    [
+     "B",
+     "false",
+     [
+      "M4_NotReloading.ReturnValue"
+     ]
+    ],
+    [
+     "ReturnValue",
+     "false",
+     [
+      "M4_FireGate.Condition"
+     ]
+    ]
+   ],
+   "depth": 2
+  },
+  "TFP_HasReserve": {
+   "title": "integer > integer",
+   "pins": [
+    [
+     "A",
+     "",
+     [
+      "TFP_GetFurinaReserve.FurinaReserve"
+     ]
+    ],
+    [
+     "ReturnValue",
+     "",
+     [
+      "TFP_ReloadHasAmmo.A"
+     ]
+    ]
+   ],
+   "depth": 2
+  },
+  "K2Node_FP_ReloadRifle": {
+   "title": "PlayAnimation",
+   "pins": [
+    [
+     "execute",
+     "",
+     [
+      "K2Node_FP_ReloadMontage.then"
+     ]
+    ],
+    [
+     "self",
+     "",
+     [
+      "K2Node_FP_GetRifle4.FurinaRifle"
+     ]
+    ],
+    [
+     "bLooping",
+     "false",
+     []
+    ]
+   ],
+   "depth": 2
+  },
+  "M4_GetFurinaAmmo": {
+   "title": "Get FurinaAmmo",
+   "pins": [
+    [
+     "FurinaAmmo",
+     "0",
+     [
+      "M4_HasAmmo.A",
+      "M4_UseRound.A",
+      "M4_NotFull.A"
+     ]
+    ]
+   ],
+   "depth": 2
+  },
+  "M4_CaseSpawn": {
+   "title": "BeginDeferredActorSpawnFromClass",
+   "pins": [
+    [
+     "execute",
+     "",
+     [
+      "FNS_SetUseShell.then"
+     ]
+    ],
+    [
+     "ActorClass",
+     "/Game/Furina/M4/BP_223Case.BP_223Case_C",
+     []
+    ],
+    [
+     "SpawnTransform",
+     "",
+     [
+      "M4_CaseTransform.ReturnValue"
+     ]
+    ],
+    [
+     "CollisionHandlingOverride",
+     "AlwaysSpawn",
+     []
+    ],
+    [
+     "Owner",
+     "",
+     [
+      "K2Node_Self_0.self"
+     ]
+    ],
+    [
+     "TransformScaleMethod",
+     "MultiplyWithRoot",
+     []
+    ],
+    [
+     "then",
+     "",
+     [
+      "M4_CaseFinish.execute"
+     ]
+    ],
+    [
+     "ReturnValue",
+     "",
+     [
+      "M4_CaseFinish.Actor"
+     ]
+    ]
+   ],
+   "depth": 2
+  },
+  "M4_UseRound": {
+   "title": "int - int",
+   "pins": [
+    [
+     "A",
+     "",
+     [
+      "M4_GetFurinaAmmo.FurinaAmmo"
+     ]
+    ],
+    [
+     "B",
+     "1",
+     []
+    ],
+    [
+     "ReturnValue",
+     "",
+     [
+      "M4_SetFurinaAmmo.FurinaAmmo"
+     ]
+    ]
+   ],
+   "depth": 3
+  },
+  "M4_FlashTransform": {
+   "title": "MakeTransform",
+   "pins": [
+    [
+     "Location",
+     "0, 0, 0",
+     [
+      "M4_FlashPoint.ReturnValue"
+     ]
+    ],
+    [
+     "Rotation",
+     "0, 0, 0",
+     [
+      "M4_FlashRotation.ReturnValue"
+     ]
+    ],
+    [
+     "Scale",
+     "1.000000,1.000000,1.000000",
+     []
+    ],
+    [
+     "ReturnValue",
+     "",
+     [
+      "M4_FlashSpawn.SpawnTransform",
+      "M4_FlashFinish.SpawnTransform"
+     ]
+    ]
+   ],
+   "depth": 3
+  },
+  "K2Node_FP_GetMesh4": {
+   "title": "Get FurinaMesh",
+   "pins": [
+    [
+     "FurinaMesh",
+     "",
+     [
+      "K2Node_FP_ReloadAnimInst.self"
+     ]
+    ]
+   ],
+   "depth": 3
+  },
+  "K2Node_FPT_CrB": {
+   "title": "Branch",
+   "pins": [
+    [
+     "execute",
+     "",
+     [
+      "FPN_ProneCHalf.then"
+     ]
+    ],
+    [
+     "Condition",
+     "true",
+     [
+      "K2Node_FPT_CrNow.ReturnValue"
+     ]
+    ],
+    [
+     "then",
+     "",
+     [
+      "K2Node_FPT_DoStand.execute"
+     ]
+    ],
+    [
+     "else",
+     "",
+     [
+      "K2Node_FPT_DoCrouch.execute"
+     ]
+    ]
+   ],
+   "depth": 3
+  },
+  "M4_FlashFinish": {
+   "title": "FinishSpawningActor",
+   "pins": [
+    [
+     "execute",
+     "",
+     [
+      "M4_FlashSpawn.then"
+     ]
+    ],
+    [
+     "Actor",
+     "",
+     [
+      "M4_FlashSpawn.ReturnValue"
+     ]
+    ],
+    [
+     "SpawnTransform",
+     "",
+     [
+      "M4_FlashTransform.ReturnValue"
+     ]
+    ],
+    [
+     "TransformScaleMethod",
+     "MultiplyWithRoot",
+     []
+    ],
+    [
+     "then",
+     "",
+     [
+      "FNS_SparkSpawn.execute"
+     ]
+    ]
+   ],
+   "depth": 3
+  },
+  "M4_CaseTransform": {
+   "title": "MakeTransform",
+   "pins": [
+    [
+     "Location",
+     "0, 0, 0",
+     [
+      "M4_CasePoint.ReturnValue"
+     ]
+    ],
+    [
+     "Rotation",
+     "0, 0, 0",
+     [
+      "M4_CaseRotation.ReturnValue"
+     ]
+    ],
+    [
+     "Scale",
+     "1.000000,1.000000,1.000000",
+     []
+    ],
+    [
+     "ReturnValue",
+     "",
+     [
+      "M4_CaseSpawn.SpawnTransform",
+      "M4_CaseFinish.SpawnTransform"
+     ]
+    ]
+   ],
+   "depth": 3
+  },
+  "FNS_SetUseShell": {
+   "title": "Set Niagara Variable (Bool)",
+   "pins": [
+    [
+     "execute",
+     "",
+     [
+      "FNS_SetGlobalScale.then"
+     ]
+    ],
+    [
+     "self",
+     "",
+     [
+      "FNS_SparkSpawn.ReturnValue"
+     ]
+    ],
+    [
+     "InVariableName",
+     "Use Bullet Shell",
+     []
+    ],
+    [
+     "InValue",
+     "false",
+     []
+    ],
+    [
+     "then",
+     "",
+     [
+      "M4_CaseSpawn.execute"
+     ]
+    ]
+   ],
+   "depth": 3
+  },
+  "K2Node_FPT_NoTimerT": {
+   "title": "NOT Boolean",
+   "pins": [
+    [
+     "A",
+     "false",
+     [
+      "K2Node_FPT_TimerOnT.ReturnValue"
+     ]
+    ],
+    [
+     "ReturnValue",
+     "false",
+     [
+      "K2Node_FPT_RelCond.B"
+     ]
+    ]
+   ],
+   "depth": 3
+  },
+  "M4_SetFurinaAmmo": {
+   "title": "Set FurinaAmmo",
+   "pins": [
+    [
+     "execute",
+     "",
+     [
+      "FPN_ShotCountInc.then"
+     ]
+    ],
+    [
+     "FurinaAmmo",
+     "0",
+     [
+      "M4_UseRound.ReturnValue"
+     ]
+    ],
+    [
+     "then",
+     "",
+     [
+      "M4_FlashSpawn.execute"
+     ]
+    ],
+    [
+     "Output_Get",
+     "0",
+     []
+    ]
+   ],
+   "depth": 3
+  },
+  "K2Node_FP_GetRifle4": {
+   "title": "Get FurinaRifle",
+   "pins": [
+    [
+     "FurinaRifle",
+     "",
+     [
+      "K2Node_FP_ReloadRifle.self"
+     ]
+    ]
+   ],
+   "depth": 3
+  },
+  "M4_FireGate": {
+   "title": "Branch",
+   "pins": [
+    [
+     "execute",
+     "",
+     [
+      "K2Node_FPF_CanB.then"
+     ]
+    ],
+    [
+     "Condition",
+     "true",
+     [
+      "M4_Ready.ReturnValue"
+     ]
+    ],
+    [
+     "then",
+     "",
+     [
+      "K2Node_FPF_FaceAim.execute"
+     ]
+    ]
+   ],
+   "depth": 3
+  },
+  "M4_CaseFinish": {
+   "title": "FinishSpawningActor",
+   "pins": [
+    [
+     "execute",
+     "",
+     [
+      "M4_CaseSpawn.then"
+     ]
+    ],
+    [
+     "Actor",
+     "",
+     [
+      "M4_CaseSpawn.ReturnValue"
+     ]
+    ],
+    [
+     "SpawnTransform",
+     "",
+     [
+      "M4_CaseTransform.ReturnValue"
+     ]
+    ],
+    [
+     "TransformScaleMethod",
+     "MultiplyWithRoot",
+     []
+    ]
+   ],
+   "depth": 3
+  },
+  "M4_HasAmmo": {
+   "title": "integer > integer",
+   "pins": [
+    [
+     "A",
+     "",
+     [
+      "M4_GetFurinaAmmo.FurinaAmmo"
+     ]
+    ],
+    [
+     "ReturnValue",
+     "",
+     [
+      "M4_Ready.A"
+     ]
+    ]
+   ],
+   "depth": 3
+  },
+  "M4_CasePoint": {
+   "title": "TransformLocation",
+   "pins": [
+    [
+     "T",
+     "",
+     [
+      "K2Node_FPF_RifleXf.ReturnValue"
+     ]
+    ],
+    [
+     "Location",
+     "-2.2,-3.5,4.5",
+     []
+    ],
+    [
+     "ReturnValue",
+     "0, 0, 0",
+     [
+      "M4_CaseTransform.Location"
+     ]
+    ]
+   ],
+   "depth": 4
+  },
+  "K2Node_FPF_FaceAim": {
+   "title": "Set Actor Rotation",
+   "pins": [
+    [
+     "execute",
+     "",
+     [
+      "M4_FireGate.then"
+     ]
+    ],
+    [
+     "NewRotation",
+     "0, 0, 0",
+     [
+      "K2Node_FPF_MakeYaw.ReturnValue"
+     ]
+    ],
+    [
+     "bTeleportPhysics",
+     "false",
+     []
+    ],
+    [
+     "then",
+     "",
+     [
+      "K2Node_FPF_Kick.execute"
+     ]
+    ],
+    [
+     "ReturnValue",
+     "false",
+     []
+    ]
+   ],
+   "depth": 4
+  },
+  "FPN_ShotCountInc": {
+   "title": "Set FurinaShotCount",
+   "pins": [
+    [
+     "execute",
+     "",
+     [
+      "K2Node_FPF_Recoil.then"
+     ]
+    ],
+    [
+     "FurinaShotCount",
+     "0",
+     [
+      "FPN_ShotCountAdd.ReturnValue"
+     ]
+    ],
+    [
+     "then",
+     "",
+     [
+      "M4_SetFurinaAmmo.execute"
+     ]
+    ],
+    [
+     "Output_Get",
+     "0",
+     []
+    ]
+   ],
+   "depth": 4
+  },
+  "M4_CaseRotation": {
+   "title": "Get World Rotation",
+   "pins": [
+    [
+     "self",
+     "",
+     [
+      "K2Node_FPF_GetRifleM.FurinaRifle"
+     ]
+    ],
+    [
+     "ReturnValue",
+     "0, 0, 0",
+     [
+      "M4_CaseTransform.Rotation"
+     ]
+    ]
+   ],
+   "depth": 4
+  },
+  "FPN_ProneCHalf": {
+   "title": "Set CrouchedHalfHeight",
+   "pins": [
+    [
+     "execute",
+     "",
+     [
+      "FPN_ProneCWant.then"
+     ]
+    ],
+    [
+     "CrouchedHalfHeight",
+     "58.0",
+     []
+    ],
+    [
+     "self",
+     "",
+     [
+      "K2Node_FPT_GetCMCT.CharacterMovement"
+     ]
+    ],
+    [
+     "then",
+     "",
+     [
+      "K2Node_FPT_CrB.execute"
+     ]
+    ],
+    [
+     "Output_Get",
+     "0.0",
+     []
+    ]
+   ],
+   "depth": 4
+  },
+  "M4_FlashPoint": {
+   "title": "TransformLocation",
+   "pins": [
+    [
+     "T",
+     "",
+     [
+      "K2Node_FPF_RifleXf.ReturnValue"
+     ]
+    ],
+    [
+     "Location",
+     "-0.0,40.515,3.383",
+     []
+    ],
+    [
+     "ReturnValue",
+     "0, 0, 0",
+     [
+      "M4_FlashTransform.Location",
+      "FNS_SparkSpawn.Location"
+     ]
+    ]
+   ],
+   "depth": 4
+  },
+  "K2Node_FPF_CanB": {
+   "title": "Branch",
+   "pins": [
+    [
+     "execute",
+     "",
+     [
+      "K2Node_FPF_SprintB.else"
+     ]
+    ],
+    [
+     "Condition",
+     "true",
+     [
+      "K2Node_FPF_CanFire.ReturnValue"
+     ]
+    ],
+    [
+     "then",
+     "",
+     [
+      "M4_FireGate.execute"
+     ]
+    ]
+   ],
+   "depth": 4
+  },
+  "M4_FlashRotation": {
+   "title": "Get World Rotation",
+   "pins": [
+    [
+     "self",
+     "",
+     [
+      "K2Node_FPF_GetRifleM.FurinaRifle"
+     ]
+    ],
+    [
+     "ReturnValue",
+     "0, 0, 0",
+     [
+      "M4_FlashTransform.Rotation",
+      "FNS_ComposeYaw.B"
+     ]
+    ]
+   ],
+   "depth": 4
+  },
+  "FNS_SetGlobalScale": {
+   "title": "Set Niagara Variable (Float)",
+   "pins": [
+    [
+     "execute",
+     "",
+     [
+      "FNS_SparkSpawn.then"
+     ]
+    ],
+    [
+     "self",
+     "",
+     [
+      "FNS_SparkSpawn.ReturnValue"
+     ]
+    ],
+    [
+     "InVariableName",
+     "Global Scale",
+     []
+    ],
+    [
+     "InValue",
+     "0.2",
+     []
+    ],
+    [
+     "then",
+     "",
+     [
+      "FNS_SetUseShell.execute"
+     ]
+    ]
+   ],
+   "depth": 4
+  },
+  "K2Node_FPT_RelCond": {
+   "title": "AND Boolean",
+   "pins": [
+    [
+     "A",
+     "false",
+     [
+      "K2Node_FPT_AutoOnT.ReturnValue"
+     ]
+    ],
+    [
+     "B",
+     "false",
+     [
+      "K2Node_FPT_NoTimerT.ReturnValue"
+     ]
+    ],
+    [
+     "ReturnValue",
+     "false",
+     [
+      "K2Node_FPT_RelB.Condition"
+     ]
+    ]
+   ],
+   "depth": 4
+  },
+  "FNS_SparkSpawn": {
+   "title": "SpawnSystemAtLocation",
+   "pins": [
+    [
+     "execute",
+     "",
+     [
+      "M4_FlashFinish.then"
+     ]
+    ],
+    [
+     "SystemTemplate",
+     "/Game/NiagaraExamples/FX_Weapons/MuzzleFlashes/NS_MuzzleFlas",
+     []
+    ],
+    [
+     "Location",
+     "0, 0, 0",
+     [
+      "M4_FlashPoint.ReturnValue"
+     ]
+    ],
+    [
+     "Rotation",
+     "0, 0, 0",
+     [
+      "FNS_ComposeYaw.ReturnValue"
+     ]
+    ],
+    [
+     "Scale",
+     "1.000000,1.000000,1.000000",
+     []
+    ],
+    [
+     "bAutoDestroy",
+     "true",
+     []
+    ],
+    [
+     "bAutoActivate",
+     "true",
+     []
+    ],
+    [
+     "PoolingMethod",
+     "None",
+     []
+    ],
+    [
+     "bPreCullCheck",
+     "true",
+     []
+    ],
+    [
+     "then",
+     "",
+     [
+      "FNS_SetGlobalScale.execute"
+     ]
+    ],
+    [
+     "ReturnValue",
+     "",
+     [
+      "FNS_SetGlobalScale.self",
+      "FNS_SetUseShell.self"
+     ]
+    ]
+   ],
+   "depth": 4
+  },
+  "K2Node_FPT_CrNow": {
+   "title": "IsCrouching",
+   "pins": [
+    [
+     "self",
+     "",
+     [
+      "K2Node_FPT_GetCMCT.CharacterMovement"
+     ]
+    ],
+    [
+     "ReturnValue",
+     "false",
+     [
+      "K2Node_FPT_CrB.Condition"
+     ]
+    ]
+   ],
+   "depth": 4
+  }
+ }
+}

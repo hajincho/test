@@ -1,0 +1,3216 @@
+{
+ "nodes": {
+  "K2Node_FPAC_AdsIA": {
+   "title": "EnhancedInputAction IA_FurinaADS",
+   "pins": [
+    [
+     "Triggered",
+     "",
+     [
+      "K2Node_FPAC_AdsToggle.execute"
+     ]
+    ],
+    [
+     "ActionValue",
+     "false",
+     []
+    ],
+    [
+     "InputAction",
+     "/Game/Furina/Input/IA_FurinaADS.IA_FurinaADS",
+     []
+    ]
+   ]
+  },
+  "K2Node_FPAC_GetAds": {
+   "title": "Get FurinaADS",
+   "pins": [
+    [
+     "FurinaADS",
+     "",
+     [
+      "K2Node_FPAC_AdsToggle.self",
+      "K2Node_FPAC_AdsIsOn.self"
+     ]
+    ]
+   ]
+  },
+  "K2Node_FPAC_GetWant": {
+   "title": "Get FurinaFPWanted",
+   "pins": [
+    [
+     "FurinaFPWanted",
+     "",
+     [
+      "K2Node_FPAC_WantIsOn.self",
+      "K2Node_FPAC_ForceFP.self",
+      "K2Node_FPAC_BackTP.self"
+     ]
+    ]
+   ]
+  },
+  "K2Node_FPAC_GetRestore": {
+   "title": "Get FurinaADSRestoreTP",
+   "pins": [
+    [
+     "FurinaADSRestoreTP",
+     "",
+     [
+      "K2Node_FPAC_MarkRestore.self",
+      "K2Node_FPAC_RestoreIsOn.self",
+      "K2Node_FPAC_ClearRestore.self"
+     ]
+    ]
+   ]
+  },
+  "K2Node_FPAC_GetCam": {
+   "title": "Get FPCamera",
+   "pins": [
+    [
+     "FPCamera",
+     "",
+     [
+      "K2Node_FPAC_Fov60.self",
+      "K2Node_FPAC_Fov85.self"
+     ]
+    ]
+   ]
+  },
+  "K2Node_FPAC_AdsToggle": {
+   "title": "ToggleActive",
+   "pins": [
+    [
+     "execute",
+     "",
+     [
+      "K2Node_FPAC_AdsIA.Triggered"
+     ]
+    ],
+    [
+     "self",
+     "",
+     [
+      "K2Node_FPAC_GetAds.FurinaADS"
+     ]
+    ],
+    [
+     "then",
+     "",
+     [
+      "K2Node_FPAC_AdsOn.execute"
+     ]
+    ]
+   ]
+  },
+  "K2Node_FPAC_AdsIsOn": {
+   "title": "IsActive",
+   "pins": [
+    [
+     "self",
+     "",
+     [
+      "K2Node_FPAC_GetAds.FurinaADS"
+     ]
+    ],
+    [
+     "ReturnValue",
+     "false",
+     [
+      "K2Node_FPAC_AdsOn.Condition"
+     ]
+    ]
+   ]
+  },
+  "K2Node_FPAC_AdsOn": {
+   "title": "Branch",
+   "pins": [
+    [
+     "execute",
+     "",
+     [
+      "K2Node_FPAC_AdsToggle.then"
+     ]
+    ],
+    [
+     "Condition",
+     "true",
+     [
+      "K2Node_FPAC_AdsIsOn.ReturnValue"
+     ]
+    ],
+    [
+     "then",
+     "",
+     [
+      "K2Node_FPAC_WasFP.execute"
+     ]
+    ],
+    [
+     "else",
+     "",
+     [
+      "K2Node_FPAC_NeedRestore.execute"
+     ]
+    ]
+   ]
+  },
+  "K2Node_FPAC_WantIsOn": {
+   "title": "IsActive",
+   "pins": [
+    [
+     "self",
+     "",
+     [
+      "K2Node_FPAC_GetWant.FurinaFPWanted"
+     ]
+    ],
+    [
+     "ReturnValue",
+     "false",
+     [
+      "K2Node_FPAC_WasFP.Condition"
+     ]
+    ]
+   ]
+  },
+  "K2Node_FPAC_WasFP": {
+   "title": "Branch",
+   "pins": [
+    [
+     "execute",
+     "",
+     [
+      "K2Node_FPAC_AdsOn.then"
+     ]
+    ],
+    [
+     "Condition",
+     "true",
+     [
+      "K2Node_FPAC_WantIsOn.ReturnValue"
+     ]
+    ],
+    [
+     "then",
+     "",
+     [
+      "K2Node_FPAC_Fov60.execute"
+     ]
+    ],
+    [
+     "else",
+     "",
+     [
+      "K2Node_FPAC_ForceFP.execute"
+     ]
+    ]
+   ]
+  },
+  "K2Node_FPAC_ForceFP": {
+   "title": "SetActive",
+   "pins": [
+    [
+     "execute",
+     "",
+     [
+      "K2Node_FPAC_WasFP.else"
+     ]
+    ],
+    [
+     "self",
+     "",
+     [
+      "K2Node_FPAC_GetWant.FurinaFPWanted"
+     ]
+    ],
+    [
+     "bNewActive",
+     "true",
+     []
+    ],
+    [
+     "bReset",
+     "false",
+     []
+    ],
+    [
+     "then",
+     "",
+     [
+      "K2Node_FPAC_MarkRestore.execute"
+     ]
+    ]
+   ]
+  },
+  "K2Node_FPAC_MarkRestore": {
+   "title": "SetActive",
+   "pins": [
+    [
+     "execute",
+     "",
+     [
+      "K2Node_FPAC_ForceFP.then"
+     ]
+    ],
+    [
+     "self",
+     "",
+     [
+      "K2Node_FPAC_GetRestore.FurinaADSRestoreTP"
+     ]
+    ],
+    [
+     "bNewActive",
+     "true",
+     []
+    ],
+    [
+     "bReset",
+     "false",
+     []
+    ],
+    [
+     "then",
+     "",
+     [
+      "K2Node_FPAC_Fov60.execute"
+     ]
+    ]
+   ]
+  },
+  "K2Node_FPAC_Fov60": {
+   "title": "SetFieldOfView",
+   "pins": [
+    [
+     "execute",
+     "",
+     [
+      "K2Node_FPAC_WasFP.then",
+      "K2Node_FPAC_MarkRestore.then"
+     ]
+    ],
+    [
+     "self",
+     "",
+     [
+      "K2Node_FPAC_GetCam.FPCamera"
+     ]
+    ],
+    [
+     "InFieldOfView",
+     "60.000000",
+     []
+    ]
+   ]
+  },
+  "K2Node_FPAC_RestoreIsOn": {
+   "title": "IsActive",
+   "pins": [
+    [
+     "self",
+     "",
+     [
+      "K2Node_FPAC_GetRestore.FurinaADSRestoreTP"
+     ]
+    ],
+    [
+     "ReturnValue",
+     "false",
+     [
+      "K2Node_FPAC_NeedRestore.Condition"
+     ]
+    ]
+   ]
+  },
+  "K2Node_FPAC_NeedRestore": {
+   "title": "Branch",
+   "pins": [
+    [
+     "execute",
+     "",
+     [
+      "K2Node_FPAC_AdsOn.else"
+     ]
+    ],
+    [
+     "Condition",
+     "true",
+     [
+      "K2Node_FPAC_RestoreIsOn.ReturnValue"
+     ]
+    ],
+    [
+     "then",
+     "",
+     [
+      "K2Node_FPAC_BackTP.execute"
+     ]
+    ],
+    [
+     "else",
+     "",
+     [
+      "K2Node_FPAC_Fov85.execute"
+     ]
+    ]
+   ]
+  },
+  "K2Node_FPAC_BackTP": {
+   "title": "SetActive",
+   "pins": [
+    [
+     "execute",
+     "",
+     [
+      "K2Node_FPAC_NeedRestore.then"
+     ]
+    ],
+    [
+     "self",
+     "",
+     [
+      "K2Node_FPAC_GetWant.FurinaFPWanted"
+     ]
+    ],
+    [
+     "bNewActive",
+     "false",
+     []
+    ],
+    [
+     "bReset",
+     "false",
+     []
+    ],
+    [
+     "then",
+     "",
+     [
+      "K2Node_FPAC_ClearRestore.execute"
+     ]
+    ]
+   ]
+  },
+  "K2Node_FPAC_ClearRestore": {
+   "title": "SetActive",
+   "pins": [
+    [
+     "execute",
+     "",
+     [
+      "K2Node_FPAC_BackTP.then"
+     ]
+    ],
+    [
+     "self",
+     "",
+     [
+      "K2Node_FPAC_GetRestore.FurinaADSRestoreTP"
+     ]
+    ],
+    [
+     "bNewActive",
+     "false",
+     []
+    ],
+    [
+     "bReset",
+     "false",
+     []
+    ],
+    [
+     "then",
+     "",
+     [
+      "K2Node_FPAC_Fov85.execute"
+     ]
+    ]
+   ]
+  },
+  "K2Node_FPAC_Fov85": {
+   "title": "SetFieldOfView",
+   "pins": [
+    [
+     "execute",
+     "",
+     [
+      "K2Node_FPAC_NeedRestore.else",
+      "K2Node_FPAC_ClearRestore.then"
+     ]
+    ],
+    [
+     "self",
+     "",
+     [
+      "K2Node_FPAC_GetCam.FPCamera"
+     ]
+    ],
+    [
+     "InFieldOfView",
+     "85.000000",
+     []
+    ]
+   ]
+  },
+  "K2Node_FPAC_ShIA": {
+   "title": "EnhancedInputAction IA_FurinaShoulder",
+   "pins": [
+    [
+     "Triggered",
+     "",
+     [
+      "K2Node_FPAC_ShOn.execute"
+     ]
+    ],
+    [
+     "Canceled",
+     "",
+     [
+      "K2Node_FPAC_ShOff.execute"
+     ]
+    ],
+    [
+     "Completed",
+     "",
+     [
+      "K2Node_FPAC_ShOff.execute"
+     ]
+    ],
+    [
+     "ActionValue",
+     "false",
+     []
+    ],
+    [
+     "InputAction",
+     "/Game/Furina/Input/IA_FurinaShoulder.IA_FurinaShoulder",
+     []
+    ]
+   ]
+  },
+  "K2Node_FPAC_GetSh": {
+   "title": "Get FurinaShoulder",
+   "pins": [
+    [
+     "FurinaShoulder",
+     "",
+     [
+      "K2Node_FPAC_ShOn.self",
+      "K2Node_FPAC_ShOff.self"
+     ]
+    ]
+   ]
+  },
+  "K2Node_FPAC_GetCMC": {
+   "title": "Get CharacterMovement",
+   "pins": [
+    [
+     "CharacterMovement",
+     "",
+     [
+      "K2Node_FPAC_ShOrientOff.self",
+      "K2Node_FPAC_ShOrientBack.self"
+     ]
+    ]
+   ]
+  },
+  "K2Node_FPAC_GetCam2": {
+   "title": "Get FPCamera",
+   "pins": [
+    [
+     "FPCamera",
+     "",
+     [
+      "K2Node_FPAC_CamIsOn.self"
+     ]
+    ]
+   ]
+  },
+  "K2Node_FPAC_ShOn": {
+   "title": "SetActive",
+   "pins": [
+    [
+     "execute",
+     "",
+     [
+      "K2Node_FPAC_ShIA.Triggered"
+     ]
+    ],
+    [
+     "self",
+     "",
+     [
+      "K2Node_FPAC_GetSh.FurinaShoulder"
+     ]
+    ],
+    [
+     "bNewActive",
+     "true",
+     []
+    ],
+    [
+     "bReset",
+     "false",
+     []
+    ],
+    [
+     "then",
+     "",
+     [
+      "K2Node_FPAC_ShYawOn.execute"
+     ]
+    ]
+   ]
+  },
+  "K2Node_FPAC_ShYawOn": {
+   "title": "Set bUseControllerRotationYaw",
+   "pins": [
+    [
+     "execute",
+     "",
+     [
+      "K2Node_FPAC_ShOn.then"
+     ]
+    ],
+    [
+     "bUseControllerRotationYaw",
+     "true",
+     []
+    ],
+    [
+     "then",
+     "",
+     [
+      "K2Node_FPAC_ShOrientOff.execute"
+     ]
+    ],
+    [
+     "Output_Get",
+     "false",
+     []
+    ]
+   ]
+  },
+  "K2Node_FPAC_ShOrientOff": {
+   "title": "Set bOrientRotationToMovement",
+   "pins": [
+    [
+     "execute",
+     "",
+     [
+      "K2Node_FPAC_ShYawOn.then"
+     ]
+    ],
+    [
+     "bOrientRotationToMovement",
+     "false",
+     []
+    ],
+    [
+     "self",
+     "",
+     [
+      "K2Node_FPAC_GetCMC.CharacterMovement"
+     ]
+    ],
+    [
+     "Output_Get",
+     "false",
+     []
+    ]
+   ]
+  },
+  "K2Node_FPAC_CamIsOn": {
+   "title": "IsActive",
+   "pins": [
+    [
+     "self",
+     "",
+     [
+      "K2Node_FPAC_GetCam2.FPCamera"
+     ]
+    ],
+    [
+     "ReturnValue",
+     "false",
+     [
+      "K2Node_FPAC_NotFP.A",
+      "K2Node_FPAC_ShYawBack.bUseControllerRotationYaw"
+     ]
+    ]
+   ]
+  },
+  "K2Node_FPAC_NotFP": {
+   "title": "NOT Boolean",
+   "pins": [
+    [
+     "A",
+     "false",
+     [
+      "K2Node_FPAC_CamIsOn.ReturnValue"
+     ]
+    ],
+    [
+     "ReturnValue",
+     "false",
+     [
+      "K2Node_FPAC_ShOrientBack.bOrientRotationToMovement"
+     ]
+    ]
+   ]
+  },
+  "K2Node_FPAC_ShOff": {
+   "title": "SetActive",
+   "pins": [
+    [
+     "execute",
+     "",
+     [
+      "K2Node_FPAC_ShIA.Completed",
+      "K2Node_FPAC_ShIA.Canceled"
+     ]
+    ],
+    [
+     "self",
+     "",
+     [
+      "K2Node_FPAC_GetSh.FurinaShoulder"
+     ]
+    ],
+    [
+     "bNewActive",
+     "false",
+     []
+    ],
+    [
+     "bReset",
+     "false",
+     []
+    ],
+    [
+     "then",
+     "",
+     [
+      "K2Node_FPAC_ShYawBack.execute"
+     ]
+    ]
+   ]
+  },
+  "K2Node_FPAC_ShYawBack": {
+   "title": "Set bUseControllerRotationYaw",
+   "pins": [
+    [
+     "execute",
+     "",
+     [
+      "K2Node_FPAC_ShOff.then"
+     ]
+    ],
+    [
+     "bUseControllerRotationYaw",
+     "false",
+     [
+      "K2Node_FPAC_CamIsOn.ReturnValue"
+     ]
+    ],
+    [
+     "then",
+     "",
+     [
+      "K2Node_FPAC_ShOrientBack.execute"
+     ]
+    ],
+    [
+     "Output_Get",
+     "false",
+     []
+    ]
+   ]
+  },
+  "K2Node_FPAC_ShOrientBack": {
+   "title": "Set bOrientRotationToMovement",
+   "pins": [
+    [
+     "execute",
+     "",
+     [
+      "K2Node_FPAC_ShYawBack.then"
+     ]
+    ],
+    [
+     "bOrientRotationToMovement",
+     "false",
+     [
+      "K2Node_FPAC_NotFP.ReturnValue"
+     ]
+    ],
+    [
+     "self",
+     "",
+     [
+      "K2Node_FPAC_GetCMC.CharacterMovement"
+     ]
+    ],
+    [
+     "Output_Get",
+     "false",
+     []
+    ]
+   ]
+  },
+  "K2Node_FPF_ShotCall": {
+   "title": "FurinaFireShot",
+   "pins": [
+    [
+     "execute",
+     "",
+     [
+      "K2Node_EnhancedInputAction_7.Started"
+     ]
+    ],
+    [
+     "then",
+     "",
+     [
+      "K2Node_CallFunction_33.execute"
+     ]
+    ]
+   ]
+  },
+  "K2Node_FPF_SprShHip": {
+   "title": "SelectFloat",
+   "pins": [
+    [
+     "A",
+     "0.5",
+     []
+    ],
+    [
+     "B",
+     "1.2",
+     []
+    ],
+    [
+     "bPickA",
+     "false",
+     [
+      "K2Node_CallFunction_93.ReturnValue"
+     ]
+    ],
+    [
+     "ReturnValue",
+     "0.0",
+     [
+      "K2Node_CallFunction_94.B"
+     ]
+    ]
+   ]
+  },
+  "K2Node_FPF_FireIA": {
+   "title": "EnhancedInputAction IA_FurinaFireRifle",
+   "pins": [
+    [
+     "Started",
+     "",
+     [
+      "K2Node_FPF_Auto.execute"
+     ]
+    ],
+    [
+     "Canceled",
+     "",
+     [
+      "K2Node_FPF_Stop.execute"
+     ]
+    ],
+    [
+     "Completed",
+     "",
+     [
+      "K2Node_FPF_Stop.execute"
+     ]
+    ],
+    [
+     "ActionValue",
+     "false",
+     []
+    ],
+    [
+     "InputAction",
+     "/Game/Furina/Input/IA_FurinaFireRifle.IA_FurinaFireRifle",
+     []
+    ]
+   ]
+  },
+  "K2Node_FPF_Self": {
+   "title": "셀프-레퍼런스",
+   "pins": [
+    [
+     "self",
+     "",
+     [
+      "K2Node_FPF_Spawn.Owner",
+      "K2Node_FPF_Spawn.Instigator"
+     ]
+    ]
+   ]
+  },
+  "K2Node_FPF_Auto": {
+   "title": "Set Timer by Function Name",
+   "pins": [
+    [
+     "execute",
+     "",
+     [
+      "K2Node_FPF_FireIA.Started"
+     ]
+    ],
+    [
+     "FunctionName",
+     "FurinaRifleShot",
+     []
+    ],
+    [
+     "Time",
+     "0.075000",
+     []
+    ],
+    [
+     "bLooping",
+     "true",
+     []
+    ],
+    [
+     "bMaxOncePerFrame",
+     "false",
+     []
+    ],
+    [
+     "InitialStartDelay",
+     "-0.074000",
+     []
+    ],
+    [
+     "InitialStartDelayVariance",
+     "0.000000",
+     []
+    ]
+   ]
+  },
+  "K2Node_FPF_Stop": {
+   "title": "Clear Timer by Function Name",
+   "pins": [
+    [
+     "execute",
+     "",
+     [
+      "K2Node_FPF_FireIA.Completed",
+      "K2Node_FPF_FireIA.Canceled"
+     ]
+    ],
+    [
+     "FunctionName",
+     "FurinaRifleShot",
+     []
+    ],
+    [
+     "then",
+     "",
+     [
+      "FPN_ShotCountReset.execute"
+     ]
+    ]
+   ]
+  },
+  "K2Node_FPF_Shot": {
+   "title": "FurinaRifleShot",
+   "pins": [
+    [
+     "then",
+     "",
+     [
+      "FPN_FireLastSet.execute"
+     ]
+    ]
+   ]
+  },
+  "K2Node_FPF_CtrlRot": {
+   "title": "GetControlRotation",
+   "pins": [
+    [
+     "ReturnValue",
+     "0, 0, 0",
+     [
+      "K2Node_FPF_BreakCtrl.InRot"
+     ]
+    ]
+   ]
+  },
+  "K2Node_FPF_BreakCtrl": {
+   "title": "BreakRotator",
+   "pins": [
+    [
+     "InRot",
+     "0, 0, 0",
+     [
+      "K2Node_FPF_CtrlRot.ReturnValue"
+     ]
+    ],
+    [
+     "Roll",
+     "0.0",
+     []
+    ],
+    [
+     "Pitch",
+     "0.0",
+     []
+    ],
+    [
+     "Yaw",
+     "0.0",
+     [
+      "K2Node_FPF_MakeYaw.Yaw"
+     ]
+    ]
+   ]
+  },
+  "K2Node_FPF_MakeYaw": {
+   "title": "MakeRotator",
+   "pins": [
+    [
+     "Roll",
+     "0.0",
+     []
+    ],
+    [
+     "Pitch",
+     "0.0",
+     []
+    ],
+    [
+     "Yaw",
+     "0.0",
+     [
+      "K2Node_FPF_BreakCtrl.Yaw"
+     ]
+    ],
+    [
+     "ReturnValue",
+     "0, 0, 0",
+     [
+      "K2Node_FPF_FaceAim.NewRotation"
+     ]
+    ]
+   ]
+  },
+  "K2Node_FPF_FaceAim": {
+   "title": "Set Actor Rotation",
+   "pins": [
+    [
+     "execute",
+     "",
+     [
+      "M4_FireGate.then"
+     ]
+    ],
+    [
+     "NewRotation",
+     "0, 0, 0",
+     [
+      "K2Node_FPF_MakeYaw.ReturnValue"
+     ]
+    ],
+    [
+     "bTeleportPhysics",
+     "false",
+     []
+    ],
+    [
+     "then",
+     "",
+     [
+      "K2Node_FPF_Kick.execute"
+     ]
+    ],
+    [
+     "ReturnValue",
+     "false",
+     []
+    ]
+   ]
+  },
+  "K2Node_FPF_GetMeshF": {
+   "title": "Get FurinaMesh",
+   "pins": [
+    [
+     "FurinaMesh",
+     "",
+     [
+      "K2Node_FPF_AnimInstF.self"
+     ]
+    ]
+   ]
+  },
+  "K2Node_FPF_AnimInstF": {
+   "title": "GetAnimInstance",
+   "pins": [
+    [
+     "self",
+     "",
+     [
+      "K2Node_FPF_GetMeshF.FurinaMesh"
+     ]
+    ],
+    [
+     "ReturnValue",
+     "",
+     [
+      "K2Node_FPF_Kick.self"
+     ]
+    ]
+   ]
+  },
+  "K2Node_FPF_Kick": {
+   "title": "Montage_Play",
+   "pins": [
+    [
+     "execute",
+     "",
+     [
+      "K2Node_FPF_FaceAim.then"
+     ]
+    ],
+    [
+     "self",
+     "",
+     [
+      "K2Node_FPF_AnimInstF.ReturnValue"
+     ]
+    ],
+    [
+     "MontageToPlay",
+     "/Game/Furina/FP/Anim/AM_Furina_FP_Fire.AM_Furina_FP_Fire",
+     []
+    ],
+    [
+     "InPlayRate",
+     "1.000000",
+     []
+    ],
+    [
+     "ReturnValueType",
+     "MontageLength",
+     []
+    ],
+    [
+     "InTimeToStartMontageAt",
+     "0.000000",
+     []
+    ],
+    [
+     "bStopAllMontages",
+     "true",
+     []
+    ],
+    [
+     "then",
+     "",
+     [
+      "K2Node_FPF_Bolt.execute"
+     ]
+    ],
+    [
+     "ReturnValue",
+     "0.0",
+     []
+    ]
+   ]
+  },
+  "K2Node_FPF_GetRifleF": {
+   "title": "Get FurinaRifle",
+   "pins": [
+    [
+     "FurinaRifle",
+     "",
+     [
+      "K2Node_FPF_Bolt.self"
+     ]
+    ]
+   ]
+  },
+  "K2Node_FPF_Bolt": {
+   "title": "PlayAnimation",
+   "pins": [
+    [
+     "execute",
+     "",
+     [
+      "K2Node_FPF_Kick.then"
+     ]
+    ],
+    [
+     "self",
+     "",
+     [
+      "K2Node_FPF_GetRifleF.FurinaRifle"
+     ]
+    ],
+    [
+     "bLooping",
+     "false",
+     []
+    ],
+    [
+     "then",
+     "",
+     [
+      "K2Node_FPF_Aim.execute"
+     ]
+    ]
+   ]
+  },
+  "K2Node_FPF_CamMgr": {
+   "title": "GetPlayerCameraManager",
+   "pins": [
+    [
+     "PlayerIndex",
+     "0",
+     []
+    ],
+    [
+     "ReturnValue",
+     "",
+     [
+      "K2Node_FPF_CamLoc.self",
+      "K2Node_FPF_CamRot.self"
+     ]
+    ]
+   ]
+  },
+  "K2Node_FPF_CamLoc": {
+   "title": "GetCameraLocation",
+   "pins": [
+    [
+     "self",
+     "",
+     [
+      "K2Node_FPF_CamMgr.ReturnValue"
+     ]
+    ],
+    [
+     "ReturnValue",
+     "0, 0, 0",
+     [
+      "K2Node_FPF_End.A",
+      "K2Node_FPF_Aim.Start"
+     ]
+    ]
+   ]
+  },
+  "K2Node_FPF_CamRot": {
+   "title": "GetCameraRotation",
+   "pins": [
+    [
+     "self",
+     "",
+     [
+      "K2Node_FPF_CamMgr.ReturnValue"
+     ]
+    ],
+    [
+     "ReturnValue",
+     "0, 0, 0",
+     [
+      "K2Node_FPF_CamFwd.InRot",
+      "K2Node_FPF_CamUp.InRot"
+     ]
+    ]
+   ]
+  },
+  "K2Node_FPF_CamFwd": {
+   "title": "GetForwardVector",
+   "pins": [
+    [
+     "InRot",
+     "0, 0, 0",
+     [
+      "K2Node_FPF_CamRot.ReturnValue"
+     ]
+    ],
+    [
+     "ReturnValue",
+     "0, 0, 0",
+     [
+      "K2Node_FPF_Far.A"
+     ]
+    ]
+   ]
+  },
+  "K2Node_FPF_CamUp": {
+   "title": "GetUpVector",
+   "pins": [
+    [
+     "InRot",
+     "0, 0, 0",
+     [
+      "K2Node_FPF_CamRot.ReturnValue"
+     ]
+    ],
+    [
+     "ReturnValue",
+     "0, 0, 0",
+     [
+      "K2Node_FPF_Lift.A"
+     ]
+    ]
+   ]
+  },
+  "K2Node_FPF_Far": {
+   "title": "vector * float",
+   "pins": [
+    [
+     "A",
+     "0, 0, 0",
+     [
+      "K2Node_FPF_CamFwd.ReturnValue"
+     ]
+    ],
+    [
+     "B",
+     "5000",
+     []
+    ],
+    [
+     "ReturnValue",
+     "0, 0, 0",
+     [
+      "K2Node_FPF_End.B"
+     ]
+    ]
+   ]
+  },
+  "K2Node_FPF_End": {
+   "title": "vector + vector",
+   "pins": [
+    [
+     "A",
+     "0, 0, 0",
+     [
+      "K2Node_FPF_CamLoc.ReturnValue"
+     ]
+    ],
+    [
+     "B",
+     "0, 0, 0",
+     [
+      "K2Node_FPF_Far.ReturnValue"
+     ]
+    ],
+    [
+     "ReturnValue",
+     "0, 0, 0",
+     [
+      "K2Node_FPF_Aim.End",
+      "K2Node_FPF_AimPt.B"
+     ]
+    ]
+   ]
+  },
+  "K2Node_FPF_Aim": {
+   "title": "Line Trace By Channel",
+   "pins": [
+    [
+     "execute",
+     "",
+     [
+      "K2Node_FPF_Bolt.then"
+     ]
+    ],
+    [
+     "Start",
+     "0, 0, 0",
+     [
+      "K2Node_FPF_CamLoc.ReturnValue"
+     ]
+    ],
+    [
+     "End",
+     "0, 0, 0",
+     [
+      "K2Node_FPF_End.ReturnValue"
+     ]
+    ],
+    [
+     "TraceChannel",
+     "TraceTypeQuery1",
+     []
+    ],
+    [
+     "bTraceComplex",
+     "false",
+     []
+    ],
+    [
+     "DrawDebugType",
+     "None",
+     []
+    ],
+    [
+     "bIgnoreSelf",
+     "true",
+     []
+    ],
+    [
+     "TraceColor",
+     "(R=1.000000,G=0.000000,B=0.000000,A=1.000000)",
+     []
+    ],
+    [
+     "TraceHitColor",
+     "(R=0.000000,G=1.000000,B=0.000000,A=1.000000)",
+     []
+    ],
+    [
+     "DrawTime",
+     "5.000000",
+     []
+    ],
+    [
+     "then",
+     "",
+     [
+      "K2Node_FPF_Spawn.execute"
+     ]
+    ],
+    [
+     "OutHit",
+     "",
+     [
+      "K2Node_FPF_BreakHit.Hit"
+     ]
+    ],
+    [
+     "ReturnValue",
+     "false",
+     [
+      "K2Node_FPF_AimPt.bPickA"
+     ]
+    ]
+   ]
+  },
+  "K2Node_FPF_BreakHit": {
+   "title": "BreakHitResult",
+   "pins": [
+    [
+     "Hit",
+     "",
+     [
+      "K2Node_FPF_Aim.OutHit"
+     ]
+    ],
+    [
+     "bBlockingHit",
+     "false",
+     []
+    ],
+    [
+     "bInitialOverlap",
+     "false",
+     []
+    ],
+    [
+     "Time",
+     "0.0",
+     []
+    ],
+    [
+     "Distance",
+     "0.0",
+     []
+    ],
+    [
+     "Location",
+     "0, 0, 0",
+     []
+    ],
+    [
+     "ImpactPoint",
+     "0, 0, 0",
+     [
+      "K2Node_FPF_AimPt.A"
+     ]
+    ],
+    [
+     "Normal",
+     "0, 0, 0",
+     []
+    ],
+    [
+     "ImpactNormal",
+     "0, 0, 0",
+     []
+    ],
+    [
+     "HitBoneName",
+     "None",
+     []
+    ],
+    [
+     "BoneName",
+     "None",
+     []
+    ],
+    [
+     "HitItem",
+     "0",
+     []
+    ],
+    [
+     "ElementIndex",
+     "0",
+     []
+    ],
+    [
+     "FaceIndex",
+     "0",
+     []
+    ],
+    [
+     "TraceStart",
+     "0, 0, 0",
+     []
+    ],
+    [
+     "TraceEnd",
+     "0, 0, 0",
+     []
+    ]
+   ]
+  },
+  "K2Node_FPF_AimPt": {
+   "title": "SelectVector",
+   "pins": [
+    [
+     "A",
+     "0, 0, 0",
+     [
+      "K2Node_FPF_BreakHit.ImpactPoint"
+     ]
+    ],
+    [
+     "B",
+     "0, 0, 0",
+     [
+      "K2Node_FPF_End.ReturnValue"
+     ]
+    ],
+    [
+     "bPickA",
+     "false",
+     [
+      "K2Node_FPF_Aim.ReturnValue"
+     ]
+    ],
+    [
+     "ReturnValue",
+     "0, 0, 0",
+     [
+      "FPN_AimFinal.B"
+     ]
+    ]
+   ]
+  },
+  "K2Node_FPF_GetRifleM": {
+   "title": "Get FurinaRifle",
+   "pins": [
+    [
+     "FurinaRifle",
+     "",
+     [
+      "K2Node_FPF_RifleXf.self",
+      "M4_FlashRotation.self",
+      "M4_CaseRotation.self"
+     ]
+    ]
+   ]
+  },
+  "K2Node_FPF_RifleXf": {
+   "title": "Get World Transform",
+   "pins": [
+    [
+     "self",
+     "",
+     [
+      "K2Node_FPF_GetRifleM.FurinaRifle"
+     ]
+    ],
+    [
+     "ReturnValue",
+     "",
+     [
+      "K2Node_FPF_Muzzle.T",
+      "M4_FlashPoint.T",
+      "M4_CasePoint.T"
+     ]
+    ]
+   ]
+  },
+  "K2Node_FPF_Muzzle": {
+   "title": "TransformLocation",
+   "pins": [
+    [
+     "T",
+     "",
+     [
+      "K2Node_FPF_RifleXf.ReturnValue"
+     ]
+    ],
+    [
+     "Location",
+     "-0.0,40.515,3.383",
+     []
+    ],
+    [
+     "ReturnValue",
+     "0, 0, 0",
+     [
+      "K2Node_FPF_ToAim.B",
+      "K2Node_FPF_ShotXf.Location"
+     ]
+    ]
+   ]
+  },
+  "K2Node_FPF_ToAim": {
+   "title": "vector - vector",
+   "pins": [
+    [
+     "A",
+     "0, 0, 0",
+     [
+      "FPN_AimFinal.ReturnValue"
+     ]
+    ],
+    [
+     "B",
+     "0, 0, 0",
+     [
+      "K2Node_FPF_Muzzle.ReturnValue"
+     ]
+    ],
+    [
+     "ReturnValue",
+     "0, 0, 0",
+     [
+      "K2Node_FPF_Dir0.A",
+      "FPN_AimDist.A"
+     ]
+    ]
+   ]
+  },
+  "K2Node_FPF_Dir0": {
+   "title": "Normalize",
+   "pins": [
+    [
+     "A",
+     "0, 0, 0",
+     [
+      "K2Node_FPF_ToAim.ReturnValue"
+     ]
+    ],
+    [
+     "Tolerance",
+     "0.000100",
+     []
+    ],
+    [
+     "ReturnValue",
+     "0, 0, 0",
+     [
+      "K2Node_FPF_DirZ.A"
+     ]
+    ]
+   ]
+  },
+  "K2Node_FPF_Lift": {
+   "title": "vector * float",
+   "pins": [
+    [
+     "A",
+     "0, 0, 0",
+     [
+      "K2Node_FPF_CamUp.ReturnValue"
+     ]
+    ],
+    [
+     "B",
+     "0.0",
+     [
+      "FPN_AimElev.ReturnValue"
+     ]
+    ],
+    [
+     "ReturnValue",
+     "0, 0, 0",
+     [
+      "K2Node_FPF_DirZ.B"
+     ]
+    ]
+   ]
+  },
+  "K2Node_FPF_DirZ": {
+   "title": "vector + vector",
+   "pins": [
+    [
+     "A",
+     "0, 0, 0",
+     [
+      "K2Node_FPF_Dir0.ReturnValue"
+     ]
+    ],
+    [
+     "B",
+     "0, 0, 0",
+     [
+      "K2Node_FPF_Lift.ReturnValue"
+     ]
+    ],
+    [
+     "ReturnValue",
+     "0, 0, 0",
+     [
+      "K2Node_FPF_Cone.ConeDir"
+     ]
+    ]
+   ]
+  },
+  "K2Node_FPF_GetAdsF": {
+   "title": "Get FurinaADS",
+   "pins": [
+    [
+     "FurinaADS",
+     "",
+     [
+      "K2Node_FPF_AdsOnF.self"
+     ]
+    ]
+   ]
+  },
+  "K2Node_FPF_GetShF": {
+   "title": "Get FurinaShoulder",
+   "pins": [
+    [
+     "FurinaShoulder",
+     "",
+     [
+      "K2Node_FPF_ShOnF.self",
+      "K2Node_FPF_AutoSh.self"
+     ]
+    ]
+   ]
+  },
+  "K2Node_FPF_AdsOnF": {
+   "title": "IsActive",
+   "pins": [
+    [
+     "self",
+     "",
+     [
+      "K2Node_FPF_GetAdsF.FurinaADS"
+     ]
+    ],
+    [
+     "ReturnValue",
+     "false",
+     [
+      "K2Node_FPF_Mult.bPickA",
+      "K2Node_FPF_AdsGain.bPickA",
+      "K2Node_FPF_AimingF.A"
+     ]
+    ]
+   ]
+  },
+  "K2Node_FPF_ShOnF": {
+   "title": "IsActive",
+   "pins": [
+    [
+     "self",
+     "",
+     [
+      "K2Node_FPF_GetShF.FurinaShoulder"
+     ]
+    ],
+    [
+     "ReturnValue",
+     "false",
+     [
+      "K2Node_FPF_MulShHip.bPickA",
+      "K2Node_FPF_AimingF.B",
+      "FPN_ShErrAnd.A"
+     ]
+    ]
+   ]
+  },
+  "K2Node_FPF_MulShHip": {
+   "title": "SelectFloat",
+   "pins": [
+    [
+     "A",
+     "1.05",
+     []
+    ],
+    [
+     "B",
+     "1.1",
+     []
+    ],
+    [
+     "bPickA",
+     "false",
+     [
+      "K2Node_FPF_ShOnF.ReturnValue"
+     ]
+    ],
+    [
+     "ReturnValue",
+     "0.0",
+     [
+      "K2Node_FPF_Mult.B"
+     ]
+    ]
+   ]
+  },
+  "K2Node_FPF_Mult": {
+   "title": "SelectFloat",
+   "pins": [
+    [
+     "A",
+     "0.9",
+     []
+    ],
+    [
+     "B",
+     "0.0",
+     [
+      "K2Node_FPF_MulShHip.ReturnValue"
+     ]
+    ],
+    [
+     "bPickA",
+     "false",
+     [
+      "K2Node_FPF_AdsOnF.ReturnValue"
+     ]
+    ],
+    [
+     "ReturnValue",
+     "0.0",
+     [
+      "K2Node_FPF_Mult2.A",
+      "K2Node_FPF_SprBase.A"
+     ]
+    ]
+   ]
+  },
+  "K2Node_FPF_SprBase": {
+   "title": "float * float",
+   "pins": [
+    [
+     "A",
+     "0.0",
+     [
+      "K2Node_FPF_Mult.ReturnValue"
+     ]
+    ],
+    [
+     "B",
+     "0.0636619560161118",
+     []
+    ],
+    [
+     "ReturnValue",
+     "0.0",
+     [
+      "K2Node_FPF_Half.A"
+     ]
+    ]
+   ]
+  },
+  "K2Node_FPF_MyVel": {
+   "title": "GetVelocity",
+   "pins": [
+    [
+     "ReturnValue",
+     "0, 0, 0",
+     [
+      "K2Node_FPF_MySpd.A"
+     ]
+    ]
+   ]
+  },
+  "K2Node_FPF_MySpd": {
+   "title": "Vector Length",
+   "pins": [
+    [
+     "A",
+     "0, 0, 0",
+     [
+      "K2Node_FPF_MyVel.ReturnValue"
+     ]
+    ],
+    [
+     "ReturnValue",
+     "0.0",
+     [
+      "K2Node_FPF_MovePen.A"
+     ]
+    ]
+   ]
+  },
+  "K2Node_FPF_MovePen": {
+   "title": "float * float",
+   "pins": [
+    [
+     "A",
+     "0.0",
+     [
+      "K2Node_FPF_MySpd.ReturnValue"
+     ]
+    ],
+    [
+     "B",
+     "0.0015",
+     []
+    ],
+    [
+     "ReturnValue",
+     "0.0",
+     [
+      "K2Node_FPF_Half.B"
+     ]
+    ]
+   ]
+  },
+  "K2Node_FPF_Half": {
+   "title": "float + float",
+   "pins": [
+    [
+     "A",
+     "0.0",
+     [
+      "K2Node_FPF_SprBase.ReturnValue"
+     ]
+    ],
+    [
+     "B",
+     "1.000000",
+     [
+      "K2Node_FPF_MovePen.ReturnValue"
+     ]
+    ],
+    [
+     "ReturnValue",
+     "0.0",
+     [
+      "K2Node_FPF_CrouchCone.A"
+     ]
+    ]
+   ]
+  },
+  "K2Node_FPF_Cone": {
+   "title": "RandomUnitVectorInConeInDegrees",
+   "pins": [
+    [
+     "ConeDir",
+     "0, 0, 0",
+     [
+      "K2Node_FPF_DirZ.ReturnValue"
+     ]
+    ],
+    [
+     "ConeHalfAngleInDegrees",
+     "0.0",
+     [
+      "FPN_ShErrAdd.ReturnValue"
+     ]
+    ],
+    [
+     "ReturnValue",
+     "0, 0, 0",
+     [
+      "K2Node_FPF_ShotRot.X"
+     ]
+    ]
+   ]
+  },
+  "K2Node_FPF_ShotRot": {
+   "title": "MakeRotFromX",
+   "pins": [
+    [
+     "X",
+     "0, 0, 0",
+     [
+      "K2Node_FPF_Cone.ReturnValue"
+     ]
+    ],
+    [
+     "ReturnValue",
+     "0, 0, 0",
+     [
+      "K2Node_FPF_ShotXf.Rotation"
+     ]
+    ]
+   ]
+  },
+  "K2Node_FPF_ShotXf": {
+   "title": "MakeTransform",
+   "pins": [
+    [
+     "Location",
+     "0, 0, 0",
+     [
+      "K2Node_FPF_Muzzle.ReturnValue"
+     ]
+    ],
+    [
+     "Rotation",
+     "0, 0, 0",
+     [
+      "K2Node_FPF_ShotRot.ReturnValue"
+     ]
+    ],
+    [
+     "Scale",
+     "1.000000,1.000000,1.000000",
+     []
+    ],
+    [
+     "ReturnValue",
+     "",
+     [
+      "K2Node_FPF_Spawn.SpawnTransform"
+     ]
+    ]
+   ]
+  },
+  "K2Node_FPF_Spawn": {
+   "title": "SpawnActor BP Furina Bullet",
+   "pins": [
+    [
+     "execute",
+     "",
+     [
+      "K2Node_FPF_Aim.then"
+     ]
+    ],
+    [
+     "Class",
+     "/Game/Furina/FP/BP_FurinaBullet.BP_FurinaBullet_C",
+     []
+    ],
+    [
+     "SpawnTransform",
+     "",
+     [
+      "K2Node_FPF_ShotXf.ReturnValue"
+     ]
+    ],
+    [
+     "CollisionHandlingOverride",
+     "AlwaysSpawn",
+     []
+    ],
+    [
+     "TransformScaleMethod",
+     "MultiplyWithRoot",
+     []
+    ],
+    [
+     "Owner",
+     "",
+     [
+      "K2Node_FPF_Self.self"
+     ]
+    ],
+    [
+     "FurinaDamage",
+     "0",
+     []
+    ],
+    [
+     "Instigator",
+     "",
+     [
+      "K2Node_FPF_Self.self"
+     ]
+    ],
+    [
+     "then",
+     "",
+     [
+      "K2Node_FPF_Recoil.execute"
+     ]
+    ]
+   ]
+  },
+  "K2Node_FPF_RecV0": {
+   "title": "RandomFloatInRange",
+   "pins": [
+    [
+     "Min",
+     "0.4048",
+     []
+    ],
+    [
+     "Max",
+     "0.5152000000000001",
+     []
+    ],
+    [
+     "ReturnValue",
+     "0.0",
+     [
+      "K2Node_FPF_RecV.A"
+     ]
+    ]
+   ]
+  },
+  "K2Node_FPF_RecH0": {
+   "title": "RandomFloatInRange",
+   "pins": [
+    [
+     "Min",
+     "-0.18",
+     []
+    ],
+    [
+     "Max",
+     "0.22",
+     []
+    ],
+    [
+     "ReturnValue",
+     "0.0",
+     [
+      "K2Node_FPF_RecH.A"
+     ]
+    ]
+   ]
+  },
+  "K2Node_FPF_RecV": {
+   "title": "float * float",
+   "pins": [
+    [
+     "A",
+     "0.0",
+     [
+      "K2Node_FPF_RecV0.ReturnValue"
+     ]
+    ],
+    [
+     "B",
+     "0.0",
+     [
+      "FPN_RecGainInit.ReturnValue"
+     ]
+    ],
+    [
+     "ReturnValue",
+     "0.0",
+     [
+      "K2Node_FPF_NewPitch.B"
+     ]
+    ]
+   ]
+  },
+  "K2Node_FPF_RecH": {
+   "title": "float * float",
+   "pins": [
+    [
+     "A",
+     "0.0",
+     [
+      "K2Node_FPF_RecH0.ReturnValue"
+     ]
+    ],
+    [
+     "B",
+     "0.0",
+     [
+      "FPN_RecGainInit.ReturnValue"
+     ]
+    ],
+    [
+     "ReturnValue",
+     "0.0",
+     [
+      "K2Node_FPF_NewYaw.B"
+     ]
+    ]
+   ]
+  },
+  "K2Node_FPF_CtrlRot2": {
+   "title": "GetControlRotation",
+   "pins": [
+    [
+     "ReturnValue",
+     "0, 0, 0",
+     [
+      "K2Node_FPF_BreakCtrl2.InRot"
+     ]
+    ]
+   ]
+  },
+  "K2Node_FPF_BreakCtrl2": {
+   "title": "BreakRotator",
+   "pins": [
+    [
+     "InRot",
+     "0, 0, 0",
+     [
+      "K2Node_FPF_CtrlRot2.ReturnValue"
+     ]
+    ],
+    [
+     "Roll",
+     "0.0",
+     [
+      "K2Node_FPF_MakeRec.Roll"
+     ]
+    ],
+    [
+     "Pitch",
+     "0.0",
+     [
+      "K2Node_FPF_NewPitch.A"
+     ]
+    ],
+    [
+     "Yaw",
+     "0.0",
+     [
+      "K2Node_FPF_NewYaw.A"
+     ]
+    ]
+   ]
+  },
+  "K2Node_FPF_NewPitch": {
+   "title": "float + float",
+   "pins": [
+    [
+     "A",
+     "0.0",
+     [
+      "K2Node_FPF_BreakCtrl2.Pitch"
+     ]
+    ],
+    [
+     "B",
+     "1.000000",
+     [
+      "K2Node_FPF_RecV.ReturnValue"
+     ]
+    ],
+    [
+     "ReturnValue",
+     "0.0",
+     [
+      "K2Node_FPF_MakeRec.Pitch"
+     ]
+    ]
+   ]
+  },
+  "K2Node_FPF_NewYaw": {
+   "title": "float + float",
+   "pins": [
+    [
+     "A",
+     "0.0",
+     [
+      "K2Node_FPF_BreakCtrl2.Yaw"
+     ]
+    ],
+    [
+     "B",
+     "1.000000",
+     [
+      "K2Node_FPF_RecH.ReturnValue"
+     ]
+    ],
+    [
+     "ReturnValue",
+     "0.0",
+     [
+      "K2Node_FPF_MakeRec.Yaw"
+     ]
+    ]
+   ]
+  },
+  "K2Node_FPF_MakeRec": {
+   "title": "MakeRotator",
+   "pins": [
+    [
+     "Roll",
+     "0.0",
+     [
+      "K2Node_FPF_BreakCtrl2.Roll"
+     ]
+    ],
+    [
+     "Pitch",
+     "0.0",
+     [
+      "K2Node_FPF_NewPitch.ReturnValue"
+     ]
+    ],
+    [
+     "Yaw",
+     "0.0",
+     [
+      "K2Node_FPF_NewYaw.ReturnValue"
+     ]
+    ],
+    [
+     "ReturnValue",
+     "0, 0, 0",
+     [
+      "K2Node_FPF_Recoil.NewRotation"
+     ]
+    ]
+   ]
+  },
+  "K2Node_FPF_MyCtrl": {
+   "title": "GetController",
+   "pins": [
+    [
+     "ReturnValue",
+     "",
+     [
+      "K2Node_FPF_Recoil.self"
+     ]
+    ]
+   ]
+  },
+  "K2Node_FPF_Recoil": {
+   "title": "SetControlRotation",
+   "pins": [
+    [
+     "execute",
+     "",
+     [
+      "K2Node_FPF_Spawn.then"
+     ]
+    ],
+    [
+     "self",
+     "",
+     [
+      "K2Node_FPF_MyCtrl.ReturnValue"
+     ]
+    ],
+    [
+     "NewRotation",
+     "0, 0, 0",
+     [
+      "K2Node_FPF_MakeRec.ReturnValue"
+     ]
+    ],
+    [
+     "then",
+     "",
+     [
+      "FPN_ShotCountInc.execute"
+     ]
+    ]
+   ]
+  },
+  "K2Node_FPF_GetCMCF": {
+   "title": "Get CharacterMovement",
+   "pins": [
+    [
+     "CharacterMovement",
+     "",
+     [
+      "K2Node_FPF_CrouchOnF.self"
+     ]
+    ]
+   ]
+  },
+  "K2Node_FPF_CrouchOnF": {
+   "title": "IsCrouching",
+   "pins": [
+    [
+     "self",
+     "",
+     [
+      "K2Node_FPF_GetCMCF.CharacterMovement"
+     ]
+    ],
+    [
+     "ReturnValue",
+     "false",
+     [
+      "K2Node_FPF_CrouchMul.bPickA"
+     ]
+    ]
+   ]
+  },
+  "K2Node_FPF_CrouchMul": {
+   "title": "SelectFloat",
+   "pins": [
+    [
+     "A",
+     "0.9",
+     []
+    ],
+    [
+     "B",
+     "1.0",
+     []
+    ],
+    [
+     "bPickA",
+     "false",
+     [
+      "K2Node_FPF_CrouchOnF.ReturnValue"
+     ]
+    ],
+    [
+     "ReturnValue",
+     "0.0",
+     [
+      "FPN_ProneMul.B"
+     ]
+    ]
+   ]
+  },
+  "K2Node_FPF_Mult2": {
+   "title": "float * float",
+   "pins": [
+    [
+     "A",
+     "",
+     [
+      "K2Node_FPF_Mult.ReturnValue"
+     ]
+    ],
+    [
+     "B",
+     "",
+     [
+      "FPN_ProneMul.ReturnValue"
+     ]
+    ],
+    [
+     "ReturnValue",
+     "",
+     [
+      "K2Node_FPF_RecG1.A"
+     ]
+    ]
+   ]
+  },
+  "K2Node_FPF_AdsGain": {
+   "title": "SelectFloat",
+   "pins": [
+    [
+     "A",
+     "1.8",
+     []
+    ],
+    [
+     "B",
+     "1.0",
+     []
+    ],
+    [
+     "bPickA",
+     "false",
+     [
+      "K2Node_FPF_AdsOnF.ReturnValue"
+     ]
+    ],
+    [
+     "ReturnValue",
+     "0.0",
+     [
+      "K2Node_FPF_RecG1.B"
+     ]
+    ]
+   ]
+  },
+  "K2Node_FPF_GetFPCamR": {
+   "title": "Get FPCamera",
+   "pins": [
+    [
+     "FPCamera",
+     "",
+     [
+      "K2Node_FPF_FPOnR.self"
+     ]
+    ]
+   ]
+  },
+  "K2Node_FPF_FPOnR": {
+   "title": "IsActive",
+   "pins": [
+    [
+     "self",
+     "",
+     [
+      "K2Node_FPF_GetFPCamR.FPCamera"
+     ]
+    ],
+    [
+     "ReturnValue",
+     "false",
+     [
+      "K2Node_FPF_TpGain.bPickA"
+     ]
+    ]
+   ]
+  },
+  "K2Node_FPF_TpGain": {
+   "title": "SelectFloat",
+   "pins": [
+    [
+     "A",
+     "1.0",
+     []
+    ],
+    [
+     "B",
+     "0.3",
+     []
+    ],
+    [
+     "bPickA",
+     "false",
+     [
+      "K2Node_FPF_FPOnR.ReturnValue"
+     ]
+    ],
+    [
+     "ReturnValue",
+     "0.0",
+     [
+      "K2Node_FPF_RecGain.B"
+     ]
+    ]
+   ]
+  },
+  "K2Node_FPF_RecG1": {
+   "title": "float * float",
+   "pins": [
+    [
+     "A",
+     "",
+     [
+      "K2Node_FPF_Mult2.ReturnValue"
+     ]
+    ],
+    [
+     "B",
+     "",
+     [
+      "K2Node_FPF_AdsGain.ReturnValue"
+     ]
+    ],
+    [
+     "ReturnValue",
+     "",
+     [
+      "K2Node_FPF_RecGain.A"
+     ]
+    ]
+   ]
+  },
+  "K2Node_FPF_RecGain": {
+   "title": "float * float",
+   "pins": [
+    [
+     "A",
+     "",
+     [
+      "K2Node_FPF_RecG1.ReturnValue"
+     ]
+    ],
+    [
+     "B",
+     "",
+     [
+      "K2Node_FPF_TpGain.ReturnValue"
+     ]
+    ],
+    [
+     "ReturnValue",
+     "",
+     [
+      "FPN_RecGainInit.A"
+     ]
+    ]
+   ]
+  },
+  "K2Node_FPF_FVel": {
+   "title": "GetVelocity",
+   "pins": [
+    [
+     "ReturnValue",
+     "0, 0, 0",
+     [
+      "K2Node_FPF_FSpd.A"
+     ]
+    ]
+   ]
+  },
+  "K2Node_FPF_FSpd": {
+   "title": "Vector Length",
+   "pins": [
+    [
+     "A",
+     "0, 0, 0",
+     [
+      "K2Node_FPF_FVel.ReturnValue"
+     ]
+    ],
+    [
+     "ReturnValue",
+     "0.0",
+     [
+      "K2Node_FPF_Fast.A",
+      "K2Node_FPF_Slow.A"
+     ]
+    ]
+   ]
+  },
+  "K2Node_FPF_Fast": {
+   "title": "float > float",
+   "pins": [
+    [
+     "A",
+     "",
+     [
+      "K2Node_FPF_FSpd.ReturnValue"
+     ]
+    ],
+    [
+     "B",
+     "220.0",
+     []
+    ],
+    [
+     "ReturnValue",
+     "",
+     [
+      "K2Node_FPF_SprintingF.A"
+     ]
+    ]
+   ]
+  },
+  "K2Node_FPF_Slow": {
+   "title": "float < float",
+   "pins": [
+    [
+     "A",
+     "",
+     [
+      "K2Node_FPF_FSpd.ReturnValue"
+     ]
+    ],
+    [
+     "B",
+     "2.0",
+     []
+    ],
+    [
+     "ReturnValue",
+     "",
+     [
+      "K2Node_FPF_CanFire.B"
+     ]
+    ]
+   ]
+  },
+  "K2Node_FPF_AimingF": {
+   "title": "OR Boolean",
+   "pins": [
+    [
+     "A",
+     "false",
+     [
+      "K2Node_FPF_AdsOnF.ReturnValue"
+     ]
+    ],
+    [
+     "B",
+     "false",
+     [
+      "K2Node_FPF_ShOnF.ReturnValue"
+     ]
+    ],
+    [
+     "ReturnValue",
+     "false",
+     [
+      "K2Node_FPF_NotAimF.A",
+      "K2Node_FPF_CanFire.A"
+     ]
+    ]
+   ]
+  },
+  "K2Node_FPF_NotAimF": {
+   "title": "NOT Boolean",
+   "pins": [
+    [
+     "A",
+     "false",
+     [
+      "K2Node_FPF_AimingF.ReturnValue"
+     ]
+    ],
+    [
+     "ReturnValue",
+     "false",
+     [
+      "K2Node_FPF_SprintingF.B"
+     ]
+    ]
+   ]
+  },
+  "K2Node_FPF_SprintingF": {
+   "title": "AND Boolean",
+   "pins": [
+    [
+     "A",
+     "false",
+     [
+      "K2Node_FPF_Fast.ReturnValue"
+     ]
+    ],
+    [
+     "B",
+     "false",
+     [
+      "K2Node_FPF_NotAimF.ReturnValue"
+     ]
+    ],
+    [
+     "ReturnValue",
+     "false",
+     [
+      "K2Node_FPF_SprintB.Condition"
+     ]
+    ]
+   ]
+  },
+  "K2Node_FPF_CanFire": {
+   "title": "OR Boolean",
+   "pins": [
+    [
+     "A",
+     "false",
+     [
+      "K2Node_FPF_AimingF.ReturnValue"
+     ]
+    ],
+    [
+     "B",
+     "false",
+     [
+      "K2Node_FPF_Slow.ReturnValue"
+     ]
+    ],
+    [
+     "ReturnValue",
+     "false",
+     [
+      "K2Node_FPF_CanB.Condition"
+     ]
+    ]
+   ]
+  },
+  "K2Node_FPF_SprintB": {
+   "title": "Branch",
+   "pins": [
+    [
+     "execute",
+     "",
+     [
+      "FPN_SpecialFireGate.then"
+     ]
+    ],
+    [
+     "Condition",
+     "true",
+     [
+      "K2Node_FPF_SprintingF.ReturnValue"
+     ]
+    ],
+    [
+     "then",
+     "",
+     [
+      "K2Node_FPF_AutoSh.execute"
+     ]
+    ],
+    [
+     "else",
+     "",
+     [
+      "K2Node_FPF_CanB.execute"
+     ]
+    ]
+   ]
+  },
+  "K2Node_FPF_CanB": {
+   "title": "Branch",
+   "pins": [
+    [
+     "execute",
+     "",
+     [
+      "K2Node_FPF_SprintB.else"
+     ]
+    ],
+    [
+     "Condition",
+     "true",
+     [
+      "K2Node_FPF_CanFire.ReturnValue"
+     ]
+    ],
+    [
+     "then",
+     "",
+     [
+      "M4_FireGate.execute"
+     ]
+    ]
+   ]
+  },
+  "K2Node_FPF_GetShAutoF": {
+   "title": "Get FurinaShoulderAuto",
+   "pins": [
+    [
+     "FurinaShoulderAuto",
+     "",
+     [
+      "K2Node_FPF_AutoFlag.self"
+     ]
+    ]
+   ]
+  },
+  "K2Node_FPF_AutoSh": {
+   "title": "SetActive",
+   "pins": [
+    [
+     "execute",
+     "",
+     [
+      "K2Node_FPF_SprintB.then"
+     ]
+    ],
+    [
+     "self",
+     "",
+     [
+      "K2Node_FPF_GetShF.FurinaShoulder"
+     ]
+    ],
+    [
+     "bNewActive",
+     "true",
+     []
+    ],
+    [
+     "bReset",
+     "false",
+     []
+    ],
+    [
+     "then",
+     "",
+     [
+      "K2Node_FPF_AutoFlag.execute"
+     ]
+    ]
+   ]
+  },
+  "K2Node_FPF_AutoFlag": {
+   "title": "SetActive",
+   "pins": [
+    [
+     "execute",
+     "",
+     [
+      "K2Node_FPF_AutoSh.then"
+     ]
+    ],
+    [
+     "self",
+     "",
+     [
+      "K2Node_FPF_GetShAutoF.FurinaShoulderAuto"
+     ]
+    ],
+    [
+     "bNewActive",
+     "true",
+     []
+    ],
+    [
+     "bReset",
+     "false",
+     []
+    ],
+    [
+     "then",
+     "",
+     [
+      "K2Node_FPF_AutoYaw.execute"
+     ]
+    ]
+   ]
+  },
+  "K2Node_FPF_GetCMCY": {
+   "title": "Get CharacterMovement",
+   "pins": [
+    [
+     "CharacterMovement",
+     "",
+     [
+      "K2Node_FPF_AutoOrient.self"
+     ]
+    ]
+   ]
+  },
+  "K2Node_FPF_AutoYaw": {
+   "title": "Set bUseControllerRotationYaw",
+   "pins": [
+    [
+     "execute",
+     "",
+     [
+      "K2Node_FPF_AutoFlag.then"
+     ]
+    ],
+    [
+     "bUseControllerRotationYaw",
+     "true",
+     []
+    ],
+    [
+     "then",
+     "",
+     [
+      "K2Node_FPF_AutoOrient.execute"
+     ]
+    ],
+    [
+     "Output_Get",
+     "false",
+     []
+    ]
+   ]
+  },
+  "K2Node_FPF_AutoOrient": {
+   "title": "Set bOrientRotationToMovement",
+   "pins": [
+    [
+     "execute",
+     "",
+     [
+      "K2Node_FPF_AutoYaw.then"
+     ]
+    ],
+    [
+     "bOrientRotationToMovement",
+     "false",
+     []
+    ],
+    [
+     "self",
+     "",
+     [
+      "K2Node_FPF_GetCMCY.CharacterMovement"
+     ]
+    ],
+    [
+     "Output_Get",
+     "false",
+     []
+    ]
+   ]
+  },
+  "K2Node_FPF_CrouchCone": {
+   "title": "float * float",
+   "pins": [
+    [
+     "A",
+     "",
+     [
+      "K2Node_FPF_Half.ReturnValue"
+     ]
+    ],
+    [
+     "B",
+     "",
+     [
+      "FPN_ProneMul.ReturnValue"
+     ]
+    ],
+    [
+     "ReturnValue",
+     "",
+     [
+      "FPN_ShErrAdd.A"
+     ]
+    ]
+   ]
+  },
+  "FPN_ShotCountGet": {
+   "title": "Get FurinaShotCount",
+   "pins": [
+    [
+     "FurinaShotCount",
+     "0",
+     [
+      "FPN_ShotCountLess.A",
+      "FPN_ShotCountAdd.A"
+     ]
+    ]
+   ]
+  },
+  "FPN_ShotCountLess": {
+   "title": "integer < integer",
+   "pins": [
+    [
+     "A",
+     "",
+     [
+      "FPN_ShotCountGet.FurinaShotCount"
+     ]
+    ],
+    [
+     "B",
+     "4",
+     []
+    ],
+    [
+     "ReturnValue",
+     "",
+     [
+      "FPN_InitRecoil.bPickA"
+     ]
+    ]
+   ]
+  },
+  "FPN_ShotCountInc": {
+   "title": "Set FurinaShotCount",
+   "pins": [
+    [
+     "execute",
+     "",
+     [
+      "K2Node_FPF_Recoil.then"
+     ]
+    ],
+    [
+     "FurinaShotCount",
+     "0",
+     [
+      "FPN_ShotCountAdd.ReturnValue"
+     ]
+    ],
+    [
+     "then",
+     "",
+     [
+      "M4_SetFurinaAmmo.execute"
+     ]
+    ],
+    [
+     "Output_Get",
+     "0",
+     []
+    ]
+   ]
+  },
+  "FPN_ShotCountAdd": {
+   "title": "int + int",
+   "pins": [
+    [
+     "A",
+     "",
+     [
+      "FPN_ShotCountGet.FurinaShotCount"
+     ]
+    ],
+    [
+     "B",
+     "1",
+     []
+    ],
+    [
+     "ReturnValue",
+     "",
+     [
+      "FPN_ShotCountInc.FurinaShotCount"
+     ]
+    ]
+   ]
+  },
+  "FPN_ShotCountReset": {
+   "title": "Set FurinaShotCount",
+   "pins": [
+    [
+     "execute",
+     "",
+     [
+      "K2Node_FPF_Stop.then"
+     ]
+    ],
+    [
+     "FurinaShotCount",
+     "0",
+     []
+    ],
+    [
+     "Output_Get",
+     "0",
+     []
+    ]
+   ]
+  },
+  "FPN_ShErrNotAds": {
+   "title": "NOT Boolean",
+   "pins": [
+    [
+     "A",
+     "false",
+     [
+      "K2Node_FPF_AdsOnF.ReturnValue"
+     ]
+    ],
+    [
+     "ReturnValue",
+     "false",
+     [
+      "FPN_ShErrAnd.B"
+     ]
+    ]
+   ]
+  },
+  "FPN_ShErrAnd": {
+   "title": "AND Boolean",
+   "pins": [
+    [
+     "A",
+     "false",
+     [
+      "K2Node_FPF_ShOnF.ReturnValue"
+     ]
+    ],
+    [
+     "B",
+     "false",
+     [
+      "FPN_ShErrNotAds.ReturnValue"
+     ]
+    ],
+    [
+     "ReturnValue",
+     "false",
+     []
+    ]
+   ]
+  },
+  "FPN_ShErrSel": {
+   "title": "SelectFloat",
+   "pins": [
+    [
+     "A",
+     "0.572939",
+     []
+    ],
+    [
+     "B",
+     "1.718358",
+     []
+    ],
+    [
+     "bPickA",
+     "false",
+     [
+      "K2Node_FPF_ShOnF.ReturnValue"
+     ]
+    ],
+    [
+     "ReturnValue",
+     "0.0",
+     [
+      "FPN_ShErrOuter.B"
+     ]
+    ]
+   ]
+  },
+  "FPN_ShErrAdd": {
+   "title": "float + float",
+   "pins": [
+    [
+     "A",
+     "",
+     [
+      "K2Node_FPF_CrouchCone.ReturnValue"
+     ]
+    ],
+    [
+     "B",
+     "",
+     [
+      "FPN_ShErrOuter.ReturnValue"
+     ]
+    ],
+    [
+     "ReturnValue",
+     "",
+     [
+      "K2Node_FPF_Cone.ConeHalfAngleInDegrees"
+     ]
+    ]
+   ]
+  },
+  "FPN_ShErrOuter": {
+   "title": "SelectFloat",
+   "pins": [
+    [
+     "A",
+     "0.0",
+     []
+    ],
+    [
+     "B",
+     "0.0",
+     [
+      "FPN_ShErrSel.ReturnValue"
+     ]
+    ],
+    [
+     "bPickA",
+     "false",
+     [
+      "K2Node_FPF_AdsOnF.ReturnValue"
+     ]
+    ],
+    [
+     "ReturnValue",
+     "0.0",
+     [
+      "FPN_ShErrAdd.B"
+     ]
+    ]
+   ]
+  }
+ },
+ "count": 126
+}
