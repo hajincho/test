@@ -1,0 +1,24 @@
+{
+ "loc": [
+  -3099.7169828985334,
+  -111.09240173526584,
+  -145.1409613296208
+ ],
+ "UsingRail?": "False",
+ "UseRail?": "ERR ActorComponent: Failed to find property 'UseRail?' for attri",
+ "WasUsingRail?": "False",
+ "HitActor": "None",
+ "HitComponent": "ERR ActorComponent: Failed to find property 'HitComponent' for a",
+ "Spline": "None",
+ "PreviousSpline": "None",
+ "HitObject?": "ERR ActorComponent: Failed to find property 'HitObject?' for att",
+ "HitSurface?": "ERR ActorComponent: Failed to find property 'HitSurface?' for at",
+ "RailOverlap?": "False",
+ "SplineMeshComponent": "ERR ActorComponent: Failed to find property 'SplineMeshComponent",
+ "RailJumpActive?": "False",
+ "UsingZipline?": "False",
+ "FurinaAmmo": 20,
+ "FurinaReserve": 594,
+ "FurinaReloading": false,
+ "hitactor_class": null
+}

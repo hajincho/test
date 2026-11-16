@@ -510,3 +510,11 @@ Control Rig이 들어 올리는 회전은 컴포넌트 +X축 기준 음수 각�
 - **측정 결과(정조준, 예측과 일치):** 네 손가락의 관절 2·3·끝이 핸드가드 중심축에서 3.44~3.63cm로, 이전 1.2~2.5cm에서 표면 바깥으로 나왔습니다. 고해상도 캡처에서도 손가락이 핸드가드를 뚫지 않고 아래쪽 옆면에 붙습니다.
 - **한계:** 손가락 반대편 끝은 핸드가드에 가려져 캡처로 확인하지 못했습니다. 손가락 밑마디를 크게 틀어(최대 62°) 손바닥 쪽 살이 약간 늘어나 보일 수 있습니다. 화면 확인은 허리 자세만 했고 정조준·견착에서는 측정값만 확인했습니다. 손 모양은 푸리나 손 크기 기준이라 핸드가드가 굵게(지름 5.7cm) 모델링된 만큼 손가락이 완전히 감싸지는 못하고 아래~오른쪽 아래까지만 닿습니다.
 - **도구:** `ue_finger_probe.py`, `ue_fp_hand_shot.py`, `ue_cr_dump.py`, `ue_rigunit_find.py`, `Scripts/Blender/colt_handguard_section.py`.
+
+## 2026-11-16 Underground Tunnel 맵에 푸리나 배치 + 고품질 Colt + GitHub 분할 푸시
+- **시작 맵:** `Config/DefaultEngine.ini`의 `GameDefaultMap`/`EditorStartupMap`을 `/Game/UndergroundTunnel/Maps/Demonstration`으로 바꿨습니다(백업 `DefaultEngine.ini.bak_before_tunnel`). 이 프로젝트에는 GameMode가 없어 ExampleLevel처럼 캐릭터 액터의 Auto Possess Player 0으로 조작합니다.
+- **푸리나 배치(`ue_place_furina.py`):** 에디터 월드에서는 라인 트레이스가 아무것도 맞히지 못해 `py ue_place_furina.py replace x y z [yaw]`(직접 좌표)를 추가했습니다. 현재 `Furina_Player`는 (-3100, -110, -150)에 있고 선로 위 바닥(z≈-241)으로 내려앉습니다. 레벨을 저장했습니다.
+- **터널에서 사격이 막히던 문제(`ue_clear_rail_beginplay.py`):** `Grind_Rail_Component_BP`의 `UsingRail?`가 첫 프레임부터 true였습니다(레일이 없는 곳에서는 컴포넌트 틱이 꺼져 있어 리셋되지 않음). 그래서 `FurinaSpecial`이 켜져 1인칭 전환과 사격이 막혔습니다. `ThirdPersonCharacter_BP`의 BeginPlay(근접 클립 명령 뒤)에 `UsingRail? = false`를 넣었습니다. 컴포넌트가 먼저 BeginPlay를 하므로 이 값이 남고, 실제 레일 탑승은 이후 true로 바뀌어 그대로 동작합니다. 프로브: `ue_rail_start_probe.py`(PIE 시작부터 샘플링), `ue_pie_state_probe.py`, `ue_zip_series_probe.py`.
+- **터널 PIE 확인:** 스폰, W 이동, HUD 20/600, 발사 6발 후 14발, 재장전 후 20/594(`ue_ammo_2060_probe.py`)를 확인했습니다. 마우스 클릭 사격은 자동화 입력으로 안 들어가 이전처럼 `FurinaRifleShot` 호출로 확인했습니다. 도탄, 화염, 손가락 감싸기는 이 레벨에서 다시 확인하지 않았습니다.
+- **고품질 Colt(`ue_colt_import_hq.py`) 임포트 완료:** `SK_M4A1`/`SM_M4Mag`를 새 FBX로 덮어쓰고 4096 원본 텍스처 20장(`T_Colt_*`)으로 머티리얼 4개를 다시 만들었습니다(`ue_colt_mat_probe.py`: 5채널 연결, 슬롯 이름 일치). 결과는 `Data/colt_import_hq.json`. 터널에서 1인칭 캡처는 총이 거의 검게 보입니다(금속성 + 터널에 반사원이 없는 어두운 조명). 새 탄창으로 재장전·손 위치는 아직 눈으로 확인하지 않았습니다.
+- **GitHub:** 5.3 GB 터널 콘텐츠를 1.2 GB 이하 커밋 단위로 나눠 push했습니다(`push_in_chunks.py`, `push_map_chunks.py`; schannel, 인증서 검증 켬). origin/main = f0335126. 이후 작업(고품질 Colt, 레벨 배치, BP 수정, README)은 아직 커밋/푸시하지 않았습니다. 노트북은 `git pull` 뒤에 위 변경을 받으면 됩니다.

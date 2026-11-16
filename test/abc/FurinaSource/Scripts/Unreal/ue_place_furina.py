@@ -15,6 +15,7 @@ try:
         old = []
     if old: R['note'] = 'character already in the level, nothing placed'
     else:
+        direct = len(nums) >= 3
         if len(nums) >= 2: cx, cy, cz = nums[0], nums[1], 0.0
         else:
             c = [a.get_actor_location() for a in acts if a.get_class().get_name() in ('PostProcessVolume', 'ExponentialHeightFog')]
@@ -31,28 +32,31 @@ try:
             up = trace(unreal.Vector(p.x, p.y, p.z + 5), unreal.Vector(p.x, p.y, p.z + 400))
             if up is not None and up.impact_point.z - p.z < 230: return None
             return p.z
-        best = None; cand = []
-        for z0 in (cz + 200, cz + 600, cz + 1200):
-            for dx in range(-3000, 3001, 250):
-                for dy in range(-3000, 3001, 250):
-                    z = floor_at(cx + dx, cy + dy, z0)
-                    if z is None: continue
-                    ok = True
-                    for ex, ey in ((150, 0), (-150, 0), (0, 150), (0, -150)):
-                        z2 = floor_at(cx + dx + ex, cy + dy + ey, z + 120)
-                        if z2 is None or abs(z2 - z) > 12: ok = False; break
-                    if ok: cand.append((math.hypot(dx, dy), cx + dx, cy + dy, z))
-            if cand: break
-        cand.sort(); R['candidates'] = len(cand)
-        assert cand, 'no flat floor found'
-        _, x, y, z = cand[0]; R['floor'] = [x, y, z]
-        # face along the direction with the longest free run (the tunnel axis)
-        best_yaw, best_len = 0.0, -1.0
-        for yaw in range(0, 360, 30):
-            d = unreal.Vector(math.cos(math.radians(yaw)), math.sin(math.radians(yaw)), 0)
-            h = trace(unreal.Vector(x, y, z + 120), unreal.Vector(x + d.x * 6000, y + d.y * 6000, z + 120)); length = 6000 if h is None else (h.impact_point - unreal.Vector(x, y, z + 120)).length()
-            if length > best_len: best_len, best_yaw = length, float(yaw)
-        R['yaw'] = best_yaw; R['free_run_cm'] = best_len
+        if direct:      # line traces return nothing in the editor world of this level, so an explicit spawn point (x y z = capsule centre height) can be given: the pawn falls to the floor in PIE
+            x, y, z = nums[0], nums[1], nums[2] - 100.0; best_yaw = float(nums[3]) if len(nums) > 3 else 0.0; best_len = None; R['direct'] = True
+        else:
+            best = None; cand = []
+            for z0 in (cz + 200, cz + 600, cz + 1200):
+                for dx in range(-3000, 3001, 250):
+                    for dy in range(-3000, 3001, 250):
+                        z = floor_at(cx + dx, cy + dy, z0)
+                        if z is None: continue
+                        ok = True
+                        for ex, ey in ((150, 0), (-150, 0), (0, 150), (0, -150)):
+                            z2 = floor_at(cx + dx + ex, cy + dy + ey, z + 120)
+                            if z2 is None or abs(z2 - z) > 12: ok = False; break
+                        if ok: cand.append((math.hypot(dx, dy), cx + dx, cy + dy, z))
+                if cand: break
+            cand.sort(); R['candidates'] = len(cand)
+            assert cand, 'no flat floor found'
+            _, x, y, z = cand[0]; R['floor'] = [x, y, z]
+            # face along the direction with the longest free run (the tunnel axis)
+            best_yaw, best_len = 0.0, -1.0
+            for yaw in range(0, 360, 30):
+                d = unreal.Vector(math.cos(math.radians(yaw)), math.sin(math.radians(yaw)), 0)
+                h = trace(unreal.Vector(x, y, z + 120), unreal.Vector(x + d.x * 6000, y + d.y * 6000, z + 120)); length = 6000 if h is None else (h.impact_point - unreal.Vector(x, y, z + 120)).length()
+                if length > best_len: best_len, best_yaw = length, float(yaw)
+            R['yaw'] = best_yaw; R['free_run_cm'] = best_len
         pawn = eas.spawn_actor_from_class(cls, unreal.Vector(x, y, z + 100), unreal.Rotator(roll=0, pitch=0, yaw=best_yaw)); assert pawn, 'spawn'
         pawn.set_actor_label('Furina_Player'); pawn.set_editor_property('auto_possess_player', unreal.AutoReceiveInput.PLAYER0); R['placed'] = pawn.get_actor_label()
     les = unreal.get_editor_subsystem(unreal.LevelEditorSubsystem); R['saved'] = les.save_current_level()

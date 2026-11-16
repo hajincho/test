@@ -1,0 +1,10 @@
+{
+ "UsingRail?_before": false,
+ "UsingZipline?_before": false,
+ "RailJumpActive?_before": false,
+ "WasUsingRail?_before": false,
+ "dirty_err": "'Package' object has no attribute 'set_dirty_flag'",
+ "compiled": true,
+ "saved": true,
+ "after_reload": false
+}

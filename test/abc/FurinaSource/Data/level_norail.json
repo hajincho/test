@@ -1,0 +1,4 @@
+{
+ "UsingRail?_before": false,
+ "error": "Traceback (most recent call last):\n  File \"C:/Users/fromj/Downloads/test/test/abc/FurinaSource/Scripts/Unreal/ue_level_norail.py\", line 10, in <module>\n    R[p + '_before'] = bool(g.get_editor_property(p)); g.set_editor_property(p, False); R[p + '_after'] = bool(g.get_editor_property(p))\n                                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nException: ActorComponent: Property 'UsingRail?' for attribute 'UsingRail?' on 'Grind_Rail_Component_BP_C' cannot be edited on instances\n"
+}

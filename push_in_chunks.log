@@ -2,3 +2,9 @@
 11:20:58 commits ahead of origin/main: 1
 11:20:59 reset to origin/main (working tree kept)
 11:20:59 files to commit 1559 deleted 0
+11:21:01 commit Furina 작업과 나머지 파일 204 files 
+11:21:09 commit NiagaraExamples 콘텐츠 팩 1 668 files 
+11:21:09 to push: 2
+22:11:45 push ef1fa71b attempt 1 rc 0 To https://github.com/hajincho/test.git |    8133ef23..ef1fa71b  ef1fa71baf0439f50a33d43d6659725282a8f688 -> main
+22:13:43 push f6dbdcb3 attempt 1 rc 0 an GitHub's recommended maximum file size of 50.00 MB         | remote: warning: GH001: Large files detected. You may want to try Git Large File Storage - https://git-lfs.github.com.         | To https://github.com/hajincho/test.git |    ef1fa71b..f6dbdcb3  f6dbdcb34fdd0a002a768a0d11382e22f442c76a -> main
+22:13:57 ALL PUSHED; origin/main = f6dbdcb3 local tree same as backup: False

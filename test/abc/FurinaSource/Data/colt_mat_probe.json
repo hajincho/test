@@ -1,0 +1,180 @@
+{
+ "Main": {
+  "expr": [
+   [
+    "MaterialExpressionTextureSample",
+    "T_Colt_Main_Metallic"
+   ],
+   [
+    "MaterialExpressionTextureSample",
+    "T_Colt_Main_Normal"
+   ],
+   [
+    "MaterialExpressionTextureSample",
+    "T_Colt_Main_BaseColor"
+   ],
+   [
+    "MaterialExpressionTextureSample",
+    "T_Colt_Main_Metallic"
+   ],
+   [
+    "MaterialExpressionTextureSample",
+    "T_Colt_Main_Roughness"
+   ],
+   [
+    "MaterialExpressionTextureSample",
+    "T_Colt_Main_Normal"
+   ],
+   [
+    "MaterialExpressionTextureSample",
+    "T_Colt_Main_AO"
+   ]
+  ],
+  "conn": {
+   "MP_BASE_COLOR: 5>": "MaterialExpressionTextureSample/T_Colt_Main_BaseColor",
+   "MP_METALLIC: 6>": "MaterialExpressionTextureSample/T_Colt_Main_Metallic",
+   "MP_ROUGHNESS: 8>": "MaterialExpressionTextureSample/T_Colt_Main_Roughness",
+   "MP_NORMAL: 10>": "MaterialExpressionTextureSample/T_Colt_Main_Normal",
+   "MP_AMBIENT_OCCLUSION: 18>": "MaterialExpressionTextureSample/T_Colt_Main_AO"
+  },
+  "two_sided": false,
+  "shading": "<MaterialShadingModel.MSM_DEFAULT_LIT: 1>"
+ },
+ "Furniture": {
+  "expr": [
+   [
+    "MaterialExpressionTextureSample",
+    "T_Colt_Furniture_Metallic"
+   ],
+   [
+    "MaterialExpressionTextureSample",
+    "T_Colt_Furniture_Normal"
+   ],
+   [
+    "MaterialExpressionTextureSample",
+    "T_Colt_Furniture_BaseColor"
+   ],
+   [
+    "MaterialExpressionTextureSample",
+    "T_Colt_Furniture_Metallic"
+   ],
+   [
+    "MaterialExpressionTextureSample",
+    "T_Colt_Furniture_Roughness"
+   ],
+   [
+    "MaterialExpressionTextureSample",
+    "T_Colt_Furniture_Normal"
+   ],
+   [
+    "MaterialExpressionTextureSample",
+    "T_Colt_Furniture_AO"
+   ]
+  ],
+  "conn": {
+   "MP_BASE_COLOR: 5>": "MaterialExpressionTextureSample/T_Colt_Furniture_BaseColor",
+   "MP_METALLIC: 6>": "MaterialExpressionTextureSample/T_Colt_Furniture_Metallic",
+   "MP_ROUGHNESS: 8>": "MaterialExpressionTextureSample/T_Colt_Furniture_Roughness",
+   "MP_NORMAL: 10>": "MaterialExpressionTextureSample/T_Colt_Furniture_Normal",
+   "MP_AMBIENT_OCCLUSION: 18>": "MaterialExpressionTextureSample/T_Colt_Furniture_AO"
+  },
+  "two_sided": false,
+  "shading": "<MaterialShadingModel.MSM_DEFAULT_LIT: 1>"
+ },
+ "Rear": {
+  "expr": [
+   [
+    "MaterialExpressionTextureSample",
+    "T_Colt_Rear_Metallic"
+   ],
+   [
+    "MaterialExpressionTextureSample",
+    "T_Colt_Rear_Normal"
+   ],
+   [
+    "MaterialExpressionTextureSample",
+    "T_Colt_Rear_BaseColor"
+   ],
+   [
+    "MaterialExpressionTextureSample",
+    "T_Colt_Rear_Metallic"
+   ],
+   [
+    "MaterialExpressionTextureSample",
+    "T_Colt_Rear_Roughness"
+   ],
+   [
+    "MaterialExpressionTextureSample",
+    "T_Colt_Rear_Normal"
+   ],
+   [
+    "MaterialExpressionTextureSample",
+    "T_Colt_Rear_AO"
+   ]
+  ],
+  "conn": {
+   "MP_BASE_COLOR: 5>": "MaterialExpressionTextureSample/T_Colt_Rear_BaseColor",
+   "MP_METALLIC: 6>": "MaterialExpressionTextureSample/T_Colt_Rear_Metallic",
+   "MP_ROUGHNESS: 8>": "MaterialExpressionTextureSample/T_Colt_Rear_Roughness",
+   "MP_NORMAL: 10>": "MaterialExpressionTextureSample/T_Colt_Rear_Normal",
+   "MP_AMBIENT_OCCLUSION: 18>": "MaterialExpressionTextureSample/T_Colt_Rear_AO"
+  },
+  "two_sided": false,
+  "shading": "<MaterialShadingModel.MSM_DEFAULT_LIT: 1>"
+ },
+ "Mag": {
+  "expr": [
+   [
+    "MaterialExpressionTextureSample",
+    "T_Colt_Mag_Metallic"
+   ],
+   [
+    "MaterialExpressionTextureSample",
+    "T_Colt_Mag_Normal"
+   ],
+   [
+    "MaterialExpressionTextureSample",
+    "T_Colt_Mag_BaseColor"
+   ],
+   [
+    "MaterialExpressionTextureSample",
+    "T_Colt_Mag_Metallic"
+   ],
+   [
+    "MaterialExpressionTextureSample",
+    "T_Colt_Mag_Roughness"
+   ],
+   [
+    "MaterialExpressionTextureSample",
+    "T_Colt_Mag_Normal"
+   ],
+   [
+    "MaterialExpressionTextureSample",
+    "T_Colt_Mag_AO"
+   ]
+  ],
+  "conn": {
+   "MP_BASE_COLOR: 5>": "MaterialExpressionTextureSample/T_Colt_Mag_BaseColor",
+   "MP_METALLIC: 6>": "MaterialExpressionTextureSample/T_Colt_Mag_Metallic",
+   "MP_ROUGHNESS: 8>": "MaterialExpressionTextureSample/T_Colt_Mag_Roughness",
+   "MP_NORMAL: 10>": "MaterialExpressionTextureSample/T_Colt_Mag_Normal",
+   "MP_AMBIENT_OCCLUSION: 18>": "MaterialExpressionTextureSample/T_Colt_Mag_AO"
+  },
+  "two_sided": false,
+  "shading": "<MaterialShadingModel.MSM_DEFAULT_LIT: 1>"
+ },
+ "slots": [
+  [
+   "colt_m4_main",
+   "M_Colt_Main"
+  ],
+  [
+   "colt_m4_furniture",
+   "M_Colt_Furniture"
+  ],
+  [
+   "matech_rear_sight",
+   "M_Colt_Rear"
+  ]
+ ]
+}

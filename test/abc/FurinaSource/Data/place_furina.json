@@ -1,0 +1,12 @@
+{
+ "world": "/Game/UndergroundTunnel/Maps/Demonstration.Demonstration",
+ "existing": [],
+ "center": [
+  -3100.0,
+  -110.0,
+  0.0
+ ],
+ "direct": true,
+ "placed": "Furina_Player",
+ "saved": true
+}

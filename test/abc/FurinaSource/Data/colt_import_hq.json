@@ -1,0 +1,127 @@
+{
+ "textures": {
+  "T_Colt_Main_BaseColor": [
+   32,
+   32
+  ],
+  "T_Colt_Main_Metallic": [
+   32,
+   32
+  ],
+  "T_Colt_Main_Roughness": [
+   32,
+   32
+  ],
+  "T_Colt_Main_Normal": [
+   32,
+   32
+  ],
+  "T_Colt_Main_AO": [
+   32,
+   32
+  ],
+  "T_Colt_Furniture_BaseColor": [
+   32,
+   32
+  ],
+  "T_Colt_Furniture_Metallic": [
+   32,
+   32
+  ],
+  "T_Colt_Furniture_Roughness": [
+   32,
+   32
+  ],
+  "T_Colt_Furniture_Normal": [
+   32,
+   32
+  ],
+  "T_Colt_Furniture_AO": [
+   32,
+   32
+  ],
+  "T_Colt_Rear_BaseColor": [
+   32,
+   32
+  ],
+  "T_Colt_Rear_Metallic": [
+   32,
+   32
+  ],
+  "T_Colt_Rear_Roughness": [
+   32,
+   32
+  ],
+  "T_Colt_Rear_Normal": [
+   32,
+   32
+  ],
+  "T_Colt_Rear_AO": [
+   32,
+   32
+  ],
+  "T_Colt_Mag_BaseColor": [
+   32,
+   32
+  ],
+  "T_Colt_Mag_Metallic": [
+   32,
+   32
+  ],
+  "T_Colt_Mag_Roughness": [
+   32,
+   32
+  ],
+  "T_Colt_Mag_Normal": [
+   32,
+   32
+  ],
+  "T_Colt_Mag_AO": [
+   32,
+   32
+  ]
+ },
+ "materials": {
+  "Main": true,
+  "Furniture": true,
+  "Rear": true,
+  "Mag": true
+ },
+ "slots": {
+  "sk": [
+   "colt_m4_main",
+   "colt_m4_furniture",
+   "matech_rear_sight"
+  ],
+  "mag": [
+   "stanag_mag"
+  ]
+ },
+ "sk_saved": true,
+ "mag_saved": true,
+ "mag_bounds": [
+  [
+   0.33,
+   -1.9,
+   -2.23
+  ],
+  [
+   1.51,
+   3.01,
+   5.62
+  ]
+ ],
+ "sk_bounds": [
+  [
+   -0.4,
+   0.84,
+   0.06
+  ],
+  [
+   3.24,
+   40.0,
+   10.42
+  ]
+ ],
+ "sk_verts": null
+}

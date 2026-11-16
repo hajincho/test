@@ -1,0 +1,16 @@
+22:12:14 waiting for push_in_chunks.py to finish
+22:14:00 first script finished; origin/main = f6dbdcb3 HEAD = f6dbdcb3
+22:14:00 tunnel files untracked: 687
+22:14:02 commit UndergroundTunnel 맵 (텍스처 제외) 468 files 122 MB 
+22:14:19 push UndergroundTunnel 맵 (텍스처 제외) 5ec42c2b attempt 1 rc 0 To https://github.com/hajincho/test.git |    f6dbdcb3..5ec42c2b  5ec42c2b2a5f534eea680b7d5fc098327fd66665 -> main
+22:14:29 commit UndergroundTunnel 텍스처 1 35 files 1224 MB 
+22:24:26 push UndergroundTunnel 텍스처 1 b77fb8ee attempt 1 rc 0  MB         | remote: warning: GH001: Large files detected. You may want to try Git Large File Storage - https://git-lfs.github.com.         | To https://github.com/hajincho/test.git |    5ec42c2b..b77fb8ee  b77fb8eef9511f0a99e63eb8c499e3e06eaaf421 -> main
+22:24:34 commit UndergroundTunnel 텍스처 2 61 files 1169 MB 
+22:27:54 push UndergroundTunnel 텍스처 2 9ee45951 attempt 1 rc 0  MB         | remote: warning: GH001: Large files detected. You may want to try Git Large File Storage - https://git-lfs.github.com.         | To https://github.com/hajincho/test.git |    b77fb8ee..9ee45951  9ee459519e3381c096f508d6a969e147965f9aee -> main
+22:28:02 commit UndergroundTunnel 텍스처 3 51 files 1212 MB 
+22:31:32 push UndergroundTunnel 텍스처 3 88b34f21 attempt 1 rc 0  MB         | remote: warning: GH001: Large files detected. You may want to try Git Large File Storage - https://git-lfs.github.com.         | To https://github.com/hajincho/test.git |    9ee45951..88b34f21  88b34f21ea2ff07134af3a91372c441fed5005e7 -> main
+22:31:40 commit UndergroundTunnel 텍스처 4 58 files 1224 MB 
+22:35:49 push UndergroundTunnel 텍스처 4 917ba576 attempt 1 rc 0 To https://github.com/hajincho/test.git |    88b34f21..917ba576  917ba576617578810938139d6c09fabfe838af04 -> main
+22:35:52 commit UndergroundTunnel 텍스처 5 14 files 304 MB 
+22:37:25 push UndergroundTunnel 텍스처 5 f0335126 attempt 1 rc 0 To https://github.com/hajincho/test.git |    917ba576..f0335126  f0335126d343ad6ebb0df6b7a1af360c001b803e -> main
+22:37:26 ALL MAP CHUNKS PUSHED; origin/main = f0335126

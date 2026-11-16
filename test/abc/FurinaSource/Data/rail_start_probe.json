@@ -1,0 +1,13 @@
+[
+ {
+  "t": 0.0,
+  "z": -145,
+  "mode": "MOVE_WALKING: 1>",
+  "rail": false,
+  "spline": null,
+  "special": [
+   false
+  ],
+  "tick": false
+ }
+]
