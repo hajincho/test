@@ -518,3 +518,22 @@ Control Rig이 들어 올리는 회전은 컴포넌트 +X축 기준 음수 각�
 - **터널 PIE 확인:** 스폰, W 이동, HUD 20/600, 발사 6발 후 14발, 재장전 후 20/594(`ue_ammo_2060_probe.py`)를 확인했습니다. 마우스 클릭 사격은 자동화 입력으로 안 들어가 이전처럼 `FurinaRifleShot` 호출로 확인했습니다. 도탄, 화염, 손가락 감싸기는 이 레벨에서 다시 확인하지 않았습니다.
 - **고품질 Colt(`ue_colt_import_hq.py`) 임포트 완료:** `SK_M4A1`/`SM_M4Mag`를 새 FBX로 덮어쓰고 4096 원본 텍스처 20장(`T_Colt_*`)으로 머티리얼 4개를 다시 만들었습니다(`ue_colt_mat_probe.py`: 5채널 연결, 슬롯 이름 일치). 결과는 `Data/colt_import_hq.json`. 터널에서 1인칭 캡처는 총이 거의 검게 보입니다(금속성 + 터널에 반사원이 없는 어두운 조명). 새 탄창으로 재장전·손 위치는 아직 눈으로 확인하지 않았습니다.
 - **GitHub:** 5.3 GB 터널 콘텐츠를 1.2 GB 이하 커밋 단위로 나눠 push했습니다(`push_in_chunks.py`, `push_map_chunks.py`; schannel, 인증서 검증 켬). origin/main = f0335126. 이후 작업(고품질 Colt, 레벨 배치, BP 수정, README)은 아직 커밋/푸시하지 않았습니다. 노트북은 `git pull` 뒤에 위 변경을 받으면 됩니다.
+
+## 2026-11-17 Lyra 사격장 맵으로 시작 맵 교체 + 총알 Lyra 호환 히트판정(피해량 0)
+
+- **동굴 맵 삭제:** `Content/UndergroundTunnel`(5.2 GB) 전체를 프로젝트에서 지웠습니다(git 기록에는 남아 있어 `git restore`로 복구 가능). 기본 맵은 먼저 `ExampleLevel`로 되돌렸다가 아래 Lyra 맵으로 바꿨습니다.
+- **Lyra 사격장 가져오기(`Scripts/Tools/lyra_dep_closure.py`, `Scripts/Unreal/lyra_export_range.py`, `ue_lyra_range_build.py`):**
+  - Lyra의 `L_FiringRange_WP`는 월드 파티션 맵이고 월드 설정이 C++ 클래스 `LyraWorldSettings`라 이 BP 전용 프로젝트에서는 월드 파티션이 비활성(액터 0개)으로 열립니다(`Saved/Logs`에서 `LyraWorldSettings ... 로드에 실패`). 그래서 맵을 그대로 쓰지 않고 Lyra 에디터(`LyraStarterGame`, UE 5.8, `-ExecutePythonScript -nullrhi`)로 액터 321개의 클래스/트랜스폼/메시/머티리얼/폴더를 `Data/lyra_range_actors.json`으로 내보낸 뒤 이 프로젝트에서 일반 레벨 `/Game/LyraRange/L_FiringRange`로 다시 만들었습니다.
+  - 가져온 것: StaticMeshActor 258개(SM_ModuleA_090 214개, 기본 큐브 41개, 계단 2개, 난간 1개), TextRenderActor 15개, 조명(해/스카이/안개/스카이 아트모스피어). 메시와 머티리얼 누락 0(`Data/lyra_range_build.json`).
+  - 가져오지 않은 것: Lyra 전용 액터(LyraPlayerStart 8, 텔레포트 7, 런처 4, 무기 스포너 3, 에임 어시스트 타깃 2, 패드류), BlockingVolume 9, Landscape, VolumetricCloud, NavMesh. 땅이 없어서 가장 낮은 바닥 아래(z −160)에 큰 받침 `FallCatchFloor`를 두었습니다.
+  - 에셋은 콘텐츠 전용 플러그인으로 복사했습니다: `Plugins/ShooterMaps`(메시, 원본 맵 파일, 외부 액터 — 경로 `/ShooterMaps/...` 유지), `Plugins/LyraExampleContent`(Lyra 격자 머티리얼 MI_MS_* 와 의존 텍스처 19개, 22 MB), `Content/PhysicsMaterials/PM_Concrete`. 합계 약 26 MB. 플러그인은 에디터를 재시작해야 마운트됩니다.
+  - 푸리나는 Lyra의 PlayerStart1 위치(170, −1045, 높이 ~880, 요 −90)에 `Furina_Player`로 배치했습니다(`ue_place_furina.py replace 170 -1045 880 -90`). `DefaultEngine.ini`의 `GameDefaultMap`/`EditorStartupMap`을 `/Game/LyraRange/L_FiringRange`로 바꿨습니다.
+  - PIE: 푸리나가 위층 바닥에 서고 HUD 20/600, 레일 상태 false, 발사 시 탄약이 줄고 재장전 후 20/597(`ue_pie_state_probe.py`, `ue_ammo_2060_probe.py`). "라이팅을 다시 빌드해야 합니다" 메시지가 뜨며 빌드는 하지 않았습니다.
+- **총알 Lyra 호환 히트판정(`ue_bullet_hit_gas.py`, BP_FurinaBullet 노드 `FHG_*`):**
+  - Lyra의 피해는 대상의 AbilitySystemComponent에 게임플레이 이펙트(`SetByCaller.Damage` 크기)를 적용하는 방식입니다. 이를 따라 이 프로젝트에서 엔진 플러그인 `GameplayAbilities`를 켰습니다(`abc.uproject`, 에디터 재시작 필요). 태그 `SetByCaller.Damage`(Lyra와 같은 이름)와 `Furina.Hit.Bullet`은 `Config/DefaultGameplayTags.ini`에 등록했습니다.
+  - `BP_FurinaBullet` 변수: **`FurinaDamage`(float, 기본 0.0 = 피해량)**, **`FurinaDamageEffect`(GameplayEffect 클래스, 기본 비움)**. 둘 다 인스턴스 편집 가능입니다.
+  - 동작: 도탄이 아닌 일반 적중 경로(`FRC_Branch`의 else → `Mark` 사이)에서 `Other`의 ASC를 찾아(`GetAbilitySystemComponent`) ASC와 이펙트 클래스가 모두 유효하면 `MakeOutgoingSpec(FurinaDamageEffect, 1, 컨텍스트)` → `AssignTagSetByCallerMagnitude(SetByCaller.Damage, FurinaDamage)` → 스펙의 컨텍스트에 `HitResult` 추가 → `BP_ApplyGameplayEffectSpecToSelf`. Lyra의 `LyraHealthComponent` 자해 피해 코드와 같은 패턴입니다. 유효하지 않으면 건너뛰고 기존 동작(디버그 구, 물리 밀기, 소멸)으로 갑니다. 도탄된 첫 충돌은 피해를 주지 않습니다.
+  - **지금 이 프로젝트에서는 `FurinaDamageEffect`가 비어 있어 아무 일도 하지 않습니다.** Lyra에서는 `/Game/GameplayEffects/Damage/GE_Damage_Basic_SetByCaller`(Lyra의 `DamageGameplayEffect_SetByCaller` 기본값)를 이 변수에 지정하고 `FurinaDamage`에 피해량을 넣으면 됩니다.
+  - 검증(`ue_bullet_hit_test.py`): ASC를 붙인 큐브 표적(임시 BP)을 푸리나 앞 6 m에 두고 임시 무한 지속 GE를 이 변수에 지정한 채 `FurinaRifleShot` 3발을 쐈더니 표적 ASC에 이펙트가 3개 적용됐습니다(`Data/bullet_hit_test.json`). 검증 뒤 임시 GE/표적/변수 기본값은 `ue_bullet_hit_test_cleanup.py`로 모두 제거했습니다. 본 프로젝트에는 Lyra의 `LyraHealthSet`이 없어서 실제 체력 감소는 확인하지 못했습니다.
+  - 한계: 총알은 `BlockAllDynamic` 구체라 Lyra 캐릭터의 캡슐/메시 충돌 채널(`Lyra_TraceChannel_Weapon`, 팀/부위별 배율)은 쓰지 않습니다. 부위(헤드샷) 배율과 팀 판정은 아직 없습니다. 피해량과 이 값들을 받으면 추가합니다.
+- **GitHub:** 아직 커밋/푸시하지 않았습니다(동굴 맵 삭제 687개 포함).

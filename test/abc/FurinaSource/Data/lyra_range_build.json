@@ -1,0 +1,36 @@
+{
+ "skipped": {
+  "RecastNavMesh": 1,
+  "WorldDataLayers": 1,
+  "LyraPlayerStart": 8,
+  "NavMeshBoundsVolume": 1,
+  "Landscape": 1,
+  "WorldPartitionMiniMap": 1,
+  "VolumetricCloud": 1,
+  "B_Teleport_C": 7,
+  "BlockingVolume": 9,
+  "GroupActor": 1,
+  "B_Launcher_Up_C": 3,
+  "B_AimAssistTargetTest_C": 2,
+  "LandscapeStreamingProxy": 1,
+  "B_WeaponSpawner_C": 3,
+  "B_GrantAbilityPad_ApplyGE_C": 1,
+  "B_Launcher_Push_C": 1,
+  "BP_GameplayEffectPad_C": 1,
+  "B_GrantInventoryPad_WithMesh_C": 1
+ },
+ "spawned": {
+  "ExponentialHeightFog": 1,
+  "SkyLight": 1,
+  "SkyAtmosphere": 1,
+  "DirectionalLight": 1,
+  "StaticMeshActor": 258,
+  "TextRenderActor": 15,
+  "FallCatchFloor": 1
+ },
+ "missing_mesh": [],
+ "missing_mat": [],
+ "new_level": true,
+ "saved": true,
+ "actors_in_level": 278
+}

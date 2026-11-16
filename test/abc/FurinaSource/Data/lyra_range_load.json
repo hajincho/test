@@ -1,0 +1,6 @@
+{
+ "world": "/ShooterMaps/Maps/L_FiringRange_WP.L_FiringRange_WP",
+ "box": "<Struct 'Box' (0x00000214EB7BC000) {min: {x: 0.000000, y: 0.000000, z: 0.000000}, max: {x: 0.000000, y: 0.000000, z: 0.000000}, is_valid: False}>",
+ "desc_type": "<class 'NoneType'>",
+ "error": "Traceback (most recent call last):\n  File \"C:/Users/fromj/Downloads/test/test/abc/FurinaSource/Scripts/Unreal/ue_lyra_range_load.py\", line 14, in <module>\n    R['desc_count'] = len(descs)\n                      ^^^^^^^^^^\nTypeError: object of type 'NoneType' has no len()\n"
+}

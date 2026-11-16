@@ -1,8 +1,8 @@
 {
  "loc": [
-  -3099.7169828985334,
-  -111.09240173526584,
-  -145.1409613296208
+  170.0,
+  -1045.0,
+  802.580483734695
  ],
  "UsingRail?": "False",
  "UseRail?": "ERR ActorComponent: Failed to find property 'UseRail?' for attri",
@@ -18,7 +18,7 @@
  "RailJumpActive?": "False",
  "UsingZipline?": "False",
  "FurinaAmmo": 20,
- "FurinaReserve": 594,
+ "FurinaReserve": 597,
  "FurinaReloading": false,
  "hitactor_class": null
 }

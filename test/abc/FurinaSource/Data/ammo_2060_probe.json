@@ -5,17 +5,17 @@
   false
  ],
  "after_6_shots": [
-  14,
+  17,
   600,
   false
  ],
  "mid_reload": [
-  14,
+  17,
   600,
   true
  ],
  "after_reload": [
-  14,
+  17,
   600,
   true
  ]

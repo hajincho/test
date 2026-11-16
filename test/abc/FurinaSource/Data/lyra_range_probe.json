@@ -1,0 +1,21 @@
+{
+ "plugin_mounted": true,
+ "map_exists": true,
+ "loaded": true,
+ "count": 1,
+ "classes": {
+  "WorldDataLayers": 1
+ },
+ "bounds_min": [
+  1000000000,
+  1000000000,
+  1000000000
+ ],
+ "bounds_max": [
+  -1000000000,
+  -1000000000,
+  -1000000000
+ ],
+ "top_hist": {},
+ "world": "/ShooterMaps/Maps/L_FiringRange_WP.L_FiringRange_WP"
+}

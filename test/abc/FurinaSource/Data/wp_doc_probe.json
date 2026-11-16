@@ -1,0 +1,33 @@
+{
+ "get_actor_descs": "X.get_actor_descs() -> Array[ActorDesc] or None\r\nGets all the actor descriptors into the provided array, recursing into actor containers.\r\n\r\nReturns:\r\n    Array[ActorDesc] or None: True if the operation was successful.\r\n\r\n    out_actor_descs (Array[ActorDesc]):",
+ "load_actors": "X.load_actors(actors_to_load) -> None\r\nLoad actors\r\n\r\nArgs:\r\n    actors_to_load (Array[Guid]):",
+ "get_intersecting_actor_descs": "X.get_intersecting_actor_descs(box) -> Array[ActorDesc] or None\r\nGets all the actor descriptors intersecting the provided box into the provided array, recursing into actor containers.\r\n\r\nArgs:\r\n    box (Box): \r\n\r\nReturns:\r\n    Array[ActorDesc] or None: True if the operation was successful.\r\n\r\n    out_actor_descs (Array[ActorDesc]):",
+ "get_editor_world_bounds": "X.get_editor_world_bounds() -> Box\r\nGets the editor world bounds, which includes all actor descriptors.\r\n\r\nReturns:\r\n    Box: The editor world bounds.",
+ "pin_actors": "X.pin_actors(actors_to_pin) -> None\r\nPin actors\r\n\r\nArgs:\r\n    actors_to_pin (Array[Guid]):",
+ "get_actor_descs_for_actors": "X.get_actor_descs_for_actors(actors) -> Array[ActorDesc] or None\r\nGets all the actor descriptors from the provided actor pointers, which represents descriptors on disk, e.g. will not\nreflect properties of unsaved actors.\r\n\r\nArgs:\r\n    actors (Array[Actor]): \r\n\r\nReturns:\r\n    Array[ActorDesc] or None: True if the operation was successful.\r\n\r\n    out_actor_descs (Array[ActorDesc]):",
+ "ActorDesc_members": [
+  "actor_is_editor_only",
+  "actor_package",
+  "actor_path",
+  "assign",
+  "bounds",
+  "cast",
+  "class_",
+  "copy",
+  "data_layer_assets",
+  "export_text",
+  "get_editor_property",
+  "guid",
+  "import_text",
+  "is_spatially_loaded",
+  "label",
+  "name",
+  "native_class",
+  "runtime_grid",
+  "set_editor_properties",
+  "set_editor_property",
+  "static_struct",
+  "to_dict",
+  "to_tuple"
+ ]
+}

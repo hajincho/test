@@ -1,0 +1,8397 @@
+{
+ "actors": [
+  {
+   "cls": "RecastNavMesh",
+   "path_cls": "/Script/NavigationSystem.RecastNavMesh",
+   "label": "RecastNavMesh-Default",
+   "folder": "None",
+   "loc": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "cls": "WorldDataLayers",
+   "path_cls": "/Script/Engine.WorldDataLayers",
+   "label": "WorldDataLayers",
+   "folder": "None",
+   "loc": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "cls": "ExponentialHeightFog",
+   "path_cls": "/Script/Engine.ExponentialHeightFog",
+   "label": "ExponentialHeightFog",
+   "folder": "Lighting",
+   "loc": [
+    -400.0,
+    400.0,
+    0.0
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "cls": "LyraPlayerStart",
+   "path_cls": "/Script/LyraGame.LyraPlayerStart",
+   "label": "PlayerStart1",
+   "folder": "None",
+   "loc": [
+    169.70351834169708,
+    -1045.1173129851577,
+    796.4306030273438
+   ],
+   "rot": [
+    0.0,
+    -90.00030378143526,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "cls": "LyraPlayerStart",
+   "path_cls": "/Script/LyraGame.LyraPlayerStart",
+   "label": "PlayerStart5",
+   "folder": "None",
+   "loc": [
+    219.52475000246636,
+    -3399.8052190562335,
+    796.4306030273438
+   ],
+   "rot": [
+    0.0,
+    89.99969482421876,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "cls": "SkyLight",
+   "path_cls": "/Script/Engine.SkyLight",
+   "label": "SkyLight",
+   "folder": "Lighting",
+   "loc": [
+    -400.0,
+    400.0,
+    0.0
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "cls": "LyraPlayerStart",
+   "path_cls": "/Script/LyraGame.LyraPlayerStart",
+   "label": "PlayerStart2",
+   "folder": "None",
+   "loc": [
+    -280.29642062342907,
+    -1045.1114755124897,
+    796.4306030273438
+   ],
+   "rot": [
+    0.0,
+    -90.00030378143526,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "cls": "LyraPlayerStart",
+   "path_cls": "/Script/LyraGame.LyraPlayerStart",
+   "label": "PlayerStart3",
+   "folder": "None",
+   "loc": [
+    -730.2964358822164,
+    -1045.1114974148245,
+    796.4306030273438
+   ],
+   "rot": [
+    0.0,
+    -90.00030378143526,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "cls": "LyraPlayerStart",
+   "path_cls": "/Script/LyraGame.LyraPlayerStart",
+   "label": "PlayerStart4",
+   "folder": "None",
+   "loc": [
+    -1180.296435882215,
+    -1045.1115193171586,
+    796.4306030273438
+   ],
+   "rot": [
+    0.0,
+    -90.00030378143526,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "cls": "NavMeshBoundsVolume",
+   "path_cls": "/Script/NavigationSystem.NavMeshBoundsVolume",
+   "label": "NavMeshBoundsVolume",
+   "folder": "None",
+   "loc": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "scale": [
+    17.411651611328125,
+    48.94348907470703,
+    17.450824737548828
+   ]
+  },
+  {
+   "cls": "LyraPlayerStart",
+   "path_cls": "/Script/LyraGame.LyraPlayerStart",
+   "label": "PlayerStart8",
+   "folder": "None",
+   "loc": [
+    -680.4752499975336,
+    -3399.8052190562335,
+    796.4306030273438
+   ],
+   "rot": [
+    0.0,
+    89.99969482421876,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "cls": "LyraPlayerStart",
+   "path_cls": "/Script/LyraGame.LyraPlayerStart",
+   "label": "PlayerStart7",
+   "folder": "None",
+   "loc": [
+    -1130.4751889623774,
+    -3399.7993596812335,
+    796.4306030273438
+   ],
+   "rot": [
+    0.0,
+    89.99969482421876,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "cls": "Landscape",
+   "path_cls": "/Script/Landscape.Landscape",
+   "label": "Landscape",
+   "folder": "None",
+   "loc": [
+    -1500.64111328125,
+    1595.2869873046875,
+    0.14831772446632385
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "scale": [
+    100.0,
+    100.0,
+    100.0
+   ]
+  },
+  {
+   "cls": "LyraPlayerStart",
+   "path_cls": "/Script/LyraGame.LyraPlayerStart",
+   "label": "PlayerStart6",
+   "folder": "None",
+   "loc": [
+    -230.47524999753364,
+    -3399.8052190562335,
+    796.4306030273438
+   ],
+   "rot": [
+    0.0,
+    89.99969482421876,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "cls": "SkyAtmosphere",
+   "path_cls": "/Script/Engine.SkyAtmosphere",
+   "label": "SkyAtmosphere",
+   "folder": "Lighting",
+   "loc": [
+    -400.0,
+    400.0,
+    0.0
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "cls": "WorldPartitionMiniMap",
+   "path_cls": "/Script/Engine.WorldPartitionMiniMap",
+   "label": "WorldPartitionMiniMap0",
+   "folder": "None",
+   "loc": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "cls": "VolumetricCloud",
+   "path_cls": "/Script/Engine.VolumetricCloud",
+   "label": "VolumetricCloud",
+   "folder": "Lighting",
+   "loc": [
+    -400.0,
+    400.0,
+    0.0
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "cls": "DirectionalLight",
+   "path_cls": "/Script/Engine.DirectionalLight",
+   "label": "DirectionalLight",
+   "folder": "Lighting",
+   "loc": [
+    -400.0,
+    400.0,
+    0.0
+   ],
+   "rot": [
+    -30.000000000000004,
+    102.99925231933594,
+    52.550121307373054
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_125",
+   "folder": "Layout/Floors",
+   "loc": [
+    399.0,
+    0.2053976058959961,
+    -0.9605640172958374
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Blue_1.MI_MS_Blue_1"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "TextRenderActor",
+   "path_cls": "/Script/Engine.TextRenderActor",
+   "label": "TextRenderActor15",
+   "folder": "None",
+   "loc": [
+    -1514.009145923799,
+    -3410.0045221416494,
+    1508.9733055501786
+   ],
+   "rot": [
+    0.0008952658670611,
+    9.997998238511398,
+    -0.000480554172599947
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "text": "Teleport  2 - To 1",
+   "world_size": 26.0
+  },
+  {
+   "cls": "B_Teleport_C",
+   "path_cls": "/ShooterCore/Blueprint/B_Teleport.B_Teleport_C",
+   "label": "B_Launcher_Teleport_Local2",
+   "folder": "None",
+   "loc": [
+    -1513.9993896484375,
+    -3410.0,
+    704.4305809570287
+   ],
+   "rot": [
+    0.00012871969374828035,
+    -0.0007324218749999997,
+    4.347129652160218e-05
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "cls": "B_Teleport_C",
+   "path_cls": "/ShooterCore/Blueprint/B_Teleport.B_Teleport_C",
+   "label": "B_Launcher_Teleport_Local1",
+   "folder": "None",
+   "loc": [
+    256.93621826171875,
+    -3387.99951171875,
+    704.4305809570287
+   ],
+   "rot": [
+    0.0,
+    -179.99977111816406,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_086_2",
+   "folder": "Layout/Ramps And Stairs",
+   "loc": [
+    399.9862976074219,
+    -1271.833984375,
+    703.9549560546875
+   ],
+   "rot": [
+    0.0,
+    89.99995422363281,
+    -35.00001144409181
+   ],
+   "scale": [
+    0.6807129979133606,
+    3.07533597946167,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/Engine/EngineMaterials/WorldGridMaterial.WorldGridMaterial"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_186",
+   "folder": "Layout/Walls",
+   "loc": [
+    -1649.6876220703125,
+    -1200.0361328125,
+    799.1685791015625
+   ],
+   "rot": [
+    90.0,
+    7.152557375165963e-06,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Surface_6.MI_MS_Surface_6"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_249",
+   "folder": "Layout/Floors",
+   "loc": [
+    1199.0,
+    -2798.794677734375,
+    -0.9605640172958374
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Blue_1.MI_MS_Blue_1"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_286",
+   "folder": "Layout/Floors",
+   "loc": [
+    -799.082763671875,
+    -1998.077392578125,
+    703.4304809570312
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Blue_1.MI_MS_Blue_1"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_216",
+   "folder": "Layout/Walls",
+   "loc": [
+    1650.01416015625,
+    -0.43156909942626953,
+    200.376953125
+   ],
+   "rot": [
+    90.0,
+    -179.99951171875,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/Engine/EngineMaterials/WorldGridMaterial.WorldGridMaterial"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_stairs_1",
+   "folder": "Layout/Ramps And Stairs",
+   "loc": [
+    524.8833618164062,
+    -114.6655502319336,
+    -91.31712341308594
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    0.33000001311302185,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_stairs_1.SM_stairs_1",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Orange_1.MI_MS_Orange_1"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_124",
+   "folder": "Layout/Floors",
+   "loc": [
+    799.0,
+    0.2053976058959961,
+    -0.9605640172958374
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Blue_1.MI_MS_Blue_1"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_128",
+   "folder": "Layout/Floors",
+   "loc": [
+    799.0,
+    -799.7946166992188,
+    -0.9605640172958374
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Blue_1.MI_MS_Blue_1"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_99",
+   "folder": "Layout/Floors",
+   "loc": [
+    1599.0,
+    400.0,
+    -0.9605638980865479
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Blue_1.MI_MS_Blue_1"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_148",
+   "folder": "Layout/Floors",
+   "loc": [
+    -0.6529390215873718,
+    -799.7946166992188,
+    -0.9605640172958374
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Blue_1.MI_MS_Blue_1"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_172",
+   "folder": "Layout/Floors",
+   "loc": [
+    401.0477294921875,
+    -800.077392578125,
+    703.4304809570312
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Blue_1.MI_MS_Blue_1"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_158",
+   "folder": "Layout/Floors",
+   "loc": [
+    -800.6529541015625,
+    -1599.9896240234375,
+    -0.9605544805526733
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Blue_1.MI_MS_Blue_1"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "BlockingVolume",
+   "path_cls": "/Script/Engine.BlockingVolume",
+   "label": "BlockingVolume6",
+   "folder": "None",
+   "loc": [
+    -3.710026607044097e-05,
+    4777.087153173183,
+    1646.0
+   ],
+   "rot": [
+    0.0,
+    89.99984741210939,
+    -0.0
+   ],
+   "scale": [
+    0.23777300119400024,
+    16.357467651367188,
+    18.402992248535156
+   ],
+   "extent": [
+    1635.7468284536988,
+    23.78165637645361,
+    1840.2992248535156
+   ]
+  },
+  {
+   "cls": "GroupActor",
+   "path_cls": "/Script/UnrealEd.GroupActor",
+   "label": "GroupActor_19",
+   "folder": "Layout/Walls",
+   "loc": [
+    1625.5101318359375,
+    799.5680541992188,
+    0.37645643949508667
+   ],
+   "rot": [
+    0.0,
+    90.00007629394531,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_213",
+   "folder": "Layout/Walls",
+   "loc": [
+    1650.009521484375,
+    1199.5682373046875,
+    200.376953125
+   ],
+   "rot": [
+    90.0,
+    -179.99951171875,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/Engine/EngineMaterials/WorldGridMaterial.WorldGridMaterial"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_214",
+   "folder": "Layout/Walls",
+   "loc": [
+    1650.0111083984375,
+    799.5682983398438,
+    200.376953125
+   ],
+   "rot": [
+    90.0,
+    -179.99951171875,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/Engine/EngineMaterials/WorldGridMaterial.WorldGridMaterial"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_215",
+   "folder": "Layout/Walls",
+   "loc": [
+    1650.0125732421875,
+    399.56829833984375,
+    200.376953125
+   ],
+   "rot": [
+    90.0,
+    -179.99951171875,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/Engine/EngineMaterials/WorldGridMaterial.WorldGridMaterial"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_257",
+   "folder": "Layout/Floors",
+   "loc": [
+    -1199.6529541015625,
+    -1998.7945556640625,
+    -0.9605640172958374
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Blue_1.MI_MS_Blue_1"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_193",
+   "folder": "Layout/Walls",
+   "loc": [
+    -396.2254638671875,
+    -3199.908203125,
+    681.4075927734375
+   ],
+   "rot": [
+    90.0,
+    -90.00054931640625,
+    0.0
+   ],
+   "scale": [
+    1.9007915258407593,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Surface_6.MI_MS_Surface_6"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_297",
+   "folder": "Layout/Floors",
+   "loc": [
+    -1198.0921630859375,
+    -3597.077392578125,
+    703.4304809570312
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Blue_1.MI_MS_Blue_1"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "BlockingVolume",
+   "path_cls": "/Script/Engine.BlockingVolume",
+   "label": "BlockingVolume3",
+   "folder": "None",
+   "loc": [
+    -1676.000057840075,
+    -1091.4440038587597,
+    1646.0
+   ],
+   "rot": [
+    0.0,
+    179.9998779296875,
+    -0.0
+   ],
+   "scale": [
+    0.23777300119400024,
+    29.143978118896484,
+    18.402992248535156
+   ],
+   "extent": [
+    23.78350932802914,
+    2914.3978625412583,
+    1840.2992248535156
+   ]
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_114",
+   "folder": "Layout/Floors",
+   "loc": [
+    -400.6529541015625,
+    400.0,
+    -0.9605640172958374
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Blue_1.MI_MS_Blue_1"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_250",
+   "folder": "Layout/Floors",
+   "loc": [
+    1199.0,
+    -2398.794677734375,
+    -0.9605640172958374
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Blue_1.MI_MS_Blue_1"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_201",
+   "folder": "Layout/Walls",
+   "loc": [
+    -1197.86376953125,
+    -3952.906494140625,
+    799.1685791015625
+   ],
+   "rot": [
+    90.0,
+    -90.0006103515625,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Surface_6.MI_MS_Surface_6"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_278",
+   "folder": "Layout/Floors",
+   "loc": [
+    -1197.082763671875,
+    -2398.077392578125,
+    703.4304809570312
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Blue_1.MI_MS_Blue_1"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "Cube9",
+   "folder": "Layout/Uneven Terrain",
+   "loc": [
+    -450.6006774902344,
+    1399.5015869140625,
+    -40.23794174194336
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/Engine/BasicShapes/Cube.Cube",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Orange_1.MI_MS_Orange_1"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_086_3",
+   "folder": "Layout/Ramps And Stairs",
+   "loc": [
+    -1600.5513916015625,
+    -800.6060791015625,
+    703.9549560546875
+   ],
+   "rot": [
+    5.443099780677583e-06,
+    179.9999542236328,
+    -35.000011444091804
+   ],
+   "scale": [
+    0.6807129979133606,
+    3.07533597946167,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/Engine/EngineMaterials/WorldGridMaterial.WorldGridMaterial"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_248",
+   "folder": "Layout/Floors",
+   "loc": [
+    1599.0,
+    -2798.794677734375,
+    -0.9605640172958374
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Blue_1.MI_MS_Blue_1"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_170",
+   "folder": "Layout/Floors",
+   "loc": [
+    1.0477561950683594,
+    -1200.0772705078125,
+    703.4304809570312
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Blue_1.MI_MS_Blue_1"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "Cube27",
+   "folder": "Layout/Uneven Terrain",
+   "loc": [
+    -1251.03076171875,
+    1574.39794921875,
+    -19.791221618652344
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    0.5,
+    1.0
+   ],
+   "mesh": "/Engine/BasicShapes/Cube.Cube",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Orange_1.MI_MS_Orange_1"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_268",
+   "folder": "Layout/Floors",
+   "loc": [
+    0.34706100821495056,
+    -1998.7945556640625,
+    -0.9605640172958374
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Blue_1.MI_MS_Blue_1"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_159",
+   "folder": "Layout/Floors",
+   "loc": [
+    -1200.6529541015625,
+    -1599.9896240234375,
+    -0.9605544805526733
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Blue_1.MI_MS_Blue_1"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_168",
+   "folder": "Layout/Floors",
+   "loc": [
+    -399.0827331542969,
+    -800.077392578125,
+    703.4304809570312
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Blue_1.MI_MS_Blue_1"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_142",
+   "folder": "Layout/Floors",
+   "loc": [
+    -1200.6529541015625,
+    -1199.7945556640625,
+    -0.9605640172958374
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Blue_1.MI_MS_Blue_1"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "Cube3",
+   "folder": "Layout/Height Cubes",
+   "loc": [
+    1.6797199249267578,
+    -300.0396423339844,
+    100.03954315185547
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "scale": [
+    2.0,
+    6.0,
+    2.0
+   ],
+   "mesh": "/Engine/BasicShapes/Cube.Cube",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Orange_1.MI_MS_Orange_1"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_107",
+   "folder": "Layout/Floors",
+   "loc": [
+    -800.6529541015625,
+    1200.0,
+    -0.9605640172958374
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Blue_1.MI_MS_Blue_1"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_195",
+   "folder": "Layout/Walls",
+   "loc": [
+    404.7746276855469,
+    -3199.90966796875,
+    681.4075927734375
+   ],
+   "rot": [
+    90.0,
+    -90.00054931640625,
+    0.0
+   ],
+   "scale": [
+    1.9007915258407593,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Surface_6.MI_MS_Surface_6"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_143",
+   "folder": "Layout/Floors",
+   "loc": [
+    -800.6529541015625,
+    -1199.7945556640625,
+    -0.9605640172958374
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Blue_1.MI_MS_Blue_1"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_129",
+   "folder": "Layout/Floors",
+   "loc": [
+    399.0,
+    -799.7946166992188,
+    -0.9605640172958374
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Blue_1.MI_MS_Blue_1"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "Cube19",
+   "folder": "Layout/Uneven Terrain",
+   "loc": [
+    -851.3222045898438,
+    1399.5015869140625,
+    -30.055574417114258
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/Engine/BasicShapes/Cube.Cube",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Orange_1.MI_MS_Orange_1"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_157",
+   "folder": "Layout/Floors",
+   "loc": [
+    799.0,
+    -2398.794677734375,
+    -0.9605640172958374
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Blue_1.MI_MS_Blue_1"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "Cube6",
+   "folder": "Layout/Height Cubes",
+   "loc": [
+    -1199.28271484375,
+    -448.81622314453125,
+    304.2739562988281
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "scale": [
+    2.0,
+    5.0,
+    8.0
+   ],
+   "mesh": "/Engine/BasicShapes/Cube.Cube",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Orange_1.MI_MS_Orange_1"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_261",
+   "folder": "Layout/Floors",
+   "loc": [
+    -1199.6529541015625,
+    -2798.794677734375,
+    -0.9605640172958374
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Blue_1.MI_MS_Blue_1"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "Cube40",
+   "folder": "Layout/Height Cubes",
+   "loc": [
+    -98.6949234008789,
+    -794.5001220703125,
+    34.548187255859375
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/Engine/BasicShapes/Cube.Cube",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Orange_1.MI_MS_Orange_1"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_137",
+   "folder": "Layout/Floors",
+   "loc": [
+    1199.0,
+    0.2053976058959961,
+    -0.9605640172958374
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Blue_1.MI_MS_Blue_1"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_090",
+   "folder": "Layout/Floors",
+   "loc": [
+    399.0,
+    1200.0,
+    -0.9605638980865479
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Blue_1.MI_MS_Blue_1"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_139",
+   "folder": "Layout/Floors",
+   "loc": [
+    -800.6529541015625,
+    -399.79461669921875,
+    -0.9605640172958374
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Blue_1.MI_MS_Blue_1"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_171",
+   "folder": "Layout/Floors",
+   "loc": [
+    401.0477294921875,
+    -1200.0772705078125,
+    703.4304809570312
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Blue_1.MI_MS_Blue_1"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "Cube11",
+   "folder": "Layout/Uneven Terrain",
+   "loc": [
+    -549.2825927734375,
+    1225.3309326171875,
+    -40.23794174194336
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    0.5,
+    1.0
+   ],
+   "mesh": "/Engine/BasicShapes/Cube.Cube",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Orange_1.MI_MS_Orange_1"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "B_Teleport_C",
+   "path_cls": "/ShooterCore/Blueprint/B_Teleport.B_Teleport_C",
+   "label": "B_DoorPortal_Upper_2",
+   "folder": "None",
+   "loc": [
+    -1524.442138671875,
+    -2643.121826171875,
+    704.4305809570287
+   ],
+   "rot": [
+    -0.00018310546874999995,
+    -0.00028190028388053173,
+    9.879839126369913e-06
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "cls": "B_Teleport_C",
+   "path_cls": "/ShooterCore/Blueprint/B_Teleport.B_Teleport_C",
+   "label": "B_DoorPortal_Lower_1",
+   "folder": "None",
+   "loc": [
+    1550.1243896484375,
+    73.26728057861328,
+    203.73655019530997
+   ],
+   "rot": [
+    6.961821054574098e-05,
+    -179.9998016357422,
+    2.71661082518193e-10
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_106",
+   "folder": "Layout/Floors",
+   "loc": [
+    -1200.6529541015625,
+    1200.0,
+    -0.9605640172958374
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Blue_1.MI_MS_Blue_1"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "B_Launcher_Up_C",
+   "path_cls": "/ShooterCore/Blueprint/B_Launcher_Up.B_Launcher_Up_C",
+   "label": "B_Launcher_Up_3",
+   "folder": "Gameplay",
+   "loc": [
+    -468.0,
+    -468.0,
+    400.0396423339844
+   ],
+   "rot": [
+    0.0,
+    90.00000000000001,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_105",
+   "folder": "Layout/Floors",
+   "loc": [
+    1199.0,
+    1600.0,
+    -0.9605638980865479
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Blue_1.MI_MS_Blue_1"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "Cube2",
+   "folder": "Layout/Height Cubes",
+   "loc": [
+    -450.9171447753906,
+    -350.8212585449219,
+    200.03953552246094
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "scale": [
+    2.9999990463256836,
+    5.0,
+    4.0
+   ],
+   "mesh": "/Engine/BasicShapes/Cube.Cube",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Orange_1.MI_MS_Orange_1"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_154",
+   "folder": "Layout/Floors",
+   "loc": [
+    400.0,
+    -2398.794677734375,
+    -0.9605640172958374
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Blue_1.MI_MS_Blue_1"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "Cube38",
+   "folder": "Layout/Uneven Terrain",
+   "loc": [
+    -920.7751801874291,
+    -3102.8363975079465,
+    803.5402237983881
+   ],
+   "rot": [
+    -90.0,
+    89.99999930282708,
+    0.0
+   ],
+   "scale": [
+    1.982192873954773,
+    3.6848692893981934,
+    -0.10276651382446289
+   ],
+   "mesh": "/Engine/BasicShapes/Cube.Cube",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Orange_1.MI_MS_Orange_1"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_236",
+   "folder": "Layout/Walls",
+   "loc": [
+    -1134.8660888671875,
+    4747.50048828125,
+    200.376953125
+   ],
+   "rot": [
+    90.0,
+    -90.0002212524414,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Surface_6.MI_MS_Surface_6"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "TextRenderActor",
+   "path_cls": "/Script/Engine.TextRenderActor",
+   "label": "TextRenderActor13",
+   "folder": "None",
+   "loc": [
+    256.9309012357734,
+    -3388.004026002536,
+    1507.9744652343725
+   ],
+   "rot": [
+    -0.0,
+    -179.99977111816406,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "text": "Teleport 1 - To 2",
+   "world_size": 26.0
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_98",
+   "folder": "Layout/Floors",
+   "loc": [
+    1199.0,
+    400.0,
+    -0.9605638980865479
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Blue_1.MI_MS_Blue_1"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_177",
+   "folder": "Layout/Floors",
+   "loc": [
+    1.0477561950683594,
+    -1600.0772705078125,
+    703.4304809570312
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Blue_1.MI_MS_Blue_1"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_240",
+   "folder": "Layout/Walls",
+   "loc": [
+    461.1339111328125,
+    4747.5,
+    200.376953125
+   ],
+   "rot": [
+    90.0,
+    -90.0002212524414,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Surface_6.MI_MS_Surface_6"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_204",
+   "folder": "Layout/Walls",
+   "loc": [
+    -1550.3660888671875,
+    2794.0,
+    200.376953125
+   ],
+   "rot": [
+    90.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/Engine/EngineMaterials/WorldGridMaterial.WorldGridMaterial"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_279",
+   "folder": "Layout/Floors",
+   "loc": [
+    -1199.082763671875,
+    -1998.077392578125,
+    703.4304809570312
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Blue_1.MI_MS_Blue_1"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_155",
+   "folder": "Layout/Floors",
+   "loc": [
+    -1199.082763671875,
+    -1200.0772705078125,
+    703.4304809570312
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Blue_1.MI_MS_Blue_1"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_187",
+   "folder": "Layout/Walls",
+   "loc": [
+    -1649.6876220703125,
+    -800.0360717773438,
+    799.1685791015625
+   ],
+   "rot": [
+    90.0,
+    7.152557375165963e-06,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Surface_6.MI_MS_Surface_6"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_156",
+   "folder": "Layout/Floors",
+   "loc": [
+    -1199.082763671875,
+    -800.077392578125,
+    703.4304809570312
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Blue_1.MI_MS_Blue_1"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "TextRenderActor",
+   "path_cls": "/Script/Engine.TextRenderActor",
+   "label": "TextRenderActor4",
+   "folder": "Gameplay",
+   "loc": [
+    1000.8296183968777,
+    4414.594377509992,
+    784.1109199827257
+   ],
+   "rot": [
+    0.00030899047851562495,
+    -119.99899291992188,
+    -3.051757812499999e-05
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "text": "To Lower Level\r\nBlockout",
+   "world_size": 26.0
+  },
+  {
+   "cls": "B_Teleport_C",
+   "path_cls": "/ShooterCore/Blueprint/B_Teleport.B_Teleport_C",
+   "label": "B_DoorPortal_Lower_3",
+   "folder": "None",
+   "loc": [
+    1033.657958984375,
+    4471.43212890625,
+    0.14578328857169254
+   ],
+   "rot": [
+    0.00030899047851562495,
+    -119.99899291992188,
+    -3.051757812499999e-05
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "cls": "B_Teleport_C",
+   "path_cls": "/ShooterCore/Blueprint/B_Teleport.B_Teleport_C",
+   "label": "B_DoorPortal_Lower_4",
+   "folder": "None",
+   "loc": [
+    1550.1031494140625,
+    656.2672729492188,
+    203.7365349365209
+   ],
+   "rot": [
+    0.00012969969247933474,
+    -179.9998016357422,
+    2.6672594688470486e-10
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_100",
+   "folder": "Layout/Floors",
+   "loc": [
+    1599.0,
+    800.0,
+    -0.9605638980865479
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Blue_1.MI_MS_Blue_1"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_292",
+   "folder": "Layout/Floors",
+   "loc": [
+    2.0477559566497803,
+    -2797.077392578125,
+    703.4304809570312
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Blue_1.MI_MS_Blue_1"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "B_AimAssistTargetTest_C",
+   "path_cls": "/ShooterCore/Blueprint/B_AimAssistTargetTest.B_AimAssistTargetTest_C",
+   "label": "B_AimAssistTargetTest2",
+   "folder": "None",
+   "loc": [
+    -526.1259389367905,
+    -3873.5492595332994,
+    1162.8222721588384
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_136",
+   "folder": "Layout/Floors",
+   "loc": [
+    1599.0,
+    0.2053976058959961,
+    -0.9605640172958374
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Blue_1.MI_MS_Blue_1"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_202",
+   "folder": "Layout/Walls",
+   "loc": [
+    -1599.3660888671875,
+    1998.0,
+    200.376953125
+   ],
+   "rot": [
+    90.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.140451192855835,
+    2.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/Engine/EngineMaterials/WorldGridMaterial.WorldGridMaterial"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_113",
+   "folder": "Layout/Floors",
+   "loc": [
+    -1200.6529541015625,
+    800.0,
+    -0.9605640172958374
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Blue_1.MI_MS_Blue_1"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_209",
+   "folder": "Layout/Floors",
+   "loc": [
+    399.5023498535156,
+    -1599.9896240234375,
+    -0.9605550169944763
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Blue_1.MI_MS_Blue_1"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_150",
+   "folder": "Layout/Floors",
+   "loc": [
+    -400.6529541015625,
+    -399.79461669921875,
+    -0.9605640172958374
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Blue_1.MI_MS_Blue_1"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_241",
+   "folder": "Layout/Walls",
+   "loc": [
+    861.1339721679688,
+    4747.49951171875,
+    200.376953125
+   ],
+   "rot": [
+    90.0,
+    -90.0002212524414,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Surface_6.MI_MS_Surface_6"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "Cube8",
+   "folder": "Layout/Uneven Terrain",
+   "loc": [
+    -448.8666076660156,
+    1225.3309326171875,
+    -40.23794174194336
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    0.5,
+    1.0
+   ],
+   "mesh": "/Engine/BasicShapes/Cube.Cube",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Orange_1.MI_MS_Orange_1"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_104",
+   "folder": "Layout/Floors",
+   "loc": [
+    1599.0,
+    1600.0,
+    -0.9605638980865479
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Blue_1.MI_MS_Blue_1"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "Cube29",
+   "folder": "Layout/Uneven Terrain",
+   "loc": [
+    -1251.03076171875,
+    1399.5015869140625,
+    -19.791221618652344
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/Engine/BasicShapes/Cube.Cube",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Orange_1.MI_MS_Orange_1"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_179",
+   "folder": "Layout/Walls",
+   "loc": [
+    -1650.3660888671875,
+    800.0,
+    200.376953125
+   ],
+   "rot": [
+    90.0,
+    -1.1920928955078125e-07,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Surface_6.MI_MS_Surface_6"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_191",
+   "folder": "Layout/Walls",
+   "loc": [
+    -1649.6876220703125,
+    -1599.674560546875,
+    799.1685791015625
+   ],
+   "rot": [
+    90.0,
+    6.675720215697068e-06,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Surface_6.MI_MS_Surface_6"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_212",
+   "folder": "Layout/Walls",
+   "loc": [
+    -1550.3660888671875,
+    4790.0,
+    200.376953125
+   ],
+   "rot": [
+    90.0,
+    7.152557375165963e-06,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/Engine/EngineMaterials/WorldGridMaterial.WorldGridMaterial"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "LandscapeStreamingProxy",
+   "path_cls": "/Script/Landscape.LandscapeStreamingProxy",
+   "label": "LandscapeStreamingProxy_0_0_0",
+   "folder": "None",
+   "loc": [
+    -1500.64111328125,
+    1595.2869873046875,
+    0.14831772446632385
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "scale": [
+    100.0,
+    100.0,
+    100.0
+   ]
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_086_5",
+   "folder": "Layout/Ramps And Stairs",
+   "loc": [
+    98.794677734375,
+    -327.57989501953125,
+    197.27001953125
+   ],
+   "rot": [
+    0.0,
+    89.99995422363281,
+    -35.00001144409181
+   ],
+   "scale": [
+    0.6807129979133606,
+    1.0,
+    4.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Orange_1.MI_MS_Orange_1"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "B_WeaponSpawner_C",
+   "path_cls": "/ShooterCore/Blueprint/B_WeaponSpawner.B_WeaponSpawner_C",
+   "label": "B_WeaponSpawner_Pistol3",
+   "folder": "Gameplay",
+   "loc": [
+    -1391.255491,
+    -1800.548125,
+    784.430603
+   ],
+   "rot": [
+    0.0,
+    -90.00000000000001,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_146",
+   "folder": "Layout/Floors",
+   "loc": [
+    -400.6529541015625,
+    -1199.7945556640625,
+    -0.9605640172958374
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Blue_1.MI_MS_Blue_1"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_210",
+   "folder": "Layout/Walls",
+   "loc": [
+    -1550.3660888671875,
+    3994.0,
+    200.376953125
+   ],
+   "rot": [
+    90.0,
+    7.152557375165963e-06,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/Engine/EngineMaterials/WorldGridMaterial.WorldGridMaterial"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_116",
+   "folder": "Layout/Floors",
+   "loc": [
+    -0.6529393196105957,
+    800.0,
+    -0.9605640172958374
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Blue_1.MI_MS_Blue_1"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_228",
+   "folder": "Layout/Walls",
+   "loc": [
+    1600.6339111328125,
+    2794.0,
+    200.376953125
+   ],
+   "rot": [
+    90.0,
+    7.152557375165963e-06,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Surface_6.MI_MS_Surface_6"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "TextRenderActor",
+   "path_cls": "/Script/Engine.TextRenderActor",
+   "label": "TextRenderActor11",
+   "folder": "Gameplay",
+   "loc": [
+    -1096.0,
+    436.0,
+    109.0
+   ],
+   "rot": [
+    -0.0,
+    -95.00059032440187,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "text": "Launch\r\nUp",
+   "world_size": 26.0
+  },
+  {
+   "cls": "B_Launcher_Up_C",
+   "path_cls": "/ShooterCore/Blueprint/B_Launcher_Up.B_Launcher_Up_C",
+   "label": "B_Launcher_Up_2",
+   "folder": "Gameplay",
+   "loc": [
+    -1096.0,
+    436.0,
+    0.0
+   ],
+   "rot": [
+    0.0,
+    -90.00000000000001,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_285",
+   "folder": "Layout/Floors",
+   "loc": [
+    -399.0827331542969,
+    -1998.077392578125,
+    703.4304809570312
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Blue_1.MI_MS_Blue_1"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_265",
+   "folder": "Layout/Floors",
+   "loc": [
+    -399.6529541015625,
+    -2798.794677734375,
+    -0.9605640172958374
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Blue_1.MI_MS_Blue_1"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_196",
+   "folder": "Layout/Walls",
+   "loc": [
+    -799.2254638671875,
+    -3952.9072265625,
+    799.1685791015625
+   ],
+   "rot": [
+    90.0,
+    -90.0006103515625,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Surface_6.MI_MS_Surface_6"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_263",
+   "folder": "Layout/Walls",
+   "loc": [
+    1650.0125732421875,
+    -3198.045654296875,
+    200.376953125
+   ],
+   "rot": [
+    90.0,
+    -179.9994964599609,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Surface_6.MI_MS_Surface_6"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "TextRenderActor",
+   "path_cls": "/Script/Engine.TextRenderActor",
+   "label": "TextRenderActor2",
+   "folder": "Gameplay",
+   "loc": [
+    1573.1262124678972,
+    71.44900822559963,
+    1006.477061797927
+   ],
+   "rot": [
+    6.961821054574098e-05,
+    -179.9998016357422,
+    2.71661082518193e-10
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "text": "To Upper Level",
+   "world_size": 26.0
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_284",
+   "folder": "Layout/Floors",
+   "loc": [
+    -397.0827331542969,
+    -2398.077392578125,
+    703.4304809570312
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Blue_1.MI_MS_Blue_1"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_282",
+   "folder": "Layout/Floors",
+   "loc": [
+    -798.082763671875,
+    -2797.077392578125,
+    703.4304809570312
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Blue_1.MI_MS_Blue_1"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_274",
+   "folder": "Layout/Walls",
+   "loc": [
+    -1649.6876220703125,
+    -3592.674560546875,
+    799.1685791015625
+   ],
+   "rot": [
+    90.0,
+    1.124495891598736e-15,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Surface_6.MI_MS_Surface_6"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_200",
+   "folder": "Layout/Walls",
+   "loc": [
+    -1195.86376953125,
+    -3199.906494140625,
+    681.4075927734375
+   ],
+   "rot": [
+    90.0,
+    -90.0006103515625,
+    0.0
+   ],
+   "scale": [
+    1.9007915258407593,
+    1.1196694374084473,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Surface_6.MI_MS_Surface_6"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_233",
+   "folder": "Layout/Floors",
+   "loc": [
+    1199.1458740234375,
+    -1599.3524169921875,
+    -0.9605640172958374
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Blue_1.MI_MS_Blue_1"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_stairs_2",
+   "folder": "Layout/Ramps And Stairs",
+   "loc": [
+    524.8833618164062,
+    441.3344421386719,
+    -91.31712341308594
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    0.33000001311302185,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_stairs_1.SM_stairs_1",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Orange_1.MI_MS_Orange_1"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "BlockingVolume",
+   "path_cls": "/Script/Engine.BlockingVolume",
+   "label": "BlockingVolume7",
+   "folder": "None",
+   "loc": [
+    1677.0,
+    3173.9931640625,
+    1646.0
+   ],
+   "rot": [
+    0.0,
+    179.9998779296875,
+    -0.0
+   ],
+   "scale": [
+    0.3877730965614319,
+    15.78748,
+    18.402992
+   ],
+   "extent": [
+    38.780673224250904,
+    1578.7480826125948,
+    1840.2992000000004
+   ]
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_110",
+   "folder": "Layout/Floors",
+   "loc": [
+    -1200.6529541015625,
+    400.0,
+    -0.9605640172958374
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Blue_1.MI_MS_Blue_1"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_119",
+   "folder": "Layout/Floors",
+   "loc": [
+    -0.6529393196105957,
+    1200.0,
+    -0.9605640172958374
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Blue_1.MI_MS_Blue_1"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_185",
+   "folder": "Layout/Walls",
+   "loc": [
+    -1649.3660888671875,
+    -9.10456371307373,
+    200.376953125
+   ],
+   "rot": [
+    90.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Surface_6.MI_MS_Surface_6"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_149",
+   "folder": "Layout/Floors",
+   "loc": [
+    -400.6529541015625,
+    -799.7946166992188,
+    -0.9605640172958374
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Blue_1.MI_MS_Blue_1"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_160",
+   "folder": "Layout/Floors",
+   "loc": [
+    -1199.082763671875,
+    -1600.0772705078125,
+    703.4304809570312
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Blue_1.MI_MS_Blue_1"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_222",
+   "folder": "Layout/Walls",
+   "loc": [
+    1201.9569091796875,
+    -3247.591064453125,
+    200.37698364257812
+   ],
+   "rot": [
+    90.0,
+    89.99990844726562,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Surface_6.MI_MS_Surface_6"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_224",
+   "folder": "Layout/Walls",
+   "loc": [
+    403.95709228515625,
+    -3247.593017578125,
+    200.37698364257812
+   ],
+   "rot": [
+    90.0,
+    89.99990844726562,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Surface_6.MI_MS_Surface_6"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_256",
+   "folder": "Layout/Floors",
+   "loc": [
+    -800.6529541015625,
+    -1998.7945556640625,
+    -0.9605640172958374
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Blue_1.MI_MS_Blue_1"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "BlockingVolume",
+   "path_cls": "/Script/Engine.BlockingVolume",
+   "label": "BlockingVolume9",
+   "folder": "None",
+   "loc": [
+    1093.3082266790702,
+    -3268.1795415578395,
+    1646.0
+   ],
+   "rot": [
+    0.0,
+    -90.00015258789064,
+    0.0
+   ],
+   "scale": [
+    0.23777300119400024,
+    6.2592997550964355,
+    18.402992248535156
+   ],
+   "extent": [
+    625.9300388302045,
+    23.77896707167156,
+    1840.2992248535156
+   ]
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_237",
+   "folder": "Layout/Walls",
+   "loc": [
+    -734.8659057617188,
+    4747.50048828125,
+    200.376953125
+   ],
+   "rot": [
+    90.0,
+    -90.0002212524414,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Surface_6.MI_MS_Surface_6"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_281",
+   "folder": "Layout/Floors",
+   "loc": [
+    -398.0827331542969,
+    -2797.077392578125,
+    703.4304809570312
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Blue_1.MI_MS_Blue_1"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_194",
+   "folder": "Layout/Walls",
+   "loc": [
+    3.77470064163208,
+    -3199.90869140625,
+    681.4075927734375
+   ],
+   "rot": [
+    90.0,
+    -90.00054931640625,
+    0.0
+   ],
+   "scale": [
+    1.9007915258407593,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Surface_6.MI_MS_Surface_6"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_211",
+   "folder": "Layout/Walls",
+   "loc": [
+    -1550.3660888671875,
+    4390.0,
+    200.376953125
+   ],
+   "rot": [
+    90.0,
+    7.152557375165963e-06,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/Engine/EngineMaterials/WorldGridMaterial.WorldGridMaterial"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_299",
+   "folder": "Layout/Floors",
+   "loc": [
+    -798.0921630859375,
+    -3597.077392578125,
+    703.4304809570312
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Blue_1.MI_MS_Blue_1"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_247",
+   "folder": "Layout/Walls",
+   "loc": [
+    -1649.6876220703125,
+    -1999.0361328125,
+    799.1685791015625
+   ],
+   "rot": [
+    90.0,
+    6.675720215697068e-06,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Surface_6.MI_MS_Surface_6"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "BlockingVolume",
+   "path_cls": "/Script/Engine.BlockingVolume",
+   "label": "BlockingVolume2",
+   "folder": "None",
+   "loc": [
+    -594.388486876782,
+    -4025.980560828532,
+    1646.0
+   ],
+   "rot": [
+    0.0,
+    89.99984741210939,
+    -0.0
+   ],
+   "scale": [
+    0.23777347803115845,
+    11.01747989654541,
+    18.402992248535156
+   ],
+   "extent": [
+    1101.7480529735415,
+    23.780281935408766,
+    1840.2992248535156
+   ]
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_122",
+   "folder": "Layout/Floors",
+   "loc": [
+    399.0,
+    -399.79461669921875,
+    -0.9605640172958374
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Blue_1.MI_MS_Blue_1"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_235",
+   "folder": "Layout/Walls",
+   "loc": [
+    1600.6339111328125,
+    4790.0,
+    200.376953125
+   ],
+   "rot": [
+    90.0,
+    6.675720215697068e-06,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Surface_6.MI_MS_Surface_6"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_239",
+   "folder": "Layout/Walls",
+   "loc": [
+    61.1339225769043,
+    4747.5,
+    200.376953125
+   ],
+   "rot": [
+    90.0,
+    -90.0002212524414,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Surface_6.MI_MS_Surface_6"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_275",
+   "folder": "Layout/Walls",
+   "loc": [
+    401.7746276855469,
+    -3197.90966796875,
+    799.1685791015625
+   ],
+   "rot": [
+    90.0,
+    -0.0006105899810791016,
+    0.0
+   ],
+   "scale": [
+    1.6589572429656982,
+    1.870235800743103,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Surface_6.MI_MS_Surface_6"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "Cube37",
+   "folder": "Layout/Height Cubes",
+   "loc": [
+    1558.66259765625,
+    647.4107666015625,
+    92.72028350830078
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "scale": [
+    1.785356044769287,
+    4.095355987548828,
+    2.220323085784912
+   ],
+   "mesh": "/Engine/BasicShapes/Cube.Cube",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Orange_1.MI_MS_Orange_1"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_244",
+   "folder": "Layout/Floors",
+   "loc": [
+    799.0,
+    -2798.794677734375,
+    -0.9605640172958374
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Blue_1.MI_MS_Blue_1"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_182",
+   "folder": "Layout/Walls",
+   "loc": [
+    -1650.3660888671875,
+    1196.0,
+    200.376953125
+   ],
+   "rot": [
+    90.0,
+    -1.1920928955078125e-07,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Surface_6.MI_MS_Surface_6"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_267",
+   "folder": "Layout/Floors",
+   "loc": [
+    0.34706100821495056,
+    -2398.794677734375,
+    -0.9605640172958374
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Blue_1.MI_MS_Blue_1"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "Cube18",
+   "folder": "Layout/Uneven Terrain",
+   "loc": [
+    -851.3222045898438,
+    1225.3309326171875,
+    -30.055574417114258
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    0.5,
+    1.0
+   ],
+   "mesh": "/Engine/BasicShapes/Cube.Cube",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Orange_1.MI_MS_Orange_1"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_133",
+   "folder": "Layout/Floors",
+   "loc": [
+    1199.0,
+    -799.7946166992188,
+    -0.9605640172958374
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Blue_1.MI_MS_Blue_1"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_245",
+   "folder": "Layout/Floors",
+   "loc": [
+    400.0,
+    -2798.794677734375,
+    -0.9605640172958374
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Blue_1.MI_MS_Blue_1"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_97",
+   "folder": "Layout/Floors",
+   "loc": [
+    399.0,
+    800.0,
+    -0.9605638980865479
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Blue_1.MI_MS_Blue_1"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_163",
+   "folder": "Layout/Floors",
+   "loc": [
+    400.0,
+    -1998.7945556640625,
+    -0.9605640172958374
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Blue_1.MI_MS_Blue_1"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_145",
+   "folder": "Layout/Floors",
+   "loc": [
+    -1200.6529541015625,
+    -799.7946166992188,
+    -0.9605640172958374
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Blue_1.MI_MS_Blue_1"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "Cube39",
+   "folder": "Layout/Uneven Terrain",
+   "loc": [
+    -283.20292502009244,
+    -2294.099634356944,
+    803.5402024768373
+   ],
+   "rot": [
+    -90.0,
+    89.999999,
+    0.0
+   ],
+   "scale": [
+    1.9821923971176147,
+    3.684869,
+    -0.102767
+   ],
+   "mesh": "/Engine/BasicShapes/Cube.Cube",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Orange_1.MI_MS_Orange_1"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_206",
+   "folder": "Layout/Walls",
+   "loc": [
+    -1550.3660888671875,
+    3594.0,
+    200.376953125
+   ],
+   "rot": [
+    90.0,
+    7.152557375165963e-06,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/Engine/EngineMaterials/WorldGridMaterial.WorldGridMaterial"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_262",
+   "folder": "Layout/Walls",
+   "loc": [
+    1650.0111083984375,
+    -2798.045654296875,
+    200.376953125
+   ],
+   "rot": [
+    90.0,
+    -179.9994964599609,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Surface_6.MI_MS_Surface_6"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "B_AimAssistTargetTest_C",
+   "path_cls": "/ShooterCore/Blueprint/B_AimAssistTargetTest.B_AimAssistTargetTest_C",
+   "label": "B_AimAssistTargetTest",
+   "folder": "None",
+   "loc": [
+    -664.2110869658112,
+    -3868.0988336988007,
+    994.5026583364026
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_207",
+   "folder": "Layout/Floors",
+   "loc": [
+    -0.6529390215873718,
+    -1599.9896240234375,
+    -0.9605544805526733
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Blue_1.MI_MS_Blue_1"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_131",
+   "folder": "Layout/Floors",
+   "loc": [
+    1599.0,
+    -1199.7945556640625,
+    -0.9605640172958374
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Blue_1.MI_MS_Blue_1"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_259",
+   "folder": "Layout/Walls",
+   "loc": [
+    1650.009521484375,
+    -2398.0458984375,
+    200.376953125
+   ],
+   "rot": [
+    90.0,
+    -179.9994964599609,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Surface_6.MI_MS_Surface_6"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_290",
+   "folder": "Layout/Floors",
+   "loc": [
+    1.0477559566497803,
+    -1998.077392578125,
+    703.4304809570312
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Blue_1.MI_MS_Blue_1"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_226",
+   "folder": "Layout/Walls",
+   "loc": [
+    1600.6339111328125,
+    1998.0,
+    200.376953125
+   ],
+   "rot": [
+    90.0,
+    7.152557375165963e-06,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Surface_6.MI_MS_Surface_6"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_296",
+   "folder": "Layout/Floors",
+   "loc": [
+    -398.0827331542969,
+    -3198.077392578125,
+    703.4304809570312
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Blue_1.MI_MS_Blue_1"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_242",
+   "folder": "Layout/Walls",
+   "loc": [
+    1257.1337890625,
+    4747.49951171875,
+    200.376953125
+   ],
+   "rot": [
+    90.0,
+    -90.0002212524414,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Surface_6.MI_MS_Surface_6"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "BlockingVolume",
+   "path_cls": "/Script/Engine.BlockingVolume",
+   "label": "BlockingVolume10",
+   "folder": "None",
+   "loc": [
+    2.4767352310093105,
+    198.83567025720646,
+    3510.6914285122493
+   ],
+   "rot": [
+    90.0,
+    179.999878025735,
+    0.0
+   ],
+   "scale": [
+    0.237773,
+    52.292816162109375,
+    21.583009719848633
+   ],
+   "extent": [
+    2158.312104349356,
+    5229.286210903565,
+    23.77730000000065
+   ]
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_197",
+   "folder": "Layout/Walls",
+   "loc": [
+    -398.22540283203125,
+    -3952.908203125,
+    799.1685791015625
+   ],
+   "rot": [
+    90.0,
+    -90.0006103515625,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Surface_6.MI_MS_Surface_6"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_173",
+   "folder": "Layout/Floors",
+   "loc": [
+    1.0477561950683594,
+    -800.077392578125,
+    703.4304809570312
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Blue_1.MI_MS_Blue_1"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "Cube36",
+   "folder": "Layout/Uneven Terrain",
+   "loc": [
+    -1351.44677734375,
+    1099.7218017578125,
+    -19.791221618652344
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/Engine/BasicShapes/Cube.Cube",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Orange_1.MI_MS_Orange_1"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_218",
+   "folder": "Layout/Walls",
+   "loc": [
+    1650.0111083984375,
+    -800.0457763671875,
+    200.376953125
+   ],
+   "rot": [
+    90.0,
+    -179.99949645996094,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/Engine/EngineMaterials/WorldGridMaterial.WorldGridMaterial"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_253",
+   "folder": "Layout/Floors",
+   "loc": [
+    1199.0,
+    -1998.7945556640625,
+    -0.9605640172958374
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Blue_1.MI_MS_Blue_1"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_260",
+   "folder": "Layout/Floors",
+   "loc": [
+    -799.6529541015625,
+    -2798.794677734375,
+    -0.9605640172958374
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Blue_1.MI_MS_Blue_1"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_111",
+   "folder": "Layout/Floors",
+   "loc": [
+    -800.6529541015625,
+    400.0,
+    -0.9605640172958374
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Blue_1.MI_MS_Blue_1"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_246",
+   "folder": "Layout/Walls",
+   "loc": [
+    -1649.6876220703125,
+    -2399.0361328125,
+    799.1685791015625
+   ],
+   "rot": [
+    90.0,
+    6.675720215697068e-06,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Surface_6.MI_MS_Surface_6"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_93",
+   "folder": "Layout/Floors",
+   "loc": [
+    399.0,
+    1600.0,
+    -0.9605638980865479
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Blue_1.MI_MS_Blue_1"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "Cube10",
+   "folder": "Layout/Uneven Terrain",
+   "loc": [
+    -551.0166625976562,
+    1574.39794921875,
+    -40.23794174194336
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    0.5,
+    1.0
+   ],
+   "mesh": "/Engine/BasicShapes/Cube.Cube",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Orange_1.MI_MS_Orange_1"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_135",
+   "folder": "Layout/Floors",
+   "loc": [
+    1599.0,
+    -399.79461669921875,
+    -0.9605640172958374
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Blue_1.MI_MS_Blue_1"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_294",
+   "folder": "Layout/Floors",
+   "loc": [
+    -1198.082763671875,
+    -3197.077392578125,
+    703.4304809570312
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Blue_1.MI_MS_Blue_1"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "Cube25",
+   "folder": "Layout/Uneven Terrain",
+   "loc": [
+    -951.0623779296875,
+    974.8873901367188,
+    -30.055574417114258
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    0.5,
+    1.0
+   ],
+   "mesh": "/Engine/BasicShapes/Cube.Cube",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Orange_1.MI_MS_Orange_1"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_126",
+   "folder": "Layout/Floors",
+   "loc": [
+    399.0,
+    -1199.7945556640625,
+    -0.9605640172958374
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Blue_1.MI_MS_Blue_1"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "TextRenderActor",
+   "path_cls": "/Script/Engine.TextRenderActor",
+   "label": "TextRenderActor8",
+   "folder": "Layout/Height Cubes",
+   "loc": [
+    -251.32028198242188,
+    395.12005615234375,
+    469.03951263427734
+   ],
+   "rot": [
+    -0.0,
+    -90.00003051757814,
+    -0.0
+   ],
+   "scale": [
+    3.4800095558166504,
+    1.0,
+    1.0000000298023224
+   ],
+   "text": "Jump",
+   "world_size": 26.0
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "Cube5",
+   "folder": "Layout/Height Cubes",
+   "loc": [
+    -251.32028198242188,
+    299.12005615234375,
+    150.0395050048828
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "scale": [
+    6.960019111633301,
+    2.0,
+    3.0
+   ],
+   "mesh": "/Engine/BasicShapes/Cube.Cube",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Orange_1.MI_MS_Orange_1"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_140",
+   "folder": "Layout/Floors",
+   "loc": [
+    -800.6529541015625,
+    0.2053976058959961,
+    -0.9605640172958374
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Blue_1.MI_MS_Blue_1"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_183",
+   "folder": "Layout/Walls",
+   "loc": [
+    -1650.3660888671875,
+    1596.0,
+    200.376953125
+   ],
+   "rot": [
+    90.0,
+    -1.1920928955078125e-07,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Surface_6.MI_MS_Surface_6"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "B_GrantAbilityPad_ApplyGE_C",
+   "path_cls": "/ShooterCore/Blueprint/B_GrantAbilityPad_ApplyGE.B_GrantAbilityPad_ApplyGE_C",
+   "label": "B_GrantAbilityPad_ApplyGE",
+   "folder": "None",
+   "loc": [
+    211.8769073486328,
+    -2295.87939453125,
+    704.4306030273438
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_165",
+   "folder": "Layout/Floors",
+   "loc": [
+    -799.082763671875,
+    -1600.0772705078125,
+    703.4304809570312
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Blue_1.MI_MS_Blue_1"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_287",
+   "folder": "Layout/Floors",
+   "loc": [
+    3.0477559566497803,
+    -2398.077392578125,
+    703.4304809570312
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Blue_1.MI_MS_Blue_1"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_180",
+   "folder": "Layout/Walls",
+   "loc": [
+    -1649.6876220703125,
+    -1200.0361328125,
+    400.4076232910156
+   ],
+   "rot": [
+    90.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Surface_6.MI_MS_Surface_6"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "Cube32",
+   "folder": "Layout/Uneven Terrain",
+   "loc": [
+    -1351.44677734375,
+    1399.5015869140625,
+    -19.791221618652344
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/Engine/BasicShapes/Cube.Cube",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Orange_1.MI_MS_Orange_1"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_288",
+   "folder": "Layout/Floors",
+   "loc": [
+    403.0477294921875,
+    -2398.077392578125,
+    703.4304809570312
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Blue_1.MI_MS_Blue_1"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_117",
+   "folder": "Layout/Floors",
+   "loc": [
+    -400.6529541015625,
+    800.0,
+    -0.9605640172958374
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Blue_1.MI_MS_Blue_1"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_115",
+   "folder": "Layout/Floors",
+   "loc": [
+    -0.6529393196105957,
+    400.0,
+    -0.9605640172958374
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Blue_1.MI_MS_Blue_1"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "TextRenderActor",
+   "path_cls": "/Script/Engine.TextRenderActor",
+   "label": "TextRenderActor9",
+   "folder": "Gameplay",
+   "loc": [
+    372.0,
+    1485.0,
+    121.0
+   ],
+   "rot": [
+    0.0,
+    -90.00000000000003,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "text": "Launch\r\nForward",
+   "world_size": 26.0
+  },
+  {
+   "cls": "B_Launcher_Push_C",
+   "path_cls": "/ShooterCore/Blueprint/B_Launcher_Push.B_Launcher_Push_C",
+   "label": "B_Launcher_Push",
+   "folder": "Gameplay",
+   "loc": [
+    372.0,
+    1485.0,
+    0.0
+   ],
+   "rot": [
+    0.0,
+    89.99999999999999,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_130",
+   "folder": "Layout/Floors",
+   "loc": [
+    1199.0,
+    -1199.7945556640625,
+    -0.9605640172958374
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Blue_1.MI_MS_Blue_1"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_118",
+   "folder": "Layout/Floors",
+   "loc": [
+    -400.6529541015625,
+    1200.0,
+    -0.9605640172958374
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Blue_1.MI_MS_Blue_1"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_190",
+   "folder": "Layout/Walls",
+   "loc": [
+    -1649.6876220703125,
+    -1599.674560546875,
+    400.4076232910156
+   ],
+   "rot": [
+    90.0,
+    7.152557375165963e-06,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Surface_6.MI_MS_Surface_6"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "Cube35",
+   "folder": "Layout/Uneven Terrain",
+   "loc": [
+    -1350.7708740234375,
+    974.8873901367188,
+    -19.791221618652344
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    0.5,
+    1.0
+   ],
+   "mesh": "/Engine/BasicShapes/Cube.Cube",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Orange_1.MI_MS_Orange_1"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_243",
+   "folder": "Layout/Walls",
+   "loc": [
+    1657.1339111328125,
+    4747.4990234375,
+    200.376953125
+   ],
+   "rot": [
+    90.0,
+    -90.0002212524414,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Surface_6.MI_MS_Surface_6"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_221",
+   "folder": "Layout/Walls",
+   "loc": [
+    1650.6248779296875,
+    -1999.6021728515625,
+    200.37698364257812
+   ],
+   "rot": [
+    90.0,
+    179.99993896484375,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/Engine/EngineMaterials/WorldGridMaterial.WorldGridMaterial"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_251",
+   "folder": "Layout/Floors",
+   "loc": [
+    1599.0,
+    -2398.794677734375,
+    -0.9605640172958374
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Blue_1.MI_MS_Blue_1"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_94",
+   "folder": "Layout/Floors",
+   "loc": [
+    399.0,
+    400.0,
+    -0.9605638980865479
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Blue_1.MI_MS_Blue_1"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_205",
+   "folder": "Layout/Walls",
+   "loc": [
+    -1550.3660888671875,
+    3194.0,
+    200.376953125
+   ],
+   "rot": [
+    90.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/Engine/EngineMaterials/WorldGridMaterial.WorldGridMaterial"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "Cube17",
+   "folder": "Layout/Uneven Terrain",
+   "loc": [
+    -851.3222045898438,
+    1574.39794921875,
+    -30.055574417114258
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    0.5,
+    1.0
+   ],
+   "mesh": "/Engine/BasicShapes/Cube.Cube",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Orange_1.MI_MS_Orange_1"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_92",
+   "folder": "Layout/Floors",
+   "loc": [
+    799.0,
+    1600.0,
+    -0.9605638980865479
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Blue_1.MI_MS_Blue_1"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_166",
+   "folder": "Layout/Floors",
+   "loc": [
+    -799.082763671875,
+    -1200.0772705078125,
+    703.4304809570312
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Blue_1.MI_MS_Blue_1"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "Cube24",
+   "folder": "Layout/Uneven Terrain",
+   "loc": [
+    -851.3222045898438,
+    1099.7218017578125,
+    -30.055574417114258
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/Engine/BasicShapes/Cube.Cube",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Orange_1.MI_MS_Orange_1"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_203",
+   "folder": "Layout/Walls",
+   "loc": [
+    -1550.3660888671875,
+    2398.0,
+    200.376953125
+   ],
+   "rot": [
+    90.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/Engine/EngineMaterials/WorldGridMaterial.WorldGridMaterial"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_223",
+   "folder": "Layout/Walls",
+   "loc": [
+    802.9568481445312,
+    -3247.592041015625,
+    200.37698364257812
+   ],
+   "rot": [
+    90.0,
+    89.99990844726562,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Surface_6.MI_MS_Surface_6"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "BP_GameplayEffectPad_C",
+   "path_cls": "/Game/Environments/Gameplay/BP_GameplayEffectPad.BP_GameplayEffectPad_C",
+   "label": "BP_GameplayEffect_Pad",
+   "folder": "None",
+   "loc": [
+    208.49874877929688,
+    -2765.378173828125,
+    704.0000610351562
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_234",
+   "folder": "Layout/Walls",
+   "loc": [
+    1600.6339111328125,
+    4390.0,
+    200.376953125
+   ],
+   "rot": [
+    90.0,
+    6.675720215697068e-06,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Surface_6.MI_MS_Surface_6"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "Cube21",
+   "folder": "Layout/Uneven Terrain",
+   "loc": [
+    -951.7382202148438,
+    1225.3309326171875,
+    -30.055574417114258
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    0.5,
+    1.0
+   ],
+   "mesh": "/Engine/BasicShapes/Cube.Cube",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Orange_1.MI_MS_Orange_1"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_141",
+   "folder": "Layout/Floors",
+   "loc": [
+    -1200.6529541015625,
+    0.2053976058959961,
+    -0.9605640172958374
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Blue_1.MI_MS_Blue_1"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "Cube41",
+   "folder": "Layout/Height Cubes",
+   "loc": [
+    101.24407196044922,
+    -793.88916015625,
+    34.548187255859375
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/Engine/BasicShapes/Cube.Cube",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Orange_1.MI_MS_Orange_1"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_164",
+   "folder": "Layout/Floors",
+   "loc": [
+    -399.0827331542969,
+    -1600.0772705078125,
+    703.4304809570312
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Blue_1.MI_MS_Blue_1"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_086_6",
+   "folder": "Layout/Ramps And Stairs",
+   "loc": [
+    101.79467010498047,
+    -597.9208374023438,
+    196.27001953125
+   ],
+   "rot": [
+    1.966293439181769e-06,
+    -0.00026035308837890625,
+    -35.0000114440918
+   ],
+   "scale": [
+    0.5,
+    1.0,
+    4.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Orange_1.MI_MS_Orange_1"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_280",
+   "folder": "Layout/Floors",
+   "loc": [
+    -1198.082763671875,
+    -2797.077392578125,
+    703.4304809570312
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Blue_1.MI_MS_Blue_1"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_176",
+   "folder": "Layout/Floors",
+   "loc": [
+    401.0477294921875,
+    -1600.0772705078125,
+    703.4304809570312
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Blue_1.MI_MS_Blue_1"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_162",
+   "folder": "Layout/Floors",
+   "loc": [
+    799.0,
+    -1998.7945556640625,
+    -0.9605640172958374
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Blue_1.MI_MS_Blue_1"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "B_GrantInventoryPad_WithMesh_C",
+   "path_cls": "/ShooterCore/Blueprint/B_GrantInventoryPad_WithMesh.B_GrantInventoryPad_WithMesh_C",
+   "label": "B_GrantInventoryPad_WithMesh",
+   "folder": "None",
+   "loc": [
+    209.87689574440128,
+    -1863.37939453125,
+    709.5074455538471
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_152",
+   "folder": "Layout/Floors",
+   "loc": [
+    -0.6529390215873718,
+    0.2053976058959961,
+    -0.9605640172958374
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Blue_1.MI_MS_Blue_1"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_95",
+   "folder": "Layout/Floors",
+   "loc": [
+    799.0,
+    400.0,
+    -0.9605638980865479
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Blue_1.MI_MS_Blue_1"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "B_WeaponSpawner_C",
+   "path_cls": "/ShooterCore/Blueprint/B_WeaponSpawner.B_WeaponSpawner_C",
+   "label": "B_WeaponSpawner_Pistol2",
+   "folder": "Gameplay",
+   "loc": [
+    -1391.255491,
+    -1399.115874,
+    784.430603
+   ],
+   "rot": [
+    0.0,
+    -90.00000000000001,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_132",
+   "folder": "Layout/Floors",
+   "loc": [
+    1599.0,
+    -799.7946166992188,
+    -0.9605640172958374
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Blue_1.MI_MS_Blue_1"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_181",
+   "folder": "Layout/Walls",
+   "loc": [
+    -1649.6876220703125,
+    -800.0361328125,
+    400.4076232910156
+   ],
+   "rot": [
+    90.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Surface_6.MI_MS_Surface_6"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_232",
+   "folder": "Layout/Floors",
+   "loc": [
+    1599.1458740234375,
+    -1599.3524169921875,
+    -0.9605640172958374
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Blue_1.MI_MS_Blue_1"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_Railing_08_3",
+   "folder": "Layout/Misc",
+   "loc": [
+    1178.981201171875,
+    1229.483642578125,
+    27.97077178955078
+   ],
+   "rot": [
+    5.344973595666773e-12,
+    -0.00048828124999999984,
+    -179.9999237060547
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_Railing_010.SM_Railing_010",
+   "mats": [
+    null
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_108",
+   "folder": "Layout/Floors",
+   "loc": [
+    -800.6529541015625,
+    1600.0,
+    -0.9605640172958374
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Blue_1.MI_MS_Blue_1"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_269",
+   "folder": "Layout/Floors",
+   "loc": [
+    -401.6529541015625,
+    -1998.7945556640625,
+    -0.9605640172958374
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Blue_1.MI_MS_Blue_1"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "TextRenderActor",
+   "path_cls": "/Script/Engine.TextRenderActor",
+   "label": "TextRenderActor10",
+   "folder": "Gameplay",
+   "loc": [
+    13.0,
+    1485.0,
+    121.0
+   ],
+   "rot": [
+    -0.0,
+    -89.99994209908256,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "text": "Launch\r\nUp",
+   "world_size": 26.0
+  },
+  {
+   "cls": "B_Launcher_Up_C",
+   "path_cls": "/ShooterCore/Blueprint/B_Launcher_Up.B_Launcher_Up_C",
+   "label": "B_Launcher_Up_1",
+   "folder": "Gameplay",
+   "loc": [
+    13.0,
+    1485.0,
+    0.0
+   ],
+   "rot": [
+    0.0,
+    -90.00000000000001,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "Cube14",
+   "folder": "Layout/Uneven Terrain",
+   "loc": [
+    -448.8666076660156,
+    1099.7218017578125,
+    -40.23794174194336
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/Engine/BasicShapes/Cube.Cube",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Orange_1.MI_MS_Orange_1"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_220",
+   "folder": "Layout/Walls",
+   "loc": [
+    1650.01416015625,
+    -1600.045654296875,
+    200.376953125
+   ],
+   "rot": [
+    90.0,
+    -179.99949645996094,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/Engine/EngineMaterials/WorldGridMaterial.WorldGridMaterial"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_230",
+   "folder": "Layout/Walls",
+   "loc": [
+    1600.6339111328125,
+    3594.0,
+    200.376953125
+   ],
+   "rot": [
+    90.0,
+    6.675720215697068e-06,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Surface_6.MI_MS_Surface_6"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_121",
+   "folder": "Layout/Floors",
+   "loc": [
+    -400.6529541015625,
+    1600.0,
+    -0.9605640172958374
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Blue_1.MI_MS_Blue_1"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_96",
+   "folder": "Layout/Floors",
+   "loc": [
+    799.0,
+    800.0,
+    -0.9605638980865479
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Blue_1.MI_MS_Blue_1"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "Cube4",
+   "folder": "Layout/Height Cubes",
+   "loc": [
+    1558.66259765625,
+    91.41075134277344,
+    92.72028350830078
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "scale": [
+    1.785355567932129,
+    4.095356464385986,
+    2.220323324203491
+   ],
+   "mesh": "/Engine/BasicShapes/Cube.Cube",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Orange_1.MI_MS_Orange_1"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_255",
+   "folder": "Layout/Floors",
+   "loc": [
+    -799.6529541015625,
+    -2398.794677734375,
+    -0.9605640172958374
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Blue_1.MI_MS_Blue_1"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_254",
+   "folder": "Layout/Floors",
+   "loc": [
+    -1199.6529541015625,
+    -2398.794677734375,
+    -0.9605640172958374
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Blue_1.MI_MS_Blue_1"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_301",
+   "folder": "Layout/Floors",
+   "loc": [
+    400.0477294921875,
+    -3597.077392578125,
+    703.4304809570312
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Blue_1.MI_MS_Blue_1"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_238",
+   "folder": "Layout/Walls",
+   "loc": [
+    -338.8660888671875,
+    4747.5,
+    200.376953125
+   ],
+   "rot": [
+    90.0,
+    -90.0002212524414,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Surface_6.MI_MS_Surface_6"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_252",
+   "folder": "Layout/Floors",
+   "loc": [
+    1599.0,
+    -1998.7945556640625,
+    -0.9605640172958374
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Blue_1.MI_MS_Blue_1"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_266",
+   "folder": "Layout/Floors",
+   "loc": [
+    -399.6529541015625,
+    -2398.794677734375,
+    -0.9605640172958374
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Blue_1.MI_MS_Blue_1"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_127",
+   "folder": "Layout/Floors",
+   "loc": [
+    799.0,
+    -1199.7945556640625,
+    -0.9605640172958374
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Blue_1.MI_MS_Blue_1"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_147",
+   "folder": "Layout/Floors",
+   "loc": [
+    -0.6529390215873718,
+    -1199.7945556640625,
+    -0.9605640172958374
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Blue_1.MI_MS_Blue_1"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_134",
+   "folder": "Layout/Floors",
+   "loc": [
+    1199.0,
+    -399.79461669921875,
+    -0.9605640172958374
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Blue_1.MI_MS_Blue_1"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "Cube33",
+   "folder": "Layout/Uneven Terrain",
+   "loc": [
+    -1250.35498046875,
+    974.8873901367188,
+    -19.791221618652344
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    0.5,
+    1.0
+   ],
+   "mesh": "/Engine/BasicShapes/Cube.Cube",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Orange_1.MI_MS_Orange_1"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_264",
+   "folder": "Layout/Floors",
+   "loc": [
+    0.34706100821495056,
+    -2798.794677734375,
+    -0.9605640172958374
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Blue_1.MI_MS_Blue_1"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "Cube34",
+   "folder": "Layout/Uneven Terrain",
+   "loc": [
+    -1251.03076171875,
+    1099.7218017578125,
+    -19.791221618652344
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/Engine/BasicShapes/Cube.Cube",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Orange_1.MI_MS_Orange_1"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_103",
+   "folder": "Layout/Floors",
+   "loc": [
+    1599.0,
+    1200.0,
+    -0.9605638980865479
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Blue_1.MI_MS_Blue_1"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "Cube7",
+   "folder": "Layout/Uneven Terrain",
+   "loc": [
+    -450.6006774902344,
+    1574.39794921875,
+    -40.23794174194336
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    0.5,
+    1.0
+   ],
+   "mesh": "/Engine/BasicShapes/Cube.Cube",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Orange_1.MI_MS_Orange_1"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_219",
+   "folder": "Layout/Walls",
+   "loc": [
+    1650.0125732421875,
+    -1200.0457763671875,
+    200.376953125
+   ],
+   "rot": [
+    90.0,
+    -179.99949645996094,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/Engine/EngineMaterials/WorldGridMaterial.WorldGridMaterial"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_120",
+   "folder": "Layout/Floors",
+   "loc": [
+    -0.6529393196105957,
+    1600.0,
+    -0.9605640172958374
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Blue_1.MI_MS_Blue_1"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_276",
+   "folder": "Layout/Walls",
+   "loc": [
+    -398.2318501298091,
+    -3953.61794,
+    1279.1953498113908
+   ],
+   "rot": [
+    90.0,
+    -90.00061000000005,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Surface_6.MI_MS_Surface_6"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "Cube31",
+   "folder": "Layout/Uneven Terrain",
+   "loc": [
+    -1351.44677734375,
+    1225.3309326171875,
+    -19.791221618652344
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    0.5,
+    1.0
+   ],
+   "mesh": "/Engine/BasicShapes/Cube.Cube",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Orange_1.MI_MS_Orange_1"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_189",
+   "folder": "Layout/Walls",
+   "loc": [
+    -1648.6875,
+    -150.2262420654297,
+    345.73980712890625
+   ],
+   "rot": [
+    55.00000381469728,
+    90.00003051757814,
+    90.00002288818361
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Surface_6.MI_MS_Surface_6"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "B_Teleport_C",
+   "path_cls": "/ShooterCore/Blueprint/B_Teleport.B_Teleport_C",
+   "label": "B_DoorPortal_Lower_2",
+   "folder": "None",
+   "loc": [
+    -1039.342041015625,
+    4471.43212890625,
+    0.14578328857169254
+   ],
+   "rot": [
+    -0.00015258789062499997,
+    -39.99917602539062,
+    4.1201830754289376e-05
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "Cube16",
+   "folder": "Layout/Uneven Terrain",
+   "loc": [
+    -549.2825927734375,
+    1099.7218017578125,
+    -40.23794174194336
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/Engine/BasicShapes/Cube.Cube",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Orange_1.MI_MS_Orange_1"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_112",
+   "folder": "Layout/Floors",
+   "loc": [
+    -800.6529541015625,
+    800.0,
+    -0.9605640172958374
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Blue_1.MI_MS_Blue_1"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "TextRenderActor",
+   "path_cls": "/Script/Engine.TextRenderActor",
+   "label": "TextRenderActor3",
+   "folder": "Gameplay",
+   "loc": [
+    -1195.6924142230519,
+    4700.878290971457,
+    790.6033500884291
+   ],
+   "rot": [
+    -0.00015258789062499997,
+    -39.99917602539062,
+    4.1201830754289376e-05
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "text": "To Upper Level",
+   "world_size": 26.0
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "Cube20",
+   "folder": "Layout/Uneven Terrain",
+   "loc": [
+    -951.7382202148438,
+    1574.39794921875,
+    -30.055574417114258
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    0.5,
+    1.0
+   ],
+   "mesh": "/Engine/BasicShapes/Cube.Cube",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Orange_1.MI_MS_Orange_1"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_273",
+   "folder": "Layout/Walls",
+   "loc": [
+    -1649.6876220703125,
+    -3193.0361328125,
+    799.1685791015625
+   ],
+   "rot": [
+    90.0,
+    7.152557374041465e-06,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Surface_6.MI_MS_Surface_6"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_225",
+   "folder": "Layout/Walls",
+   "loc": [
+    -1649.6875,
+    174.3494415283203,
+    118.46941375732422
+   ],
+   "rot": [
+    55.00000381469728,
+    90.00003051757814,
+    90.00002288818361
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Surface_6.MI_MS_Surface_6"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_208",
+   "folder": "Layout/Floors",
+   "loc": [
+    -400.6529541015625,
+    -1599.9896240234375,
+    -0.9605544805526733
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Blue_1.MI_MS_Blue_1"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_229",
+   "folder": "Layout/Walls",
+   "loc": [
+    1600.6339111328125,
+    3194.0,
+    200.376953125
+   ],
+   "rot": [
+    90.0,
+    7.152557375165963e-06,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Surface_6.MI_MS_Surface_6"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "TextRenderActor",
+   "path_cls": "/Script/Engine.TextRenderActor",
+   "label": "TextRenderActor6",
+   "folder": "Layout/Height Cubes",
+   "loc": [
+    -1199.28271484375,
+    -198.81622314453125,
+    903.2739562988281
+   ],
+   "rot": [
+    -0.0,
+    -90.00015258789064,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    1.0000000149011612,
+    1.0000000149011612
+   ],
+   "text": "Step",
+   "world_size": 26.0
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_283",
+   "folder": "Layout/Floors",
+   "loc": [
+    -797.082763671875,
+    -2398.077392578125,
+    703.4304809570312
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Blue_1.MI_MS_Blue_1"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "BlockingVolume",
+   "path_cls": "/Script/Engine.BlockingVolume",
+   "label": "BlockingVolume5",
+   "folder": "None",
+   "loc": [
+    -1601.4481918812073,
+    3173.9999860411795,
+    1646.0
+   ],
+   "rot": [
+    0.0,
+    179.9998779296875,
+    -0.0
+   ],
+   "scale": [
+    0.4777728021144867,
+    15.787480354309082,
+    18.402992248535156
+   ],
+   "extent": [
+    47.78064377961141,
+    1578.7481372181996,
+    1840.2992248535156
+   ]
+  },
+  {
+   "cls": "B_WeaponSpawner_C",
+   "path_cls": "/ShooterCore/Blueprint/B_WeaponSpawner.B_WeaponSpawner_C",
+   "label": "B_WeaponSpawner_Pistol4",
+   "folder": "Gameplay",
+   "loc": [
+    -1386.410154,
+    -2193.548125,
+    784.430603
+   ],
+   "rot": [
+    0.0,
+    -90.00000000000001,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "Cube22",
+   "folder": "Layout/Uneven Terrain",
+   "loc": [
+    -951.7382202148438,
+    1399.5015869140625,
+    -30.055574417114258
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/Engine/BasicShapes/Cube.Cube",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Orange_1.MI_MS_Orange_1"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_298",
+   "folder": "Layout/Floors",
+   "loc": [
+    -799.082763671875,
+    -3197.077392578125,
+    703.4304809570312
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Blue_1.MI_MS_Blue_1"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_293",
+   "folder": "Layout/Floors",
+   "loc": [
+    -398.0921325683594,
+    -3597.077392578125,
+    703.4304809570312
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Blue_1.MI_MS_Blue_1"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_192",
+   "folder": "Layout/Walls",
+   "loc": [
+    -797.2254638671875,
+    -3199.9072265625,
+    681.4075927734375
+   ],
+   "rot": [
+    90.0,
+    -90.00054931640625,
+    0.0
+   ],
+   "scale": [
+    1.9007915258407593,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Surface_6.MI_MS_Surface_6"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_178",
+   "folder": "Layout/Walls",
+   "loc": [
+    -1650.3660888671875,
+    400.0,
+    200.376953125
+   ],
+   "rot": [
+    90.0,
+    -1.1920928955078125e-07,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Surface_6.MI_MS_Surface_6"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_199",
+   "folder": "Layout/Walls",
+   "loc": [
+    401.7746276855469,
+    -3952.90966796875,
+    799.1685791015625
+   ],
+   "rot": [
+    90.0,
+    -90.0006103515625,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Surface_6.MI_MS_Surface_6"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "TextRenderActor",
+   "path_cls": "/Script/Engine.TextRenderActor",
+   "label": "TextRenderActor14",
+   "folder": "None",
+   "loc": [
+    -597.8505545211718,
+    -3931.8719571239203,
+    1302.5797590554364
+   ],
+   "rot": [
+    0.0,
+    90.00022969717335,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "text": "Aim Assist",
+   "world_size": 26.0
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "Cube28",
+   "folder": "Layout/Uneven Terrain",
+   "loc": [
+    -1251.03076171875,
+    1225.3309326171875,
+    -19.791221618652344
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    0.5,
+    1.0
+   ],
+   "mesh": "/Engine/BasicShapes/Cube.Cube",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Orange_1.MI_MS_Orange_1"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_188",
+   "folder": "Layout/Walls",
+   "loc": [
+    -1649.6876220703125,
+    -472.1053161621094,
+    571.121826171875
+   ],
+   "rot": [
+    55.00000381469728,
+    90.00003051757814,
+    90.00002288818361
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Surface_6.MI_MS_Surface_6"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "TextRenderActor",
+   "path_cls": "/Script/Engine.TextRenderActor",
+   "label": "TextRenderActor7",
+   "folder": "Layout/Height Cubes",
+   "loc": [
+    -999.2826538085938,
+    -199.81622314453125,
+    903.2739562988281
+   ],
+   "rot": [
+    -0.0,
+    -90.00003051757814,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "text": "Jump",
+   "world_size": 26.0
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "Cube",
+   "folder": "Layout/Height Cubes",
+   "loc": [
+    -999.2826538085938,
+    -399.81622314453125,
+    304.2739562988281
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "scale": [
+    2.0,
+    4.0,
+    8.0
+   ],
+   "mesh": "/Engine/BasicShapes/Cube.Cube",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Orange_1.MI_MS_Orange_1"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "Cube15",
+   "folder": "Layout/Uneven Terrain",
+   "loc": [
+    -548.6067504882812,
+    974.8873901367188,
+    -40.23794174194336
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    0.5,
+    1.0
+   ],
+   "mesh": "/Engine/BasicShapes/Cube.Cube",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Orange_1.MI_MS_Orange_1"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_231",
+   "folder": "Layout/Walls",
+   "loc": [
+    1600.6339111328125,
+    3994.0,
+    200.376953125
+   ],
+   "rot": [
+    90.0,
+    6.675720215697068e-06,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Surface_6.MI_MS_Surface_6"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_291",
+   "folder": "Layout/Floors",
+   "loc": [
+    402.0477294921875,
+    -2797.077392578125,
+    703.4304809570312
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Blue_1.MI_MS_Blue_1"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_258",
+   "folder": "Layout/Walls",
+   "loc": [
+    -1649.6876220703125,
+    -2798.674560546875,
+    799.1685791015625
+   ],
+   "rot": [
+    90.0,
+    1.124495891598736e-15,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Surface_6.MI_MS_Surface_6"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_169",
+   "folder": "Layout/Floors",
+   "loc": [
+    -799.082763671875,
+    -800.077392578125,
+    703.4304809570312
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Blue_1.MI_MS_Blue_1"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_295",
+   "folder": "Layout/Floors",
+   "loc": [
+    -1.9522440433502197,
+    -3197.077392578125,
+    703.4304809570312
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Blue_1.MI_MS_Blue_1"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_198",
+   "folder": "Layout/Walls",
+   "loc": [
+    1.7747005224227905,
+    -3952.90869140625,
+    799.1685791015625
+   ],
+   "rot": [
+    90.0,
+    -90.0006103515625,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Surface_6.MI_MS_Surface_6"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_184",
+   "folder": "Layout/Walls",
+   "loc": [
+    -1649.6876220703125,
+    -400.0361022949219,
+    400.4076232910156
+   ],
+   "rot": [
+    90.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Surface_6.MI_MS_Surface_6"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "Cube12",
+   "folder": "Layout/Uneven Terrain",
+   "loc": [
+    -551.0166625976562,
+    1399.5015869140625,
+    -40.23794174194336
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/Engine/BasicShapes/Cube.Cube",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Orange_1.MI_MS_Orange_1"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_302",
+   "folder": "Layout/Floors",
+   "loc": [
+    1.0477559566497803,
+    -3597.077392578125,
+    703.4304809570312
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Blue_1.MI_MS_Blue_1"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_300",
+   "folder": "Layout/Floors",
+   "loc": [
+    398.0477294921875,
+    -3197.077392578125,
+    703.4304809570312
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Blue_1.MI_MS_Blue_1"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_101",
+   "folder": "Layout/Floors",
+   "loc": [
+    1199.0,
+    800.0,
+    -0.9605638980865479
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Blue_1.MI_MS_Blue_1"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "BlockingVolume",
+   "path_cls": "/Script/Engine.BlockingVolume",
+   "label": "BlockingVolume8",
+   "folder": "None",
+   "loc": [
+    479.8205507886149,
+    -3625.2071440208542,
+    1646.0
+   ],
+   "rot": [
+    0.0,
+    -0.0001523028331575915,
+    0.0
+   ],
+   "scale": [
+    0.23777300119400024,
+    3.806379795074463,
+    18.402992248535156
+   ],
+   "extent": [
+    23.778311925825676,
+    380.6380427105855,
+    1840.2992248535156
+   ]
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "Cube30",
+   "folder": "Layout/Uneven Terrain",
+   "loc": [
+    -1351.44677734375,
+    1574.39794921875,
+    -19.791221618652344
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    0.5,
+    1.0
+   ],
+   "mesh": "/Engine/BasicShapes/Cube.Cube",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Orange_1.MI_MS_Orange_1"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_271",
+   "folder": "Layout/Walls",
+   "loc": [
+    -1649.6876220703125,
+    -2400.0361328125,
+    400.4076232910156
+   ],
+   "rot": [
+    90.0,
+    7.152557375165963e-06,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Surface_6.MI_MS_Surface_6"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "TextRenderActor",
+   "path_cls": "/Script/Engine.TextRenderActor",
+   "label": "TextRenderActor",
+   "folder": "Gameplay",
+   "loc": [
+    -1524.439568245913,
+    -2643.1216800491957,
+    1508.7456444294708
+   ],
+   "rot": [
+    -0.00018310548102384484,
+    -0.00026972834530164053,
+    9.879837547749237e-06
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "text": "To Lower Level",
+   "world_size": 26.0
+  },
+  {
+   "cls": "BlockingVolume",
+   "path_cls": "/Script/Engine.BlockingVolume",
+   "label": "BlockingVolume4",
+   "folder": "None",
+   "loc": [
+    1736.0001220703125,
+    -1143.0,
+    1646.0
+   ],
+   "rot": [
+    0.0,
+    179.9998779296875,
+    -0.0
+   ],
+   "scale": [
+    0.23777300119400024,
+    28.19281768798828,
+    18.402992248535156
+   ],
+   "extent": [
+    23.783306680553096,
+    2819.2818194506535,
+    1840.2992248535156
+   ]
+  },
+  {
+   "cls": "TextRenderActor",
+   "path_cls": "/Script/Engine.TextRenderActor",
+   "label": "TextRenderActor12",
+   "folder": "Gameplay",
+   "loc": [
+    -468.0,
+    -468.0,
+    509.0396423339844
+   ],
+   "rot": [
+    0.0,
+    90.00000000000001,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "text": "Launch\r\nUp",
+   "world_size": 26.0
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_109",
+   "folder": "Layout/Floors",
+   "loc": [
+    -1200.6529541015625,
+    1600.0,
+    -0.9605640172958374
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Blue_1.MI_MS_Blue_1"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "Cube23",
+   "folder": "Layout/Uneven Terrain",
+   "loc": [
+    -850.6463623046875,
+    974.8873901367188,
+    -30.055574417114258
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    0.5,
+    1.0
+   ],
+   "mesh": "/Engine/BasicShapes/Cube.Cube",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Orange_1.MI_MS_Orange_1"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "Cube26",
+   "folder": "Layout/Uneven Terrain",
+   "loc": [
+    -951.7382202148438,
+    1099.7218017578125,
+    -30.055574417114258
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/Engine/BasicShapes/Cube.Cube",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Orange_1.MI_MS_Orange_1"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_138",
+   "folder": "Layout/Floors",
+   "loc": [
+    -1200.6529541015625,
+    -399.79461669921875,
+    -0.9605640172958374
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Blue_1.MI_MS_Blue_1"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_144",
+   "folder": "Layout/Floors",
+   "loc": [
+    -800.6529541015625,
+    -799.7946166992188,
+    -0.9605640172958374
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Blue_1.MI_MS_Blue_1"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "TextRenderActor",
+   "path_cls": "/Script/Engine.TextRenderActor",
+   "label": "TextRenderActor5",
+   "folder": "Gameplay",
+   "loc": [
+    1587.537494287102,
+    675.435436147429,
+    967.6221313511332
+   ],
+   "rot": [
+    0.00012969969247933474,
+    -179.9998016357422,
+    2.6672594688470486e-10
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "text": "To Lower Level\r\nTerrain",
+   "world_size": 26.0
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_123",
+   "folder": "Layout/Floors",
+   "loc": [
+    799.0,
+    -399.79461669921875,
+    -0.9605640172958374
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Blue_1.MI_MS_Blue_1"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_161",
+   "folder": "Layout/Floors",
+   "loc": [
+    799.1459350585938,
+    -1599.3524169921875,
+    -0.9605640172958374
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Blue_1.MI_MS_Blue_1"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_272",
+   "folder": "Layout/Walls",
+   "loc": [
+    -1649.6876220703125,
+    -2799.674560546875,
+    400.4076232910156
+   ],
+   "rot": [
+    90.0,
+    6.675720215697068e-06,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Surface_6.MI_MS_Surface_6"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_102",
+   "folder": "Layout/Floors",
+   "loc": [
+    1199.0,
+    1200.0,
+    -0.9605638980865479
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Blue_1.MI_MS_Blue_1"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_153",
+   "folder": "Layout/Floors",
+   "loc": [
+    -400.6529541015625,
+    0.2053976058959961,
+    -0.9605640172958374
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Blue_1.MI_MS_Blue_1"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "Cube13",
+   "folder": "Layout/Uneven Terrain",
+   "loc": [
+    -448.1907653808594,
+    974.8873901367188,
+    -40.23794174194336
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    0.5,
+    1.0
+   ],
+   "mesh": "/Engine/BasicShapes/Cube.Cube",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Orange_1.MI_MS_Orange_1"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_289",
+   "folder": "Layout/Floors",
+   "loc": [
+    401.0477294921875,
+    -1998.077392578125,
+    703.4304809570312
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Blue_1.MI_MS_Blue_1"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_270",
+   "folder": "Layout/Walls",
+   "loc": [
+    -1649.6876220703125,
+    -2000.0361328125,
+    400.4076232910156
+   ],
+   "rot": [
+    90.0,
+    7.152557375165963e-06,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Surface_6.MI_MS_Surface_6"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_217",
+   "folder": "Layout/Walls",
+   "loc": [
+    1650.009521484375,
+    -400.04583740234375,
+    200.376953125
+   ],
+   "rot": [
+    90.0,
+    -179.99949645996094,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/Engine/EngineMaterials/WorldGridMaterial.WorldGridMaterial"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_91",
+   "folder": "Layout/Floors",
+   "loc": [
+    799.0,
+    1200.0,
+    -0.9605638980865479
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Blue_1.MI_MS_Blue_1"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_167",
+   "folder": "Layout/Floors",
+   "loc": [
+    -399.0827331542969,
+    -1200.0772705078125,
+    703.4304809570312
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Blue_1.MI_MS_Blue_1"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_151",
+   "folder": "Layout/Floors",
+   "loc": [
+    -0.6529390215873718,
+    -399.79461669921875,
+    -0.9605640172958374
+   ],
+   "rot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Blue_1.MI_MS_Blue_1"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  },
+  {
+   "cls": "StaticMeshActor",
+   "path_cls": "/Script/Engine.StaticMeshActor",
+   "label": "SM_ModuleA_227",
+   "folder": "Layout/Walls",
+   "loc": [
+    1600.6339111328125,
+    2398.0,
+    200.376953125
+   ],
+   "rot": [
+    90.0,
+    7.152557375165963e-06,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesh": "/ShooterMaps/Meshes/FiringRange/SM_ModuleA_090.SM_ModuleA_090",
+   "mats": [
+    "/LyraExampleContent/Materials/MI_MS_Surface_6.MI_MS_Surface_6"
+   ],
+   "mobility": "<ComponentMobility.STATIC: 0>",
+   "collision": "BlockAll"
+  }
+ ],
+ "loaded": true,
+ "desc_count": 320,
+ "count": 321,
+ "classes": {
+  "StaticMeshActor": 258,
+  "TextRenderActor": 15,
+  "BlockingVolume": 9,
+  "LyraPlayerStart": 8,
+  "B_Teleport_C": 7,
+  "B_Launcher_Up_C": 3,
+  "B_WeaponSpawner_C": 3,
+  "B_AimAssistTargetTest_C": 2,
+  "RecastNavMesh": 1,
+  "WorldDataLayers": 1,
+  "ExponentialHeightFog": 1,
+  "SkyLight": 1,
+  "NavMeshBoundsVolume": 1,
+  "Landscape": 1,
+  "SkyAtmosphere": 1,
+  "WorldPartitionMiniMap": 1,
+  "VolumetricCloud": 1,
+  "DirectionalLight": 1,
+  "GroupActor": 1,
+  "LandscapeStreamingProxy": 1,
+  "B_GrantAbilityPad_ApplyGE_C": 1,
+  "B_Launcher_Push_C": 1,
+  "BP_GameplayEffectPad_C": 1,
+  "B_GrantInventoryPad_WithMesh_C": 1
+ }
+}

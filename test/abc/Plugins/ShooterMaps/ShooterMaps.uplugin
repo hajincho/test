@@ -1,0 +1,11 @@
+{
+	"FileVersion": 3,
+	"Version": 1,
+	"VersionName": "1.0",
+	"FriendlyName": "ShooterMaps (Lyra FiringRange subset)",
+	"Description": "Lyra L_FiringRange_WP geometry only (no Lyra gameplay classes).",
+	"Category": "Other",
+	"CreatedBy": "Epic Games, Inc. (Lyra Starter Game)",
+	"CanContainContent": true,
+	"EnabledByDefault": true
+}

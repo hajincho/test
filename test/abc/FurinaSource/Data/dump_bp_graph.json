@@ -1,84 +1,208 @@
 {
- "K2Node_FPF_MulShHip": {
-  "title": "SelectFloat",
+ "K2Node_FPB_Begin": {
+  "title": "BeginPlay 이벤트",
   "pins": [
    [
-    "A",
-    "1.05",
+    "OutputDelegate",
+    "",
     []
    ],
    [
-    "B",
-    "1.1",
-    []
-   ],
-   [
-    "bPickA",
-    "false",
+    "then",
+    "",
     [
      [
-      "K2Node_FPF_ShOnF",
+      "K2Node_FPB_Ignore",
+      "execute"
+     ]
+    ]
+   ]
+  ]
+ },
+ "K2Node_FPB_Inst": {
+  "title": "GetInstigator",
+  "pins": [
+   [
+    "self",
+    "",
+    []
+   ],
+   [
+    "ReturnValue",
+    "",
+    [
+     [
+      "K2Node_FPB_Ignore",
+      "Actor"
+     ]
+    ]
+   ]
+  ]
+ },
+ "K2Node_FPB_GetSph": {
+  "title": "Get Bullet",
+  "pins": [
+   [
+    "Bullet",
+    "",
+    [
+     [
+      "K2Node_FPB_Ignore",
+      "self"
+     ]
+    ]
+   ]
+  ]
+ },
+ "K2Node_FPB_Ignore": {
+  "title": "IgnoreActorWhenMoving",
+  "pins": [
+   [
+    "execute",
+    "",
+    [
+     [
+      "K2Node_FPB_Begin",
+      "then"
+     ]
+    ]
+   ],
+   [
+    "self",
+    "",
+    [
+     [
+      "K2Node_FPB_GetSph",
+      "Bullet"
+     ]
+    ]
+   ],
+   [
+    "Actor",
+    "",
+    [
+     [
+      "K2Node_FPB_Inst",
       "ReturnValue"
      ]
     ]
    ],
    [
-    "ReturnValue",
+    "bShouldIgnore",
+    "true",
+    []
+   ],
+   [
+    "then",
+    "",
+    []
+   ]
+  ]
+ },
+ "K2Node_FPB_Tick": {
+  "title": "Tick 이벤트",
+  "pins": [
+   [
+    "OutputDelegate",
+    "",
+    []
+   ],
+   [
+    "then",
+    "",
+    [
+     [
+      "K2Node_FPB_SetVel",
+      "execute"
+     ]
+    ]
+   ],
+   [
+    "DeltaSeconds",
     "0.0",
     [
      [
-      "K2Node_FPF_Mult",
+      "K2Node_FPB_Kdt",
       "B"
      ]
     ]
    ]
   ]
  },
- "K2Node_FPF_Mult": {
-  "title": "SelectFloat",
+ "K2Node_FPB_GetPM": {
+  "title": "Get Ballistics",
   "pins": [
    [
-    "A",
-    "0.9",
-    []
-   ],
-   [
-    "B",
-    "0.0",
+    "Ballistics",
+    "",
     [
      [
-      "K2Node_FPF_MulShHip",
-      "ReturnValue"
+      "K2Node_FPB_Vel",
+      "self"
+     ],
+     [
+      "K2Node_FPB_SetVel",
+      "self"
+     ]
+    ]
+   ]
+  ]
+ },
+ "K2Node_FPB_Vel": {
+  "title": "Get Velocity",
+  "pins": [
+   [
+    "self",
+    "",
+    [
+     [
+      "K2Node_FPB_GetPM",
+      "Ballistics"
      ]
     ]
    ],
    [
-    "bPickA",
-    "false",
+    "Velocity",
+    "0, 0, 0",
     [
      [
-      "K2Node_FPF_AdsOnF",
-      "ReturnValue"
-     ]
-    ]
-   ],
-   [
-    "ReturnValue",
-    "0.0",
-    [
-     [
-      "K2Node_FPF_Mult2",
+      "K2Node_FPB_Spd",
       "A"
      ],
      [
-      "K2Node_FPF_SprBase",
+      "K2Node_FPB_NewVel",
       "A"
      ]
     ]
    ]
   ]
  },
- "K2Node_FPF_SprBase": {
+ "K2Node_FPB_Spd": {
+  "title": "Vector Length",
+  "pins": [
+   [
+    "A",
+    "0, 0, 0",
+    [
+     [
+      "K2Node_FPB_Vel",
+      "Velocity"
+     ]
+    ]
+   ],
+   [
+    "ReturnValue",
+    "0.0",
+    [
+     [
+      "K2Node_FPB_Kdt",
+      "A"
+     ]
+    ]
+   ]
+  ]
+ },
+ "K2Node_FPB_Kdt": {
   "title": "float * float",
   "pins": [
    [
@@ -86,29 +210,34 @@
     "0.0",
     [
      [
-      "K2Node_FPF_Mult",
+      "K2Node_FPB_Spd",
       "ReturnValue"
      ]
     ]
    ],
    [
     "B",
-    "0.15",
-    []
+    "0.0",
+    [
+     [
+      "K2Node_FPB_Tick",
+      "DeltaSeconds"
+     ]
+    ]
    ],
    [
     "ReturnValue",
     "0.0",
     [
      [
-      "K2Node_FPF_Half",
+      "K2Node_FPB_Kv",
       "A"
      ]
     ]
    ]
   ]
  },
- "K2Node_FPF_MovePen": {
+ "K2Node_FPB_Kv": {
   "title": "float * float",
   "pins": [
    [
@@ -116,14 +245,14 @@
     "0.0",
     [
      [
-      "K2Node_FPF_MySpd",
+      "K2Node_FPB_Kdt",
       "ReturnValue"
      ]
     ]
    ],
    [
     "B",
-    "0.0015",
+    "1.4261805540956367e-05",
     []
    ],
    [
@@ -131,32 +260,62 @@
     "0.0",
     [
      [
-      "K2Node_FPF_Half",
+      "K2Node_FPB_Fac",
       "B"
      ]
     ]
    ]
   ]
  },
- "K2Node_FPF_Cone": {
-  "title": "RandomUnitVectorInConeInDegrees",
+ "K2Node_FPB_Fac": {
+  "title": "float - float",
   "pins": [
    [
-    "ConeDir",
-    "0, 0, 0",
+    "A",
+    "1.0",
+    []
+   ],
+   [
+    "B",
+    "1.000000",
     [
      [
-      "K2Node_FPF_DirZ",
+      "K2Node_FPB_Kv",
       "ReturnValue"
      ]
     ]
    ],
    [
-    "ConeHalfAngleInDegrees",
+    "ReturnValue",
     "0.0",
     [
      [
-      "FPN_ShErrAdd",
+      "K2Node_FPB_NewVel",
+      "B"
+     ]
+    ]
+   ]
+  ]
+ },
+ "K2Node_FPB_NewVel": {
+  "title": "vector * float",
+  "pins": [
+   [
+    "A",
+    "0, 0, 0",
+    [
+     [
+      "K2Node_FPB_Vel",
+      "Velocity"
+     ]
+    ]
+   ],
+   [
+    "B",
+    "0.0",
+    [
+     [
+      "K2Node_FPB_Fac",
       "ReturnValue"
      ]
     ]
@@ -166,32 +325,1040 @@
     "0, 0, 0",
     [
      [
-      "K2Node_FPF_ShotRot",
+      "K2Node_FPB_SetVel",
+      "Velocity"
+     ]
+    ]
+   ]
+  ]
+ },
+ "K2Node_FPB_SetVel": {
+  "title": "Set Velocity",
+  "pins": [
+   [
+    "execute",
+    "",
+    [
+     [
+      "K2Node_FPB_Tick",
+      "then"
+     ]
+    ]
+   ],
+   [
+    "Velocity",
+    "0, 0, 0",
+    [
+     [
+      "K2Node_FPB_NewVel",
+      "ReturnValue"
+     ]
+    ]
+   ],
+   [
+    "self",
+    "",
+    [
+     [
+      "K2Node_FPB_GetPM",
+      "Ballistics"
+     ]
+    ]
+   ],
+   [
+    "then",
+    "",
+    [
+     [
+      "K2Node_FPB_Grow",
+      "execute"
+     ]
+    ]
+   ],
+   [
+    "Output_Get",
+    "0, 0, 0",
+    []
+   ]
+  ]
+ },
+ "K2Node_FPB_Age": {
+  "title": "GetGameTimeSinceCreation",
+  "pins": [
+   [
+    "self",
+    "",
+    []
+   ],
+   [
+    "ReturnValue",
+    "0.0",
+    [
+     [
+      "K2Node_FPB_Flown",
+      "A"
+     ]
+    ]
+   ]
+  ]
+ },
+ "K2Node_FPB_Flown": {
+  "title": "float * float",
+  "pins": [
+   [
+    "A",
+    "0.0",
+    [
+     [
+      "K2Node_FPB_Age",
+      "ReturnValue"
+     ]
+    ]
+   ],
+   [
+    "B",
+    "90000.0",
+    []
+   ],
+   [
+    "ReturnValue",
+    "0.0",
+    [
+     [
+      "K2Node_FPB_Past",
+      "A"
+     ],
+     [
+      "K2Node_FPB_Wid",
+      "A"
+     ]
+    ]
+   ]
+  ]
+ },
+ "K2Node_FPB_Past": {
+  "title": "float - float",
+  "pins": [
+   [
+    "A",
+    "0.0",
+    [
+     [
+      "K2Node_FPB_Flown",
+      "ReturnValue"
+     ]
+    ]
+   ],
+   [
+    "B",
+    "150.0",
+    []
+   ],
+   [
+    "ReturnValue",
+    "0.0",
+    [
+     [
+      "K2Node_FPB_Len0",
+      "A"
+     ]
+    ]
+   ]
+  ]
+ },
+ "K2Node_FPB_Len0": {
+  "title": "Min (Float)",
+  "pins": [
+   [
+    "A",
+    "0.0",
+    [
+     [
+      "K2Node_FPB_Past",
+      "ReturnValue"
+     ]
+    ]
+   ],
+   [
+    "B",
+    "2500.0",
+    []
+   ],
+   [
+    "ReturnValue",
+    "0.0",
+    [
+     [
+      "K2Node_FPB_Len",
+      "A"
+     ]
+    ]
+   ]
+  ]
+ },
+ "K2Node_FPB_Len": {
+  "title": "Max (Float)",
+  "pins": [
+   [
+    "A",
+    "0.0",
+    [
+     [
+      "K2Node_FPB_Len0",
+      "ReturnValue"
+     ]
+    ]
+   ],
+   [
+    "B",
+    "0.0",
+    []
+   ],
+   [
+    "ReturnValue",
+    "0.0",
+    [
+     [
+      "K2Node_FPB_LenS",
+      "A"
+     ],
+     [
+      "K2Node_FPB_Back",
+      "A"
+     ]
+    ]
+   ]
+  ]
+ },
+ "K2Node_FPB_LenS": {
+  "title": "float * float",
+  "pins": [
+   [
+    "A",
+    "0.0",
+    [
+     [
+      "K2Node_FPB_Len",
+      "ReturnValue"
+     ]
+    ]
+   ],
+   [
+    "B",
+    "0.01",
+    []
+   ],
+   [
+    "ReturnValue",
+    "0.0",
+    [
+     [
+      "K2Node_FPB_Scale",
+      "Z"
+     ]
+    ]
+   ]
+  ]
+ },
+ "K2Node_FPB_Wid": {
+  "title": "float * float",
+  "pins": [
+   [
+    "A",
+    "0.0",
+    [
+     [
+      "K2Node_FPB_Flown",
+      "ReturnValue"
+     ]
+    ]
+   ],
+   [
+    "B",
+    "0.00002",
+    []
+   ],
+   [
+    "ReturnValue",
+    "0.0",
+    [
+     [
+      "K2Node_FPB_WidS",
+      "A"
+     ]
+    ]
+   ]
+  ]
+ },
+ "K2Node_FPB_WidS": {
+  "title": "float + float",
+  "pins": [
+   [
+    "A",
+    "0.0",
+    [
+     [
+      "K2Node_FPB_Wid",
+      "ReturnValue"
+     ]
+    ]
+   ],
+   [
+    "B",
+    "0.01",
+    []
+   ],
+   [
+    "ReturnValue",
+    "0.0",
+    [
+     [
+      "K2Node_FPB_WidC",
+      "A"
+     ]
+    ]
+   ]
+  ]
+ },
+ "K2Node_FPB_WidC": {
+  "title": "Min (Float)",
+  "pins": [
+   [
+    "A",
+    "0.0",
+    [
+     [
+      "K2Node_FPB_WidS",
+      "ReturnValue"
+     ]
+    ]
+   ],
+   [
+    "B",
+    "0.3",
+    []
+   ],
+   [
+    "ReturnValue",
+    "0.0",
+    [
+     [
+      "K2Node_FPB_Scale",
+      "X"
+     ],
+     [
+      "K2Node_FPB_Scale",
+      "Y"
+     ]
+    ]
+   ]
+  ]
+ },
+ "K2Node_FPB_Scale": {
+  "title": "MakeVector",
+  "pins": [
+   [
+    "X",
+    "0.0",
+    [
+     [
+      "K2Node_FPB_WidC",
+      "ReturnValue"
+     ]
+    ]
+   ],
+   [
+    "Y",
+    "0.0",
+    [
+     [
+      "K2Node_FPB_WidC",
+      "ReturnValue"
+     ]
+    ]
+   ],
+   [
+    "Z",
+    "0.0",
+    [
+     [
+      "K2Node_FPB_LenS",
+      "ReturnValue"
+     ]
+    ]
+   ],
+   [
+    "ReturnValue",
+    "0, 0, 0",
+    [
+     [
+      "K2Node_FPB_Grow",
+      "NewScale3D"
+     ]
+    ]
+   ]
+  ]
+ },
+ "K2Node_FPB_Back": {
+  "title": "float * float",
+  "pins": [
+   [
+    "A",
+    "0.0",
+    [
+     [
+      "K2Node_FPB_Len",
+      "ReturnValue"
+     ]
+    ]
+   ],
+   [
+    "B",
+    "-0.5",
+    []
+   ],
+   [
+    "ReturnValue",
+    "0.0",
+    [
+     [
+      "K2Node_FPB_Loc",
       "X"
      ]
     ]
    ]
   ]
  },
- "K2Node_FPF_CrouchMul": {
-  "title": "SelectFloat",
+ "K2Node_FPB_Loc": {
+  "title": "MakeVector",
   "pins": [
    [
-    "A",
-    "0.9",
+    "X",
+    "0.0",
+    [
+     [
+      "K2Node_FPB_Back",
+      "ReturnValue"
+     ]
+    ]
+   ],
+   [
+    "Y",
+    "0.0",
     []
    ],
    [
-    "B",
-    "1.0",
+    "Z",
+    "0.0",
     []
    ],
    [
-    "bPickA",
+    "ReturnValue",
+    "0, 0, 0",
+    [
+     [
+      "K2Node_FPB_Trail",
+      "NewLocation"
+     ]
+    ]
+   ]
+  ]
+ },
+ "K2Node_FPB_GetTr": {
+  "title": "Get Tracer",
+  "pins": [
+   [
+    "Tracer",
+    "",
+    [
+     [
+      "K2Node_FPB_Grow",
+      "self"
+     ],
+     [
+      "K2Node_FPB_Trail",
+      "self"
+     ]
+    ]
+   ]
+  ]
+ },
+ "K2Node_FPB_Grow": {
+  "title": "SetRelativeScale3D",
+  "pins": [
+   [
+    "execute",
+    "",
+    [
+     [
+      "K2Node_FPB_SetVel",
+      "then"
+     ]
+    ]
+   ],
+   [
+    "self",
+    "",
+    [
+     [
+      "K2Node_FPB_GetTr",
+      "Tracer"
+     ]
+    ]
+   ],
+   [
+    "NewScale3D",
+    "0, 0, 0",
+    [
+     [
+      "K2Node_FPB_Scale",
+      "ReturnValue"
+     ]
+    ]
+   ],
+   [
+    "then",
+    "",
+    [
+     [
+      "K2Node_FPB_Trail",
+      "execute"
+     ]
+    ]
+   ]
+  ]
+ },
+ "K2Node_FPB_Trail": {
+  "title": "Set Relative Location",
+  "pins": [
+   [
+    "execute",
+    "",
+    [
+     [
+      "K2Node_FPB_Grow",
+      "then"
+     ]
+    ]
+   ],
+   [
+    "self",
+    "",
+    [
+     [
+      "K2Node_FPB_GetTr",
+      "Tracer"
+     ]
+    ]
+   ],
+   [
+    "NewLocation",
+    "0, 0, 0",
+    [
+     [
+      "K2Node_FPB_Loc",
+      "ReturnValue"
+     ]
+    ]
+   ],
+   [
+    "bSweep",
+    "false",
+    []
+   ],
+   [
+    "bTeleport",
+    "true",
+    []
+   ],
+   [
+    "then",
+    "",
+    []
+   ],
+   [
+    "SweepHitResult",
+    "",
+    []
+   ]
+  ]
+ },
+ "K2Node_FPB_Hit": {
+  "title": "Hit 이벤트",
+  "pins": [
+   [
+    "OutputDelegate",
+    "",
+    []
+   ],
+   [
+    "then",
+    "",
+    [
+     [
+      "FRC_PrintHit",
+      "execute"
+     ]
+    ]
+   ],
+   [
+    "MyComp",
+    "",
+    []
+   ],
+   [
+    "Other",
+    "",
+    []
+   ],
+   [
+    "OtherComp",
+    "",
+    [
+     [
+      "K2Node_FPB_IsSim",
+      "self"
+     ],
+     [
+      "K2Node_FPB_Push",
+      "self"
+     ]
+    ]
+   ],
+   [
+    "bSelfMoved",
+    "false",
+    []
+   ],
+   [
+    "HitLocation",
+    "0, 0, 0",
+    [
+     [
+      "K2Node_FPB_Mark",
+      "Center"
+     ],
+     [
+      "K2Node_FPB_Push",
+      "Location"
+     ],
+     [
+      "FRC_Spark",
+      "Location"
+     ],
+     [
+      "FRC_StrLoc",
+      "InVec"
+     ],
+     [
+      "FRC_RXf",
+      "Location"
+     ]
+    ]
+   ],
+   [
+    "HitNormal",
+    "0, 0, 0",
+    [
+     [
+      "FRC_Dot",
+      "B"
+     ]
+    ]
+   ],
+   [
+    "NormalImpulse",
+    "0, 0, 0",
+    []
+   ],
+   [
+    "Hit",
+    "",
+    []
+   ]
+  ]
+ },
+ "K2Node_FPB_Mark": {
+  "title": "DrawDebugSphere",
+  "pins": [
+   [
+    "execute",
+    "",
+    [
+     [
+      "FRC_Branch",
+      "else"
+     ]
+    ]
+   ],
+   [
+    "Center",
+    "0, 0, 0",
+    [
+     [
+      "K2Node_FPB_Hit",
+      "HitLocation"
+     ]
+    ]
+   ],
+   [
+    "Radius",
+    "5.000000",
+    []
+   ],
+   [
+    "Segments",
+    "8",
+    []
+   ],
+   [
+    "LineColor",
+    "(R=1.000000,G=0.850000,B=0.100000,A=1.000000)",
+    []
+   ],
+   [
+    "Duration",
+    "5.000000",
+    []
+   ],
+   [
+    "Thickness",
+    "1.000000",
+    []
+   ],
+   [
+    "DepthPriority",
+    "World",
+    []
+   ],
+   [
+    "then",
+    "",
+    [
+     [
+      "K2Node_FPB_SimB",
+      "execute"
+     ]
+    ]
+   ]
+  ]
+ },
+ "K2Node_FPB_IsSim": {
+  "title": "IsSimulatingPhysics",
+  "pins": [
+   [
+    "self",
+    "",
+    [
+     [
+      "K2Node_FPB_Hit",
+      "OtherComp"
+     ]
+    ]
+   ],
+   [
+    "BoneName",
+    "None",
+    []
+   ],
+   [
+    "ReturnValue",
     "false",
     [
      [
-      "K2Node_FPF_CrouchOnF",
+      "K2Node_FPB_SimB",
+      "Condition"
+     ]
+    ]
+   ]
+  ]
+ },
+ "K2Node_FPB_SimB": {
+  "title": "Branch",
+  "pins": [
+   [
+    "execute",
+    "",
+    [
+     [
+      "K2Node_FPB_Mark",
+      "then"
+     ]
+    ]
+   ],
+   [
+    "Condition",
+    "true",
+    [
+     [
+      "K2Node_FPB_IsSim",
+      "ReturnValue"
+     ]
+    ]
+   ],
+   [
+    "then",
+    "",
+    [
+     [
+      "K2Node_FPB_Push",
+      "execute"
+     ]
+    ]
+   ],
+   [
+    "else",
+    "",
+    [
+     [
+      "K2Node_FPB_Kill",
+      "execute"
+     ]
+    ]
+   ]
+  ]
+ },
+ "K2Node_FPB_GetPM2": {
+  "title": "Get Ballistics",
+  "pins": [
+   [
+    "Ballistics",
+    "",
+    [
+     [
+      "K2Node_FPB_Vel2",
+      "self"
+     ]
+    ]
+   ]
+  ]
+ },
+ "K2Node_FPB_Vel2": {
+  "title": "Get Velocity",
+  "pins": [
+   [
+    "self",
+    "",
+    [
+     [
+      "K2Node_FPB_GetPM2",
+      "Ballistics"
+     ]
+    ]
+   ],
+   [
+    "Velocity",
+    "0, 0, 0",
+    [
+     [
+      "K2Node_FPB_Dir",
+      "A"
+     ],
+     [
+      "FRC_StrVel",
+      "InVec"
+     ]
+    ]
+   ]
+  ]
+ },
+ "K2Node_FPB_Dir": {
+  "title": "Normalize",
+  "pins": [
+   [
+    "A",
+    "0, 0, 0",
+    [
+     [
+      "K2Node_FPB_Vel2",
+      "Velocity"
+     ]
+    ]
+   ],
+   [
+    "Tolerance",
+    "0.000100",
+    []
+   ],
+   [
+    "ReturnValue",
+    "0, 0, 0",
+    [
+     [
+      "K2Node_FPB_Imp",
+      "A"
+     ],
+     [
+      "FRC_Dot",
+      "A"
+     ]
+    ]
+   ]
+  ]
+ },
+ "K2Node_FPB_Imp": {
+  "title": "vector * float",
+  "pins": [
+   [
+    "A",
+    "0, 0, 0",
+    [
+     [
+      "K2Node_FPB_Dir",
+      "ReturnValue"
+     ]
+    ]
+   ],
+   [
+    "B",
+    "30000.0",
+    []
+   ],
+   [
+    "ReturnValue",
+    "0, 0, 0",
+    [
+     [
+      "K2Node_FPB_Push",
+      "Impulse"
+     ]
+    ]
+   ]
+  ]
+ },
+ "K2Node_FPB_Push": {
+  "title": "AddImpulseAtLocation",
+  "pins": [
+   [
+    "execute",
+    "",
+    [
+     [
+      "K2Node_FPB_SimB",
+      "then"
+     ]
+    ]
+   ],
+   [
+    "self",
+    "",
+    [
+     [
+      "K2Node_FPB_Hit",
+      "OtherComp"
+     ]
+    ]
+   ],
+   [
+    "Impulse",
+    "0, 0, 0",
+    [
+     [
+      "K2Node_FPB_Imp",
+      "ReturnValue"
+     ]
+    ]
+   ],
+   [
+    "Location",
+    "0, 0, 0",
+    [
+     [
+      "K2Node_FPB_Hit",
+      "HitLocation"
+     ]
+    ]
+   ],
+   [
+    "BoneName",
+    "None",
+    []
+   ],
+   [
+    "then",
+    "",
+    [
+     [
+      "K2Node_FPB_Kill",
+      "execute"
+     ]
+    ]
+   ]
+  ]
+ },
+ "K2Node_FPB_Kill": {
+  "title": "Destroy Actor",
+  "pins": [
+   [
+    "execute",
+    "",
+    [
+     [
+      "K2Node_FPB_Push",
+      "then"
+     ],
+     [
+      "K2Node_FPB_SimB",
+      "else"
+     ]
+    ]
+   ],
+   [
+    "self",
+    "",
+    []
+   ],
+   [
+    "then",
+    "",
+    []
+   ]
+  ]
+ },
+ "FRC_Dot": {
+  "title": "Dot Product",
+  "pins": [
+   [
+    "A",
+    "0, 0, 0",
+    [
+     [
+      "K2Node_FPB_Dir",
+      "ReturnValue"
+     ]
+    ]
+   ],
+   [
+    "B",
+    "0, 0, 0",
+    [
+     [
+      "K2Node_FPB_Hit",
+      "HitNormal"
+     ]
+    ]
+   ],
+   [
+    "ReturnValue",
+    "0.0",
+    [
+     [
+      "FRC_Abs",
+      "A"
+     ]
+    ]
+   ]
+  ]
+ },
+ "FRC_Abs": {
+  "title": "Absolute (Float)",
+  "pins": [
+   [
+    "A",
+    "0.0",
+    [
+     [
+      "FRC_Dot",
       "ReturnValue"
      ]
     ]
@@ -201,109 +1368,142 @@
     "0.0",
     [
      [
-      "FPN_ProneMul",
-      "B"
+      "FRC_Grazing",
+      "A"
+     ],
+     [
+      "FRC_StrDot",
+      "InDouble"
      ]
     ]
    ]
   ]
  },
- "K2Node_FPF_Mult2": {
-  "title": "float * float",
+ "FRC_Grazing": {
+  "title": "float < float",
   "pins": [
    [
     "A",
     "",
     [
      [
-      "K2Node_FPF_Mult",
+      "FRC_Abs",
       "ReturnValue"
      ]
     ]
    ],
    [
     "B",
-    "",
-    [
-     [
-      "FPN_ProneMul",
-      "ReturnValue"
-     ]
-    ]
+    "0.34202",
+    []
    ],
    [
     "ReturnValue",
     "",
     [
      [
-      "K2Node_FPF_RecG1",
+      "FRC_And1",
       "A"
      ]
     ]
    ]
   ]
  },
- "K2Node_FPF_CrouchCone": {
-  "title": "float * float",
+ "FRC_Random": {
+  "title": "RandomFloat",
+  "pins": [
+   [
+    "ReturnValue",
+    "0.0",
+    [
+     [
+      "FRC_Prob",
+      "A"
+     ]
+    ]
+   ]
+  ]
+ },
+ "FRC_Prob": {
+  "title": "float < float",
   "pins": [
    [
     "A",
     "",
     [
      [
-      "K2Node_FPF_Half",
+      "FRC_Random",
       "ReturnValue"
      ]
     ]
    ],
    [
     "B",
-    "",
-    [
-     [
-      "FPN_ProneMul",
-      "ReturnValue"
-     ]
-    ]
+    "0.4",
+    []
    ],
    [
     "ReturnValue",
     "",
     [
      [
-      "FPN_ShErrAdd",
-      "A"
-     ]
-    ]
-   ]
-  ]
- },
- "FPN_ShErrNotAds": {
-  "title": "NOT Boolean",
-  "pins": [
-   [
-    "A",
-    "false",
-    [
-     [
-      "K2Node_FPF_AdsOnF",
-      "ReturnValue"
-     ]
-    ]
-   ],
-   [
-    "ReturnValue",
-    "false",
-    [
-     [
-      "FPN_ShErrAnd",
+      "FRC_And1",
       "B"
      ]
     ]
    ]
   ]
  },
- "FPN_ShErrAnd": {
+ "FRC_GetCount": {
+  "title": "Get FurinaRico",
+  "pins": [
+   [
+    "FurinaRico",
+    "0",
+    [
+     [
+      "FRC_FirstTime",
+      "A"
+     ],
+     [
+      "FRC_StrCnt",
+      "InInt"
+     ]
+    ]
+   ]
+  ]
+ },
+ "FRC_FirstTime": {
+  "title": "Equal (Integer)",
+  "pins": [
+   [
+    "A",
+    "",
+    [
+     [
+      "FRC_GetCount",
+      "FurinaRico"
+     ]
+    ]
+   ],
+   [
+    "B",
+    "",
+    []
+   ],
+   [
+    "ReturnValue",
+    "",
+    [
+     [
+      "FRC_And2",
+      "B"
+     ]
+    ]
+   ]
+  ]
+ },
+ "FRC_And1": {
   "title": "AND Boolean",
   "pins": [
    [
@@ -311,7 +1511,7 @@
     "false",
     [
      [
-      "K2Node_FPF_ShOnF",
+      "FRC_Grazing",
       "ReturnValue"
      ]
     ]
@@ -321,7 +1521,7 @@
     "false",
     [
      [
-      "FPN_ShErrNotAds",
+      "FRC_Prob",
       "ReturnValue"
      ]
     ]
@@ -329,65 +1529,345 @@
    [
     "ReturnValue",
     "false",
+    [
+     [
+      "FRC_And2",
+      "A"
+     ]
+    ]
+   ]
+  ]
+ },
+ "FRC_And2": {
+  "title": "AND Boolean",
+  "pins": [
+   [
+    "A",
+    "false",
+    [
+     [
+      "FRC_And1",
+      "ReturnValue"
+     ]
+    ]
+   ],
+   [
+    "B",
+    "false",
+    [
+     [
+      "FRC_FirstTime",
+      "ReturnValue"
+     ]
+    ]
+   ],
+   [
+    "ReturnValue",
+    "false",
+    [
+     [
+      "FRC_Branch",
+      "Condition"
+     ]
+    ]
+   ]
+  ]
+ },
+ "FRC_Branch": {
+  "title": "Branch",
+  "pins": [
+   [
+    "execute",
+    "",
+    [
+     [
+      "FRC_PrintHit",
+      "then"
+     ]
+    ]
+   ],
+   [
+    "Condition",
+    "true",
+    [
+     [
+      "FRC_And2",
+      "ReturnValue"
+     ]
+    ]
+   ],
+   [
+    "then",
+    "",
+    [
+     [
+      "FRC_SetCount",
+      "execute"
+     ]
+    ]
+   ],
+   [
+    "else",
+    "",
+    [
+     [
+      "K2Node_FPB_Mark",
+      "execute"
+     ]
+    ]
+   ]
+  ]
+ },
+ "FRC_SetCount": {
+  "title": "Set FurinaRico",
+  "pins": [
+   [
+    "execute",
+    "",
+    [
+     [
+      "FRC_Branch",
+      "then"
+     ]
+    ]
+   ],
+   [
+    "FurinaRico",
+    "1",
+    []
+   ],
+   [
+    "then",
+    "",
+    [
+     [
+      "FRC_PrintTrue",
+      "execute"
+     ]
+    ]
+   ],
+   [
+    "Output_Get",
+    "0",
     []
    ]
   ]
  },
- "FPN_ShErrSel": {
-  "title": "SelectFloat",
+ "FRC_Spark": {
+  "title": "SpawnSystemAtLocation",
   "pins": [
    [
-    "A",
-    "0.572939",
+    "execute",
+    "",
     []
    ],
    [
-    "B",
-    "1.718358",
+    "SystemTemplate",
+    "/Game/3DPlatformerGameBundle/NiagaraSystems/Sparks_FXS.Sparks_FXS",
     []
    ],
    [
-    "bPickA",
-    "false",
+    "Location",
+    "0, 0, 0",
     [
      [
-      "K2Node_FPF_ShOnF",
+      "K2Node_FPB_Hit",
+      "HitLocation"
+     ]
+    ]
+   ],
+   [
+    "Rotation",
+    "0, 0, 0",
+    []
+   ],
+   [
+    "Scale",
+    "0.1,0.1,0.1",
+    []
+   ],
+   [
+    "bAutoDestroy",
+    "true",
+    []
+   ],
+   [
+    "bAutoActivate",
+    "true",
+    []
+   ],
+   [
+    "PoolingMethod",
+    "None",
+    []
+   ],
+   [
+    "bPreCullCheck",
+    "true",
+    []
+   ],
+   [
+    "then",
+    "",
+    []
+   ],
+   [
+    "ReturnValue",
+    "",
+    []
+   ]
+  ]
+ },
+ "FRC_PrintHit": {
+  "title": "PrintString",
+  "pins": [
+   [
+    "execute",
+    "",
+    [
+     [
+      "K2Node_FPB_Hit",
+      "then"
+     ]
+    ]
+   ],
+   [
+    "InString",
+    "Hello",
+    [
+     [
+      "FRC_Cat7",
+      "ReturnValue"
+     ]
+    ]
+   ],
+   [
+    "bPrintToScreen",
+    "false",
+    []
+   ],
+   [
+    "bPrintToLog",
+    "false",
+    []
+   ],
+   [
+    "TextColor",
+    "(R=0.000000,G=0.660000,B=1.000000,A=1.000000)",
+    []
+   ],
+   [
+    "Duration",
+    "2.000000",
+    []
+   ],
+   [
+    "Key",
+    "None",
+    []
+   ],
+   [
+    "then",
+    "",
+    [
+     [
+      "FRC_Branch",
+      "execute"
+     ]
+    ]
+   ]
+  ]
+ },
+ "FRC_PrintTrue": {
+  "title": "PrintString",
+  "pins": [
+   [
+    "execute",
+    "",
+    [
+     [
+      "FRC_SetCount",
+      "then"
+     ]
+    ]
+   ],
+   [
+    "InString",
+    "RICO TRUE",
+    []
+   ],
+   [
+    "bPrintToScreen",
+    "false",
+    []
+   ],
+   [
+    "bPrintToLog",
+    "false",
+    []
+   ],
+   [
+    "TextColor",
+    "(R=0.000000,G=0.660000,B=1.000000,A=1.000000)",
+    []
+   ],
+   [
+    "Duration",
+    "2.000000",
+    []
+   ],
+   [
+    "Key",
+    "None",
+    []
+   ],
+   [
+    "then",
+    "",
+    [
+     [
+      "FRC_RSpawn",
+      "execute"
+     ]
+    ]
+   ]
+  ]
+ },
+ "FRC_StrDot": {
+  "title": "To String (Float)",
+  "pins": [
+   [
+    "InDouble",
+    "0.0",
+    [
+     [
+      "FRC_Abs",
       "ReturnValue"
      ]
     ]
    ],
    [
     "ReturnValue",
-    "0.0",
+    "",
     [
      [
-      "FPN_ShErrOuter",
+      "FRC_Cat1",
       "B"
      ]
     ]
    ]
   ]
  },
- "FPN_ShErrAdd": {
-  "title": "float + float",
+ "FRC_StrCnt": {
+  "title": "To String (Integer)",
   "pins": [
    [
-    "A",
-    "",
+    "InInt",
+    "0",
     [
      [
-      "K2Node_FPF_CrouchCone",
-      "ReturnValue"
-     ]
-    ]
-   ],
-   [
-    "B",
-    "",
-    [
-     [
-      "FPN_ShErrOuter",
-      "ReturnValue"
+      "FRC_GetCount",
+      "FurinaRico"
      ]
     ]
    ],
@@ -396,50 +1876,439 @@
     "",
     [
      [
-      "K2Node_FPF_Cone",
-      "ConeHalfAngleInDegrees"
+      "FRC_Cat3",
+      "B"
      ]
     ]
    ]
   ]
  },
- "FPN_ShErrOuter": {
-  "title": "SelectFloat",
+ "FRC_Cat1": {
+  "title": "Append",
   "pins": [
    [
     "A",
-    "0.0",
+    "RICO hit dot=",
     []
    ],
    [
     "B",
-    "0.0",
+    "",
     [
      [
-      "FPN_ShErrSel",
-      "ReturnValue"
-     ]
-    ]
-   ],
-   [
-    "bPickA",
-    "false",
-    [
-     [
-      "K2Node_FPF_AdsOnF",
+      "FRC_StrDot",
       "ReturnValue"
      ]
     ]
    ],
    [
     "ReturnValue",
-    "0.0",
+    "",
     [
      [
-      "FPN_ShErrAdd",
+      "FRC_Cat2",
+      "A"
+     ]
+    ]
+   ]
+  ]
+ },
+ "FRC_Cat2": {
+  "title": "Append",
+  "pins": [
+   [
+    "A",
+    "",
+    [
+     [
+      "FRC_Cat1",
+      "ReturnValue"
+     ]
+    ]
+   ],
+   [
+    "B",
+    " count=",
+    []
+   ],
+   [
+    "ReturnValue",
+    "",
+    [
+     [
+      "FRC_Cat3",
+      "A"
+     ]
+    ]
+   ]
+  ]
+ },
+ "FRC_Cat3": {
+  "title": "Append",
+  "pins": [
+   [
+    "A",
+    "",
+    [
+     [
+      "FRC_Cat2",
+      "ReturnValue"
+     ]
+    ]
+   ],
+   [
+    "B",
+    "",
+    [
+     [
+      "FRC_StrCnt",
+      "ReturnValue"
+     ]
+    ]
+   ],
+   [
+    "ReturnValue",
+    "",
+    [
+     [
+      "FRC_Cat4",
+      "A"
+     ]
+    ]
+   ]
+  ]
+ },
+ "FRC_StrLoc": {
+  "title": "To String (Vector)",
+  "pins": [
+   [
+    "InVec",
+    "0, 0, 0",
+    [
+     [
+      "K2Node_FPB_Hit",
+      "HitLocation"
+     ]
+    ]
+   ],
+   [
+    "ReturnValue",
+    "",
+    [
+     [
+      "FRC_Cat5",
       "B"
      ]
     ]
+   ]
+  ]
+ },
+ "FRC_StrVel": {
+  "title": "To String (Vector)",
+  "pins": [
+   [
+    "InVec",
+    "0, 0, 0",
+    [
+     [
+      "K2Node_FPB_Vel2",
+      "Velocity"
+     ]
+    ]
+   ],
+   [
+    "ReturnValue",
+    "",
+    [
+     [
+      "FRC_Cat7",
+      "B"
+     ]
+    ]
+   ]
+  ]
+ },
+ "FRC_Cat4": {
+  "title": "Append",
+  "pins": [
+   [
+    "A",
+    "",
+    [
+     [
+      "FRC_Cat3",
+      "ReturnValue"
+     ]
+    ]
+   ],
+   [
+    "B",
+    " loc=",
+    []
+   ],
+   [
+    "ReturnValue",
+    "",
+    [
+     [
+      "FRC_Cat5",
+      "A"
+     ]
+    ]
+   ]
+  ]
+ },
+ "FRC_Cat5": {
+  "title": "Append",
+  "pins": [
+   [
+    "A",
+    "",
+    [
+     [
+      "FRC_Cat4",
+      "ReturnValue"
+     ]
+    ]
+   ],
+   [
+    "B",
+    "",
+    [
+     [
+      "FRC_StrLoc",
+      "ReturnValue"
+     ]
+    ]
+   ],
+   [
+    "ReturnValue",
+    "",
+    [
+     [
+      "FRC_Cat6",
+      "A"
+     ]
+    ]
+   ]
+  ]
+ },
+ "FRC_Cat6": {
+  "title": "Append",
+  "pins": [
+   [
+    "A",
+    "",
+    [
+     [
+      "FRC_Cat5",
+      "ReturnValue"
+     ]
+    ]
+   ],
+   [
+    "B",
+    " v=",
+    []
+   ],
+   [
+    "ReturnValue",
+    "",
+    [
+     [
+      "FRC_Cat7",
+      "A"
+     ]
+    ]
+   ]
+  ]
+ },
+ "FRC_Cat7": {
+  "title": "Append",
+  "pins": [
+   [
+    "A",
+    "",
+    [
+     [
+      "FRC_Cat6",
+      "ReturnValue"
+     ]
+    ]
+   ],
+   [
+    "B",
+    "",
+    [
+     [
+      "FRC_StrVel",
+      "ReturnValue"
+     ]
+    ]
+   ],
+   [
+    "ReturnValue",
+    "",
+    [
+     [
+      "FRC_PrintHit",
+      "InString"
+     ]
+    ]
+   ]
+  ]
+ },
+ "FRC_RXf": {
+  "title": "MakeTransform",
+  "pins": [
+   [
+    "Location",
+    "0, 0, 0",
+    [
+     [
+      "K2Node_FPB_Hit",
+      "HitLocation"
+     ]
+    ]
+   ],
+   [
+    "Rotation",
+    "0, 0, 0",
+    []
+   ],
+   [
+    "Scale",
+    "1.000000,1.000000,1.000000",
+    []
+   ],
+   [
+    "ReturnValue",
+    "",
+    [
+     [
+      "FRC_RSpawn",
+      "SpawnTransform"
+     ],
+     [
+      "FRC_RFinish",
+      "SpawnTransform"
+     ]
+    ]
+   ]
+  ]
+ },
+ "FRC_RSpawn": {
+  "title": "BeginDeferredActorSpawnFromClass",
+  "pins": [
+   [
+    "execute",
+    "",
+    [
+     [
+      "FRC_PrintTrue",
+      "then"
+     ]
+    ]
+   ],
+   [
+    "ActorClass",
+    "/Game/Furina/M4/BP_RicoSpark.BP_RicoSpark_C",
+    []
+   ],
+   [
+    "SpawnTransform",
+    "",
+    [
+     [
+      "FRC_RXf",
+      "ReturnValue"
+     ]
+    ]
+   ],
+   [
+    "CollisionHandlingOverride",
+    "AlwaysSpawn",
+    []
+   ],
+   [
+    "Owner",
+    "",
+    []
+   ],
+   [
+    "TransformScaleMethod",
+    "MultiplyWithRoot",
+    []
+   ],
+   [
+    "then",
+    "",
+    [
+     [
+      "FRC_RFinish",
+      "execute"
+     ]
+    ]
+   ],
+   [
+    "ReturnValue",
+    "",
+    [
+     [
+      "FRC_RFinish",
+      "Actor"
+     ]
+    ]
+   ]
+  ]
+ },
+ "FRC_RFinish": {
+  "title": "FinishSpawningActor",
+  "pins": [
+   [
+    "execute",
+    "",
+    [
+     [
+      "FRC_RSpawn",
+      "then"
+     ]
+    ]
+   ],
+   [
+    "Actor",
+    "",
+    [
+     [
+      "FRC_RSpawn",
+      "ReturnValue"
+     ]
+    ]
+   ],
+   [
+    "SpawnTransform",
+    "",
+    [
+     [
+      "FRC_RXf",
+      "ReturnValue"
+     ]
+    ]
+   ],
+   [
+    "TransformScaleMethod",
+    "MultiplyWithRoot",
+    []
+   ],
+   [
+    "then",
+    "",
+    []
+   ],
+   [
+    "ReturnValue",
+    "",
+    []
    ]
   ]
  }

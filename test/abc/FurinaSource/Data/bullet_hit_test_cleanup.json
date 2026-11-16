@@ -1,0 +1,9 @@
+{
+ "bullet_saved": true,
+ "effect_default": "None",
+ "dummies_removed": 1,
+ "level_saved": true,
+ "deleted /Game/Furina/QA/BP_FurinaTestDummy": true,
+ "deleted /Game/GameplayEffects/Damage/GE_Damage_Basic_SetByCaller": true,
+ "left_in_gameplayeffects": "[]"
+}

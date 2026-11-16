@@ -1,0 +1,6 @@
+{
+ "before": "None",
+ "damage": 0,
+ "saved": true,
+ "after": "<Object '/Game/GameplayEffects/Damage/GE_Damage_Basic_SetByCaller.GE_Damage_Basic_SetByCaller_C' (0x0000020A53C80000) Class 'BlueprintGeneratedClass'>"
+}

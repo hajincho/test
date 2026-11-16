@@ -1,9 +1,9 @@
 {
- "world": "/Game/UndergroundTunnel/Maps/Demonstration.Demonstration",
+ "world": "/Game/LyraRange/L_FiringRange.L_FiringRange",
  "existing": [],
  "center": [
-  -3100.0,
-  -110.0,
+  170.0,
+  -1045.0,
   0.0
  ],
  "direct": true,
