@@ -2,10 +2,17 @@
 	"FileVersion": 3,
 	"Version": 1,
 	"VersionName": "1.0",
-	"FriendlyName": "LyraExampleContent (materials subset)",
-	"Description": "Materials used by the Lyra FiringRange blockout.",
-	"Category": "Other",
-	"CreatedBy": "Epic Games, Inc. (Lyra Starter Game)",
+	"FriendlyName": "LyraExample",
+	"Description": "Lyra Example Content",
+	"Category": "Game",
+	"CreatedBy": "Epic Games, Inc.",
+	"CreatedByURL": "http://epicgames.com",
+	"DocsURL": "",
+	"MarketplaceURL": "",
+	"SupportURL": "",
+	"EnabledByDefault": true,
 	"CanContainContent": true,
-	"EnabledByDefault": true
+	"IsBetaVersion": false,
+	"Installed": false,
+	"IsExperimentalVersion": false
 }
