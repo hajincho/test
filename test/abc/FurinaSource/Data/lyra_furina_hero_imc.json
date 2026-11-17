@@ -1,0 +1,10 @@
+{
+ "comp": "<Object '/Game/3DPlatformerGameBundle/Demo/ThirdPersonAssets/Blueprints/ThirdPersonCharacter_BP.ThirdPersonCharacter_BP_C:LyraHero_GEN_VARIABLE' (0x000001C4E9187300) Class 'LyraHeroComponent'>",
+ "reg_err": "InputMappingContextAndPriority: Failed to find property 'b_register_with_settings' for attribute 'b_",
+ "after": [
+  "<Object '/Game/3DPlatformerGameBundle/Demo/ThirdPersonAssets/Input/Default_IMC.Default_IMC' (0x000001C501E11180) Class 'InputMappingContext'> p0",
+  "<Object '/Game/Furina/Input/IMC_FurinaStance.IMC_FurinaStance' (0x000001C52B5ECF80) Class 'InputMappingContext'> p100"
+ ],
+ "status": "<BlueprintStatus.BS_UP_TO_DATE_WITH_WARNINGS: 5>",
+ "saved": true
+}

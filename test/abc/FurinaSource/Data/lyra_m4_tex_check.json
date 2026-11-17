@@ -1,0 +1,360 @@
+{
+ "tex": {
+  "T_Colt_Main_BaseColor": {
+   "max_texture_size": "0",
+   "lod_bias": "0",
+   "never_stream": "True",
+   "srgb": "True",
+   "compression_settings": "<TextureCompressionSettings.TC_DEFAULT: 0>",
+   "mip_gen_settings": "<TextureMipGenSettings.TMGS_SHARPEN4: 6>",
+   "lod_group": "<TextureGroup.TEXTUREGROUP_WEAPON: 6>",
+   "power_of_two_mode": "<TexturePowerOfTwoSetting.NONE: 0>",
+   "filter": "<TextureFilter.TF_DEFAULT: 3>",
+   "virtual_texture_streaming": "False",
+   "compression_no_alpha": "False",
+   "size": [
+    1254,
+    1254
+   ]
+  },
+  "T_Colt_Main_Normal": {
+   "max_texture_size": "0",
+   "lod_bias": "0",
+   "never_stream": "True",
+   "srgb": "False",
+   "compression_settings": "<TextureCompressionSettings.TC_NORMALMAP: 1>",
+   "mip_gen_settings": "<TextureMipGenSettings.TMGS_SHARPEN4: 6>",
+   "lod_group": "<TextureGroup.TEXTUREGROUP_WEAPON: 6>",
+   "power_of_two_mode": "<TexturePowerOfTwoSetting.NONE: 0>",
+   "filter": "<TextureFilter.TF_DEFAULT: 3>",
+   "virtual_texture_streaming": "False",
+   "compression_no_alpha": "False",
+   "size": [
+    4096,
+    4096
+   ]
+  },
+  "T_Colt_Main_Metallic": {
+   "max_texture_size": "0",
+   "lod_bias": "0",
+   "never_stream": "True",
+   "srgb": "False",
+   "compression_settings": "<TextureCompressionSettings.TC_MASKS: 2>",
+   "mip_gen_settings": "<TextureMipGenSettings.TMGS_SHARPEN4: 6>",
+   "lod_group": "<TextureGroup.TEXTUREGROUP_WEAPON: 6>",
+   "power_of_two_mode": "<TexturePowerOfTwoSetting.NONE: 0>",
+   "filter": "<TextureFilter.TF_DEFAULT: 3>",
+   "virtual_texture_streaming": "False",
+   "compression_no_alpha": "False",
+   "size": [
+    4096,
+    4096
+   ]
+  },
+  "T_Colt_Main_Roughness": {
+   "max_texture_size": "0",
+   "lod_bias": "0",
+   "never_stream": "True",
+   "srgb": "False",
+   "compression_settings": "<TextureCompressionSettings.TC_MASKS: 2>",
+   "mip_gen_settings": "<TextureMipGenSettings.TMGS_SHARPEN4: 6>",
+   "lod_group": "<TextureGroup.TEXTUREGROUP_WEAPON: 6>",
+   "power_of_two_mode": "<TexturePowerOfTwoSetting.NONE: 0>",
+   "filter": "<TextureFilter.TF_DEFAULT: 3>",
+   "virtual_texture_streaming": "False",
+   "compression_no_alpha": "False",
+   "size": [
+    4096,
+    4096
+   ]
+  },
+  "T_Colt_Main_AO": {
+   "max_texture_size": "0",
+   "lod_bias": "0",
+   "never_stream": "True",
+   "srgb": "False",
+   "compression_settings": "<TextureCompressionSettings.TC_MASKS: 2>",
+   "mip_gen_settings": "<TextureMipGenSettings.TMGS_SHARPEN4: 6>",
+   "lod_group": "<TextureGroup.TEXTUREGROUP_WEAPON: 6>",
+   "power_of_two_mode": "<TexturePowerOfTwoSetting.NONE: 0>",
+   "filter": "<TextureFilter.TF_DEFAULT: 3>",
+   "virtual_texture_streaming": "False",
+   "compression_no_alpha": "False",
+   "size": [
+    4096,
+    4096
+   ]
+  },
+  "T_Colt_Furniture_BaseColor": {
+   "max_texture_size": "0",
+   "lod_bias": "0",
+   "never_stream": "True",
+   "srgb": "True",
+   "compression_settings": "<TextureCompressionSettings.TC_DEFAULT: 0>",
+   "mip_gen_settings": "<TextureMipGenSettings.TMGS_SHARPEN4: 6>",
+   "lod_group": "<TextureGroup.TEXTUREGROUP_WEAPON: 6>",
+   "power_of_two_mode": "<TexturePowerOfTwoSetting.NONE: 0>",
+   "filter": "<TextureFilter.TF_DEFAULT: 3>",
+   "virtual_texture_streaming": "False",
+   "compression_no_alpha": "False",
+   "size": [
+    4096,
+    4096
+   ]
+  },
+  "T_Colt_Furniture_Normal": {
+   "max_texture_size": "0",
+   "lod_bias": "0",
+   "never_stream": "True",
+   "srgb": "False",
+   "compression_settings": "<TextureCompressionSettings.TC_NORMALMAP: 1>",
+   "mip_gen_settings": "<TextureMipGenSettings.TMGS_SHARPEN4: 6>",
+   "lod_group": "<TextureGroup.TEXTUREGROUP_WEAPON: 6>",
+   "power_of_two_mode": "<TexturePowerOfTwoSetting.NONE: 0>",
+   "filter": "<TextureFilter.TF_DEFAULT: 3>",
+   "virtual_texture_streaming": "False",
+   "compression_no_alpha": "False",
+   "size": [
+    4096,
+    4096
+   ]
+  },
+  "T_Colt_Furniture_Metallic": {
+   "max_texture_size": "0",
+   "lod_bias": "0",
+   "never_stream": "True",
+   "srgb": "False",
+   "compression_settings": "<TextureCompressionSettings.TC_MASKS: 2>",
+   "mip_gen_settings": "<TextureMipGenSettings.TMGS_SHARPEN4: 6>",
+   "lod_group": "<TextureGroup.TEXTUREGROUP_WEAPON: 6>",
+   "power_of_two_mode": "<TexturePowerOfTwoSetting.NONE: 0>",
+   "filter": "<TextureFilter.TF_DEFAULT: 3>",
+   "virtual_texture_streaming": "False",
+   "compression_no_alpha": "False",
+   "size": [
+    4096,
+    4096
+   ]
+  },
+  "T_Colt_Furniture_Roughness": {
+   "max_texture_size": "0",
+   "lod_bias": "0",
+   "never_stream": "True",
+   "srgb": "False",
+   "compression_settings": "<TextureCompressionSettings.TC_MASKS: 2>",
+   "mip_gen_settings": "<TextureMipGenSettings.TMGS_SHARPEN4: 6>",
+   "lod_group": "<TextureGroup.TEXTUREGROUP_WEAPON: 6>",
+   "power_of_two_mode": "<TexturePowerOfTwoSetting.NONE: 0>",
+   "filter": "<TextureFilter.TF_DEFAULT: 3>",
+   "virtual_texture_streaming": "False",
+   "compression_no_alpha": "False",
+   "size": [
+    4096,
+    4096
+   ]
+  },
+  "T_Colt_Furniture_AO": {
+   "max_texture_size": "0",
+   "lod_bias": "0",
+   "never_stream": "True",
+   "srgb": "False",
+   "compression_settings": "<TextureCompressionSettings.TC_MASKS: 2>",
+   "mip_gen_settings": "<TextureMipGenSettings.TMGS_SHARPEN4: 6>",
+   "lod_group": "<TextureGroup.TEXTUREGROUP_WEAPON: 6>",
+   "power_of_two_mode": "<TexturePowerOfTwoSetting.NONE: 0>",
+   "filter": "<TextureFilter.TF_DEFAULT: 3>",
+   "virtual_texture_streaming": "False",
+   "compression_no_alpha": "False",
+   "size": [
+    4096,
+    4096
+   ]
+  },
+  "T_Colt_Rear_BaseColor": {
+   "max_texture_size": "0",
+   "lod_bias": "0",
+   "never_stream": "True",
+   "srgb": "True",
+   "compression_settings": "<TextureCompressionSettings.TC_DEFAULT: 0>",
+   "mip_gen_settings": "<TextureMipGenSettings.TMGS_SHARPEN4: 6>",
+   "lod_group": "<TextureGroup.TEXTUREGROUP_WEAPON: 6>",
+   "power_of_two_mode": "<TexturePowerOfTwoSetting.NONE: 0>",
+   "filter": "<TextureFilter.TF_DEFAULT: 3>",
+   "virtual_texture_streaming": "False",
+   "compression_no_alpha": "False",
+   "size": [
+    2048,
+    2048
+   ]
+  },
+  "T_Colt_Rear_Normal": {
+   "max_texture_size": "0",
+   "lod_bias": "0",
+   "never_stream": "True",
+   "srgb": "False",
+   "compression_settings": "<TextureCompressionSettings.TC_NORMALMAP: 1>",
+   "mip_gen_settings": "<TextureMipGenSettings.TMGS_SHARPEN4: 6>",
+   "lod_group": "<TextureGroup.TEXTUREGROUP_WEAPON: 6>",
+   "power_of_two_mode": "<TexturePowerOfTwoSetting.NONE: 0>",
+   "filter": "<TextureFilter.TF_DEFAULT: 3>",
+   "virtual_texture_streaming": "False",
+   "compression_no_alpha": "False",
+   "size": [
+    2048,
+    2048
+   ]
+  },
+  "T_Colt_Rear_Metallic": {
+   "max_texture_size": "0",
+   "lod_bias": "0",
+   "never_stream": "True",
+   "srgb": "False",
+   "compression_settings": "<TextureCompressionSettings.TC_MASKS: 2>",
+   "mip_gen_settings": "<TextureMipGenSettings.TMGS_SHARPEN4: 6>",
+   "lod_group": "<TextureGroup.TEXTUREGROUP_WEAPON: 6>",
+   "power_of_two_mode": "<TexturePowerOfTwoSetting.NONE: 0>",
+   "filter": "<TextureFilter.TF_DEFAULT: 3>",
+   "virtual_texture_streaming": "False",
+   "compression_no_alpha": "False",
+   "size": [
+    2048,
+    2048
+   ]
+  },
+  "T_Colt_Rear_Roughness": {
+   "max_texture_size": "0",
+   "lod_bias": "0",
+   "never_stream": "True",
+   "srgb": "False",
+   "compression_settings": "<TextureCompressionSettings.TC_MASKS: 2>",
+   "mip_gen_settings": "<TextureMipGenSettings.TMGS_SHARPEN4: 6>",
+   "lod_group": "<TextureGroup.TEXTUREGROUP_WEAPON: 6>",
+   "power_of_two_mode": "<TexturePowerOfTwoSetting.NONE: 0>",
+   "filter": "<TextureFilter.TF_DEFAULT: 3>",
+   "virtual_texture_streaming": "False",
+   "compression_no_alpha": "False",
+   "size": [
+    2048,
+    2048
+   ]
+  },
+  "T_Colt_Rear_AO": {
+   "max_texture_size": "0",
+   "lod_bias": "0",
+   "never_stream": "True",
+   "srgb": "False",
+   "compression_settings": "<TextureCompressionSettings.TC_MASKS: 2>",
+   "mip_gen_settings": "<TextureMipGenSettings.TMGS_SHARPEN4: 6>",
+   "lod_group": "<TextureGroup.TEXTUREGROUP_WEAPON: 6>",
+   "power_of_two_mode": "<TexturePowerOfTwoSetting.NONE: 0>",
+   "filter": "<TextureFilter.TF_DEFAULT: 3>",
+   "virtual_texture_streaming": "False",
+   "compression_no_alpha": "False",
+   "size": [
+    2048,
+    2048
+   ]
+  },
+  "T_Colt_Mag_BaseColor": {
+   "max_texture_size": "0",
+   "lod_bias": "0",
+   "never_stream": "True",
+   "srgb": "True",
+   "compression_settings": "<TextureCompressionSettings.TC_DEFAULT: 0>",
+   "mip_gen_settings": "<TextureMipGenSettings.TMGS_SHARPEN4: 6>",
+   "lod_group": "<TextureGroup.TEXTUREGROUP_WEAPON: 6>",
+   "power_of_two_mode": "<TexturePowerOfTwoSetting.NONE: 0>",
+   "filter": "<TextureFilter.TF_DEFAULT: 3>",
+   "virtual_texture_streaming": "False",
+   "compression_no_alpha": "False",
+   "size": [
+    4096,
+    4096
+   ]
+  },
+  "T_Colt_Mag_Normal": {
+   "max_texture_size": "0",
+   "lod_bias": "0",
+   "never_stream": "True",
+   "srgb": "False",
+   "compression_settings": "<TextureCompressionSettings.TC_NORMALMAP: 1>",
+   "mip_gen_settings": "<TextureMipGenSettings.TMGS_SHARPEN4: 6>",
+   "lod_group": "<TextureGroup.TEXTUREGROUP_WEAPON: 6>",
+   "power_of_two_mode": "<TexturePowerOfTwoSetting.NONE: 0>",
+   "filter": "<TextureFilter.TF_DEFAULT: 3>",
+   "virtual_texture_streaming": "False",
+   "compression_no_alpha": "False",
+   "size": [
+    4096,
+    4096
+   ]
+  },
+  "T_Colt_Mag_Metallic": {
+   "max_texture_size": "0",
+   "lod_bias": "0",
+   "never_stream": "True",
+   "srgb": "False",
+   "compression_settings": "<TextureCompressionSettings.TC_MASKS: 2>",
+   "mip_gen_settings": "<TextureMipGenSettings.TMGS_SHARPEN4: 6>",
+   "lod_group": "<TextureGroup.TEXTUREGROUP_WEAPON: 6>",
+   "power_of_two_mode": "<TexturePowerOfTwoSetting.NONE: 0>",
+   "filter": "<TextureFilter.TF_DEFAULT: 3>",
+   "virtual_texture_streaming": "False",
+   "compression_no_alpha": "False",
+   "size": [
+    4096,
+    4096
+   ]
+  },
+  "T_Colt_Mag_Roughness": {
+   "max_texture_size": "0",
+   "lod_bias": "0",
+   "never_stream": "True",
+   "srgb": "False",
+   "compression_settings": "<TextureCompressionSettings.TC_MASKS: 2>",
+   "mip_gen_settings": "<TextureMipGenSettings.TMGS_SHARPEN4: 6>",
+   "lod_group": "<TextureGroup.TEXTUREGROUP_WEAPON: 6>",
+   "power_of_two_mode": "<TexturePowerOfTwoSetting.NONE: 0>",
+   "filter": "<TextureFilter.TF_DEFAULT: 3>",
+   "virtual_texture_streaming": "False",
+   "compression_no_alpha": "False",
+   "size": [
+    4096,
+    4096
+   ]
+  },
+  "T_Colt_Mag_AO": {
+   "max_texture_size": "0",
+   "lod_bias": "0",
+   "never_stream": "True",
+   "srgb": "False",
+   "compression_settings": "<TextureCompressionSettings.TC_MASKS: 2>",
+   "mip_gen_settings": "<TextureMipGenSettings.TMGS_SHARPEN4: 6>",
+   "lod_group": "<TextureGroup.TEXTUREGROUP_WEAPON: 6>",
+   "power_of_two_mode": "<TexturePowerOfTwoSetting.NONE: 0>",
+   "filter": "<TextureFilter.TF_DEFAULT: 3>",
+   "virtual_texture_streaming": "False",
+   "compression_no_alpha": "False",
+   "size": [
+    4096,
+    4096
+   ]
+  }
+ },
+ "listed": [],
+ "cvars": {
+  "r.Streaming.PoolSize": 1000.0,
+  "r.Streaming.MipBias": 0.0,
+  "r.Streaming.Boost": 1.0,
+  "r.Streaming.LimitPoolSizeToVRAM": 0.0,
+  "r.Streaming.UseFixedPoolSize": 0.0,
+  "r.Streaming.FullyLoadUsedTextures": 0.0,
+  "r.MaxAnisotropy": 8.0,
+  "r.Streaming.MaxEffectiveScreenSize": 0.0,
+  "r.TextureStreaming": 1.0,
+  "r.VT.MaxAnisotropy": 8.0,
+  "r.ViewDistanceScale": 1.0,
+  "sg.TextureQuality": 3.0,
+  "r.Streaming.PoolSize.Percent": 0.0
+ }
+}

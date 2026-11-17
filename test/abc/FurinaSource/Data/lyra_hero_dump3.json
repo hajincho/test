@@ -1,0 +1,206 @@
+{
+ "abilities": [
+  {
+   "ability": "/Game/Characters/Heroes/Abilities/GA_Hero_Jump.GA_Hero_Jump_C",
+   "level": "1",
+   "input_tag": "<Struct 'GameplayTag' (0x000002CA9F4EA5EC) {}>"
+  },
+  {
+   "ability": "/Game/Characters/Heroes/Abilities/GA_Hero_Death.GA_Hero_Death_C",
+   "level": "1",
+   "input_tag": "<Struct 'GameplayTag' (0x000002CA9F4EAC4C) {}>"
+  },
+  {
+   "ability": "/ShooterCore/Game/Dash/GA_Hero_Dash.GA_Hero_Dash_C",
+   "level": "1",
+   "input_tag": "<Struct 'GameplayTag' (0x000002CA9F4EA96C) {}>"
+  },
+  {
+   "ability": "/ShooterCore/Game/Emote/GA_Emote.GA_Emote_C",
+   "level": "1",
+   "input_tag": "<Struct 'GameplayTag' (0x000002CA9F4EAACC) {}>"
+  },
+  {
+   "ability": "/ShooterCore/Game/GA_QuickbarSlots.GA_QuickbarSlots_C",
+   "level": "1",
+   "input_tag": "<Struct 'GameplayTag' (0x000002CA9F4EA9CC) {}>"
+  },
+  {
+   "ability": "/ShooterCore/Input/Abilities/GA_ADS.GA_ADS_C",
+   "level": "1",
+   "input_tag": "<Struct 'GameplayTag' (0x000002CA9F4EAC6C) {}>"
+  },
+  {
+   "ability": "/ShooterCore/Input/Abilities/GA_Grenade.GA_Grenade_C",
+   "level": "1",
+   "input_tag": "<Struct 'GameplayTag' (0x000002CA9F4EAEAC) {}>"
+  },
+  {
+   "ability": "/ShooterCore/Input/Abilities/GA_DropWeapon.GA_DropWeapon_C",
+   "level": "1",
+   "input_tag": "<Struct 'GameplayTag' (0x000002CA88CC279C) {}>"
+  },
+  {
+   "ability": "/ShooterCore/Game/Melee/GA_Melee.GA_Melee_C",
+   "level": "1",
+   "input_tag": "<Struct 'GameplayTag' (0x000002CA88CC28BC) {}>"
+  },
+  {
+   "ability": "/ShooterCore/Game/Respawn/GA_SpawnEffect.GA_SpawnEffect_C",
+   "level": "1",
+   "input_tag": "<Struct 'GameplayTag' (0x000002CA88CC29DC) {}>"
+  },
+  {
+   "ability": "/Script/LyraGame.LyraGameplayAbility_Reset",
+   "level": "1",
+   "input_tag": "<Struct 'GameplayTag' (0x000002CA88CC2AFC) {}>"
+  }
+ ],
+ "effects": [
+  {
+   "effect": "/Game/GameplayEffects/GE_IsPlayer.GE_IsPlayer_C",
+   "level": "1.0"
+  }
+ ],
+ "attr_sets": [],
+ "LAS_ShooterGame_StandardComponents": [
+  {
+   "cls": "GameFeatureAction_AddComponents"
+  }
+ ],
+ "LAS_ShooterGame_SharedInput": [
+  {
+   "cls": "GameFeatureAction_AddInputBinding"
+  },
+  {
+   "cls": "GameFeatureAction_AddInputContextMapping"
+  }
+ ],
+ "LAS_ShooterGame_StandardHUD": [
+  {
+   "cls": "GameFeatureAction_AddWidgets",
+   "widgets": [
+    {
+     "widget": "ERR StructBase: Failed to find property 'widget_class' for attri...",
+     "slot": "ERR StructBase: Failed to find property 'slot_id' for attribute ..."
+    },
+    {
+     "widget": "ERR StructBase: Failed to find property 'widget_class' for attri...",
+     "slot": "ERR StructBase: Failed to find property 'slot_id' for attribute ..."
+    },
+    {
+     "widget": "ERR StructBase: Failed to find property 'widget_class' for attri...",
+     "slot": "ERR StructBase: Failed to find property 'slot_id' for attribute ..."
+    },
+    {
+     "widget": "ERR StructBase: Failed to find property 'widget_class' for attri...",
+     "slot": "ERR StructBase: Failed to find property 'slot_id' for attribute ..."
+    },
+    {
+     "widget": "ERR StructBase: Failed to find property 'widget_class' for attri...",
+     "slot": "ERR StructBase: Failed to find property 'slot_id' for attribute ..."
+    },
+    {
+     "widget": "ERR StructBase: Failed to find property 'widget_class' for attri...",
+     "slot": "ERR StructBase: Failed to find property 'slot_id' for attribute ..."
+    },
+    {
+     "widget": "ERR StructBase: Failed to find property 'widget_class' for attri...",
+     "slot": "ERR StructBase: Failed to find property 'slot_id' for attribute ..."
+    },
+    {
+     "widget": "ERR StructBase: Failed to find property 'widget_class' for attri...",
+     "slot": "ERR StructBase: Failed to find property 'slot_id' for attribute ..."
+    },
+    {
+     "widget": "ERR StructBase: Failed to find property 'widget_class' for attri...",
+     "slot": "ERR StructBase: Failed to find property 'slot_id' for attribute ..."
+    },
+    {
+     "widget": "ERR StructBase: Failed to find property 'widget_class' for attri...",
+     "slot": "ERR StructBase: Failed to find property 'slot_id' for attribute ..."
+    },
+    {
+     "widget": "ERR StructBase: Failed to find property 'widget_class' for attri...",
+     "slot": "ERR StructBase: Failed to find property 'slot_id' for attribute ..."
+    }
+   ],
+   "layout": [
+    {
+     "layout": "ERR StructBase: Failed to find property 'layout_class' for attri...",
+     "layer": "ERR StructBase: Failed to find property 'layer_id' for attribute..."
+    }
+   ]
+  }
+ ],
+ "EAS_BasicShooterAcolades": [
+  {
+   "cls": "GameFeatureAction_AddComponents"
+  }
+ ],
+ "B_Furina_Experience_actions": [
+  {
+   "cls": "GameFeatureAction_AddAbilities"
+  },
+  {
+   "cls": "GameFeatureAction_AddComponents"
+  },
+  {
+   "cls": "GameFeatureAction_AddWidgets",
+   "widgets": [
+    {
+     "widget": "ERR StructBase: Failed to find property 'widget_class' for attri...",
+     "slot": "ERR StructBase: Failed to find property 'slot_id' for attribute ..."
+    }
+   ]
+  }
+ ],
+ "B_LyraGameMode": {
+  "parent": "<Object '/Script/LyraGame.LyraGameMode' (0x000002CA0141CF80) Class 'Class'>",
+  "graphs": [
+   "UserConstructionScript",
+   "EventGraph"
+  ],
+  "events": [
+   "<Struct 'BlueprintFunctionInfo' (0x000002CAAFDE7CE0) {name: \"K2_PostLogin\", description: NSLOCTEXT(\"UObjectToolTips\", \"GameModeBase:K2_PostLogin\", \"Notification that a player has successfully logged in, and has been given a player controller\"), is_implemented: False}>",
+   "<Struct 'BlueprintFunctionInfo' (0x000002CAAFDE7AA0) {name: \"K2_OnSwapPlayerControllers\", description: NSLOCTEXT(\"UObjectToolTips\", \"GameModeBase:K2_OnSwapPlayerControllers\", \"Called when a PlayerController is swapped to a new one during seamless travel\"), is_implemented: False}>",
+   "<Struct 'BlueprintFunctionInfo' (0x000002CAAFDE7650) {name: \"K2_OnRestartPlayer\", description: NSLOCTEXT(\"UObjectToolTips\", \"GameModeBase:K2_OnRestartPlayer\", \"Implementable event called at the end of RestartPlayer\"), is_implemented: False}>",
+   "<Struct 'BlueprintFunctionInfo' (0x000002CAAFDE7B30) {name: \"K2_OnLogout\", description: NSLOCTEXT(\"UObjectToolTips\", \"GameModeBase:K2_OnLogout\", \"Implementable event when a Controller with a PlayerState leaves the game.\"), is_implemented: False}>",
+   "<Struct 'BlueprintFunctionInfo' (0x000002CAAFDE7380) {name: \"K2_OnChangeName\", description: NSLOCTEXT(\"UObjectToolTips\", \"GameModeBase:K2_OnChangeName\", \"Overridable event for GameMode blueprint to respond to a change name call\\n@param Controller    The controller of the player to change the name of\\n@param NewName               The name to set the player to\\n@param bNameChange   Whether the name is changing or if this is the first time it has been set\"), is_implemented: False}>",
+   "<Struct 'BlueprintFunctionInfo' (0x000002CAAFDE7140) {name: \"InitStartSpot\", description: NSLOCTEXT(\"UObjectToolTips\", \"GameModeBase:InitStartSpot\", \"Called from RestartPlayerAtPlayerStart, can be used to initialize the start spawn actor\"), is_implemented: False}>",
+   "<Struct 'BlueprintFunctionInfo' (0x000002CAAFDE7560) {name: \"InitializeHUDForPlayer\", description: NSLOCTEXT(\"UObjectToolTips\", \"GameModeBase:InitializeHUDForPlayer\", \"Initialize the AHUD object for a player. Games can override this to do something different\"), is_implemented: False}>",
+   "<Struct 'BlueprintFunctionInfo' (0x000002CAAFDE8880) {name: \"HandleStartingNewPlayer\", description: NSLOCTEXT(\"UObjectToolTips\", \"GameModeBase:HandleStartingNewPlayer\", \"Signals that a player is ready to enter the game, which may start it up\"), is_implemented: False}>",
+   "<Struct 'BlueprintFunctionInfo' (0x000002CAAFDE7FB0) {name: \"ReceiveTick\", description: NSLOCTEXT(\"UObjectToolTips\", \"Actor:ReceiveTick\", \"Event called every frame, if ticking is enabled\"), is_implemented: True}>",
+   "<Struct 'BlueprintFunctionInfo' (0x000002CAAFDE8760) {name: \"ReceiveRadialDamage\", description: NSLOCTEXT(\"UObjectToolTips\", \"Actor:ReceiveRadialDamage\", \"Event when this actor takes RADIAL damage\"), is_implemented: False}>",
+   "<Struct 'BlueprintFunctionInfo' (0x000002CAAFDE9390) {name: \"ReceivePointDamage\", description: NSLOCTEXT(\"UObjectToolTips\", \"Actor:ReceivePointDamage\", \"Event when this actor takes POINT damage\"), is_implemented: False}>",
+   "<Struct 'BlueprintFunctionInfo' (0x000002CAAFDE9EA0) {name: \"ReceiveEndPlay\", description: NSLOCTEXT(\"UObjectToolTips\", \"Actor:ReceiveEndPlay\", \"Event to notify blueprints this actor is being deleted or removed from a level.\"), is_implemented: False}>",
+   "<Struct 'BlueprintFunctionInfo' (0x000002CAAFDE94E0) {name: \"ReceiveDestroyed\", description: NSLOCTEXT(\"UObjectToolTips\", \"Actor:ReceiveDestroyed\", \"Called when the actor has been explicitly destroyed.\"), is_implemented: False}>",
+   "<Struct 'BlueprintFunctionInfo' (0x000002CAAFDE9B70) {name: \"ReceiveBeginPlay\", description: NSLOCTEXT(\"UObjectToolTips\", \"Actor:ReceiveBeginPlay\", \"Event when play begins for this actor.\"), is_implemented: True}>",
+   "<Struct 'BlueprintFunctionInfo' (0x000002CAAFDE9DB0) {name: \"ReceiveAsyncPhysicsTick\", description: NSLOCTEXT(\"UObjectToolTips\", \"Actor:ReceiveAsyncPhysicsTick\", \"Event called every physics tick if bAsyncPhysicsTickEnabled is true\"), is_implemented: False}>",
+   "<Struct 'BlueprintFunctionInfo' (0x000002CAAFDE9C60) {name: \"ReceiveAnyDamage\", description: NSLOCTEXT(\"UObjectToolTips\", \"Actor:ReceiveAnyDamage\", \"Event when this actor takes ANY damage\"), is_implemented: False}>",
+   "<Struct 'BlueprintFunctionInfo' (0x000002CAAFDEA6E0) {name: \"ReceiveActorOnReleased\", description: NSLOCTEXT(\"UObjectToolTips\", \"Actor:ReceiveActorOnReleased\", \"Event when this actor is under the mouse when left mouse button is released while using the clickable interface.\"), is_implemented: False}>",
+   "<Struct 'BlueprintFunctionInfo' (0x000002CAAFDE7830) {name: \"ReceiveActorOnInputTouchLeave\", description: NSLOCTEXT(\"UObjectToolTips\", \"Actor:ReceiveActorOnInputTouchLeave\", \"Event when this actor has a finger moved off of it with the clickable interface.\"), is_implemented: False}>",
+   "<Struct 'BlueprintFunctionInfo' (0x000002CAAFDEE160) {name: \"ReceiveActorOnInputTouchEnter\", description: NSLOCTEXT(\"UObjectToolTips\", \"Actor:ReceiveActorOnInputTouchEnter\", \"Event when this actor has a finger moved over it with the clickable interface.\"), is_implemented: False}>",
+   "<Struct 'BlueprintFunctionInfo' (0x000002CAAFDED830) {name: \"ReceiveActorOnInputTouchEnd\", description: NSLOCTEXT(\"UObjectToolTips\", \"Actor:ReceiveActorOnInputTouchEnd\", \"Event when this actor is under the finger when untouched when click events are enabled.\"), is_implemented: False}>",
+   "<Struct 'BlueprintFunctionInfo' (0x000002CAAFDE4D10) {name: \"ReceiveActorOnInputTouchBegin\", description: NSLOCTEXT(\"UObjectToolTips\", \"Actor:ReceiveActorOnInputTouchBegin\", \"Event when this actor is touched when click events are enabled.\"), is_implemented: False}>",
+   "<Struct 'BlueprintFunctionInfo' (0x000002CAAFDE8040) {name: \"ReceiveActorOnClicked\", description: NSLOCTEXT(\"UObjectToolTips\", \"Actor:ReceiveActorOnClicked\", \"Event when this actor is clicked by the mouse when using the clickable interface.\"), is_implemented: False}>",
+   "<Struct 'BlueprintFunctionInfo' (0x000002CAAFDE6FC0) {name: \"ReceiveActorEndCursorOver\", description: NSLOCTEXT(\"UObjectToolTips\", \"Actor:ReceiveActorEndCursorOver\", \"Event when this actor has the mouse moved off of it with the clickable interface.\"), is_implemented: False}>",
+   "<Struct 'BlueprintFunctionInfo' (0x000002CAAFDEB0D0) {name: \"ReceiveActorBeginCursorOver\", description: NSLOCTEXT(\"UObjectToolTips\", \"Actor:ReceiveActorBeginCursorOver\", \"Event when this actor has the mouse moved over it with the clickable interface.\"), is_implemented: False}>"
+  ]
+ },
+ "BotSpawner": {
+  "parent": "<Object '/Script/LyraGame.LyraBotCreationComponent' (0x000002CA0141C300) Class 'Class'>",
+  "num_bots": "3",
+  "controller": "<Object '/ShooterCore/Bot/B_AI_Controller_LyraShooter.B_AI_Controller_LyraShooter_C' (0x000002CAC4C65B00) Class 'BlueprintGeneratedClass'>"
+ },
+ "B_Hero_Default": {
+  "graphs": [
+   "UserConstructionScript",
+   "Ragdoll",
+   "Death",
+   "HideEquippedWeapons",
+   "UpdateCustomStencilFromTeamID",
+   "EventGraph"
+  ]
+ }
+}

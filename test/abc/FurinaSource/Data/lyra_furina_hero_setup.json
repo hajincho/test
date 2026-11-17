@@ -1,0 +1,208 @@
+{
+ "log": [
+  "override graph: <Object '/Game/B_LyraGameMode.B_LyraGameMode:GetDefaultPawnClassForController' (0x000001C76D121B00) Class 'EdGraph'>",
+  "override graph built"
+ ],
+ "A_ability_set": {
+  "before": 11,
+  "after": 6,
+  "kept": [
+   "GA_Hero_Jump_C",
+   "GA_Hero_Death_C",
+   "GA_Hero_Dash_C",
+   "GA_Emote_C",
+   "GA_SpawnEffect_C",
+   "LyraGameplayAbility_Reset"
+  ],
+  "saved": true
+ },
+ "B_hero_data": {
+  "pawn_class": "<Object '/ShooterCore/Game/B_Hero_ShooterMannequin.B_Hero_ShooterMannequin_C' (0x000001C67A1B8C00) Class 'BlueprintGeneratedClass'>",
+  "ability_sets": [
+   "<Object '/Game/Furina/Lyra/AbilitySet_Furina.AbilitySet_Furina' (0x000001C6E740AB80) Class 'LyraAbilitySet'>"
+  ],
+  "saved": true
+ },
+ "C_experience": {
+  "before": [
+   "LAS_ShooterGame_SharedInput",
+   "LAS_ShooterGame_StandardComponents",
+   "LAS_ShooterGame_StandardHUD",
+   "EAS_BasicShooterAcolades"
+  ],
+  "after": [
+   "EAS_BasicShooterAcolades"
+  ],
+  "saved": true
+ },
+ "override_nodes_before": {
+  "K2Node_FunctionEntry_0": [
+   "GetDefaultPawnClassForController",
+   [
+    "then",
+    "InController"
+   ]
+  ],
+  "K2Node_CallParentFunction_0": [
+   "부모: GetDefaultPawnClassForController",
+   [
+    "execute",
+    "InController",
+    "then",
+    "ReturnValue"
+   ]
+  ],
+  "K2Node_FunctionResult_0": [
+   "반환 노드",
+   [
+    "execute",
+    "ReturnValue"
+   ]
+  ]
+ },
+ "gm_status": "<BlueprintStatus.BS_UP_TO_DATE: 3>",
+ "override_nodes_after": {
+  "K2Node_FunctionEntry_0": [
+   "GetDefaultPawnClassForController",
+   [
+    [
+     "then",
+     "",
+     [
+      "FDG_Branch"
+     ]
+    ],
+    [
+     "InController",
+     "",
+     [
+      "K2Node_CallParentFunction_0",
+      "FDG_IsPlayer"
+     ]
+    ]
+   ]
+  ],
+  "K2Node_CallParentFunction_0": [
+   "부모: GetDefaultPawnClassForController",
+   [
+    [
+     "execute",
+     "",
+     [
+      "FDG_Branch"
+     ]
+    ],
+    [
+     "InController",
+     "",
+     [
+      "K2Node_FunctionEntry_0"
+     ]
+    ],
+    [
+     "then",
+     "",
+     [
+      "K2Node_FunctionResult_0"
+     ]
+    ],
+    [
+     "ReturnValue",
+     "",
+     [
+      "K2Node_FunctionResult_0"
+     ]
+    ]
+   ]
+  ],
+  "K2Node_FunctionResult_0": [
+   "반환 노드",
+   [
+    [
+     "execute",
+     "",
+     [
+      "K2Node_CallParentFunction_0"
+     ]
+    ],
+    [
+     "ReturnValue",
+     "",
+     [
+      "K2Node_CallParentFunction_0"
+     ]
+    ]
+   ]
+  ],
+  "FDG_IsPlayer": [
+   "IsPlayerController",
+   [
+    [
+     "self",
+     "",
+     [
+      "K2Node_FunctionEntry_0"
+     ]
+    ],
+    [
+     "ReturnValue",
+     "false",
+     [
+      "FDG_Branch"
+     ]
+    ]
+   ]
+  ],
+  "FDG_Branch": [
+   "Branch",
+   [
+    [
+     "execute",
+     "",
+     [
+      "K2Node_FunctionEntry_0"
+     ]
+    ],
+    [
+     "Condition",
+     "true",
+     [
+      "FDG_IsPlayer"
+     ]
+    ],
+    [
+     "then",
+     "",
+     [
+      "FDG_Return"
+     ]
+    ],
+    [
+     "else",
+     "",
+     [
+      "K2Node_CallParentFunction_0"
+     ]
+    ]
+   ]
+  ],
+  "FDG_Return": [
+   "반환 노드",
+   [
+    [
+     "execute",
+     "",
+     [
+      "FDG_Branch"
+     ]
+    ],
+    [
+     "ReturnValue",
+     "/Game/3DPlatformerGameBundle/Demo/ThirdPersonAssets/Blueprints/ThirdPersonCharac",
+     []
+    ]
+   ]
+  ]
+ },
+ "D_gamemode": true
+}

@@ -1,0 +1,115 @@
+{
+ "pawn": [
+  {
+   "node": "K2Node_FPT_NewOff",
+   "speed": "10.0",
+   "speed_from": [],
+   "target_from": [
+    "K2Node_FPT_TgtOff"
+   ],
+   "ret_to": [
+    "K2Node_FPT_SetOff"
+   ]
+  },
+  {
+   "node": "K2Node_FPT_NewFov",
+   "speed": "10.0",
+   "speed_from": [],
+   "target_from": [
+    "K2Node_FPT_TgtFov"
+   ],
+   "ret_to": [
+    "K2Node_FPT_SetFov"
+   ]
+  },
+  {
+   "node": "TFP_ArmSmooth",
+   "speed": "10",
+   "speed_from": [],
+   "target_from": [
+    "TFP_ArmTarget"
+   ],
+   "ret_to": [
+    "TFP_SetArm"
+   ]
+  },
+  {
+   "node": "P2_SlideInterp_ff410f4",
+   "speed": "32.0",
+   "speed_from": [],
+   "target_from": [
+    "P2_SelF_3a25403"
+   ],
+   "ret_to": [
+    "K2Node_CallFunction_108",
+    "P2_MkVec_2439349",
+    "P2_SetFurinaSlideCur_17f02f6"
+   ]
+  },
+  {
+   "node": "P2_SwapInterp_95970f10",
+   "speed": "8.0",
+   "speed_from": [],
+   "target_from": [
+    "P2_GetFurinaSwapTarget_05ae3b12"
+   ],
+   "ret_to": [
+    "K2Node_CallFunction_115",
+    "P2_Mul_ffe58218",
+    "P2_Mul_a411dd25"
+   ]
+  }
+ ],
+ "abp": [
+  {
+   "node": "TFPSpeedSmooth",
+   "speed": "12",
+   "speed_from": [],
+   "target_from": [
+    "TFPHorizontalSpeed"
+   ],
+   "ret_to": [
+    "K2Node_CallFunction_30",
+    "K2Node_CallFunction_70",
+    "CacheTFPSpeed"
+   ]
+  },
+  {
+   "node": "TFPCrouchSmooth",
+   "speed": "10",
+   "speed_from": [],
+   "target_from": [
+    "TFPCrouchFloat"
+   ],
+   "ret_to": [
+    "K2Node_CallFunction_33",
+    "K2Node_CallFunction_73",
+    "CacheTFPCrouch"
+   ]
+  },
+  {
+   "node": "TFPGroundSmooth",
+   "speed": "15",
+   "speed_from": [],
+   "target_from": [
+    "TFPGroundFloat"
+   ],
+   "ret_to": [
+    "K2Node_CallFunction_35",
+    "K2Node_CallFunction_75",
+    "CacheTFPGround"
+   ]
+  },
+  {
+   "node": "TFPProneSmooth",
+   "speed": "7",
+   "speed_from": [],
+   "target_from": [
+    "TFPProneFlagF"
+   ],
+   "ret_to": [
+    "CacheTFPProne"
+   ]
+  }
+ ]
+}

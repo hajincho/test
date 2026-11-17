@@ -1,0 +1,34 @@
+{
+ "bots": [
+  {
+   "name": "B_Hero_ShooterMannequin_C_0",
+   "speed": 184,
+   "mesh": "SKM_Manny_Invis",
+   "anim_class": "ABP_Mannequin_Base_C",
+   "anim_mode": "<AnimationMode.ANIMATION_BLUEPRINT: 0>",
+   "ctrl": "B_AI_Controller_LyraShooter_C",
+   "montage": "None",
+   "linked": "n/a"
+  },
+  {
+   "name": "B_Hero_ShooterMannequin_C_1",
+   "speed": 355,
+   "mesh": "SKM_Quinn_Invis",
+   "anim_class": "ABP_Mannequin_Base_C",
+   "anim_mode": "<AnimationMode.ANIMATION_BLUEPRINT: 0>",
+   "ctrl": "B_AI_Controller_LyraShooter_C",
+   "montage": "None",
+   "linked": "n/a"
+  },
+  {
+   "name": "B_Hero_ShooterMannequin_C_2",
+   "speed": 600,
+   "mesh": "SKM_Quinn_Invis",
+   "anim_class": "ABP_Mannequin_Base_C",
+   "anim_mode": "<AnimationMode.ANIMATION_BLUEPRINT: 0>",
+   "ctrl": "B_AI_Controller_LyraShooter_C",
+   "montage": "None",
+   "linked": "n/a"
+  }
+ ]
+}

@@ -1,0 +1,163 @@
+{
+ "/Game/Furina/M4/SK_M4A1": [
+  [
+   "colt_m4_main",
+   {
+    "name": "/Game/Furina/M4/M_Colt_Main.M_Colt_Main",
+    "class": "Material",
+    "base": "/Game/Furina/M4/M_Colt_Main.M_Colt_Main",
+    "textures": [
+     [
+      "/Game/Furina/M4/T_Colt_Main_Normal.T_Colt_Main_Normal",
+      "Texture2D",
+      4096
+     ],
+     [
+      "/Game/Furina/M4/T_Colt_Main_BaseColor.T_Colt_Main_BaseColor",
+      "Texture2D",
+      1254
+     ],
+     [
+      "/Game/Furina/M4/T_Colt_Main_Metallic.T_Colt_Main_Metallic",
+      "Texture2D",
+      4096
+     ],
+     [
+      "/Game/Furina/M4/T_Colt_Main_Roughness.T_Colt_Main_Roughness",
+      "Texture2D",
+      4096
+     ],
+     [
+      "/Game/Furina/M4/T_Colt_Main_AO.T_Colt_Main_AO",
+      "Texture2D",
+      4096
+     ]
+    ]
+   }
+  ],
+  [
+   "colt_m4_furniture",
+   {
+    "name": "/Game/Furina/M4/M_Colt_Furniture.M_Colt_Furniture",
+    "class": "Material",
+    "base": "/Game/Furina/M4/M_Colt_Furniture.M_Colt_Furniture",
+    "textures": [
+     [
+      "/Game/Furina/M4/T_Colt_Furniture_Normal.T_Colt_Furniture_Normal",
+      "Texture2D",
+      4096
+     ],
+     [
+      "/Game/Furina/M4/T_Colt_Furniture_BaseColor.T_Colt_Furniture_BaseColor",
+      "Texture2D",
+      4096
+     ],
+     [
+      "/Game/Furina/M4/T_Colt_Furniture_Metallic.T_Colt_Furniture_Metallic",
+      "Texture2D",
+      4096
+     ],
+     [
+      "/Game/Furina/M4/T_Colt_Furniture_Roughness.T_Colt_Furniture_Roughness",
+      "Texture2D",
+      4096
+     ],
+     [
+      "/Game/Furina/M4/T_Colt_Furniture_AO.T_Colt_Furniture_AO",
+      "Texture2D",
+      4096
+     ]
+    ]
+   }
+  ],
+  [
+   "matech_rear_sight",
+   {
+    "name": "/Game/Furina/M4/M_Colt_Rear.M_Colt_Rear",
+    "class": "Material",
+    "base": "/Game/Furina/M4/M_Colt_Rear.M_Colt_Rear",
+    "textures": [
+     [
+      "/Game/Furina/M4/T_Colt_Rear_Normal.T_Colt_Rear_Normal",
+      "Texture2D",
+      2048
+     ],
+     [
+      "/Game/Furina/M4/T_Colt_Rear_BaseColor.T_Colt_Rear_BaseColor",
+      "Texture2D",
+      2048
+     ],
+     [
+      "/Game/Furina/M4/T_Colt_Rear_Metallic.T_Colt_Rear_Metallic",
+      "Texture2D",
+      2048
+     ],
+     [
+      "/Game/Furina/M4/T_Colt_Rear_Roughness.T_Colt_Rear_Roughness",
+      "Texture2D",
+      2048
+     ],
+     [
+      "/Game/Furina/M4/T_Colt_Rear_AO.T_Colt_Rear_AO",
+      "Texture2D",
+      2048
+     ]
+    ]
+   }
+  ]
+ ],
+ "/Game/Furina/M4/SM_M4Mag": [
+  [
+   "stanag_mag",
+   {
+    "name": "/Game/Furina/M4/M_Colt_Mag.M_Colt_Mag",
+    "class": "Material",
+    "base": "/Game/Furina/M4/M_Colt_Mag.M_Colt_Mag",
+    "textures": [
+     [
+      "/Game/Furina/M4/T_Colt_Mag_Normal.T_Colt_Mag_Normal",
+      "Texture2D",
+      4096
+     ],
+     [
+      "/Game/Furina/M4/T_Colt_Mag_BaseColor.T_Colt_Mag_BaseColor",
+      "Texture2D",
+      4096
+     ],
+     [
+      "/Game/Furina/M4/T_Colt_Mag_Metallic.T_Colt_Mag_Metallic",
+      "Texture2D",
+      4096
+     ],
+     [
+      "/Game/Furina/M4/T_Colt_Mag_Roughness.T_Colt_Mag_Roughness",
+      "Texture2D",
+      4096
+     ],
+     [
+      "/Game/Furina/M4/T_Colt_Mag_AO.T_Colt_Mag_AO",
+      "Texture2D",
+      4096
+     ]
+    ]
+   }
+  ]
+ ],
+ "pawn_comps": {
+  "FurinaPistolSlide": [
+   "/Game/Furina/P220/M_P220.M_P220"
+  ],
+  "FurinaRifle": [
+   "/Game/Furina/M4/M_Colt_Main.M_Colt_Main",
+   "/Game/Furina/M4/M_Colt_Furniture.M_Colt_Furniture",
+   "/Game/Furina/M4/M_Colt_Rear.M_Colt_Rear"
+  ],
+  "FurinaMag": [
+   "/Game/Furina/M4/M_Colt_Mag.M_Colt_Mag"
+  ],
+  "FurinaPistolFrame": [
+   "/Game/Furina/P220/M_P220.M_P220"
+  ]
+ },
+ "/Game/Furina/M4/BP_M4MagDrop": "err Array: Index 0 is out-of-bounds (len: 0) for property 'TransientPythonProperty' (ArrayProperty)"
+}

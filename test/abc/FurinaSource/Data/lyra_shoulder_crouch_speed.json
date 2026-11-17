@@ -1,0 +1,31 @@
+{
+ "cr": {
+  "ShW_set": true,
+  "ShW": [
+   "28.0",
+   "7.0"
+  ],
+  "CrouchW_set": true,
+  "CrouchW": [
+   "27",
+   "3"
+  ]
+ },
+ "cr_saved": true,
+ "abp": [
+  "30",
+  "3.3333"
+ ],
+ "abp_status": "<BlueprintStatus.BS_UP_TO_DATE_WITH_WARNINGS: 5>",
+ "abp_saved": true,
+ "pawn_off": [
+  "20",
+  "5"
+ ],
+ "pawn_fov": [
+  "20",
+  "5"
+ ],
+ "pawn_status": "<BlueprintStatus.BS_UP_TO_DATE_WITH_WARNINGS: 5>",
+ "pawn_saved": true
+}

@@ -1,0 +1,208 @@
+{
+ "phases": {
+  "t0": {
+   "pawns": [
+    {
+     "name": "ThirdPersonCharacter_BP_C_0",
+     "class": "ThirdPersonCharacter_BP_C",
+     "parent": null,
+     "controller": "LyraPlayerController",
+     "player_controlled": true,
+     "health": [
+      100.0,
+      100.0
+     ],
+     "death_state": "<LyraDeathState.NOT_DEAD: 0>",
+     "team_err": "'LyraCharacter' object has no attribute 'get_generic_team_id'",
+     "asc_err": "'LyraCharacter' object has no attribute 'get_ability_system_component'",
+     "has_pawn_ext": true
+    },
+    {
+     "name": "B_Hero_ShooterMannequin_C_0",
+     "class": "B_Hero_ShooterMannequin_C",
+     "parent": null,
+     "controller": "B_AI_Controller_LyraShooter_C",
+     "player_controlled": false,
+     "health": [
+      100.0,
+      100.0
+     ],
+     "death_state": "<LyraDeathState.NOT_DEAD: 0>",
+     "team_err": "'LyraCharacter' object has no attribute 'get_generic_team_id'",
+     "asc_err": "'LyraCharacter' object has no attribute 'get_ability_system_component'",
+     "has_pawn_ext": true
+    },
+    {
+     "name": "B_Hero_ShooterMannequin_C_1",
+     "class": "B_Hero_ShooterMannequin_C",
+     "parent": null,
+     "controller": "B_AI_Controller_LyraShooter_C",
+     "player_controlled": false,
+     "health": [
+      100.0,
+      100.0
+     ],
+     "death_state": "<LyraDeathState.NOT_DEAD: 0>",
+     "team_err": "'LyraCharacter' object has no attribute 'get_generic_team_id'",
+     "asc_err": "'LyraCharacter' object has no attribute 'get_ability_system_component'",
+     "has_pawn_ext": true
+    },
+    {
+     "name": "B_Hero_ShooterMannequin_C_2",
+     "class": "B_Hero_ShooterMannequin_C",
+     "parent": null,
+     "controller": "B_AI_Controller_LyraShooter_C",
+     "player_controlled": false,
+     "health": [
+      100.0,
+      100.0
+     ],
+     "death_state": "<LyraDeathState.NOT_DEAD: 0>",
+     "team_err": "'LyraCharacter' object has no attribute 'get_generic_team_id'",
+     "asc_err": "'LyraCharacter' object has no attribute 'get_ability_system_component'",
+     "has_pawn_ext": true
+    }
+   ],
+   "weapon_actors": [],
+   "player_pawn": "<Object '/ShooterMaps/Maps/UEDPIE_0_L_FiringRange_WP.L_FiringRange_WP:PersistentLevel.ThirdPersonCharacter_BP_C_0' (0x000001C41B982400) Class 'ThirdPersonCharacter_BP_C'>"
+  },
+  "after_1_5s": {
+   "pawns": [
+    {
+     "name": "ThirdPersonCharacter_BP_C_0",
+     "class": "ThirdPersonCharacter_BP_C",
+     "parent": null,
+     "controller": "LyraPlayerController",
+     "player_controlled": true,
+     "health": [
+      0.0,
+      100.0
+     ],
+     "death_state": "<LyraDeathState.DEATH_STARTED: 1>",
+     "team_err": "'LyraCharacter' object has no attribute 'get_generic_team_id'",
+     "asc_err": "'LyraCharacter' object has no attribute 'get_ability_system_component'",
+     "has_pawn_ext": true
+    },
+    {
+     "name": "B_Hero_ShooterMannequin_C_0",
+     "class": "B_Hero_ShooterMannequin_C",
+     "parent": null,
+     "controller": "B_AI_Controller_LyraShooter_C",
+     "player_controlled": false,
+     "health": [
+      100.0,
+      100.0
+     ],
+     "death_state": "<LyraDeathState.NOT_DEAD: 0>",
+     "team_err": "'LyraCharacter' object has no attribute 'get_generic_team_id'",
+     "asc_err": "'LyraCharacter' object has no attribute 'get_ability_system_component'",
+     "has_pawn_ext": true
+    },
+    {
+     "name": "B_Hero_ShooterMannequin_C_1",
+     "class": "B_Hero_ShooterMannequin_C",
+     "parent": null,
+     "controller": "B_AI_Controller_LyraShooter_C",
+     "player_controlled": false,
+     "health": [
+      100.0,
+      100.0
+     ],
+     "death_state": "<LyraDeathState.NOT_DEAD: 0>",
+     "team_err": "'LyraCharacter' object has no attribute 'get_generic_team_id'",
+     "asc_err": "'LyraCharacter' object has no attribute 'get_ability_system_component'",
+     "has_pawn_ext": true
+    },
+    {
+     "name": "B_Hero_ShooterMannequin_C_2",
+     "class": "B_Hero_ShooterMannequin_C",
+     "parent": null,
+     "controller": "B_AI_Controller_LyraShooter_C",
+     "player_controlled": false,
+     "health": [
+      100.0,
+      100.0
+     ],
+     "death_state": "<LyraDeathState.NOT_DEAD: 0>",
+     "team_err": "'LyraCharacter' object has no attribute 'get_generic_team_id'",
+     "asc_err": "'LyraCharacter' object has no attribute 'get_ability_system_component'",
+     "has_pawn_ext": true
+    }
+   ],
+   "weapon_actors": [],
+   "player_pawn": "<Object '/ShooterMaps/Maps/UEDPIE_0_L_FiringRange_WP.L_FiringRange_WP:PersistentLevel.ThirdPersonCharacter_BP_C_0' (0x000001C41B982400) Class 'ThirdPersonCharacter_BP_C'>"
+  },
+  "after_12s": {
+   "pawns": [
+    {
+     "name": "B_Hero_ShooterMannequin_C_0",
+     "class": "B_Hero_ShooterMannequin_C",
+     "parent": null,
+     "controller": "B_AI_Controller_LyraShooter_C",
+     "player_controlled": false,
+     "health": [
+      100.0,
+      100.0
+     ],
+     "death_state": "<LyraDeathState.NOT_DEAD: 0>",
+     "team_err": "'LyraCharacter' object has no attribute 'get_generic_team_id'",
+     "asc_err": "'LyraCharacter' object has no attribute 'get_ability_system_component'",
+     "has_pawn_ext": true
+    },
+    {
+     "name": "B_Hero_ShooterMannequin_C_1",
+     "class": "B_Hero_ShooterMannequin_C",
+     "parent": null,
+     "controller": "B_AI_Controller_LyraShooter_C",
+     "player_controlled": false,
+     "health": [
+      100.0,
+      100.0
+     ],
+     "death_state": "<LyraDeathState.NOT_DEAD: 0>",
+     "team_err": "'LyraCharacter' object has no attribute 'get_generic_team_id'",
+     "asc_err": "'LyraCharacter' object has no attribute 'get_ability_system_component'",
+     "has_pawn_ext": true
+    },
+    {
+     "name": "B_Hero_ShooterMannequin_C_2",
+     "class": "B_Hero_ShooterMannequin_C",
+     "parent": null,
+     "controller": "B_AI_Controller_LyraShooter_C",
+     "player_controlled": false,
+     "health": [
+      100.0,
+      100.0
+     ],
+     "death_state": "<LyraDeathState.NOT_DEAD: 0>",
+     "team_err": "'LyraCharacter' object has no attribute 'get_generic_team_id'",
+     "asc_err": "'LyraCharacter' object has no attribute 'get_ability_system_component'",
+     "has_pawn_ext": true
+    },
+    {
+     "name": "ThirdPersonCharacter_BP_C_1",
+     "class": "ThirdPersonCharacter_BP_C",
+     "parent": null,
+     "controller": "LyraPlayerController",
+     "player_controlled": true,
+     "health": [
+      100.0,
+      100.0
+     ],
+     "death_state": "<LyraDeathState.NOT_DEAD: 0>",
+     "team_err": "'LyraCharacter' object has no attribute 'get_generic_team_id'",
+     "asc_err": "'LyraCharacter' object has no attribute 'get_ability_system_component'",
+     "has_pawn_ext": true
+    }
+   ],
+   "weapon_actors": [],
+   "player_pawn": "<Object '/ShooterMaps/Maps/UEDPIE_0_L_FiringRange_WP.L_FiringRange_WP:PersistentLevel.ThirdPersonCharacter_BP_C_1' (0x000001C79BAE9C00) Class 'ThirdPersonCharacter_BP_C'>"
+  }
+ },
+ "heartbeat": [
+  211,
+  3,
+  19.4
+ ],
+ "self_destruct_called": true
+}

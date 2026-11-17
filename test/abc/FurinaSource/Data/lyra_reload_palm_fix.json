@@ -1,0 +1,14 @@
+{
+ "fade_off": true,
+ "has": true,
+ "delta": [
+  -4.8,
+  7.2,
+  2.1
+ ],
+ "set_delta": true,
+ "LHandOff3.B_from": [
+  "RLV2.Result"
+ ],
+ "saved": true
+}

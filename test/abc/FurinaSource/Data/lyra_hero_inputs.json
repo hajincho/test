@@ -1,0 +1,34 @@
+{
+ "hero_props": [],
+ "pawn_data_props": {
+  "pawn_class": "<Object '/ShooterCore/Game/B_Hero_ShooterMannequin.B_Hero_ShooterMannequin_C' (0x000001C67A1B8C00) Class 'BlueprintGeneratedClass'>",
+  "input_config": "<Object '/Game/Input/InputData_Hero.InputData_Hero' (0x000001C4FF697080) Class 'LyraInputConfig'>",
+  "tag_relationship_mapping": "<Object '/ShooterCore/Game/TagRelationships_ShooterHero.TagRelationships_ShooterHero' (0x000001C52B78A840) Class 'LyraAbilityTagRelationshipMapping'>",
+  "default_camera_mode": "<Object '/Game/Characters/Cameras/CM_ThirdPerson.CM_ThirdPerson_C' (0x000001C507312300) Class 'BlueprintGeneratedClass'>",
+  "ability_sets": "[\"/Script/LyraGame.LyraAbilitySet'/Game/Furina/Lyra/AbilitySet_Furina.AbilitySet_Furina'\"]"
+ },
+ "bp_hero_cdo": null,
+ "lp": "None",
+ "enh_lib": [
+  "EnhancedInputActionHandlerDynamicSignature",
+  "EnhancedInputComponent",
+  "EnhancedInputEditorSubsystem",
+  "EnhancedInputLibrary",
+  "EnhancedInputLocalPlayerSubsystem",
+  "EnhancedInputLocalPlayerSubsystem_OnControlMappingsRebuilt",
+  "EnhancedInputLocalPlayerSubsystem_OnMappingContextAdded",
+  "EnhancedInputLocalPlayerSubsystem_OnMappingContextRemoved",
+  "EnhancedInputLocalPlayerSubsystem_OnUserSettingsPostInitialized",
+  "EnhancedInputPlatformData",
+  "EnhancedInputSubsystemInterface",
+  "EnhancedInputUserSettings",
+  "EnhancedInputUserSettings_EnhancedInputUserSettingsApplied",
+  "EnhancedInputUserSettings_EnhancedInputUserSettingsChanged",
+  "EnhancedInputUserSettings_MappableKeyProfileChanged",
+  "EnhancedInputUserSettings_MappingContextRegisteredWithSettings",
+  "EnhancedInputUserWidgetValidator",
+  "EnhancedInputWorldSubsystem",
+  "K2Node_EnhancedInputAction",
+  "K2Node_EnhancedInputActionEvent"
+ ]
+}

@@ -5,7 +5,7 @@ R = {}
 try:
     for p in ('/Game/Furina/Input/IMC_FurinaStance', '/Game/3DPlatformerGameBundle/Demo/ThirdPersonAssets/Input/Default_IMC'):
         imc = unreal.load_asset(p); rows = []
-        for m in imc.get_editor_property('mappings'):
+        for m in imc.get_editor_property('default_key_mappings').get_editor_property('mappings'):
             rows.append([m.get_editor_property('action').get_name() if m.get_editor_property('action') else None, str(m.get_editor_property('key').get_editor_property('key_name'))])
         R[p.split('/')[-1]] = rows
 except Exception: R['error'] = traceback.format_exc()

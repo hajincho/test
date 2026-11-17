@@ -1,0 +1,24 @@
+{
+ "ini_changed": true,
+ "bots_before": [
+  true,
+  0
+ ],
+ "bots_after": false,
+ "loaded": true,
+ "desc_count": 323,
+ "actors": 324,
+ "weapon_related_classes": {
+  "B_WeaponSpawner_C": 3,
+  "B_GrantAbilityPad_ApplyGE_C": 1,
+  "BP_GameplayEffectPad_C": 1,
+  "B_GrantInventoryPad_WithMesh_C": 1
+ },
+ "removed": [
+  "B_WeaponSpawner_Pistol3",
+  "B_GrantInventoryPad_WithMesh",
+  "B_WeaponSpawner_Pistol2",
+  "B_WeaponSpawner_Pistol4"
+ ],
+ "saved": true
+}

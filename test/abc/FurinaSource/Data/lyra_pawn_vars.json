@@ -1,0 +1,14 @@
+{
+ "names": [
+  "get_physics_replication_mode",
+  "movement_mode_changed_delegate",
+  "on_movement_mode_changed",
+  "prestream_textures",
+  "receive_restarted",
+  "receive_restarted_delegate",
+  "set_physics_replication_mode"
+ ],
+ "world": "<Object '/ShooterMaps/Maps/UEDPIE_0_L_FiringRange_WP.L_FiringRange_WP' (0x000001C7A49AE000) Class 'World'>",
+ "pawn": "<Object '/ShooterMaps/Maps/UEDPIE_0_L_FiringRange_WP.L_FiringRange_WP:PersistentLevel.ThirdPersonCharacter_BP_C_0' (0x000001C79BBC0000) Class 'ThirdPersonCharacter_BP_C'>",
+ "values": {}
+}

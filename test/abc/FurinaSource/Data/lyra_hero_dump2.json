@@ -1,0 +1,226 @@
+{
+ "AbilitySet_ShooterHero": {
+  "granted_gameplay_abilities": [
+   "<Struct 'LyraAbilitySet_GameplayAbility' (0x0000023B728CA280) {}>",
+   "<Struct 'LyraAbilitySet_GameplayAbility' (0x0000023B728CA6E0) {}>",
+   "<Struct 'LyraAbilitySet_GameplayAbility' (0x0000023B728CA020) {}>",
+   "<Struct 'LyraAbilitySet_GameplayAbility' (0x0000023B728CAA60) {}>",
+   "<Struct 'LyraAbilitySet_GameplayAbility' (0x0000023B728CA9C0) {}>",
+   "<Struct 'LyraAbilitySet_GameplayAbility' (0x0000023B728CA760) {}>",
+   "<Struct 'LyraAbilitySet_GameplayAbility' (0x0000023B728CAB80) {}>",
+   "<Struct 'LyraAbilitySet_GameplayAbility' (0x0000023B728CAC00) {}>",
+   "<Struct 'LyraAbilitySet_GameplayAbility' (0x0000023B728CA980) {}>",
+   "<Struct 'LyraAbilitySet_GameplayAbility' (0x0000023B728CA400) {}>",
+   "<Struct 'LyraAbilitySet_GameplayAbility' (0x0000023B728CA3C0) {}>"
+  ],
+  "granted_gameplay_effects": [
+   "<Struct 'LyraAbilitySet_GameplayEffect' (0x0000023B7285B230) {}>"
+  ]
+ },
+ "LAS_ShooterGame_StandardComponents": [
+  {
+   "cls": "GameFeatureAction_AddComponents"
+  }
+ ],
+ "LAS_ShooterGame_SharedInput": [
+  {
+   "cls": "GameFeatureAction_AddInputBinding"
+  },
+  {
+   "cls": "GameFeatureAction_AddInputContextMapping"
+  }
+ ],
+ "LAS_ShooterGame_StandardHUD": [
+  {
+   "cls": "GameFeatureAction_AddWidgets",
+   "layout": [
+    "<Struct 'LyraHUDLayoutRequest' (0x0000023B729D23C0) {}>"
+   ],
+   "widgets": [
+    "<Struct 'LyraHUDElementEntry' (0x0000023B729D2340) {}>",
+    "<Struct 'LyraHUDElementEntry' (0x0000023B729D0C40) {}>",
+    "<Struct 'LyraHUDElementEntry' (0x0000023B729D1E80) {}>",
+    "<Struct 'LyraHUDElementEntry' (0x0000023B729D1400) {}>",
+    "<Struct 'LyraHUDElementEntry' (0x0000023B729D1840) {}>",
+    "<Struct 'LyraHUDElementEntry' (0x0000023B729D13C0) {}>",
+    "<Struct 'LyraHUDElementEntry' (0x0000023B729D2180) {}>",
+    "<Struct 'LyraHUDElementEntry' (0x0000023B729D13C0) {}>",
+    "<Struct 'LyraHUDElementEntry' (0x0000023B729D1840) {}>",
+    "<Struct 'LyraHUDElementEntry' (0x0000023B729D1400) {}>",
+    "<Struct 'LyraHUDElementEntry' (0x0000023B729D1E80) {}>"
+   ]
+  }
+ ],
+ "EAS_BasicShooterAcolades": [
+  {
+   "cls": "GameFeatureAction_AddComponents"
+  }
+ ],
+ "B_Furina_Experience_actions": [
+  {
+   "cls": "GameFeatureAction_AddAbilities"
+  },
+  {
+   "cls": "GameFeatureAction_AddComponents"
+  },
+  {
+   "cls": "GameFeatureAction_AddWidgets",
+   "layout": [],
+   "widgets": [
+    "<Struct 'LyraHUDElementEntry' (0x0000023AF1D5B080) {}>"
+   ]
+  }
+ ],
+ "B_Hero_parent": "<Object '/Game/Characters/Heroes/B_Hero_Default.B_Hero_Default_C' (0x0000023B12AFE700) Class 'BlueprintGeneratedClass'>",
+ "B_Hero_graphs": [
+  "UserConstructionScript",
+  "ChangeQuickbarSlot",
+  "AddInitialInventory",
+  "ClearInventory",
+  "CreateOrUpdateOutlineIfNeeded",
+  "OnRep_PlayerInfo",
+  "OnTeamOrCosmeticsChanged",
+  "WaitForInventoryReadiness",
+  "EventGraph",
+  "GetEmoteAudioComponent"
+ ],
+ "weapon_asset_counts": {
+  "/Game/Weapons": 107,
+  "/ShooterCore/Weapons": 50,
+  "/ShooterCore/Weapon": 1,
+  "/ShooterCore/Item": 2,
+  "/ShooterCore/Items": 12,
+  "/Game/Items": 0,
+  "/Game/Inventory": 0
+ },
+ "weapon_like_in_shootercore": [
+  "/ShooterCore/Blueprint/B_AimAssistTargetTest",
+  "/ShooterCore/Blueprint/B_GrantInventoryPad_WithMesh",
+  "/ShooterCore/Blueprint/B_GrantInventory_Pad",
+  "/ShooterCore/Blueprint/B_WeaponSpawner",
+  "/ShooterCore/Bot/EQS/Context/EQS_Context_WeaponCheck",
+  "/ShooterCore/Bot/EQS/EQS_FindWeapon",
+  "/ShooterCore/Bot/Services/BTS_CheckAmmo",
+  "/ShooterCore/Bot/Services/BTS_ReloadWeapon",
+  "/ShooterCore/Effects/Material/MI_WeaponSpawnerTimerIndicator",
+  "/ShooterCore/Effects/Material/M_GrenadeRadius",
+  "/ShooterCore/Effects/Material/M_WeaponSpawnTimerIndicator",
+  "/ShooterCore/Game/B_QuickBarComponent",
+  "/ShooterCore/Game/GA_QuickbarSlots",
+  "/ShooterCore/Game/Melee/GA_Melee",
+  "/ShooterCore/Game/Melee/W_MeleeTouchButton",
+  "/ShooterCore/GameplayCues/GCN_Weapon_Melee",
+  "/ShooterCore/GameplayCues/GCN_Weapon_MeleeImpact",
+  "/ShooterCore/Input/Abilities/GA_DropWeapon",
+  "/ShooterCore/Input/Abilities/GA_Grenade",
+  "/ShooterCore/Input/Actions/IA_DropWeapon",
+  "/ShooterCore/Input/Actions/IA_Grenade",
+  "/ShooterCore/Input/Actions/IA_Melee",
+  "/ShooterCore/Input/Components/B_AimAssistTargetManager",
+  "/ShooterCore/Input/Mappings/C_AimAssistTargetWeightCurve",
+  "/ShooterCore/Items/HealthPickup/WeaponPickupData_Heal_Big",
+  "/ShooterCore/Items/HealthPickup/WeaponPickupData_Heal_Small",
+  "/ShooterCore/System/Audio/WeaponAudioFunctions",
+  "/ShooterCore/UserInterface/HUD/MI_UI_AmmoArc",
+  "/ShooterCore/UserInterface/HUD/W_DebugWeaponSpreadWidget",
+  "/ShooterCore/UserInterface/HUD/W_QuickBar",
+  "/ShooterCore/UserInterface/HUD/W_QuickBarSlot",
+  "/ShooterCore/UserInterface/HUD/W_Reticle_AmmoBar",
+  "/ShooterCore/UserInterface/HUD/W_Temp_ReticleDot",
+  "/ShooterCore/UserInterface/HUD/W_WeaponAmmoAndName",
+  "/ShooterCore/UserInterface/HUD/W_WeaponReticleHost",
+  "/ShooterCore/Weapon/Grenade/B_Grenade",
+  "/ShooterCore/Weapons/B_WeaponInstance_Base",
+  "/ShooterCore/Weapons/GE_Damage_Melee",
+  "/ShooterCore/Weapons/Grenade/Curve_GrenadeDamage",
+  "/ShooterCore/Weapons/Grenade/GCN_Grenade_Detonate",
+  "/ShooterCore/Weapons/Grenade/GE_Damage_Grenade",
+  "/ShooterCore/Weapons/Grenade/GE_Grenade_Cooldown",
+  "/ShooterCore/Weapons/Grenade/W_GrenadeCooldown",
+  "/ShooterCore/Weapons/NetShooter_PROTO/AbilitySet_ShooterNetShooter",
+  "/ShooterCore/Weapons/NetShooter_PROTO/B_NetShooter",
+  "/ShooterCore/Weapons/NetShooter_PROTO/B_WeaponInstance_NetShooter",
+  "/ShooterCore/Weapons/NetShooter_PROTO/GA_WeaponNetShooter",
+  "/ShooterCore/Weapons/NetShooter_PROTO/ID_NetShooter",
+  "/ShooterCore/Weapons/NetShooter_PROTO/WID_NetShooter",
+  "/ShooterCore/Weapons/NetShooter_PROTO/WeaponPickupData_NetShooter",
+  "/ShooterCore/Weapons/Pistol/AbilitySet_ShooterPistol",
+  "/ShooterCore/Weapons/Pistol/B_Pistol",
+  "/ShooterCore/Weapons/Pistol/B_WeaponInstance_Pistol",
+  "/ShooterCore/Weapons/Pistol/GA_Weapon_Fire_Pistol",
+  "/ShooterCore/Weapons/Pistol/GCN_Weapon_Pistol_Fire",
+  "/ShooterCore/Weapons/Pistol/ID_Pistol",
+  "/ShooterCore/Weapons/Pistol/WID_Pistol",
+  "/ShooterCore/Weapons/Pistol/W_AmmoCounter_Pistol",
+  "/ShooterCore/Weapons/Pistol/W_Reticle_Pistol",
+  "/ShooterCore/Weapons/Pistol/WeaponPickupData_Pistol",
+  "/ShooterCore/Weapons/Rifle/AbilitySet_ShooterRifle",
+  "/ShooterCore/Weapons/Rifle/B_Rifle",
+  "/ShooterCore/Weapons/Rifle/B_WeaponInstance_Rifle",
+  "/ShooterCore/Weapons/Rifle/GA_Weapon_Fire_Rifle_Auto",
+  "/ShooterCore/Weapons/Rifle/GA_Weapon_Reload_Rifle",
+  "/ShooterCore/Weapons/Rifle/GCN_Weapon_Rifle_Fire",
+  "/ShooterCore/Weapons/Rifle/GE_Damage_RifleAuto",
+  "/ShooterCore/Weapons/Rifle/ID_Rifle",
+  "/ShooterCore/Weapons/Rifle/WID_Rifle",
+  "/ShooterCore/Weapons/Rifle/W_AmmoCounter_Rifle",
+  "/ShooterCore/Weapons/Rifle/W_Reticle_Rifle",
+  "/ShooterCore/Weapons/Rifle/WeaponPickupData_Rifle",
+  "/ShooterCore/Weapons/Shotgun/AbilitySet_ShooterShotgun",
+  "/ShooterCore/Weapons/Shotgun/B_Shotgun",
+  "/ShooterCore/Weapons/Shotgun/B_WeaponInstance_Shotgun",
+  "/ShooterCore/Weapons/Shotgun/GA_Weapon_Fire_Shotgun",
+  "/ShooterCore/Weapons/Shotgun/GA_Weapon_Reload_NetShooter",
+  "/ShooterCore/Weapons/Shotgun/GA_Weapon_Reload_Shotgun",
+  "/ShooterCore/Weapons/Shotgun/GCN_Weapon_Shotgun_Fire",
+  "/ShooterCore/Weapons/Shotgun/GE_Damage_Shotgun",
+  "/ShooterCore/Weapons/Shotgun/ID_Shotgun",
+  "/ShooterCore/Weapons/Shotgun/WID_Shotgun",
+  "/ShooterCore/Weapons/Shotgun/W_AmmoCounter_Shotgun",
+  "/ShooterCore/Weapons/Shotgun/W_Reticle_Shotgun",
+  "/ShooterCore/Weapons/Shotgun/WeaponPickupData_Shotgun",
+  "/ShooterCore/Weapons/WID_InstantHeal"
+ ],
+ "weapon_like_in_game": [
+  "/Game/3DPlatformerGameBundle/Materials/Reticle_M",
+  "/Game/3DPlatformerGameBundle/Materials/Reticle_MI",
+  "/Game/3DPlatformerGameBundle/Widgets/Reticle_Widget_WBP",
+  "/Game/Audio/MetaSounds/sfx_InventoryPad_lp_meta",
+  "/Game/Audio/Sounds/Weapons/MS_LowAmmoTone",
+  "/Game/UI/Foundation/Widgets/SimpleProgressBar/Materials/T_UI_ReticleSegmentGradient",
+  "/Game/UI/Hud/Art/C_UI_AmmoCounter",
+  "/Game/UI/Hud/Art/MI_UI_AmmoCounter_Pistol",
+  "/Game/UI/Hud/Art/MI_UI_AmmoCounter_Pistol_Backing",
+  "/Game/UI/Hud/Art/MI_UI_AmmoCounter_Pistol_Glow",
+  "/Game/UI/Hud/Art/MI_UI_AmmoCounter_Rifle",
+  "/Game/UI/Hud/Art/MI_UI_AmmoCounter_Rifle_Backing",
+  "/Game/UI/Hud/Art/MI_UI_AmmoCounter_Rifle_Glow",
+  "/Game/UI/Hud/Art/MI_UI_AmmoCounter_Shotgun",
+  "/Game/UI/Hud/Art/MI_UI_AmmoCounter_Shotgun_Backing",
+  "/Game/UI/Hud/Art/MI_UI_AmmoCounter_Shotgun_Glow",
+  "/Game/UI/Hud/Art/MI_UI_Icon_Ammo_Card",
+  "/Game/UI/Hud/Art/MI_UI_Icon_Ammo_Counter",
+  "/Game/UI/Hud/Art/MI_UI_QuickBar_AmmoCounterBorder",
+  "/Game/UI/Hud/Art/MI_UI_QuickBar_Border",
+  "/Game/UI/Hud/Art/MI_UI_QuickBar_Border_Square",
+  "/Game/UI/Hud/Art/MI_UI_Reticles_BaseInstance",
+  "/Game/UI/Hud/Art/MI_UI_Reticles_CrossHair_Pistol",
+  "/Game/UI/Hud/Art/MI_UI_Reticles_CrossHair_Rifle",
+  "/Game/UI/Hud/Art/MI_UI_Reticles_CrossHair_Shotgun",
+  "/Game/UI/Hud/Art/MI_UI_Reticles_EliminationMarker",
+  "/Game/UI/Hud/Art/MI_UI_Reticles_HitMarker",
+  "/Game/UI/Hud/Art/MI_UI_Reticles_HitMarkerConfirmation",
+  "/Game/UI/Hud/Art/MI_UI_Reticles_HitMarkerConfirmation_Critical",
+  "/Game/UI/Hud/Art/MI_UI_Reticles_HitMarker_Single",
+  "/Game/UI/Hud/Art/MI_UI_Reticles_Outer_Pistol",
+  "/Game/UI/Hud/Art/MI_UI_Reticles_Outer_Rifle",
+  "/Game/UI/Hud/Art/MI_UI_Reticles_Outer_Shotgun",
+  "/Game/UI/Hud/Art/MI_UI_Reticles_TargetDot_FourSpread",
+  "/Game/UI/Hud/Art/MI_UI_Reticles_TargetDot_Single",
+  "/Game/UI/Hud/Art/M_UI_Base_AmmoCounter",
+  "/Game/UI/Hud/Art/M_UI_Base_ReticleBuilder",
+  "/Game/UI/Hud/Art/T_UI_Icon_RangedWeapons_Pistol_Ammo",
+  "/Game/UI/Hud/Art/T_UI_Icon_RangedWeapons_Rifle_Ammo",
+  "/Game/UI/Hud/Art/T_UI_Icon_RangedWeapons_Shotgun_Ammo"
+ ]
+}

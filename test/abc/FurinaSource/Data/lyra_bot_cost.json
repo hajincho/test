@@ -1,0 +1,23 @@
+{
+ "bots_before": [
+  [
+   "B_Hero_ShooterMannequin_C_0",
+   "B_AI_Controller_LyraShooter_C",
+   0
+  ],
+  [
+   "B_Hero_ShooterMannequin_C_1",
+   "B_AI_Controller_LyraShooter_C",
+   0
+  ],
+  [
+   "B_Hero_ShooterMannequin_C_2",
+   "B_AI_Controller_LyraShooter_C",
+   0
+  ]
+ ],
+ "rec1_at": 1794930545.90084,
+ "destroyed": 3,
+ "bots_after": 3,
+ "done": true
+}

@@ -1,0 +1,35 @@
+{
+ "dir": [
+  "assign",
+  "cast",
+  "copy",
+  "export_text",
+  "get_editor_property",
+  "import_text",
+  "set_editor_properties",
+  "set_editor_property",
+  "static_struct",
+  "to_dict",
+  "to_tuple"
+ ],
+ "export": "(TickGroup=TG_PrePhysics,EndTickGroup=TG_PrePhysics,bTickEvenWhenPaused=False,bCanEverTick=True,bStartWithTickEnabled=False,bAllowTickOnDedicatedServer=True,TickInterval=0.000000)",
+ "to_dict": "{}",
+ "actor_dir_tick": [
+  "add_tick_prerequisite_actor",
+  "add_tick_prerequisite_component",
+  "get_actor_tick_interval",
+  "get_tickable_when_paused",
+  "is_actor_tick_enabled",
+  "receive_async_physics_tick",
+  "receive_tick",
+  "remove_tick_prerequisite_actor",
+  "remove_tick_prerequisite_component",
+  "set_actor_tick_enabled",
+  "set_actor_tick_interval",
+  "set_tick_enabled",
+  "set_tick_group",
+  "set_tick_prerequisite",
+  "set_tickable_when_paused"
+ ],
+ "actor_tick_enabled": false
+}

@@ -1,0 +1,37 @@
+{
+ "has": true,
+ "head_aim_pins": [
+  "ExecutePin",
+  "Item",
+  "Space",
+  "bInitial",
+  "Value",
+  "Weight",
+  "bPropagateToChildren",
+  "CachedIndex"
+ ],
+ "twset_pins": [
+  "ExecutePin",
+  "Item",
+  "Space",
+  "bInitial",
+  "Value",
+  "Weight",
+  "bPropagateToChildren",
+  "CachedIndex"
+ ],
+ "ha_exec_name": "ExecutePin",
+ "twset_exec_from": [
+  "CapeHB4_0_1Set.ExecutePin"
+ ],
+ "headaim_exec_from": [
+  "TwSet.ExecutePin"
+ ],
+ "bone_items": [
+  true,
+  true
+ ],
+ "deg": 14.0,
+ "angle_set": true,
+ "saved": true
+}

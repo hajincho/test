@@ -1,0 +1,20 @@
+{
+ "before": [
+  "GA_Hero_Jump_C",
+  "GA_Hero_Death_C",
+  "GA_Hero_Dash_C",
+  "GA_Emote_C",
+  "GA_SpawnEffect_C",
+  "LyraGameplayAbility_Reset"
+ ],
+ "after": [
+  "GA_Hero_Jump_C",
+  "GA_Hero_Death_C",
+  "GA_Emote_C",
+  "GA_SpawnEffect_C",
+  "LyraGameplayAbility_Reset"
+ ],
+ "set_saved": true,
+ "dash_consume_before": true,
+ "ia_saved": true
+}

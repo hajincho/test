@@ -1,0 +1,280 @@
+{
+ "samples": [
+  {
+   "t": 0.0,
+   "z": 8803,
+   "vz": 0,
+   "speed": 0,
+   "fp_active": true,
+   "falling": true,
+   "forced_flag_view": "True"
+  },
+  {
+   "t": 0.4,
+   "z": 8677,
+   "vz": -607,
+   "speed": 607,
+   "fp_active": true,
+   "falling": true,
+   "forced_flag_view": "True"
+  },
+  {
+   "t": 0.9,
+   "z": 8220,
+   "vz": -1309,
+   "speed": 1309,
+   "fp_active": true,
+   "falling": true,
+   "forced_flag_view": "True"
+  },
+  {
+   "t": 1.4,
+   "z": 7355,
+   "vz": -2063,
+   "speed": 2063,
+   "fp_active": true,
+   "falling": true,
+   "forced_flag_view": "True"
+  },
+  {
+   "t": 1.9,
+   "z": 6133,
+   "vz": -2802,
+   "speed": 2802,
+   "fp_active": true,
+   "falling": true,
+   "forced_flag_view": "True"
+  },
+  {
+   "t": 2.4,
+   "z": 4623,
+   "vz": -3505,
+   "speed": 3505,
+   "fp_active": true,
+   "falling": true,
+   "forced_flag_view": "True"
+  },
+  {
+   "t": 2.9,
+   "z": 3633,
+   "vz": 0,
+   "speed": 0,
+   "fp_active": true,
+   "falling": false,
+   "forced_flag_view": "True"
+  },
+  {
+   "t": 3.4,
+   "z": 3633,
+   "vz": 0,
+   "speed": 0,
+   "fp_active": true,
+   "falling": false,
+   "forced_flag_view": "True"
+  },
+  {
+   "t": 3.9,
+   "z": 3633,
+   "vz": 0,
+   "speed": 0,
+   "fp_active": true,
+   "falling": false,
+   "forced_flag_view": "True"
+  },
+  {
+   "t": 4.3,
+   "z": 3633,
+   "vz": 0,
+   "speed": 0,
+   "fp_active": true,
+   "falling": false,
+   "forced_flag_view": "True"
+  },
+  {
+   "t": 4.8,
+   "z": 3633,
+   "vz": 0,
+   "speed": 0,
+   "fp_active": true,
+   "falling": false,
+   "forced_flag_view": "True"
+  },
+  {
+   "t": 5.3,
+   "z": 3633,
+   "vz": 0,
+   "speed": 0,
+   "fp_active": true,
+   "falling": false,
+   "forced_flag_view": "True"
+  },
+  {
+   "t": 5.8,
+   "z": 3633,
+   "vz": 0,
+   "speed": 0,
+   "fp_active": true,
+   "falling": false,
+   "forced_flag_view": "True"
+  },
+  {
+   "t": 6.3,
+   "z": 3633,
+   "vz": 0,
+   "speed": 0,
+   "fp_active": true,
+   "falling": false,
+   "forced_flag_view": "True"
+  },
+  {
+   "t": 6.8,
+   "z": 3633,
+   "vz": 0,
+   "speed": 0,
+   "fp_active": true,
+   "falling": false,
+   "forced_flag_view": "True"
+  },
+  {
+   "t": 7.3,
+   "z": 3633,
+   "vz": 0,
+   "speed": 0,
+   "fp_active": true,
+   "falling": false,
+   "forced_flag_view": "True"
+  },
+  {
+   "t": 7.7,
+   "z": 3633,
+   "vz": 0,
+   "speed": 0,
+   "fp_active": true,
+   "falling": false,
+   "forced_flag_view": "True"
+  },
+  {
+   "t": 8.2,
+   "z": 3633,
+   "vz": 0,
+   "speed": 0,
+   "fp_active": true,
+   "falling": false,
+   "forced_flag_view": "True"
+  },
+  {
+   "t": 8.7,
+   "z": 3633,
+   "vz": 0,
+   "speed": 0,
+   "fp_active": true,
+   "falling": false,
+   "forced_flag_view": "True"
+  },
+  {
+   "t": 9.2,
+   "z": 3633,
+   "vz": 0,
+   "speed": 0,
+   "fp_active": true,
+   "falling": false,
+   "forced_flag_view": "True"
+  },
+  {
+   "t": 9.7,
+   "z": 3633,
+   "vz": 0,
+   "speed": 0,
+   "fp_active": true,
+   "falling": false,
+   "forced_flag_view": "True"
+  },
+  {
+   "t": 10.2,
+   "z": 3633,
+   "vz": 0,
+   "speed": 0,
+   "fp_active": true,
+   "falling": false,
+   "forced_flag_view": "True"
+  },
+  {
+   "t": 10.5,
+   "z": 3633,
+   "vz": 0,
+   "speed": 0,
+   "fp_active": true,
+   "falling": false,
+   "forced_flag_view": "True"
+  },
+  {
+   "t": 11.0,
+   "z": 3633,
+   "vz": 0,
+   "speed": 0,
+   "fp_active": true,
+   "falling": false,
+   "forced_flag_view": "True"
+  },
+  {
+   "t": 11.5,
+   "z": 3633,
+   "vz": 0,
+   "speed": 0,
+   "fp_active": true,
+   "falling": false,
+   "forced_flag_view": "True"
+  },
+  {
+   "t": 12.0,
+   "z": 3633,
+   "vz": 0,
+   "speed": 0,
+   "fp_active": true,
+   "falling": false,
+   "forced_flag_view": "True"
+  },
+  {
+   "t": 12.4,
+   "z": 3633,
+   "vz": 0,
+   "speed": 0,
+   "fp_active": true,
+   "falling": false,
+   "forced_flag_view": "True"
+  },
+  {
+   "t": 12.9,
+   "z": 3633,
+   "vz": 0,
+   "speed": 0,
+   "fp_active": true,
+   "falling": false,
+   "forced_flag_view": "True"
+  },
+  {
+   "t": 13.4,
+   "z": 3633,
+   "vz": 0,
+   "speed": 0,
+   "fp_active": true,
+   "falling": false,
+   "forced_flag_view": "True"
+  },
+  {
+   "t": 13.8,
+   "z": 3633,
+   "vz": 0,
+   "speed": 0,
+   "fp_active": true,
+   "falling": false,
+   "forced_flag_view": "True"
+  }
+ ],
+ "start": [
+  -680.4752499975336,
+  -3399.8052190562335,
+  802.5804810523987
+ ],
+ "done": true
+}

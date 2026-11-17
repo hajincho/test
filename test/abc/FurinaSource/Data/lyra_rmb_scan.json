@@ -1,0 +1,195 @@
+{
+ "imcs": [
+  {
+   "imc": "/Game/3DPlatformerGameBundle/Demo/ThirdPersonAssets/Input/Default_IMC",
+   "hits": [
+    [
+     19,
+     "RightMouseButton",
+     "Position_IA",
+     "consume=True",
+     "trig=[]",
+     "mtrig=[]"
+    ],
+    [
+     29,
+     "RightMouseButton",
+     "IA_FurinaADS",
+     "consume=True",
+     "trig=['InputTriggerTap']",
+     "mtrig=[]"
+    ],
+    [
+     30,
+     "RightMouseButton",
+     "IA_FurinaShoulder",
+     "consume=True",
+     "trig=['InputTriggerHold']",
+     "mtrig=[]"
+    ],
+    [
+     33,
+     "One",
+     "IA_FurinaWeapon1",
+     "consume=True",
+     "trig=[]",
+     "mtrig=[]"
+    ],
+    [
+     34,
+     "Two",
+     "IA_FurinaWeapon2",
+     "consume=True",
+     "trig=[]",
+     "mtrig=[]"
+    ]
+   ]
+  },
+  {
+   "imc": "/ShooterCore/Input/Mappings/IMC_ShooterGame",
+   "hits": [
+    [
+     1,
+     "RightMouseButton",
+     "IA_ADS",
+     "consume=True",
+     "trig=[]",
+     "mtrig=[]"
+    ],
+    [
+     4,
+     "One",
+     "IA_QuickSlot1",
+     "consume=True",
+     "trig=['InputTriggerPressed']",
+     "mtrig=[]"
+    ],
+    [
+     5,
+     "Two",
+     "IA_QuickSlot2",
+     "consume=True",
+     "trig=['InputTriggerPressed']",
+     "mtrig=[]"
+    ]
+   ]
+  }
+ ],
+ "default_imc_order": [],
+ "weapon_events": [
+  "P2_IA_IA_FurinaWeapon2",
+  "P2_IA_IA_FurinaWeapon1"
+ ],
+ "trace": [
+  {
+   "from": "P2_IA_IA_FurinaWeapon2",
+   "node": "P2_IA_IA_FurinaWeapon2",
+   "Started": [
+    "P2_Branch_7ff32845"
+   ],
+   "Triggered": [],
+   "Completed": []
+  },
+  {
+   "from": "P2_IA_IA_FurinaWeapon2",
+   "node": "P2_Branch_7ff32845",
+   "then": [
+    "P2_Timer_FurinaP200Tick_3a06ca1"
+   ],
+   "Then": [
+    "P2_Timer_FurinaP200Tick_3a06ca1"
+   ]
+  },
+  {
+   "from": "P2_IA_IA_FurinaWeapon2",
+   "node": "P2_Timer_FurinaP200Tick_3a06ca1",
+   "then": [
+    "P2_SetActiveFurinaSwapping_fc3f7f31"
+   ],
+   "Then": [
+    "P2_SetActiveFurinaSwapping_fc3f7f31"
+   ]
+  },
+  {
+   "from": "P2_IA_IA_FurinaWeapon2",
+   "node": "P2_SetActiveFurinaSwapping_fc3f7f31",
+   "then": [
+    "P2_SetFurinaSwapTarget_94f34332"
+   ],
+   "Then": [
+    "P2_SetFurinaSwapTarget_94f34332"
+   ]
+  },
+  {
+   "from": "P2_IA_IA_FurinaWeapon2",
+   "node": "P2_SetFurinaSwapTarget_94f34332",
+   "then": [
+    "P2_Timer_FurinaSwapMid_06005b34"
+   ],
+   "Then": [
+    "P2_Timer_FurinaSwapMid_06005b34"
+   ]
+  },
+  {
+   "from": "P2_IA_IA_FurinaWeapon2",
+   "node": "P2_Timer_FurinaSwapMid_06005b34",
+   "then": [],
+   "Then": []
+  },
+  {
+   "from": "P2_IA_IA_FurinaWeapon1",
+   "node": "P2_IA_IA_FurinaWeapon1",
+   "Started": [
+    "P2_Branch_ee344d55"
+   ],
+   "Triggered": [],
+   "Completed": []
+  },
+  {
+   "from": "P2_IA_IA_FurinaWeapon1",
+   "node": "P2_Branch_ee344d55",
+   "then": [
+    "P2_Timer_FurinaP200Tick_3a06ca1"
+   ],
+   "Then": [
+    "P2_Timer_FurinaP200Tick_3a06ca1"
+   ]
+  },
+  {
+   "from": "P2_IA_IA_FurinaWeapon1",
+   "node": "P2_Timer_FurinaP200Tick_3a06ca1",
+   "then": [
+    "P2_SetActiveFurinaSwapping_fc3f7f31"
+   ],
+   "Then": [
+    "P2_SetActiveFurinaSwapping_fc3f7f31"
+   ]
+  },
+  {
+   "from": "P2_IA_IA_FurinaWeapon1",
+   "node": "P2_SetActiveFurinaSwapping_fc3f7f31",
+   "then": [
+    "P2_SetFurinaSwapTarget_94f34332"
+   ],
+   "Then": [
+    "P2_SetFurinaSwapTarget_94f34332"
+   ]
+  },
+  {
+   "from": "P2_IA_IA_FurinaWeapon1",
+   "node": "P2_SetFurinaSwapTarget_94f34332",
+   "then": [
+    "P2_Timer_FurinaSwapMid_06005b34"
+   ],
+   "Then": [
+    "P2_Timer_FurinaSwapMid_06005b34"
+   ]
+  },
+  {
+   "from": "P2_IA_IA_FurinaWeapon1",
+   "node": "P2_Timer_FurinaSwapMid_06005b34",
+   "then": [],
+   "Then": []
+  }
+ ]
+}

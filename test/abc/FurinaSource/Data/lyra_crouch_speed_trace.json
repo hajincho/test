@@ -1,0 +1,320 @@
+{
+ "now": [
+  {
+   "node": "K2Node_VariableSet_FSprintOn",
+   "cls": "K2Node_VariableSet",
+   "pin": "MaxWalkSpeed",
+   "from": [],
+   "exec_from": [
+    "K2Node_EnhancedInputAction_FSprint"
+   ]
+  },
+  {
+   "node": "K2Node_VariableSet_FSprintOff",
+   "cls": "K2Node_VariableSet",
+   "pin": "MaxWalkSpeed",
+   "from": [],
+   "exec_from": [
+    "K2Node_EnhancedInputAction_FSprint",
+    "K2Node_EnhancedInputAction_FSprint"
+   ]
+  },
+  {
+   "node": "K2Node_FPF_MySpd",
+   "cls": "K2Node_CallFunction",
+   "pin": false
+  },
+  {
+   "node": "K2Node_FPT_ShSpd",
+   "cls": "K2Node_CallFunction",
+   "pin": false
+  },
+  {
+   "node": "K2Node_FPT_AimSpd",
+   "cls": "K2Node_CallFunction",
+   "pin": false
+  },
+  {
+   "node": "K2Node_FPT_FreeSpd",
+   "cls": "K2Node_CallFunction",
+   "pin": false
+  },
+  {
+   "node": "K2Node_FPT_CapSpeed",
+   "cls": "K2Node_VariableSet",
+   "pin": "MaxWalkSpeed",
+   "from": [
+    "K2Node_FPT_OwnSpd"
+   ],
+   "exec_from": [
+    "K2Node_FPT_AimB"
+   ]
+  },
+  {
+   "node": "K2Node_FPT_FreeSpeed",
+   "cls": "K2Node_VariableSet",
+   "pin": "MaxWalkSpeed",
+   "from": [
+    "K2Node_FPT_FreeSpd"
+   ],
+   "exec_from": [
+    "K2Node_FPT_WasCap"
+   ]
+  },
+  {
+   "node": "K2Node_FPT_GetCrouchFlagT",
+   "cls": "K2Node_VariableGet",
+   "pin": false
+  },
+  {
+   "node": "K2Node_FPT_CrouchFlagT",
+   "cls": "K2Node_CallFunction",
+   "pin": false
+  },
+  {
+   "node": "K2Node_FPT_CrouchingT",
+   "cls": "K2Node_CallFunction",
+   "pin": false
+  },
+  {
+   "node": "K2Node_FPT_WalkSpd",
+   "cls": "K2Node_CallFunction",
+   "pin": false
+  },
+  {
+   "node": "K2Node_FPT_RunSpd",
+   "cls": "K2Node_CallFunction",
+   "pin": false
+  },
+  {
+   "node": "K2Node_FPT_OwnSpd",
+   "cls": "K2Node_CallFunction",
+   "pin": false
+  },
+  {
+   "node": "K2Node_FPT_CapSpeedC",
+   "cls": "K2Node_VariableSet",
+   "pin": "MaxWalkSpeedCrouched",
+   "from": [
+    "K2Node_FPT_OwnSpd"
+   ],
+   "exec_from": [
+    "K2Node_FPT_CapSpeed"
+   ]
+  },
+  {
+   "node": "K2Node_FPT_CrouchFlag",
+   "cls": "K2Node_CallFunction",
+   "pin": false
+  },
+  {
+   "node": "K2Node_FPT_DoCrouch",
+   "cls": "K2Node_CallFunction",
+   "pin": false
+  },
+  {
+   "node": "K2Node_FPF_CrouchOnF",
+   "cls": "K2Node_CallFunction",
+   "pin": false
+  },
+  {
+   "node": "K2Node_FPF_CrouchMul",
+   "cls": "K2Node_CallFunction",
+   "pin": false
+  },
+  {
+   "node": "K2Node_FPF_FSpd",
+   "cls": "K2Node_CallFunction",
+   "pin": false
+  },
+  {
+   "node": "K2Node_FPF_CrouchCone",
+   "cls": "K2Node_PromotableOperator",
+   "pin": false
+  },
+  {
+   "node": "FPN_ProneOffUnCrouch",
+   "cls": "K2Node_CallFunction",
+   "pin": false
+  },
+  {
+   "node": "FPN_ProneOnUnCrouch",
+   "cls": "K2Node_CallFunction",
+   "pin": false
+  },
+  {
+   "node": "FPN_ProneCrouchEvent",
+   "cls": "K2Node_CustomEvent",
+   "pin": false
+  },
+  {
+   "node": "FPN_ProneDoCrouch",
+   "cls": "K2Node_CallFunction",
+   "pin": false
+  },
+  {
+   "node": "FPN_ProneIsCrouch",
+   "cls": "K2Node_CallFunction",
+   "pin": false
+  }
+ ],
+ "backup": [
+  {
+   "node": "K2Node_VariableSet_FSprintOn",
+   "cls": "K2Node_VariableSet",
+   "pin": "MaxWalkSpeed",
+   "from": [],
+   "exec_from": [
+    "K2Node_EnhancedInputAction_FSprint"
+   ]
+  },
+  {
+   "node": "K2Node_VariableSet_FSprintOff",
+   "cls": "K2Node_VariableSet",
+   "pin": "MaxWalkSpeed",
+   "from": [],
+   "exec_from": [
+    "K2Node_EnhancedInputAction_FSprint",
+    "K2Node_EnhancedInputAction_FSprint"
+   ]
+  },
+  {
+   "node": "K2Node_FPF_MySpd",
+   "cls": "K2Node_CallFunction",
+   "pin": false
+  },
+  {
+   "node": "K2Node_FPT_ShSpd",
+   "cls": "K2Node_CallFunction",
+   "pin": false
+  },
+  {
+   "node": "K2Node_FPT_AimSpd",
+   "cls": "K2Node_CallFunction",
+   "pin": false
+  },
+  {
+   "node": "K2Node_FPT_FreeSpd",
+   "cls": "K2Node_CallFunction",
+   "pin": false
+  },
+  {
+   "node": "K2Node_FPT_CapSpeed",
+   "cls": "K2Node_VariableSet",
+   "pin": "MaxWalkSpeed",
+   "from": [
+    "K2Node_FPT_OwnSpd"
+   ],
+   "exec_from": [
+    "K2Node_FPT_AimB"
+   ]
+  },
+  {
+   "node": "K2Node_FPT_FreeSpeed",
+   "cls": "K2Node_VariableSet",
+   "pin": "MaxWalkSpeed",
+   "from": [
+    "K2Node_FPT_FreeSpd"
+   ],
+   "exec_from": [
+    "K2Node_FPT_WasCap"
+   ]
+  },
+  {
+   "node": "K2Node_FPT_GetCrouchFlagT",
+   "cls": "K2Node_VariableGet",
+   "pin": false
+  },
+  {
+   "node": "K2Node_FPT_CrouchFlagT",
+   "cls": "K2Node_CallFunction",
+   "pin": false
+  },
+  {
+   "node": "K2Node_FPT_CrouchingT",
+   "cls": "K2Node_CallFunction",
+   "pin": false
+  },
+  {
+   "node": "K2Node_FPT_WalkSpd",
+   "cls": "K2Node_CallFunction",
+   "pin": false
+  },
+  {
+   "node": "K2Node_FPT_RunSpd",
+   "cls": "K2Node_CallFunction",
+   "pin": false
+  },
+  {
+   "node": "K2Node_FPT_OwnSpd",
+   "cls": "K2Node_CallFunction",
+   "pin": false
+  },
+  {
+   "node": "K2Node_FPT_CapSpeedC",
+   "cls": "K2Node_VariableSet",
+   "pin": "MaxWalkSpeedCrouched",
+   "from": [
+    "K2Node_FPT_OwnSpd"
+   ],
+   "exec_from": [
+    "K2Node_FPT_CapSpeed"
+   ]
+  },
+  {
+   "node": "K2Node_FPT_CrouchFlag",
+   "cls": "K2Node_CallFunction",
+   "pin": false
+  },
+  {
+   "node": "K2Node_FPT_DoCrouch",
+   "cls": "K2Node_CallFunction",
+   "pin": false
+  },
+  {
+   "node": "K2Node_FPF_CrouchOnF",
+   "cls": "K2Node_CallFunction",
+   "pin": false
+  },
+  {
+   "node": "K2Node_FPF_CrouchMul",
+   "cls": "K2Node_CallFunction",
+   "pin": false
+  },
+  {
+   "node": "K2Node_FPF_FSpd",
+   "cls": "K2Node_CallFunction",
+   "pin": false
+  },
+  {
+   "node": "K2Node_FPF_CrouchCone",
+   "cls": "K2Node_PromotableOperator",
+   "pin": false
+  },
+  {
+   "node": "FPN_ProneOffUnCrouch",
+   "cls": "K2Node_CallFunction",
+   "pin": false
+  },
+  {
+   "node": "FPN_ProneOnUnCrouch",
+   "cls": "K2Node_CallFunction",
+   "pin": false
+  },
+  {
+   "node": "FPN_ProneCrouchEvent",
+   "cls": "K2Node_CustomEvent",
+   "pin": false
+  },
+  {
+   "node": "FPN_ProneDoCrouch",
+   "cls": "K2Node_CallFunction",
+   "pin": false
+  },
+  {
+   "node": "FPN_ProneIsCrouch",
+   "cls": "K2Node_CallFunction",
+   "pin": false
+  }
+ ]
+}

@@ -1,0 +1,66 @@
+{
+ "names": [
+  "Hips",
+  "Spine",
+  "Chest",
+  "Neck",
+  "Head",
+  "Left-shoulder",
+  "Left-arm",
+  "Breast针",
+  "Right-shoulder",
+  "Right-arm"
+ ],
+ "pos": {
+  "Hips": [
+   -2.3,
+   0.0,
+   -1.4
+  ],
+  "Spine": [
+   -2.1,
+   0.0,
+   4.5
+  ],
+  "Chest": [
+   0.8,
+   -1.0,
+   16.0
+  ],
+  "Neck": [
+   -1.2,
+   -1.4,
+   33.6
+  ],
+  "Head": [
+   1.2,
+   -2.4,
+   40.7
+  ],
+  "Left-shoulder": [
+   -2.2,
+   -2.8,
+   31.1
+  ],
+  "Left-arm": [
+   -6.9,
+   -9.8,
+   28.5
+  ],
+  "Breast针": [
+   1.0,
+   -11.7,
+   29.2
+  ],
+  "Right-shoulder": [
+   -1.4,
+   0.5,
+   31.3
+  ],
+  "Right-arm": [
+   -2.3,
+   9.1,
+   29.5
+  ]
+ }
+}

@@ -1,0 +1,303 @@
+{
+ "comps": [
+  [
+   "CharacterMesh0",
+   "SkeletalMeshComponent",
+   "CollisionCylinder"
+  ],
+  [
+   "CameraProxyMeshComponent_0",
+   "CameraProxyMeshComponent",
+   "CameraComponent"
+  ],
+  [
+   "CameraProxyMeshComponent_1",
+   "CameraProxyMeshComponent",
+   "FollowCamera"
+  ],
+  [
+   "FurinaMesh",
+   "SkeletalMeshComponent",
+   "CharacterMesh0"
+  ],
+  [
+   "FurinaRifle",
+   "SkeletalMeshComponent",
+   "FurinaMesh"
+  ],
+  [
+   "FurinaMag",
+   "StaticMeshComponent",
+   "FurinaRifle"
+  ],
+  [
+   "FurinaPistolFrame",
+   "StaticMeshComponent",
+   "FurinaRifle"
+  ],
+  [
+   "FurinaPistolSlide",
+   "StaticMeshComponent",
+   "FurinaPistolFrame"
+  ],
+  [
+   "CameraProxyMeshComponent_2",
+   "CameraProxyMeshComponent",
+   "FPCamera"
+  ]
+ ],
+ "gun": "FurinaRifle",
+ "stock_butt": {
+  "pawn_local": [
+   8.2,
+   7.4,
+   36.7
+  ],
+  "dist_raw": "(-1.0, <Struct 'Vector' (0x000001C56ECB2D10) {x: -1169.352615, y: -1043.344784, ",
+  "dist_to_body_collision": -1.0,
+  "push_grid": {
+   "fwd0_right0": -1.0,
+   "fwd0_right2": -1.0,
+   "fwd0_right4": -1.0,
+   "fwd2_right0": -1.0,
+   "fwd2_right2": -1.0,
+   "fwd2_right4": -1.0,
+   "fwd4_right0": -1.0,
+   "fwd4_right2": -1.0,
+   "fwd4_right4": -1.0,
+   "fwd6_right0": -1.0,
+   "fwd6_right2": -1.0,
+   "fwd6_right4": -1.0,
+   "fwd8_right0": -1.0,
+   "fwd8_right2": -1.0,
+   "fwd8_right4": -1.0,
+   "fwd10_right0": -1.0,
+   "fwd10_right2": -1.0,
+   "fwd10_right4": -1.0
+  }
+ },
+ "stock_mid": {
+  "pawn_local": [
+   10.8,
+   3.3,
+   28.6
+  ],
+  "dist_raw": "(-1.0, <Struct 'Vector' (0x000001C56ECB1730) {x: -1169.479791, y: -1048.200084, ",
+  "dist_to_body_collision": -1.0,
+  "push_grid": {
+   "fwd0_right0": -1.0,
+   "fwd0_right2": -1.0,
+   "fwd0_right4": -1.0,
+   "fwd2_right0": -1.0,
+   "fwd2_right2": -1.0,
+   "fwd2_right4": -1.0,
+   "fwd4_right0": -1.0,
+   "fwd4_right2": -1.0,
+   "fwd4_right4": -1.0,
+   "fwd6_right0": -1.0,
+   "fwd6_right2": -1.0,
+   "fwd6_right4": -1.0,
+   "fwd8_right0": -1.0,
+   "fwd8_right2": -1.0,
+   "fwd8_right4": -1.0,
+   "fwd10_right0": -1.0,
+   "fwd10_right2": -1.0,
+   "fwd10_right4": -1.0
+  }
+ },
+ "stock_top": {
+  "pawn_local": [
+   9.6,
+   4.3,
+   39.6
+  ],
+  "dist_raw": "(-1.0, <Struct 'Vector' (0x000001C56ECB07E0) {x: -1169.908155, y: -1046.732205, ",
+  "dist_to_body_collision": -1.0,
+  "push_grid": {
+   "fwd0_right0": -1.0,
+   "fwd0_right2": -1.0,
+   "fwd0_right4": -1.0,
+   "fwd2_right0": -1.0,
+   "fwd2_right2": -1.0,
+   "fwd2_right4": -1.0,
+   "fwd4_right0": -1.0,
+   "fwd4_right2": -1.0,
+   "fwd4_right4": -1.0,
+   "fwd6_right0": -1.0,
+   "fwd6_right2": -1.0,
+   "fwd6_right4": -1.0,
+   "fwd8_right0": -1.0,
+   "fwd8_right2": -1.0,
+   "fwd8_right4": -1.0,
+   "fwd10_right0": -1.0,
+   "fwd10_right2": -1.0,
+   "fwd10_right4": -1.0
+  }
+ },
+ "stock_bottom": {
+  "pawn_local": [
+   6.2,
+   12.0,
+   32.5
+  ],
+  "dist_raw": "(-1.0, <Struct 'Vector' (0x000001C56ECB0470) {x: -1168.541054, y: -1038.396270, ",
+  "dist_to_body_collision": -1.0,
+  "push_grid": {
+   "fwd0_right0": -1.0,
+   "fwd0_right2": -1.0,
+   "fwd0_right4": -1.0,
+   "fwd2_right0": -1.0,
+   "fwd2_right2": -1.0,
+   "fwd2_right4": -1.0,
+   "fwd4_right0": -1.0,
+   "fwd4_right2": -1.0,
+   "fwd4_right4": -1.0,
+   "fwd6_right0": -1.0,
+   "fwd6_right2": -1.0,
+   "fwd6_right4": -1.0,
+   "fwd8_right0": -1.0,
+   "fwd8_right2": -1.0,
+   "fwd8_right4": -1.0,
+   "fwd10_right0": -1.0,
+   "fwd10_right2": -1.0,
+   "fwd10_right4": -1.0
+  }
+ },
+ "n_bones": 89,
+ "bone_spine_01": [
+  -0.9,
+  -1.0,
+  -0.6
+ ],
+ "bone_spine_02": [
+  1.2,
+  -0.4,
+  5.9
+ ],
+ "bone_spine_03": [
+  3.1,
+  0.3,
+  12.8
+ ],
+ "bone_spine_04": [
+  4.0,
+  0.7,
+  21.3
+ ],
+ "bone_spine_05": [
+  4.2,
+  1.2,
+  40.7
+ ],
+ "bone_neck_01": [
+  4.2,
+  1.4,
+  52.6
+ ],
+ "bone_neck_02": [
+  6.2,
+  2.2,
+  57.3
+ ],
+ "bone_clavicle_l": [
+  3.6,
+  -0.5,
+  46.3
+ ],
+ "bone_upperarm_l": [
+  9.8,
+  -17.2,
+  44.5
+ ],
+ "bone_lowerarm_l": [
+  10.8,
+  -26.1,
+  18.2
+ ],
+ "bone_lowerarm_twist_02_l": [
+  13.9,
+  -26.5,
+  9.7
+ ],
+ "bone_lowerarm_twist_01_l": [
+  17.0,
+  -26.8,
+  1.2
+ ],
+ "bone_hand_l": [
+  20.0,
+  -27.2,
+  -7.4
+ ],
+ "bone_upperarm_twist_01_l": [
+  10.1,
+  -20.1,
+  35.7
+ ],
+ "bone_upperarm_twist_02_l": [
+  10.5,
+  -23.1,
+  27.0
+ ],
+ "bone_clavicle_r": [
+  2.5,
+  2.1,
+  46.2
+ ],
+ "bone_upperarm_r": [
+  -4.5,
+  18.4,
+  44.4
+ ],
+ "bone_lowerarm_r": [
+  -10.9,
+  23.9,
+  18.0
+ ],
+ "bone_lowerarm_twist_02_r": [
+  -8.6,
+  25.0,
+  9.3
+ ],
+ "bone_lowerarm_twist_01_r": [
+  -6.2,
+  26.1,
+  0.6
+ ],
+ "bone_hand_r": [
+  -3.8,
+  27.3,
+  -8.1
+ ],
+ "bone_upperarm_twist_01_r": [
+  -6.7,
+  20.2,
+  35.6
+ ],
+ "bone_upperarm_twist_02_r": [
+  -8.8,
+  22.0,
+  26.8
+ ],
+ "bone_ik_hand_root": [
+  0.0,
+  0.0,
+  -95.0
+ ],
+ "bone_ik_hand_gun": [
+  -3.8,
+  27.2,
+  -5.0
+ ],
+ "bone_ik_hand_l": [
+  20.1,
+  -27.2,
+  -4.2
+ ],
+ "bone_ik_hand_r": [
+  -3.8,
+  27.2,
+  -5.0
+ ],
+ "view_tp": null
+}

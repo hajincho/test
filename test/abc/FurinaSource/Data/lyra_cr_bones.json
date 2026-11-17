@@ -1,0 +1,18 @@
+{
+ "n": 240,
+ "upper": [
+  "Hips",
+  "Spine",
+  "Chest",
+  "Neck",
+  "Head",
+  "Left-shoulder",
+  "Left-arm",
+  "zArmTwist_L",
+  "Left-wrist",
+  "Right-shoulder",
+  "Right-arm",
+  "zArmTwist_R",
+  "Right-wrist"
+ ]
+}

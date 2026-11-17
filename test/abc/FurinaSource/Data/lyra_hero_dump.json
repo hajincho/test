@@ -1,0 +1,140 @@
+{
+ "AbilitySet_ShooterHero": {
+  "granted_gameplay_abilities": [
+   "{}",
+   "{}",
+   "{}",
+   "{}",
+   "{}",
+   "{}",
+   "{}",
+   "{}",
+   "{}",
+   "{}",
+   "{}"
+  ],
+  "granted_gameplay_effects": [
+   "{}"
+  ],
+  "granted_attribute_sets": "ERR LyraAbilitySet: Failed to find property 'granted_attribute_sets' for attribute 'granted_attribute_sets' on 'LyraAbilitySet'"
+ },
+ "HeroData_ShooterGame": {
+  "pawn_class": "<Object '/ShooterCore/Game/B_Hero_ShooterMannequin.B_Hero_ShooterMannequin_C' (0x00000140AF550000) Class 'BlueprintGeneratedClass'>",
+  "ability_sets": "[\"/Script/LyraGame.LyraAbilitySet'/ShooterCore/Game/AbilitySet_ShooterHero.AbilitySet_ShooterHero'\"]",
+  "tag_relationship_mapping": "<Object '/ShooterCore/Game/TagRelationships_ShooterHero.TagRelationships_ShooterHero' (0x00000140B3FA16C0) Class 'LyraAbilityTagRelationshipMapping'>",
+  "input_config": "<Object '/Game/Input/InputData_Hero.InputData_Hero' (0x00000140984E8110) Class 'LyraInputConfig'>",
+  "default_camera_mode": "<Object '/Game/Characters/Cameras/CM_ThirdPerson.CM_ThirdPerson_C' (0x00000140AC1F0E00) Class 'BlueprintGeneratedClass'>"
+ },
+ "B_Hero_ShooterMannequin_components": [
+  [
+   "None",
+   "B_Hero_ShooterMannequin_C"
+  ],
+  [
+   "CameraComponent",
+   "LyraCameraComponent"
+  ],
+  [
+   "CapsuleComponent",
+   "CapsuleComponent"
+  ],
+  [
+   "ArrowComponent",
+   "ArrowComponent"
+  ],
+  [
+   "Mesh",
+   "SkeletalMeshComponent"
+  ],
+  [
+   "AimAssistTarget",
+   "AimAssistTargetComponent"
+  ],
+  [
+   "CharacterMovement",
+   "LyraCharacterMovementComponent"
+  ],
+  [
+   "PawnExtComponent",
+   "LyraPawnExtensionComponent"
+  ],
+  [
+   "LyraHero",
+   "LyraHeroComponent"
+  ],
+  [
+   "AIPerceptionStimuliSource",
+   "AIPerceptionStimuliSourceComponent"
+  ],
+  [
+   "LyraContextEffect",
+   "LyraContextEffectComponent"
+  ],
+  [
+   "HealthComponent",
+   "LyraHealthComponent"
+  ],
+  [
+   "PawnCosmeticsComponent",
+   "B_MannequinPawnCosmetics_C"
+  ]
+ ],
+ "B_Hero_parent": "ERR Blueprint: Failed to find property 'parent_class' for attribute 'parent_class' on 'Blueprint'",
+ "LAS_ShooterGame_StandardComponents": [
+  {
+   "cls": "GameFeatureAction_AddComponents"
+  }
+ ],
+ "LAS_ShooterGame_SharedInput": [
+  {
+   "cls": "GameFeatureAction_AddInputBinding"
+  },
+  {
+   "cls": "GameFeatureAction_AddInputContextMapping"
+  }
+ ],
+ "LAS_ShooterGame_StandardHUD": [
+  {
+   "cls": "GameFeatureAction_AddWidgets"
+  }
+ ],
+ "B_Furina_Experience": {
+  "default_pawn_data": "<Object '/Game/Furina/Lyra/HeroData_Furina.HeroData_Furina' (0x00000141183F8420) Class 'LyraPawnData'>",
+  "game_features_to_enable": [
+   "ShooterCore"
+  ],
+  "action_sets": [
+   "<Object '/ShooterCore/Experiences/LAS_ShooterGame_SharedInput.LAS_ShooterGame_SharedInput' (0x00000140B3F84D40) Class 'LyraExperienceActionSet'>",
+   "<Object '/ShooterCore/Experiences/LAS_ShooterGame_StandardComponents.LAS_ShooterGame_StandardComponents' (0x00000140B3F844A0) Class 'LyraExperienceActionSet'>",
+   "<Object '/ShooterCore/Experiences/LAS_ShooterGame_StandardHUD.LAS_ShooterGame_StandardHUD' (0x00000140B3F848C0) Class 'LyraExperienceActionSet'>",
+   "<Object '/ShooterCore/Accolades/EAS_BasicShooterAcolades.EAS_BasicShooterAcolades' (0x00000140B3F81F20) Class 'LyraExperienceActionSet'>"
+  ],
+  "actions": [
+   "<Object '/Game/System/Experiences/B_Furina_Experience.Default__B_Furina_Experience_C:GameFeatureAction_AddAbilities_0' (0x000001411820BEC0) Class 'GameFeatureAc...",
+   "<Object '/Game/System/Experiences/B_Furina_Experience.Default__B_Furina_Experience_C:GameFeatureAction_AddComponents_0' (0x0000014116BA6B00) Class 'GameFeatureA...",
+   "<Object '/Game/System/Experiences/B_Furina_Experience.Default__B_Furina_Experience_C:GameFeatureAction_AddWidgets_1' (0x0000014116BA6200) Class 'GameFeatureActi..."
+  ]
+ },
+ "B_Furina_Experience_actions": [
+  {
+   "cls": "GameFeatureAction_AddAbilities"
+  },
+  {
+   "cls": "GameFeatureAction_AddComponents"
+  },
+  {
+   "cls": "GameFeatureAction_AddWidgets"
+  }
+ ],
+ "LyraCharacter": {
+  "path": "<Object '/Script/LyraGame.LyraCharacter' (0x0000014051412A80) Class 'Class'>",
+  "has": [
+   "LyraCharacter",
+   "LyraPawnExtensionComponent",
+   "LyraHealthComponent",
+   "LyraHeroComponent",
+   "LyraCameraComponent",
+   "LyraAbilitySystemComponent"
+  ]
+ }
+}

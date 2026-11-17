@@ -1,0 +1,994 @@
+{
+ "nodes": [
+  {
+   "node": "FMG_Update",
+   "cls": "K2Node_CustomEvent",
+   "pins": [
+    [
+     "OutputDelegate",
+     "",
+     [
+      "FMG_Timer"
+     ]
+    ],
+    [
+     "then",
+     "",
+     [
+      "P2_Branch_01989945"
+     ]
+    ]
+   ]
+  },
+  {
+   "node": "FMG_Anim",
+   "cls": "K2Node_CallFunction",
+   "pins": [
+    [
+     "self",
+     "",
+     [
+      "K2Node_VariableGet_35"
+     ]
+    ],
+    [
+     "ReturnValue",
+     "",
+     [
+      "FMG_Curve"
+     ]
+    ]
+   ]
+  },
+  {
+   "node": "FMG_Curve",
+   "cls": "K2Node_CallFunction",
+   "pins": [
+    [
+     "self",
+     "",
+     [
+      "FMG_Anim"
+     ]
+    ],
+    [
+     "CurveName",
+     "MagState",
+     []
+    ],
+    [
+     "ReturnValue",
+     "0.0",
+     [
+      "FMG_Round"
+     ]
+    ]
+   ]
+  },
+  {
+   "node": "FMG_Round",
+   "cls": "K2Node_CallFunction",
+   "pins": [
+    [
+     "A",
+     "0.0",
+     [
+      "FMG_Curve"
+     ]
+    ],
+    [
+     "ReturnValue",
+     "0",
+     [
+      "FMG_Changed",
+      "FMG_SetLast",
+      "FMG_IsHand"
+     ]
+    ]
+   ]
+  },
+  {
+   "node": "FMG_Changed",
+   "cls": "K2Node_PromotableOperator",
+   "pins": [
+    [
+     "A",
+     "",
+     [
+      "FMG_Round"
+     ]
+    ],
+    [
+     "B",
+     "",
+     [
+      "K2Node_VariableGet_39"
+     ]
+    ],
+    [
+     "ReturnValue",
+     "",
+     [
+      "FMG_BrChanged"
+     ]
+    ]
+   ]
+  },
+  {
+   "node": "FMG_SetLast",
+   "cls": "K2Node_VariableSet",
+   "pins": [
+    [
+     "execute",
+     "",
+     [
+      "FMG_ShowHand",
+      "FMG_ShowHand2",
+      "FMG_HideMag"
+     ]
+    ],
+    [
+     "FurinaMagLast",
+     "0",
+     [
+      "FMG_Round"
+     ]
+    ],
+    [
+     "Output_Get",
+     "0",
+     []
+    ]
+   ]
+  },
+  {
+   "node": "FMG_BrChanged",
+   "cls": "K2Node_IfThenElse",
+   "pins": [
+    [
+     "execute",
+     "",
+     [
+      "P2_Branch_01989945"
+     ]
+    ],
+    [
+     "Condition",
+     "true",
+     [
+      "FMG_Changed"
+     ]
+    ],
+    [
+     "then",
+     "",
+     [
+      "FMG_BrHand"
+     ]
+    ]
+   ]
+  },
+  {
+   "node": "FMG_IsHand",
+   "cls": "K2Node_PromotableOperator",
+   "pins": [
+    [
+     "A",
+     "",
+     [
+      "FMG_Round"
+     ]
+    ],
+    [
+     "B",
+     "1",
+     []
+    ],
+    [
+     "ReturnValue",
+     "",
+     [
+      "FMG_BrHand"
+     ]
+    ]
+   ]
+  },
+  {
+   "node": "FMG_BrHand",
+   "cls": "K2Node_IfThenElse",
+   "pins": [
+    [
+     "execute",
+     "",
+     [
+      "FMG_BrChanged"
+     ]
+    ],
+    [
+     "Condition",
+     "true",
+     [
+      "FMG_IsHand"
+     ]
+    ],
+    [
+     "then",
+     "",
+     [
+      "FMG_BrFromSeated"
+     ]
+    ],
+    [
+     "else",
+     "",
+     [
+      "FMG_BrGone"
+     ]
+    ]
+   ]
+  },
+  {
+   "node": "FMG_LastIsZero",
+   "cls": "K2Node_PromotableOperator",
+   "pins": [
+    [
+     "A",
+     "",
+     [
+      "K2Node_VariableGet_39"
+     ]
+    ],
+    [
+     "ReturnValue",
+     "",
+     [
+      "FMG_BrFromSeated"
+     ]
+    ]
+   ]
+  },
+  {
+   "node": "FMG_BrFromSeated",
+   "cls": "K2Node_IfThenElse",
+   "pins": [
+    [
+     "execute",
+     "",
+     [
+      "FMG_BrHand"
+     ]
+    ],
+    [
+     "Condition",
+     "true",
+     [
+      "FMG_LastIsZero"
+     ]
+    ],
+    [
+     "then",
+     "",
+     [
+      "FMG_RefToRifle"
+     ]
+    ],
+    [
+     "else",
+     "",
+     [
+      "FMG_MagToRef2"
+     ]
+    ]
+   ]
+  },
+  {
+   "node": "FMG_RefToRifle",
+   "cls": "K2Node_CallFunction",
+   "pins": [
+    [
+     "execute",
+     "",
+     [
+      "FMG_BrFromSeated"
+     ]
+    ],
+    [
+     "self",
+     "",
+     [
+      "K2Node_VariableGet_38"
+     ]
+    ],
+    [
+     "Parent",
+     "",
+     [
+      "K2Node_VariableGet_36"
+     ]
+    ],
+    [
+     "SocketName",
+     "None",
+     []
+    ],
+    [
+     "LocationRule",
+     "SnapToTarget",
+     []
+    ],
+    [
+     "RotationRule",
+     "SnapToTarget",
+     []
+    ],
+    [
+     "ScaleRule",
+     "SnapToTarget",
+     []
+    ],
+    [
+     "bWeldSimulatedBodies",
+     "false",
+     []
+    ],
+    [
+     "then",
+     "",
+     [
+      "FMG_RefToWrist"
+     ]
+    ],
+    [
+     "ReturnValue",
+     "false",
+     []
+    ]
+   ]
+  },
+  {
+   "node": "FMG_RefToWrist",
+   "cls": "K2Node_CallFunction",
+   "pins": [
+    [
+     "execute",
+     "",
+     [
+      "FMG_RefToRifle"
+     ]
+    ],
+    [
+     "self",
+     "",
+     [
+      "K2Node_VariableGet_38"
+     ]
+    ],
+    [
+     "Parent",
+     "",
+     [
+      "K2Node_VariableGet_35"
+     ]
+    ],
+    [
+     "SocketName",
+     "Left-wrist",
+     []
+    ],
+    [
+     "LocationRule",
+     "KeepWorld",
+     []
+    ],
+    [
+     "RotationRule",
+     "KeepWorld",
+     []
+    ],
+    [
+     "ScaleRule",
+     "KeepWorld",
+     []
+    ],
+    [
+     "bWeldSimulatedBodies",
+     "false",
+     []
+    ],
+    [
+     "then",
+     "",
+     [
+      "FMG_MagToRef"
+     ]
+    ],
+    [
+     "ReturnValue",
+     "false",
+     []
+    ]
+   ]
+  },
+  {
+   "node": "FMG_MagToRef",
+   "cls": "K2Node_CallFunction",
+   "pins": [
+    [
+     "execute",
+     "",
+     [
+      "FMG_RefToWrist"
+     ]
+    ],
+    [
+     "self",
+     "",
+     [
+      "K2Node_VariableGet_37"
+     ]
+    ],
+    [
+     "Parent",
+     "",
+     [
+      "K2Node_VariableGet_38"
+     ]
+    ],
+    [
+     "SocketName",
+     "None",
+     []
+    ],
+    [
+     "LocationRule",
+     "SnapToTarget",
+     []
+    ],
+    [
+     "RotationRule",
+     "SnapToTarget",
+     []
+    ],
+    [
+     "ScaleRule",
+     "SnapToTarget",
+     []
+    ],
+    [
+     "bWeldSimulatedBodies",
+     "false",
+     []
+    ],
+    [
+     "then",
+     "",
+     [
+      "FMG_ShowHand"
+     ]
+    ],
+    [
+     "ReturnValue",
+     "false",
+     []
+    ]
+   ]
+  },
+  {
+   "node": "FMG_ShowHand",
+   "cls": "K2Node_CallFunction",
+   "pins": [
+    [
+     "execute",
+     "",
+     [
+      "FMG_MagToRef"
+     ]
+    ],
+    [
+     "self",
+     "",
+     [
+      "K2Node_VariableGet_37"
+     ]
+    ],
+    [
+     "bNewVisibility",
+     "true",
+     []
+    ],
+    [
+     "bPropagateToChildren",
+     "false",
+     []
+    ],
+    [
+     "then",
+     "",
+     [
+      "FMG_SetLast"
+     ]
+    ]
+   ]
+  },
+  {
+   "node": "FMG_MagToRef2",
+   "cls": "K2Node_CallFunction",
+   "pins": [
+    [
+     "execute",
+     "",
+     [
+      "FMG_BrFromSeated"
+     ]
+    ],
+    [
+     "self",
+     "",
+     [
+      "K2Node_VariableGet_37"
+     ]
+    ],
+    [
+     "Parent",
+     "",
+     [
+      "K2Node_VariableGet_38"
+     ]
+    ],
+    [
+     "SocketName",
+     "None",
+     []
+    ],
+    [
+     "LocationRule",
+     "SnapToTarget",
+     []
+    ],
+    [
+     "RotationRule",
+     "SnapToTarget",
+     []
+    ],
+    [
+     "ScaleRule",
+     "SnapToTarget",
+     []
+    ],
+    [
+     "bWeldSimulatedBodies",
+     "false",
+     []
+    ],
+    [
+     "then",
+     "",
+     [
+      "FMG_ShowHand2"
+     ]
+    ],
+    [
+     "ReturnValue",
+     "false",
+     []
+    ]
+   ]
+  },
+  {
+   "node": "FMG_ShowHand2",
+   "cls": "K2Node_CallFunction",
+   "pins": [
+    [
+     "execute",
+     "",
+     [
+      "FMG_MagToRef2"
+     ]
+    ],
+    [
+     "self",
+     "",
+     [
+      "K2Node_VariableGet_37"
+     ]
+    ],
+    [
+     "bNewVisibility",
+     "true",
+     []
+    ],
+    [
+     "bPropagateToChildren",
+     "false",
+     []
+    ],
+    [
+     "then",
+     "",
+     [
+      "FMG_SetLast"
+     ]
+    ]
+   ]
+  },
+  {
+   "node": "FMG_IsGone",
+   "cls": "K2Node_PromotableOperator",
+   "pins": [
+    [
+     "A",
+     "",
+     [
+      "FMG_Round"
+     ]
+    ],
+    [
+     "B",
+     "2",
+     []
+    ],
+    [
+     "ReturnValue",
+     "",
+     [
+      "FMG_BrGone"
+     ]
+    ]
+   ]
+  },
+  {
+   "node": "FMG_BrGone",
+   "cls": "K2Node_IfThenElse",
+   "pins": [
+    [
+     "execute",
+     "",
+     [
+      "FMG_BrHand"
+     ]
+    ],
+    [
+     "Condition",
+     "true",
+     [
+      "FMG_IsGone"
+     ]
+    ],
+    [
+     "then",
+     "",
+     [
+      "FMG_DropSpawn"
+     ]
+    ],
+    [
+     "else",
+     "",
+     [
+      "FMG_MagToRifle"
+     ]
+    ]
+   ]
+  },
+  {
+   "node": "FMG_MagWorld",
+   "cls": "K2Node_CallFunction",
+   "pins": [
+    [
+     "self",
+     "",
+     [
+      "K2Node_VariableGet_37"
+     ]
+    ],
+    [
+     "ReturnValue",
+     "",
+     [
+      "FMG_DropSpawn",
+      "FMG_DropFinish"
+     ]
+    ]
+   ]
+  },
+  {
+   "node": "FMG_DropSpawn",
+   "cls": "K2Node_CallFunction",
+   "pins": [
+    [
+     "execute",
+     "",
+     [
+      "FMG_BrGone"
+     ]
+    ],
+    [
+     "ActorClass",
+     "/Game/Furina/M4/BP_M4MagDrop.BP_M4MagDrop_C",
+     []
+    ],
+    [
+     "SpawnTransform",
+     "",
+     [
+      "FMG_MagWorld"
+     ]
+    ],
+    [
+     "CollisionHandlingOverride",
+     "AlwaysSpawn",
+     []
+    ],
+    [
+     "TransformScaleMethod",
+     "MultiplyWithRoot",
+     []
+    ],
+    [
+     "then",
+     "",
+     [
+      "FMG_DropFinish"
+     ]
+    ],
+    [
+     "ReturnValue",
+     "",
+     [
+      "FMG_DropFinish"
+     ]
+    ]
+   ]
+  },
+  {
+   "node": "FMG_DropFinish",
+   "cls": "K2Node_CallFunction",
+   "pins": [
+    [
+     "execute",
+     "",
+     [
+      "FMG_DropSpawn"
+     ]
+    ],
+    [
+     "Actor",
+     "",
+     [
+      "FMG_DropSpawn"
+     ]
+    ],
+    [
+     "SpawnTransform",
+     "",
+     [
+      "FMG_MagWorld"
+     ]
+    ],
+    [
+     "TransformScaleMethod",
+     "MultiplyWithRoot",
+     []
+    ],
+    [
+     "then",
+     "",
+     [
+      "FMG_HideMag"
+     ]
+    ]
+   ]
+  },
+  {
+   "node": "FMG_HideMag",
+   "cls": "K2Node_CallFunction",
+   "pins": [
+    [
+     "execute",
+     "",
+     [
+      "FMG_DropFinish"
+     ]
+    ],
+    [
+     "self",
+     "",
+     [
+      "K2Node_VariableGet_37"
+     ]
+    ],
+    [
+     "bNewVisibility",
+     "false",
+     []
+    ],
+    [
+     "bPropagateToChildren",
+     "false",
+     []
+    ],
+    [
+     "then",
+     "",
+     [
+      "FMG_SetLast"
+     ]
+    ]
+   ]
+  },
+  {
+   "node": "FMG_MagToRifle",
+   "cls": "K2Node_CallFunction",
+   "pins": [
+    [
+     "execute",
+     "",
+     [
+      "FMG_BrGone"
+     ]
+    ],
+    [
+     "self",
+     "",
+     [
+      "K2Node_VariableGet_37"
+     ]
+    ],
+    [
+     "Parent",
+     "",
+     [
+      "K2Node_VariableGet_36"
+     ]
+    ],
+    [
+     "SocketName",
+     "None",
+     []
+    ],
+    [
+     "LocationRule",
+     "SnapToTarget",
+     []
+    ],
+    [
+     "RotationRule",
+     "SnapToTarget",
+     []
+    ],
+    [
+     "ScaleRule",
+     "SnapToTarget",
+     []
+    ],
+    [
+     "bWeldSimulatedBodies",
+     "false",
+     []
+    ],
+    [
+     "then",
+     "",
+     [
+      "FMG_ShowSeated"
+     ]
+    ],
+    [
+     "ReturnValue",
+     "false",
+     []
+    ]
+   ]
+  },
+  {
+   "node": "FMG_ShowSeated",
+   "cls": "K2Node_CallFunction",
+   "pins": [
+    [
+     "execute",
+     "",
+     [
+      "FMG_MagToRifle"
+     ]
+    ],
+    [
+     "self",
+     "",
+     [
+      "K2Node_VariableGet_37"
+     ]
+    ],
+    [
+     "bNewVisibility",
+     "true",
+     []
+    ],
+    [
+     "bPropagateToChildren",
+     "false",
+     []
+    ],
+    [
+     "then",
+     "",
+     [
+      "FMG_SetLast"
+     ]
+    ]
+   ]
+  },
+  {
+   "node": "FMG_Timer",
+   "cls": "K2Node_CallFunction",
+   "pins": [
+    [
+     "execute",
+     "",
+     [
+      "K2Node_Event_3"
+     ]
+    ],
+    [
+     "Delegate",
+     "",
+     [
+      "FMG_Update"
+     ]
+    ],
+    [
+     "Time",
+     "0.033",
+     []
+    ],
+    [
+     "bLooping",
+     "true",
+     []
+    ],
+    [
+     "bMaxOncePerFrame",
+     "false",
+     []
+    ],
+    [
+     "InitialStartDelay",
+     "0.000000",
+     []
+    ],
+    [
+     "InitialStartDelayVariance",
+     "0.000000",
+     []
+    ],
+    [
+     "then",
+     "",
+     [
+      "FPN_NearClip"
+     ]
+    ]
+   ]
+  }
+ ],
+ "count": 26,
+ "comps": {
+  "FurinaRifle": {
+   "class": "SkeletalMeshComponent",
+   "relative_location": "<Struct 'Vector' (0x000001F1C31FA180) {x: -1.954539, y: -10.600776, z: -6.354046}>",
+   "relative_rotation": "<Struct 'Rotator' (0x000001F1C31FA198) {pitch: -50.506775, yaw: -0.497274, roll: 178.236358}>",
+   "relative_scale3d": "<Struct 'Vector' (0x000001F1C31FA1B0) {x: 1.000000, y: 1.000000, z: 1.000000}>"
+  },
+  "FurinaMag": {
+   "class": "StaticMeshComponent",
+   "relative_location": "<Struct 'Vector' (0x000001F3F6F28380) {x: 0.000000, y: 0.000000, z: 0.000000}>",
+   "relative_rotation": "<Struct 'Rotator' (0x000001F3F6F28398) {pitch: 0.000000, yaw: 0.000000, roll: 0.000000}>",
+   "relative_scale3d": "<Struct 'Vector' (0x000001F3F6F283B0) {x: 1.000000, y: 1.000000, z: 1.000000}>"
+  },
+  "FurinaMesh": {
+   "class": "SkeletalMeshComponent",
+   "relative_location": "<Struct 'Vector' (0x000001F1C31F0180) {x: 0.000000, y: 0.000000, z: 0.000000}>",
+   "relative_rotation": "<Struct 'Rotator' (0x000001F1C31F0198) {pitch: 0.000000, yaw: 0.000000, roll: 0.000000}>",
+   "relative_scale3d": "<Struct 'Vector' (0x000001F1C31F01B0) {x: 1.000000, y: 1.000000, z: 1.000000}>"
+  }
+ }
+}

@@ -1,0 +1,118 @@
+{
+ "mappings": [
+  [
+   "IA_ShowScoreboard",
+   "Tab",
+   true
+  ],
+  [
+   "IA_ADS",
+   "RightMouseButton",
+   true
+  ],
+  [
+   "IA_Grenade",
+   "Q",
+   true
+  ],
+  [
+   "IA_Emote",
+   "B",
+   true
+  ],
+  [
+   "IA_QuickSlot1",
+   "One",
+   true
+  ],
+  [
+   "IA_QuickSlot2",
+   "Two",
+   true
+  ],
+  [
+   "IA_QuickSlot3",
+   "Three",
+   true
+  ],
+  [
+   "IA_Melee",
+   "C",
+   true
+  ],
+  [
+   "IA_Melee",
+   "E",
+   false
+  ],
+  [
+   "IA_QuickSlot_CycleBackward",
+   "MouseScrollDown",
+   true
+  ],
+  [
+   "IA_QuickSlot_CycleForward",
+   "MouseScrollUp",
+   true
+  ],
+  [
+   "IA_ADS",
+   "Gamepad_LeftTrigger",
+   false
+  ],
+  [
+   "IA_ShowScoreboard",
+   "Gamepad_Special_Left",
+   false
+  ],
+  [
+   "IA_Grenade",
+   "Gamepad_LeftShoulder",
+   false
+  ],
+  [
+   "IA_Emote",
+   "Gamepad_DPad_Down",
+   false
+  ],
+  [
+   "IA_QuickSlot_CycleBackward",
+   "Gamepad_DPad_Left",
+   false
+  ],
+  [
+   "IA_QuickSlot_CycleForward",
+   "Gamepad_DPad_Right",
+   false
+  ],
+  [
+   "IA_Melee",
+   "Gamepad_RightShoulder",
+   false
+  ]
+ ],
+ "changed": [
+  "IA_ShowScoreboard",
+  "IA_ADS",
+  "IA_Grenade",
+  "IA_Emote",
+  "IA_QuickSlot1",
+  "IA_QuickSlot2",
+  "IA_QuickSlot3",
+  "IA_Melee",
+  "IA_QuickSlot_CycleBackward",
+  "IA_QuickSlot_CycleForward"
+ ],
+ "saved": {
+  "IA_ShowScoreboard": true,
+  "IA_ADS": true,
+  "IA_Grenade": true,
+  "IA_Emote": true,
+  "IA_QuickSlot1": true,
+  "IA_QuickSlot2": true,
+  "IA_QuickSlot3": true,
+  "IA_Melee": true,
+  "IA_QuickSlot_CycleBackward": true,
+  "IA_QuickSlot_CycleForward": true
+ }
+}

@@ -1,0 +1,82 @@
+{
+ "phases": [
+  {
+   "name": "warmup",
+   "frames": 68,
+   "avg_ms": 71.4,
+   "avg_fps": 14.0,
+   "p95_ms": 125.0
+  },
+  {
+   "name": "base1",
+   "frames": 83,
+   "avg_ms": 76.6,
+   "avg_fps": 13.1,
+   "p95_ms": 125.0
+  },
+  {
+   "name": "hwrt_off",
+   "frames": 91,
+   "avg_ms": 84.4,
+   "avg_fps": 11.9,
+   "p95_ms": 125.0
+  },
+  {
+   "name": "base2",
+   "frames": 262,
+   "avg_ms": 30.7,
+   "avg_fps": 32.6,
+   "p95_ms": 30.8
+  },
+  {
+   "name": "vsm_off",
+   "frames": 328,
+   "avg_ms": 24.4,
+   "avg_fps": 40.9,
+   "p95_ms": 26.6
+  },
+  {
+   "name": "base3",
+   "frames": 306,
+   "avg_ms": 26.3,
+   "avg_fps": 38.1,
+   "p95_ms": 33.0
+  },
+  {
+   "name": "screen75",
+   "frames": 291,
+   "avg_ms": 27.5,
+   "avg_fps": 36.3,
+   "p95_ms": 29.4
+  },
+  {
+   "name": "base4",
+   "frames": 246,
+   "avg_ms": 32.6,
+   "avg_fps": 30.6,
+   "p95_ms": 34.5
+  },
+  {
+   "name": "sg2",
+   "frames": 71,
+   "avg_ms": 71.3,
+   "avg_fps": 14.0,
+   "p95_ms": 125.0
+  },
+  {
+   "name": "base5",
+   "frames": 202,
+   "avg_ms": 39.5,
+   "avg_fps": 25.3,
+   "p95_ms": 41.5
+  },
+  {
+   "name": "combo",
+   "frames": 475,
+   "avg_ms": 16.9,
+   "avg_fps": 59.3,
+   "p95_ms": 36.1
+  }
+ ],
+ "done": true
+}

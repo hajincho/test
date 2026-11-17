@@ -1,0 +1,23 @@
+{
+ "r.ScreenPercentage": 70.0,
+ "sg.ShadowQuality": 2.0,
+ "sg.GlobalIlluminationQuality": 2.0,
+ "sg.ReflectionQuality": 2.0,
+ "sg.PostProcessQuality": 2.0,
+ "sg.EffectsQuality": 2.0,
+ "sg.TextureQuality": 3.0,
+ "sg.ResolutionQuality": 0.0,
+ "sg.ViewDistanceQuality": 3.0,
+ "sg.AntiAliasingQuality": 3.0,
+ "r.AntiAliasingMethod": 4.0,
+ "r.TSR.History.ScreenPercentage": 200.0,
+ "r.TemporalAA.Upsampling": 1.0,
+ "r.Shadow.Virtual.Enable": 0.0,
+ "r.Lumen.HardwareRayTracing": 0.0,
+ "r.MipMapLODBias": 0.0,
+ "r.MaxAnisotropy": 8.0,
+ "r.Streaming.MipBias": 0.0,
+ "r.DefaultFeature.MotionBlur": 1.0,
+ "r.MotionBlurQuality": 3.0,
+ "r.SecondaryScreenPercentage.GameViewport": 0.0
+}

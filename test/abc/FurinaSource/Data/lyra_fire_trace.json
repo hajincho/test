@@ -1,0 +1,96 @@
+{
+ "n_nodes": 991,
+ "events": [
+  "K2Node_FP_FireRifle",
+  "K2Node_FPF_FireIA"
+ ],
+ "pin_api": [
+  "find_data_input_pin",
+  "find_execute_pin",
+  "find_input_pin",
+  "find_input_pin_by_index",
+  "find_output_pin",
+  "find_output_pin_by_index",
+  "find_result_pin",
+  "find_self_pin",
+  "find_then_pin",
+  "list_all_pins",
+  "list_input_pins",
+  "list_output_pins"
+ ],
+ "trace": [
+  {
+   "node": "K2Node_FP_FireRifle",
+   "then": [
+    "K2Node_FP_Trace"
+   ],
+   "Then": [
+    "K2Node_FP_Trace"
+   ]
+  },
+  {
+   "node": "K2Node_FP_Trace",
+   "then": [
+    "K2Node_FP_HitBranch"
+   ],
+   "Then": [
+    "K2Node_FP_HitBranch"
+   ]
+  },
+  {
+   "node": "K2Node_FP_HitBranch",
+   "then": [
+    "K2Node_FP_SimBranch"
+   ],
+   "Then": [
+    "K2Node_FP_SimBranch"
+   ]
+  },
+  {
+   "node": "K2Node_FP_SimBranch",
+   "then": [
+    "K2Node_FP_Push"
+   ],
+   "Then": [
+    "K2Node_FP_Push"
+   ]
+  },
+  {
+   "node": "K2Node_FP_Push",
+   "then": [],
+   "Then": []
+  },
+  {
+   "node": "K2Node_FPF_FireIA",
+   "Started": [
+    "K2Node_FPF_Auto"
+   ],
+   "Triggered": [],
+   "Completed": [
+    "K2Node_FPF_Stop"
+   ],
+   "Canceled": [
+    "K2Node_FPF_Stop"
+   ]
+  },
+  {
+   "node": "K2Node_FPF_Auto",
+   "then": [],
+   "Then": []
+  },
+  {
+   "node": "K2Node_FPF_Stop",
+   "then": [
+    "FPN_ShotCountReset"
+   ],
+   "Then": [
+    "FPN_ShotCountReset"
+   ]
+  },
+  {
+   "node": "FPN_ShotCountReset",
+   "then": [],
+   "Then": []
+  }
+ ]
+}

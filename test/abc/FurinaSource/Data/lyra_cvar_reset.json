@@ -1,0 +1,16 @@
+{
+ "cmds": [
+  "r.ScreenPercentage 100",
+  "sg.ShadowQuality 3",
+  "sg.GlobalIlluminationQuality 3",
+  "sg.ReflectionQuality 3",
+  "sg.PostProcessQuality 3",
+  "sg.EffectsQuality 3"
+ ],
+ "r.ScreenPercentage": 100.0,
+ "sg.ShadowQuality": 3.0,
+ "sg.GlobalIlluminationQuality": 3.0,
+ "sg.ReflectionQuality": 3.0,
+ "sg.PostProcessQuality": 3.0,
+ "sg.EffectsQuality": 3.0
+}

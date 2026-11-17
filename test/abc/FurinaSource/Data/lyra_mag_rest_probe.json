@@ -1,0 +1,123 @@
+{
+ "bones": [
+  "SKEL_AssaultRifle",
+  "Grip",
+  "Trigger",
+  "Bolt",
+  "Magazine"
+ ],
+ "sockets": [
+  "SKEL_AssaultRifle",
+  "Grip",
+  "Trigger",
+  "Bolt",
+  "Magazine"
+ ],
+ "bone_SKEL_AssaultRifle": {
+  "rot": [
+   -0.0,
+   -0.0,
+   -0.0
+  ],
+  "loc": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "scale": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ "bone_Grip": {
+  "rot": [
+   -0.0,
+   0.0,
+   -0.0
+  ],
+  "loc": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "scale": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ "bone_Trigger": {
+  "rot": [
+   -0.0,
+   0.0,
+   0.0
+  ],
+  "loc": [
+   -0.0,
+   0.73,
+   -1.17
+  ],
+  "scale": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ "bone_Bolt": {
+  "rot": [
+   -0.0,
+   0.0,
+   0.0
+  ],
+  "loc": [
+   0.0,
+   6.91,
+   3.3
+  ],
+  "scale": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ "bone_Magazine": {
+  "rot": [
+   -0.0,
+   0.0,
+   0.0
+  ],
+  "loc": [
+   0.0,
+   8.14,
+   -7.82
+  ],
+  "scale": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ "mag_rel": {
+  "rot": [
+   -0.0,
+   0.0,
+   0.0
+  ],
+  "loc": [
+   0.0,
+   0.0,
+   0.0
+  ]
+ },
+ "mag_attach": [
+  "FurinaRifle",
+  "None"
+ ],
+ "rifle_attach": [
+  "FurinaMesh",
+  "Right-wrist"
+ ],
+ "rifle_anim_instance": "AnimSingleNodeInstance",
+ "anim_mode": "<AnimationMode.ANIMATION_SINGLE_NODE: 1>"
+}

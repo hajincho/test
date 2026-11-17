@@ -173,7 +173,7 @@ try:
     # the same amount (ankle target + drop, then the pelvis drop lowers everything): feet stay on the animated ground level, knees bend.
     CROUCH_DROP = P.get('crouch_drop_cm', 38.0)
     add('RigUnit_GetCurveValue', 'CrouchC', LX + 1750, LY + 1900, Curve='Crouch')
-    add('RigUnit_AccumulateFloatLerp', 'CrouchW', LX + 2000, LY + 1900, Blend='9', bIntegrateDeltaTime='True')
+    add('RigUnit_AccumulateFloatLerp', 'CrouchW', LX + 2000, LY + 1900, Blend=str(P.get('crouch_blend', 3)), bIntegrateDeltaTime='True')
     link('CrouchC.Value', 'CrouchW.TargetValue')
     add('RigUnit_MathFloatMul', 'CDrop', LX + 2250, LY + 1900, B=str(CROUCH_DROP))
     link('CrouchW.Result', 'CDrop.A')
@@ -300,7 +300,7 @@ try:
         ADS_BLEND = PO.get('ads_blend', 5.25)       # ADS pose blend rate per second: 14 -> 21 (1.5x) -> 42 (2x of that) -> 10.5 (1/4 of that) -> 5.25 (1/2 of that = 0.375x the original, 2026-11-15); the shoulder blend stays 14
         for cv, node in (('AimShoulder', 'ShW'), ('AimADS', 'AdsW')):
             add('RigUnit_GetCurveValue', node + 'C', RX2 - 250, RY2 + 900 + len(node) * 40, Curve=cv)
-            add('RigUnit_AccumulateFloatLerp', node, RX2, RY2 + 900 + len(node) * 40, Blend=str(ADS_BLEND if node == 'AdsW' else 14.0), bIntegrateDeltaTime='True')
+            add('RigUnit_AccumulateFloatLerp', node, RX2, RY2 + 900 + len(node) * 40, Blend=str(ADS_BLEND if node == 'AdsW' else PO.get('shoulder_blend', 7.0)), bIntegrateDeltaTime='True')
             link(node + 'C.Value', node + '.TargetValue')
         # offsets relative to the eye (gen_fp_poses.py / set_fp_poses.py: clip-free with a 4 cm near plane, arms reach)
         add('RigUnit_MathVectorLerp', 'OffHS', RX2 + 250, RY2 + 300, A=V(*PO['hip']), B=V(*PO['shoulder']))

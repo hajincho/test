@@ -596,3 +596,115 @@ Control Rig이 들어 올리는 회전은 컴포넌트 +X축 기준 음수 각�
 - **원인 확인 (`lyra_samefame_probe.py`, 글로벌 타임 딜레이션 0.01 슬로모션에서 총알을 매 틱 추적):** 발사 타이머(`FurinaRifleShot`)는 `bMaxOncePerFrame=false`라서 프레임이 느리면(이 PC의 Lyra PIE는 15~30 fps) 한 프레임 안에서 여러 번 실행됩니다. 그러면 같은 총구 위치에 총알이 동시에 여러 발 생깁니다. 총알의 오브젝트 타입이 `WorldDynamic`이고 `WorldDynamic`을 Block 하므로 총알끼리 서로 막아서 첫 틱에 사라졌습니다. 프레임당 1발 4그룹은 4발 모두 약 2800 cm를 날아갔고, 프레임당 3발 그룹은 3발 중 0발·1발만 관측(나머지는 생성 즉시 소멸)되거나 약 1100 cm에서 멈췄습니다. 20발 연사에서 몇 발이 총구에서 막히던 증상과 맞습니다.
 - **수정(`lyra_bullet_objtype.py`):** `BP_FurinaBullet`의 `Bullet` 구 오브젝트 타입을 `WorldDynamic` → `PhysicsBody`로 바꿨습니다. 총알은 `PhysicsBody` 응답이 이미 Ignore라서 총알끼리(그리고 탄피/버린 탄창과) 충돌하지 않고 벽/액터/폰은 그대로 맞춥니다(응답 Block 유지). 수정 뒤 같은 시험에서 프레임당 3발 그룹 4개 모두 3발이 약 2800 cm를 날아갔습니다(프레임당 1발과 같음). 위 `lyra_fix_shots.py`의 (Visibility/Camera 무시, 총구 가드)와 함께 적용됩니다.
 - **견착 카메라 높이(`lyra_shoulder_cam_lower.py`):** 노드 `K2Node_FPT_TgtZ`(`CameraBoom.TargetOffset.Z` 선택, 견착 3인칭일 때 값) 30 → 20 cm로 10 cm 낮췄습니다. 더 낮추거나 되돌리려면 이 노드 A 값을 바꾸면 됩니다.
+
+## 2026-11-17 푸리나를 Lyra 영웅으로 (체력·팀·어빌리티), Lyra 무기 제거, 봇 활성화
+
+목표: 기존 Lyra 총 대신 나만의 총을 쓰고, 맵을 넓혀 AI 봇과 게임한다. 봇은 지금은 기본 Lyra 마네킹이고, 적 3D 디자인은 나중에 임포트한다. 애니메이션은 되도록 프로젝트에 있는 것을 재사용한다.
+
+- **푸리나 폰을 `LyraCharacter` 자식으로 (`lyra_furina_reparent.py`):** 원본을 `/Game/Furina/Backups/ThirdPersonCharacter_BP_PreLyraHero`로 백업한 뒤 부모를 `LyraCharacter`로 바꿨습니다. Lyra의 `CameraComponent`는 `auto_activate`를 꺼서 푸리나의 카메라 붐을 그대로 씁니다. 컴파일은 경고만 있습니다.
+- **`LyraHeroComponent` 추가 (`lyra_furina_add_hero.py`):** `ULyraPawnExtensionComponent::InitializeAbilitySystem`은 `LyraHeroComponent`만 호출합니다(LyraHeroComponent.cpp:164). 없으면 폰이 ASC에 연결되지 않아 체력이 0/0이었습니다. 추가 후 PIE에서 체력 100/100, `DamageSelfDestruct` → 사망 → 새 푸리나 폰으로 리스폰(100/100)을 확인했습니다(`lyra_hero_probe.py`, `Data/lyra_hero_probe.json`). 팀 ID는 파이썬으로 노출되지 않아 확인하지 못했습니다.
+- **어빌리티 세트 (`lyra_furina_hero_setup.py`):** `AbilitySet_ShooterHero`를 `/Game/Furina/Lyra/AbilitySet_Furina`로 복제하고 무기 계열(`GA_QuickbarSlots/ADS/Grenade/DropWeapon/Melee`)을 뺐습니다. 11개 중 6개(Jump, Death, Dash, Emote, SpawnEffect, Reset)가 남았습니다. `HeroData_Furina`는 이 세트를 씁니다.
+- **경험(Experience):** `B_Furina_Experience`에서 `LAS_ShooterGame_StandardComponents/StandardHUD/SharedInput` 액션 세트를 뺐습니다(무기 HUD·퀵바·공용 입력). GameFeatureAction 내부 구조체는 파이썬으로 읽을 수 없어 항목별 편집 대신 세트째 뺐습니다.
+- **게임 모드:** `B_LyraGameMode`가 `GetDefaultPawnClassForController`를 덮어써서 사람 플레이어는 푸리나 폰, 나머지(봇)는 PawnData의 Lyra 마네킹을 받습니다.
+- **맵 (`lyra_map_bots_setup.py`):** `L_FiringRange_WP`의 무기 스포너/인벤토리 패드 액터 4개를 지웠습니다. PIE 봇 수 0 오버라이드는 해제해서 봇이 3명 나옵니다. 봇은 무기가 없어서 쏘지 못합니다(행동 트리가 무기 어빌리티를 씁니다). 내 총을 만든 뒤 연결해야 합니다.
+- **Lyra 무기 콘텐츠는 삭제하지 않았습니다.** 게임플레이에서만 빠졌고 파일은 그대로입니다. 내 총이 대체한 뒤 참조를 확인하고 지웁니다.
+- **히어로 추가 뒤 사격이 안 되던 문제 (`lyra_input_probe.py`, `lyra_call_shot.py`, `lyra_lmb_scan.py`, `lyra_ia_dump.py`):** 이동·시점·`V`는 되는데 좌클릭 사격만 안 나갔습니다(잔탄 20 고정). 컨트롤러는 좌클릭을 받고 있었고(`is_input_key_down`), 이벤트를 직접 호출하면(`call_method('FurinaRifleShot')`) 20 → 19로 줄어서 사격 로직은 정상이었습니다. `LyraGame/Character/LyraHeroComponent.cpp:244`의 `ClearAllMappings()`가 푸리나 BP가 `BeginPlay`에서 넣은 매핑을 지우고 `DefaultInputMappings`만 다시 넣습니다. 그리고 `/Game/Input/Mappings/IMC_Default`가 좌클릭을 `IA_Weapon_Fire`(consume_input=True)로 가로채고 있었습니다.
+  - `lyra_furina_hero_imc.py`: 푸리나 폰의 히어로 컴포넌트 `DefaultInputMappings`에 `Default_IMC`(우선순위 0)와 `IMC_FurinaStance`(100)를 등록했습니다.
+  - `lyra_fix_lmb_consume.py`: `Direction_IA`(좌클릭, 레일 방향)의 `consume_input`을 껐습니다.
+  - `lyra_fix_imc_consume.py`: `IA_Weapon_Fire`, `IA_Weapon_Fire_Auto`, `IA_Weapon_Reload`의 `consume_input`을 껐습니다(무기는 이미 빠졌습니다). 이동·점프·앉기·대시·시점은 처음에 같이 껐다가 푸리나 BP와 이중 처리될 수 있어 다시 켰습니다(기본값 True).
+  - 결과: PIE에서 좌클릭 연사로 20 → 0, `R`로 재장전해서 20발이 채워졌습니다. 어느 수정이 결정적이었는지는 하나씩 떼어 검증하지 않았습니다(셋 다 적용된 상태에서만 확인).
+- **테스트 팁:** 이 PC의 PIE는 프레임이 낮아서 `key` 탭(눌렀다 바로 뗌)은 한 프레임 안에 끝나 입력이 안 잡힙니다. `hold_key`로 0.4초 이상 누르면 잡힙니다.
+- **PIE 로그 소음:** 사망/리스폰 순간 `BP_FurinaHUD`의 `Branch`(GetOwningPawn None)와 `Homing_Attack_Component_BP`(`Reticle_Widget_WBP` 캐스트 None) 런타임 오류가 남습니다. 리스폰 중 폰이 없는 짧은 시간의 접근이고, 이번에 고치지 않았습니다.
+- **다음 일:** (1) 내 총을 데이터 에셋으로(피해량·연사·탄창·반동, M4 첫 번째), (2) 봇이 그 총을 쏘게 연결, (3) 맵 확장(월드 파티션), (4) 사망/피격 모션은 기존 애니메이션 재사용, (5) 다른 UE 프로젝트로 내보내는 구성(`Scripts/Tools/build_export_manifest.py`는 작성만 했고 실행하지 않았습니다), (6) GitHub 푸시.
+
+## 2026-11-17 견착·정조준·2번 무기(권총) 복구 + 봇 모션 복구
+
+- **증상:** Lyra 영웅으로 바꾼 뒤 우클릭 정조준/견착과 2번 무기(P220 권총)가 안 됐습니다.
+- **원인 (`lyra_rmb_scan.py`):** `/ShooterCore/Input/Mappings/IMC_ShooterGame`이 활성이고, 거기의 `IA_ADS`(우클릭), `IA_QuickSlot1/2`(1·2번)가 `consume_input=True`라서 같은 키에 묶인 푸리나의 `IA_FurinaADS/Shoulder/Weapon1/Weapon2`를 가로챘습니다. 사격이 안 되던 것(`IMC_Default`의 `IA_Weapon_Fire`)과 같은 종류입니다.
+- **수정 (`lyra_fix_shootergame_consume.py`):** `IMC_ShooterGame`의 액션 10개(`IA_ShowScoreboard, IA_ADS, IA_Grenade, IA_Emote, IA_QuickSlot1/2/3, IA_Melee, IA_QuickSlot_CycleBackward/Forward`)의 `consume_input`을 껐습니다. `IA_Melee`(C), `IA_Emote`(B), `IA_Grenade`(Q)도 푸리나의 앉기·발사모드·레일 전환 키와 겹쳐 있었습니다. Lyra 무기는 게임플레이에서 이미 빠졌습니다.
+- **확인:** PIE에서 `2`를 0.4초 눌러 P220 8/96 SEMI가 나오는 것과, 우클릭 탭으로 1인칭 정조준이 켜지는 것을 봤습니다. **견착(우클릭 길게)은 도구에 길게 누르기가 없어 직접 확인하지 못했습니다**(같은 입력 경로입니다).
+- **봇 모션 (`lyra_bot_anim.py`, `lyra_bots_unarmed_layers.py`):** 봇은 `ABP_Mannequin_Base`로 이동(속도 184~600)은 하지만 A포즈로 미끄러졌습니다. Lyra 마네킹의 이동·대기 모션은 무기 인스턴스(`B_WeaponInstance_Base`)가 장착 때 거는 애님 레이어에서 오는데, 무기를 뺐더니 레이어가 없었습니다. `B_Hero_ShooterMannequin`(ShooterCore 플러그인)의 `BeginPlay`에 `Mesh → LinkAnimClassLayers(ABP_UnarmedAnimLayers)`를 추가해 기존 Lyra Unarmed 애니메이션을 재사용합니다(새 애니메이션 없음). PIE에서 봇이 달리기 모션으로 움직이는 것을 확인했습니다. 총을 든 자세(조준·사격 모션)는 내 총을 연결할 때 정합니다.
+
+## 2026-11-17 Shift를 원래 달리기로 복구
+
+- **원인:** `AbilitySet_Furina`에 Lyra 대시(`GA_Hero_Dash`)가 남아 있었고, `IA_Ability_Dash`(LeftShift, `consume_input=True`)가 Shift를 가로채 푸리나의 `IA_FurinaSprint`가 막혔습니다.
+- **수정 (`lyra_sprint_restore.py`):** `AbilitySet_Furina`에서 대시 어빌리티를 뺐습니다(6개 → 5개: Jump, Death, Emote, SpawnEffect, Reset). `IA_Ability_Dash`의 `consume_input`도 껐습니다.
+- **확인 (`lyra_input_probe.py`):** W만 누르면 속도 120, Shift+W는 138 → 346 → 362 → 600으로 올라갑니다(이 PC의 PIE 속도 단위 기준 5배).
+
+## 2026-11-17 앉기 이동속도 복구 (액터 틱이 꺼져 있던 문제)
+
+- **증상:** 앉아서 걷는 속도가 원래와 달랐습니다. PIE에서 재 보니 앉아서 걸으면 300cm/s였고(`MaxWalkSpeedCrouched`가 CMC 기본값 300 그대로), README의 설계값은 앉기 걷기 90 / Shift 360입니다.
+- **원인 (`lyra_tick_api.py`, `lyra_fix_tick.py`):** 푸리나 폰의 틱 설정이 `bCanEverTick=True`, `bStartWithTickEnabled=False`였습니다. `ALyraCharacter` 생성자가 틱을 끄고 시작하기 때문에 `LyraCharacter`로 부모를 바꾼 뒤 BP의 `Event Tick`이 돌지 않았습니다. 앉기/조준/견착 속도 제한(`K2Node_FPT_CapSpeed`, `CapSpeedC`로 `MaxWalkSpeed`·`MaxWalkSpeedCrouched`를 설정)과 그 밖의 틱 로직이 전부 멈춰 있었습니다.
+- **수정:** `primary_actor_tick`의 `bStartWithTickEnabled`를 True로 켜고 컴파일·저장했습니다.
+- **확인 (`lyra_input_probe.py`):** 앉으면 `MaxWalkSpeed`/`MaxWalkSpeedCrouched`가 둘 다 90으로 잡히고 앉아서 걷는 속도가 300 → 약 70~90(이 PC의 낮은 프레임 때문에 흔들림)으로 내려왔습니다.
+- **남은 것:** Shift를 누른 채 앉아 걸어도 90입니다(설계는 360). 속도 로직이 `Sprint?` 판정에 `IsInputKeyDown`을 쓰는데 그 노드의 `Key` 핀 기본값이 `(`로 깨져 있습니다. Lyra 이전 백업 BP에도 똑같이 깨져 있어서(`lyra_sprint_key_pin.py`) 이번 이동 때문에 생긴 것이 아니라 이전부터 있던 문제로 보입니다. 아직 고치지 않았습니다.
+- **비슷한 증상 후보:** 같은 틱 로직을 쓰는 서서 조준/견착 속도 제한(60/120)과 견착 카메라 높이도 틱이 꺼져 있는 동안 멈춰 있었을 수 있습니다. 이번 수정으로 같이 돌아오지만 따로 측정하지는 않았습니다.
+
+## 2026-11-18 견착 진입 2배 느리게, 앉기 3배 느리게
+
+"2배/3배 늘려"를 **전환이 걸리는 시간을 늘린다(느리게)**는 뜻으로 확인했습니다. 처음에는 빠르게로 잘못 해석해 한 번 올렸다가(14→28 등) 바로잡았고, 아래는 **원래 값 기준**의 최종 값입니다. 자세로 들어가는 전환 속도만 바꿨고 앉아서 걷는 이동 속도(90)와 견착 중 이동 속도(60/120)는 그대로입니다. (`lyra_shoulder_crouch_speed.py`, 결과 `Data/lyra_shoulder_crouch_speed.json`)
+
+| 대상 | 위치 | 원래 → 지금 |
+|---|---|---|
+| 견착 자세(소총 허리 → 견착) | `CR_FurinaSecondary` `ShW.Blend` | 14 → 7 (1/2) |
+| 3인칭 견착 카메라 옆 오프셋 | 폰 `K2Node_FPT_NewOff` `InterpSpeed` | 10 → 5 (1/2) |
+| 3인칭 견착 카메라 FOV | 폰 `K2Node_FPT_NewFov` `InterpSpeed` | 10 → 5 (1/2) |
+| 앉기 자세(골반·발 IK) | `CR_FurinaSecondary` `CrouchW.Blend` | 9 → 3 (1/3) |
+| 앉기 이동 블렌드(서기↔앉기) | `ABP_Furina` `TFPCrouchSmooth` `InterpSpeed` | 10 → 3.3333 (1/3) |
+
+- 5곳 모두 컴파일·저장 확인했습니다. `ue_build_cr.py` 기본값도 `poses.shoulder_blend`=7, `cr_params.crouch_blend`=3으로 맞췄습니다.
+- PIE에서 실제 전환 시간은 재지 않았습니다. 견착(우클릭 길게)은 도구로 길게 누르기를 못 해서 PIE에서 확인하지 못했습니다.
+- 캡슐 높이(96 → 58)는 엔진이 즉시 바꾸므로 그대로입니다. 3인칭 카메라 FOV 보간 노드는 견착 말고 다른 상태에서도 같이 쓰일 수 있어 함께 느려질 수 있습니다.
+
+## 2026-11-18 최적화 (렌더 설정) — 설정은 바꿨지만 최종 효과는 아직 재지 않았습니다
+
+- **병목 확인 (`lyra_perf_csv.py`, `Scripts/Tools/csv_perf_summary.py`):** PIE에서 20초 CSV 프로파일을 잰 결과 평균 프레임 86ms(약 11.6fps), 이 중 GPU 80ms, 게임 스레드 12ms였습니다. 게임 스레드는 GPU를 기다리는 시간이 대부분이고 `TickActors` 0.7ms, `Animation` 0.8ms라서 **블루프린트/애니메이션이 아니라 GPU 렌더링이 병목**입니다. 그래픽카드는 RTX 2060이고 프로젝트 설정은 `sg.*` 전부 Epic, Lumen GI + **하드웨어 레이트레이싱** + **가상 섀도맵**(VSM)이었습니다.
+- **설정 비교 (`lyra_perf_ab.py`, 실시간 dt, 런타임 cvar 전환):** 측정이 많이 흔들렸습니다(봇이 움직이고 cvar를 바꿀 때마다 셰이더/BVH 재생성 히치가 생기며, 같은 기본값이 13~38fps로 나왔습니다). 그래서 항목별 효과를 정확한 배수로 말할 수는 없습니다. 눈에 띈 것: HWRT 끄기 + VSM 끄기 + 화면 75%를 합친 구간이 마지막 기본값 구간(25fps)보다 크게 빨랐습니다(59fps).
+- **적용 (`Config/DefaultEngine.ini`):** `r.Lumen.HardwareRayTracing=False`, `r.RayTracing=False`, `r.Shadow.Virtual.Enable=0`. 화면 비율(75%)과 `sg.*` 품질은 화질 영향이 커서 바꾸지 않았습니다. **`r.RayTracing`은 에디터 재시작이 있어야 적용되므로 저장 후의 fps는 아직 재지 못했습니다.**
+- **화질 변화:** HWRT 끄면 Lumen이 소프트웨어 트레이싱으로, VSM 끄면 일반 섀도맵으로 바뀌어 그림자/반사가 조금 달라집니다. 되돌리려면 위 세 줄을 `True/True/1`로 바꾸면 됩니다.
+- **하지 않은 것:** 로그의 `BP_FurinaHUD` / `Homing_Attack_Component_BP` / `ABP_Furina`의 None 접근 오류 스팸(PIE 한 번에 수천 줄)은 CPU 병목이 아니어서 고치지 않았습니다. 텍스처 풀이 6GB 카드에서 "비디오 메모리 초과(약 400MB)"를 내던 것은 레이트레이싱을 끄면 줄어들 것으로 예상하지만 확인하지 않았습니다.
+
+## 2026-11-18 3인칭 소총 개머리판이 몸을 뚫는 문제 — 해결하지 못했습니다
+
+- **측정 (`lyra_stock_probe.py`):** 3인칭 서 있을 때 개머리판 끝이 폰 로컬 (7, 7.5, 37)이고 가슴 뼈대(`spine_05`)가 (4~5, 0.5, 40.6)이라, 개머리판은 가슴 중심에서 앞으로 약 2cm, 오른쪽으로 7cm 지점에 있습니다(몸 안쪽). 몸 충돌체(피직스 에셋)가 없어서 몸 표면까지의 거리는 잴 수 없었고 위치만 비교했습니다.
+- **총을 앞으로 옮기는 방법은 막힙니다 (`Scripts/Tools/tp_stock_shift.py`, `lyra_tp_stock_apply.py`):** 3인칭 총 오프셋(`TpD`)과 왼손 뒤로 빼는 양(`LBack`)을 앞으로 +4cm, +10cm로 바꿔도 개머리판은 +1.6cm에서 멈췄고 양팔 길이(어깨→손 53cm)는 변하지 않았습니다. 팔이 이미 거의 다 펴져서 소총이 더 앞으로 못 나갑니다. 정확히는 팔 도달 거리에서 막힌다고 보지만 CR 안의 어느 노드가 막는지는 확인하지 못했습니다.
+- **총을 돌리는 방법도 실패했습니다 (`lyra_tp_cant.py`):** 총구를 몸 안쪽으로 10° 돌려 개머리판을 바깥으로 빼려고 CR에 회전 노드(`TpCantAng`, `TpCantQ`, `GRotC`)를 넣었지만, 손만 1~2cm 움직이고 개머리판 위치는 그대로였습니다(총 메시는 `GRotR`이 아닌 다른 경로의 회전을 쓰는 것으로 보입니다).
+- **원상 복구했습니다:** `TpD`/`LBack`은 원래 값(-0.85/6.07/-14.51, -4.35/6.07/-12.01, 9.6)으로 되돌렸고 `fp_rig.json`도 원래대로입니다. 회전 노드는 각도 0(항등)으로 남아 있어 동작에는 영향이 없습니다(필요 없으면 `CR_FurinaSecondary`에서 삭제하면 됩니다).
+- **남은 방법:** (1) 개머리판 모델을 Blender에서 몇 cm 줄이기(눈에 띄는 변화가 적고 팔 포즈를 안 건드림), (2) 팔이 닿는 거리를 늘리는 CR 변경(팔 늘어남/어깨 위치), (3) 개머리판을 어깨 앞쪽에 대는 대신 허리 옆에 낮게 드는 자세로 변경.
+
+## 2026-11-18 1인칭 낙하 중 3인칭 전환 수정 + GPU 부하 재측정
+
+- **낙하 중 3인칭 전환 (`lyra_fall_view_trace.py`, `lyra_fix_fall_view.py`, `lyra_fall_probe.py`):** 푸리나 폰의 시점 타이머(`K2Node_FPV_Upd`, 0.05초)가 `Forced = (레일 | 집라인 | 레일 점프) OR AirFast`로 3인칭을 강제하고 있었습니다. `AirFast = 공중 AND (속도 + (3인칭이면 +10000) > 1200)`이라 낙하 속도(3D 속도)가 1200cm/s를 넘으면 3인칭이 되고, 3인칭이 되면 +10000 보정 때문에 착지할 때까지 유지됐습니다. `K2Node_FPV_Forced.B`에서 `AirFast` 연결을 끊고 false로 뒀습니다(레일/집라인/레일 점프 강제 3인칭은 그대로). PIE에서 8000cm 위에서 떨어뜨리면 속도 3500cm/s까지 `FPCamera`가 계속 활성(1인칭 유지)이었습니다. 수정 전 상태를 같은 방법으로 재현해 보지는 않았고, 사용자가 실제로 고쳐졌다고 확인했습니다.
+- **에디터 재시작 후 GPU 측정 (`lyra_perf_gpu.py`, CSV 프로파일, 단계마다 워밍업 25초 후 12초):** `DefaultEngine.ini` 변경(하드웨어 RT/RT/VSM 끔)이 적용된 상태에서 평균 44.6fps(GPU 중앙값 19.8ms)였습니다. 변경 전 11.6fps(GPU 80ms)와 비교하면 크게 빨라졌지만, 변경 전 측정은 셰이더 컴파일 구간이 섞여 있어 정확한 배수는 아닙니다. 누적 단계: `sg.*Quality 2`(그림자/GI/반사/후처리/이펙트) 65fps(GPU 12.7ms), 여기에 화면 80% 60fps, 70% 75.6fps. **아직 프로젝트 설정에 반영하지 않았습니다**(런타임 cvar로만 측정). 게임 스레드는 모든 단계에서 중앙값 10ms 안팎이라 65fps 이상에서는 CPU 쪽(봇 3명, 애니메이션 등)이 다음 병목입니다.
+
+## 2026-11-18 봇 비용 측정, 소총 색, 3인칭 재장전 손-탄창 정렬 (진행 중)
+
+- **봇 비용 (`lyra_bot_cost.py`):** 봇 3명이 있을 때 67.9fps, 없앴을 때 67.1fps로 차이가 없었습니다. 다만 이 비교는 유효하지 않습니다. 봇을 지워도 AI 스포너가 다시 만들어서 삭제 후에도 3명이었고, 측정 순간 봇 속도가 0(가만히 서 있음)이었습니다. 게임 스레드 항목은 `UI` 3.2ms, `Animation` 1.0ms, `TickActors` 0.5ms였습니다. 봇이 지금 움직이지 않는 이유(무기를 뺀 뒤 행동 트리가 무기 어빌리티를 못 써서 멈춘 것으로 추정)는 확인하지 못했습니다.
+- **소총 회색 (`lyra_m4_material_check.json`, `FBX/M4/ColtTex`):** 텍스처가 빠진 것은 아닙니다. `SK_M4A1`(본체·가구·뒤가늠자)과 `SM_M4Mag`의 머티리얼 4개 모두 BaseColor/Normal/Metallic/Roughness/AO 다섯 장이 연결돼 있습니다. 회색으로 보이는 이유는 원본 텍스처 값입니다: BaseColor 평균이 본체 59, 가구(핸드가드·개머리판) 52, 가늠자 50, 탄창 67(0~255, 어두운 회색)이고 Metallic 평균이 본체 219, 가늠자 224, 탄창 196, 가구 118이라 낮 햇빛 아래에서 은회색 금속처럼 반사됩니다. 실제 M4의 개머리판/핸드가드는 검은 폴리머라 Metallic이 0에 가까워야 합니다. 아직 바꾸지 않았습니다.
+- **재장전 손-탄창 측정 (`lyra_reload_view.py`, `lyra_reload_mag_probe.py`):** 3인칭 옆모습 캡처(폰을 90°/-90° 돌려 카메라가 옆을 보게 함, 슬로모 0.15, `HighResShot 3`)와 총 기준 좌표 측정으로 확인했습니다. 손바닥 중심은 왼손목과 `MiddleFinger1_L`의 중간으로 잡았고, 원래 상태에서 탄창을 잡는 순간 손바닥이 탄창 중심에서 총 기준 왼쪽 약 8.4cm, 뒤쪽 약 9cm 떨어진 곳이었습니다. 뒤쪽 9cm는 3인칭에서 왼팔 도달을 위해 손목을 9.6cm 뒤로 당겨 놓은 값(`LBack`)이 재장전 곡선(`ReloadLX/Y/Z`)에 그대로 더해지기 때문이고, 왼쪽 쏠림은 곡선이 Honey Badger 팩 탄창 위치 기준이라서입니다.
+  - `CR_FurinaSecondary`에 재장전 보정 노드(`RlEnvRaw`, `RlEnv`, `RlEnvTp`, `RlDelta`, `RLV2`)를 넣었습니다. 가중치는 `clamp(ReloadLX/6, 0, 1) × TpW`(손이 탄창으로 가며 0 → 1, 쥐는 동안 1, 핸드가드로 돌아가면 0, 1인칭 영향 없음)이고 보정 벡터는 `RlDelta.Value`입니다.
+  - **현재 저장된 값 (-4.8, -2.0, +2.1)은 중간 값입니다.** 재측정하니 좌우(X)는 3.6cm 차이로 맞았지만, Y(앞뒤)는 손바닥이 탄창 중심보다 9.2cm 뒤입니다. 보정값 Y를 +7.2로 바꿔야 맞습니다(`lyra_reload_palm_fix.py keep -4.8 7.2 2.1`). 에디터에서 PIE가 돌고 있어 저장이 안 돼 아직 적용하지 못했습니다.
+  - 앞서 넣은 `LBackW`/`NotReloadL`(재장전 중 `LBack` 페이드)은 쥘 때와 끼울 때 값이 달라 끼우는 순간 탄창이 9cm 튀어서 끄고(`NotReloadL.TargetMaximum=1`) 노드만 남겼습니다. 탄창은 잡는 순간의 손목 기준 오프셋으로 손에 붙기 때문에, 보정은 쥐는 동안 일정해야 장착 위치와 맞습니다.
+- **아직 하지 않은 것:** (1) 소총에 꽂힌 탄창의 아귀(삽입구) 정렬: 탄창 메시는 원점이 총과 같아 장착 위치가 원래 항등이라 눈에 띄는 어긋남을 측정으로 확인하지 못했습니다. 정렬이 틀리다면 어느 방향으로 어긋나 보이는지 알려 주세요. (2) 개머리판: 왼쪽 어깨를 살짝 빼고 오른쪽을 넣는 상체 비틀기(스파인 yaw)는 CR에서 시작하지 못했습니다.
+
+## 2026-11-18 인게임 소총이 뭉개져 보이는 이유
+
+- **가장 큰 원인은 제가 남겨 둔 측정용 설정이었습니다.** `lyra_perf_gpu.py`가 마지막 단계에서 `r.ScreenPercentage 70`과 `sg.ShadowQuality/GlobalIlluminationQuality/ReflectionQuality/PostProcessQuality/EffectsQuality 2`를 런타임으로 걸었고, 되돌리지 않았습니다. 콘솔 변수는 PIE를 멈춰도 에디터가 켜져 있는 동안 유지되므로 사용자가 플레이하는 내내 70% 해상도로 그린 뒤 늘려서 흐릿했습니다(`lyra_cvar_now.py`로 확인). `lyra_cvar_reset.py`로 100%/sg 3으로 되돌렸고, `lyra_perf_gpu.py`는 끝날 때 자동으로 되돌리게 고쳤습니다. 에디터를 다시 켜도 초기화됩니다.
+- **텍스처 설정은 문제가 아닙니다 (`lyra_m4_tex_check.py`):** 20장 중 19장이 4096×4096(뒤가늠자 5장은 원본이 2048), `never_stream=True`(스트리밍으로 해상도가 떨어지지 않음), 압축/sRGB 정상입니다.
+- **다만 한 장은 원본부터 저해상도입니다:** 본체(리시버·총열) BaseColor `T_Colt_Main_BaseColor`가 1254×1254입니다. 다운로드한 `Downloads/colt-m4a1-carbine/textures/colt_m4_main_BaseColor_gfl.png`가 처음부터 1254×1254(Normal/Metallic/Roughness/AO는 4096)이고 UE에는 그대로 들어갔습니다. 앞서 올린 참고 사진은 이보다 높은 해상도의 베이스컬러로 렌더한 것으로 보입니다. 이 한 장만 키우려면 원본 제공처에서 4096짜리를 받거나 업스케일(디테일은 늘지 않고 경계만 부드러워짐)해야 합니다.
+- **그 밖의 흐림 요인:** 안티앨리어싱이 TSR(`r.AntiAliasingMethod=4`)이라 움직일 때 약간 부드럽게 보이고, 화면 비율이 100%여도 3인칭/1인칭 모두 `r.MotionBlur`가 켜져 있습니다(`r.DefaultFeature.MotionBlur=1`). 바꾸지 않았습니다.
+
+## 2026-11-18 재장전 손 정렬 마무리, 탄창 기울기 점검, 3인칭 상체 비틀기, 소총 선명도
+
+- **재장전 손-탄창 정렬(`lyra_reload_palm_fix.py`, 최종 보정 (-4.8, +7.2, +2.1)):** 3인칭 재장전 중 왼손 손바닥(손목과 `MiddleFinger1_L`의 중간)을 탄창 쪽으로 옮겼습니다. 측정(`lyra_reload_mag_probe.py`, 슬로모 0.15): 잡는 순간 탄창 중심 − 손바닥 = 총 기준 (-3.6, 0.0, +0.5)cm, 쥐는 동안 (-4.4, +0.2, +2.3)cm로 일정했습니다(원래는 앞뒤로 약 9cm, 좌우로 약 8cm 어긋나 있었음). 가중치는 `clamp(ReloadLX/6,0,1) × TpW`라서 1인칭은 그대로입니다. 쥐는 동안 오프셋이 일정해서 끼울 때 탄창이 튀지 않습니다.
+- **탄창이 기울어 꽂혔다는 신고(`lyra_mag_rest_probe.py`, `lyra_reload_mag_probe.py`, `mag_fit.json`):** 변환 값으로는 기울기를 찾지 못했습니다. 소총 컴포넌트 대비 탄창 회전이 서 있는 자세와 재장전 전 구간에서 (0,0,0)이고, 몸통 메시가 스키닝된 `Grip` 뼈대도 항등입니다(뼈대 `Magazine`이 있지만 메시는 `Grip` 100%). 모델 자체(Blender로 FBX 확인)도 탄창이 수직이고 삽입구 안에 7~8cm 들어가 아래로 약 4cm만 나옵니다. 3인칭 서 있을 때 총이 대각선(휴식 자세)이라 탄창이 비스듬해 보였을 가능성이 큽니다. 육안으로 확정하지는 못했습니다.
+- **3인칭 상체 비틀기(`lyra_torso_twist.py`, 14°):** `CR_FurinaSecondary`에서 머리 조준(`HeadAim`) 바로 앞에 `Spine`을 수직축으로 -14°(오른쪽 어깨 앞, 왼쪽 뒤) 돌리는 노드(`TwAng`, `TwQ`, `TwXf`, `TwRot`, `TwSet`)를 넣었습니다. 처음에는 뼈 이름을 Manny식(`spine_03`)으로 써서 아무 효과가 없었고, CR 계층의 이름(`Spine`)으로 고쳐서 동작했습니다. 가중치는 `TpW`(3인칭, 정조준이면 0)입니다. PIE 측정(`lyra_stock_probe.py`): 오른쪽 어깨(`Right-arm`)가 왼쪽(`Left-arm`)보다 앞으로 4.6cm 나와 있고 개머리판 끝이 앞으로 6.6 → 10.9cm(+4.3cm) 이동했습니다. **눈으로는 확인하지 못했습니다.** 자동 캡처에서 3인칭 카메라가 아래에서 올려다보는 각도가 되거나 1인칭으로 시작해서 옆모습을 얻지 못했습니다. 각도는 스크립트의 `DEG`(기본 14)로 바꾸고 다시 실행하면 됩니다(0이면 끔).
+- **소총 선명도(`Config/DefaultEngine.ini` `[SystemSettings]`):** `r.MaxAnisotropy=16`, `r.Streaming.PoolSize=2500`을 추가했습니다(에디터 재시작 후 적용). 텍스처 풀이 기본 1000MB라 RTX 2060 6GB에서 "Video memory exhausted"가 계속 떠서 다른 텍스처가 낮은 밉으로 떨어질 수 있었습니다. 앞서 말씀드린 `T_Colt_Main_BaseColor`(1254×1254)는 원본이 작아서 그대로입니다.
+- **PIE 중 Cmd 창 사용 주의:** PIE에서 마우스가 캡처돼 있을 때 Cmd 창을 클릭하면 시점이 돌아가 캡처/측정이 틀어집니다. Play 전에 `lyra_auto_check.py keep <태그>`로 무장해 두면 폰이 생기고 12초 뒤에 `lyra_stock_probe.py`와 `lyra_idle_view.py`가 입력 없이 실행됩니다.
+
+## 2026-11-18 탄창이 삽입구 옆면 밖으로 튀어나와 회색 판처럼 보이던 문제 수정
+
+- **증상:** 소총 탄창 부근에 회색 판이 비스듬히 튀어나와 보임(3인칭과 1인칭 모두). 이 부분은 재장전 때 뽑는 바로 그 탄창이었습니다. 앞서 저는 권총 부품(`FurinaPistolFrame/Slide`)을 의심했지만 소총 상태에서 둘 다 보이지 않음(`visible=False`)을 `lyra_pistol_vis.py`로 확인했습니다.
+- **원인(`FBX/M4/SM_M4Mag.fbx`와 `SK_M4A1.fbx`를 Blender로 옆/앞에서 렌더한 `Data/mag_side.png`, `mag_front.png`와 높이별 단면 `mag_fit2.json`):** 탄창 x 범위가 [-1.18, 1.84]cm, 삽입구 하우징(리시버 아래 탄창 틀)이 [-1.5, 1.5]cm라서 탄창이 +X(왼쪽)로 약 0.33cm 치우쳐 있었습니다. 그래서 하우징 높이 구간(z -4 ~ 3.4)의 탄창 옆면이 하우징 바깥으로 나와 리시버 측면을 덮었고, 이것이 "삽입구 아래 작게 있어야 하는데 은색 판이 크게 튀어나옴"으로 보였습니다. 탄창과 총 사이의 회전은 처음부터 0°였습니다(`lyra_reload_mag_probe.py`, `lyra_mag_rest_probe.py`).
+- **수정(`lyra_mag_fit_mesh.py`):** `SM_M4Mag` 정점(7024개)을 직접 편집했습니다. 모든 정점 x를 -0.33cm 옮겨 탄창 중심을 총 중심선에 맞추고, 하우징 안쪽 구간(z > -4)은 x 폭을 0.8배로 좁혔습니다(z -4.5 ~ -3.5에서 1 → 0.8로 부드럽게). 하우징 밖으로 나온 아래쪽 모양은 그대로입니다. 결과 x 범위는 [-1.51, 1.34]cm이고 하우징 높이 구간에서는 [-1.0, 1.0] 안쪽입니다. 원본은 `/Game/Furina/Backups/SM_M4Mag_pre_fit`에 복제했지만, 처음 실행 때는 복제본을 디스크에 저장하지 않아 에디터를 닫으면 사라졌습니다(그래서 저장소에는 백업 파일이 없습니다). 원본이 필요하면 `FBX/M4/SM_M4Mag.fbx`를 다시 임포트하면 됩니다. 스크립트는 이제 백업을 디스크에 저장하도록 고쳤지만, 현재 에셋은 이미 편집된 상태이므로 다시 실행하려면 먼저 FBX를 다시 임포트해 원본으로 되돌린 뒤 실행해야 누적되지 않습니다.
+- **확인:** 3인칭 왼쪽 옆 고해상도 캡처에서 리시버 옆에 튀어나온 회색 판이 사라졌습니다. 1인칭은 제 쪽에서 같은 각도로 캡처하지 못해 직접 확인하지 못했습니다. 재장전 중 손-탄창 정렬은 탄창 중심이 0.33cm 이동한 것 외에는 변하지 않습니다.

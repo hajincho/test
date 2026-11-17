@@ -1,0 +1,35 @@
+{
+ "phases": [
+  {
+   "name": "base",
+   "cmds": [],
+   "stopped_at": 1794930132.5102863
+  },
+  {
+   "name": "sg2",
+   "cmds": [
+    "sg.ShadowQuality 2",
+    "sg.GlobalIlluminationQuality 2",
+    "sg.ReflectionQuality 2",
+    "sg.PostProcessQuality 2",
+    "sg.EffectsQuality 2"
+   ],
+   "stopped_at": 1794930171.5472457
+  },
+  {
+   "name": "sp80",
+   "cmds": [
+    "r.ScreenPercentage 80"
+   ],
+   "stopped_at": 1794930210.5860555
+  },
+  {
+   "name": "sp70",
+   "cmds": [
+    "r.ScreenPercentage 70"
+   ],
+   "stopped_at": 1794930249.5997696
+  }
+ ],
+ "done": true
+}

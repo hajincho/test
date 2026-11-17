@@ -1,0 +1,29 @@
+{
+ "/Game/Furina/Input/IA_FurinaFireRifle": "missing",
+ "/Game/3DPlatformerGameBundle/Demo/ThirdPersonAssets/Input/Direction_IA": "missing",
+ "/Game/Furina/Input/IA_FurinaViewToggle": "missing",
+ "lmb_mappings": [
+  {
+   "action": "Direction_IA",
+   "path": "/Game/3DPlatformerGameBundle/Demo/ThirdPersonAssets/Input/Actions/Direction_IA.Direction_IA",
+   "triggers": "[]",
+   "modifiers": "[]",
+   "ia_consume_input": "True",
+   "ia_trigger_when_paused": "False",
+   "ia_value_type": "<InputActionValueType.BOOLEAN: 0>",
+   "ia_triggers": "[]",
+   "ia_modifiers": "[]"
+  },
+  {
+   "action": "IA_FurinaFireRifle",
+   "path": "/Game/Furina/Input/IA_FurinaFireRifle.IA_FurinaFireRifle",
+   "triggers": "[]",
+   "modifiers": "[]",
+   "ia_consume_input": "True",
+   "ia_trigger_when_paused": "False",
+   "ia_value_type": "<InputActionValueType.BOOLEAN: 0>",
+   "ia_triggers": "[]",
+   "ia_modifiers": "[]"
+  }
+ ]
+}

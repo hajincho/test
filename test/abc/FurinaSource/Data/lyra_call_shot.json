@@ -1,0 +1,16 @@
+{
+ "before": 20,
+ "after": 19,
+ "names": [
+  "FurinaFireTimer",
+  "FurinaAuto",
+  "FurinaReloading",
+  "FurinaFPWanted"
+ ],
+ "FurinaReloading": "False",
+ "FurinaFPWanted": "<Object '/ShooterMaps/Maps/UEDPIE_0_L_FiringRange_WP.L_FiringRange_WP:Persistent",
+ "FurinaADS": "<Object '/ShooterMaps/Maps/UEDPIE_0_L_FiringRange_WP.L_FiringRange_WP:Persistent",
+ "FurinaAiming": "n/a",
+ "FurinaProne": "<Object '/ShooterMaps/Maps/UEDPIE_0_L_FiringRange_WP.L_FiringRange_WP:Persistent",
+ "FurinaCrouching": "n/a"
+}

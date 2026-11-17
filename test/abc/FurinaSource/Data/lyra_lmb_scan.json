@@ -1,0 +1,30 @@
+{
+ "imcs": [
+  {
+   "imc": "/Game/3DPlatformerGameBundle/Demo/ThirdPersonAssets/Input/Default_IMC",
+   "lmb": [
+    [
+     "Direction_IA",
+     false
+    ],
+    [
+     "IA_FurinaFireRifle",
+     true
+    ]
+   ]
+  },
+  {
+   "imc": "/Game/Input/Mappings/IMC_Default",
+   "lmb": [
+    [
+     "IA_Weapon_Fire",
+     true
+    ],
+    [
+     "IA_Weapon_Fire_Auto",
+     true
+    ]
+   ]
+  }
+ ]
+}

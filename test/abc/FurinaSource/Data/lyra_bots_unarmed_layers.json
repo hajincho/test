@@ -1,0 +1,18 @@
+{
+ "exists": false,
+ "had_begin_play": true,
+ "gm_how": "member",
+ "inclass_pin_valid": true,
+ "conn": [
+  true,
+  true,
+  true,
+  true
+ ],
+ "old_targets": [
+  "K2Node_CallParentFunction_0"
+ ],
+ "status": "<BlueprintStatus.BS_UP_TO_DATE: 3>",
+ "error_nodes": [],
+ "saved": true
+}

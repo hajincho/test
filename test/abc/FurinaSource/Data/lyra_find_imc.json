@@ -1,0 +1,35 @@
+{
+ "nodes": [
+  {
+   "node": "K2Node_CallFunction_7",
+   "imc": "/Game/3DPlatformerGameBundle/Demo/ThirdPersonAssets/Input/Default_IMC.Default_IMC",
+   "prio": "0",
+   "exec_from": [
+    "K2Node_MacroInstance_0"
+   ]
+  },
+  {
+   "node": "TFP_AddStanceContext",
+   "imc": "/Game/Furina/Input/IMC_FurinaStance.IMC_FurinaStance",
+   "prio": "100",
+   "exec_from": [
+    "K2Node_CallFunction_7"
+   ]
+  }
+ ],
+ "struct": [
+  "assign",
+  "cast",
+  "copy",
+  "export_text",
+  "get_editor_property",
+  "import_text",
+  "set_editor_properties",
+  "set_editor_property",
+  "static_struct",
+  "to_dict",
+  "to_tuple"
+ ],
+ "struct_cls": "<class 'InputMappingContextAndPriority'>",
+ "default_input_mappings": "[]"
+}

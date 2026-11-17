@@ -1,0 +1,7 @@
+{
+ "before": "(TickGroup=TG_PrePhysics,EndTickGroup=TG_PrePhysics,bTickEvenWhenPaused=False,bCanEverTick=True,bStartWithTickEnabled=False,bAllowTickOnDedicatedServer=True,TickInterval=0.000000)",
+ "after": "(TickGroup=TG_PrePhysics,EndTickGroup=TG_PrePhysics,bTickEvenWhenPaused=False,bCanEverTick=True,bStartWithTickEnabled=True,bAllowTickOnDedicatedServer=True,TickInterval=0.000000)",
+ "status": "<BlueprintStatus.BS_UP_TO_DATE_WITH_WARNINGS: 5>",
+ "after_compile": "(TickGroup=TG_PrePhysics,EndTickGroup=TG_PrePhysics,bTickEvenWhenPaused=False,bCanEverTick=True,bStartWithTickEnabled=True,bAllowTickOnDedicatedServer=True,TickInterval=0.000000)",
+ "saved": true
+}
