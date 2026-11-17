@@ -1,0 +1,40 @@
+{
+ "dry": false,
+ "log": [
+  [
+   "camera",
+   [
+    "20.000000",
+    "0.000000"
+   ]
+  ],
+  [
+   "mapping",
+   [
+    [
+     "B",
+     "IA_FurinaFireMode"
+    ]
+   ]
+  ],
+  [
+   "component",
+   true
+  ],
+  [
+   "graph",
+   [
+    "<BlueprintStatus.BS_UP_TO_DATE_WITH_WARNINGS: 5>"
+   ]
+  ],
+  [
+   "hud",
+   "<BlueprintStatus.BS_UP_TO_DATE: 3>"
+  ]
+ ],
+ "B_before": [],
+ "hud_status": "<BlueprintStatus.BS_UP_TO_DATE: 3>",
+ "hud_saved": true,
+ "pawn_status": "<BlueprintStatus.BS_UP_TO_DATE_WITH_WARNINGS: 5>",
+ "pawn_saved": true
+}

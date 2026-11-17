@@ -4539,108 +4539,108 @@
     },
     "AutomationUtils.Automation/1.0.0": {
       "type": "project",
-      "path": "../../../../../../../../Program Files/Epic Games/UE_5.8/Engine/Source/Programs/AutomationTool/AutomationUtils/AutomationUtils.Automation.csproj",
-      "msbuildProject": "../../../../../../../../Program Files/Epic Games/UE_5.8/Engine/Source/Programs/AutomationTool/AutomationUtils/AutomationUtils.Automation.csproj"
+      "path": "C:\\Program Files\\Epic Games\\UE_5.8\\Engine\\Source\\Programs\\AutomationTool\\AutomationUtils\\AutomationUtils.Automation.csproj",
+      "msbuildProject": "C:\\Program Files\\Epic Games\\UE_5.8\\Engine\\Source\\Programs\\AutomationTool\\AutomationUtils\\AutomationUtils.Automation.csproj"
     },
     "CrowdinLocalization.Automation/1.0.0": {
       "type": "project",
-      "path": "../../../../../../../../Program Files/Epic Games/UE_5.8/Engine/Source/Programs/AutomationTool/CrowdinLocalization/CrowdinLocalization.Automation.csproj",
-      "msbuildProject": "../../../../../../../../Program Files/Epic Games/UE_5.8/Engine/Source/Programs/AutomationTool/CrowdinLocalization/CrowdinLocalization.Automation.csproj"
+      "path": "C:\\Program Files\\Epic Games\\UE_5.8\\Engine\\Source\\Programs\\AutomationTool\\CrowdinLocalization\\CrowdinLocalization.Automation.csproj",
+      "msbuildProject": "C:\\Program Files\\Epic Games\\UE_5.8\\Engine\\Source\\Programs\\AutomationTool\\CrowdinLocalization\\CrowdinLocalization.Automation.csproj"
     },
     "EpicGames.Analytics.Telemetry/1.0.0": {
       "type": "project",
-      "path": "../../../../../../../../Program Files/Epic Games/UE_5.8/Engine/Source/Programs/Shared/EpicGames.Analytics.Telemetry/EpicGames.Analytics.Telemetry.csproj",
-      "msbuildProject": "../../../../../../../../Program Files/Epic Games/UE_5.8/Engine/Source/Programs/Shared/EpicGames.Analytics.Telemetry/EpicGames.Analytics.Telemetry.csproj"
+      "path": "C:\\Program Files\\Epic Games\\UE_5.8\\Engine\\Source\\Programs\\Shared\\EpicGames.Analytics.Telemetry\\EpicGames.Analytics.Telemetry.csproj",
+      "msbuildProject": "C:\\Program Files\\Epic Games\\UE_5.8\\Engine\\Source\\Programs\\Shared\\EpicGames.Analytics.Telemetry\\EpicGames.Analytics.Telemetry.csproj"
     },
     "EpicGames.Build/1.0.0": {
       "type": "project",
-      "path": "../../../../../../../../Program Files/Epic Games/UE_5.8/Engine/Source/Programs/Shared/EpicGames.Build/EpicGames.Build.csproj",
-      "msbuildProject": "../../../../../../../../Program Files/Epic Games/UE_5.8/Engine/Source/Programs/Shared/EpicGames.Build/EpicGames.Build.csproj"
+      "path": "C:\\Program Files\\Epic Games\\UE_5.8\\Engine\\Source\\Programs\\Shared\\EpicGames.Build\\EpicGames.Build.csproj",
+      "msbuildProject": "C:\\Program Files\\Epic Games\\UE_5.8\\Engine\\Source\\Programs\\Shared\\EpicGames.Build\\EpicGames.Build.csproj"
     },
     "EpicGames.Core/1.0.0": {
       "type": "project",
-      "path": "../../../../../../../../Program Files/Epic Games/UE_5.8/Engine/Source/Programs/Shared/EpicGames.Core/EpicGames.Core.csproj",
-      "msbuildProject": "../../../../../../../../Program Files/Epic Games/UE_5.8/Engine/Source/Programs/Shared/EpicGames.Core/EpicGames.Core.csproj"
+      "path": "C:\\Program Files\\Epic Games\\UE_5.8\\Engine\\Source\\Programs\\Shared\\EpicGames.Core\\EpicGames.Core.csproj",
+      "msbuildProject": "C:\\Program Files\\Epic Games\\UE_5.8\\Engine\\Source\\Programs\\Shared\\EpicGames.Core\\EpicGames.Core.csproj"
     },
     "EpicGames.Horde/1.0.0": {
       "type": "project",
-      "path": "../../../../../../../../Program Files/Epic Games/UE_5.8/Engine/Source/Programs/Shared/EpicGames.Horde/EpicGames.Horde.csproj",
-      "msbuildProject": "../../../../../../../../Program Files/Epic Games/UE_5.8/Engine/Source/Programs/Shared/EpicGames.Horde/EpicGames.Horde.csproj"
+      "path": "C:\\Program Files\\Epic Games\\UE_5.8\\Engine\\Source\\Programs\\Shared\\EpicGames.Horde\\EpicGames.Horde.csproj",
+      "msbuildProject": "C:\\Program Files\\Epic Games\\UE_5.8\\Engine\\Source\\Programs\\Shared\\EpicGames.Horde\\EpicGames.Horde.csproj"
     },
     "EpicGames.IoHash/1.0.0": {
       "type": "project",
-      "path": "../../../../../../../../Program Files/Epic Games/UE_5.8/Engine/Source/Programs/Shared/EpicGames.IoHash/EpicGames.IoHash.csproj",
-      "msbuildProject": "../../../../../../../../Program Files/Epic Games/UE_5.8/Engine/Source/Programs/Shared/EpicGames.IoHash/EpicGames.IoHash.csproj"
+      "path": "C:\\Program Files\\Epic Games\\UE_5.8\\Engine\\Source\\Programs\\Shared\\EpicGames.IoHash\\EpicGames.IoHash.csproj",
+      "msbuildProject": "C:\\Program Files\\Epic Games\\UE_5.8\\Engine\\Source\\Programs\\Shared\\EpicGames.IoHash\\EpicGames.IoHash.csproj"
     },
     "EpicGames.LogMatchers/1.0.0": {
       "type": "project",
-      "path": "../../../../../../../../Program Files/Epic Games/UE_5.8/Engine/Source/Programs/Shared/EpicGames.LogMatchers/EpicGames.LogMatchers.csproj",
-      "msbuildProject": "../../../../../../../../Program Files/Epic Games/UE_5.8/Engine/Source/Programs/Shared/EpicGames.LogMatchers/EpicGames.LogMatchers.csproj"
+      "path": "C:\\Program Files\\Epic Games\\UE_5.8\\Engine\\Source\\Programs\\Shared\\EpicGames.LogMatchers\\EpicGames.LogMatchers.csproj",
+      "msbuildProject": "C:\\Program Files\\Epic Games\\UE_5.8\\Engine\\Source\\Programs\\Shared\\EpicGames.LogMatchers\\EpicGames.LogMatchers.csproj"
     },
     "EpicGames.MsBuild/1.0.0": {
       "type": "project",
-      "path": "../../../../../../../../Program Files/Epic Games/UE_5.8/Engine/Source/Programs/Shared/EpicGames.MsBuild/EpicGames.MsBuild.csproj",
-      "msbuildProject": "../../../../../../../../Program Files/Epic Games/UE_5.8/Engine/Source/Programs/Shared/EpicGames.MsBuild/EpicGames.MsBuild.csproj"
+      "path": "C:\\Program Files\\Epic Games\\UE_5.8\\Engine\\Source\\Programs\\Shared\\EpicGames.MsBuild\\EpicGames.MsBuild.csproj",
+      "msbuildProject": "C:\\Program Files\\Epic Games\\UE_5.8\\Engine\\Source\\Programs\\Shared\\EpicGames.MsBuild\\EpicGames.MsBuild.csproj"
     },
     "EpicGames.OIDC/1.0.0": {
       "type": "project",
-      "path": "../../../../../../../../Program Files/Epic Games/UE_5.8/Engine/Source/Programs/Shared/EpicGames.OIDC/EpicGames.OIDC.csproj",
-      "msbuildProject": "../../../../../../../../Program Files/Epic Games/UE_5.8/Engine/Source/Programs/Shared/EpicGames.OIDC/EpicGames.OIDC.csproj"
+      "path": "C:\\Program Files\\Epic Games\\UE_5.8\\Engine\\Source\\Programs\\Shared\\EpicGames.OIDC\\EpicGames.OIDC.csproj",
+      "msbuildProject": "C:\\Program Files\\Epic Games\\UE_5.8\\Engine\\Source\\Programs\\Shared\\EpicGames.OIDC\\EpicGames.OIDC.csproj"
     },
     "EpicGames.Oodle/1.0.0": {
       "type": "project",
-      "path": "../../../../../../../../Program Files/Epic Games/UE_5.8/Engine/Source/Programs/Shared/EpicGames.Oodle/EpicGames.Oodle.csproj",
-      "msbuildProject": "../../../../../../../../Program Files/Epic Games/UE_5.8/Engine/Source/Programs/Shared/EpicGames.Oodle/EpicGames.Oodle.csproj"
+      "path": "C:\\Program Files\\Epic Games\\UE_5.8\\Engine\\Source\\Programs\\Shared\\EpicGames.Oodle\\EpicGames.Oodle.csproj",
+      "msbuildProject": "C:\\Program Files\\Epic Games\\UE_5.8\\Engine\\Source\\Programs\\Shared\\EpicGames.Oodle\\EpicGames.Oodle.csproj"
     },
     "EpicGames.Perforce/1.0.0": {
       "type": "project",
-      "path": "../../../../../../../../Program Files/Epic Games/UE_5.8/Engine/Source/Programs/Shared/EpicGames.Perforce/EpicGames.Perforce.csproj",
-      "msbuildProject": "../../../../../../../../Program Files/Epic Games/UE_5.8/Engine/Source/Programs/Shared/EpicGames.Perforce/EpicGames.Perforce.csproj"
+      "path": "C:\\Program Files\\Epic Games\\UE_5.8\\Engine\\Source\\Programs\\Shared\\EpicGames.Perforce\\EpicGames.Perforce.csproj",
+      "msbuildProject": "C:\\Program Files\\Epic Games\\UE_5.8\\Engine\\Source\\Programs\\Shared\\EpicGames.Perforce\\EpicGames.Perforce.csproj"
     },
     "EpicGames.Serialization/1.0.0": {
       "type": "project",
-      "path": "../../../../../../../../Program Files/Epic Games/UE_5.8/Engine/Source/Programs/Shared/EpicGames.Serialization/EpicGames.Serialization.csproj",
-      "msbuildProject": "../../../../../../../../Program Files/Epic Games/UE_5.8/Engine/Source/Programs/Shared/EpicGames.Serialization/EpicGames.Serialization.csproj"
+      "path": "C:\\Program Files\\Epic Games\\UE_5.8\\Engine\\Source\\Programs\\Shared\\EpicGames.Serialization\\EpicGames.Serialization.csproj",
+      "msbuildProject": "C:\\Program Files\\Epic Games\\UE_5.8\\Engine\\Source\\Programs\\Shared\\EpicGames.Serialization\\EpicGames.Serialization.csproj"
     },
     "EpicGames.UBA/1.0.0": {
       "type": "project",
-      "path": "../../../../../../../../Program Files/Epic Games/UE_5.8/Engine/Source/Programs/Shared/EpicGames.UBA/EpicGames.UBA.csproj",
-      "msbuildProject": "../../../../../../../../Program Files/Epic Games/UE_5.8/Engine/Source/Programs/Shared/EpicGames.UBA/EpicGames.UBA.csproj"
+      "path": "C:\\Program Files\\Epic Games\\UE_5.8\\Engine\\Source\\Programs\\Shared\\EpicGames.UBA\\EpicGames.UBA.csproj",
+      "msbuildProject": "C:\\Program Files\\Epic Games\\UE_5.8\\Engine\\Source\\Programs\\Shared\\EpicGames.UBA\\EpicGames.UBA.csproj"
     },
     "EpicGames.UHT/1.0.0": {
       "type": "project",
-      "path": "../../../../../../../../Program Files/Epic Games/UE_5.8/Engine/Source/Programs/Shared/EpicGames.UHT/EpicGames.UHT.csproj",
-      "msbuildProject": "../../../../../../../../Program Files/Epic Games/UE_5.8/Engine/Source/Programs/Shared/EpicGames.UHT/EpicGames.UHT.csproj"
+      "path": "C:\\Program Files\\Epic Games\\UE_5.8\\Engine\\Source\\Programs\\Shared\\EpicGames.UHT\\EpicGames.UHT.csproj",
+      "msbuildProject": "C:\\Program Files\\Epic Games\\UE_5.8\\Engine\\Source\\Programs\\Shared\\EpicGames.UHT\\EpicGames.UHT.csproj"
     },
     "Gauntlet.Automation/1.0.0": {
       "type": "project",
-      "path": "../../../../../../../../Program Files/Epic Games/UE_5.8/Engine/Source/Programs/AutomationTool/Gauntlet/Gauntlet.Automation.csproj",
-      "msbuildProject": "../../../../../../../../Program Files/Epic Games/UE_5.8/Engine/Source/Programs/AutomationTool/Gauntlet/Gauntlet.Automation.csproj"
+      "path": "C:\\Program Files\\Epic Games\\UE_5.8\\Engine\\Source\\Programs\\AutomationTool\\Gauntlet\\Gauntlet.Automation.csproj",
+      "msbuildProject": "C:\\Program Files\\Epic Games\\UE_5.8\\Engine\\Source\\Programs\\AutomationTool\\Gauntlet\\Gauntlet.Automation.csproj"
     },
     "Localization.Automation/1.0.0": {
       "type": "project",
-      "path": "../../../../../../../../Program Files/Epic Games/UE_5.8/Engine/Source/Programs/AutomationTool/Localization/Localization.Automation.csproj",
-      "msbuildProject": "../../../../../../../../Program Files/Epic Games/UE_5.8/Engine/Source/Programs/AutomationTool/Localization/Localization.Automation.csproj"
+      "path": "C:\\Program Files\\Epic Games\\UE_5.8\\Engine\\Source\\Programs\\AutomationTool\\Localization\\Localization.Automation.csproj",
+      "msbuildProject": "C:\\Program Files\\Epic Games\\UE_5.8\\Engine\\Source\\Programs\\AutomationTool\\Localization\\Localization.Automation.csproj"
     },
     "OneSkyLocalization.Automation/1.0.0": {
       "type": "project",
-      "path": "../../../../../../../../Program Files/Epic Games/UE_5.8/Engine/Source/Programs/AutomationTool/OneSkyLocalization/OneSkyLocalization.Automation.csproj",
-      "msbuildProject": "../../../../../../../../Program Files/Epic Games/UE_5.8/Engine/Source/Programs/AutomationTool/OneSkyLocalization/OneSkyLocalization.Automation.csproj"
+      "path": "C:\\Program Files\\Epic Games\\UE_5.8\\Engine\\Source\\Programs\\AutomationTool\\OneSkyLocalization\\OneSkyLocalization.Automation.csproj",
+      "msbuildProject": "C:\\Program Files\\Epic Games\\UE_5.8\\Engine\\Source\\Programs\\AutomationTool\\OneSkyLocalization\\OneSkyLocalization.Automation.csproj"
     },
     "SmartlingLocalization.Automation/1.0.0": {
       "type": "project",
-      "path": "../../../../../../../../Program Files/Epic Games/UE_5.8/Engine/Source/Programs/AutomationTool/SmartlingLocalization/SmartlingLocalization.Automation.csproj",
-      "msbuildProject": "../../../../../../../../Program Files/Epic Games/UE_5.8/Engine/Source/Programs/AutomationTool/SmartlingLocalization/SmartlingLocalization.Automation.csproj"
+      "path": "C:\\Program Files\\Epic Games\\UE_5.8\\Engine\\Source\\Programs\\AutomationTool\\SmartlingLocalization\\SmartlingLocalization.Automation.csproj",
+      "msbuildProject": "C:\\Program Files\\Epic Games\\UE_5.8\\Engine\\Source\\Programs\\AutomationTool\\SmartlingLocalization\\SmartlingLocalization.Automation.csproj"
     },
     "UnrealBuildTool/1.0.0": {
       "type": "project",
-      "path": "../../../../../../../../Program Files/Epic Games/UE_5.8/Engine/Source/Programs/UnrealBuildTool/UnrealBuildTool.csproj",
-      "msbuildProject": "../../../../../../../../Program Files/Epic Games/UE_5.8/Engine/Source/Programs/UnrealBuildTool/UnrealBuildTool.csproj"
+      "path": "C:\\Program Files\\Epic Games\\UE_5.8\\Engine\\Source\\Programs\\UnrealBuildTool\\UnrealBuildTool.csproj",
+      "msbuildProject": "C:\\Program Files\\Epic Games\\UE_5.8\\Engine\\Source\\Programs\\UnrealBuildTool\\UnrealBuildTool.csproj"
     },
     "XLocLocalization.Automation/1.0.0": {
       "type": "project",
-      "path": "../../../../../../../../Program Files/Epic Games/UE_5.8/Engine/Source/Programs/AutomationTool/XLocLocalization/XLocLocalization.Automation.csproj",
-      "msbuildProject": "../../../../../../../../Program Files/Epic Games/UE_5.8/Engine/Source/Programs/AutomationTool/XLocLocalization/XLocLocalization.Automation.csproj"
+      "path": "C:\\Program Files\\Epic Games\\UE_5.8\\Engine\\Source\\Programs\\AutomationTool\\XLocLocalization\\XLocLocalization.Automation.csproj",
+      "msbuildProject": "C:\\Program Files\\Epic Games\\UE_5.8\\Engine\\Source\\Programs\\AutomationTool\\XLocLocalization\\XLocLocalization.Automation.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -4657,31 +4657,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\fromj\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\fromj\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\fromj\\OneDrive\\문서\\Unreal Projects\\LyraStarterGame\\Build\\Scripts\\Lyra.Automation.csproj",
+      "projectUniqueName": "L:\\Build\\Scripts\\Lyra.Automation.csproj",
       "projectName": "Lyra.Automation",
-      "projectPath": "C:\\Users\\fromj\\OneDrive\\문서\\Unreal Projects\\LyraStarterGame\\Build\\Scripts\\Lyra.Automation.csproj",
+      "projectPath": "L:\\Build\\Scripts\\Lyra.Automation.csproj",
       "packagesPath": "C:\\Users\\fromj\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\fromj\\OneDrive\\문서\\Unreal Projects\\LyraStarterGame\\Build\\Scripts\\obj\\",
+      "outputPath": "L:\\Build\\Scripts\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\fromj\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\fromj\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net10.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {

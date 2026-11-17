@@ -3,3 +3,14 @@ C:\Users\fromj\OneDrive\문서\Unreal Projects\LyraStarterGame\Build\Scripts\obj
 C:\Users\fromj\OneDrive\문서\Unreal Projects\LyraStarterGame\Build\Scripts\obj\Development\net10.0\Lyra.Automation.AssemblyInfoInputs.cache
 C:\Users\fromj\OneDrive\문서\Unreal Projects\LyraStarterGame\Build\Scripts\obj\Development\net10.0\Lyra.Automation.AssemblyInfo.cs
 C:\Users\fromj\OneDrive\문서\Unreal Projects\LyraStarterGame\Build\Scripts\obj\Development\net10.0\Lyra.Automation.csproj.CoreCompileInputs.cache
+C:\Users\fromj\OneDrive\바탕 화면\새 폴더\test\test\abc\Build\Scripts\obj\Development\net10.0\Lyra.Automation.csproj.AssemblyReference.cache
+C:\Users\fromj\OneDrive\바탕 화면\새 폴더\test\test\abc\Build\Scripts\obj\Development\net10.0\Lyra.Automation.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\fromj\OneDrive\바탕 화면\새 폴더\test\test\abc\Build\Scripts\obj\Development\net10.0\Lyra.Automation.AssemblyInfoInputs.cache
+C:\Users\fromj\OneDrive\바탕 화면\새 폴더\test\test\abc\Build\Scripts\obj\Development\net10.0\Lyra.Automation.AssemblyInfo.cs
+C:\Users\fromj\OneDrive\바탕 화면\새 폴더\test\test\abc\Build\Scripts\obj\Development\net10.0\Lyra.Automation.csproj.CoreCompileInputs.cache
+C:\Users\fromj\OneDrive\바탕 화면\새 폴더\test\test\abc\Build\Scripts\obj\Development\net10.0\Lyra.Automation.sourcelink.json
+L:\Build\Scripts\obj\Development\net10.0\Lyra.Automation.csproj.AssemblyReference.cache
+L:\Build\Scripts\obj\Development\net10.0\Lyra.Automation.GeneratedMSBuildEditorConfig.editorconfig
+L:\Build\Scripts\obj\Development\net10.0\Lyra.Automation.AssemblyInfoInputs.cache
+L:\Build\Scripts\obj\Development\net10.0\Lyra.Automation.AssemblyInfo.cs
+L:\Build\Scripts\obj\Development\net10.0\Lyra.Automation.csproj.CoreCompileInputs.cache
