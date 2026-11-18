@@ -69,7 +69,7 @@ def tick(dt):
             def g(v): q = inv.transform_location(v); return [round(q.x, 2), round(q.y, 2), round(q.z, 2)]
             ai = mesh.get_anim_instance()
             row = {'t': round(t, 3), 'ammo': p.get_editor_property('FurinaAmmo'), 'reloading': bool(p.get_editor_property('FurinaReloading')), 'ms': round(ai.get_curve_value('MagState'), 2), 'bb': round(ai.get_curve_value('BoltBack'), 2), 'bolt_y': by,
-                   'rp': round(unreal.KismetMaterialLibrary.get_scalar_parameter_value(w, unreal.load_asset('/Game/Furina/UI/MPC_FurinaHUD'), 'ReloadP'), 3), 'wrist': g(mesh.get_socket_location('Left-wrist')), 'mid1': g(mesh.get_socket_location('MiddleFinger1_L')), 'idx3': g(mesh.get_socket_location('IndexFinger3_L')), 'Larm': g(mesh.get_socket_location('Left-arm')), 'Lelb': g(mesh.get_socket_location('Left-elbow')), 'Rarm': g(mesh.get_socket_location('Right-arm')), 'hy': round(hnd.get_editor_property('relative_location').y, 3), 'mag': g(unreal.SystemLibrary.get_component_bounds(mag)[0]), 'mag_vis': mag.is_visible()}
+                   'rp': round(unreal.MaterialLibrary.get_scalar_parameter_value(w, unreal.load_asset('/Game/Furina/UI/MPC_FurinaHUD'), 'ReloadP'), 3), 'wrist': g(mesh.get_socket_location('Left-wrist')), 'mid1': g(mesh.get_socket_location('MiddleFinger1_L')), 'idx3': g(mesh.get_socket_location('IndexFinger3_L')), 'Larm': g(mesh.get_socket_location('Left-arm')), 'Lelb': g(mesh.get_socket_location('Left-elbow')), 'Rarm': g(mesh.get_socket_location('Right-arm')), 'hy': round(hnd.get_editor_property('relative_location').y, 3), 'mag': g(unreal.SystemLibrary.get_component_bounds(mag)[0]), 'mag_vis': mag.is_visible()}
             R['samples'].append(row)
             if S['capi'] < len(CAP) and t >= CAP[S['capi']][1]: shot(w, CAP[S['capi']][0]); R['samples'][-1]['cap'] = CAP[S['capi']][0]; S['capi'] += 1
             if t > 2.4 and not row['reloading']:
@@ -88,7 +88,7 @@ def tick(dt):
             row = {'t': round(t, 3), 'rl': bool(p.get_editor_property('FurinaReloading'))}
             for b in ('Thumb0_L', 'Thumb1_L', 'Thumb2_L', 'Thumb3_L', 'IndexFinger1_L', 'Left-wrist'):
                 tr = mesh.get_socket_transform(b, unreal.RelativeTransformSpace.RTS_COMPONENT); r = tr.rotation.rotator(); row[b] = [round(r.roll, 1), round(r.pitch, 1), round(r.yaw, 1)]
-            row['rp'] = round(unreal.KismetMaterialLibrary.get_scalar_parameter_value(w, unreal.load_asset('/Game/Furina/UI/MPC_FurinaHUD'), 'ReloadP'), 3); row['hy'] = round(hnd.get_editor_property('relative_location').y, 3); row['bolt_y'] = by; row['wrist'] = g(mesh.get_socket_location('Left-wrist')); row['idx3'] = g(mesh.get_socket_location('IndexFinger3_L'))
+            row['rp'] = round(unreal.MaterialLibrary.get_scalar_parameter_value(w, unreal.load_asset('/Game/Furina/UI/MPC_FurinaHUD'), 'ReloadP'), 3); row['hy'] = round(hnd.get_editor_property('relative_location').y, 3); row['bolt_y'] = by; row['wrist'] = g(mesh.get_socket_location('Left-wrist')); row['idx3'] = g(mesh.get_socket_location('IndexFinger3_L'))
             R.setdefault('thumb', []).append(row)
             if t > 4.6 or (t > 3.9 and not p.get_editor_property('FurinaReloading')): R['normal_done_t'] = round(t, 2); S['st'] = 'end'; S['t'] = now + 0.5
             return
