@@ -1,0 +1,34 @@
+{
+ "bk_AS_Furina_FP_Reload": true,
+ "bk_AM_Furina_FP_Reload": true,
+ "AS_Furina_FP_Reload": {
+  "curves": [
+   "ReloadLX",
+   "ReloadLY",
+   "ReloadLZ",
+   "MagState",
+   "BoltBack",
+   "HandleBack",
+   "HandleFp",
+   "riflereload"
+  ],
+  "len": 3.133333444595337,
+  "saved": true
+ },
+ "AM_Furina_FP_Reload": {
+  "curves": [
+   "ReloadLX",
+   "ReloadLY",
+   "ReloadLZ",
+   "MagState",
+   "BoltBack",
+   "HandleBack",
+   "HandleFp",
+   "RifleReload"
+  ],
+  "len": 3.133333444595337,
+  "saved": true
+ },
+ "rate": 0.85,
+ "real_seconds": 3.686
+}

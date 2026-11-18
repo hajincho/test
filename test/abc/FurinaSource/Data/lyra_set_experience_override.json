@@ -1,0 +1,5 @@
+{
+ "before": "<Struct 'PrimaryAssetId' (0x00000175BFF832A8) {primary_asset_type: {name: \"LyraExperienceDefinition\"}, primary_asset_name: \"B_Furina_Experience\"}>",
+ "after": "<Struct 'PrimaryAssetId' (0x00000175BFF832A8) {primary_asset_type: {name: \"LyraExperienceDefinition\"}, primary_asset_name: \"B_ShooterGame_Elimination\"}>",
+ "name": "B_ShooterGame_Elimination"
+}

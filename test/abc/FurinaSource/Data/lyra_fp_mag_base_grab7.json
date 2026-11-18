@@ -1,0 +1,12 @@
+{
+ "CLEAR": 9.0,
+ "RAMP": 8.0,
+ "R0": 0.15,
+ "links": [],
+ "set": [
+  true,
+  true,
+  true
+ ],
+ "saved": true
+}

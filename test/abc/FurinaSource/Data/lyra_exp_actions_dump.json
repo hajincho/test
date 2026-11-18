@@ -1,0 +1,110 @@
+{
+ "/Game/System/Experiences/B_Furina_Experience": {
+  "pawn": "<Object '/Game/Furina/Lyra/HeroData_Furina.HeroData_Furina' (0x000001774BAB0540) Class 'LyraPawnData'>",
+  "features": "[\"ShooterCore\"]",
+  "actions": [
+   {
+    "class": "GameFeatureAction_AddAbilities"
+   },
+   {
+    "class": "GameFeatureAction_AddComponents"
+   },
+   {
+    "class": "GameFeatureAction_AddWidgets"
+   }
+  ],
+  "sets": {
+   "EAS_BasicShooterAcolades": {
+    "actions": [
+     {
+      "class": "GameFeatureAction_AddComponents"
+     }
+    ],
+    "features": "[]"
+   }
+  }
+ },
+ "/ShooterCore/Experiences/B_ShooterGame_Elimination": {
+  "pawn": "<Object '/Game/Furina/Lyra/HeroData_Furina.HeroData_Furina' (0x000001774BAB0540) Class 'LyraPawnData'>",
+  "features": "[\"ShooterCore\"]",
+  "actions": [
+   {
+    "class": "GameFeatureAction_AddAbilities"
+   },
+   {
+    "class": "GameFeatureAction_AddComponents"
+   },
+   {
+    "class": "GameFeatureAction_AddWidgets"
+   }
+  ],
+  "sets": {
+   "EAS_BasicShooterAcolades": {
+    "actions": [
+     {
+      "class": "GameFeatureAction_AddComponents"
+     }
+    ],
+    "features": "[]"
+   }
+  }
+ },
+ "/TopDownArena/System/Experiences/B_TopDownArenaExperience": {
+  "pawn": "<Object '/Game/Furina/Lyra/HeroData_Furina.HeroData_Furina' (0x000001774BAB0540) Class 'LyraPawnData'>",
+  "features": "[\"TopDownArena\"]",
+  "actions": [
+   {
+    "class": "GameFeatureAction_AddWidgets"
+   },
+   {
+    "class": "GameFeatureAction_SplitscreenConfig"
+   },
+   {
+    "class": "GameFeatureAction_AddComponents"
+   }
+  ],
+  "sets": {}
+ },
+ "/TopDownArena/System/Experiences/B_TopDownArena_Multiplayer_Experience": {
+  "pawn": "<Object '/Game/Furina/Lyra/HeroData_Furina.HeroData_Furina' (0x000001774BAB0540) Class 'LyraPawnData'>",
+  "features": "[\"TopDownArena\"]",
+  "actions": [
+   {
+    "class": "GameFeatureAction_AddWidgets"
+   },
+   {
+    "class": "GameFeatureAction_SplitscreenConfig"
+   },
+   {
+    "class": "GameFeatureAction_AddComponents"
+   }
+  ],
+  "sets": {}
+ },
+ "/ShooterExplorer/System/Experiences/B_TestInventoryExperience": {
+  "pawn": "<Object '/Game/Furina/Lyra/HeroData_Furina.HeroData_Furina' (0x000001774BAB0540) Class 'LyraPawnData'>",
+  "features": "[\"ShooterCore\"]",
+  "actions": [
+   {
+    "class": "GameFeatureAction_AddWidgets"
+   },
+   {
+    "class": "GameFeatureAction_AddAbilities"
+   },
+   {
+    "class": "GameFeatureAction_AddComponents"
+   }
+  ],
+  "sets": {}
+ },
+ "/Game/System/Experiences/B_LyraDefaultExperience": {
+  "pawn": "<Object '/Game/Furina/Lyra/HeroData_Furina.HeroData_Furina' (0x000001774BAB0540) Class 'LyraPawnData'>",
+  "features": "[]",
+  "actions": [
+   {
+    "class": "GameFeatureAction_AddWidgets"
+   }
+  ],
+  "sets": {}
+ }
+}

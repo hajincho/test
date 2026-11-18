@@ -1,0 +1,262 @@
+{
+ "M_Colt_Main": {
+  "MP_BASE_COLOR": {
+   "cls": "MaterialExpressionTextureSample",
+   "texture": "T_Colt_Main_BaseColor",
+   "desc": "",
+   "sampler_type": "<MaterialSamplerType.SAMPLERTYPE_COLOR: 0>",
+   "id": 9904,
+   "in": [
+    null,
+    null,
+    null
+   ]
+  },
+  "MP_METALLIC": {
+   "cls": "MaterialExpressionLinearInterpolate",
+   "const_a": 0.3499999940395355,
+   "const_b": 0.550000011920929,
+   "desc": "MetalMatch_Lerp",
+   "id": 9456,
+   "in": [
+    null,
+    null,
+    {
+     "cls": "MaterialExpressionTextureSample",
+     "texture": "T_Colt_Main_Metallic",
+     "desc": "",
+     "sampler_type": "<MaterialSamplerType.SAMPLERTYPE_MASKS: 4>",
+     "id": 9104,
+     "in": [
+      null,
+      null,
+      null
+     ]
+    }
+   ]
+  },
+  "MP_ROUGHNESS": {
+   "cls": "MaterialExpressionTextureSample",
+   "texture": "T_Colt_Main_Roughness",
+   "desc": "",
+   "sampler_type": "<MaterialSamplerType.SAMPLERTYPE_MASKS: 4>",
+   "id": 9104,
+   "in": [
+    null,
+    null,
+    null
+   ]
+  },
+  "MP_SPECULAR": null,
+  "MP_AMBIENT_OCCLUSION": {
+   "cls": "MaterialExpressionTextureSample",
+   "texture": "T_Colt_Main_AO",
+   "desc": "",
+   "sampler_type": "<MaterialSamplerType.SAMPLERTYPE_MASKS: 4>",
+   "id": 9104,
+   "in": [
+    null,
+    null,
+    null
+   ]
+  },
+  "shading_model": "<MaterialShadingModel.MSM_DEFAULT_LIT: 1>",
+  "blend_mode": "<BlendMode.BLEND_OPAQUE: 0>",
+  "two_sided": "False"
+ },
+ "M_Colt_Furniture": {
+  "MP_BASE_COLOR": {
+   "cls": "MaterialExpressionTextureSample",
+   "texture": "T_Colt_Furniture_BaseColor",
+   "desc": "",
+   "sampler_type": "<MaterialSamplerType.SAMPLERTYPE_COLOR: 0>",
+   "id": 9968,
+   "in": [
+    null,
+    null,
+    null
+   ]
+  },
+  "MP_METALLIC": {
+   "cls": "MaterialExpressionLinearInterpolate",
+   "const_a": 0.3499999940395355,
+   "const_b": 0.550000011920929,
+   "desc": "MetalMatch_Lerp",
+   "id": 9104,
+   "in": [
+    null,
+    null,
+    {
+     "cls": "MaterialExpressionTextureSample",
+     "texture": "T_Colt_Furniture_Metallic",
+     "desc": "",
+     "sampler_type": "<MaterialSamplerType.SAMPLERTYPE_MASKS: 4>",
+     "id": 10096,
+     "in": [
+      null,
+      null,
+      null
+     ]
+    }
+   ]
+  },
+  "MP_ROUGHNESS": {
+   "cls": "MaterialExpressionTextureSample",
+   "texture": "T_Colt_Furniture_Roughness",
+   "desc": "",
+   "sampler_type": "<MaterialSamplerType.SAMPLERTYPE_MASKS: 4>",
+   "id": 10096,
+   "in": [
+    null,
+    null,
+    null
+   ]
+  },
+  "MP_SPECULAR": null,
+  "MP_AMBIENT_OCCLUSION": {
+   "cls": "MaterialExpressionTextureSample",
+   "texture": "T_Colt_Furniture_AO",
+   "desc": "",
+   "sampler_type": "<MaterialSamplerType.SAMPLERTYPE_MASKS: 4>",
+   "id": 10096,
+   "in": [
+    null,
+    null,
+    null
+   ]
+  },
+  "shading_model": "<MaterialShadingModel.MSM_DEFAULT_LIT: 1>",
+  "blend_mode": "<BlendMode.BLEND_OPAQUE: 0>",
+  "two_sided": "False"
+ },
+ "M_Colt_Mag": {
+  "MP_BASE_COLOR": {
+   "cls": "MaterialExpressionTextureSample",
+   "texture": "T_Colt_Mag_BaseColor",
+   "desc": "",
+   "sampler_type": "<MaterialSamplerType.SAMPLERTYPE_COLOR: 0>",
+   "id": 9456,
+   "in": [
+    null,
+    null,
+    null
+   ]
+  },
+  "MP_METALLIC": {
+   "cls": "MaterialExpressionLinearInterpolate",
+   "const_a": 0.3499999940395355,
+   "const_b": 0.550000011920929,
+   "desc": "MetalMatch_Lerp",
+   "id": 10096,
+   "in": [
+    null,
+    null,
+    {
+     "cls": "MaterialExpressionTextureSample",
+     "texture": "T_Colt_Mag_Metallic",
+     "desc": "",
+     "sampler_type": "<MaterialSamplerType.SAMPLERTYPE_MASKS: 4>",
+     "id": 8784,
+     "in": [
+      null,
+      null,
+      null
+     ]
+    }
+   ]
+  },
+  "MP_ROUGHNESS": {
+   "cls": "MaterialExpressionTextureSample",
+   "texture": "T_Colt_Mag_Roughness",
+   "desc": "",
+   "sampler_type": "<MaterialSamplerType.SAMPLERTYPE_MASKS: 4>",
+   "id": 8784,
+   "in": [
+    null,
+    null,
+    null
+   ]
+  },
+  "MP_SPECULAR": null,
+  "MP_AMBIENT_OCCLUSION": {
+   "cls": "MaterialExpressionTextureSample",
+   "texture": "T_Colt_Mag_AO",
+   "desc": "",
+   "sampler_type": "<MaterialSamplerType.SAMPLERTYPE_MASKS: 4>",
+   "id": 8784,
+   "in": [
+    null,
+    null,
+    null
+   ]
+  },
+  "shading_model": "<MaterialShadingModel.MSM_DEFAULT_LIT: 1>",
+  "blend_mode": "<BlendMode.BLEND_OPAQUE: 0>",
+  "two_sided": "False"
+ },
+ "M_Colt_Rear": {
+  "MP_BASE_COLOR": {
+   "cls": "MaterialExpressionTextureSample",
+   "texture": "T_Colt_Rear_BaseColor",
+   "desc": "",
+   "sampler_type": "<MaterialSamplerType.SAMPLERTYPE_COLOR: 0>",
+   "id": 9104,
+   "in": [
+    null,
+    null,
+    null
+   ]
+  },
+  "MP_METALLIC": {
+   "cls": "MaterialExpressionLinearInterpolate",
+   "const_a": 0.3499999940395355,
+   "const_b": 0.550000011920929,
+   "desc": "MetalMatch_Lerp",
+   "id": 8784,
+   "in": [
+    null,
+    null,
+    {
+     "cls": "MaterialExpressionTextureSample",
+     "texture": "T_Colt_Rear_Metallic",
+     "desc": "",
+     "sampler_type": "<MaterialSamplerType.SAMPLERTYPE_MASKS: 4>",
+     "id": 8848,
+     "in": [
+      null,
+      null,
+      null
+     ]
+    }
+   ]
+  },
+  "MP_ROUGHNESS": {
+   "cls": "MaterialExpressionTextureSample",
+   "texture": "T_Colt_Rear_Roughness",
+   "desc": "",
+   "sampler_type": "<MaterialSamplerType.SAMPLERTYPE_MASKS: 4>",
+   "id": 8848,
+   "in": [
+    null,
+    null,
+    null
+   ]
+  },
+  "MP_SPECULAR": null,
+  "MP_AMBIENT_OCCLUSION": {
+   "cls": "MaterialExpressionTextureSample",
+   "texture": "T_Colt_Rear_AO",
+   "desc": "",
+   "sampler_type": "<MaterialSamplerType.SAMPLERTYPE_MASKS: 4>",
+   "id": 8848,
+   "in": [
+    null,
+    null,
+    null
+   ]
+  },
+  "shading_model": "<MaterialShadingModel.MSM_DEFAULT_LIT: 1>",
+  "blend_mode": "<BlendMode.BLEND_OPAQUE: 0>",
+  "two_sided": "False"
+ }
+}

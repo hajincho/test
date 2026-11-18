@@ -708,3 +708,155 @@ Control Rig이 들어 올리는 회전은 컴포넌트 +X축 기준 음수 각�
 - **원인(`FBX/M4/SM_M4Mag.fbx`와 `SK_M4A1.fbx`를 Blender로 옆/앞에서 렌더한 `Data/mag_side.png`, `mag_front.png`와 높이별 단면 `mag_fit2.json`):** 탄창 x 범위가 [-1.18, 1.84]cm, 삽입구 하우징(리시버 아래 탄창 틀)이 [-1.5, 1.5]cm라서 탄창이 +X(왼쪽)로 약 0.33cm 치우쳐 있었습니다. 그래서 하우징 높이 구간(z -4 ~ 3.4)의 탄창 옆면이 하우징 바깥으로 나와 리시버 측면을 덮었고, 이것이 "삽입구 아래 작게 있어야 하는데 은색 판이 크게 튀어나옴"으로 보였습니다. 탄창과 총 사이의 회전은 처음부터 0°였습니다(`lyra_reload_mag_probe.py`, `lyra_mag_rest_probe.py`).
 - **수정(`lyra_mag_fit_mesh.py`):** `SM_M4Mag` 정점(7024개)을 직접 편집했습니다. 모든 정점 x를 -0.33cm 옮겨 탄창 중심을 총 중심선에 맞추고, 하우징 안쪽 구간(z > -4)은 x 폭을 0.8배로 좁혔습니다(z -4.5 ~ -3.5에서 1 → 0.8로 부드럽게). 하우징 밖으로 나온 아래쪽 모양은 그대로입니다. 결과 x 범위는 [-1.51, 1.34]cm이고 하우징 높이 구간에서는 [-1.0, 1.0] 안쪽입니다. 원본은 `/Game/Furina/Backups/SM_M4Mag_pre_fit`에 복제했지만, 처음 실행 때는 복제본을 디스크에 저장하지 않아 에디터를 닫으면 사라졌습니다(그래서 저장소에는 백업 파일이 없습니다). 원본이 필요하면 `FBX/M4/SM_M4Mag.fbx`를 다시 임포트하면 됩니다. 스크립트는 이제 백업을 디스크에 저장하도록 고쳤지만, 현재 에셋은 이미 편집된 상태이므로 다시 실행하려면 먼저 FBX를 다시 임포트해 원본으로 되돌린 뒤 실행해야 누적되지 않습니다.
 - **확인:** 3인칭 왼쪽 옆 고해상도 캡처에서 리시버 옆에 튀어나온 회색 판이 사라졌습니다. 1인칭은 제 쪽에서 같은 각도로 캡처하지 못해 직접 확인하지 못했습니다. 재장전 중 손-탄창 정렬은 탄창 중심이 0.33cm 이동한 것 외에는 변하지 않습니다.
+
+## M4 금속성 맞추기 + 탄창 기울기 점검 (2026-11-18)
+
+- **금속성(`lyra_m4_metal_match.py`):** `M_Colt_Main`/`M_Colt_Furniture`/`M_Colt_Mag`/`M_Colt_Rear`의 Metallic 텍스처 값 t를 `Lerp(0.35, 0.55, t)`로 다시 매핑했습니다(노드 설명 `MetalMatch_Lerp`). 원래 총몸 약 0.9, 탄창 약 0.78, 개머리판·핸드가드 중앙값 약 0.54였던 것이 각각 약 0.54, 0.50, 0.45가 되어 서로 비슷해지고 전체가 어두워집니다. 되돌리려면 `py <파일> keep revert`(Lerp 0~1 = 원래 값). 인게임에서 눈으로 확인하지는 못했습니다.
+- **탄창 기울기:** 측정으로는 기울기를 찾지 못했습니다. 탄창 컴포넌트는 소총 대비 회전 0°·이동 0이고(`lyra_mag_rest_probe.json`, 재장전 중에도 `mag_rot` 0), 메시 단면(`Data/mag_fit2.json`)의 앞뒤 중심선도 바닥에서 윗부분까지 약 0.1cm만 달라 수직입니다. 사용자가 본 어긋남이 어떤 상황(자세, 재장전 후, 시점)인지 확인이 필요합니다.
+- **카메라 캡처 시도(`lyra_mag_cam.py`):** PIE 월드에는 액터 생성 API가 없어 기존 큐브를 임시 카메라로 쓰려 했지만 시점이 소총 옆으로 오지 않아 쓸 만한 이미지를 얻지 못했습니다(`Data/magcam_*.png`는 의미 없는 화면).
+
+### 탄창 하부 시각화 (`lyra_mag_view.py`, 2026-11-18)
+
+- 에디터 월드 높은 곳에 `SK_M4A1` + `SM_M4Mag`를 인게임과 같은 변환(회전 0, 이동 0)으로 세우고 엔진 머티리얼 그대로 여러 각도에서 찍었습니다(`Data/magview_*.png`, 모음 `magview_sheet.png`). 탄창 옆면은 수직이고 좌우 중심도 삽입구와 맞습니다.
+- Blender로 잰 결과(`lip.py` 계열 측정): 삽입구 아래 테두리(총몸)는 앞쪽 z -2.97에서 뒤쪽 z -4.07로 약 8~9° 내려가고, 탄창 바닥도 앞 -7.1에서 뒤 -7.85로 약 8° 내려가 둘이 평행합니다. 즉 옆면은 수직인데 위·아래 경계만 8° 기운 평행사변형처럼 보이는 것이 모델 원래 모양입니다.
+- `lyra_mag_level.py`로 탄창 바닥을 수평으로 펴 봤지만(약 3.8° 보정), 평행 관계를 깨뜨리는 것이라 `revert` 인자로 되돌렸습니다(백업 `/Game/Furina/Backups/SM_M4Mag_pre_level`은 디스크에 저장됨). 현재 메시는 `lyra_mag_fit_mesh.py` 적용 직후 상태입니다.
+
+### 탄창 요(수직축) 회전 8.7° 수정 (`lyra_mag_unyaw.py`, 2026-11-18) — 실제 원인
+
+- **원인:** 원본 `SM_M4Mag.fbx` 탄창이 수직축 둘레로 약 8.7° 돌아간 채 만들어져 있었습니다. 높이별 단면 PCA에서 모든 높이(-8 ~ 3cm)가 7.7~9.7° 돌아가 있고, 삽입구(총몸)는 좌우 대칭이었습니다. 옆에서 보면 티가 안 나고 아래나 비스듬히 보면 바닥판이 총과 어긋나 보입니다. 위에서 "기울기 못 찾음"이라고 적었던 것은 옆/앞/뒤 축 방향만 보고 회전축을 수직축으로 확인하지 않은 제 실수입니다. 이전의 "좌우 0.33cm 치우침"도 이 회전 때문이었습니다.
+- **수정:** 디스크 백업 `/Game/Furina/Backups/SM_M4Mag_pre_level`(= `lyra_mag_fit_mesh.py` 적용본)에서 그 수정을 역산해 원본 정점을 복원하고(원본 x 범위 [-1.18, 1.84] 그대로 복원 확인), 탄창 중심 둘레로 -8.66° 돌린 뒤 위쪽 구간 좌우 중심을 x=0으로 맞췄습니다. 폭 0.8배 축소(`lyra_mag_fit_mesh.py`)는 더 이상 쓰지 않습니다. 결과: 높이별 남은 요 ±1° 이내, 삽입구 안 x 범위 [-1.1, 1.1](하우징 ±1.53 안쪽), 저장 True.
+- **확인:** 에디터 월드 렌더(`lyra_mag_view.py`)의 아래쪽 시점에서 바닥판이 삽입구와 평행해졌습니다(`Data/magview_unyaw_compare.png`). PIE(실제 손에 든 상태)와 재장전 중 모습은 아직 보지 않았습니다.
+
+### 오른손 권총손잡이 쥐기: 소총을 손에 대해 앞으로 7.3cm (`lyra_grip_shift.py`, `lyra_grip_shift_bp.py`, 2026-11-18)
+
+- **측정:** 오른손 손가락 뿌리(`IndexFinger1_R`/`MiddleFinger1_R`)가 소총 기준 y≈-3.8(탄창 뒤·방아쇠 앞)에 있었고, 권총손잡이 앞면은 y≈-11.5(z -5.5, Blender로 SK_M4A1 단면 측정)라서 손이 손잡이보다 약 7.3cm 앞을 쥐고 있었습니다.
+- **수정:** 소총을 오른손목 기준으로 총 앞방향 +7.3cm 옮겼습니다. 오른손은 제자리, 총이 앞으로 나가 손잡이가 손바닥에 들어옵니다. 왼손 목표(`LHandOff.A/B`, 총 기준 y 12.6 → 19.9)도 같이 7.3cm 앞으로 옮겨 총의 같은 자리를 잡습니다.
+  - 소총 상대 위치는 BP 템플릿만이 아니라 권총↔소총 전환 노드가 매 틱 리터럴로 다시 넣고 있어서(`P2_MkVec_b425cf20` X, `P2_LitD_9e7e301`(Y), `P2_LitD_124d465`/`P2_LitD_200c0416`(Z)) 그 값도 바꿨습니다(-1.95/-10.60/-6.35 → -2.19/-17.90/-6.50).
+  - 원래 값은 `Data/lyra_grip_shift_orig.json`. 되돌리려면 `lyra_grip_shift.py 0` → `lyra_grip_shift_bp.py`.
+- **PIE 확인(`lyra_grip_probe.py`):** 오른손목이 소총 기준 y -18.1(손잡이 뒤), 손가락 뿌리 y -11.0~-12.2(손잡이 앞면)로 손잡이를 감쌉니다. 왼손목은 3인칭 y 3.0, 1인칭 y 12.6으로 변경 전과 같은 총 위치를 잡습니다. 왼팔은 37cm(어깨 당김 한계)로, 왼쪽 쇄골이 오른쪽보다 3인칭 2.2cm·1인칭 1.1cm 늘어나 있습니다(기존 어깨 당김 `LShOver`가 받는 중).
+- 상체 비틀기는 사용자가 지금 대기 자세가 좋다고 해서 14°(오른쪽 어깨 앞) 그대로 두었습니다. `lyra_torso_twist.py`는 `Data/twist_deg.txt`가 있으면 그 각도를 씁니다(현재 파일 없음).
+
+### 3인칭 사격 자세: 개머리판을 오른쪽 어깨에 (`lyra_fire_pose_fix.py`, 2026-11-18)
+
+- **측정(`lyra_fire_pose_probe.py`, 잔탄 0에서 `FurinaRifleShot`을 반복 호출해 반동 없는 사격 자세 유지, 폰 로컬 x 앞/y 오른쪽/z 위):** 개머리판 끝이 (-0.2, 2.9, 26.9)로 몸 중심선 가슴 안쪽에 박혀 있었고, 오른쪽 어깨 관절(1.7, 9.1, 29.5)과 떨어져 있었습니다.
+- **수정(사격 가중치 `FireWN = FireW × NotAim`에서만 동작, 대기·견착·정조준 자세는 그대로):**
+  - 총 위치: `TpD2 = TpD + FIRE_D × FireWN` (`FIRE_D` = 조준 좌표 (1.6, 3.1, 0.6)cm).
+  - 상체: `TwAng.B = rad(-14°) + rad(20°) × FireWN`. 사격 중에는 왼쪽 어깨 앞·오른쪽 어깨 뒤로 순 6° 비틉니다. 대기 자세는 기존 14°(오른쪽 어깨 앞) 그대로입니다.
+  - 값은 `Data/fire_pose_fix.json`(`{"d":[x,y,z],"tw":deg}`)으로 바꾸고 스크립트를 다시 돌리면 됩니다.
+- **결과:** 개머리판 끝 (3.5, 7.9, 27.4)으로 오른쪽 어깨 관절(-1.6, 9.9, 29.5)의 앞 5cm·안쪽 2cm·아래 2cm, 즉 어깨 앞면에 닿습니다. 왼쪽 쇄골 늘어남은 1cm 이하(9.8 vs 오른쪽 8.9cm)입니다. 옆모습 비교: `Data/fire_pose_compare.png`.
+- **미확인:** 연사 반동(`RifleKick`) 중 모습, 걷거나 앉은 상태의 사격 자세는 따로 보지 않았습니다.
+
+### 3인칭 왼팔: 늘리지 않고 어깨를 기울이기 + 고개 들기/내리기에 개머리판 고정 (`lyra_left_clav_reach.py`, `lyra_butt_pivot.py`, 2026-11-18)
+
+- **문제:** 위를 보며 쏠 때 왼팔이 너무 길어 보였습니다. 원인은 두 가지였습니다.
+  1. 왼손이 총에 안 닿으면 CR이 왼쪽 어깨 관절(`Left-arm`)을 목표 쪽으로 평행이동(`LShSet`)해서, 쇄골이 늘어나 팔이 길어 보였습니다.
+  2. 총이 눈 위치를 축으로 피치 회전해서, 위로 35° 보면 개머리판이 어깨 앞 5cm → 16cm로 밀려나고 왼손 목표도 같이 멀어졌습니다.
+- **수정 1 (`lyra_left_clav_reach.py`):** `LShSet` 가중치를 0으로 끄고, 같은 목표를 향해 `Left-shoulder`(쇄골)를 뿌리 기준으로 회전시키는 노드(`ClXf`…`ClSet`, 실행 순서 `LShSet → ClSet → RLArmIK`)를 넣었습니다. 쇄골 길이는 그대로이고 어깨가 앞/위로 기울어집니다. 매 프레임 왼손 목표로 계산하므로 조준 피치에 실시간으로 따라갑니다. `GAIN` 2.6, 최대 45°. 되돌리기: `py lyra_left_clav_reach.py revert`.
+- **수정 2 (`lyra_butt_pivot.py`):** 3인칭(`TpW`)에서 `GPos`에 `(I − AimQ)·(GOffB + 개머리판)`을 더한 `GPos2`를 써서, 피치를 바꿔도 개머리판이 어깨에 머물고 총이 개머리판을 축으로 돕니다. 1인칭·정조준 조준선은 그대로입니다. 되돌리기: `py lyra_butt_pivot.py revert`.
+- **측정(사격 자세, `lyra_fire_pose_probe.py <태그에 up/down>`):**
+  - 위 35°: 개머리판 (1.3, 7.9, 29.7), 어깨 관절 바로 앞. 왼손목이 총 기준 (3.2, 3.0, 2.0)으로 정확히 잡는 자리. 쇄골 8.9cm(늘어나지 않음). 비교: `Data/aim_up_compare.png`.
+  - 아래 30°: 개머리판 (5.2, 7.9, 24.8). 왼손은 팔이 다 펴져서 잡는 자리보다 핸드가드를 따라 약 4.9cm 뒤를 잡습니다(옆으로 1.4cm). 쇄골은 늘어나지 않습니다.
+
+### 1인칭 재장전 손-탄창 + 1인칭 팔꿈치 흔들림 (`lyra_fp_reload_sway.py`, 2026-11-18)
+
+- **재장전 측정(`lyra_reload_mag_probe.py fp`, 총 기준 X왼쪽/Y앞/Z위):** 1인칭에서 탄창을 쥐는 순간(MagState 0.5) 손바닥 중심이 탄창 중심에서 (+9.5, +2.3, -4.2)cm, 즉 탄창 왼쪽 허공에 있었습니다. 탄창은 쥐는 순간 위치 그대로 손에 붙기 때문에(KeepWorld) 뽑기·끼우기 내내 손에서 떨어져 보였습니다. 3인칭 보정(`RlDelta`, × `TpW`)은 1인칭에 적용되지 않았습니다.
+- **수정:** 1인칭 전용 `RlDeltaFp = (-6.0, -2.3, +1.5) × RlEnv × (1 − TpW)`를 왼손 목표에 더합니다(`RLV3 = RLV2 + RlDeltaFp → LHandOff3.B`).
+- **결과:** 쥐는 순간 손바닥이 탄창 중심에서 (+3.5, 0.0, -2.6), 즉 탄창 왼쪽 면 아래쪽을 쥐고, 뽑기~끼우기 동안 그대로 유지됩니다. 놓는 순간 탄창이 장착 위치보다 약 1.6cm 높아서 그만큼 제자리로 붙습니다(수정 전에도 비슷했습니다).
+- **팔꿈치 흔들림:** 양팔 IK 폴 벡터에 느린 사인파(`SwT`/`SwS1`/`SwS2`, 크기 `SwAmp.B` 0.15, 가중치 1 − `ViewTP` 커브 = 1인칭에서만)를 더했습니다. 측정(`lyra_sway_probe.py`, 8초): 오른 팔꿈치 1.5cm, 왼 팔꿈치 1.0cm 움직이고 오른손은 0cm로 고정입니다. 왼손은 핸드가드를 따라 0.9cm 미끄러집니다(왼팔이 거의 다 펴진 상태라 팔꿈치 방향이 바뀌면 도달 거리가 조금 달라짐).
+
+### 1인칭 재장전: 탄창 바닥을 잡고 축 방향으로 곧게 뽑기/끼우기 (`lyra_fp_mag_base_grab.py` ~ `grab7.py`, 2026-11-18)
+
+- **문제:** 1인칭 재장전에서 탄창을 옆면으로 잡고, 아래로 빼면서 동시에 왼쪽으로 4~6cm 움직여 탄창 윗부분이 삽입구 안에 있는 동안 옆벽을 뚫고 나왔습니다(끼울 때도 옆에서 들어옴).
+- **수정(모두 1인칭 가중치 `RlFpW`에서만, 3인칭은 그대로):**
+  1. 손 방향: 재장전 중 왼손 회전에 총 앞축 90°를 더해 손바닥을 위로(`RlRotA/RlRotQ0/RlRotQ → RLHRot.B`).
+  2. 잡는 위치: `RlDeltaFp`를 (-9.55, -2.3, -2.95)로 해서 손바닥이 탄창 바닥판 바로 아래(약 0.9cm)에 오게. 잡는 자리 `P_G` = 총 기준점 좌표 (0.42, 1.9, -9.33).
+  3. 붙는 순간 고정: MagState 0.02~0.98(쥐는 중/놓는 중)에는 왼손 목표를 `P_G`에 고정하고, 바로 켜지고 천천히 꺼지게(`RgWin/RgWinS/RgWinM/RgW/RgFrz`). 탄창이 설계한 간격(손바닥-탄창 중심 6.2cm)으로 붙습니다.
+  4. 부드럽게: `RgSm`(AccumulateVectorLerp, Blend 30).
+  5. 곧게 빼기: 높이는 원래 경로를 따르고, 옆 이동을 내려온 거리로 제한합니다. 9cm(탄창이 삽입구를 다 빠지는 거리) 내려오기 전에는 축에서 0.15cm 이상 못 벗어나고, 그 뒤 8cm 동안 옆으로 따라갑니다(`RcDesc/RcRlim/RcSc/RcXY/RcP2`). 이 제한은 붙은 뒤부터 놓을 때까지 켜집니다(`RcStep/RcStepS/RcHold3`, 쥐는 순간에는 고정 목표 기준 거리 `RcRmix`).
+  - 중간 시도(높이를 강제로 누르기)는 탄창이 한 프레임에 10cm 떨어지거나 붙기 전에 손이 내려가 버려서 위 방식으로 바꿨습니다(`grab2`~`grab6` 노드 일부는 연결이 끊긴 채 남아 있음).
+- **측정(`lyra_reload_mag_probe.py fp`, 슬로모 0.15):** 탄창 윗부분이 삽입구 안에 있는 동안 축에서 0.43cm(삽입구 여유) 넘게 벗어난 샘플 0개. 탄창이 장착 위치보다 위로 올라간 샘플 0개. 뽑을 때 (0.28, -2.0) 축을 따라 -2.5 → -10.6cm로 곧게 내려간 뒤 옆으로 갑니다. 끼울 때는 아래에서 축을 맞춘 뒤 올라가 장착 위치 (-0.07, -1.93, -2.23)에서 끝납니다.
+- **미확인:** 1인칭 화면으로 직접 보지는 않았습니다(숫자로만 확인). 손바닥을 위로 돌린 손 모양이 자연스러운지는 화면으로 확인이 필요합니다.
+
+### 1인칭 재장전: 손바닥으로 탄창 바닥 받치기 + 손가락 모양 (`lyra_fp_reload_palm.py`, 2026-11-18)
+
+- **측정(`lyra_reload_mag_probe.py fp`, 손바닥 법선 = cross(손가락 방향, 검지-소지)):** 쥐는 동안 손바닥이 총 기준 (0.75, -0.08, 0.66), 즉 위에서 49° 왼쪽으로 누워 있어 손 옆면이 탄창 바닥에 닿았습니다(이전 수정의 손목 회전 +90°가 과했음). 손가락은 재장전 애니메이션 값 그대로라 2번 관절 굽힘이 검지 39° / 중지 39° / 약지 59° / **소지 104°**로 소지가 꺾여 있었습니다.
+- **수정(1인칭 재장전 중에만, 가중치 `RlEnvFp`):**
+  1. 손목 회전 `RlRotA.B` 90° → 41.3° (손바닥 법선이 정확히 위를 향하는 값).
+  2. 손가락 IK(`FgIndexIK`~`FgLittleIK`, 실행 순서 `RLArmIK →` 4개 `→ Fing_IndexFinger1_L…`): 검지·중지·약지·소지를 손바닥 앞방향으로 펴고 손바닥 쪽으로 18/20/22/26°만 굽힙니다(3번 관절은 2배 굽힘). 목표는 `1번 관절 + u·L1 + (u를 n쪽으로 θ 굽힌 방향)·L2`이고 `u`, `n`은 총 회전(`GRotR`)에서 구한 서로 수직인 단위벡터입니다(처음에 수직이 아니어서 목표가 팔 길이를 넘어 손가락이 쭉 펴졌던 것을 고쳤습니다). 값은 `Data/fp_reload_palm.json`으로 바꿉니다. 엄지는 애니메이션 그대로입니다.
+- **측정 결과:** 쥐는 동안 손바닥 법선 (0.0, -0.08, 1.0)(정확히 위), 2번 관절 굽힘 18.1 / 20.1 / 21.9 / 26.3°, 손바닥 중심이 탄창 바닥판보다 0.9cm 아래, 손가락 끝은 총 앞쪽 y 3.4~6.2cm. 탄창이 삽입구 안에서 벽 여유(0.43cm)를 넘은 샘플은 0개로 이전과 같습니다. 대기 자세 손가락(40/58/52/32°)은 그대로입니다.
+- **미확인:** 화면으로 손 모양을 직접 확인하지는 못했습니다. 1인칭 카메라를 아래로 숙여 찍어도 재장전 손이 총 몸체에 가려 보이지 않았습니다. 손가락 모양이 자연스러운지는 직접 확인이 필요하고, 굽힘 각도는 `fp_reload_palm.json`의 `bend`, 손바닥 기울기는 `rot_deg`로 조정합니다.
+
+### 모든 스테이지에 푸리나 메커니즘 적용 + 키 중복은 푸리나 우선 (`lyra_all_stages_furina.py`, `lyra_furina_key_priority.py`, 2026-11-18)
+
+- **상황:** 사람 플레이어 폰은 `B_LyraGameMode`의 `GetDefaultPawnClassForController` 오버라이드 때문에 이미 모든 맵에서 푸리나입니다. 하지만 스테이지마다 경험(Experience)이 Lyra 마네킹용 PawnData(`HeroData_ShooterGame` 등)와 무기용 액션 세트(퀵바·HUD·공용 입력)를 그대로 쓰고 있었고, 푸리나 전용 설정은 PIE 경험 오버라이드(`B_Furina_Experience`)로만 적용되고 있었습니다.
+- **수정(`lyra_all_stages_furina.py`):** 각 스테이지 경험의 `DefaultPawnData`를 `HeroData_Furina`로 바꾸고, 액션 세트에서 `LAS_ShooterGame_StandardComponents`, `LAS_ShooterGame_StandardHUD`, `LAS_ShooterGame_SharedInput`(Lyra 공용 입력 = 키 중복의 원인), `LAS_InventoryTest`를 뺐습니다(`B_Furina_Experience`와 같은 방식). 대상:
+
+| 경험 | 쓰는 스테이지 |
+|---|---|
+| `B_ShooterGame_Elimination` | `L_Expanse` |
+| `B_LyraShooterGame_ControlPoints` | `L_Convolution_Blockout`, `L_ShooterGym` |
+| `B_ShooterGame_Perf` | `L_ShooterPerf` |
+| `B_TestInventoryExperience` | Explorer 테스트 맵 3개 |
+| `B_LyraDefaultExperience` | `L_DefaultEditorOverview` |
+| `B_TopDownArenaExperience`, `B_TopDownArena_Multiplayer_Experience` | Exploder 2종 |
+
+  `B_LyraFrontEnd_Experience`(메뉴, 폰 없음)는 제외했습니다. 원래 값은 `Data/lyra_all_stages_orig.json`이고 `py lyra_all_stages_furina.py revert`로 되돌립니다. 봇(마네킹)은 이전처럼 무기 없이 서 있습니다.
+- **키 중복은 푸리나 우선(`lyra_furina_key_priority.py`):**
+  1. 푸리나 IMC(`Default_IMC`, `IMC_FurinaStance`) 우선순위를 0/100 → 1000/1100으로 올렸습니다(폰의 `LyraHeroComponent` DefaultInputMappings와 EventGraph `AddMappingContext` 노드 둘 다).
+  2. 푸리나가 쓰는 키를 같이 쓰는 Lyra IMC(`IMC_Default`, `IMC_ADS_Speed`, `IMC_ShooterGame`, `IMC_ShooterGame_KBM`, `IMC_InventoryTest`)의 입력 액션을 `consume_input=False`로 바꿨습니다. 이번에 바뀐 것: `IA_Move`, `IA_Jump`, `IA_Crouch`, `IA_Look_Mouse`, `IA_Look_Stick`, `IA_Interact`.
+  3. 위 1에서 `SharedInput`이 빠져 `IMC_ShooterGame` 등은 스테이지에서 더 이상 추가되지 않습니다.
+- **스테이지 순회 확인(`lyra_stage_sweep.py`, 맵을 열고 그 스테이지의 실제 경험으로 PIE → 점검 → 종료 자동 반복):** 8개 스테이지(`L_DefaultEditorOverview`, `L_ShooterGym`, `L_ShooterPerf`, `L_Convolution_Blockout`, `L_Expanse_Blockout`, `L_InventoryTestMap`, `L_TopDownArenaGym`, `L_TopDown_LocalMultiplayer`) 모두 플레이어 폰이 푸리나, 체력 100/100, 소총·탄창 컴포넌트 있음, 사격 이벤트로 잔탄 20 → 19. 슈터 맵의 봇은 마네킹 3~11명으로 나옵니다.
+- **입력 확인(`lyra_input_probe.py`, 키 입력 직접):** `B_ShooterGame_Elimination` 경험에서 W로 이동(속도 120), 좌클릭 유지로 연사(20 → 6), R로 재장전(잔탄 20, 예비 600 → 586). 다른 스테이지의 키 입력은 사격 이벤트 호출까지만 보았습니다(`L_Expanse`, `L_FiringRange_WP` 본 맵은 열지 않았고 Blockout 맵과 같은 경험으로 확인).
+- **PIE 경험 오버라이드**는 확인 뒤 `B_Furina_Experience`로 되돌렸습니다(`lyra_set_experience_override.py <이름|none>`으로 바꿀 수 있음). `Config`의 값은 건드리지 않았습니다.
+
+## 메인 화면 포탈로 스테이지에 들어가면 마우스로 시점이 안 돌아가던 문제 (2026-11-18)
+
+- **재현(`lyra_look_probe.py`, 마지막 인자 `portal`):** PIE에서 `B_TeleportToUserFacingExperience` 위치로 폰을 옮겨 포탈을 작동시키면(Convolution으로 이동) 마우스를 움직여도 컨트롤 회전이 그대로였습니다. 콘솔 `ServerTravel`로 같은 맵에 가면 정상이라 포탈에만 있는 문제입니다. 포탈 없이 직접 시작한 Elimination, 기본 오버뷰, TopDownArena는 마우스 회전과 우클릭 정조준이 정상이었습니다(`Data/lyra_look_probe.json`).
+- **원인(`Saved/Logs`):** 포탈이 메뉴 레이어에 `W_NonInteractiveSpinner`를 띄울 때 CommonUI가 입력 모드를 Menu로 바꿉니다(뷰포트 마우스 캡처 없음, 커서 표시). 새 스테이지에서 게임 입력으로 되돌리는 곳이 없었습니다. 로그에 `Menu`, `NoCapture`, `bShowMouseCursor False -> True`만 있고 다시 `Game`으로 바뀌는 줄이 없었습니다.
+- **시도했다가 되돌린 것(`lyra_stage_layout_fix.py`):** `LAS_ShooterGame_StandardHUD`의 `W_ShooterHUDLayout` 레이아웃 요청을 경험 5개에 복사했지만 레이아웃이 올라오지 않아 효과가 없었고, `/Game` 경험이 플러그인 콘텐츠를 참조한다는 에셋 검사 오류만 늘었습니다. `revert`로 모두 비웠습니다.
+- **수정(`lyra_portal_input_fix.py`):** `ThirdPersonCharacter_BP`의 `ReceiveControllerChanged` 끝에 `GetPlayerController(0)` → `SetInputMode_GameOnly` → `bShowMouseCursor = false`를 넣었습니다(노드 `FPN_PIGet`, `FPN_PIGame`, `FPN_PICursor`). 플레이어가 폰을 잡을 때 게임 입력으로 복구합니다.
+- **확인:** 같은 포탈 경로에서 로그에 `NoCapture -> CapturePermanently`, `bShowMouseCursor True -> False`가 폰을 잡은 직후에 찍혔고, 마우스를 움직이자 컨트롤 yaw가 바뀌었습니다. 포탈 중 Convolution(ControlPoints) 한 곳만 확인했습니다.
+
+## 비조준·견착 사격 시 한 발당 화면 흔들림 (2026-11-18)
+
+- **에셋(`lyra_fire_shake.py`, 갱신은 `lyra_shake_asset.py [강도]`):** `/Game/Furina/CameraShakes/CS_FurinaShot`(CameraShakeBase 블루프린트, `WaveOscillatorCameraShakePattern`). 길이 0.18초(들어오기 0.015, 나가기 0.12), 회전 진동 피치 0.55° 34Hz, 요 0.40° 27Hz, 롤 0.50° 31Hz. 위치 흔들림은 끄고(`location_amplitude_multiplier` 0) 회전만 씁니다. 강도 인자는 진폭 배율(기본 1.0, 0이면 흔들림 없음).
+- **그래프:** `ThirdPersonCharacter_BP`의 `FurinaRifleShot` 체인에서 `M4_SetFurinaAmmo`(발사가 성립해 탄약이 줄어든 직후) 다음에 `NOT FurinaADS.IsActive` 분기(`FPN_ShkNot`, `FPN_ShkBr`)를 넣고, 참이면 `PlayerCameraManager.StartCameraShake`(`FPN_ShkStart`, 스케일 1.0)를 호출합니다. 정조준 중에는 흔들지 않고 비조준과 견착에서는 흔듭니다. 총이 M4든 P220이든 같은 위치를 지나므로 둘 다 흔들립니다.
+- **한 번 틀렸던 점:** `new_object`로 만든 패턴은 `rotation_amplitude_multiplier`가 0이라 처음에는 흔들림이 0이었습니다(`lyra_shake_ref_dump.py`로 번들 셰이크와 비교해 발견). 1.0으로 올리고 위치 진폭 배율을 0으로 했습니다.
+- **PIE 측정(`lyra_shake_pie_probe.py`, 오버뷰 맵, 발사 후 0.7초간 카메라 회전 − 컨트롤 회전의 최대 절대값, 피치/요/롤):** 비조준 0.55°/0.19°/0.48°, 견착 0.49°/0.38°/0.48°, 정조준 0/0/0. 발사 이벤트를 직접 호출해 측정했고(마우스 클릭 사격은 자동화로 못 넣음), 발당 값은 시작 위상이 무작위라 매번 조금 다릅니다. 눈으로 보지는 못했습니다.
+
+## 분석: Downloads/fps-animated-carbine (긴급 재장전 레퍼런스, 2026-11-19)
+
+- **파일:** `source/arms@carbine.fbx`(Cinema 4D에서 내보낸 팔+카라빈, 텍스처 11장). 30fps, 프레임 0~222(7.4초) 한 줄 타임라인에 동작 여러 개가 이어져 있고 마커는 없습니다. 팔 리그 `Null`(뼈 48개: `L_arm`/`R_arm`, 팔꿈치, 손목, 손가락, 폴 타깃 2개)과 부품 객체(`clip`, `bolt`, `handle`, `boltcatch`, `release`, `lid`, `trigger`)가 각각 애니메이션을 가집니다. 도구: `Scripts/Blender/inspect_carbine_fbx.py`, `sample_carbine_anim.py`, `render_carbine_frames.py`(결과 `Data/carbine_fbx_inspect.json`, `carbine_anim_samples.json`, `Scratch/carbine_sheet_*_side.png`). 거리 단위는 총 길이를 약 74cm로 가정한 참고 환산이라 정확하지 않습니다.
+- **구간 분해(부품 움직임과 옆면 렌더로 확인):**
+  - 0~8 대기, 8~20 총 올림.
+  - **20~64 긴급(빈 탄창) 재장전:** 노리쇠가 뒤에 걸려 있다가(프레임 22~24에 노리쇠가 뒤로 이동, 이후 52까지 유지) 왼손이 탄창을 아래로 뽑고(24~32, 총 기준 약 28cm), 새 탄창을 들고(34) 삽입(36~46), 왼손이 총 위로 넘어가 노리쇠 멈치를 치고(50~54) 노리쇠가 앞으로 돌아옵니다(54~56). 왼손이 손잡이로 복귀(58~64). 오른손은 권총손잡이에 고정입니다(손목이 약 0.01cm 움직임).
+  - **70~110 전술(탄창 남은) 재장전:** 같은 탄창 교체 동작(뽑기 84~92, 삽입 96~104)이고 노리쇠는 앞에 있는 채로 유지됩니다. 마지막에 손잡이로 복귀.
+  - 110~126 장전손잡이 당김(약 16프레임), 132~148 큰 회전 동작(점검/기타로 추정, 눈으로 확인하지 않음), 156~168 장전손잡이 한 번 더, 176~204 대기 호흡, 204~222 큰 회전 후 안정(꺼내기로 추정).
+- **한계:** 라이선스 문서는 폴더에 없습니다. 모션을 이 프로젝트에 반영하기 전에 출처의 이용 조건을 확인해야 합니다. 반영은 하지 않았습니다.
+
+## 긴급(빈 탄창) 재장전 + 노리쇠 후퇴 + 총 모델 개조 (2026-11-19)
+
+- **모델 개조(`Scripts/Blender/build_colt_rifle_bolt.py`):** Colt 본체 메시는 내부 부품까지 모델링돼 있습니다(`analyze_colt_parts.py`/`render_colt_parts.py`로 연결 성분을 색으로 구분해 확인). 노리쇠 캐리어(1,038면)와 그 안쪽 부품(100면) 성분을 찾아 `SM_M4Bolt`(정적 메시, 원점 = 소총 원점이라 장착 위치 항등)로 분리하고, `SK_M4A1`에서는 뺐습니다(본체 정점 32,370 → 31,797). 총 길이 80cm와 변환은 이전 `build_colt_rifle_hq.py`와 같습니다. 이전 FBX는 `Backups_bolt/`, 이전 `SK_M4A1`은 `/Game/Furina/Backups/SK_M4A1_pre_bolt`에 있습니다. 가져오기: `lyra_bolt_import.py`. Blender 렌더(`check_bolt_split.py`)에서 노리쇠를 뒤로 7cm 옮기면 배출구에서 뒤로 빠지는 것을 확인했습니다.
+- **애니메이션 분석(`fps-animated-carbine/source/arms@carbine.fbx`):** 프레임 9~69(30fps, 60프레임 간격 = 2.0초)를 리샘플 없이 1:1로 씁니다(`sample_carbine_anim.py`로 프레임별 추출 → `Scripts/Tools/build_empty_reload_curves.py` → `Data/empty_reload_curves.json`). 왼손목의 총 기준 이동만 가져오고(손목 회전, 손가락, 총의 기울기는 가져오지 않음) 푸리나에 맞춰 SC 0.973배, 탄창을 쥐는 순간의 변위를 기존 재장전의 잡기 값과 맞추는 보정(`CORR`)을 더했습니다. 노리쇠는 푸리나에서는 처음부터 뒤에 걸려 있으므로 원본에서 노리쇠가 뒤로 가는 프레임(22~24)은 쓰지 않고, 멈치를 치는 52~56에서 `BoltBack` 1 → 0으로 풀립니다.
+  - 이벤트(초): 탄창 쥠 0.47, 낙하 0.73, 새 탄창 0.83, 장착 1.23, 노리쇠 멈치 1.43~1.57, 복귀 1.9~2.0.
+- **애니메이션 자산(`lyra_empty_reload_apply.py`, `lyra_empty_reload_len.py`):** `AS_Furina_FP_ReloadEmpty`/`AM_Furina_FP_ReloadEmpty`(기존 재장전 자산의 복제, 뼈 애니메이션은 그대로 쓰고 CR이 손을 곡선으로 덮어씀). 곡선 `ReloadLX/LY/LZ`, `MagState`, 새 곡선 `BoltBack`을 넣고 몽타주 구간을 2.0초로 잘랐으며 `RifleReload` 곡선도 2.0초에 끝납니다. 몽타주 길이 속성은 파이썬으로 못 바꿔 3.13초로 표시되지만 구간이 2.0초라 PIE에서 재장전이 2.0초에 끝났습니다.
+- **블루프린트(`lyra_bolt_graph.py`, 노드 `FBX_*`, `FBT_*`):**
+  - 컴포넌트 `FurinaBolt`(부모 `FurinaRifle`), 실수 변수 `FurinaBoltKick`·`FurinaBoltHold`.
+  - `FurinaMagUpdate`(0.016초 타이머) 맨 앞: 걸림 목표(재장전 중이면 `BoltBack` 곡선, 아니면 잔탄 0이면 1) → `FInterpTo` 속도 35, 위치 = max(걸림, sin(π(1−발사 킥))) × −7cm. 한 발마다 `FurinaBoltKick`이 1로 올라가 약 0.06초 동안 뒤로 갔다 돌아오고, 잔탄이 0이 되면 뒤에 걸립니다. 권총 장착 중에는 숨깁니다.
+  - `FurinaRifleShot`의 `M4_SetFurinaAmmo` 바로 뒤에서 킥을 올립니다(카메라 셰이크 분기보다 앞).
+  - 재장전 요청: 소총이고 잔탄 0이면 `AM_Furina_FP_ReloadEmpty`와 타이머 2.0초, 아니면 기존(3.0초).
+- **PIE 측정(`lyra_empty_reload_probe.py`, 발사/재장전 이벤트 호출, 슬로모 0.15):** 단발 5발에서 노리쇠 상대 Y가 0 → −6.96cm → 0으로 왕복, 잔탄 0에서 −7.0으로 걸림. 긴급 재장전은 `MagState` 0 → 1(0.49) → 2(0.73) → 1(0.84) → 0(1.23), `BoltBack` 1 → 0(1.5~1.7)으로 노리쇠가 풀리고 2.0초 직후 잔탄 20. 잔탄이 남은 재장전은 3.0초이고 노리쇠는 움직이지 않습니다. 옆면 캡처(`Data/empty_reload_side*`)에서 왼손이 탄창 → 아래 → 새 탄창 → 총 위로 오는 것과 배출구 안 캐리어가 걸림 상태와 전진 상태에서 다른 것을 확인했습니다.
+- **미확인:** 1인칭 화면(손이 총에 가려 보임), 총을 바꿀 때(권총 장착 중 노리쇠 숨김), 달리기·앉기 중 긴급 재장전, 1인칭 탄창 잡기 보정 노드(grab 계열)가 새 곡선에서도 벽을 뚫지 않는지는 수치로 확인하지 않았습니다. 왼손 회전과 손가락은 원본을 가져오지 않아 노리쇠 멈치를 칠 때 손 모양은 기존 재장전 값 그대로입니다.
+- **에디터 크래시 원인과 재발 방지:** 블루프린트 편집 스크립트가 에디터를 여러 번 죽였습니다. 로그로 확인한 원인은 지운 노드와 같은 이름으로 새 노드의 `rename`을 하면 `Renaming an object on top of an existing object`로 치명 오류가 나는 것이었습니다(지운 노드가 GC되기 전까지 이름이 남음). 또 `get_basic_type_by_name('float')`은 정수 변수를 만들어 노드가 정수로 굳었습니다(`'real'`을 써야 함). 스크립트가 파이썬 전역에 블루프린트/노드 객체를 남겨 두면 이후 GC에서 죽는 문제도 있어 스크립트 끝에서 전역을 비웁니다. 규칙: 노드를 지웠다면 새 이름 접두사를 쓸 것(`FBT_` → `FBX_`).
+
+## 긴급 재장전에 피카티니 레일 뒤쪽 장전손잡이 당기기 추가 (2026-11-19)
+
+- **증상:** 긴급 재장전이 노리쇠 멈치 치기로 끝나고 장전손잡이는 당기지 않았습니다. 1인칭에서는 손이 래치에 닿지도 않았습니다(PIE 측정: 검지 끝이 래치보다 앞 8cm, 아래 4cm).
+- **모델(`build_colt_rifle_bolt.py`):** 장전손잡이(844면, 길이 16.4cm, 뒤쪽 끝 T 래치)를 본체에서 빼서 `SM_M4Handle`로 분리했습니다(렌더로 확인: `render_colt_parts.py -- <성분번호...>`). 본체 정점 31,797 → 31,373. 이전 상태는 `Backups_bolt/SK_M4A1_bolt_only.fbx`, `/Game/Furina/Backups/SK_M4A1_pre_handle`.
+- **곡선(`Scripts/Tools/build_empty_reload_curves_v2.py`, v1은 `Data/empty_reload_curves_v1.json`):** 프레임 0~36은 v1과 같고(탄창 뽑기/교체/삽입, 장착 k37 = 1.23초), 37~45에서 장착 자세 → 장전손잡이 잡는 자세 `W_G = (6.5, -22.3, 4.9)`(검지 끝이 래치 왼쪽 윗면에 오도록), 45~47 당김(`HandleBack` 0 → 1, 손도 5.9cm 뒤로), 47~51 유지, 52 놓음(`HandleBack` 1 → 0.4, `BoltBack` 1 → 0.35), 53 완전히 앞으로, 53~60 손이 기본 위치로 복귀합니다. 이동 경로의 곡선 성분은 원본 FBX f105~115 의 왼손목 경로를 따르고, 시각은 원본 장전손잡이 구간(f114~124)에서 가져왔습니다. 손목 목표 → 곡선 변위는 `변위 = 목표 - (-1.91, 9.83, 4.28)`(PIE 측정 회귀, rms 0.14~0.40cm).
+- **블루프린트(`lyra_handle_graph.py comp` / `tick`):** 컴포넌트 `FurinaHandle`(부모 `FurinaRifle`), `FurinaMagUpdate` 틱 끝에 `HandleBack` × −5.9cm 를 상대 Y 로, 권총 장착 중에는 숨김(노드 `FBH_*`). 곡선 `HandleBack`/`HandleFp`는 `lyra_empty_reload_apply.py`로 `AS/AM_Furina_FP_ReloadEmpty`에 들어 있습니다.
+- **1인칭 어긋남의 원인과 수정(`lyra_cr_add_curve.py`, `lyra_fp_handle_fade.py`, `lyra_fp_handle_offset.py`):** 1인칭에서는 재장전 중 `RlEnvFp`가 왼손 목표에 탄창 바닥 잡기용 상수 오프셋(`RlDeltaFp`)을 더하고 손을 손바닥이 위로 오게 돌립니다. 이것이 손잡이 구간에서 손목을 (−4.5, +3.9, −5.3)cm 어긋나게 했습니다. 곡선 `HandleFp`(손잡이 구간에서 1)를 읽어 `RlEnvFp.B`를 `RlFpW × (1 − HandleFp)`로 바꿔 그 구간의 1인칭 탄창 보정을 껐습니다(노드 `RlHC`, `RlHInv`, `RlFpW2`). 이때 컨트롤 릭의 `GetCurveValue`는 릭 계층에 등록된 곡선만 읽으므로 `HandleFp`를 릭 곡선으로 등록해야 했습니다(처음에는 등록 안 해서 효과가 없었음). 보정을 끈 뒤에도 남는 (+4.3, +4.2, −2.4)cm 는 손잡이 구간에만 1인칭 가중치로 (−4.3, −4.2, +2.4)를 더해 맞췄습니다(`RlEnvH`, `RlEnvFpH`, `RlDeltaFpH`, `RLV4`).
+- **PIE 측정(`lyra_empty_reload_probe.py`, 이벤트 호출):** 1인칭 당김 구간 왼손목 (6.7, −27~−28.5, 4.8~4.9), 검지 끝 (2.7~3.0, −20~−21.3, 7.0)으로 래치(x ±2.5, 뒤쪽 끝 −21.6, 윗면 z 6.4) 위에 닿고 3인칭 값과 같습니다. `FurinaHandle` 상대 Y 0 → −5.9 → 0, 노리쇠 −7.0 → 약 0(걸림이 손잡이 놓는 시점에 풀림), 완료 후 잔탄 20, 일반 재장전은 3.0초.
+- **캡처:** 3인칭 옆면(`Data/empty_reload_hL2_*`)에서 손이 총 뒤쪽 위(뒤가늠자 뒤, 완충관 위)로 올라가 당기는 것을 봤습니다. 1인칭(`Data/empty_reload_hFP5_*`)에서는 손을 뻗어 총 뒤쪽 위에서 잡는 것까지 화면에 보이고, 당긴 상태(래치가 뒤로 5.9cm)에서는 손과 손잡이가 카메라 뒤로 넘어가 화면에서 사라집니다(카메라가 총 바로 뒤에 있음).
+- **미확인:** 손바닥·손가락 모양은 이 구간에서 기본 손 모양 그대로라 래치를 잡는 모양이 아닙니다. 달리기·앉기 중 긴급 재장전, 권총 교체 중 손잡이 숨김은 확인하지 않았습니다.
+- **에디터 크래시 규칙(추가):** 블루프린트를 편집하는 스크립트는 에디터를 새로 시작할 때마다 한 번만 돌립니다. 같은 세션에서 두 번째로 돌리면 파이썬 노드 래퍼가 정리되면서 에디터가 죽는 경우가 반복됐습니다(컨트롤 릭/애니메이션 에셋 스크립트는 연속으로 돌려도 문제없었음).

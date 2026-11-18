@@ -1,0 +1,15 @@
+{
+ "GAIN": 2.6,
+ "MAX_DEG": 45.0,
+ "revert": false,
+ "had": true,
+ "links": [],
+ "set": [
+  true,
+  true,
+  true,
+  true,
+  true
+ ],
+ "saved": true
+}

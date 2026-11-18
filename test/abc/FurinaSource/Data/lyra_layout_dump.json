@@ -1,0 +1,60 @@
+{
+ "/Game/System/Experiences/B_Furina_Experience": [
+  {
+   "class": "GameFeatureAction_AddAbilities"
+  },
+  {
+   "class": "GameFeatureAction_AddComponents"
+  },
+  {
+   "class": "GameFeatureAction_AddWidgets",
+   "layout": [],
+   "widgets_err": "StructBase: Failed to find property 'slot_id' for attribute 'slot_id' on 'LyraHUDElementEntry'"
+  }
+ ],
+ "/Game/System/Experiences/B_LyraDefaultExperience": [
+  {
+   "class": "GameFeatureAction_AddWidgets",
+   "layout_err": "StructBase: Failed to find property 'layout_class' for attribute 'layout_class' on 'LyraHUDLayoutReq",
+   "widgets": []
+  }
+ ],
+ "/ShooterCore/Experiences/B_ShooterGame_Elimination": [
+  {
+   "class": "GameFeatureAction_AddAbilities"
+  },
+  {
+   "class": "GameFeatureAction_AddComponents"
+  },
+  {
+   "class": "GameFeatureAction_AddWidgets",
+   "layout": [],
+   "widgets_err": "StructBase: Failed to find property 'slot_id' for attribute 'slot_id' on 'LyraHUDElementEntry'"
+  }
+ ],
+ "/TopDownArena/System/Experiences/B_TopDownArenaExperience": [
+  {
+   "class": "GameFeatureAction_AddWidgets",
+   "layout_err": "StructBase: Failed to find property 'layout_class' for attribute 'layout_class' on 'LyraHUDLayoutReq",
+   "widgets": []
+  },
+  {
+   "class": "GameFeatureAction_SplitscreenConfig"
+  },
+  {
+   "class": "GameFeatureAction_AddComponents"
+  }
+ ],
+ "/ShooterCore/Experiences/LAS_ShooterGame_StandardHUD": [
+  {
+   "class": "GameFeatureAction_AddWidgets",
+   "layout_err": "StructBase: Failed to find property 'layout_class' for attribute 'layout_class' on 'LyraHUDLayoutReq",
+   "widgets_err": "StructBase: Failed to find property 'slot_id' for attribute 'slot_id' on 'LyraHUDElementEntry'"
+  }
+ ],
+ "/ShooterCore/Experiences/LAS_ShooterGame_StandardComponents": [
+  {
+   "class": "GameFeatureAction_AddComponents"
+  }
+ ]
+}

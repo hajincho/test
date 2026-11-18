@@ -1,0 +1,74 @@
+{
+ "BUTT": [
+  0.0,
+  -32.07,
+  4.53
+ ],
+ "revert": false,
+ "had": false,
+ "gpos_targets": [
+  "GPosR.A"
+ ],
+ "links": [
+  [
+   "GOffB.Result",
+   "PbOff.A",
+   true
+  ],
+  [
+   "AimQ.Result",
+   "PbRot.Transform",
+   true
+  ],
+  [
+   "PbOff.Result",
+   "PbRot.Vector",
+   true
+  ],
+  [
+   "PbOff.Result",
+   "PbD.A",
+   true
+  ],
+  [
+   "PbRot.Result",
+   "PbD.B",
+   true
+  ],
+  [
+   "TpW.Result",
+   "PbWf.A",
+   true
+  ],
+  [
+   "PbD.Result",
+   "PbW.Value",
+   true
+  ],
+  [
+   "PbWf.Result",
+   "PbW.Factor",
+   true
+  ],
+  [
+   "GPos.Result",
+   "GPos2.A",
+   true
+  ],
+  [
+   "PbW.Result",
+   "GPos2.B",
+   true
+  ],
+  [
+   "GPos2.Result",
+   "GPosR.A",
+   true
+  ]
+ ],
+ "set": [
+  true,
+  true
+ ],
+ "saved": true
+}

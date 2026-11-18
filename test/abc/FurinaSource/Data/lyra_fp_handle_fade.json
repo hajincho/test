@@ -1,0 +1,28 @@
+{
+ "old_b_src": [
+  "RlFpW.Result"
+ ],
+ "links": [
+  [
+   "RlHC.Value",
+   "RlHInv.Value",
+   true
+  ],
+  [
+   "RlFpW.Result",
+   "RlFpW2.A",
+   true
+  ],
+  [
+   "RlHInv.Result",
+   "RlFpW2.B",
+   true
+  ],
+  [
+   "RlFpW2.Result",
+   "RlEnvFp.B",
+   true
+  ]
+ ],
+ "saved": true
+}

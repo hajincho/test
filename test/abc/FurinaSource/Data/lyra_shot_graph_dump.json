@@ -1,0 +1,257 @@
+{
+ "n": 994,
+ "events": [],
+ "ev": "K2Node_FPF_Shot",
+ "chain": [
+  {
+   "node": "K2Node_FPF_Shot",
+   "cls": "K2Node_CustomEvent",
+   "then": [
+    "FPN_FireLastSet"
+   ]
+  },
+  {
+   "node": "FPN_FireLastSet",
+   "cls": "K2Node_VariableSet",
+   "then": [
+    "FPN_SpecialFireGate"
+   ]
+  },
+  {
+   "node": "FPN_SpecialFireGate",
+   "cls": "K2Node_IfThenElse",
+   "then": [
+    "K2Node_FPF_SprintB"
+   ],
+   "else": []
+  },
+  {
+   "node": "K2Node_FPF_SprintB",
+   "cls": "K2Node_IfThenElse",
+   "then": [
+    "K2Node_FPF_AutoSh"
+   ],
+   "else": [
+    "K2Node_FPF_CanB"
+   ]
+  },
+  {
+   "node": "K2Node_FPF_AutoSh",
+   "cls": "K2Node_CallFunction",
+   "then": [
+    "K2Node_FPF_AutoFlag"
+   ]
+  },
+  {
+   "node": "K2Node_FPF_CanB",
+   "cls": "K2Node_IfThenElse",
+   "then": [
+    "M4_FireGate"
+   ],
+   "else": []
+  },
+  {
+   "node": "K2Node_FPF_AutoFlag",
+   "cls": "K2Node_CallFunction",
+   "then": [
+    "K2Node_FPF_AutoYaw"
+   ]
+  },
+  {
+   "node": "M4_FireGate",
+   "cls": "K2Node_IfThenElse",
+   "then": [
+    "K2Node_FPF_FaceAim"
+   ],
+   "else": []
+  },
+  {
+   "node": "K2Node_FPF_AutoYaw",
+   "cls": "K2Node_VariableSet",
+   "then": [
+    "K2Node_FPF_AutoOrient"
+   ]
+  },
+  {
+   "node": "K2Node_FPF_FaceAim",
+   "cls": "K2Node_CallFunction",
+   "then": [
+    "P2_Branch_bb336123"
+   ]
+  },
+  {
+   "node": "K2Node_FPF_AutoOrient",
+   "cls": "K2Node_VariableSet",
+   "then": []
+  },
+  {
+   "node": "P2_Branch_bb336123",
+   "cls": "K2Node_IfThenElse",
+   "then": [
+    "K2Node_FPF_Bolt"
+   ],
+   "else": [
+    "K2Node_FPF_Kick"
+   ]
+  },
+  {
+   "node": "K2Node_FPF_Bolt",
+   "cls": "K2Node_CallFunction",
+   "then": [
+    "FSG_Trace"
+   ]
+  },
+  {
+   "node": "K2Node_FPF_Kick",
+   "cls": "K2Node_CallFunction",
+   "then": [
+    "K2Node_FPF_Bolt"
+   ]
+  },
+  {
+   "node": "FSG_Trace",
+   "cls": "K2Node_CallFunction",
+   "then": [
+    "K2Node_FPF_Aim"
+   ]
+  },
+  {
+   "node": "K2Node_FPF_Aim",
+   "cls": "K2Node_CallFunction",
+   "then": [
+    "P2_Branch_124d893"
+   ]
+  },
+  {
+   "node": "P2_Branch_124d893",
+   "cls": "K2Node_IfThenElse",
+   "then": [
+    "P2_SpawnP220Bullet_6c0a854"
+   ],
+   "else": [
+    "K2Node_FPF_Spawn"
+   ]
+  },
+  {
+   "node": "P2_SpawnP220Bullet_6c0a854",
+   "cls": "K2Node_SpawnActorFromClass",
+   "then": [
+    "K2Node_FPF_Recoil"
+   ]
+  },
+  {
+   "node": "K2Node_FPF_Spawn",
+   "cls": "K2Node_SpawnActorFromClass",
+   "then": [
+    "K2Node_FPF_Recoil"
+   ]
+  },
+  {
+   "node": "K2Node_FPF_Recoil",
+   "cls": "K2Node_CallFunction",
+   "then": [
+    "FPN_ShotCountInc"
+   ]
+  },
+  {
+   "node": "FPN_ShotCountInc",
+   "cls": "K2Node_VariableSet",
+   "then": [
+    "M4_SetFurinaAmmo"
+   ]
+  },
+  {
+   "node": "M4_SetFurinaAmmo",
+   "cls": "K2Node_VariableSet",
+   "then": [
+    "M4_FlashSpawn"
+   ]
+  },
+  {
+   "node": "M4_FlashSpawn",
+   "cls": "K2Node_CallFunction",
+   "then": [
+    "M4_FlashFinish"
+   ]
+  },
+  {
+   "node": "M4_FlashFinish",
+   "cls": "K2Node_CallFunction",
+   "then": [
+    "FNS_SparkSpawn"
+   ]
+  },
+  {
+   "node": "FNS_SparkSpawn",
+   "cls": "K2Node_CallFunction",
+   "then": [
+    "FNS_SetGlobalScale"
+   ]
+  },
+  {
+   "node": "FNS_SetGlobalScale",
+   "cls": "K2Node_CallFunction",
+   "then": [
+    "FNS_SetUseShell"
+   ]
+  },
+  {
+   "node": "FNS_SetUseShell",
+   "cls": "K2Node_CallFunction",
+   "then": [
+    "P2_Branch_73fdc27"
+   ]
+  },
+  {
+   "node": "P2_Branch_73fdc27",
+   "cls": "K2Node_IfThenElse",
+   "then": [
+    "P2_CaseP220Begin_37f2b08"
+   ],
+   "else": [
+    "M4_CaseSpawn"
+   ]
+  },
+  {
+   "node": "P2_CaseP220Begin_37f2b08",
+   "cls": "K2Node_CallFunction",
+   "then": [
+    "P2_CaseP220Finish_60d1b81"
+   ]
+  },
+  {
+   "node": "M4_CaseSpawn",
+   "cls": "K2Node_CallFunction",
+   "then": [
+    "M4_CaseFinish"
+   ]
+  },
+  {
+   "node": "P2_CaseP220Finish_60d1b81",
+   "cls": "K2Node_CallFunction",
+   "then": [
+    "P2_Branch_8e47b848"
+   ]
+  },
+  {
+   "node": "M4_CaseFinish",
+   "cls": "K2Node_CallFunction",
+   "then": [
+    "P2_Branch_8e47b848"
+   ]
+  },
+  {
+   "node": "P2_Branch_8e47b848",
+   "cls": "K2Node_IfThenElse",
+   "then": [
+    "P2_Timer_FurinaPistolFx_2931cf49"
+   ],
+   "else": []
+  },
+  {
+   "node": "P2_Timer_FurinaPistolFx_2931cf49",
+   "cls": "K2Node_CallFunction",
+   "then": []
+  }
+ ]
+}

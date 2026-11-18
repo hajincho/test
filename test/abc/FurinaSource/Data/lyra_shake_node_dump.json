@@ -1,0 +1,35 @@
+{
+ "FPN_ShkNot": {
+  "A_e": "'BlueprintGraphPin' object has no attribute 'get_n"
+ },
+ "FPN_ShkBr": {
+  "Condition_e": "'BlueprintGraphPin' object has no attribute 'get_n",
+  "execute_e": "'BlueprintGraphPin' object has no attribute 'get_n"
+ },
+ "FPN_ShkStart": {
+  "ShakeClass": {
+   "val": "/Game/Furina/CameraShakes/CS_FurinaShot.CS_FurinaShot_C",
+   "conn": []
+  },
+  "Scale": {
+   "val": "1.0",
+   "conn": []
+  },
+  "PlaySpace": {
+   "val": "CameraLocal",
+   "conn": []
+  },
+  "self_e": "'BlueprintGraphPin' object has no attribute 'get_n",
+  "execute_e": "'BlueprintGraphPin' object has no attribute 'get_n"
+ },
+ "K2Node_FPF_CamMgr": {},
+ "K2Node_FPF_AdsOnF": {
+  "self_e": "'BlueprintGraphPin' object has no attribute 'get_n"
+ },
+ "err_nodes": [],
+ "warn_nodes": [
+  "K2Node_InputAction_0",
+  "K2Node_InputAxisEvent_2",
+  "K2Node_InputAxisEvent_3"
+ ]
+}

@@ -1,0 +1,36 @@
+{
+ "n": 7024,
+ "zmin": -7.848,
+ "n_low": 132,
+ "n_low_fit": 128,
+ "plane": {
+  "a": -7.4189,
+  "b_per_y": 0.0658,
+  "c_per_x": -0.0289,
+  "tilt_deg_y": 3.77,
+  "tilt_deg_x": -1.65
+ },
+ "revert": true,
+ "center": [
+  0.214,
+  -3.906
+ ],
+ "bounds_after": {
+  "origin": [
+   -0.09,
+   -1.9,
+   -2.23
+  ],
+  "extent": [
+   1.43,
+   3.01,
+   5.62
+  ]
+ },
+ "after": {
+  "zmin": -7.848,
+  "tilt_deg_y": 3.29,
+  "tilt_deg_x": -1.58
+ },
+ "saved": true
+}

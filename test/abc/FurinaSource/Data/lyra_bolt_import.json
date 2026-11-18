@@ -1,0 +1,40 @@
+{
+ "old_verts": null,
+ "backup": true,
+ "slots": {
+  "sk": [
+   "colt_m4_main",
+   "colt_m4_furniture",
+   "matech_rear_sight"
+  ],
+  "bolt": [
+   "colt_m4_main"
+  ]
+ },
+ "sk_saved": true,
+ "sk_bounds": [
+  [
+   -0.4,
+   0.84,
+   0.06
+  ],
+  [
+   3.24,
+   40.0,
+   10.42
+  ]
+ ],
+ "bolt_saved": true,
+ "bolt_bounds": [
+  [
+   -0.0,
+   -5.8,
+   4.25
+  ],
+  [
+   1.15,
+   6.73,
+   1.63
+  ]
+ ]
+}

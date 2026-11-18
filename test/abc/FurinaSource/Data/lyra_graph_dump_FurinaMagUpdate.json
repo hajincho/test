@@ -1,0 +1,142 @@
+{
+ "ev_name": "FurinaMagUpdate",
+ "n": 997,
+ "ev": "FMG_Update",
+ "chain": [
+  {
+   "node": "FMG_Update",
+   "cls": "K2Node_CustomEvent",
+   "then": [
+    "P2_Branch_01989945"
+   ]
+  },
+  {
+   "node": "P2_Branch_01989945",
+   "cls": "K2Node_IfThenElse",
+   "then": [],
+   "else": [
+    "FMG_BrChanged"
+   ]
+  },
+  {
+   "node": "FMG_BrChanged",
+   "cls": "K2Node_IfThenElse",
+   "then": [
+    "FMG_BrHand"
+   ],
+   "else": []
+  },
+  {
+   "node": "FMG_BrHand",
+   "cls": "K2Node_IfThenElse",
+   "then": [
+    "FMG_BrFromSeated"
+   ],
+   "else": [
+    "FMG_BrGone"
+   ]
+  },
+  {
+   "node": "FMG_BrFromSeated",
+   "cls": "K2Node_IfThenElse",
+   "then": [
+    "FMG_RefToRifle"
+   ],
+   "else": [
+    "FMG_MagToRef2"
+   ]
+  },
+  {
+   "node": "FMG_BrGone",
+   "cls": "K2Node_IfThenElse",
+   "then": [
+    "FMG_DropSpawn"
+   ],
+   "else": [
+    "FMG_MagToRifle"
+   ]
+  },
+  {
+   "node": "FMG_RefToRifle",
+   "cls": "K2Node_CallFunction",
+   "then": [
+    "FMG_RefToWrist"
+   ]
+  },
+  {
+   "node": "FMG_MagToRef2",
+   "cls": "K2Node_CallFunction",
+   "then": [
+    "FMG_ShowHand2"
+   ]
+  },
+  {
+   "node": "FMG_DropSpawn",
+   "cls": "K2Node_CallFunction",
+   "then": [
+    "FMG_DropFinish"
+   ]
+  },
+  {
+   "node": "FMG_MagToRifle",
+   "cls": "K2Node_CallFunction",
+   "then": [
+    "FMG_ShowSeated"
+   ]
+  },
+  {
+   "node": "FMG_RefToWrist",
+   "cls": "K2Node_CallFunction",
+   "then": [
+    "FMG_MagToRef"
+   ]
+  },
+  {
+   "node": "FMG_ShowHand2",
+   "cls": "K2Node_CallFunction",
+   "then": [
+    "FMG_SetLast"
+   ]
+  },
+  {
+   "node": "FMG_DropFinish",
+   "cls": "K2Node_CallFunction",
+   "then": [
+    "FMG_HideMag"
+   ]
+  },
+  {
+   "node": "FMG_ShowSeated",
+   "cls": "K2Node_CallFunction",
+   "then": [
+    "FMG_SetLast"
+   ]
+  },
+  {
+   "node": "FMG_MagToRef",
+   "cls": "K2Node_CallFunction",
+   "then": [
+    "FMG_ShowHand"
+   ]
+  },
+  {
+   "node": "FMG_SetLast",
+   "cls": "K2Node_VariableSet",
+   "then": []
+  },
+  {
+   "node": "FMG_HideMag",
+   "cls": "K2Node_CallFunction",
+   "then": [
+    "FMG_SetLast"
+   ]
+  },
+  {
+   "node": "FMG_ShowHand",
+   "cls": "K2Node_CallFunction",
+   "then": [
+    "FMG_SetLast"
+   ]
+  }
+ ]
+}

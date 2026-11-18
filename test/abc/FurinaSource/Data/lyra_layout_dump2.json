@@ -1,0 +1,65 @@
+{
+ "/Game/System/Experiences/B_LyraDefaultExperience": [
+  {
+   "fields": [
+    "assign",
+    "cast",
+    "copy",
+    "export_text",
+    "get_editor_property",
+    "import_text",
+    "set_editor_properties",
+    "set_editor_property",
+    "static_struct",
+    "to_dict",
+    "to_tuple"
+   ],
+   "str": "<Struct 'LyraHUDLayoutRequest' (0x00000177AB8F9E00) {}>"
+  },
+  {
+   "widgets_n": 0
+  }
+ ],
+ "/ShooterCore/Experiences/LAS_ShooterGame_StandardHUD": [
+  {
+   "fields": [
+    "assign",
+    "cast",
+    "copy",
+    "export_text",
+    "get_editor_property",
+    "import_text",
+    "set_editor_properties",
+    "set_editor_property",
+    "static_struct",
+    "to_dict",
+    "to_tuple"
+   ],
+   "str": "<Struct 'LyraHUDLayoutRequest' (0x00000177AB8F0400) {}>"
+  },
+  {
+   "widgets_n": 11
+  }
+ ],
+ "/TopDownArena/System/Experiences/B_TopDownArenaExperience": [
+  {
+   "fields": [
+    "assign",
+    "cast",
+    "copy",
+    "export_text",
+    "get_editor_property",
+    "import_text",
+    "set_editor_properties",
+    "set_editor_property",
+    "static_struct",
+    "to_dict",
+    "to_tuple"
+   ],
+   "str": "<Struct 'LyraHUDLayoutRequest' (0x00000177AB8F4C40) {}>"
+  },
+  {
+   "widgets_n": 0
+  }
+ ]
+}

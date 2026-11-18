@@ -7,6 +7,12 @@ import unreal, json, sys, math, traceback
 OUT = r'C:\Users\fromj\Downloads\test\test\abc\FurinaSource\Data\lyra_torso_twist.json'
 R = {}
 DEG = 14.0
+for _a in sys.argv[1:]:   # `deg=m8`(= -8) 처럼 넘김. 양수 = 오른쪽 어깨 앞/왼쪽 뒤, 음수 = 왼쪽 어깨 앞/오른쪽 뒤
+    if _a.startswith('deg='): DEG = float(_a[4:].replace('m', '-'))   # '-' 가 들어간 인자는 py 명령에서 사라지므로 음수는 deg=m8 로 쓴다
+import os
+_DF = r'C:\Users\fromj\Downloads\test\test\abc\FurinaSource\Data\twist_deg.txt'   # 인자가 안 넘어올 때를 위해: 이 파일이 있으면 그 값을 쓴다(현재 설정값 기록 겸용)
+if os.path.exists(_DF): DEG = float(open(_DF).read().strip())
+R['argv'] = list(sys.argv)
 BONE = 'Spine'   # CR 계층(SK_Furina)의 뼈 이름. Manny 이름(spine_03)은 CR 에 없어 처음엔 아무 효과가 없었다
 try:
     cr = unreal.load_asset('/Game/Furina/CR_FurinaSecondary'); c = cr.get_controller_by_name('RigVMModel') or cr.get_controller(); g = c.get_graph()

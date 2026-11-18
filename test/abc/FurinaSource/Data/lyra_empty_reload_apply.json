@@ -1,0 +1,59 @@
+{
+ "as_len_before": 3.133333444595337,
+ "am_len_before": 3.133333444595337,
+ "AS_Furina_FP_ReloadEmpty": {
+  "curves": [
+   "riflereload",
+   "ReloadLX",
+   "ReloadLY",
+   "ReloadLZ",
+   "MagState",
+   "BoltBack",
+   "HandleBack",
+   "HandleFp"
+  ]
+ },
+ "AM_Furina_FP_ReloadEmpty": {
+  "curves": [
+   "RifleReload",
+   "ReloadLX",
+   "ReloadLY",
+   "ReloadLZ",
+   "MagState",
+   "BoltBack",
+   "HandleBack",
+   "HandleFp"
+  ]
+ },
+ "n_tracks": 1,
+ "seg_after": [
+  0.0,
+  2.0
+ ],
+ "segments_before": [
+  {
+   "ref": "<Object '/Game/Furina/FP/Anim/AS_Furina_FP_Reload.AS_Furina_FP_Reload' (0x000002A9212C6900) Class 'AnimSequence'>",
+   "start": 0.0,
+   "end": 3.133333444595337,
+   "rate": 1.0
+  }
+ ],
+ "blend_in": "<Struct 'AlphaBlend' (0x000002A92D1A0900) {}>",
+ "blend_out": "<Struct 'AlphaBlend' (0x000002A92D1A0938) {}>",
+ "am_len_after": 3.133333444595337,
+ "as_len_after": 3.133333444595337,
+ "saved": [
+  true,
+  true
+ ],
+ "events": {
+  "grab": 0.46667,
+  "drop": 0.73333,
+  "new_mag": 0.83333,
+  "seated": 1.23333,
+  "handle_grab": 1.5,
+  "handle_pulled": 1.56667,
+  "handle_release": 1.73333,
+  "handle_forward": 1.76667
+ }
+}

@@ -1,0 +1,45 @@
+{
+ "change": [
+  [
+   "FurinaBoltKick",
+   null
+  ],
+  [
+   "FurinaBoltHold",
+   null
+  ]
+ ],
+ "remove": [
+  "FBT_Kick0",
+  "FBT_KickDec",
+  "FBT_KickMax",
+  "FBT_SetKick",
+  "FBT_Ammo",
+  "FBT_AmmoLe0",
+  "FBT_T0",
+  "FBT_Curve",
+  "FBT_Reloading",
+  "FBT_Target",
+  "FBT_Hold0",
+  "FBT_Interp",
+  "FBT_SetHold",
+  "FBT_Kick1",
+  "FBT_OneMinus",
+  "FBT_MulPi",
+  "FBT_Sin",
+  "FBT_Hold1",
+  "FBT_Pos",
+  "FBT_Y",
+  "FBT_Vec",
+  "FBT_BoltGet",
+  "FBT_SetLoc",
+  "FBT_NotPistol",
+  "FBT_BoltGet2",
+  "FBT_SetVis"
+ ],
+ "relinked": [
+  "P2_Branch_01989945"
+ ],
+ "status": "<BlueprintStatus.BS_ERROR: 2>",
+ "saved": true
+}

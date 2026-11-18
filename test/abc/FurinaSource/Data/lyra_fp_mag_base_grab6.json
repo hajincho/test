@@ -1,0 +1,61 @@
+{
+ "BLEND": 30.0,
+ "links": [
+  [
+   "+",
+   "RgFrz.Result",
+   "RcDf.A",
+   true
+  ],
+  [
+   "+",
+   "RcPg.Result",
+   "RcDf.B",
+   true
+  ],
+  [
+   "+",
+   "RcDf.Result",
+   "RcDfxy.A",
+   true
+  ],
+  [
+   "+",
+   "RcDfxy.Result",
+   "RcRf.Value",
+   true
+  ],
+  [
+   "+",
+   "RcRf.Result",
+   "RcRmix.A",
+   true
+  ],
+  [
+   "+",
+   "RcR.Result",
+   "RcRmix.B",
+   true
+  ],
+  [
+   "+",
+   "RcStepS.Result",
+   "RcRmix.T",
+   true
+  ],
+  [
+   "x",
+   "RcR.Result",
+   "RcZlim.Value",
+   true
+  ],
+  [
+   "+",
+   "RcRmix.Result",
+   "RcZlim.Value",
+   true
+  ]
+ ],
+ "blend": true,
+ "saved": true
+}

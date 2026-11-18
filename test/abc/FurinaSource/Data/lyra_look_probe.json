@@ -1,0 +1,5363 @@
+{
+ "exp": "B_LyraDefaultExperience",
+ "map": "/Game/System/DefaultEditorMap/L_DefaultEditorOverview",
+ "samples": [
+  {
+   "t": 0.31,
+   "world": "L_DefaultEditorOverview",
+   "rot": [
+    0.0,
+    0.0
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": true,
+   "cursor": false
+  },
+  {
+   "t": 0.57,
+   "world": "L_DefaultEditorOverview",
+   "rot": [
+    0.0,
+    0.0
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": true,
+   "cursor": false
+  },
+  {
+   "t": 0.82,
+   "world": "L_DefaultEditorOverview",
+   "rot": [
+    0.0,
+    0.0
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": true,
+   "cursor": false
+  },
+  {
+   "t": 1.08,
+   "world": "L_DefaultEditorOverview",
+   "rot": [
+    0.0,
+    0.0
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": true,
+   "cursor": false
+  },
+  {
+   "t": 1.33,
+   "world": "L_DefaultEditorOverview",
+   "rot": [
+    0.0,
+    0.0
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": true,
+   "cursor": false
+  },
+  {
+   "t": 1.59,
+   "world": "L_DefaultEditorOverview",
+   "rot": [
+    0.0,
+    0.0
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": true,
+   "cursor": false
+  },
+  {
+   "t": 1.85,
+   "world": "L_DefaultEditorOverview",
+   "rot": [
+    0.0,
+    0.0
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 2.1,
+   "world": "L_DefaultEditorOverview",
+   "rot": [
+    0.0,
+    0.0
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 2.36,
+   "world": "L_DefaultEditorOverview",
+   "rot": [
+    0.0,
+    0.0
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 2.61,
+   "world": "L_DefaultEditorOverview",
+   "rot": [
+    0.0,
+    0.0
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 2.86,
+   "world": "L_DefaultEditorOverview",
+   "rot": [
+    0.0,
+    0.0
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 3.12,
+   "world": "L_DefaultEditorOverview",
+   "rot": [
+    0.0,
+    0.0
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 3.38,
+   "world": "L_DefaultEditorOverview",
+   "rot": [
+    0.0,
+    0.0
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 3.63,
+   "world": "L_DefaultEditorOverview",
+   "rot": [
+    0.0,
+    0.0
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 3.88,
+   "world": "L_DefaultEditorOverview",
+   "rot": [
+    0.0,
+    0.0
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 4.17,
+   "world": "L_DefaultEditorOverview",
+   "rot": [
+    0.0,
+    0.0
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 4.43,
+   "world": "L_DefaultEditorOverview",
+   "rot": [
+    0.0,
+    0.0
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 4.7,
+   "world": "L_DefaultEditorOverview",
+   "rot": [
+    0.0,
+    0.0
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 4.97,
+   "world": "L_DefaultEditorOverview",
+   "rot": [
+    0.0,
+    0.0
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 5.22,
+   "world": "L_DefaultEditorOverview",
+   "rot": [
+    0.0,
+    0.0
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 5.49,
+   "world": "L_DefaultEditorOverview",
+   "rot": [
+    0.0,
+    0.0
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 5.75,
+   "world": "L_DefaultEditorOverview",
+   "rot": [
+    0.0,
+    0.0
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 6.01,
+   "world": "L_DefaultEditorOverview",
+   "rot": [
+    0.0,
+    0.0
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 6.27,
+   "world": "L_DefaultEditorOverview",
+   "rot": [
+    0.0,
+    0.0
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 6.53,
+   "world": "L_DefaultEditorOverview",
+   "rot": [
+    0.0,
+    0.0
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 6.78,
+   "world": "L_DefaultEditorOverview",
+   "rot": [
+    0.0,
+    0.0
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 7.04,
+   "world": "L_DefaultEditorOverview",
+   "rot": [
+    0.0,
+    0.0
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 7.3,
+   "world": "L_DefaultEditorOverview",
+   "rot": [
+    0.0,
+    0.0
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 7.55,
+   "world": "L_DefaultEditorOverview",
+   "rot": [
+    0.0,
+    0.0
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 7.81,
+   "world": "L_DefaultEditorOverview",
+   "rot": [
+    0.0,
+    0.0
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 8.07,
+   "world": "L_DefaultEditorOverview",
+   "travel": "portal",
+   "portals": [
+    [
+     "B_TeleportToUserFacingExperience_C_0",
+     "<Struct 'Vector' (0x0000017692C7B120) {x: -250.000021, y: -2300.000000, z: 50.000000}>"
+    ],
+    [
+     "B_TeleportToUserFacingExperience_C_1",
+     "<Struct 'Vector' (0x0000017692C7B120) {x: -250.000015, y: -1800.000000, z: 50.000000}>"
+    ],
+    [
+     "B_TeleportToUserFacingExperience_C_2",
+     "<Struct 'Vector' (0x0000017692C7B120) {x: -250.000009, y: -1300.000000, z: 50.000000}>"
+    ],
+    [
+     "B_TeleportToUserFacingExperience_C_3",
+     "<Struct 'Vector' (0x0000017692C7B120) {x: -250.000003, y: -800.000000, z: 50.000000}>"
+    ],
+    [
+     "B_TeleportToUserFacingExperience_C_4",
+     "<Struct 'Vector' (0x0000017692C7B120) {x: -249.999997, y: -300.000000, z: 50.000000}>"
+    ],
+    [
+     "B_TeleportToUserFacingExperience_C_5",
+     "<Struct 'Vector' (0x0000017692C7B120) {x: -249.999991, y: 200.000000, z: 50.000000}>"
+    ],
+    [
+     "B_TeleportToUserFacingExperience_C_6",
+     "<Struct 'Vector' (0x0000017692C7B120) {x: -249.999985, y: 700.000000, z: 50.000000}>"
+    ],
+    [
+     "B_TeleportToUserFacingExperience_C_7",
+     "<Struct 'Vector' (0x0000017692C7B120) {x: -249.999979, y: 1200.000000, z: 50.000000}>"
+    ]
+   ],
+   "rot": [
+    0.0,
+    0.0
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 8.67,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    0.0,
+    180.0
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": true,
+   "cursor": false
+  },
+  {
+   "t": 9.16,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    0.0,
+    180.0
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": true,
+   "cursor": false
+  },
+  {
+   "t": 9.44,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    0.0,
+    180.0
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": true,
+   "cursor": false
+  },
+  {
+   "t": 9.71,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    0.0,
+    180.0
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": true,
+   "cursor": false
+  },
+  {
+   "t": 10.0,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    0.0,
+    180.0
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": true,
+   "cursor": false
+  },
+  {
+   "t": 10.29,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    0.0,
+    180.0
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": true,
+   "cursor": false
+  },
+  {
+   "t": 10.56,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    0.0,
+    180.0
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 10.84,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    0.0,
+    180.0
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 11.09,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    0.0,
+    180.0
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 11.36,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    0.0,
+    180.0
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 11.62,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    0.0,
+    180.0
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 11.88,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    0.0,
+    180.0
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 12.13,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    0.0,
+    180.0
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 12.38,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    0.0,
+    180.0
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 12.64,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    0.0,
+    180.0
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 12.9,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    0.0,
+    180.0
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 13.15,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    0.0,
+    180.0
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 13.41,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    0.0,
+    180.0
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 13.66,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    0.0,
+    180.0
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 13.93,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    0.0,
+    180.0
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 14.2,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    0.0,
+    180.0
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 14.47,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    0.0,
+    180.0
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 14.74,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    0.0,
+    180.0
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 15.0,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    0.0,
+    180.0
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 15.27,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    0.0,
+    180.0
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 15.53,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    0.0,
+    180.0
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 15.78,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    0.0,
+    180.0
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 16.03,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    0.0,
+    180.0
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 16.29,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    0.0,
+    180.0
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 16.57,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    0.0,
+    180.0
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 16.84,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    0.0,
+    180.0
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 17.1,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    0.0,
+    180.0
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 17.4,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    0.0,
+    180.0
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 17.67,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    0.0,
+    180.0
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 17.92,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    0.0,
+    180.0
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 18.18,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    0.0,
+    180.0
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 18.45,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    0.0,
+    180.0
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 18.71,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    0.0,
+    180.0
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 18.98,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    0.0,
+    180.0
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 19.24,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    0.0,
+    180.0
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 19.5,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    0.0,
+    180.0
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 19.78,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    0.0,
+    180.0
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 20.06,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    0.0,
+    180.0
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 20.31,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    0.0,
+    180.0
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 20.56,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    0.0,
+    180.0
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 20.83,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    0.0,
+    180.0
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 21.09,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    0.0,
+    180.0
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 21.34,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    0.0,
+    180.0
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 21.6,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    0.0,
+    180.0
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 21.85,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    0.0,
+    180.0
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 22.1,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    0.0,
+    180.0
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 22.36,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    0.0,
+    180.0
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 22.61,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    0.0,
+    180.0
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 22.89,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    0.0,
+    180.0
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 23.16,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    0.0,
+    180.0
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 23.44,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    0.0,
+    180.0
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 23.7,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    0.0,
+    180.0
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 23.95,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    0.0,
+    180.0
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 24.21,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    0.0,
+    180.0
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 24.46,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    0.0,
+    180.0
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 24.72,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    0.0,
+    180.0
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 24.99,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    0.0,
+    180.0
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 25.25,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    0.0,
+    180.0
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 25.5,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    0.0,
+    180.0
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 25.76,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    0.0,
+    180.0
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 26.01,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    0.0,
+    180.0
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 26.27,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    0.0,
+    180.0
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 26.52,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    0.0,
+    180.0
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 26.78,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    0.0,
+    180.0
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 27.03,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    0.0,
+    180.0
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 27.29,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    0.0,
+    180.0
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 27.55,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    0.0,
+    180.0
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 27.8,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    0.0,
+    180.0
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 28.05,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    0.0,
+    180.0
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 28.31,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    0.0,
+    180.0
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 28.56,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    0.0,
+    180.0
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 28.82,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    0.0,
+    180.0
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 29.1,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    0.0,
+    180.0
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 29.37,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    0.0,
+    180.0
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 29.62,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    0.0,
+    180.0
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 29.87,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    0.0,
+    180.0
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 30.13,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    0.0,
+    180.0
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 30.38,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    0.0,
+    180.0
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 30.63,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    0.0,
+    180.0
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 30.89,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    0.0,
+    180.0
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 31.16,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    0.0,
+    180.0
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 31.42,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    0.0,
+    180.0
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 31.67,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    0.0,
+    180.0
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 31.92,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    0.0,
+    180.0
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 32.18,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    0.0,
+    180.0
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 32.43,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    0.0,
+    180.0
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 32.69,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    0.0,
+    180.0
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 32.95,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    0.0,
+    180.0
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 33.21,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    0.0,
+    180.0
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 33.47,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    0.0,
+    180.0
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 33.72,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    0.0,
+    180.0
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 34.0,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    0.0,
+    180.0
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 34.26,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    0.0,
+    180.0
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 34.51,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    0.0,
+    180.0
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 34.77,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    0.0,
+    180.0
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 35.02,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    0.0,
+    180.0
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 35.29,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    0.0,
+    180.0
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 35.55,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    0.0,
+    180.0
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 35.82,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    0.0,
+    180.0
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 36.08,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    0.0,
+    180.0
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 36.33,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    0.0,
+    180.0
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 36.59,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    0.0,
+    180.0
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 36.84,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    0.0,
+    180.0
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 37.1,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    0.0,
+    180.0
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 37.35,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    0.0,
+    180.0
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 37.6,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    0.0,
+    180.0
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 37.87,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    0.0,
+    180.0
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 38.12,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    0.0,
+    180.0
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 38.38,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    0.0,
+    180.0
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 38.63,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    0.0,
+    180.0
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 38.89,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    0.0,
+    180.0
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 39.15,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    0.0,
+    180.0
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 39.4,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    0.0,
+    180.0
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 39.66,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    0.0,
+    180.0
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 39.92,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    0.0,
+    180.0
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 40.18,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    0.0,
+    180.0
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 40.43,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    0.0,
+    180.0
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 40.69,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    0.0,
+    180.0
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 40.96,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    0.0,
+    180.0
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 41.22,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    0.0,
+    180.0
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 41.48,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    0.0,
+    180.0
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 41.74,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    0.0,
+    180.0
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 42.0,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    0.0,
+    180.0
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 42.25,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    0.0,
+    180.0
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 42.51,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    0.0,
+    180.0
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 42.76,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    0.0,
+    180.0
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 43.01,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    0.0,
+    180.0
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 43.28,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    0.0,
+    180.0
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 43.54,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    0.0,
+    180.0
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 43.79,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    0.0,
+    180.0
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 44.05,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    0.0,
+    180.0
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 44.3,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    0.0,
+    180.0
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 44.55,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    0.0,
+    180.0
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 44.81,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    0.0,
+    180.0
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 45.06,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    0.0,
+    180.0
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 45.32,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    0.0,
+    180.0
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 45.58,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    0.0,
+    180.0
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 45.85,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    20.2,
+    245.8
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 46.1,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    20.2,
+    245.8
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 46.36,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    20.2,
+    245.8
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 46.62,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    20.2,
+    245.8
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 46.88,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    20.2,
+    245.8
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 47.15,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    20.2,
+    245.8
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 47.42,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    20.2,
+    245.8
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 47.68,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    20.2,
+    245.8
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 47.95,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    20.2,
+    222.7
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 48.22,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    20.2,
+    222.7
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 48.5,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    20.2,
+    222.7
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 48.75,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    20.2,
+    222.7
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 49.01,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    20.2,
+    257.4
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 49.26,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    20.2,
+    257.4
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 49.52,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    20.2,
+    257.4
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 49.78,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    20.2,
+    257.4
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 50.03,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    20.2,
+    257.4
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 50.29,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    20.2,
+    228.5
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 50.56,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    20.2,
+    228.5
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 50.83,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    20.2,
+    228.5
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 51.1,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    20.2,
+    228.5
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 51.36,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    20.2,
+    228.5
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 51.63,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    20.2,
+    228.5
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 51.9,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    20.2,
+    228.5
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 52.17,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    20.2,
+    228.5
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 52.43,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    20.2,
+    228.5
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 52.7,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    20.2,
+    228.5
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 52.97,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    20.2,
+    228.5
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 53.23,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    20.2,
+    228.5
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 53.5,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    20.2,
+    228.5
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 53.75,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    20.2,
+    228.5
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 54.01,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    20.2,
+    228.5
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 54.26,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    20.2,
+    228.5
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 54.52,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    20.2,
+    228.5
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 54.78,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    20.2,
+    228.5
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 55.05,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    20.2,
+    228.5
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 55.31,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    20.2,
+    228.5
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 55.58,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    20.2,
+    228.5
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 55.85,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    20.2,
+    228.5
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 56.11,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    20.2,
+    228.5
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 56.38,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    20.2,
+    228.5
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 56.65,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    20.2,
+    228.5
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 56.93,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    20.2,
+    228.5
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 57.18,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    20.2,
+    228.5
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 57.45,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    20.2,
+    228.5
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 57.73,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    20.2,
+    228.5
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 58.0,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    20.2,
+    228.5
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 58.27,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    20.2,
+    228.5
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 58.53,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    20.2,
+    228.5
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 58.79,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    20.2,
+    228.5
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 59.06,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    20.2,
+    228.5
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 59.33,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    20.2,
+    228.5
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 59.59,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    20.2,
+    228.5
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 59.86,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    20.2,
+    228.5
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 60.13,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    20.2,
+    228.5
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 60.39,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    20.2,
+    228.5
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 60.65,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    20.2,
+    228.5
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 60.92,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    20.2,
+    228.5
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 61.18,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    20.2,
+    228.5
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 61.45,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    20.2,
+    228.5
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 61.72,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    20.2,
+    228.5
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 61.98,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    20.2,
+    228.5
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 62.25,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    20.2,
+    228.5
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 62.5,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    20.2,
+    228.5
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 62.76,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    20.2,
+    228.5
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 63.02,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    20.2,
+    228.5
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 63.28,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    20.2,
+    228.5
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 63.55,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    20.2,
+    228.5
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 63.82,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    20.2,
+    228.5
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 64.08,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    20.2,
+    228.5
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 64.35,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    20.2,
+    228.5
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 64.62,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    20.2,
+    228.5
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 64.88,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    20.2,
+    228.5
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 65.15,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    20.2,
+    228.5
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 65.4,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    20.2,
+    228.5
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 65.67,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    20.2,
+    228.5
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 65.93,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    20.2,
+    228.5
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 66.2,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    20.2,
+    228.5
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 66.48,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    20.2,
+    228.5
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 66.73,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    20.2,
+    228.5
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 66.99,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    20.2,
+    228.5
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 67.26,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    20.2,
+    228.5
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 67.53,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    20.2,
+    228.5
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 67.8,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    20.2,
+    228.5
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 68.06,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    20.2,
+    228.5
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 68.33,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    20.2,
+    228.5
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 68.6,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    20.2,
+    228.5
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 68.86,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    20.2,
+    228.5
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 69.13,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    20.2,
+    228.5
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 69.4,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    20.2,
+    228.5
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 69.66,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    20.2,
+    228.5
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 69.95,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    20.2,
+    228.5
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  },
+  {
+   "t": 70.21,
+   "world": "L_Convolution_Blockout",
+   "rot": [
+    20.2,
+    228.5
+   ],
+   "RightMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "LeftMouseButton_e": "call() takes at most 0 arguments (1 give",
+   "V_e": "call() takes at most 0 arguments (1 give",
+   "MouseX_e": "call() takes at most 0 arguments (1 give",
+   "MouseY_e": "call() takes at most 0 arguments (1 give",
+   "fpw": false,
+   "ads": false,
+   "sh": false,
+   "sp": false,
+   "look_ign": false,
+   "move_ign": false,
+   "cursor": false
+  }
+ ],
+ "started": true,
+ "done": true
+}

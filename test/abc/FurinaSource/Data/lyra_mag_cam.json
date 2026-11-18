@@ -1,0 +1,11 @@
+{
+ "shots": [
+  "left",
+  "right",
+  "front",
+  "back",
+  "below_left"
+ ],
+ "cam": "Cube_2",
+ "done": true
+}

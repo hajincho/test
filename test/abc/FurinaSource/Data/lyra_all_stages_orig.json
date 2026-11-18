@@ -1,0 +1,50 @@
+{
+ "/ShooterCore/Experiences/B_ShooterGame_Elimination": {
+  "pawn": "/ShooterCore/Game/HeroData_ShooterGame.HeroData_ShooterGame",
+  "sets": [
+   "/ShooterCore/Experiences/LAS_ShooterGame_SharedInput.LAS_ShooterGame_SharedInput",
+   "/ShooterCore/Experiences/LAS_ShooterGame_StandardComponents.LAS_ShooterGame_StandardComponents",
+   "/ShooterCore/Experiences/LAS_ShooterGame_StandardHUD.LAS_ShooterGame_StandardHUD",
+   "/ShooterCore/Accolades/EAS_BasicShooterAcolades.EAS_BasicShooterAcolades"
+  ]
+ },
+ "/ShooterCore/Experiences/B_LyraShooterGame_ControlPoints": {
+  "pawn": "/ShooterCore/Game/HeroData_ShooterGame.HeroData_ShooterGame",
+  "sets": [
+   "/ShooterCore/Experiences/LAS_ShooterGame_SharedInput.LAS_ShooterGame_SharedInput",
+   "/ShooterCore/Experiences/LAS_ShooterGame_StandardComponents.LAS_ShooterGame_StandardComponents",
+   "/ShooterCore/Experiences/LAS_ShooterGame_StandardHUD.LAS_ShooterGame_StandardHUD",
+   "/ShooterCore/Accolades/EAS_BasicShooterAcolades.EAS_BasicShooterAcolades"
+  ]
+ },
+ "/ShooterCore/Experiences/B_ShooterGame_Perf": {
+  "pawn": "/ShooterCore/Game/HeroData_ShooterGame.HeroData_ShooterGame",
+  "sets": [
+   "/ShooterCore/Experiences/LAS_ShooterGame_SharedInput.LAS_ShooterGame_SharedInput",
+   "/ShooterCore/Experiences/LAS_ShooterGame_StandardComponents.LAS_ShooterGame_StandardComponents",
+   "/ShooterCore/Experiences/LAS_ShooterGame_StandardHUD.LAS_ShooterGame_StandardHUD",
+   "/ShooterCore/Accolades/EAS_BasicShooterAcolades.EAS_BasicShooterAcolades"
+  ]
+ },
+ "/ShooterExplorer/System/Experiences/B_TestInventoryExperience": {
+  "pawn": "/ShooterExplorer/Game/HeroData_Explorer.HeroData_Explorer",
+  "sets": [
+   "/ShooterCore/Experiences/LAS_ShooterGame_SharedInput.LAS_ShooterGame_SharedInput",
+   "/ShooterCore/Experiences/LAS_ShooterGame_StandardComponents.LAS_ShooterGame_StandardComponents",
+   "/ShooterCore/Experiences/LAS_ShooterGame_StandardHUD.LAS_ShooterGame_StandardHUD",
+   "/ShooterExplorer/System/Experiences/LAS_InventoryTest.LAS_InventoryTest"
+  ]
+ },
+ "/Game/System/Experiences/B_LyraDefaultExperience": {
+  "pawn": "/Game/Characters/Heroes/SimplePawnData/SimplePawnData.SimplePawnData",
+  "sets": []
+ },
+ "/TopDownArena/System/Experiences/B_TopDownArenaExperience": {
+  "pawn": "/TopDownArena/Game/HeroData_Arena.HeroData_Arena",
+  "sets": []
+ },
+ "/TopDownArena/System/Experiences/B_TopDownArena_Multiplayer_Experience": {
+  "pawn": "/TopDownArena/Game/HeroData_Arena.HeroData_Arena",
+  "sets": []
+ }
+}

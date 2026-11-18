@@ -1,0 +1,269 @@
+{
+ "stages": [
+  {
+   "map": "/Game/System/DefaultEditorMap/L_DefaultEditorOverview",
+   "exp": "B_LyraDefaultExperience",
+   "loaded": true,
+   "player": {
+    "class": "ThirdPersonCharacter_BP_C",
+    "ammo": 20,
+    "health": [
+     100.0,
+     100.0
+    ],
+    "has_rifle": true,
+    "has_mag": true
+   },
+   "pawns": [
+    [
+     "ThirdPersonCharacter_BP_C",
+     true
+    ]
+   ],
+   "ammo_before": 20,
+   "ammo_after": 19
+  },
+  {
+   "map": "/ShooterCore/Maps/L_ShooterGym",
+   "exp": "B_LyraShooterGame_ControlPoints",
+   "loaded": true,
+   "player": {
+    "class": "ThirdPersonCharacter_BP_C",
+    "ammo": 20,
+    "health": [
+     100.0,
+     100.0
+    ],
+    "has_rifle": true,
+    "has_mag": true
+   },
+   "pawns": [
+    [
+     "ThirdPersonCharacter_BP_C",
+     true
+    ],
+    [
+     "B_Hero_ShooterMannequin_C",
+     false
+    ],
+    [
+     "B_Hero_ShooterMannequin_C",
+     false
+    ],
+    [
+     "B_Hero_ShooterMannequin_C",
+     false
+    ]
+   ],
+   "ammo_before": 20,
+   "ammo_after": 19
+  },
+  {
+   "map": "/ShooterCore/Maps/L_ShooterPerf",
+   "exp": "B_ShooterGame_Perf",
+   "loaded": true,
+   "player": {
+    "class": "ThirdPersonCharacter_BP_C",
+    "ammo": 20,
+    "health": [
+     100.0,
+     100.0
+    ],
+    "has_rifle": true,
+    "has_mag": true
+   },
+   "pawns": [
+    [
+     "ThirdPersonCharacter_BP_C",
+     true
+    ],
+    [
+     "B_Hero_ShooterMannequin_C",
+     false
+    ],
+    [
+     "B_Hero_ShooterMannequin_C",
+     false
+    ],
+    [
+     "B_Hero_ShooterMannequin_C",
+     false
+    ],
+    [
+     "B_Hero_ShooterMannequin_C",
+     false
+    ],
+    [
+     "B_Hero_ShooterMannequin_C",
+     false
+    ],
+    [
+     "B_Hero_ShooterMannequin_C",
+     false
+    ],
+    [
+     "B_Hero_ShooterMannequin_C",
+     false
+    ],
+    [
+     "B_Hero_ShooterMannequin_C",
+     false
+    ],
+    [
+     "B_Hero_ShooterMannequin_C",
+     false
+    ],
+    [
+     "B_Hero_ShooterMannequin_C",
+     false
+    ],
+    [
+     "B_Hero_ShooterMannequin_C",
+     false
+    ]
+   ],
+   "ammo_before": 20,
+   "ammo_after": 19
+  },
+  {
+   "map": "/ShooterMaps/Maps/L_Convolution_Blockout",
+   "exp": "B_LyraShooterGame_ControlPoints",
+   "loaded": true,
+   "player": {
+    "class": "ThirdPersonCharacter_BP_C",
+    "ammo": 20,
+    "health": [
+     100.0,
+     100.0
+    ],
+    "has_rifle": true,
+    "has_mag": true
+   },
+   "pawns": [
+    [
+     "ThirdPersonCharacter_BP_C",
+     true
+    ],
+    [
+     "B_Hero_ShooterMannequin_C",
+     false
+    ],
+    [
+     "B_Hero_ShooterMannequin_C",
+     false
+    ],
+    [
+     "B_Hero_ShooterMannequin_C",
+     false
+    ]
+   ],
+   "ammo_before": 20,
+   "ammo_after": 19
+  },
+  {
+   "map": "/ShooterMaps/Maps/L_Expanse_Blockout",
+   "exp": "B_ShooterGame_Elimination",
+   "loaded": true,
+   "player": {
+    "class": "ThirdPersonCharacter_BP_C",
+    "ammo": 20,
+    "health": [
+     100.0,
+     100.0
+    ],
+    "has_rifle": true,
+    "has_mag": true
+   },
+   "pawns": [
+    [
+     "ThirdPersonCharacter_BP_C",
+     true
+    ],
+    [
+     "B_Hero_ShooterMannequin_C",
+     false
+    ],
+    [
+     "B_Hero_ShooterMannequin_C",
+     false
+    ],
+    [
+     "B_Hero_ShooterMannequin_C",
+     false
+    ]
+   ],
+   "ammo_before": 20,
+   "ammo_after": 19
+  },
+  {
+   "map": "/ShooterExplorer/Maps/L_InventoryTestMap",
+   "exp": "B_TestInventoryExperience",
+   "loaded": true,
+   "player": {
+    "class": "ThirdPersonCharacter_BP_C",
+    "ammo": 20,
+    "health": [
+     100.0,
+     100.0
+    ],
+    "has_rifle": true,
+    "has_mag": true
+   },
+   "pawns": [
+    [
+     "ThirdPersonCharacter_BP_C",
+     true
+    ]
+   ],
+   "ammo_before": 20,
+   "ammo_after": 19
+  },
+  {
+   "map": "/TopDownArena/Maps/L_TopDownArenaGym",
+   "exp": "B_TopDownArenaExperience",
+   "loaded": true,
+   "player": {
+    "class": "ThirdPersonCharacter_BP_C",
+    "ammo": 20,
+    "health": [
+     100.0,
+     100.0
+    ],
+    "has_rifle": true,
+    "has_mag": true
+   },
+   "pawns": [
+    [
+     "ThirdPersonCharacter_BP_C",
+     true
+    ]
+   ],
+   "ammo_before": 20,
+   "ammo_after": 19
+  },
+  {
+   "map": "/TopDownArena/Maps/L_TopDown_LocalMultiplayer",
+   "exp": "B_TopDownArena_Multiplayer_Experience",
+   "loaded": true,
+   "player": {
+    "class": "ThirdPersonCharacter_BP_C",
+    "ammo": 20,
+    "health": [
+     100.0,
+     100.0
+    ],
+    "has_rifle": true,
+    "has_mag": true
+   },
+   "pawns": [
+    [
+     "ThirdPersonCharacter_BP_C",
+     true
+    ]
+   ],
+   "ammo_before": 20,
+   "ammo_after": 19
+  }
+ ],
+ "done": true
+}

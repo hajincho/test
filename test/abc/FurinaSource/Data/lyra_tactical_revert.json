@@ -1,0 +1,22 @@
+{
+ "AS_Furina_FP_Reload": {
+  "curves": [
+   "ReloadLX",
+   "ReloadLY",
+   "ReloadLZ",
+   "MagState",
+   "riflereload"
+  ],
+  "saved": true
+ },
+ "AM_Furina_FP_Reload": {
+  "curves": [
+   "ReloadLX",
+   "ReloadLY",
+   "ReloadLZ",
+   "MagState",
+   "RifleReload"
+  ],
+  "saved": true
+ }
+}

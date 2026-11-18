@@ -1,0 +1,181 @@
+{
+ "Fing_IndexFinger1_L": {
+  "title": "Set Rotation",
+  "pins": {
+   "ExecutePin": {
+    "val": "()",
+    "src": [
+     "FgLittleIK.ExecutePin"
+    ],
+    "dst": [
+     "Fing_IndexFinger2_L.ExecutePin"
+    ]
+   },
+   "Item": {
+    "val": "(Type=Bone,Name=\"IndexFinger1_L\")",
+    "src": [],
+    "dst": []
+   },
+   "Space": {
+    "val": "LocalSpace",
+    "src": [],
+    "dst": []
+   },
+   "bInitial": {
+    "val": "False",
+    "src": [],
+    "dst": []
+   },
+   "Value": {
+    "val": "(X=0.000000,Y=0.000000,Z=0.000000,W=1.000000)",
+    "src": [
+     "Fing_IndexFinger1_LMul.Result"
+    ],
+    "dst": []
+   },
+   "Weight": {
+    "val": "1.000000",
+    "src": [
+     "FingW.Result"
+    ],
+    "dst": []
+   },
+   "bPropagateToChildren": {
+    "val": "True",
+    "src": [],
+    "dst": []
+   },
+   "CachedIndex": {
+    "val": "(Key=(Type=None,Name=\"None\"),Index=65535,ContainerVersion=-1)",
+    "src": [],
+    "dst": []
+   }
+  }
+ },
+ "RLArmIK": {
+  "title": "Basic IK",
+  "pins": {
+   "ExecutePin": {
+    "val": "()",
+    "src": [
+     "ClSet.ExecutePin"
+    ],
+    "dst": [
+     "FgIndexIK.ExecutePin"
+    ]
+   },
+   "ItemA": {
+    "val": "(Type=Bone,Name=\"Left-arm\")",
+    "src": [],
+    "dst": []
+   },
+   "ItemB": {
+    "val": "(Type=Bone,Name=\"Left-elbow\")",
+    "src": [],
+    "dst": []
+   },
+   "EffectorItem": {
+    "val": "(Type=Bone,Name=\"Left-wrist\")",
+    "src": [],
+    "dst": []
+   },
+   "Effector": {
+    "val": "(Rotation=(X=0.000000,Y=0.000000,Z=0.000000,W=1.000000),Translation=(X=0.000000,Y=0.000000,Z=0.000000),Scale3D=(X=1.000000,Y=1.000000,Z=1.00",
+    "src": [],
+    "dst": []
+   },
+   "PrimaryAxis": {
+    "val": "(X=0.000000,Y=-1.000000,Z=0.000000)",
+    "src": [],
+    "dst": []
+   },
+   "SecondaryAxis": {
+    "val": "(X=0.000000,Y=0.000000,Z=1.000000)",
+    "src": [],
+    "dst": []
+   },
+   "SecondaryAxisWeight": {
+    "val": "0",
+    "src": [],
+    "dst": []
+   },
+   "PoleVector": {
+    "val": "(X=1.000000,Y=0.000000,Z=-1.500000)",
+    "src": [
+     "SwPoleL.Result"
+    ],
+    "dst": []
+   },
+   "PoleVectorKind": {
+    "val": "Direction",
+    "src": [],
+    "dst": []
+   },
+   "PoleVectorSpace": {
+    "val": "(Type=Bone,Name=\"None\")",
+    "src": [],
+    "dst": []
+   },
+   "bEnableStretch": {
+    "val": "False",
+    "src": [],
+    "dst": []
+   },
+   "StretchStartRatio": {
+    "val": "0.750000",
+    "src": [],
+    "dst": []
+   },
+   "StretchMaximumRatio": {
+    "val": "1.250000",
+    "src": [],
+    "dst": []
+   },
+   "Weight": {
+    "val": "1.000000",
+    "src": [],
+    "dst": []
+   },
+   "ItemALength": {
+    "val": "21.14",
+    "src": [],
+    "dst": []
+   },
+   "ItemBLength": {
+    "val": "18.02",
+    "src": [],
+    "dst": []
+   },
+   "bPropagateToChildren": {
+    "val": "True",
+    "src": [],
+    "dst": []
+   },
+   "DebugSettings": {
+    "val": "(bEnabled=False,Scale=10.000000,WorldOffset=(Rotation=(X=0.000000,Y=0.000000,Z=0.000000,W=1.000000),Translation=(X=0.000000,Y=0.000000,Z=0.0",
+    "src": [],
+    "dst": []
+   },
+   "CachedItemAIndex": {
+    "val": "(Key=(Type=None,Name=\"None\"),Index=65535,ContainerVersion=-1)",
+    "src": [],
+    "dst": []
+   },
+   "CachedItemBIndex": {
+    "val": "(Key=(Type=None,Name=\"None\"),Index=65535,ContainerVersion=-1)",
+    "src": [],
+    "dst": []
+   },
+   "CachedEffectorItemIndex": {
+    "val": "(Key=(Type=None,Name=\"None\"),Index=65535,ContainerVersion=-1)",
+    "src": [],
+    "dst": []
+   },
+   "CachedPoleVectorSpaceIndex": {
+    "val": "(Key=(Type=None,Name=\"None\"),Index=65535,ContainerVersion=-1)",
+    "src": [],
+    "dst": []
+   }
+  }
+ }
+}

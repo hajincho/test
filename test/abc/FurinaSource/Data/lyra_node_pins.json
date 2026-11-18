@@ -1,0 +1,89 @@
+{
+ "FBT_Kick0": {
+  "cls": "K2Node_VariableGet",
+  "methods": [
+   "find_data_input_pin",
+   "find_execute_pin",
+   "find_input_pin",
+   "find_input_pin_by_index",
+   "find_output_pin",
+   "find_output_pin_by_index",
+   "find_result_pin",
+   "find_self_pin",
+   "find_then_pin",
+   "list_all_pins",
+   "list_input_pins",
+   "list_output_pins"
+  ],
+  "via": "list_all_pins",
+  "pins": [
+   {
+    "name": "FurinaBoltKick",
+    "dir": "<EdGraphPinDirection.EGPD_OUTPUT: 1>",
+    "get_pin_value": "0",
+    "get_pin_type_display_string": "인티저",
+    "conn": [
+     "FBT_KickDec.A"
+    ]
+   }
+  ]
+ },
+ "FBT_Hold0": {
+  "cls": "K2Node_VariableGet",
+  "methods": [
+   "find_data_input_pin",
+   "find_execute_pin",
+   "find_input_pin",
+   "find_input_pin_by_index",
+   "find_output_pin",
+   "find_output_pin_by_index",
+   "find_result_pin",
+   "find_self_pin",
+   "find_then_pin",
+   "list_all_pins",
+   "list_input_pins",
+   "list_output_pins"
+  ],
+  "via": "list_all_pins",
+  "pins": [
+   {
+    "name": "FurinaBoltHold",
+    "dir": "<EdGraphPinDirection.EGPD_OUTPUT: 1>",
+    "get_pin_value": "0",
+    "get_pin_type_display_string": "인티저",
+    "conn": [
+     "K2Node_CallFunction_113.InInt"
+    ]
+   }
+  ]
+ },
+ "FBT_Ammo": {
+  "cls": "K2Node_VariableGet",
+  "methods": [
+   "find_data_input_pin",
+   "find_execute_pin",
+   "find_input_pin",
+   "find_input_pin_by_index",
+   "find_output_pin",
+   "find_output_pin_by_index",
+   "find_result_pin",
+   "find_self_pin",
+   "find_then_pin",
+   "list_all_pins",
+   "list_input_pins",
+   "list_output_pins"
+  ],
+  "via": "list_all_pins",
+  "pins": [
+   {
+    "name": "FurinaAmmo",
+    "dir": "<EdGraphPinDirection.EGPD_OUTPUT: 1>",
+    "get_pin_value": "0",
+    "get_pin_type_display_string": "인티저",
+    "conn": [
+     "FBT_AmmoLe0.A"
+    ]
+   }
+  ]
+ }
+}

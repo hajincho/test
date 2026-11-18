@@ -1,0 +1,43 @@
+{
+ "tag": "elim_overview",
+ "map": "L_DefaultEditorOverview",
+ "player": {
+  "class": "ThirdPersonCharacter_BP_C",
+  "name": "ThirdPersonCharacter_BP_C_0",
+  "pawn_data_err": "'LyraPawnExtensionComponent' object has no attribute 'get_pawn_data'",
+  "ammo": 20,
+  "health": [
+   100.0,
+   100.0
+  ],
+  "has_rifle": true,
+  "has_mag": true
+ },
+ "pawns": [
+  [
+   "ThirdPersonCharacter_BP_C_0",
+   "ThirdPersonCharacter_BP_C",
+   true
+  ],
+  [
+   "B_Hero_ShooterMannequin_C_0",
+   "B_Hero_ShooterMannequin_C",
+   false
+  ],
+  [
+   "B_Hero_ShooterMannequin_C_1",
+   "B_Hero_ShooterMannequin_C",
+   false
+  ],
+  [
+   "B_Hero_ShooterMannequin_C_2",
+   "B_Hero_ShooterMannequin_C",
+   false
+  ]
+ ],
+ "imc_err": "'LyraPlayerController' object has no attribute 'get_local_player'",
+ "exp_err": "'LyraExperienceManagerComponent' object has no attribute 'get_current_experience_or_none'",
+ "ammo_before": 20,
+ "ammo_after": 19,
+ "done": true
+}

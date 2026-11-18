@@ -1,0 +1,57 @@
+{
+ "links": [
+  [
+   "+",
+   "RcMagC.Value",
+   "RcStep.Value",
+   true
+  ],
+  [
+   "+",
+   "RcMagC.Value",
+   "RcDms.Value",
+   true
+  ],
+  [
+   "+",
+   "RcDms.Delta",
+   "RcDec.Value",
+   true
+  ],
+  [
+   "+",
+   "RcHold.Result",
+   "RcRel.A",
+   true
+  ],
+  [
+   "+",
+   "RcDec.Result",
+   "RcRel.B",
+   true
+  ],
+  [
+   "+",
+   "RcStep.Result",
+   "RcHold2.A",
+   true
+  ],
+  [
+   "+",
+   "RcRel.Result",
+   "RcHold2.B",
+   true
+  ],
+  [
+   "x",
+   true
+  ],
+  [
+   "+",
+   "RcHold2.Result",
+   "RcW.A",
+   true
+  ]
+ ],
+ "saved": true
+}

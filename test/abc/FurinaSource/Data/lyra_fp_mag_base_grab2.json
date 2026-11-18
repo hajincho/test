@@ -1,0 +1,82 @@
+{
+ "BLEND": 18.0,
+ "CLEAR": 9.5,
+ "links": [
+  [
+   "RcMagC.Value",
+   "RgWa.Value",
+   true
+  ],
+  [
+   "RcMagC.Value",
+   "RgWb.Value",
+   true
+  ],
+  [
+   "RgWa.Result",
+   "RgWin.A",
+   true
+  ],
+  [
+   "RgWb.Result",
+   "RgWin.B",
+   true
+  ],
+  [
+   "RgWin.Result",
+   "RgW.A",
+   true
+  ],
+  [
+   "RlFpW.Result",
+   "RgW.B",
+   true
+  ],
+  [
+   "RcOut.Result",
+   "RgFrz.A",
+   true
+  ],
+  [
+   "RcPg.Result",
+   "RgFrz.B",
+   true
+  ],
+  [
+   "RgW.Result",
+   "RgFrz.T",
+   true
+  ],
+  [
+   "RgFrz.Result",
+   "RgSm.TargetValue",
+   true
+  ],
+  [
+   "LHandOff3.Result",
+   "RgOut.A",
+   true
+  ],
+  [
+   "RgSm.Result",
+   "RgOut.B",
+   true
+  ],
+  [
+   "RlFpW.Result",
+   "RgOut.T",
+   true
+  ],
+  [
+   "RgOut.Result",
+   "RLHOff.Vector",
+   true
+  ]
+ ],
+ "pgz": -9.33,
+ "set": [
+  true,
+  true
+ ],
+ "saved": true
+}

@@ -1,0 +1,11 @@
+{
+ "gain": 1.0,
+ "before": "<Object '/Game/Furina/CameraShakes/CS_FurinaShot.Default__CS_FurinaShot_C:WaveOscillatorCameraShakePattern_0' (0x00000177D1551800) Class 'WaveOscillatorCameraShakePattern'>",
+ "pat_vals": [
+  "<Struct 'WaveOscillator' (0x0000017797BADF94) {amplitude: 0.550000, frequency: 34.000000, initial_offset_type: Random}>",
+  "<Struct 'WaveOscillator' (0x0000017797BADFA0) {amplitude: 0.400000, frequency: 27.000000, initial_offset_type: Random}>",
+  "<Struct 'WaveOscillator' (0x0000017797BADFAC) {amplitude: 0.500000, frequency: 31.000000, initial_offset_type: Random}>"
+ ],
+ "after_compile": "<Object '/Game/Furina/CameraShakes/CS_FurinaShot.Default__CS_FurinaShot_C:WaveOscillatorCameraShakePattern_1' (0x0000017797BA3C00) Class 'WaveOscillatorCameraShakePattern'>",
+ "saved": true
+}

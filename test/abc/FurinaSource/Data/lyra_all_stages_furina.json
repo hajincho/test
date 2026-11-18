@@ -1,0 +1,108 @@
+{
+ "revert": false,
+ "rows": {
+  "/ShooterCore/Experiences/B_ShooterGame_Elimination": {
+   "before": {
+    "pawn": "HeroData_ShooterGame",
+    "sets": [
+     "LAS_ShooterGame_SharedInput",
+     "LAS_ShooterGame_StandardComponents",
+     "LAS_ShooterGame_StandardHUD",
+     "EAS_BasicShooterAcolades"
+    ]
+   },
+   "saved": true,
+   "after": {
+    "pawn": "HeroData_Furina",
+    "sets": [
+     "EAS_BasicShooterAcolades"
+    ]
+   }
+  },
+  "/ShooterCore/Experiences/B_LyraShooterGame_ControlPoints": {
+   "before": {
+    "pawn": "HeroData_ShooterGame",
+    "sets": [
+     "LAS_ShooterGame_SharedInput",
+     "LAS_ShooterGame_StandardComponents",
+     "LAS_ShooterGame_StandardHUD",
+     "EAS_BasicShooterAcolades"
+    ]
+   },
+   "saved": true,
+   "after": {
+    "pawn": "HeroData_Furina",
+    "sets": [
+     "EAS_BasicShooterAcolades"
+    ]
+   }
+  },
+  "/ShooterCore/Experiences/B_ShooterGame_Perf": {
+   "before": {
+    "pawn": "HeroData_ShooterGame",
+    "sets": [
+     "LAS_ShooterGame_SharedInput",
+     "LAS_ShooterGame_StandardComponents",
+     "LAS_ShooterGame_StandardHUD",
+     "EAS_BasicShooterAcolades"
+    ]
+   },
+   "saved": true,
+   "after": {
+    "pawn": "HeroData_Furina",
+    "sets": [
+     "EAS_BasicShooterAcolades"
+    ]
+   }
+  },
+  "/ShooterExplorer/System/Experiences/B_TestInventoryExperience": {
+   "before": {
+    "pawn": "HeroData_Explorer",
+    "sets": [
+     "LAS_ShooterGame_SharedInput",
+     "LAS_ShooterGame_StandardComponents",
+     "LAS_ShooterGame_StandardHUD",
+     "LAS_InventoryTest"
+    ]
+   },
+   "saved": true,
+   "after": {
+    "pawn": "HeroData_Furina",
+    "sets": []
+   }
+  },
+  "/Game/System/Experiences/B_LyraDefaultExperience": {
+   "before": {
+    "pawn": "SimplePawnData",
+    "sets": []
+   },
+   "saved": true,
+   "after": {
+    "pawn": "HeroData_Furina",
+    "sets": []
+   }
+  },
+  "/TopDownArena/System/Experiences/B_TopDownArenaExperience": {
+   "before": {
+    "pawn": "HeroData_Arena",
+    "sets": []
+   },
+   "saved": true,
+   "after": {
+    "pawn": "HeroData_Furina",
+    "sets": []
+   }
+  },
+  "/TopDownArena/System/Experiences/B_TopDownArena_Multiplayer_Experience": {
+   "before": {
+    "pawn": "HeroData_Arena",
+    "sets": []
+   },
+   "saved": true,
+   "after": {
+    "pawn": "HeroData_Furina",
+    "sets": []
+   }
+  }
+ }
+}

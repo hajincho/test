@@ -1,0 +1,32 @@
+{
+ "LO": 0.35,
+ "HI": 0.55,
+ "M_Colt_Main": {
+  "src": "MaterialExpressionTextureSample",
+  "alpha_connected": true,
+  "metallic_connected": true,
+  "mode": "new",
+  "saved": true
+ },
+ "M_Colt_Furniture": {
+  "src": "MaterialExpressionTextureSample",
+  "alpha_connected": true,
+  "metallic_connected": true,
+  "mode": "new",
+  "saved": true
+ },
+ "M_Colt_Mag": {
+  "src": "MaterialExpressionTextureSample",
+  "alpha_connected": true,
+  "metallic_connected": true,
+  "mode": "new",
+  "saved": true
+ },
+ "M_Colt_Rear": {
+  "src": "MaterialExpressionTextureSample",
+  "alpha_connected": true,
+  "metallic_connected": true,
+  "mode": "new",
+  "saved": true
+ }
+}

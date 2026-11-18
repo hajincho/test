@@ -1,0 +1,39 @@
+{
+ "medium": {
+  "parent": "None",
+  "class": "<Object '/Game/3DPlatformerGameBundle/CameraShakes/Medium_Camera_Shake_BP.Medium_Camera_Shake_BP_C' (0x0000017615CDBD00) Class 'BlueprintGeneratedClass'>",
+  "fov_oscillation": "<Struct 'FOscillator' (0x000001761956092C) {amplitude: 0.000000, frequency: 0.000000, waveform: SineWave}>",
+  "loc_oscillation": "<Struct 'VOscillator' (0x0000017619560908) {x: {amplitude: 5.000000, frequency: 0.500000, waveform: SineWave}, y: {amplitude: 0.000000, frequency: 0.000000, waveform: SineWave}, z: {amplitude: 8.000000, frequency: 8.000000, waveform: SineWave}}>",
+  "oscillator_time_remaining": "0.0",
+  "rot_oscillation": "<Struct 'ROscillator' (0x00000176195608E4) {pitch: {amplitude: 0.800000, frequency: 3.500000, waveform: SineWave}, yaw: {amplitude: 0.800000, frequency: 3.500000, waveform: SineWave}, roll: {amplitude: 0.000000, frequency: 0.000000, waveform: SineWave}}>",
+  "shake_scale": "1.0",
+  "pattern": "<Object '/Game/3DPlatformerGameBundle/CameraShakes/Medium_Camera_Shake_BP.Default__Medium_Camera_Shake_BP_C:RootShakePattern' (0x000001761A67DDD0) Class 'LegacyCameraShakePattern'>"
+ },
+ "low": {
+  "parent": "None",
+  "class": "<Object '/Game/3DPlatformerGameBundle/CameraShakes/Low_Camera_Shake_BP.Low_Camera_Shake_BP_C' (0x0000017613620E00) Class 'BlueprintGeneratedClass'>",
+  "fov_oscillation": "<Struct 'FOscillator' (0x000001761A89E52C) {amplitude: 0.000000, frequency: 0.000000, waveform: SineWave}>",
+  "loc_oscillation": "<Struct 'VOscillator' (0x000001761A89E508) {x: {amplitude: 3.500000, frequency: 0.400000, waveform: SineWave}, y: {amplitude: 0.000000, frequency: 0.000000, waveform: SineWave}, z: {amplitude: 2.000000, frequency: 8.000000, waveform: SineWave}}>",
+  "oscillator_time_remaining": "0.0",
+  "rot_oscillation": "<Struct 'ROscillator' (0x000001761A89E4E4) {pitch: {amplitude: 0.500000, frequency: 2.500000, waveform: SineWave}, yaw: {amplitude: 0.500000, frequency: 3.000000, waveform: SineWave}, roll: {amplitude: 0.000000, frequency: 0.000000, waveform: SineWave}}>",
+  "shake_scale": "1.0",
+  "pattern": "<Object '/Game/3DPlatformerGameBundle/CameraShakes/Low_Camera_Shake_BP.Default__Low_Camera_Shake_BP_C:RootShakePattern' (0x000001761AB14CB0) Class 'LegacyCameraShakePattern'>"
+ },
+ "mine": {
+  "parent": "None",
+  "class": "<Object '/Game/Furina/CameraShakes/CS_FurinaShot.CS_FurinaShot_C' (0x00000177D16E5B00) Class 'BlueprintGeneratedClass'>",
+  "shake_scale": "1.0",
+  "pattern": "<Object '/Game/Furina/CameraShakes/CS_FurinaShot.Default__CS_FurinaShot_C:WaveOscillatorCameraShakePattern_0' (0x00000177D1551800) Class 'WaveOscillatorCameraShakePattern'>",
+  "pat_fov": "<Struct 'WaveOscillator' (0x00000177D15518B8) {amplitude: 0.000000, frequency: 1.000000, initial_offset_type: Random}>",
+  "pat_location_amplitude_multiplier": "1.0",
+  "pat_location_frequency_multiplier": "1.0",
+  "pat_pitch": "<Struct 'WaveOscillator' (0x00000177D1551894) {amplitude: 0.550000, frequency: 34.000000, initial_offset_type: Random}>",
+  "pat_roll": "<Struct 'WaveOscillator' (0x00000177D15518AC) {amplitude: 0.500000, frequency: 31.000000, initial_offset_type: Random}>",
+  "pat_rotation_amplitude_multiplier": "0.0",
+  "pat_rotation_frequency_multiplier": "1.0",
+  "pat_x": "<Struct 'WaveOscillator' (0x00000177D1551868) {amplitude: 1.000000, frequency: 1.000000, initial_offset_type: Random}>",
+  "pat_y": "<Struct 'WaveOscillator' (0x00000177D1551874) {amplitude: 1.000000, frequency: 1.000000, initial_offset_type: Random}>",
+  "pat_yaw": "<Struct 'WaveOscillator' (0x00000177D15518A0) {amplitude: 0.400000, frequency: 27.000000, initial_offset_type: Random}>",
+  "pat_z": "<Struct 'WaveOscillator' (0x00000177D1551880) {amplitude: 1.000000, frequency: 1.000000, initial_offset_type: Random}>"
+ }
+}

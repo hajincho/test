@@ -1,0 +1,130 @@
+{
+ "lits": [
+  {
+   "node": "P2_LitD_200c0416",
+   "value": "-6.3540456497067",
+   "to": [
+    [
+     "P2_Add_47108719",
+     "A",
+     ""
+    ]
+   ]
+  },
+  {
+   "node": "P2_LitD_e763c217",
+   "value": "-12.0",
+   "to": [
+    [
+     "P2_Mul_ffe58218",
+     "B",
+     ""
+    ]
+   ]
+  },
+  {
+   "node": "P2_LitD_7c6b5723",
+   "value": "-50.506775498163066",
+   "to": [
+    [
+     "P2_Add_d9350a26",
+     "A",
+     ""
+    ]
+   ]
+  },
+  {
+   "node": "P2_LitD_a3b0ad24",
+   "value": "45.0",
+   "to": [
+    [
+     "P2_Mul_a411dd25",
+     "B",
+     ""
+    ]
+   ]
+  },
+  {
+   "node": "P2_LitD_838e3329",
+   "value": "-2.7",
+   "to": [
+    [
+     "K2Node_CallFunction_125",
+     "A",
+     ""
+    ]
+   ]
+  },
+  {
+   "node": "P2_LitD_a37d2633",
+   "value": "1.0",
+   "to": [
+    [
+     "K2Node_CallFunction_128",
+     "A",
+     ""
+    ],
+    [
+     "P2_SetFurinaSwapTarget_94f34332",
+     "FurinaSwapTargetF",
+     ""
+    ]
+   ]
+  },
+  {
+   "node": "P2_LitD_1a47b51",
+   "value": "-2.7",
+   "to": [
+    [
+     "P2_SetFurinaSlideCur_5daeae28",
+     "FurinaSlideCurF",
+     ""
+    ]
+   ]
+  },
+  {
+   "node": "P2_LitD_9e7e301",
+   "value": "-10.6007758219875",
+   "to": [
+    [
+     "P2_Add_be2c5f4",
+     "A",
+     ""
+    ]
+   ]
+  },
+  {
+   "node": "P2_LitD_464f5b2",
+   "value": "-26.0",
+   "to": [
+    [
+     "P2_Mul_41dfbd3",
+     "B",
+     ""
+    ]
+   ]
+  },
+  {
+   "node": "P2_LitD_124d465",
+   "value": "-6.3540456497067",
+   "to": [
+    [
+     "P2_MkVec_b425cf20",
+     "Z",
+     ""
+    ]
+   ]
+  },
+  {
+   "node": "P2_LitD_abd58c6",
+   "value": "-50.506775498163066",
+   "to": [
+    [
+     "P2_MkRot_5568bf27",
+     "Pitch",
+     ""
+    ]
+   ]
+  }
+ ]
+}

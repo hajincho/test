@@ -1,0 +1,25 @@
+{
+ "steps": [
+  "tick",
+  "kick"
+ ],
+ "log": [
+  [
+   "tick",
+   "added"
+  ],
+  [
+   "kick",
+   [
+    "added",
+    [
+     "FPN_ShkBr"
+    ]
+   ]
+  ]
+ ],
+ "prog": [],
+ "status": "<BlueprintStatus.BS_UP_TO_DATE_WITH_WARNINGS: 5>",
+ "failed": false,
+ "saved": true
+}

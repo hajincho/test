@@ -1,0 +1,283 @@
+{
+ "experiences": {
+  "/Game/System/Experiences/B_Furina_Experience": {
+   "default_pawn_data": "/Game/Furina/Lyra/HeroData_Furina.HeroData_Furina",
+   "game_features_to_enable": "[\"ShooterCore\"]",
+   "action_sets": "[\"/Script/LyraGame.LyraExperienceActionSet'/ShooterCore/Accolades/EAS_BasicShooterAcolades.EAS_BasicShooterAcolades'\"]",
+   "actions": [
+    {
+     "class": "GameFeatureAction_AddAbilities"
+    },
+    {
+     "class": "GameFeatureAction_AddComponents"
+    },
+    {
+     "class": "GameFeatureAction_AddWidgets",
+     "widgets": [
+      "<Struct 'LyraHUDElementEntry' (0x00000177800FCB00) {}>"
+     ],
+     "layout": []
+    }
+   ]
+  },
+  "/Game/System/Experiences/B_LyraDefaultExperience": {
+   "default_pawn_data": "/Game/Characters/Heroes/SimplePawnData/SimplePawnData.SimplePawnData",
+   "game_features_to_enable": "[]",
+   "action_sets": "[]",
+   "actions": [
+    {
+     "class": "GameFeatureAction_AddWidgets",
+     "widgets": [],
+     "layout": [
+      "<Struct 'LyraHUDLayoutRequest' (0x00000177800F8980) {}>"
+     ]
+    }
+   ]
+  },
+  "/Game/System/FrontEnd/B_LyraFrontEnd_Experience": {
+   "default_pawn_data": "None",
+   "game_features_to_enable": "[]",
+   "action_sets": "[]",
+   "actions": [
+    {
+     "class": "GameFeatureAction_SplitscreenConfig"
+    },
+    {
+     "class": "GameFeatureAction_AddComponents"
+    },
+    {
+     "class": "ApplyFrontendPerfSettingsAction"
+    },
+    {
+     "class": "GameFeatureAction_AddWidgets",
+     "widgets": [
+      "<Struct 'LyraHUDElementEntry' (0x00000177800F8900) {}>"
+     ],
+     "layout": []
+    }
+   ]
+  },
+  "/ShooterCore/Experiences/B_LyraShooterGame_ControlPoints": {
+   "default_pawn_data": "/ShooterCore/Game/HeroData_ShooterGame.HeroData_ShooterGame",
+   "game_features_to_enable": "[\"ShooterCore\"]",
+   "action_sets": "[\"/Script/LyraGame.LyraExperienceActionSet'/ShooterCore/Experiences/LAS_ShooterGame_SharedInput.LAS_ShooterGame_SharedInput'\", \"/Script/LyraGame.LyraExperienceA",
+   "actions": [
+    {
+     "class": "GameFeatureAction_AddWidgets",
+     "widgets": [
+      "<Struct 'LyraHUDElementEntry' (0x00000177800F1200) {}>",
+      "<Struct 'LyraHUDElementEntry' (0x00000177800FF2C0) {}>"
+     ],
+     "layout": []
+    },
+    {
+     "class": "GameFeatureAction_AddAbilities"
+    },
+    {
+     "class": "GameFeatureAction_AddComponents"
+    }
+   ]
+  },
+  "/ShooterCore/Experiences/B_ShooterGame_Elimination": {
+   "default_pawn_data": "/ShooterCore/Game/HeroData_ShooterGame.HeroData_ShooterGame",
+   "game_features_to_enable": "[\"ShooterCore\"]",
+   "action_sets": "[\"/Script/LyraGame.LyraExperienceActionSet'/ShooterCore/Experiences/LAS_ShooterGame_SharedInput.LAS_ShooterGame_SharedInput'\", \"/Script/LyraGame.LyraExperienceA",
+   "actions": [
+    {
+     "class": "GameFeatureAction_AddAbilities"
+    },
+    {
+     "class": "GameFeatureAction_AddComponents"
+    },
+    {
+     "class": "GameFeatureAction_AddWidgets",
+     "widgets": [
+      "<Struct 'LyraHUDElementEntry' (0x00000177800F0940) {}>"
+     ],
+     "layout": []
+    }
+   ]
+  },
+  "/ShooterCore/Experiences/B_ShooterGame_Perf": {
+   "default_pawn_data": "/ShooterCore/Game/HeroData_ShooterGame.HeroData_ShooterGame",
+   "game_features_to_enable": "[\"ShooterCore\"]",
+   "action_sets": "[\"/Script/LyraGame.LyraExperienceActionSet'/ShooterCore/Experiences/LAS_ShooterGame_SharedInput.LAS_ShooterGame_SharedInput'\", \"/Script/LyraGame.LyraExperienceA",
+   "actions": [
+    {
+     "class": "GameFeatureAction_AddAbilities"
+    },
+    {
+     "class": "GameFeatureAction_AddComponents"
+    },
+    {
+     "class": "GameFeatureAction_AddWidgets",
+     "widgets": [
+      "<Struct 'LyraHUDElementEntry' (0x00000177800F3EC0) {}>"
+     ],
+     "layout": []
+    }
+   ]
+  },
+  "/ShooterExplorer/System/Experiences/B_TestInventoryExperience": {
+   "default_pawn_data": "/ShooterExplorer/Game/HeroData_Explorer.HeroData_Explorer",
+   "game_features_to_enable": "[\"ShooterCore\"]",
+   "action_sets": "[\"/Script/LyraGame.LyraExperienceActionSet'/ShooterCore/Experiences/LAS_ShooterGame_SharedInput.LAS_ShooterGame_SharedInput'\", \"/Script/LyraGame.LyraExperienceA",
+   "actions": [
+    {
+     "class": "GameFeatureAction_AddWidgets",
+     "widgets": [
+      "<Struct 'LyraHUDElementEntry' (0x000001765070BA80) {}>",
+      "<Struct 'LyraHUDElementEntry' (0x000001765070BDC0) {}>"
+     ],
+     "layout": []
+    },
+    {
+     "class": "GameFeatureAction_AddAbilities"
+    },
+    {
+     "class": "GameFeatureAction_AddComponents"
+    }
+   ]
+  },
+  "/TopDownArena/System/Experiences/B_TopDownArenaExperience": {
+   "default_pawn_data": "/TopDownArena/Game/HeroData_Arena.HeroData_Arena",
+   "game_features_to_enable": "[\"TopDownArena\"]",
+   "action_sets": "[]",
+   "actions": [
+    {
+     "class": "GameFeatureAction_AddWidgets",
+     "widgets": [],
+     "layout": [
+      "<Struct 'LyraHUDLayoutRequest' (0x0000017650709E80) {}>"
+     ]
+    },
+    {
+     "class": "GameFeatureAction_SplitscreenConfig"
+    },
+    {
+     "class": "GameFeatureAction_AddComponents"
+    }
+   ]
+  },
+  "/TopDownArena/System/Experiences/B_TopDownArena_Multiplayer_Experience": {
+   "default_pawn_data": "/TopDownArena/Game/HeroData_Arena.HeroData_Arena",
+   "game_features_to_enable": "[\"TopDownArena\"]",
+   "action_sets": "[]",
+   "actions": [
+    {
+     "class": "GameFeatureAction_AddWidgets",
+     "widgets": [],
+     "layout": [
+      "<Struct 'LyraHUDLayoutRequest' (0x000001765070B480) {}>"
+     ]
+    },
+    {
+     "class": "GameFeatureAction_SplitscreenConfig"
+    },
+    {
+     "class": "GameFeatureAction_AddComponents"
+    }
+   ]
+  }
+ },
+ "action_sets": {
+  "/ShooterCore/Experiences/LAS_ShooterGame_SharedInput": {
+   "game_features_to_enable": "[\"ShooterCore\"]",
+   "actions": [
+    {
+     "class": "GameFeatureAction_AddInputBinding"
+    },
+    {
+     "class": "GameFeatureAction_AddInputContextMapping"
+    }
+   ]
+  },
+  "/ShooterCore/Experiences/LAS_ShooterGame_StandardComponents": {
+   "game_features_to_enable": "[\"ShooterCore\"]",
+   "actions": [
+    {
+     "class": "GameFeatureAction_AddComponents"
+    }
+   ]
+  },
+  "/ShooterCore/Experiences/LAS_ShooterGame_StandardHUD": {
+   "game_features_to_enable": "[\"ShooterCore\"]",
+   "actions": [
+    {
+     "class": "GameFeatureAction_AddWidgets",
+     "widgets": [
+      "<Struct 'LyraHUDElementEntry' (0x000001765070CFC0) {}>",
+      "<Struct 'LyraHUDElementEntry' (0x000001765070BC00) {}>",
+      "<Struct 'LyraHUDElementEntry' (0x000001765070EB40) {}>",
+      "<Struct 'LyraHUDElementEntry' (0x000001765070AE00) {}>",
+      "<Struct 'LyraHUDElementEntry' (0x000001765070DD00) {}>",
+      "<Struct 'LyraHUDElementEntry' (0x000001765070D940) {}>",
+      "<Struct 'LyraHUDElementEntry' (0x0000017650709BC0) {}>",
+      "<Struct 'LyraHUDElementEntry' (0x000001765070E500) {}>",
+      "<Struct 'LyraHUDElementEntry' (0x0000017650709640) {}>",
+      "<Struct 'LyraHUDElementEntry' (0x000001765070AB40) {}>"
+     ],
+     "layout": [
+      "<Struct 'LyraHUDLayoutRequest' (0x000001765070BA80) {}>"
+     ]
+    }
+   ]
+  },
+  "/ShooterExplorer/System/Experiences/LAS_InventoryTest": {
+   "game_features_to_enable": "[\"ShooterCore\"]",
+   "actions": [
+    {
+     "class": "GameFeatureAction_AddInputContextMapping"
+    },
+    {
+     "class": "GameFeatureAction_AddInputBinding"
+    },
+    {
+     "class": "GameFeatureAction_AddAbilities"
+    }
+   ]
+  }
+ },
+ "playlists": {
+  "/ShooterMaps/System/Playlists/DA_Expanse_TDM": {
+   "experience_id": "<Struct 'PrimaryAssetId' (0x0000017712D8ACD8) {primary_asset_type: {name: \"LyraExperienceDefinition\"}, primary_asset_name: \"B_ShooterGame_Elimination\"}>",
+   "map_id": "<Struct 'PrimaryAssetId' (0x0000017712D8ACC0) {primary_asset_type: {name: \"Map\"}, primary_asset_name: \"/ShooterMaps/Maps/L_Expanse\"}>",
+   "extra_args": "{}"
+  },
+  "/ShooterMaps/System/Playlists/DA_Convolution_ControlPoint": {
+   "experience_id": "<Struct 'PrimaryAssetId' (0x0000017712D8BF98) {primary_asset_type: {name: \"LyraExperienceDefinition\"}, primary_asset_name: \"B_LyraShooterGame_ControlPoints\"}>",
+   "map_id": "<Struct 'PrimaryAssetId' (0x0000017712D8BF80) {primary_asset_type: {name: \"Map\"}, primary_asset_name: \"/ShooterMaps/Maps/L_Convolution_Blockout\"}>",
+   "extra_args": "{}"
+  },
+  "/Game/System/Playlists/DA_Frontend": {
+   "experience_id": "<Struct 'PrimaryAssetId' (0x0000017712D8BBD8) {primary_asset_type: {name: \"LyraExperienceDefinition\"}, primary_asset_name: \"B_LyraFrontEnd_Experience\"}>",
+   "map_id": "<Struct 'PrimaryAssetId' (0x0000017712D8BBC0) {primary_asset_type: {name: \"Map\"}, primary_asset_name: \"/Game/System/FrontEnd/Maps/L_LyraFrontEnd\"}>",
+   "extra_args": "{}"
+  },
+  "/Game/System/Playlists/DA_ExamplePlaylist": {
+   "experience_id": "<Struct 'PrimaryAssetId' (0x0000017712D8B958) {primary_asset_type: {name: \"LyraExperienceDefinition\"}, primary_asset_name: \"B_LyraDefaultExperience\"}>",
+   "map_id": "<Struct 'PrimaryAssetId' (0x0000017712D8B940) {primary_asset_type: {name: \"Map\"}, primary_asset_name: \"/Game/System/DefaultEditorMap/L_DefaultEditorOverview\"}>",
+   "extra_args": "{}"
+  },
+  "/TopDownArena/System/Playlists/DA_TopDownArena_Splode": {
+   "experience_id": "<Struct 'PrimaryAssetId' (0x0000017712D8B818) {primary_asset_type: {name: \"LyraExperienceDefinition\"}, primary_asset_name: \"B_TopDownArenaExperience\"}>",
+   "map_id": "<Struct 'PrimaryAssetId' (0x0000017712D8B800) {primary_asset_type: {name: \"Map\"}, primary_asset_name: \"/TopDownArena/Maps/L_TopDownArenaGym\"}>",
+   "extra_args": "{}"
+  },
+  "/ShooterCore/System/Playlists/DA_ShooterGame_ShooterPerf": {
+   "experience_id": "<Struct 'PrimaryAssetId' (0x0000017712D8B598) {primary_asset_type: {name: \"LyraExperienceDefinition\"}, primary_asset_name: \"B_ShooterGame_Perf\"}>",
+   "map_id": "<Struct 'PrimaryAssetId' (0x0000017712D8B580) {primary_asset_type: {name: \"Map\"}, primary_asset_name: \"/ShooterCore/Maps/L_ShooterPerf\"}>",
+   "extra_args": "{}"
+  },
+  "/TopDownArena/System/Playlists/DA_TopDownArena_Multiplayer": {
+   "experience_id": "<Struct 'PrimaryAssetId' (0x0000017712D8B458) {primary_asset_type: {name: \"LyraExperienceDefinition\"}, primary_asset_name: \"B_TopDownArena_Multiplayer_Experienc",
+   "map_id": "<Struct 'PrimaryAssetId' (0x0000017712D8B440) {primary_asset_type: {name: \"Map\"}, primary_asset_name: \"/TopDownArena/Maps/L_TopDown_LocalMultiplayer\"}>",
+   "extra_args": "{}"
+  },
+  "/ShooterCore/System/Playlists/DA_ShooterGame_ShooterGym": {
+   "experience_id": "<Struct 'PrimaryAssetId' (0x0000017712D8C218) {primary_asset_type: {name: \"LyraExperienceDefinition\"}, primary_asset_name: \"B_LyraShooterGame_ControlPoints\"}>",
+   "map_id": "<Struct 'PrimaryAssetId' (0x0000017712D8C200) {primary_asset_type: {name: \"Map\"}, primary_asset_name: \"/ShooterCore/Maps/L_ShooterGym\"}>",
+   "extra_args": "{}"
+  }
+ }
+}

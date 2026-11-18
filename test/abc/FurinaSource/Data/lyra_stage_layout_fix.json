@@ -1,0 +1,48 @@
+{
+ "revert": true,
+ "rows": {
+  "/Game/System/Experiences/B_Furina_Experience": {
+   "n_actions": 1,
+   "before": [
+    "(LayoutClass=\"/ShooterCore/UserInterface/W_ShooterHUDLayout.W_ShooterHUDLayout_C\",LayerID=(TagName=\"UI.Layer.Game\"))"
+   ],
+   "after": [],
+   "saved": true
+  },
+  "/ShooterCore/Experiences/B_ShooterGame_Elimination": {
+   "n_actions": 1,
+   "before": [
+    "(LayoutClass=\"/ShooterCore/UserInterface/W_ShooterHUDLayout.W_ShooterHUDLayout_C\",LayerID=(TagName=\"UI.Layer.Game\"))"
+   ],
+   "after": [],
+   "saved": true
+  },
+  "/ShooterCore/Experiences/B_LyraShooterGame_ControlPoints": {
+   "n_actions": 1,
+   "before": [
+    "(LayoutClass=\"/ShooterCore/UserInterface/W_ShooterHUDLayout.W_ShooterHUDLayout_C\",LayerID=(TagName=\"UI.Layer.Game\"))"
+   ],
+   "after": [],
+   "saved": true
+  },
+  "/ShooterCore/Experiences/B_ShooterGame_Perf": {
+   "n_actions": 1,
+   "before": [
+    "(LayoutClass=\"/ShooterCore/UserInterface/W_ShooterHUDLayout.W_ShooterHUDLayout_C\",LayerID=(TagName=\"UI.Layer.Game\"))"
+   ],
+   "after": [],
+   "saved": true
+  },
+  "/ShooterExplorer/System/Experiences/B_TestInventoryExperience": {
+   "n_actions": 1,
+   "before": [
+    "(LayoutClass=\"/ShooterCore/UserInterface/W_ShooterHUDLayout.W_ShooterHUDLayout_C\",LayerID=(TagName=\"UI.Layer.Game\"))"
+   ],
+   "after": [],
+   "saved": true
+  }
+ },
+ "src_layout": [
+  "(LayoutClass=\"/ShooterCore/UserInterface/W_ShooterHUDLayout.W_ShooterHUDLayout_C\",LayerID=(TagName=\"UI.Layer.Game\"))"
+ ]
+}

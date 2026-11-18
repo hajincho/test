@@ -1,0 +1,70 @@
+{
+ "DECAY": 6.0,
+ "links": [
+  [
+   "+",
+   "RgWin.Result",
+   "RgWinS.TargetValue",
+   true
+  ],
+  [
+   "+",
+   "RgWin.Result",
+   "RgWinM.A",
+   true
+  ],
+  [
+   "+",
+   "RgWinS.Result",
+   "RgWinM.B",
+   true
+  ],
+  [
+   "x",
+   "RgWin.Result",
+   "RgW.A",
+   true
+  ],
+  [
+   "+",
+   "RgWinM.Result",
+   "RgW.A",
+   true
+  ],
+  [
+   "+",
+   "RcStep.Result",
+   "RcStepS.TargetValue",
+   true
+  ],
+  [
+   "+",
+   "RcStep.Result",
+   "RcHold3.A",
+   true
+  ],
+  [
+   "+",
+   "RcStepS.Result",
+   "RcHold3.B",
+   true
+  ],
+  [
+   "x",
+   "RcHold2.Result",
+   "RcW.A",
+   true
+  ],
+  [
+   "+",
+   "RcHold3.Result",
+   "RcW.A",
+   true
+  ]
+ ],
+ "set": [
+  true,
+  true
+ ],
+ "saved": true
+}

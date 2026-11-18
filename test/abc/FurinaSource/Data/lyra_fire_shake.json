@@ -1,0 +1,11 @@
+{
+ "gain": 1.0,
+ "pattern": "<Object '/Game/Furina/CameraShakes/CS_FurinaShot.Default__CS_FurinaShot_C:WaveOscillatorCameraShakePattern_0' (0x000001771C910500) Class 'WaveOscillatorCameraShakePattern'>",
+ "shake_saved": true,
+ "next": [
+  "M4_FlashSpawn"
+ ],
+ "added": true,
+ "status": "<BlueprintStatus.BS_UP_TO_DATE_WITH_WARNINGS: 5>",
+ "saved": true
+}

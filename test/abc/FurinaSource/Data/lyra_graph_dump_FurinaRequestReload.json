@@ -1,0 +1,79 @@
+{
+ "ev_name": "FurinaRequestReload",
+ "n": 997,
+ "ev": "M4_RequestReload",
+ "chain": [
+  {
+   "node": "M4_RequestReload",
+   "cls": "K2Node_CustomEvent",
+   "then": [
+    "M4_ReloadGate"
+   ]
+  },
+  {
+   "node": "M4_ReloadGate",
+   "cls": "K2Node_IfThenElse",
+   "then": [
+    "M4_SetFurinaReloading"
+   ],
+   "else": []
+  },
+  {
+   "node": "M4_SetFurinaReloading",
+   "cls": "K2Node_VariableSet",
+   "then": [
+    "TFP_SetFurinaReloadAmount"
+   ]
+  },
+  {
+   "node": "TFP_SetFurinaReloadAmount",
+   "cls": "K2Node_VariableSet",
+   "then": [
+    "M4_ReloadTimer"
+   ]
+  },
+  {
+   "node": "M4_ReloadTimer",
+   "cls": "K2Node_CallFunction",
+   "then": [
+    "P2_Branch_59c2bc16"
+   ]
+  },
+  {
+   "node": "P2_Branch_59c2bc16",
+   "cls": "K2Node_IfThenElse",
+   "then": [
+    "P2_PlaySlot_f6fb6517"
+   ],
+   "else": [
+    "K2Node_FP_ReloadMontage"
+   ]
+  },
+  {
+   "node": "P2_PlaySlot_f6fb6517",
+   "cls": "K2Node_CallFunction",
+   "then": [
+    "P2_Timer_FurinaPistolHold_41e9c420"
+   ]
+  },
+  {
+   "node": "K2Node_FP_ReloadMontage",
+   "cls": "K2Node_CallFunction",
+   "then": [
+    "K2Node_FP_ReloadRifle"
+   ]
+  },
+  {
+   "node": "P2_Timer_FurinaPistolHold_41e9c420",
+   "cls": "K2Node_CallFunction",
+   "then": [
+    "K2Node_FP_ReloadRifle"
+   ]
+  },
+  {
+   "node": "K2Node_FP_ReloadRifle",
+   "cls": "K2Node_CallFunction",
+   "then": []
+  }
+ ]
+}

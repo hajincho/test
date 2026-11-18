@@ -1,0 +1,22 @@
+{
+ "FIRE_D": [
+  1.6,
+  3.1,
+  0.6
+ ],
+ "FIRE_TW_DEG": 20.0,
+ "had": [
+  "FireDV",
+  "FireTw",
+  "FireWN",
+  "TpD2",
+  "TwB"
+ ],
+ "links": [],
+ "set": [
+  true,
+  true,
+  true
+ ],
+ "saved": true
+}

@@ -1,0 +1,21 @@
+{
+ "shots": [
+  "left",
+  "right",
+  "front",
+  "back",
+  "below_left",
+  "below_right",
+  "under",
+  "wide_left"
+ ],
+ "rifle_materials": [
+  "M_Colt_Main",
+  "M_Colt_Furniture",
+  "M_Colt_Rear"
+ ],
+ "mag_materials": [
+  "M_Colt_Mag"
+ ],
+ "done": true
+}

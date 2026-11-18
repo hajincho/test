@@ -1,0 +1,134 @@
+{
+ "AS_Furina_FP_Reload": {
+  "len": 3.133333444595337,
+  "RifleReload_keys": [
+   "[0.000000, 0.350000, 2.600000, 3.000000]",
+   "[0.000000, 1.000000, 1.000000, 0.000000]"
+  ],
+  "RifleReload": [
+   [
+    0.0,
+    0.0
+   ],
+   [
+    0.35,
+    1.0
+   ],
+   [
+    2.6,
+    1.0
+   ],
+   [
+    3.0,
+    0.0
+   ]
+  ],
+  "curve_name": "riflereload"
+ },
+ "AM_Furina_FP_Reload": {
+  "len": 3.133333444595337,
+  "RifleReload_keys": [
+   "[0.000000, 0.350000, 2.600000, 3.000000]",
+   "[0.000000, 1.000000, 1.000000, 0.000000]"
+  ],
+  "RifleReload": [
+   [
+    0.0,
+    0.0
+   ],
+   [
+    0.35,
+    1.0
+   ],
+   [
+    2.6,
+    1.0
+   ],
+   [
+    3.0,
+    0.0
+   ]
+  ],
+  "curve_name": "RifleReload"
+ },
+ "AS_Furina_FP_ReloadEmpty": {
+  "len": 3.133333444595337,
+  "RifleReload_keys": [
+   "[0.000000, 0.033300, 1.900000, 2.000000]",
+   "[0.000000, 1.000000, 1.000000, 0.000000]"
+  ],
+  "RifleReload": [
+   [
+    0.0,
+    0.0
+   ],
+   [
+    0.033,
+    1.0
+   ],
+   [
+    1.9,
+    1.0
+   ],
+   [
+    2.0,
+    0.0
+   ]
+  ],
+  "curve_name": "riflereload"
+ },
+ "AM_Furina_FP_ReloadEmpty": {
+  "len": 3.133333444595337,
+  "RifleReload_keys": [
+   "[0.000000, 0.033300, 1.900000, 2.000000]",
+   "[0.000000, 1.000000, 1.000000, 0.000000]"
+  ],
+  "RifleReload": [
+   [
+    0.0,
+    0.0
+   ],
+   [
+    0.033,
+    1.0
+   ],
+   [
+    1.9,
+    1.0
+   ],
+   [
+    2.0,
+    0.0
+   ]
+  ],
+  "curve_name": "RifleReload"
+ },
+ "seq_len_set": "err AnimMontage: Property 'SequenceLength' for attribute 'sequence_length' on 'AnimM",
+ "sections": [
+  [
+   "Default"
+  ]
+ ],
+ "am_len_after_calc": 3.133333444595337,
+ "am_props": [
+  "blend_mode_in",
+  "blend_mode_out",
+  "blend_profile_in",
+  "blend_profile_out",
+  "create_slot_animation_as_dynamic_montage_with_blend_settings",
+  "get_blend_in_args",
+  "get_blend_out_args",
+  "get_default_blend_in_time",
+  "get_default_blend_out_time",
+  "get_num_sections",
+  "get_play_length",
+  "get_section_index",
+  "get_section_name",
+  "is_valid_section_name",
+  "sequence_length"
+ ],
+ "saved": [
+  true,
+  true
+ ]
+}
