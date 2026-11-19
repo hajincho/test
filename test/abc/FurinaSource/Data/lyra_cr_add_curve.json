@@ -1,11 +1,11 @@
 {
- "before": 82,
+ "before": 83,
  "added": {
-  "HandleFp": "<Struct 'RigElementKey' (0x000002AA77183D30) {type: Curve, name: \"HandleFp\"}>"
+  "PistolOn": "<Struct 'RigElementKey' (0x00000193DF7A3590) {type: Curve, name: \"PistolOn\"}>"
  },
  "saved": true,
- "after": 83,
+ "after": 84,
  "has": [
-  "HandleFp"
+  "PistolOn"
  ]
 }

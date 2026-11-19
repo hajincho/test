@@ -1,0 +1,17 @@
+{
+ "text_before": ",CurveValues=(0.000000,0.000000,0.000000,0.000000,0.000000),CurveNames=(\"ViewTP\",\"Crouch\",\"Zip\",\"FireHold\",\"Prone\"),Alpha=1.000000,ApplyMode=Blend,InitialUpdateFunction=(ClassName=\"\",FunctionName=\"\"),BecomeRelevantFunction=(ClassName=\"\",FunctionName=\"\"),UpdateFunction=(ClassName=\"\",FunctionName=\"\"))",
+ "pins": [
+  "SourcePose",
+  "CurveValues_0",
+  "CurveValues_1",
+  "CurveValues_2",
+  "CurveValues_3",
+  "CurveValues_4",
+  "CurveValues_5",
+  "Alpha",
+  "Pose"
+ ],
+ "owner": "FurinaCrouchOwner",
+ "abp_status": "<BlueprintStatus.BS_UP_TO_DATE_WITH_WARNINGS: 5>",
+ "abp_saved": true
+}

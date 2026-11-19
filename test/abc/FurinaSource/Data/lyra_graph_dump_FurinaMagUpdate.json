@@ -1,11 +1,53 @@
 {
  "ev_name": "FurinaMagUpdate",
- "n": 997,
+ "n": 1044,
  "ev": "FMG_Update",
  "chain": [
   {
    "node": "FMG_Update",
    "cls": "K2Node_CustomEvent",
+   "then": [
+    "FBX_SetKick"
+   ]
+  },
+  {
+   "node": "FBX_SetKick",
+   "cls": "K2Node_VariableSet",
+   "then": [
+    "FBX_SetHold"
+   ]
+  },
+  {
+   "node": "FBX_SetHold",
+   "cls": "K2Node_VariableSet",
+   "then": [
+    "FBX_SetLoc"
+   ]
+  },
+  {
+   "node": "FBX_SetLoc",
+   "cls": "K2Node_CallFunction",
+   "then": [
+    "FBX_SetVis"
+   ]
+  },
+  {
+   "node": "FBX_SetVis",
+   "cls": "K2Node_CallFunction",
+   "then": [
+    "FBH_SetLoc"
+   ]
+  },
+  {
+   "node": "FBH_SetLoc",
+   "cls": "K2Node_CallFunction",
+   "then": [
+    "FBH_SetVis"
+   ]
+  },
+  {
+   "node": "FBH_SetVis",
+   "cls": "K2Node_CallFunction",
    "then": [
     "P2_Branch_01989945"
    ]

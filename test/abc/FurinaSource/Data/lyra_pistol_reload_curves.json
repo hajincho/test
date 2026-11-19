@@ -1,0 +1,12 @@
+{
+ "backup": true,
+ "len": 2.0,
+ "curves": [
+  "PRX",
+  "PRY",
+  "PRZ"
+ ],
+ "n_keys": 80,
+ "t_last": 1.999,
+ "saved": true
+}

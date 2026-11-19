@@ -869,3 +869,17 @@ Control Rig이 들어 올리는 회전은 컴포넌트 +X축 기준 음수 각�
 - **1인칭 총을 앞으로(`lyra_fp_gun_forward.py 4`):** `OffHS.A`(허리 자세 총 위치, 눈 기준)의 Y를 10 → 14cm로 4cm 앞으로 뺐습니다(견착 `OffHS.B`, 정조준 `OffAim.B`는 그대로). 이 자세는 왼팔 도달이 38.4/39.2cm로 이미 한계라 왼손이 핸드가드를 따라 4cm 뒤로 미끄러지게 했습니다(`FpBk1~3`, `FpBack`, `AllLeftBack2` → `LBackV.Y`, 가중치 = 1인칭 × 정조준 아님 × 견착 아님 × 재장전 아님, 재장전 중 손 경로는 총 기준이라 그대로). 오른손은 권총손잡이에 IK로 붙어 총을 따라옵니다. 3인칭 총 위치는 `OffHS + TpD`로 정해지므로 `TpD.A.Y`를 6.0748 − 4로 줄여 그대로 뒀고, 3인칭 캡처 전후가 같은 것을 확인했습니다. 1인칭 캡처(`Data/fp_gun_forward_compare.png`)에서 총이 앞으로 가 뒷가늠자가 화면 오른쪽 아래에 크게 보입니다.
 - **HUD 재장전 점 시간(`lyra_hud_reload_duration.py`):** `BP_FurinaHUD`가 경과 시간 ÷ 고정 3.0초로 점을 채워서 긴급 재장전(2.0초)에서는 끝까지 안 차고 전술이 길어지면 일찍 찼습니다. `ReloadP = clamp(경과 ÷ max(경과 + 남은 시간, 0.01))`로 바꿔 실제 재장전 시간에 맞춥니다(PIE: 긴급 0.2/0.43/0.63/0.85가 시간에 비례, 일반 재장전 3.0초에 비례).
 - **미확인:** 1인칭에서 총 앞으로(허리 자세)의 앉기·달리기·견착 자세, 손 위치를 화면으로 본 것은 잠금 상태 캡처 한 장뿐입니다. 견착(우클릭 길게)은 총 위치를 바꾸지 않았습니다.
+
+## 1인칭 권총 적용 (Armpist.fbx 분석 반영, 1인칭 전용)
+- ABP_Furina: `ModifyCurve_ViewState` 에 곡선 `PistolOn`(= FurinaPistolOn 활성) 추가 (`Scripts/Unreal/lyra_abp_pistol_curve.py`). CR 에 곡선 등록(`lyra_cr_add_curve.py PistolOn`).
+- 양손 파지: CR `PistGrip` = Lerp(소총 왼손 목표 LHandOff3, 권총 지지 위치, `PistW` = PistolOn x RlFpW). 지지 위치 FBX 환산값 (-0.1,-18.8,-12.8) 이 실제 손목에서 (-0.1,-18.8,-12.8) 로 측정되도록 목표값은 (-0.1,-11.5,-12.8) (`lyra_cr_pistol_grip.py`).
+- 총 위치: 소총용 허리 위치 그대로면 손이 카메라 뒤로 가서 보이지 않음 -> 권총일 때만 눈 기준 오프셋 (X+1.5, Y+16, Z+1.5) (`lyra_cr_pistol_gunoff.py`, 노드 PistGOff/PistGAdd, OffAim.A 앞). FBX 는 프레임이 카메라 앞 약 42 cm.
+- 슬라이드 후퇴/탄피: 이미 있던 슬라이드 시스템 그대로 사용 (새로 만들지 않음). 발사 반동도 기존 FurinaRifleShot/RifleKick 그대로.
+- 재장전: FBX `FPS_Pistol_Reload_easy` 왼손(프레임 무게중심 기준, 0프레임 대비) 경로를 `Furina_Pistol_Reload`(2.0초)에 곡선 PRX/PRY/PRZ 로 기록(시간 1.317초 -> 2.0초), CR 이 PistGrip 지지 위치에 더함 (`Scripts/Blender/extract_pistol_reload_hand.py`, `lyra_pistol_reload_curves.py`, `lyra_cr_pistol_reload.py`). 백업 `/Game/Furina/Backups/Furina_Pistol_Reload_pre_fp`.
+  왼손 경로: 왼쪽 +24 cm, 뒤 -50 cm(탄창 집기) 까지 갔다가 복귀 - PIE 측정 확인(`Data/lyra_pistol_reload_probe_r2.json`).
+- 3인칭은 권총일 때 CR Alpha 0 이라 변화 없음. 미적용/한계: 권총 탄창 메시 이동, 빈 탄창(Reload_full) 전용 동작·슬라이드 놓기, 달리기/앉기 변형, 걷기 흔들림(Walk) 별도 반영.
+
+### 1인칭 권총 보정 2 (손-총 분리 + 거리)
+- 원인: `FurinaRifle` 은 `FurinaMesh` 의 `Right-wrist` 소켓에 붙어 손-총 관계가 고정이다. P220 프레임 경계가 소총 컴포넌트 기준 Y -8.5~10.8 인데 오른손 손가락 끝이 Y -7~-13 이어서 손잡이 뒤 3~5 cm 에 떠 있었다(FBX 의 손 위치는 FBX 프레임 기준이라 P220 모델과 어긋남). CR 로 손만 옮기면 총도 같이 따라와서 소용없다.
+- 수정(`Scripts/Unreal/lyra_pistol_fp_offset_bp.py`, ThirdPersonCharacter_BP): FurinaMagUpdate 의 권총 분기에서 `FurinaPistolFrame` 상대 위치 = VLerp((0,-4.27,0.63), (0,-13.77,0.63), IsActive(FurinaFPWanted)) -> 1인칭일 때만 9.5 cm 손 쪽으로. 3인칭은 그대로. 측정 `lyra_pistol_grip_probe_g11.json`: 프레임 Y -18.0~1.3.
+- 거리: 권총 눈 기준 오프셋 (X+1.5, Y+18, Z+3) (`lyra_cr_pistol_gunoff.py`). 손 CR 보정(`lyra_cr_pistol_rhand.py`)은 dY=0 으로 둠(총이 손에 붙어 있어 효과 없음).

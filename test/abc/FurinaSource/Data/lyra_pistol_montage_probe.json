@@ -1,0 +1,318 @@
+{
+ "AM_Furina_Pistol_Reload": {
+  "len": 2.0,
+  "segs": [
+   {
+    "ref": null,
+    "start": 0.0,
+    "end": 2.0,
+    "rate": 1.0,
+    "slot": "UpperBody"
+   },
+   {
+    "ref": null,
+    "start": 0.0,
+    "end": 2.0,
+    "rate": 1.0,
+    "slot": "UpperBodyAdditive"
+   }
+  ],
+  "curves": [],
+  "blend_in": "<Struct 'AlphaBlend' (0x000001950F7A1700) {}>",
+  "blend_out": "<Struct 'AlphaBlend' (0x000001950F7A1738) {}>"
+ },
+ "AM_Furina_Pistol_Reload1": {
+  "len": 2.0,
+  "segs": [
+   {
+    "ref": "/Game/Furina/P220/Anim/Furina_Pistol_Reload1.Furina_Pistol_Reload1",
+    "start": 0.0,
+    "end": 2.0,
+    "rate": 1.0,
+    "slot": "UpperBody"
+   },
+   {
+    "ref": "/Game/Furina/P220/Anim/Furina_Pistol_Reload_Additive1.Furina_Pistol_Reload_Additive1",
+    "start": 0.0,
+    "end": 2.0,
+    "rate": 1.0,
+    "slot": "UpperBodyAdditive"
+   }
+  ],
+  "curves": [],
+  "blend_in": "<Struct 'AlphaBlend' (0x000001950F7AAA00) {}>",
+  "blend_out": "<Struct 'AlphaBlend' (0x000001950F7AAA38) {}>"
+ },
+ "AM_Furina_Pistol_Fire": {
+  "len": 0.6666666865348816,
+  "segs": [
+   {
+    "ref": null,
+    "start": 0.0,
+    "end": 0.6666666865348816,
+    "rate": 1.0,
+    "slot": "FullBodyAdditivePreAim"
+   }
+  ],
+  "curves": [],
+  "blend_in": "<Struct 'AlphaBlend' (0x000001950F7A8000) {}>",
+  "blend_out": "<Struct 'AlphaBlend' (0x000001950F7A8038) {}>"
+ },
+ "AM_Furina_Pistol_Fire1": {
+  "len": 0.6666666865348816,
+  "segs": [
+   {
+    "ref": "/Game/Furina/P220/Anim/Furina_Pistol_Fire1.Furina_Pistol_Fire1",
+    "start": 0.0,
+    "end": 0.6666666865348816,
+    "rate": 1.0,
+    "slot": "FullBodyAdditivePreAim"
+   }
+  ],
+  "curves": [],
+  "blend_in": "<Struct 'AlphaBlend' (0x000001950F7A9880) {}>",
+  "blend_out": "<Struct 'AlphaBlend' (0x000001950F7A98B8) {}>"
+ },
+ "AM_Furina_Pistol_Equip": {
+  "len": 1.399999976158142,
+  "segs": [
+   {
+    "ref": null,
+    "start": 0.0,
+    "end": 1.399999976158142,
+    "rate": 1.0,
+    "slot": "UpperBody"
+   },
+   {
+    "ref": null,
+    "start": 0.0,
+    "end": 1.399999976158142,
+    "rate": 1.0,
+    "slot": "UpperBodyAdditive"
+   }
+  ],
+  "curves": [
+   "ScaleDownWeaponR",
+   "DisableLHandIK"
+  ],
+  "blend_in": "<Struct 'AlphaBlend' (0x000001950F7A6E80) {}>",
+  "blend_out": "<Struct 'AlphaBlend' (0x000001950F7A6EB8) {}>"
+ },
+ "Furina_Pistol_Reload": {
+  "len": 2.0,
+  "curves": [],
+  "rate_scale": 1.0
+ },
+ "Furina_Pistol_Reload1": {
+  "len": 2.0,
+  "curves": [],
+  "rate_scale": 1.0
+ },
+ "Furina_Pistol_Reload_Additive": {
+  "len": 2.0,
+  "curves": [],
+  "rate_scale": 1.0
+ },
+ "node_P2_PlaySlot_d7e2734": [
+  [
+   "execute",
+   "",
+   [
+    "P2_Branch_0e98d33.then"
+   ]
+  ],
+  [
+   "self",
+   "",
+   [
+    "P2_GetAnimInst_2d486a6.ReturnValue"
+   ]
+  ],
+  [
+   "Asset",
+   "/Game/Furina/P220/Anim/Furina_Pistol_Idle_Hipfire.Furina_Pistol_Idle_Hipfire",
+   []
+  ],
+  [
+   "SlotNodeName",
+   "DefaultSlot",
+   []
+  ],
+  [
+   "BlendInTime",
+   "0.2",
+   []
+  ],
+  [
+   "BlendOutTime",
+   "0.2",
+   []
+  ],
+  [
+   "InPlayRate",
+   "1.000000",
+   []
+  ],
+  [
+   "LoopCount",
+   "9999",
+   []
+  ],
+  [
+   "BlendOutTriggerTime",
+   "-1.000000",
+   []
+  ],
+  [
+   "InTimeToStartMontageAt",
+   "0.000000",
+   []
+  ],
+  [
+   "then",
+   "",
+   []
+  ],
+  [
+   "ReturnValue",
+   "",
+   []
+  ]
+ ],
+ "node_P2_PlaySlot_a583d87": [
+  [
+   "execute",
+   "",
+   [
+    "P2_SetMagMesh_007db477.then"
+   ]
+  ],
+  [
+   "self",
+   "",
+   [
+    "P2_GetAnimInst_a7c5489.ReturnValue"
+   ]
+  ],
+  [
+   "Asset",
+   "/Game/Furina/P220/Anim/Furina_Pistol_Equip.Furina_Pistol_Equip",
+   []
+  ],
+  [
+   "SlotNodeName",
+   "DefaultSlot",
+   []
+  ],
+  [
+   "BlendInTime",
+   "0.2",
+   []
+  ],
+  [
+   "BlendOutTime",
+   "0.2",
+   []
+  ],
+  [
+   "InPlayRate",
+   "1.000000",
+   []
+  ],
+  [
+   "LoopCount",
+   "1",
+   []
+  ],
+  [
+   "BlendOutTriggerTime",
+   "-1.000000",
+   []
+  ],
+  [
+   "InTimeToStartMontageAt",
+   "0.000000",
+   []
+  ],
+  [
+   "then",
+   "",
+   [
+    "P2_Timer_FurinaPistolHold_a86c0110.execute"
+   ]
+  ],
+  [
+   "ReturnValue",
+   "",
+   []
+  ]
+ ],
+ "node_P2_PlaySlot_f6fb6517": [
+  [
+   "execute",
+   "",
+   [
+    "P2_Branch_59c2bc16.then"
+   ]
+  ],
+  [
+   "self",
+   "",
+   [
+    "P2_GetAnimInst_13b22f19.ReturnValue"
+   ]
+  ],
+  [
+   "Asset",
+   "/Game/Furina/P220/Anim/Furina_Pistol_Reload.Furina_Pistol_Reload",
+   []
+  ],
+  [
+   "SlotNodeName",
+   "DefaultSlot",
+   []
+  ],
+  [
+   "BlendInTime",
+   "0.2",
+   []
+  ],
+  [
+   "BlendOutTime",
+   "0.2",
+   []
+  ],
+  [
+   "InPlayRate",
+   "1.000000",
+   []
+  ],
+  [
+   "LoopCount",
+   "1",
+   []
+  ],
+  [
+   "BlendOutTriggerTime",
+   "-1.000000",
+   []
+  ],
+  [
+   "InTimeToStartMontageAt",
+   "0.000000",
+   []
+  ],
+  [
+   "then",
+   "",
+   [
+    "P2_Timer_FurinaPistolHold_41e9c420.execute"
+   ]
+  ],
+  [
+   "ReturnValue",
+   "",
+   []
+  ]
+ ]
+}

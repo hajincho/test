@@ -1,0 +1,228 @@
+{
+ "AnimGraphNode_ControlRig_0": {
+  "class": "AnimGraphNode_ControlRig",
+  "pins": [
+   [
+    "Source",
+    "(LinkID=-1,SourceLinkID=-1)",
+    [
+     "AnimGraphNode_ModifyCurve_ViewState.Pose"
+    ]
+   ],
+   [
+    "Alpha",
+    "1.000000",
+    []
+   ],
+   [
+    "Pose",
+    "",
+    [
+     "AnimGraphNode_LocalToComponentSpace_0.LocalPose",
+     "AnimGraphNode_Root_0.Result"
+    ]
+   ]
+  ],
+  "node": "<Struct 'AnimNode_ControlRig' (0x000001937A560CE0) {}>",
+  "node_props": [
+   "assign",
+   "cast",
+   "control_rig_class",
+   "copy",
+   "default_control_rig_class",
+   "export_text",
+   "get_editor_property",
+   "import_text",
+   "set_editor_properties",
+   "set_editor_property",
+   "static_struct",
+   "to_dict",
+   "to_tuple"
+  ]
+ },
+ "AnimGraphNode_ModifyCurve_Aim": {
+  "class": "AnimGraphNode_ModifyCurve",
+  "pins": [
+   [
+    "SourcePose",
+    "(LinkID=-1,SourceLinkID=-1)",
+    [
+     "AnimGraphNode_LayeredBoneBlend_FP.Pose"
+    ]
+   ],
+   [
+    "CurveValues_0",
+    "0.0",
+    [
+     "K2Node_CallFunction_FPNorm.ReturnValue"
+    ]
+   ],
+   [
+    "Alpha",
+    "1.000000",
+    []
+   ],
+   [
+    "Pose",
+    "",
+    [
+     "AnimGraphNode_ModifyCurve_AimState.SourcePose"
+    ]
+   ]
+  ],
+  "node": "<Struct 'AnimNode_ModifyCurve' (0x000001939932F6A8) {source_pose: {}, curve_map: (), curve_values: (0.000000), alpha: 1.000000, apply_mode: Blend}>",
+  "node_props": [
+   "alpha",
+   "apply_mode",
+   "assign",
+   "cast",
+   "copy",
+   "curve_map",
+   "curve_values",
+   "export_text",
+   "get_editor_property",
+   "import_text",
+   "set_editor_properties",
+   "set_editor_property",
+   "source_pose",
+   "static_struct",
+   "to_dict",
+   "to_tuple"
+  ]
+ },
+ "AnimGraphNode_ModifyCurve_AimState": {
+  "class": "AnimGraphNode_ModifyCurve",
+  "pins": [
+   [
+    "SourcePose",
+    "(LinkID=-1,SourceLinkID=-1)",
+    [
+     "AnimGraphNode_ModifyCurve_Aim.Pose"
+    ]
+   ],
+   [
+    "CurveValues_0",
+    "0.0",
+    [
+     "K2Node_FPAA_ToF0.ReturnValue"
+    ]
+   ],
+   [
+    "CurveValues_1",
+    "0.0",
+    [
+     "K2Node_FPAA_ToF1.ReturnValue"
+    ]
+   ],
+   [
+    "Alpha",
+    "1.000000",
+    []
+   ],
+   [
+    "Pose",
+    "",
+    [
+     "AnimGraphNode_ModifyCurve_ViewState.SourcePose"
+    ]
+   ]
+  ],
+  "node": "<Struct 'AnimNode_ModifyCurve' (0x000001939932DAA8) {source_pose: {}, curve_map: (), curve_values: (0.000000,0.000000), alpha: 1.000000, apply_mode: Blend}>",
+  "node_props": [
+   "alpha",
+   "apply_mode",
+   "assign",
+   "cast",
+   "copy",
+   "curve_map",
+   "curve_values",
+   "export_text",
+   "get_editor_property",
+   "import_text",
+   "set_editor_properties",
+   "set_editor_property",
+   "source_pose",
+   "static_struct",
+   "to_dict",
+   "to_tuple"
+  ]
+ },
+ "AnimGraphNode_ModifyCurve_ViewState": {
+  "class": "AnimGraphNode_ModifyCurve",
+  "pins": [
+   [
+    "SourcePose",
+    "(LinkID=-1,SourceLinkID=-1)",
+    [
+     "AnimGraphNode_ModifyCurve_AimState.Pose"
+    ]
+   ],
+   [
+    "CurveValues_0",
+    "0.0",
+    [
+     "K2Node_FPVW_ToF.ReturnValue"
+    ]
+   ],
+   [
+    "CurveValues_1",
+    "0.0",
+    [
+     "FurinaCrouchFloat.ReturnValue"
+    ]
+   ],
+   [
+    "CurveValues_2",
+    "0.0",
+    [
+     "FurinaZipFloat.ReturnValue"
+    ]
+   ],
+   [
+    "CurveValues_3",
+    "0.0",
+    [
+     "FurinaFireFloat.ReturnValue"
+    ]
+   ],
+   [
+    "CurveValues_4",
+    "0.0",
+    [
+     "FurinaProneFloat.ReturnValue"
+    ]
+   ],
+   [
+    "Alpha",
+    "1.000000",
+    []
+   ],
+   [
+    "Pose",
+    "",
+    [
+     "AnimGraphNode_ControlRig_0.Source"
+    ]
+   ]
+  ],
+  "node": "<Struct 'AnimNode_ModifyCurve' (0x000001939932D2A8) {source_pose: {}, curve_map: (), curve_values: (0.000000,0.000000,0.000000,0.000000,0.000000), alpha: 1.000000, apply_mode: Blend}>",
+  "node_props": [
+   "alpha",
+   "apply_mode",
+   "assign",
+   "cast",
+   "copy",
+   "curve_map",
+   "curve_values",
+   "export_text",
+   "get_editor_property",
+   "import_text",
+   "set_editor_properties",
+   "set_editor_property",
+   "source_pose",
+   "static_struct",
+   "to_dict",
+   "to_tuple"
+  ]
+ }
+}

@@ -46,7 +46,15 @@ def tick(dt):
             R['bones'] = {b: g(mesh.get_socket_location(b)) for b in BONES}
             for nm, c in (('frame', frame), ('slide', slide)):
                 o, e, r = unreal.SystemLibrary.get_component_bounds(c); R[nm] = {'center': g(o), 'extent': [round(e.x, 2), round(e.y, 2), round(e.z, 2)], 'rel_loc': str(c.relative_location), 'rel_rot': str(c.relative_rotation), 'rel_scale': str(c.relative_scale3d)}
+            for nm, c in (('frame', frame), ('slide', slide)):   # 메시 로컬 경계 상자 8코너 -> 소총 컴포넌트 기준 (정확한 손잡이/슬라이드 위치 추정용)
+                bb = c.static_mesh.get_bounding_box(); ctf = c.get_world_transform(); pts = []
+                for x in (bb.min.x, bb.max.x):
+                    for y in (bb.min.y, bb.max.y):
+                        for z in (bb.min.z, bb.max.z): pts.append(g(ctf.transform_location(unreal.Vector(x, y, z))))
+                R[nm]['rifle_min'] = [min(p[i] for p in pts) for i in range(3)]; R[nm]['rifle_max'] = [max(p[i] for p in pts) for i in range(3)]
             R['rifle_world'] = str(rifle.get_world_transform())
+            ap = rifle.get_attach_parent(); R['rifle_attach'] = {'parent': ap.get_name() if ap else None, 'socket': str(rifle.get_attach_socket_name()), 'rel_loc': str(rifle.relative_location), 'rel_rot': str(rifle.relative_rotation)}
+            R['hand_world'] = str(mesh.get_socket_transform('Right-wrist', unreal.RelativeTransformSpace.RTS_WORLD))
             save(); S['st'] = 'tp'; S['t'] = now + 0.5; return
         if st == 'tp' and now >= S['t']:
             p.get_editor_property('FurinaFPWanted').set_active(False); S['st'] = 'tp_look'; S['t'] = now + 2; return

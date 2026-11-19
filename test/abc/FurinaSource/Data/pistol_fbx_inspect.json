@@ -1,0 +1,381 @@
+{
+ "fps": 60,
+ "frame_range": [
+  1,
+  250
+ ],
+ "unit_scale": 1.0,
+ "objects": [
+  [
+   "Armature",
+   "ARMATURE",
+   null,
+   [
+    0.0,
+    0.0,
+    0.0
+   ],
+   [
+    -0.0,
+    0.0,
+    0.0
+   ],
+   [
+    1.0,
+    1.0,
+    1.0
+   ]
+  ],
+  [
+   "arms",
+   "MESH",
+   "Armature",
+   [
+    0.0,
+    0.0,
+    0.0
+   ],
+   [
+    0.0,
+    -0.0,
+    0.0
+   ],
+   [
+    1.0,
+    1.0,
+    1.0
+   ]
+  ],
+  [
+   "xd_frame",
+   "MESH",
+   "Armature",
+   [
+    0.0,
+    0.0,
+    0.0
+   ],
+   [
+    0.0,
+    -0.0,
+    0.0
+   ],
+   [
+    1.0,
+    1.0,
+    1.0
+   ]
+  ],
+  [
+   "xd_frame.001",
+   "MESH",
+   "Armature",
+   [
+    0.0,
+    0.0,
+    0.0
+   ],
+   [
+    0.0,
+    -0.0,
+    0.0
+   ],
+   [
+    1.0,
+    1.0,
+    1.0
+   ]
+  ],
+  [
+   "xd_frame.002",
+   "MESH",
+   "Armature",
+   [
+    0.0,
+    0.0,
+    0.0
+   ],
+   [
+    0.0,
+    -0.0,
+    0.0
+   ],
+   [
+    1.0,
+    1.0,
+    1.0
+   ]
+  ]
+ ],
+ "meshes": [
+  [
+   "arms",
+   7452,
+   [
+    0.547,
+    0.427,
+    0.617
+   ]
+  ],
+  [
+   "xd_frame",
+   4235,
+   [
+    0.043,
+    0.201,
+    0.141
+   ]
+  ],
+  [
+   "xd_frame.001",
+   2408,
+   [
+    0.039,
+    0.192,
+    0.053
+   ]
+  ],
+  [
+   "xd_frame.002",
+   2512,
+   [
+    0.062,
+    0.09,
+    0.151
+   ]
+  ]
+ ],
+ "armatures": [
+  {
+   "name": "Armature",
+   "n": 80,
+   "bones": [
+    "Root",
+    "Arm_L",
+    "UpArm_L",
+    "Forearm_L",
+    "BoneTwist_03.L",
+    "BoneTwist_02.L",
+    "BoneTwist_01.L",
+    "BoneTwist_01.L_end",
+    "Arm_R",
+    "UpArm_R",
+    "Forearm_R",
+    "BoneTwist_03.R",
+    "BoneTwist_02.R",
+    "BoneTwist_01.R",
+    "BoneTwist_01.R_end",
+    "Head_Cam",
+    "Head_Cam_end",
+    "IK_Hand_Cntrl_L",
+    "Hand_L",
+    "Bone_L.004",
+    "Bone_L.005",
+    "Bone_L.006",
+    "Bone_L.007",
+    "Bone_L.007_end",
+    "Bone_L.008",
+    "Bone_L.009",
+    "Bone_L.010",
+    "Bone_L.011",
+    "Bone_L.011_end",
+    "Bone_L.012",
+    "Bone_L.013",
+    "Bone_L.014",
+    "Bone_L.015",
+    "Bone_L.015_end",
+    "Bone_L.016",
+    "Bone_L.017",
+    "Bone_L.018",
+    "Bone_L.019",
+    "Bone_L.019_end",
+    "Bone_L.020",
+    "Bone_L.021",
+    "Bone_L.022",
+    "Bone_L.022_end",
+    "IK_PoleTrgt_L",
+    "IK_PoleTrgt_L_end",
+    "IK_Hand_Cntrl_R",
+    "Hand_R",
+    "Bone_R.004",
+    "Bone_R.005",
+    "Bone_R.006",
+    "Bone_R.007",
+    "Bone_R.007_end",
+    "Bone_R.008",
+    "Bone_R.009",
+    "Bone_R.010",
+    "Bone_R.011",
+    "Bone_R.011_end",
+    "Bone_R.012",
+    "Bone_R.013",
+    "Bone_R.014",
+    "Bone_R.015",
+    "Bone_R.015_end",
+    "Bone_R.016",
+    "Bone_R.017",
+    "Bone_R.018",
+    "Bone_R.019",
+    "Bone_R.019_end",
+    "Bone_R.020",
+    "Bone_R.021",
+    "Bone_R.022",
+    "Bone_R.022_end",
+    "IK_PoleTrgt_R",
+    "IK_PoleTrgt_R_end",
+    "PBody",
+    "Rif",
+    "Rif_end",
+    "Trigger",
+    "Trigger_end",
+    "Pmag",
+    "Pmag_end"
+   ]
+  }
+ ],
+ "actions": [
+  {
+   "name": "Armature|Armature|Arms_FPS_Anim_Idle",
+   "frame_range": [
+    0.0,
+    79.0
+   ],
+   "frames": 79.0,
+   "seconds": 1.32,
+   "n_fcurves": 629,
+   "n_keys": 2828,
+   "n_bones": 62
+  },
+  {
+   "name": "Armature|Armature|Arms_FPS_Anim_OneShot",
+   "frame_range": [
+    0.0,
+    14.0
+   ],
+   "frames": 14.0,
+   "seconds": 0.23,
+   "n_fcurves": 629,
+   "n_keys": 3008,
+   "n_bones": 62
+  },
+  {
+   "name": "Armature|Armature|Arms_FPS_Anim_Walk",
+   "frame_range": [
+    0.0,
+    49.0
+   ],
+   "frames": 49.0,
+   "seconds": 0.82,
+   "n_fcurves": 629,
+   "n_keys": 6398,
+   "n_bones": 62
+  },
+  {
+   "name": "Armature|Armature|FPS_Pistol_Fire",
+   "frame_range": [
+    0.0,
+    14.0
+   ],
+   "frames": 14.0,
+   "seconds": 0.23,
+   "n_fcurves": 629,
+   "n_keys": 2878,
+   "n_bones": 62
+  },
+  {
+   "name": "Armature|Armature|FPS_Pistol_Fire.001",
+   "frame_range": [
+    0.0,
+    14.0
+   ],
+   "frames": 14.0,
+   "seconds": 0.23,
+   "n_fcurves": 629,
+   "n_keys": 2878,
+   "n_bones": 62
+  },
+  {
+   "name": "Armature|Armature|FPS_Pistol_Fire.002",
+   "frame_range": [
+    0.0,
+    14.0
+   ],
+   "frames": 14.0,
+   "seconds": 0.23,
+   "n_fcurves": 629,
+   "n_keys": 2878,
+   "n_bones": 62
+  },
+  {
+   "name": "Armature|Armature|FPS_Pistol_Idle",
+   "frame_range": [
+    0.0,
+    119.0
+   ],
+   "frames": 119.0,
+   "seconds": 1.98,
+   "n_fcurves": 629,
+   "n_keys": 4778,
+   "n_bones": 62
+  },
+  {
+   "name": "Armature|Armature|FPS_Pistol_Reload_easy",
+   "frame_range": [
+    0.0,
+    79.0
+   ],
+   "frames": 79.0,
+   "seconds": 1.32,
+   "n_fcurves": 629,
+   "n_keys": 18958,
+   "n_bones": 62
+  },
+  {
+   "name": "Armature|Armature|FPS_Pistol_Reload_full",
+   "frame_range": [
+    0.0,
+    99.0
+   ],
+   "frames": 99.0,
+   "seconds": 1.65,
+   "n_fcurves": 629,
+   "n_keys": 21138,
+   "n_bones": 62
+  },
+  {
+   "name": "Armature|Armature|FPS_Pistol_Walk",
+   "frame_range": [
+    0.0,
+    39.0
+   ],
+   "frames": 39.0,
+   "seconds": 0.65,
+   "n_fcurves": 629,
+   "n_keys": 4578,
+   "n_bones": 62
+  }
+ ],
+ "markers": [],
+ "anim_data": [
+  [
+   "Armature",
+   "Armature|Armature|Arms_FPS_Anim_Idle"
+  ],
+  [
+   "arms",
+   null
+  ],
+  [
+   "xd_frame",
+   null
+  ],
+  [
+   "xd_frame.001",
+   null
+  ],
+  [
+   "xd_frame.002",
+   null
+  ]
+ ]
+}
