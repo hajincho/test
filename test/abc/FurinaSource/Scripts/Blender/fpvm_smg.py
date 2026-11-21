@@ -2,7 +2,7 @@
  근거: Motion/DE_FP_MOTION_RESEARCH.md 3·4절.
    MP38/MP40: 오픈볼트(쏠 준비 = 노리쇠 뒤), 장전 손잡이 왼쪽, 탄창 멈치는 탄창 하우징 왼쪽 버튼, 탄창을 손잡이로 쓰지 말 것(당시 교범). 32발 탄창(MP38/MP40 공용).
    StG44: 클로즈드볼트, 장전 손잡이 왼쪽(오른손은 손잡이를 쥔 채 왼손으로 당김), 탄창 멈치 왼쪽, 30발.
- 모델 처리: MP38 개머리판(접힌 상태로 모델링)을 경첩(y 27, x -0.75) 기준 수직축 180° 로 폄. MP40 원본엔 탄창이 없어 MP38 탄창(같은 탄창)을 하우징에 끼움.
+ 모델 처리: MP38 개머리판(접힌 상태로 모델링)을 경첩(y 27, x -0.75) 기준 수직축 180° 로 폄. MP40 은 원본 MP40.fbx 의 자체 탄창(정리 때 빠졌던 것, de_mp40_mag.py)을 하우징 입구에 끼움.
    StG44 원본은 총구가 +Y(다른 무기와 반대)라 Z 180° 로 돌리고 멜빵(Belt)은 1인칭에서 뺌. 고폴리(MP38 220만 면)는 줄임(Decimate).
  내부: 무기 재질은 UE 에서 양면(two-sided)으로 그려 장전·사격 때 드러나는 안쪽 면이 투명하게 보이지 않게(lyra_fpvm_twosided.py).
  출력: FBX/FPVM/SK_FPVM_<KEY>.fbx(메시) + AS_FPVM_<KEY>_<Idle|Fire|Reload>.fbx, Data/fpvm_<key>.json(조준선·속도 등)"""
@@ -16,7 +16,7 @@ D = L.D; FPS = 30; KEY = WK.upper(); OUT = {'key': WK, 'stage': STAGE}
 # 무기별 수치(정리 후 원본 cm: 총구 -Y, 위 +Z, 총의 오른쪽 -X)
 SPEC = {
  'mp40': dict(grip=(-0.84, 15.6, -4.0), xc=-0.34, bore_z=5.7, ch_box=((1.3, -9.0, 5.0), (3.5, -6.9, 7.0)), travel=9.0, rpm=500, cap=32, rear_y=0.0, front_y=(-40.0, -37.8), recv_end=13.5,
-             mag_from='mp38', mag_shift=(0.41, -8.83, -5.6), fire_len=60.0 / 500),
+             mag_own=True, fire_len=60.0 / 500),
  'mp38': dict(grip=(-0.75, 25.5, -0.5), xc=-0.75, bore_z=10.6, ch_box=((1.0, 1.3, 9.5), (3.9, 3.4, 11.6)), travel=9.0, rpm=500, cap=32, rear_y=10.0, front_y=(-31.6, -29.0), recv_end=24.0,
              mag_mat='Magazine_Steel', mag_box=((-3.0, -7.0, -15.0), (1.2, 0.0, 10.6)), unfold=(-0.75, 27.0), hold_dz=1.8, fire_len=60.0 / 500),
  'stg44': dict(grip=(0.22, 18.3, 0.0), xc=0.22, bore_z=10.44, ch_box=((0.8, 0.7, 12.1), (3.1, 2.1, 13.4)), travel=8.0, rpm=550, cap=30, rear_y=-3.0, front_y=(-47.1, -42.6), recv_end=19.0,
@@ -94,11 +94,13 @@ if SPEC.get('mag_mat'):
             c = f.calc_center_median(); return all(mb[0][i] <= c[i] <= mb[1][i] for i in range(3))
         return lab[f.verts[0].index] in _t
     mag, nmag = split_faces(gun, 'W_mag', mag_ok)
-else:   # MP40: MP38 탄창을 가져와 하우징에
-    src = L.load_weapon(SPEC['mag_from']); smats = [m.name if m else '' for m in src.data.materials]; mi = smats.index('Magazine_Steel')
-    bm = bmesh.new(); bm.from_mesh(src.data); bmesh.ops.delete(bm, geom=[f for f in bm.faces if f.material_index != mi], context='FACES')
-    bmesh.ops.delete(bm, geom=[v for v in bm.verts if not v.link_faces], context='VERTS'); bm.to_mesh(src.data); bm.free()
-    src.data.transform(Matrix.Translation(SPEC['mag_shift'])); src.name = 'W_mag'; mag = src; nmag = len(src.data.polygons)
+else:   # MP40: 원본 MP40.fbx 의 자체 탄창(de_mp40_mag.py 가 정리본 좌표로 옮겨 하우징 입구 가운데에 끼움). 예전 MP38 탄창은 하우징보다 1.2cm 뒤에 꽂혔음
+    before = set(bpy.data.objects.keys()); bpy.ops.import_scene.fbx(filepath=os.path.join(D, 'FBX', 'Weapons', 'SM_DE_mp40_mag.fbx'))
+    src = next(bpy.data.objects[k] for k in bpy.data.objects.keys() if k not in before and bpy.data.objects[k].type == 'MESH')
+    for k in [k for k in bpy.data.objects.keys() if k not in before and bpy.data.objects[k].type != 'MESH']: bpy.data.objects.remove(bpy.data.objects[k])
+    bpy.ops.object.select_all(action='DESELECT'); src.select_set(True); bpy.context.view_layer.objects.active = src; bpy.ops.object.transform_apply(location=True, rotation=True, scale=True)
+    src.data.transform(Matrix.Scale(100, 4)); src.name = 'W_mag'; mag = src; nmag = len(src.data.polygons)
+    if mag.data.materials and gun.data.materials: mag.data.materials[0] = gun.data.materials[0]   # 같은 MP40 재질(같은 텍스처 아틀라스)
 OUT['mag_faces'] = nmag
 lab, comps, co = comps_of(gun)
 (lo_b, hi_b) = SPEC['ch_box']

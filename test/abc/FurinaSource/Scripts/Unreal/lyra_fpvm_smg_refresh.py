@@ -5,6 +5,7 @@ from pathlib import Path
 import unreal
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import lyra_fpvm_reimport as RI
+import lyra_hist_fx as H
 from lyra_fpvm_optics import PAWN, Graph, literal, view_transform
 ROOT = Path(unreal.Paths.project_dir()).resolve(); R = {}
 def ads():
@@ -20,7 +21,8 @@ world = unreal.get_editor_subsystem(unreal.UnrealEditorSubsystem).get_editor_wor
 cvar = 'Interchange.FeatureFlags.Import.FBX'; flag = unreal.SystemLibrary.get_console_variable_bool_value(cvar)
 unreal.SystemLibrary.execute_console_command(world, cvar + ' 0')
 try:
-    for name, fn in (('smg', lambda: {k: RI.smg(k) for k in ('mp40', 'mp38', 'stg44')}), ('ads', ads)):
+    keys = [k for k in ('mp40', 'mp38', 'stg44') if len(sys.argv) < 2 or sys.argv[-1].endswith('.py') or k in sys.argv[-1].split('+')]
+    for name, fn in (('smg', lambda: {k: RI.smg(k) for k in keys}), ('ads', ads), ('sockets', H.sockets)):   # 메시를 다시 가져오면 VM_Muzzle 소켓이 빠질 수 있어 다시
         try: R[name] = fn()
         except Exception: R[name] = 'ERROR ' + traceback.format_exc()[-1500:]
 finally:

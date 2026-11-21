@@ -12,10 +12,12 @@ if [ "$1" = A ]; then
   for k in p38 p08 pp; do run $S/fpvm_pistols2.py -- $k export; done
 elif [ "$1" = B ]; then
   for st in export roundclips meshfix zf4 magreload; do run $S/fpvm_g43.py -- $st; done
+  run $S/de_mp40_mag.py   # MP40 자체 탄창(원본 MP40.fbx) -> FBX/Weapons/SM_DE_mp40_mag.fbx
   for k in mp40 mp38 stg44; do run $S/fpvm_smg.py -- $k export; done
 else
   run $S/fpvm_loose_prop.py
   run $S/fpvm_muzzle_points.py
+  run $S/fpvm_pistol_ejection.py   # 권총 탄피 배출구(고증) -> Data/fpvm_pistol_ejection.json
   run $S/fpvm_ads_calc.py -- all
   run $S/fx_smoke_puffs.py
   python $T/gen_hist_fx.py $DATA

@@ -1304,3 +1304,48 @@ Control Rig이 들어 올리는 회전은 컴포넌트 +X축 기준 음수 각�
 - **처음 판단이 틀렸던 점:** 처음에는 "원본 유리가 원통 모양"이라고 답했다. 원본 합본 모델을 직접 재 보니 렌즈는 축을 향한 원판이었고, 첫 측정은 법선 길이를 맞추지 않은 측정 실수였다.
 - **확인:** PIE `lyra_fx_capture.py zf41` → `Data/zf41_zoom2.png`. 렌즈 한 장 가득 1.5배 장면과 십자선이 보인다.
 - **다시 가져오기:** 메시만 바꿀 때는 `lyra_zf41_reimport.py`(소켓 포함), 유리 재질만 바꿀 때는 `lyra_scope_glass_flag.py`를 쓴다.
+
+## MP40 자체 탄창 사용 (2026-11-21)
+- 원본 `MP40.fbx`에는 탄창(`Mag`, 정점 378)과 탄(`bullet`)이 총 옆에 45°로 따로 놓여 있다. 정리 스크립트(`de_weapons_build.py`)가 이 둘을 빼서, 지금까지는 MP38 탄창을 옮겨 썼다.
+  - 그 탄창의 가운데(y −13.0)가 하우징 입구 가운데(y −14.19)보다 1.2cm 뒤라서, 재장전 때 엉뚱한 곳에 꽂혔다.
+- `Scripts/Blender/de_mp40_mag.py`:
+  - 정리 변환(최장축 → Y, 둘째 → Z, 실제 길이 0.833m, 가운데 맞춤)을 총 부품만으로 다시 계산했다. 정리본 경계 상자와의 오차는 0.000002cm였다.
+  - 같은 변환을 탄창에 적용한 뒤, 탄창 축으로 세웠다: 긴 축은 위, 탄두 쪽은 총구 방향.
+  - 하우징 입구 가운데(x −0.34, y −14.19)에 맞추고, 위끝을 총열 축 아래 1.3cm까지 밀어 넣었다.
+  - 탄창 크기는 2.2 × 4.0 × 24.1cm이고, 결과는 `FBX/Weapons/SM_DE_mp40_mag.fbx`다.
+- `fpvm_smg.py`: MP40은 이 탄창을 쓴다. 재질은 같은 MP40 아틀라스다.
+  - 왼손 하우징 잡는 자리가 앞으로 옮겨져서, 총 위치(x 9.6 → 8.1)와 정조준 값이 다시 계산됐다.
+- 다시 가져오기: `lyra_fpvm_smg_refresh.py mp40`. 메시, 애니, 정조준 값, `VM_Muzzle` 소켓을 함께 처리한다.
+- 확인: PIE `lyra_fx_capture.py mp40rl`(`Data/mp40_rl_zoom.jpg`)에서 탄창이 하우징에서 빠졌다가 같은 자리에 꽂히고, 재장전 뒤 32발이 됐다.
+- 다시 만들기 순서(1번 Blender)의 B줄 앞에 `de_mp40_mag.py`를 한 번 돌린다. 원본이 바뀌지 않는 한 결과 파일을 그대로 쓴다.
+
+## 권총 탄피 배출 고증 (2026-11-21)
+- **기반:** 다른 작업이 넣어 둔 배출을 그대로 쓴다.
+  - `lyra_fpvm_pistol_reload_cases.py`: `PistolCase_` 노드, `BP_FPVM_9mmCase`/`BP_FPVM_32Case`, 9mm·.32 탄피 메시.
+  - 이 배출은 모든 권총에서 탄피가 카메라 기준 오른쪽·앞·위로 튀었다.
+- **고증 보정**(`Scripts/Blender/fpvm_pistol_ejection.py` → `Data/fpvm_pistol_ejection.json`, `Scripts/Unreal/lyra_pistol_cases.py`):
+  - 배출구 = 총열 뒤끝(총구 + 총열 길이 P38 125 / P08 100 / PP 98mm) + 0.8cm.
+  - 소켓 `VM_CaseFX`를 그 자리로 옮겼다. 소켓 +X가 배출 방향이다.
+    - P38: 슬라이드 왼쪽 → 왼쪽(조금 위·뒤)
+    - P08: 토글 위 → 위(조금 오른쪽·뒤)
+    - PP: 슬라이드 오른쪽 → 오른쪽(조금 위·뒤)
+  - 생성 회전을 카메라 회전에서 소켓 회전으로 바꿨다(`PistolCase_SocketRotation`).
+  - 탄피 초기 속도는 소켓 +X로 3.5m/s다(`TFPCaseDirection` = 350,0,0).
+- **확인**(PIE `lyra_fx_capture.py case` / `caseslow`(0.1배속)):
+  - 발사 직후 속도(카메라 기준 cm/s, +y = 오른쪽): P38 (−123, −311, 69) 왼쪽, P08 (−104, 61, 295) 위, PP (−46, 271, 181) 오른쪽.
+  - 0.1배속 캡처에서 P38 탄피가 총 왼쪽으로 나가는 것을 확인했다(`Data/caseslow.jpg`).
+- **주의:** `lyra_fpvm_pistol_reload_cases.py`를 다시 돌리지 말 것.
+  - 이 스크립트는 예전 상자 모양 임시 탄창(`MagazineDisplay`)과 이전 클립을 기대한다.
+  - 다시 돌리면 실제 탄창 재장전 메시·클립을 덮어쓰거나, 탄창 슬롯을 찾지 못해 실패한다.
+  - 탄피만 다시 만들 때는 그 안의 `prepare_cases()`만 쓰고, 이어서 `lyra_pistol_cases.py`를 돌린다.
+
+## 권총 견착: 뻗은 팔 부각 (2026-11-21)
+- **사용자 지정:** 견착은 손을 뻗는 자세이니 뻗은 팔과 멀어진 손·권총이 두드러지게.
+- **배경:** 팔 길이 39.2cm 중 견착 자세가 이미 38.3cm를 쓰고 있어서 팔을 더 펼 수 없었다.
+- **방법**(`Scripts/Unreal/lyra_pistol_shoulder_reach.py`, 노드 `PSR_`):
+  - 권총 견착일 때(정조준 아님) 뷰모델 전체를 앞 12cm·아래 1cm로 민다.
+  - 가중치 `FurinaVMShW`는 0.033초마다 보간한다(속도 10).
+  - 대기 기준 위치 = 기존(`STC_ALoc`) + (12, 0, −1) × 가중치.
+- **결과:** 손과 권총이 눈에서 약 33cm로 멀어지고, 소매를 포함한 아래팔이 화면 아래에서 가운데까지 길게 보인다.
+- **확인:** PIE `lyra_fx_capture.py psh`, `Data/psh_compare.jpg`(위 = 전, 아래 = 후).
+- **다시 만들기 순서:** 3번 BP 설치의 7번(`lyra_scope_pip.py`) 다음에 `lyra_pistol_cases.py` → `lyra_pistol_shoulder_reach.py`를 돌린다.

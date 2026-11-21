@@ -7,6 +7,12 @@ KEYS = ['p38', 'p08', 'pp', 'kar98k', 'kar98k_zf39', 'kar98k_zf41', 'g43', 'g43_
 TAG = sys.argv[-1] if len(sys.argv) > 1 and not sys.argv[-1].endswith('.py') else 'all'
 if TAG == 'smoketest': KEYS = ['kar98k']
 elif TAG == 'zf41': KEYS = ['kar98k_zf41']
+elif TAG == 'mp40rl': KEYS = ['mp40', 'mp38']
+elif TAG == 'case': KEYS = ['p38', 'p08', 'pp']
+elif TAG == 'psh':   # 권총 견착(팔 뻗기) 확인
+    STEPS = [('hip', 'key', 2.5), ('sh', 'sh_on', 1.2), ('sh_fire', 'fire', 0.03), ('sh_off', 'sh_off', 1.2)]; PISTOL_ONLY = ()
+if TAG == 'caseslow': KEYS = ['p38', 'p08', 'pp']
+elif TAG == 'psh': KEYS = ['p38', 'p08', 'pp']
 elif TAG == 'v3': KEYS = ['kar98k_zf39', 'kar98k_zf41', 'g43_zf4', 'p38', 'p08', 'pp']
 elif TAG == 'stance': KEYS = ['kar98k', 'g43', 'g43_zf4', 'mp40', 'mp38', 'stg44', 'p38']
 elif TAG != 'all': KEYS = [k for k in KEYS if k in TAG.split('+')]   # 일부만 다시: 태그 'kar98k+kar98k_zf41'(ExecCmds 는 쉼표로 명령을 나눔)
@@ -18,6 +24,12 @@ STEPS = [('hip', 'key', 2.5), ('fire', 'fire', 0.0), ('smoke0', None, 0.0), ('sm
          ('sh', 'sh_on', 0.9), ('sh_fire', 'fire', 0.0), ('sh_off', 'sh_off', 1.2),
          ('ads', 'ads_on', 1.3), ('ads_fire', 'fire', 0.0), ('ads_smoke', None, 0.35), ('ads_off', 'aim_off', 1.4)]
 PISTOL_ONLY = ('sh', 'sh_fire', 'sh_off')
+if TAG == 'caseslow':   # 0.1배속으로 탄피 확인
+    STEPS = [('hip', 'key', 2.5), ('slow', 'slomo', 0.3), ('fire', 'fire', 0.3), ('s1', None, 0.3), ('s2', None, 0.3), ('s3', None, 0.6), ('ads', 'ads_on', 6.0), ('afire', 'fire', 0.3), ('as1', None, 0.3), ('as2', None, 0.3), ('as3', None, 0.6), ('ads_off', 'aim_off', 4.0), ('fast', 'slomo1', 0.5)]; PISTOL_ONLY = ()
+if TAG == 'case':
+    STEPS = [('hip', 'key', 2.5), ('fire', 'fire', 0.03), ('c1', None, 0.0), ('c2', None, 0.0), ('c3', None, 0.2), ('ads', 'ads_on', 1.3), ('afire', 'fire', 0.03), ('ac1', None, 0.0), ('ac2', None, 0.0), ('ads_off', 'aim_off', 0.8)]; PISTOL_ONLY = ()
+if TAG == 'mp40rl':
+    STEPS = [('hip', 'key', 2.5), ('rl1', 'reload', 0.3), ('rl2', None, 0.15), ('rl3', None, 0.3), ('rl4', None, 0.2), ('rl5', None, 0.2), ('rl_wait', 'wait_reload', 0.6)]; PISTOL_ONLY = ()
 if TAG == 'zf41':
     STEPS = [('hip', 'key', 2.5), ('ads', 'ads_on', 1.5), ('ads_off', 'aim_off', 0.8)]; PISTOL_ONLY = ()
 if TAG == 'v3':   # 조준경 화면 속 화면·권총 탄창 재장전·연기 끔 확인(2026-11-21)
@@ -99,6 +111,8 @@ def tick(dt):
                                           'vis': c_.is_visible(), 'bounds': str(c_.bounds.sphere_radius) if hasattr(c_, 'bounds') else None, 'life': a_.get_life_span(),
                                           'Age_param': m_.get_scalar_parameter_value('Age'), 'Dens': m_.get_scalar_parameter_value('Density'), 'Size': m_.get_scalar_parameter_value('Size')}
                     except Exception as ex: R['smokeinfo'] = str(ex)[:300]
+                elif act == 'slomo': unreal.SystemLibrary.execute_console_command(w, 'slomo 0.1')
+                elif act == 'slomo1': unreal.SystemLibrary.execute_console_command(w, 'slomo 1')
                 elif act == 'sh_on': p.get_editor_property('FurinaShoulder').set_active(True)
                 elif act == 'sh_off': p.get_editor_property('FurinaShoulder').set_active(False)
                 if name == 'bolt_wait' and key.startswith('kar98k'): wait = BOLT
@@ -118,6 +132,16 @@ def tick(dt):
                                              'spawn': m0.get_scalar_parameter_value('Spawn') if isinstance(m0, unreal.MaterialInstanceDynamic) else None,
                                              'dens': m0.get_scalar_parameter_value('Density') if isinstance(m0, unreal.MaterialInstanceDynamic) else None, 'now': unreal.GameplayStatics.get_time_seconds(w)}
                     except Exception as ex: st_['smoke_err'] = str(ex)[:200]
+                    try:
+                        cam = unreal.GameplayStatics.get_player_camera_manager(w, 0); ct = unreal.Transform(cam.get_camera_location(), cam.get_camera_rotation(), unreal.Vector(1, 1, 1))
+                        cs = []
+                        for cp in ('/Game/Furina/FX/Pistol/BP_FPVM_9mmCase.BP_FPVM_9mmCase_C', '/Game/Furina/FX/Pistol/BP_FPVM_32Case.BP_FPVM_32Case_C'):
+                            for a_ in unreal.GameplayStatics.get_all_actors_of_class(w, unreal.load_class(None, cp)):
+                                l_ = unreal.MathLibrary.inverse_transform_location(ct, a_.get_actor_location()); c_ = a_.get_component_by_class(unreal.StaticMeshComponent)
+                                v_ = unreal.MathLibrary.inverse_transform_direction(ct, c_.get_physics_linear_velocity()) if c_ else None
+                                cs.append([cp.rsplit('.', 1)[1][:-2], [round(l_.x, 1), round(l_.y, 1), round(l_.z, 1)], [round(v_.x), round(v_.y), round(v_.z)] if v_ else None])
+                        st_['cases'] = cs
+                    except Exception as ex: st_['case_err'] = str(ex)[:200]
                     R['shots'].append([key, name, st_]); save()
                 S['sub'] = 2; S['t'] = now + 0.15; return
             S['i'] += 1; S['sub'] = 0; S['t'] = now + 0.05

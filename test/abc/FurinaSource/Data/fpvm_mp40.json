@@ -31,11 +31,11 @@
   "R": 0.77
  },
  "sleeves": 8,
- "mag_faces": 95486,
+ "mag_faces": 670,
  "handle_faces": 484,
  "tris": {
   "W_mp40": 13043,
-  "W_mag": 8999,
+  "W_mag": 670,
   "W_handle": 484
  },
  "sight": {
@@ -51,11 +51,11 @@
   ]
  },
  "mag_y": [
-  -14.74,
-  -11.25
+  -16.14,
+  -12.13
  ],
  "gun_pos": [
-  9.6,
+  8.1,
   -9.0,
   -14.61
  ],
@@ -63,26 +63,26 @@
   "housing",
   [
    -0.34,
-   -12.99,
-   1.94
+   -14.14,
+   1.93
   ]
  ],
  "R_grip": {
   "wrist_cm": [
-   -6.99,
+   -8.49,
    -13.7,
    -17.02
   ],
-  "miss_cm": 0.38,
+  "miss_cm": 0.19,
   "pole": 0
  },
  "seat": {
   "R": {
-   "gap_cm": 0.02,
+   "gap_cm": 0.001,
    "moved_cm": 0.0
   },
   "L": {
-   "gap_cm": 0.037,
+   "gap_cm": 0.006,
    "moved_cm": 0.0
   }
  },
@@ -91,13 +91,13 @@
   0.0
  ],
  "L_hold": {
-  "score": 1.457,
-  "pen_cm": 0.273,
-  "wrist_err_cm": 0.74
+  "score": 1.201,
+  "pen_cm": 0.712,
+  "wrist_err_cm": 0.14
  },
- "L_reach_cm": 39.2,
+ "L_reach_cm": 34.6,
  "L_mag": {
-  "score": 0.419,
+  "score": 0.267,
   "pen_cm": 0.0
  },
  "L_ch": {
@@ -114,10 +114,10 @@
    "yaw": 30
   },
   "hv": [
-   1.6,
-   -12.2,
-   1.5,
-   0.13
+   0.1,
+   -11.9,
+   -0.0,
+   0.11
   ]
  },
  "clips": {
@@ -127,17 +127,9 @@
  },
  "exported": true,
  "mats": [
-  "Blued_Barrel",
-  "Blued_Receiver",
-  "Dark_Cast_Alloy",
   "Furina_Outfit",
   "Furina_SkinHair",
-  "MP40",
-  "Magazine_Steel",
-  "Rosewood_Dark_Grip",
-  "Rosewood_Foregrip",
-  "Stock_Steel",
-  "Worn_Steel"
+  "MP40"
  ],
  "spec": {
   "travel": 9.0,
