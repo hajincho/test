@@ -1,0 +1,263 @@
+{
+ "objects": [
+  {
+   "name": "Armature",
+   "type": "ARMATURE",
+   "parent": null,
+   "mw": [
+    [
+     0.009999999776482582,
+     0.0,
+     0.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.009999999776482582,
+     2.8212996383558675e-09,
+     0.0
+    ],
+    [
+     0.0,
+     -2.8212996383558675e-09,
+     0.009999999776482582,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ]
+  },
+  {
+   "name": "Body",
+   "type": "MESH",
+   "parent": "Armature",
+   "mw": [
+    [
+     0.009999999776482582,
+     -3.725290215195187e-11,
+     -7.450580430390374e-11,
+     -4.440892098500626e-16
+    ],
+    [
+     -1.8626448994307765e-10,
+     0.009999999776482582,
+     2.9802322831784522e-09,
+     -2.0265574107725115e-08
+    ],
+    [
+     2.607702942469814e-10,
+     -2.738087978571002e-09,
+     0.010000000707805157,
+     5.066393082842069e-09
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "nv": 31099,
+   "nf": 39037,
+   "mats": [
+    "Furina_Face",
+    "Furina_SkinHair",
+    "Furina_HairDetail",
+    "Furina_Outfit",
+    "Furina_HairSheen"
+   ],
+   "has_custom_normals": true,
+   "attrs": [
+    [
+     ".select_vert",
+     "POINT",
+     "BOOLEAN"
+    ],
+    [
+     "position",
+     "POINT",
+     "FLOAT_VECTOR"
+    ],
+    [
+     ".corner_vert",
+     "CORNER",
+     "INT"
+    ],
+    [
+     ".corner_edge",
+     "CORNER",
+     "INT"
+    ],
+    [
+     ".select_poly",
+     "FACE",
+     "BOOLEAN"
+    ],
+    [
+     "material_index",
+     "FACE",
+     "INT"
+    ],
+    [
+     "UVMap",
+     "CORNER",
+     "FLOAT2"
+    ],
+    [
+     "UV1",
+     "CORNER",
+     "FLOAT2"
+    ],
+    [
+     "UV2",
+     "CORNER",
+     "FLOAT2"
+    ],
+    [
+     "UV3",
+     "CORNER",
+     "FLOAT2"
+    ],
+    [
+     "_UV2",
+     "CORNER",
+     "FLOAT2"
+    ],
+    [
+     "_UV3",
+     "CORNER",
+     "FLOAT2"
+    ],
+    [
+     ".select_edge",
+     "EDGE",
+     "BOOLEAN"
+    ],
+    [
+     ".edge_verts",
+     "EDGE",
+     "INT32_2D"
+    ],
+    [
+     "sharp_face",
+     "FACE",
+     "BOOLEAN"
+    ],
+    [
+     "custom_normal",
+     "CORNER",
+     "INT16_2D"
+    ],
+    [
+     "sharp_edge",
+     "EDGE",
+     "BOOLEAN"
+    ]
+   ],
+   "uv": [
+    "UVMap",
+    "UV1",
+    "UV2",
+    "UV3",
+    "_UV2",
+    "_UV3"
+   ],
+   "arm_Left": 2003,
+   "arm_Right": 2125,
+   "mods": [
+    [
+     "ARMATURE",
+     "Armature"
+    ]
+   ]
+  }
+ ],
+ "arm": {
+  "name": "Armature",
+  "mw": [
+   [
+    0.009999999776482582,
+    0.0,
+    0.0,
+    0.0
+   ],
+   [
+    0.0,
+    0.009999999776482582,
+    2.8212996383558675e-09,
+    0.0
+   ],
+   [
+    0.0,
+    -2.8212996383558675e-09,
+    0.009999999776482582,
+    0.0
+   ],
+   [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ]
+  ],
+  "nbones": 240
+ },
+ "arm_bones": {
+  "Left": [
+   "IndexFinger1_L",
+   "IndexFinger2_L",
+   "IndexFinger3_L",
+   "Left arm",
+   "Left elbow",
+   "Left wrist",
+   "LittleFinger1_L",
+   "LittleFinger2_L",
+   "LittleFinger3_L",
+   "MiddleFinger1_L",
+   "MiddleFinger2_L",
+   "MiddleFinger3_L",
+   "RingFinger1_L",
+   "RingFinger2_L",
+   "RingFinger3_L",
+   "Sleeve_1_L",
+   "Sleeve_2_L",
+   "Sleeve_3_L",
+   "Sleeve_4_L",
+   "Thumb0_L",
+   "Thumb1_L",
+   "Thumb2_L",
+   "zArmTwist_L",
+   "zHandTwist_L"
+  ],
+  "Right": [
+   "IndexFinger1_R",
+   "IndexFinger2_R",
+   "IndexFinger3_R",
+   "LittleFinger1_R",
+   "LittleFinger2_R",
+   "LittleFinger3_R",
+   "MiddleFinger1_R",
+   "MiddleFinger2_R",
+   "MiddleFinger3_R",
+   "Right arm",
+   "Right elbow",
+   "Right wrist",
+   "RingFinger1_R",
+   "RingFinger2_R",
+   "RingFinger3_R",
+   "Sleeve_1_R",
+   "Sleeve_2_R",
+   "Sleeve_3_R",
+   "Sleeve_4_R",
+   "Thumb0_R",
+   "Thumb1_R",
+   "Thumb2_R",
+   "zArmTwist_R",
+   "zHandTwist_R"
+  ]
+ }
+}

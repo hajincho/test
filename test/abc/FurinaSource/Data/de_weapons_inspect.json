@@ -1,0 +1,933 @@
+{
+ "ammo_7_92x94": {
+  "file": "7_92x94_ammo/Patronen_painted.fbx",
+  "objects": 2,
+  "meshes": 2,
+  "types": [
+   "MESH"
+  ],
+  "verts": 705843,
+  "tris": 1411676,
+  "bmin": [
+   -10.4029,
+   -10.4029,
+   -0.0
+  ],
+  "bmax": [
+   10.4029,
+   10.4029,
+   111.0016
+  ],
+  "size": [
+   20.8059,
+   20.8059,
+   111.0016
+  ],
+  "mesh_names": [
+   "Case",
+   "Projectile"
+  ],
+  "materials": {
+   "Brass_Case": [
+    "Brass_BaseColor.png",
+    "Metal_NormalGL.png",
+    "Metal_Roughness.png",
+    "Metal_Metallic.png"
+   ],
+   "Copper_Projectile": [
+    "Copper_BaseColor.png",
+    "Metal_NormalGL.png",
+    "Metal_Roughness.png",
+    "Metal_Metallic.png"
+   ]
+  },
+  "actions": [],
+  "unit_scale": 1.0
+ },
+ "g43": {
+  "file": "g43/source/Gewehr43.fbx",
+  "objects": 1,
+  "meshes": 1,
+  "types": [
+   "MESH"
+  ],
+  "verts": 4754,
+  "tris": 8661,
+  "bmin": [
+   -0.0209,
+   -0.5553,
+   -0.1149
+  ],
+  "bmax": [
+   0.0209,
+   0.5598,
+   0.0732
+  ],
+  "size": [
+   0.0419,
+   1.1151,
+   0.1881
+  ],
+  "mesh_names": [
+   "Gewehr43"
+  ],
+  "materials": {
+   "Gewehr43": [
+    "Gewehr43_BaseColor.png"
+   ]
+  },
+  "actions": [],
+  "unit_scale": 1.0
+ },
+ "grw34": {
+  "file": "grw34/source/Blender_unzipped/sgw34.blend",
+  "objects": 6,
+  "meshes": 2,
+  "types": [
+   "CAMERA",
+   "EMPTY",
+   "LIGHT",
+   "MESH"
+  ],
+  "verts": 229,
+  "tris": 350,
+  "bmin": [
+   -1.9638,
+   -2.1627,
+   -0.0343
+  ],
+  "bmax": [
+   1.8283,
+   2.1522,
+   1.0685
+  ],
+  "size": [
+   3.7921,
+   4.3149,
+   1.1028
+  ],
+  "mesh_names": [
+   "a",
+   "aa"
+  ],
+  "materials": {
+   "Material": []
+  },
+  "actions": [],
+  "unit_scale": 1.0
+ },
+ "kar98k": {
+  "file": "kar98k/source/model_unzipped/model/model.dae",
+  "error": "Calling operator \"bpy.ops.wm.collada_import\" error, could not be found"
+ },
+ "mauser_clip": {
+  "file": "mauser_ammo_clip/source/bullet2.blend",
+  "objects": 11,
+  "meshes": 11,
+  "types": [
+   "MESH"
+  ],
+  "verts": 3156,
+  "tris": 5968,
+  "bmin": [
+   -4.8777,
+   -1.3017,
+   3.1313
+  ],
+  "bmax": [
+   9.3198,
+   1.3017,
+   15.0934
+  ],
+  "size": [
+   14.1975,
+   2.6034,
+   11.9621
+  ],
+  "mesh_names": [
+   "Plane",
+   "Cylinder.009",
+   "Cylinder.008",
+   "Cylinder.007",
+   "Cylinder.006",
+   "Cylinder.005",
+   "Cylinder.004",
+   "Cylinder.003",
+   "Cylinder.002",
+   "Cylinder.001",
+   "Cylinder"
+  ],
+  "materials": {
+   "Material": [],
+   "6.5": [],
+   "case": []
+  },
+  "actions": [],
+  "unit_scale": 1.0
+ },
+ "mg34": {
+  "file": "mg34/source/mg 34 full tex.blend",
+  "objects": 5,
+  "meshes": 5,
+  "types": [
+   "MESH"
+  ],
+  "verts": 17740,
+  "tris": 32765,
+  "bmin": [
+   -0.0844,
+   -0.6502,
+   -0.1355
+  ],
+  "bmax": [
+   0.2362,
+   2.1498,
+   0.0979
+  ],
+  "size": [
+   0.3206,
+   2.8,
+   0.2334
+  ],
+  "mesh_names": [
+   "p line mg mag",
+   "p line mg inf lent.001",
+   "p line mg inf lent",
+   "mg 34 mag",
+   "mg 34"
+  ],
+  "materials": {
+   "p line": [],
+   "7.92х57 l": [],
+   "mg 34 mag": [],
+   "mg 34": []
+  },
+  "actions": [],
+  "unit_scale": 1.0
+ },
+ "mg42": {
+  "file": "mg42/source/MG 42.fbx",
+  "objects": 5,
+  "meshes": 5,
+  "types": [
+   "MESH"
+  ],
+  "verts": 29374,
+  "tris": 58101,
+  "bmin": [
+   -0.4988,
+   -0.1584,
+   -0.003
+  ],
+  "bmax": [
+   0.3795,
+   1.0583,
+   0.3398
+  ],
+  "size": [
+   0.8783,
+   1.2167,
+   0.3428
+  ],
+  "mesh_names": [
+   "MG42Body_Low.003",
+   "BezierCurve.003",
+   "BezierCurve.004",
+   "Plane.006",
+   "MG42Body_Low.002"
+  ],
+  "materials": {
+   "B.002": [
+    "B_albedo.jpg",
+    "B_normal.png",
+    "B_roughness.jpg",
+    "B_metallic.jpg"
+   ],
+   "A.001": [
+    "A_albedo.jpg",
+    "A_normal.png",
+    "A_roughness.jpg",
+    "A_metallic.jpg"
+   ],
+   "B": [
+    "B_albedo.jpg",
+    "B_normal.png",
+    "B_roughness.jpg",
+    "B_metallic.jpg"
+   ]
+  },
+  "actions": [],
+  "unit_scale": 1.0
+ },
+ "mortar_shell": {
+  "file": "Mortar_Shell/source/ArtilleryShell.fbx",
+  "objects": 6,
+  "meshes": 2,
+  "types": [
+   "CAMERA",
+   "EMPTY",
+   "LIGHT",
+   "MESH"
+  ],
+  "verts": 1818,
+  "tris": 3660,
+  "bmin": [
+   -0.7227,
+   -0.7941,
+   -4.0832
+  ],
+  "bmax": [
+   0.8036,
+   0.789,
+   3.9961
+  ],
+  "size": [
+   1.5262,
+   1.5831,
+   8.0792
+  ],
+  "mesh_names": [
+   "Shell",
+   "Button"
+  ],
+  "materials": {},
+  "actions": [],
+  "unit_scale": 1.0
+ },
+ "mp38": {
+  "file": "mp38/MP38_Rosewood_Metal060B.fbx",
+  "objects": 84,
+  "meshes": 84,
+  "types": [
+   "MESH"
+  ],
+  "verts": 1109916,
+  "tris": 2210725,
+  "bmin": [
+   0.0681,
+   -0.1104,
+   -0.0295
+  ],
+  "bmax": [
+   0.6931,
+   0.1736,
+   0.0445
+  ],
+  "size": [
+   0.625,
+   0.284,
+   0.074
+  ],
+  "mesh_names": [
+   "Part_001",
+   "Part_002",
+   "Part_003",
+   "Part_004",
+   "Part_005",
+   "Part_006",
+   "Part_007",
+   "Part_008",
+   "Part_009",
+   "Part_010",
+   "Part_011",
+   "Part_012",
+   "Part_013",
+   "Part_014",
+   "Part_015",
+   "Part_016",
+   "Part_017",
+   "Part_018",
+   "Part_019",
+   "Part_020",
+   "Part_021",
+   "Part_022",
+   "Part_023",
+   "Part_024",
+   "Part_025",
+   "Part_026",
+   "Part_027",
+   "Part_028",
+   "Part_029",
+   "Part_030"
+  ],
+  "materials": {
+   "Blued_Barrel": [
+    "Blued_Barrel_BaseColor.jpg",
+    "Metal060B_NormalGL.png",
+    "Blued_Barrel_Roughness.png",
+    "Blued_Barrel_Metallic.png"
+   ],
+   "Blued_Receiver": [
+    "Blued_Receiver_BaseColor.jpg",
+    "Metal060B_NormalGL.png",
+    "Blued_Receiver_Roughness.png",
+    "Blued_Receiver_Metallic.png"
+   ],
+   "Rosewood_Foregrip": [
+    "Rosewood_Foregrip_BaseColor.jpg",
+    "Rosewood_NormalGL.png",
+    "Rosewood_Roughness.png"
+   ],
+   "Dark_Cast_Alloy": [
+    "Dark_Cast_Alloy_BaseColor.jpg",
+    "Metal060B_NormalGL.png",
+    "Dark_Cast_Alloy_Roughness.png",
+    "Dark_Cast_Alloy_Metallic.png"
+   ],
+   "Worn_Steel": [
+    "Worn_Steel_BaseColor.jpg",
+    "Metal060B_NormalGL.png",
+    "Worn_Steel_Roughness.png",
+    "Worn_Steel_Metallic.png"
+   ],
+   "Rosewood_Dark_Grip": [
+    "Rosewood_Dark_Grip_BaseColor.jpg",
+    "Rosewood_NormalGL.png",
+    "Rosewood_Roughness.png"
+   ],
+   "Magazine_Steel": [
+    "Magazine_Steel_BaseColor.jpg",
+    "Metal060B_NormalGL.png",
+    "Magazine_Steel_Roughness.png",
+    "Magazine_Steel_Metallic.png"
+   ],
+   "Stock_Steel": [
+    "Stock_Steel_BaseColor.jpg",
+    "Metal060B_NormalGL.png",
+    "Stock_Steel_Roughness.png",
+    "Stock_Steel_Metallic.png"
+   ]
+  },
+  "actions": [],
+  "unit_scale": 1.0
+ },
+ "mp40": {
+  "file": "mp40/source/MP40_unzipped/MP40/MP40.fbx",
+  "objects": 7,
+  "meshes": 7,
+  "types": [
+   "MESH"
+  ],
+  "verts": 7734,
+  "tris": 14519,
+  "bmin": [
+   -0.0508,
+   -0.162,
+   -0.0007
+  ],
+  "bmax": [
+   0.0512,
+   0.2751,
+   0.1009
+  ],
+  "size": [
+   0.102,
+   0.4372,
+   0.1016
+  ],
+  "mesh_names": [
+   "MP40",
+   "Mag",
+   "Bolt",
+   "Mag_release",
+   "Stock",
+   "bullet",
+   "trigger"
+  ],
+  "materials": {
+   "MP40": [
+    "MP40_Albedo.png",
+    "MP40_Normal.png",
+    "MP40_Metallic.png",
+    "MP40_Roughness.png"
+   ]
+  },
+  "actions": [],
+  "unit_scale": 1.0
+ },
+ "p08": {
+  "file": "p08/source/model_unzipped/model/model.dae",
+  "error": "Calling operator \"bpy.ops.wm.collada_import\" error, could not be found"
+ },
+ "p38": {
+  "file": "p38/source/Walther_P38+SatinFloor.fbx",
+  "objects": 1,
+  "meshes": 1,
+  "types": [
+   "MESH"
+  ],
+  "verts": 36742,
+  "tris": 72416,
+  "bmin": [
+   -6.6112,
+   -7.8331,
+   -0.2298
+  ],
+  "bmax": [
+   8.6244,
+   7.9411,
+   0.5742
+  ],
+  "size": [
+   15.2356,
+   15.7741,
+   0.804
+  ],
+  "mesh_names": [
+   "Bullet_Shell_low"
+  ],
+  "materials": {
+   "MA_2_Bullet": [],
+   "MA_1_WaltherP38": [],
+   "MA_SatinFloor": []
+  },
+  "actions": [],
+  "unit_scale": 1.0
+ },
+ "panzerfaust": {
+  "file": "panzerfaust/source/model_unzipped/model/model.dae",
+  "error": "Calling operator \"bpy.ops.wm.collada_import\" error, could not be found"
+ },
+ "panzerschreck": {
+  "file": "panzerschreck/source/model_unzipped/model/model.dae",
+  "error": "Calling operator \"bpy.ops.wm.collada_import\" error, could not be found"
+ },
+ "panzerschreck_rocket": {
+  "file": "panzerschreck/Panzerschreck_Rocket/Panzerschreck_Rocket.fbx",
+  "objects": 11,
+  "meshes": 11,
+  "types": [
+   "MESH"
+  ],
+  "verts": 17956,
+  "tris": 35860,
+  "bmin": [
+   -1.0085,
+   -0.044,
+   0.0244
+  ],
+  "bmax": [
+   -0.3497,
+   0.044,
+   0.1124
+  ],
+  "size": [
+   0.6588,
+   0.088,
+   0.088
+  ],
+  "mesh_names": [
+   "end",
+   "end.001",
+   "end.002",
+   "front1",
+   "front2",
+   "front3",
+   "frontcone",
+   "mid",
+   "midfront",
+   "pipe",
+   "pipe.001"
+  ],
+  "materials": {
+   "Dark_Olive": [
+    "Dark_Olive_BaseColor.png",
+    "Dark_Olive_Normal.png",
+    "Dark_Olive_Roughness.png",
+    "Dark_Olive_Metallic.png"
+   ],
+   "Tip_Metal": [
+    "Tip_Metal_BaseColor.png",
+    "Tip_Metal_Normal.png",
+    "Tip_Metal_Roughness.png",
+    "Tip_Metal_Metallic.png"
+   ],
+   "Olive_Paint": [
+    "Olive_Paint_BaseColor.png",
+    "Olive_Paint_Normal.png",
+    "Olive_Paint_Roughness.png",
+    "Olive_Paint_Metallic.png"
+   ]
+  },
+  "actions": [],
+  "unit_scale": 1.0
+ },
+ "pp": {
+  "file": "pp/source/walther_pp_unzipped/walther_pp.obj",
+  "objects": 4,
+  "meshes": 4,
+  "types": [
+   "MESH"
+  ],
+  "verts": 7896,
+  "tris": 8199,
+  "bmin": [
+   -0.0143,
+   -0.02,
+   -0.0586
+  ],
+  "bmax": [
+   0.0129,
+   0.1543,
+   0.049
+  ],
+  "size": [
+   0.0271,
+   0.1743,
+   0.1075
+  ],
+  "mesh_names": [
+   "weapon#ammo_mesh_1",
+   "weapon#bolt_mesh_3",
+   "weapon#striker_mesh_0",
+   "weapon#weapon_mesh_2"
+  ],
+  "materials": {
+   "98c8d573-909b-4721-8d8a-50740177f6d5": [
+    "walther_pp_ammo_tex_d.jpg",
+    "walther_pp_ammo_tex_n_s.jpg"
+   ],
+   "988206fd-944c-49ff-a080-0552cf6286c5": [
+    "walther_pp_main_tex_d.jpg",
+    "walther_pp_main_tex_n_s.jpg"
+   ]
+  },
+  "actions": [],
+  "unit_scale": 1.0
+ },
+ "pzb39": {
+  "file": "PzB39/PzB39_Colored.fbx",
+  "objects": 216,
+  "meshes": 211,
+  "types": [
+   "EMPTY",
+   "MESH"
+  ],
+  "verts": 78702,
+  "tris": 156588,
+  "bmin": [
+   -0.89,
+   -0.194,
+   0.006
+  ],
+  "bmax": [
+   0.884,
+   0.194,
+   0.4932
+  ],
+  "size": [
+   1.774,
+   0.388,
+   0.4872
+  ],
+  "mesh_names": [
+   "Case bottom seam",
+   "Case cosmetic lid hinge -0.066",
+   "Case cosmetic lid hinge 0",
+   "Case cosmetic lid hinge 0.066",
+   "Case end cover",
+   "Case folded edge bead -1",
+   "Case folded edge bead 1",
+   "Case inner backplate | rivet 01",
+   "Case inner backplate | rivet 02",
+   "Case inner backplate | rivet 03",
+   "Case inner backplate | rivet 04",
+   "Case inner backplate | rivet 05",
+   "Case inner flange | rivet 01",
+   "Case inner flange | rivet 02",
+   "Case inner flange | rivet 03",
+   "Case inner flange | rivet 04",
+   "Case inner flange | rivet 05",
+   "Case inner wall",
+   "Case mating-wall rib 01",
+   "Case mating-wall rib 02",
+   "Case mating-wall rib 03",
+   "Case mating-wall rib 04",
+   "Case mating-wall rib 05",
+   "Case mating-wall rib 06",
+   "Case mating-wall rib 07",
+   "Case mating-wall rib 08",
+   "Case mating-wall rib 09",
+   "Case mating-wall rib 10",
+   "Case mating-wall rib 11",
+   "Case outer flange | rivet 01"
+  ],
+  "materials": {
+   "Ammo_Case_Aged": [
+    "Metal060B_Ammo_Case_Aged_BaseColor.jpg",
+    "Metal060B_Surface_NormalGL.png",
+    "Metal060B_Ammo_Case_Aged_Roughness.png",
+    "Metal060B_Ammo_Case_Aged_Metallic.png"
+   ],
+   "Case_Fittings": [
+    "Metal060B_Case_Fittings_BaseColor.jpg",
+    "Metal060B_Surface_NormalGL.png",
+    "Metal060B_Case_Fittings_Roughness.png",
+    "Metal060B_Case_Fittings_Metallic.png"
+   ],
+   "Barrel_Blued": [
+    "Metal060B_Barrel_Blued_BaseColor.jpg",
+    "Metal060B_Surface_NormalGL.png",
+    "Metal060B_Barrel_Blued_Roughness.png",
+    "Metal060B_Barrel_Blued_Metallic.png"
+   ],
+   "Bipod_Satin": [
+    "Metal060B_Bipod_Satin_BaseColor.jpg",
+    "Metal060B_Surface_NormalGL.png",
+    "Metal060B_Bipod_Satin_Roughness.png",
+    "Metal060B_Bipod_Satin_Metallic.png"
+   ],
+   "Edges_And_Fasteners": [
+    "Metal060B_Edges_And_Fasteners_BaseColor.jpg",
+    "Metal060B_Surface_NormalGL.png",
+    "Metal060B_Edges_And_Fasteners_Roughness.png",
+    "Metal060B_Edges_And_Fasteners_Metallic.png"
+   ],
+   "Receiver_Blued": [
+    "Metal060B_Receiver_Blued_BaseColor.jpg",
+    "Metal060B_Surface_NormalGL.png",
+    "Metal060B_Receiver_Blued_Roughness.png",
+    "Metal060B_Receiver_Blued_Metallic.png"
+   ],
+   "Wood_Foreend": [
+    "Wood_Foreend_BaseColor.jpg",
+    "Rosewood_Veneer1_NormalGL.png",
+    "Wood_Foreend_Roughness.png"
+   ],
+   "Rosewood_Pistol_Panels": [
+    "Rosewood_Pistol_Panels_BaseColor.jpg",
+    "Rosewood_Veneer1_NormalGL.png",
+    "Rosewood_Pistol_Panels_Roughness.png"
+   ],
+   "Metal055A_Worn_Silver": [
+    "Metal055A_Worn_Silver_BaseColor.jpg",
+    "Metal055A_Worn_Silver_NormalGL.png",
+    "Metal055A_Worn_Silver_Roughness.png",
+    "Metal055A_Worn_Silver_Metallic.png"
+   ],
+   "Rubber004_Hard_Matte": [
+    "Rubber004_Hard_Matte_BaseColor.jpg",
+    "Rubber004_Hard_Matte_NormalGL.png",
+    "Rubber004_Hard_Matte_Roughness.png"
+   ],
+   "Grip_Dark_Molded": [
+    "Grip_Dark_Molded_BaseColor.jpg",
+    "Grip_Dark_Molded_NormalGL.png",
+    "Grip_Dark_Molded_Roughness.png"
+   ],
+   "Rosewood_Cheek_Rest": [
+    "Rosewood_Cheek_Rest_BaseColor.jpg",
+    "Rosewood_Veneer1_NormalGL.png",
+    "Rosewood_Cheek_Rest_Roughness.png"
+   ],
+   "Prop_Brass": [
+    "Metal060B_Prop_Brass_BaseColor.jpg",
+    "Metal060B_Surface_NormalGL.png",
+    "Metal060B_Prop_Brass_Roughness.png",
+    "Metal060B_Prop_Brass_Metallic.png"
+   ],
+   "Prop_Tip_Steel": [
+    "Metal060B_Prop_Tip_Steel_BaseColor.jpg",
+    "Metal060B_Surface_NormalGL.png",
+    "Metal060B_Prop_Tip_Steel_Roughness.png",
+    "Metal060B_Prop_Tip_Steel_Metallic.png"
+   ]
+  },
+  "actions": [],
+  "unit_scale": 1.0
+ },
+ "stg44": {
+  "file": "stg44/source/STG44_Full.fbx",
+  "objects": 13,
+  "meshes": 13,
+  "types": [
+   "MESH"
+  ],
+  "verts": 21396,
+  "tris": 39953,
+  "bmin": [
+   -0.0301,
+   -0.465,
+   -0.1321
+  ],
+  "bmax": [
+   0.0345,
+   0.4642,
+   0.2086
+  ],
+  "size": [
+   0.0646,
+   0.9292,
+   0.3407
+  ],
+  "mesh_names": [
+   "Stock",
+   "Body_FiremodeButton_E",
+   "Body_Safety",
+   "Body_Trigger",
+   "Body_Bolt",
+   "Belt",
+   "Magazine",
+   "Body_Recievers",
+   "Body_Sight",
+   "Body_Piston",
+   "Body_Sight_Distance",
+   "Barrel",
+   "Body_FiremodeButton_D"
+  ],
+  "materials": {
+   "Stock": [],
+   "Body": [],
+   "Belt": [],
+   "Magazine": [],
+   "Barrel": []
+  },
+  "actions": [
+   "Barrel|Take 001|BaseLayer",
+   "Belt|Take 001|BaseLayer",
+   "Body_Bolt|Take 001|BaseLayer",
+   "Body_FiremodeButton_E|Take 001|BaseLayer",
+   "Body_Piston|Take 001|BaseLayer",
+   "Body_Recievers|Take 001|BaseLayer",
+   "Body_Safety|Take 001|BaseLayer",
+   "Body_Sight_Distance|Take 001|BaseLayer",
+   "Body_Sight|Take 001|BaseLayer",
+   "Body_Trigger|Take 001|BaseLayer",
+   "Magazine|Take 001|BaseLayer",
+   "Stock|Take 001|BaseLayer"
+  ],
+  "unit_scale": 1.0
+ },
+ "zf4": {
+  "file": "zf4_scope/ZF4_scope_with_mount.fbx",
+  "objects": 4,
+  "meshes": 4,
+  "types": [
+   "MESH"
+  ],
+  "verts": 666,
+  "tris": 1324,
+  "bmin": [
+   -0.2387,
+   -1.5269,
+   -0.3468
+  ],
+  "bmax": [
+   0.2387,
+   1.5269,
+   0.3468
+  ],
+  "size": [
+   0.4774,
+   3.0538,
+   0.6936
+  ],
+  "mesh_names": [
+   "ZF4_Mount_FrontBracket",
+   "ZF4_Mount_FrontTopPiece",
+   "ZF4_Mount_RearBracket",
+   "ZF4_Scope"
+  ],
+  "materials": {
+   "ZF4_MountMaterial": [
+    "ZF4_Mount_BaseColor.png",
+    "ZF4_Mount_Normal.png",
+    "ZF4_Mount_Roughness.png",
+    "ZF4_Mount_Metallic.png"
+   ],
+   "ZF4_ScopeMaterial": [
+    "ZF4_Scope_BaseColor.png",
+    "ZF4_Scope_Normal.png",
+    "ZF4_Scope_Metallic.png"
+   ]
+  },
+  "actions": [],
+  "unit_scale": 1.0
+ },
+ "zf39": {
+  "file": "zf39_scope/*.stl",
+  "objects": 7,
+  "meshes": 7,
+  "types": [
+   "MESH"
+  ],
+  "verts": 308612,
+  "tris": 617384,
+  "bmin": [
+   38.3777,
+   -169.5587,
+   97.7537
+  ],
+  "bmax": [
+   1167.1548,
+   171.1477,
+   183.4612
+  ],
+  "size": [
+   1128.7771,
+   340.7064,
+   85.7075
+  ],
+  "mesh_names": [
+   "main_view",
+   "光圈A",
+   "光圈B",
+   "调节旋帽",
+   "调节旋钮",
+   "锁止旋钮",
+   "镜筒"
+  ],
+  "materials": {},
+  "actions": [],
+  "unit_scale": 1.0
+ },
+ "zf41": {
+  "file": "zf41_scope/new ZF41/*.stl",
+  "objects": 19,
+  "meshes": 19,
+  "types": [
+   "MESH"
+  ],
+  "verts": 165374,
+  "tris": 330796,
+  "bmin": [
+   70.3442,
+   364.4936,
+   16.7384
+  ],
+  "bmax": [
+   124.9804,
+   535.6106,
+   74.3396
+  ],
+  "size": [
+   54.6362,
+   171.117,
+   57.6012
+  ],
+  "mesh_names": [
+   "上镜臂",
+   "内镜筒",
+   "卡扣",
+   "后镜筒",
+   "旋钮",
+   "滑轨",
+   "物镜遮光罩",
+   "目镜遮光罩",
+   "簧片",
+   "螺丝-1",
+   "螺丝-2",
+   "螺丝-3",
+   "螺丝-4",
+   "铆钉",
+   "销钉",
+   "镜座主体",
+   "镜筒",
+   "长上镜臂",
+   "高度调节螺钉"
+  ],
+  "materials": {},
+  "actions": [],
+  "unit_scale": 1.0
+ }
+}

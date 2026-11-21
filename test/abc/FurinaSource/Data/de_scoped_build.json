@@ -1,0 +1,115 @@
+{
+ "kar98k_zf39": {
+  "scope_y_range": [
+   -6.0,
+   22.0
+  ],
+  "min_gap": [
+   -5.5,
+   0.98
+  ],
+  "mount": {
+   "rings": [
+    {
+     "y": 3.4,
+     "r_tube": 1.078
+    },
+    {
+     "y": 15.5,
+     "r_tube": 1.251
+    }
+   ]
+  },
+  "scope_x_range": [
+   -1.24,
+   2.54
+  ],
+  "lens_faces": -2,
+  "lens_disc_r": [
+   1.54,
+   1.638
+  ],
+  "mats": [
+   "Material",
+   "Material_001",
+   "Material_002",
+   "Material_003",
+   "Material_005",
+   "ZF39_Blued",
+   "ZF39_Glass",
+   "Mount_K98_Blued"
+  ],
+  "tris": 331137,
+  "fbx": true
+ },
+ "kar98k_zf41": {
+  "scope_y_range": [
+   -14.75,
+   -1.75
+  ],
+  "min_gap": [
+   -5.8,
+   -1.53
+  ],
+  "mount": {},
+  "scope_x_range": [
+   -0.61,
+   3.55
+  ],
+  "lens_faces": 9506,
+  "lens_disc_r": null,
+  "mats": [
+   "Material",
+   "Material_001",
+   "Material_002",
+   "Material_003",
+   "Material_005",
+   "ZF41_Blued",
+   "ZF41_Glass"
+  ],
+  "tris": 340783,
+  "fbx": true
+ },
+ "g43_zf4": {
+  "scope_y_range": [
+   -1.0,
+   26.0
+  ],
+  "min_gap": [
+   -1.0,
+   0.32
+  ],
+  "mount": {
+   "rings": [
+    {
+     "y": 7.6,
+     "r_tube": 1.25
+    },
+    {
+     "y": 16.7,
+     "r_tube": 1.25
+    }
+   ],
+   "rail_x": -1.37,
+   "receiver_top": 8.49,
+   "ring_bottom_clear": 1.09
+  },
+  "scope_x_range": [
+   -2.11,
+   2.11
+  ],
+  "lens_faces": -2,
+  "lens_disc_r": [
+   0.948,
+   0.9
+  ],
+  "mats": [
+   "Gewehr43",
+   "ZF4_Blued",
+   "ZF4_Glass",
+   "Mount_ZF4_Phosphate"
+  ],
+  "tris": 10545,
+  "fbx": true
+ }
+}

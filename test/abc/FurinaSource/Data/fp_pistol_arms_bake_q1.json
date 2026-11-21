@@ -1,0 +1,577 @@
+{
+ "tag": "q1",
+ "pose_tag": "p1",
+ "sample": 4,
+ "fold": -0.9,
+ "phi_err": [
+  3.7235102710676524e-05,
+  0.00012615706710030654
+ ],
+ "p220_fit_err": [
+  0.5999998066589125,
+  0.5999996987286957
+ ],
+ "fbx_map_err": 12.766595995278747,
+ "hands": {
+  "R": {
+   "rigid_err_before": {
+    "wrist": 7.58,
+    "Index_MCP": 2.19,
+    "Middle_MCP": 1.15,
+    "Ring_MCP": 1.23,
+    "Little_MCP": 2.44,
+    "Thumb0": 3.89,
+    "Thumb1": 3.16
+   },
+   "reach": [
+    39.45,
+    39.16
+   ],
+   "shoulder_shift": [
+    0.07,
+    -0.88,
+    0.02
+   ],
+   "wrist_err": 0.0,
+   "rigid_err_after": {
+    "wrist": 7.83,
+    "Index_MCP": 2.17,
+    "Middle_MCP": 1.04,
+    "Ring_MCP": 1.14,
+    "Little_MCP": 2.41,
+    "Thumb0": 4.11,
+    "Thumb1": 2.76
+   },
+   "fingers": {
+    "Middle": {
+     "deg": [
+      -20,
+      10,
+      -20
+     ],
+     "before": [
+      0.35,
+      1.06
+     ],
+     "after": [
+      0.04,
+      0.96
+     ]
+    },
+    "Ring": {
+     "deg": [
+      -10,
+      10,
+      -20
+     ],
+     "before": [
+      0.02,
+      0.82
+     ],
+     "after": [
+      0.0,
+      0.64
+     ]
+    },
+    "Little": {
+     "deg": [
+      0,
+      -20,
+      30
+     ],
+     "before": [
+      0.0,
+      1.52
+     ],
+     "after": [
+      0.0,
+      1.45
+     ]
+    },
+    "Index": {
+     "deg": [
+      0,
+      -10,
+      30
+     ],
+     "before": [
+      0.0,
+      0.0
+     ],
+     "after": [
+      0.0,
+      0.0
+     ]
+    },
+    "Thumb": {
+     "deg": [
+      30,
+      -20,
+      45,
+      15
+     ],
+     "before": [
+      1.76,
+      0.0
+     ],
+     "after": [
+      0.29,
+      0.18
+     ]
+    }
+   }
+  },
+  "L": {
+   "rigid_err_before": {
+    "wrist": 11.33,
+    "Index_MCP": 7.23,
+    "Middle_MCP": 6.88,
+    "Ring_MCP": 7.45,
+    "Little_MCP": 7.73,
+    "Thumb0": 7.57,
+    "Thumb1": 6.28
+   },
+   "reach": [
+    35.63,
+    39.16
+   ],
+   "shoulder_shift": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "wrist_err": 0.0,
+   "rigid_err_after": {
+    "wrist": 7.35,
+    "Index_MCP": 2.21,
+    "Middle_MCP": 1.12,
+    "Ring_MCP": 1.63,
+    "Little_MCP": 2.88,
+    "Thumb0": 3.66,
+    "Thumb1": 3.78
+   },
+   "fingers": {
+    "Middle": {
+     "deg": [
+      30,
+      -20,
+      -20
+     ],
+     "before": [
+      0.0,
+      4.35
+     ],
+     "after": [
+      0.0,
+      1.61
+     ]
+    },
+    "Ring": {
+     "deg": [
+      40,
+      0,
+      -20
+     ],
+     "before": [
+      0.0,
+      5.96
+     ],
+     "after": [
+      0.0,
+      1.77
+     ]
+    },
+    "Little": {
+     "deg": [
+      40,
+      -20,
+      -20
+     ],
+     "before": [
+      0.0,
+      6.92
+     ],
+     "after": [
+      0.0,
+      3.34
+     ]
+    },
+    "Index": {
+     "deg": [
+      70,
+      -10,
+      70
+     ],
+     "before": [
+      0.0,
+      8.32
+     ],
+     "after": [
+      0.0,
+      0.82
+     ]
+    },
+    "Thumb": {
+     "deg": [
+      0,
+      -20,
+      15,
+      45
+     ],
+     "before": [
+      0.89,
+      0.83
+     ],
+     "after": [
+      0.04,
+      0.23
+     ]
+    }
+   }
+  }
+ },
+ "L_det": 9.999981549861738e-07,
+ "wrist_frame_local": {
+  "Right": [
+   -6.74335029946318,
+   3.1223351306673233,
+   -5.756784998884769
+  ],
+  "Left": [
+   -7.3854813686691205,
+   1.3895255197025653,
+   -11.935198385341257
+  ]
+ },
+ "cam_frame_local": [
+  -28.582000717324757,
+  -2.1209868480174023,
+  10.90565589248145
+ ],
+ "side_L": {
+  "nv": 2003,
+  "mats": [
+   "Furina_SkinHair",
+   "Furina_Outfit"
+  ],
+  "bmin_ue": [
+   -43.445298075675964,
+   -16.065746545791626,
+   -20.830440521240234
+  ],
+  "bmax_ue": [
+   1.7778873443603516,
+   4.868966341018677,
+   -2.5382280349731445
+  ],
+  "fbx": "C:\\Users\\fromj\\Downloads\\test\\test\\abc\\FurinaSource\\FBX\\FPArms\\SM_FurinaFPPistArmL_q1.fbx"
+ },
+ "side_R": {
+  "nv": 2125,
+  "mats": [
+   "Furina_SkinHair",
+   "Furina_Outfit"
+  ],
+  "bmin_ue": [
+   -47.653090953826904,
+   -2.3538708686828613,
+   -12.280595302581787
+  ],
+  "bmax_ue": [
+   5.62974214553833,
+   11.73408329486847,
+   0.967872142791748
+  ],
+  "fbx": "C:\\Users\\fromj\\Downloads\\test\\test\\abc\\FurinaSource\\FBX\\FPArms\\SM_FurinaFPPistArmR_q1.fbx"
+ },
+ "contact": {
+  "L": {
+   "IndexFinger1_L": {
+    "n": 47,
+    "min": -3.143,
+    "p10": -2.838,
+    "med": -2.143,
+    "contact": 0,
+    "pen": 47
+   },
+   "IndexFinger2_L": {
+    "n": 34,
+    "min": -2.16,
+    "p10": -1.79,
+    "med": -1.252,
+    "contact": 0,
+    "pen": 34
+   },
+   "IndexFinger3_L": {
+    "n": 30,
+    "min": -1.196,
+    "p10": -1.104,
+    "med": -0.781,
+    "contact": 0,
+    "pen": 30
+   },
+   "Left wrist": {
+    "n": 283,
+    "min": -5.865,
+    "p10": -5.026,
+    "med": -4.349,
+    "contact": 0,
+    "pen": 283
+   },
+   "LittleFinger1_L": {
+    "n": 33,
+    "min": -5.583,
+    "p10": -5.421,
+    "med": -4.432,
+    "contact": 0,
+    "pen": 33
+   },
+   "LittleFinger2_L": {
+    "n": 36,
+    "min": -3.314,
+    "p10": -3.146,
+    "med": -2.678,
+    "contact": 0,
+    "pen": 36
+   },
+   "LittleFinger3_L": {
+    "n": 32,
+    "min": -2.028,
+    "p10": -1.809,
+    "med": -1.06,
+    "contact": 0,
+    "pen": 32
+   },
+   "MiddleFinger1_L": {
+    "n": 46,
+    "min": -4.048,
+    "p10": -3.764,
+    "med": -2.61,
+    "contact": 0,
+    "pen": 46
+   },
+   "MiddleFinger2_L": {
+    "n": 33,
+    "min": -2.468,
+    "p10": -2.238,
+    "med": -1.771,
+    "contact": 0,
+    "pen": 33
+   },
+   "MiddleFinger3_L": {
+    "n": 32,
+    "min": -3.157,
+    "p10": -3.043,
+    "med": -2.603,
+    "contact": 0,
+    "pen": 32
+   },
+   "RingFinger1_L": {
+    "n": 48,
+    "min": -4.971,
+    "p10": -4.684,
+    "med": -3.46,
+    "contact": 0,
+    "pen": 48
+   },
+   "RingFinger2_L": {
+    "n": 37,
+    "min": -2.603,
+    "p10": -2.513,
+    "med": -1.066,
+    "contact": 4,
+    "pen": 33
+   },
+   "RingFinger3_L": {
+    "n": 28,
+    "min": -0.954,
+    "p10": -0.891,
+    "med": -0.583,
+    "contact": 4,
+    "pen": 24
+   },
+   "Thumb0_L": {
+    "n": 33,
+    "min": -1.777,
+    "p10": -1.515,
+    "med": -0.968,
+    "contact": 3,
+    "pen": 30
+   },
+   "Thumb1_L": {
+    "n": 29,
+    "min": -1.453,
+    "p10": -1.41,
+    "med": -1.092,
+    "contact": 2,
+    "pen": 27
+   },
+   "Thumb2_L": {
+    "n": 33,
+    "min": -1.249,
+    "p10": -1.197,
+    "med": -0.795,
+    "contact": 0,
+    "pen": 33
+   },
+   "zHandTwist_L": {
+    "n": 109,
+    "min": -9.925,
+    "p10": -8.514,
+    "med": -5.808,
+    "contact": 0,
+    "pen": 109
+   }
+  },
+  "R": {
+   "IndexFinger1_R": {
+    "n": 47,
+    "min": -2.881,
+    "p10": -2.689,
+    "med": -2.295,
+    "contact": 0,
+    "pen": 47
+   },
+   "IndexFinger2_R": {
+    "n": 34,
+    "min": -2.556,
+    "p10": -2.319,
+    "med": -1.868,
+    "contact": 0,
+    "pen": 34
+   },
+   "IndexFinger3_R": {
+    "n": 30,
+    "min": -2.079,
+    "p10": -1.968,
+    "med": -1.473,
+    "contact": 0,
+    "pen": 30
+   },
+   "LittleFinger1_R": {
+    "n": 33,
+    "min": -4.643,
+    "p10": -4.51,
+    "med": -3.64,
+    "contact": 0,
+    "pen": 33
+   },
+   "LittleFinger2_R": {
+    "n": 36,
+    "min": -2.328,
+    "p10": -2.126,
+    "med": -1.604,
+    "contact": 0,
+    "pen": 36
+   },
+   "LittleFinger3_R": {
+    "n": 32,
+    "min": -1.341,
+    "p10": -1.12,
+    "med": -0.682,
+    "contact": 0,
+    "pen": 32
+   },
+   "MiddleFinger1_R": {
+    "n": 46,
+    "min": -3.933,
+    "p10": -3.625,
+    "med": -2.282,
+    "contact": 0,
+    "pen": 46
+   },
+   "MiddleFinger2_R": {
+    "n": 33,
+    "min": -1.988,
+    "p10": -1.738,
+    "med": -1.049,
+    "contact": 2,
+    "pen": 31
+   },
+   "MiddleFinger3_R": {
+    "n": 32,
+    "min": -1.378,
+    "p10": -1.225,
+    "med": -1.003,
+    "contact": 1,
+    "pen": 31
+   },
+   "Right wrist": {
+    "n": 318,
+    "min": -6.294,
+    "p10": -4.484,
+    "med": -3.42,
+    "contact": 7,
+    "pen": 311
+   },
+   "RingFinger1_R": {
+    "n": 48,
+    "min": -4.435,
+    "p10": -4.075,
+    "med": -2.668,
+    "contact": 0,
+    "pen": 48
+   },
+   "RingFinger2_R": {
+    "n": 37,
+    "min": -1.832,
+    "p10": -1.515,
+    "med": -0.926,
+    "contact": 2,
+    "pen": 35
+   },
+   "RingFinger3_R": {
+    "n": 28,
+    "min": -1.199,
+    "p10": -1.002,
+    "med": -0.52,
+    "contact": 3,
+    "pen": 25
+   },
+   "Thumb0_R": {
+    "n": 40,
+    "min": -2.139,
+    "p10": -1.738,
+    "med": -1.037,
+    "contact": 1,
+    "pen": 34
+   },
+   "Thumb1_R": {
+    "n": 29,
+    "min": -2.266,
+    "p10": -1.938,
+    "med": -1.607,
+    "contact": 0,
+    "pen": 29
+   },
+   "Thumb2_R": {
+    "n": 33,
+    "min": -1.346,
+    "p10": -1.177,
+    "med": -0.788,
+    "contact": 0,
+    "pen": 33
+   },
+   "zHandTwist_R": {
+    "n": 136,
+    "min": -8.894,
+    "p10": -7.165,
+    "med": -4.991,
+    "contact": 0,
+    "pen": 136
+   }
+  }
+ },
+ "p220_local_bbox": [
+  [
+   -4.256183624267578,
+   -1.2866239547729492,
+   -8.638839721679688
+  ],
+  [
+   15.543816634845825,
+   1.7117707059146152,
+   5.632225061631727
+  ]
+ ]
+}

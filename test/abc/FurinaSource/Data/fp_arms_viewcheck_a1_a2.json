@@ -1,0 +1,128 @@
+{
+ "bake": "a1",
+ "pose": "a2",
+ "cams": {
+  "hip": {
+   "c": [
+    6.134389796789904,
+    -21.29418392538891,
+    10.560912966854346
+   ],
+   "fwd": [
+    -0.0007771119920590737,
+    0.9999996936790558,
+    -9.348126476173933e-05
+   ],
+   "fov": 85.0
+  },
+  "ads": {
+   "c": [
+    0.011688461048060914,
+    -27.260141317671604,
+    10.016370863835753
+   ],
+   "fwd": [
+    -0.0014283302223707661,
+    0.999991026599372,
+    -0.003988307098313498
+   ],
+   "fov": 85.0
+  },
+  "shoulder": {
+   "c": [
+    3.0570555018625303,
+    -17.296504896442524,
+    11.301572145433637
+   ],
+   "fwd": [
+    -0.0007771253155100772,
+    0.9999996936832697,
+    -9.33252940011299e-05
+   ],
+   "fov": 85.0
+  },
+  "crouch": {
+   "c": [
+    6.134389796785458,
+    -21.29418392538766,
+    10.560912966855652
+   ],
+   "fwd": [
+    -0.0007771347251525634,
+    0.999999693683641,
+    -9.324292797408253e-05
+   ],
+   "fov": 85.0
+  }
+ },
+ "sides": {
+  "L": {
+   "nv": 2003,
+   "n_boundary_v": 23,
+   "states": {
+    "hip": {
+     "vis": 1104,
+     "vis_boundary": 0,
+     "near6cm": 0,
+     "min_dist": 10.54,
+     "boundary_screen_samples": []
+    },
+    "ads": {
+     "vis": 1369,
+     "vis_boundary": 0,
+     "near6cm": 0,
+     "min_dist": 16.27,
+     "boundary_screen_samples": []
+    },
+    "shoulder": {
+     "vis": 879,
+     "vis_boundary": 0,
+     "near6cm": 0,
+     "min_dist": 9.57,
+     "boundary_screen_samples": []
+    },
+    "crouch": {
+     "vis": 1104,
+     "vis_boundary": 0,
+     "near6cm": 0,
+     "min_dist": 10.54,
+     "boundary_screen_samples": []
+    }
+   }
+  },
+  "R": {
+   "nv": 2125,
+   "n_boundary_v": 23,
+   "states": {
+    "hip": {
+     "vis": 0,
+     "vis_boundary": 0,
+     "near6cm": 0,
+     "min_dist": 15.11,
+     "boundary_screen_samples": []
+    },
+    "ads": {
+     "vis": 0,
+     "vis_boundary": 0,
+     "near6cm": 0,
+     "min_dist": 16.12,
+     "boundary_screen_samples": []
+    },
+    "shoulder": {
+     "vis": 0,
+     "vis_boundary": 0,
+     "near6cm": 0,
+     "min_dist": 13.47,
+     "boundary_screen_samples": []
+    },
+    "crouch": {
+     "vis": 0,
+     "vis_boundary": 0,
+     "near6cm": 0,
+     "min_dist": 15.11,
+     "boundary_screen_samples": []
+    }
+   }
+  }
+ }
+}

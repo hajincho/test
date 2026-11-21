@@ -1,0 +1,1112 @@
+{
+ "p38": {
+  "key": "p38",
+  "dropped_mat": 2,
+  "clusters": [
+   5362,
+   4169,
+   2332,
+   38,
+   38,
+   33
+  ],
+  "raw_size": [
+   4.2892,
+   4.2425,
+   0.6891
+  ],
+  "scale": 0.044339,
+  "size_m": [
+   0.0309,
+   0.216,
+   0.1226
+  ],
+  "verts": 5362,
+  "tris": 10406,
+  "mat_faces": {
+   "MA_1_WaltherP38": 6215
+  },
+  "materials": {
+   "MA_1_WaltherP38": {
+    "node_textures": []
+   }
+  },
+  "texture_files": [
+   "MA_1_WaltherP38_Base_Color.jpg",
+   "MA_1_WaltherP38_Metallic.jpg",
+   "MA_1_WaltherP38_Normal_DirectX.jpg",
+   "MA_1_WaltherP38_Roughness.jpg",
+   "MA_2_Bullet_Base_Color.jpg",
+   "MA_2_Bullet_Metallic.jpg",
+   "MA_2_Bullet_Mixed_AO.jpg",
+   "MA_2_Bullet_Normal_DirectX.jpg",
+   "MA_2_Bullet_Roughness.jpg",
+   "MA_SatinFloor_Base_Color.jpg",
+   "MA_SatinFloor_Metallic.jpg",
+   "MA_SatinFloor_Normal_DirectX.jpg",
+   "MA_SatinFloor_Roughness.jpg"
+  ],
+  "fbx": "C:\\Users\\fromj\\Downloads\\FurinaWeaponSrc\\Germany\\_export\\SM_DE_p38.fbx"
+ },
+ "p08": {
+  "key": "p08",
+  "raw_size": [
+   0.02,
+   0.0023,
+   0.0124
+  ],
+  "scale": 11.1,
+  "size_m": [
+   0.0259,
+   0.222,
+   0.1376
+  ],
+  "verts": 3633,
+  "tris": 3733,
+  "mat_faces": {
+   "UV_P08Luger_Barrel_Standard": 428,
+   "UV_P08Luger_Body": 3305
+  },
+  "materials": {
+   "UV_P08Luger_Barrel_Standard": {
+    "node_textures": []
+   },
+   "UV_P08Luger_Body": {
+    "node_textures": []
+   }
+  },
+  "texture_files": [
+   "UV_P08Luger_Barrel_Standard_BaseColor.png",
+   "UV_P08Luger_Barrel_Standard_Height.png",
+   "UV_P08Luger_Barrel_Standard_Metallic.png",
+   "UV_P08Luger_Barrel_Standard_Roughness.png",
+   "UV_P08Luger_Barrel_Standard_normal.png",
+   "UV_P08Luger_Body_BaseColor.png",
+   "UV_P08Luger_Body_Height.png",
+   "UV_P08Luger_Body_Metallic.png",
+   "UV_P08Luger_Body_Roughness.png",
+   "UV_P08Luger_Body_normal.png"
+  ],
+  "fbx": "C:\\Users\\fromj\\Downloads\\FurinaWeaponSrc\\Germany\\_export\\SM_DE_p08.fbx"
+ },
+ "pp": {
+  "key": "pp",
+  "raw_size": [
+   0.0271,
+   0.1743,
+   0.1075
+  ],
+  "scale": 0.975548,
+  "size_m": [
+   0.0265,
+   0.17,
+   0.1049
+  ],
+  "verts": 7896,
+  "tris": 8199,
+  "mat_faces": {
+   "98c8d573-909b-4721-8d8a-50740177f6d5": 1034,
+   "988206fd-944c-49ff-a080-0552cf6286c5": 7165
+  },
+  "materials": {
+   "98c8d573-909b-4721-8d8a-50740177f6d5": {
+    "node_textures": []
+   },
+   "988206fd-944c-49ff-a080-0552cf6286c5": {
+    "node_textures": []
+   }
+  },
+  "texture_files": [
+   "walther_pp_ammo_tex_d.jpeg",
+   "walther_pp_ammo_tex_n_n.jpeg",
+   "walther_pp_ammo_tex_n_s.jpeg",
+   "walther_pp_main_tex_d.jpeg",
+   "walther_pp_main_tex_n_n.jpeg",
+   "walther_pp_main_tex_n_s.jpeg"
+  ],
+  "fbx": "C:\\Users\\fromj\\Downloads\\FurinaWeaponSrc\\Germany\\_export\\SM_DE_pp.fbx"
+ },
+ "kar98k": {
+  "key": "kar98k",
+  "clusters": [
+   8070,
+   52
+  ],
+  "raw_size": [
+   0.02,
+   0.0011,
+   0.0034
+  ],
+  "scale": 55.500001,
+  "size_m": [
+   0.0606,
+   1.11,
+   0.1893
+  ],
+  "verts": 8070,
+  "tris": 9987,
+  "mat_faces": {
+   "Material": 2312,
+   "Material_001": 2077,
+   "Material_002": 1658,
+   "Material_003": 668,
+   "Material_005": 3272
+  },
+  "materials": {
+   "Material": {
+    "node_textures": []
+   },
+   "Material_001": {
+    "node_textures": []
+   },
+   "Material_002": {
+    "node_textures": []
+   },
+   "Material_003": {
+    "node_textures": []
+   },
+   "Material_005": {
+    "node_textures": []
+   }
+  },
+  "texture_files": [
+   "Material_001_AO.jpeg",
+   "Material_001_albedo.jpeg",
+   "Material_001_emissive.jpeg",
+   "Material_001_metallic.jpeg",
+   "Material_001_normal.png",
+   "Material_001_opacity.jpeg",
+   "Material_001_roughness.jpeg",
+   "Material_002_AO.jpeg",
+   "Material_002_albedo.jpeg",
+   "Material_002_emissive.jpeg",
+   "Material_002_metallic.jpeg",
+   "Material_002_normal.png",
+   "Material_002_opacity.jpeg",
+   "Material_002_roughness.jpeg",
+   "Material_003_AO.jpeg",
+   "Material_003_albedo.jpeg",
+   "Material_003_emissive.jpeg",
+   "Material_003_metallic.jpeg",
+   "Material_003_normal.png",
+   "Material_003_opacity.jpeg",
+   "Material_003_roughness.jpeg",
+   "Material_005_AO.jpeg",
+   "Material_005_albedo.jpeg",
+   "Material_005_emissive.jpeg",
+   "Material_005_metallic.jpeg",
+   "Material_005_normal.png",
+   "Material_005_opacity.jpeg",
+   "Material_005_roughness.jpeg",
+   "Material_AO.jpeg",
+   "Material_albedo.jpeg",
+   "Material_emissive.jpeg",
+   "Material_metallic.jpeg",
+   "Material_normal.png",
+   "Material_opacity.jpeg",
+   "Material_roughness.jpeg"
+  ],
+  "fbx": "C:\\Users\\fromj\\Downloads\\FurinaWeaponSrc\\Germany\\_export\\SM_DE_kar98k.fbx"
+ },
+ "g43": {
+  "key": "g43",
+  "raw_size": [
+   0.0419,
+   1.1151,
+   0.1881
+  ],
+  "scale": 1.013349,
+  "size_m": [
+   0.0425,
+   1.13,
+   0.1906
+  ],
+  "verts": 4754,
+  "tris": 8661,
+  "mat_faces": {
+   "Gewehr43": 4318
+  },
+  "materials": {
+   "Gewehr43": {
+    "node_textures": [
+     "C:\\Users\\fromj\\Downloads\\FurinaWeaponSrc\\Germany\\g43/textures\\Gewehr43_BaseColor.png"
+    ]
+   }
+  },
+  "texture_files": [
+   "Gewehr43_AO.png",
+   "Gewehr43_BaseColor.png",
+   "Gewehr43_Metallic.png",
+   "Gewehr43_Normal.png",
+   "Gewehr43_Roughness.png"
+  ],
+  "fbx": "C:\\Users\\fromj\\Downloads\\FurinaWeaponSrc\\Germany\\_export\\SM_DE_g43.fbx"
+ },
+ "stg44": {
+  "key": "stg44",
+  "raw_size": [
+   0.0646,
+   0.9292,
+   0.3407
+  ],
+  "scale": 1.011582,
+  "size_m": [
+   0.0653,
+   0.94,
+   0.3447
+  ],
+  "verts": 21396,
+  "tris": 39953,
+  "mat_faces": {
+   "Stock": 2086,
+   "Body": 12299,
+   "Belt": 1752,
+   "Magazine": 2077,
+   "Barrel": 4390
+  },
+  "materials": {
+   "Stock": {
+    "node_textures": []
+   },
+   "Body": {
+    "node_textures": []
+   },
+   "Belt": {
+    "node_textures": []
+   },
+   "Magazine": {
+    "node_textures": []
+   },
+   "Barrel": {
+    "node_textures": []
+   }
+  },
+  "texture_files": [
+   "STG44_Barrel_AO.tga.png",
+   "STG44_Barrel_BaseColor.tga.png",
+   "STG44_Barrel_Metallic.tga.png",
+   "STG44_Barrel_Normal.tga.png",
+   "STG44_Barrel_Roughness.tga.png",
+   "STG44_Belt_AO.tga.png",
+   "STG44_Belt_BaseColor.tga.png",
+   "STG44_Belt_Metallic.tga.png",
+   "STG44_Belt_Normal.tga.png",
+   "STG44_Belt_Roughness.tga.png",
+   "STG44_Body_AO.tga.png",
+   "STG44_Body_BaseColor.tga.png",
+   "STG44_Body_Metallic.tga.png",
+   "STG44_Body_Normal.tga.png",
+   "STG44_Body_Roughness.tga.png",
+   "STG44_Magazine_AO.tga.png",
+   "STG44_Magazine_BaseColor.tga.png",
+   "STG44_Magazine_Metallic.tga.png",
+   "STG44_Magazine_Normal.tga.png",
+   "STG44_Magazine_Roughness.tga.png",
+   "STG44_Stock_AO.tga.png",
+   "STG44_Stock_BaseColor.tga.png",
+   "STG44_Stock_Metallic.tga.png",
+   "STG44_Stock_Normal.tga.png",
+   "STG44_Stock_Roughness.tga.png"
+  ],
+  "fbx": "C:\\Users\\fromj\\Downloads\\FurinaWeaponSrc\\Germany\\_export\\SM_DE_stg44.fbx"
+ },
+ "mp40": {
+  "key": "mp40",
+  "raw_size": [
+   0.0343,
+   0.4372,
+   0.1009
+  ],
+  "scale": 1.90551,
+  "size_m": [
+   0.0654,
+   0.833,
+   0.1922
+  ],
+  "verts": 7184,
+  "tris": 13527,
+  "mat_faces": {
+   "MP40": 13527
+  },
+  "materials": {
+   "MP40": {
+    "node_textures": [
+     "C:\\Users\\fromj\\Downloads\\FurinaWeaponSrc\\Germany\\mp40/textures\\MP40_Albedo.png",
+     "C:\\Users\\fromj\\Downloads\\FurinaWeaponSrc\\Germany\\mp40/textures\\MP40_Normal.png",
+     "C:\\Users\\fromj\\Downloads\\FurinaWeaponSrc\\Germany\\mp40/textures\\MP40_Metallic.png",
+     "C:\\Users\\fromj\\Downloads\\FurinaWeaponSrc\\Germany\\mp40/textures\\MP40_Roughness.png"
+    ]
+   }
+  },
+  "texture_files": [
+   "MP40_AO.png",
+   "MP40_Albedo.png",
+   "MP40_Metallic.png",
+   "MP40_Normal.png",
+   "MP40_Roughness.png",
+   "internal_ground_ao_texture.jpeg"
+  ],
+  "fbx": "C:\\Users\\fromj\\Downloads\\FurinaWeaponSrc\\Germany\\_export\\SM_DE_mp40.fbx"
+ },
+ "mp38": {
+  "key": "mp38",
+  "raw_size": [
+   0.625,
+   0.284,
+   0.074
+  ],
+  "scale": 1.008,
+  "size_m": [
+   0.0746,
+   0.63,
+   0.2863
+  ],
+  "verts": 1109916,
+  "tris": 2210725,
+  "mat_faces": {
+   "Blued_Barrel": 65010,
+   "Blued_Receiver": 346280,
+   "Rosewood_Foregrip": 88464,
+   "Dark_Cast_Alloy": 135314,
+   "Worn_Steel": 349246,
+   "Rosewood_Dark_Grip": 987656,
+   "Magazine_Steel": 95486,
+   "Stock_Steel": 143269
+  },
+  "materials": {
+   "Blued_Barrel": {
+    "node_textures": [
+     "C:\\Users\\fromj\\Downloads\\FurinaWeaponSrc\\Germany\\mp38/textures\\Blued_Barrel_BaseColor.jpg",
+     "C:\\Users\\fromj\\Downloads\\FurinaWeaponSrc\\Germany\\mp38/textures\\Metal060B_NormalGL.png",
+     "C:\\Users\\fromj\\Downloads\\FurinaWeaponSrc\\Germany\\mp38/textures\\Blued_Barrel_Roughness.png",
+     "C:\\Users\\fromj\\Downloads\\FurinaWeaponSrc\\Germany\\mp38/textures\\Blued_Barrel_Metallic.png"
+    ]
+   },
+   "Blued_Receiver": {
+    "node_textures": [
+     "C:\\Users\\fromj\\Downloads\\FurinaWeaponSrc\\Germany\\mp38/textures\\Blued_Receiver_BaseColor.jpg",
+     "C:\\Users\\fromj\\Downloads\\FurinaWeaponSrc\\Germany\\mp38/textures\\Metal060B_NormalGL.png",
+     "C:\\Users\\fromj\\Downloads\\FurinaWeaponSrc\\Germany\\mp38/textures\\Blued_Receiver_Roughness.png",
+     "C:\\Users\\fromj\\Downloads\\FurinaWeaponSrc\\Germany\\mp38/textures\\Blued_Receiver_Metallic.png"
+    ]
+   },
+   "Rosewood_Foregrip": {
+    "node_textures": [
+     "C:\\Users\\fromj\\Downloads\\FurinaWeaponSrc\\Germany\\mp38/textures\\Rosewood_Foregrip_BaseColor.jpg",
+     "C:\\Users\\fromj\\Downloads\\FurinaWeaponSrc\\Germany\\mp38/textures\\Rosewood_NormalGL.png",
+     "C:\\Users\\fromj\\Downloads\\FurinaWeaponSrc\\Germany\\mp38/textures\\Rosewood_Roughness.png"
+    ]
+   },
+   "Dark_Cast_Alloy": {
+    "node_textures": [
+     "C:\\Users\\fromj\\Downloads\\FurinaWeaponSrc\\Germany\\mp38/textures\\Dark_Cast_Alloy_BaseColor.jpg",
+     "C:\\Users\\fromj\\Downloads\\FurinaWeaponSrc\\Germany\\mp38/textures\\Metal060B_NormalGL.png",
+     "C:\\Users\\fromj\\Downloads\\FurinaWeaponSrc\\Germany\\mp38/textures\\Dark_Cast_Alloy_Roughness.png",
+     "C:\\Users\\fromj\\Downloads\\FurinaWeaponSrc\\Germany\\mp38/textures\\Dark_Cast_Alloy_Metallic.png"
+    ]
+   },
+   "Worn_Steel": {
+    "node_textures": [
+     "C:\\Users\\fromj\\Downloads\\FurinaWeaponSrc\\Germany\\mp38/textures\\Worn_Steel_BaseColor.jpg",
+     "C:\\Users\\fromj\\Downloads\\FurinaWeaponSrc\\Germany\\mp38/textures\\Metal060B_NormalGL.png",
+     "C:\\Users\\fromj\\Downloads\\FurinaWeaponSrc\\Germany\\mp38/textures\\Worn_Steel_Roughness.png",
+     "C:\\Users\\fromj\\Downloads\\FurinaWeaponSrc\\Germany\\mp38/textures\\Worn_Steel_Metallic.png"
+    ]
+   },
+   "Rosewood_Dark_Grip": {
+    "node_textures": [
+     "C:\\Users\\fromj\\Downloads\\FurinaWeaponSrc\\Germany\\mp38/textures\\Rosewood_Dark_Grip_BaseColor.jpg",
+     "C:\\Users\\fromj\\Downloads\\FurinaWeaponSrc\\Germany\\mp38/textures\\Rosewood_NormalGL.png",
+     "C:\\Users\\fromj\\Downloads\\FurinaWeaponSrc\\Germany\\mp38/textures\\Rosewood_Roughness.png"
+    ]
+   },
+   "Magazine_Steel": {
+    "node_textures": [
+     "C:\\Users\\fromj\\Downloads\\FurinaWeaponSrc\\Germany\\mp38/textures\\Magazine_Steel_BaseColor.jpg",
+     "C:\\Users\\fromj\\Downloads\\FurinaWeaponSrc\\Germany\\mp38/textures\\Metal060B_NormalGL.png",
+     "C:\\Users\\fromj\\Downloads\\FurinaWeaponSrc\\Germany\\mp38/textures\\Magazine_Steel_Roughness.png",
+     "C:\\Users\\fromj\\Downloads\\FurinaWeaponSrc\\Germany\\mp38/textures\\Magazine_Steel_Metallic.png"
+    ]
+   },
+   "Stock_Steel": {
+    "node_textures": [
+     "C:\\Users\\fromj\\Downloads\\FurinaWeaponSrc\\Germany\\mp38/textures\\Stock_Steel_BaseColor.jpg",
+     "C:\\Users\\fromj\\Downloads\\FurinaWeaponSrc\\Germany\\mp38/textures\\Metal060B_NormalGL.png",
+     "C:\\Users\\fromj\\Downloads\\FurinaWeaponSrc\\Germany\\mp38/textures\\Stock_Steel_Roughness.png",
+     "C:\\Users\\fromj\\Downloads\\FurinaWeaponSrc\\Germany\\mp38/textures\\Stock_Steel_Metallic.png"
+    ]
+   }
+  },
+  "texture_files": [
+   "Blued_Barrel_BaseColor.jpg",
+   "Blued_Barrel_Metallic.png",
+   "Blued_Barrel_Roughness.png",
+   "Blued_Receiver_BaseColor.jpg",
+   "Blued_Receiver_Metallic.png",
+   "Blued_Receiver_Roughness.png",
+   "Dark_Cast_Alloy_BaseColor.jpg",
+   "Dark_Cast_Alloy_Metallic.png",
+   "Dark_Cast_Alloy_Roughness.png",
+   "Magazine_Steel_BaseColor.jpg",
+   "Magazine_Steel_Metallic.png",
+   "Magazine_Steel_Roughness.png",
+   "Metal060B_NormalGL.png",
+   "Rosewood_Dark_Grip_BaseColor.jpg",
+   "Rosewood_Foregrip_BaseColor.jpg",
+   "Rosewood_Metallic.png",
+   "Rosewood_NormalGL.png",
+   "Rosewood_Roughness.png",
+   "Stock_Steel_BaseColor.jpg",
+   "Stock_Steel_Metallic.png",
+   "Stock_Steel_Roughness.png",
+   "Worn_Steel_BaseColor.jpg",
+   "Worn_Steel_Metallic.png",
+   "Worn_Steel_Roughness.png"
+  ],
+  "fbx": "C:\\Users\\fromj\\Downloads\\FurinaWeaponSrc\\Germany\\_export\\SM_DE_mp38.fbx"
+ },
+ "mg42": {
+  "key": "mg42",
+  "raw_size": [
+   0.5561,
+   1.2167,
+   0.3398
+  ],
+  "scale": 1.002711,
+  "size_m": [
+   0.3407,
+   1.22,
+   0.5576
+  ],
+  "verts": 11161,
+  "tris": 21911,
+  "mat_faces": {
+   "B.002": 3806,
+   "A.001": 6458
+  },
+  "materials": {
+   "B.002": {
+    "node_textures": [
+     "C:\\Users\\fromj\\Downloads\\FurinaWeaponSrc\\Germany\\mg42/textures\\B_albedo.jpg",
+     "C:\\Users\\fromj\\Downloads\\FurinaWeaponSrc\\Germany\\mg42/textures\\B_normal.png",
+     "C:\\Users\\fromj\\Downloads\\FurinaWeaponSrc\\Germany\\mg42/textures\\B_roughness.jpg",
+     "C:\\Users\\fromj\\Downloads\\FurinaWeaponSrc\\Germany\\mg42/textures\\B_metallic.jpg"
+    ]
+   },
+   "A.001": {
+    "node_textures": [
+     "C:\\Users\\fromj\\Downloads\\FurinaWeaponSrc\\Germany\\mg42/textures\\A_albedo.jpg",
+     "C:\\Users\\fromj\\Downloads\\FurinaWeaponSrc\\Germany\\mg42/textures\\A_normal.png",
+     "C:\\Users\\fromj\\Downloads\\FurinaWeaponSrc\\Germany\\mg42/textures\\A_roughness.jpg",
+     "C:\\Users\\fromj\\Downloads\\FurinaWeaponSrc\\Germany\\mg42/textures\\A_metallic.jpg"
+    ]
+   }
+  },
+  "texture_files": [
+   "A_AO.jpg",
+   "A_albedo.jpg",
+   "A_metallic.jpg",
+   "A_normal.png",
+   "A_roughness.jpg",
+   "B_AO.jpg",
+   "B_albedo.jpg",
+   "B_metallic.jpg",
+   "B_normal.png",
+   "B_roughness.jpg",
+   "internal_ground_ao_texture.jpeg"
+  ],
+  "fbx": "C:\\Users\\fromj\\Downloads\\FurinaWeaponSrc\\Germany\\_export\\SM_DE_mg42.fbx"
+ },
+ "mg34": {
+  "key": "mg34",
+  "raw_size": [
+   0.2267,
+   1.2145,
+   0.2334
+  ],
+  "scale": 1.003722,
+  "size_m": [
+   0.2275,
+   1.219,
+   0.2343
+  ],
+  "verts": 10320,
+  "tris": 18765,
+  "mat_faces": {
+   "p line": 900,
+   "7.92х57 l": 1100,
+   "mg 34 mag": 2246,
+   "mg 34": 14519
+  },
+  "materials": {
+   "p line": {
+    "node_textures": []
+   },
+   "7.92х57 l": {
+    "node_textures": []
+   },
+   "mg 34 mag": {
+    "node_textures": []
+   },
+   "mg 34": {
+    "node_textures": []
+   }
+  },
+  "texture_files": [
+   "7.92х57_l_a.png",
+   "7.92х57_l_n.png",
+   "7.92х57_l_r.png",
+   "mg34_n.png",
+   "mg_34_a2.png",
+   "mg_34_mag_a2.png",
+   "mg_34_mag_n.png",
+   "mg_34_mag_r5.png",
+   "mg_34_r5.png",
+   "p_line_a.png",
+   "p_line_n.png",
+   "p_line_r.png"
+  ],
+  "fbx": "C:\\Users\\fromj\\Downloads\\FurinaWeaponSrc\\Germany\\_export\\SM_DE_mg34.fbx"
+ },
+ "panzerfaust": {
+  "key": "panzerfaust",
+  "raw_size": [
+   2.0,
+   0.2753,
+   0.4707
+  ],
+  "scale": 0.5225,
+  "size_m": [
+   0.1438,
+   1.045,
+   0.2459
+  ],
+  "verts": 1173,
+  "tris": 1746,
+  "mat_faces": {
+   "Material": 1746
+  },
+  "materials": {
+   "Material": {
+    "node_textures": []
+   }
+  },
+  "texture_files": [
+   "Material_AO.jpeg",
+   "Material_albedo.jpeg",
+   "Material_metallic.jpeg",
+   "Material_normal.jpeg",
+   "Material_roughness.jpeg"
+  ],
+  "fbx": "C:\\Users\\fromj\\Downloads\\FurinaWeaponSrc\\Germany\\_export\\SM_DE_panzerfaust.fbx"
+ },
+ "panzerschreck": {
+  "key": "panzerschreck",
+  "raw_size": [
+   0.02,
+   0.0047,
+   0.0054
+  ],
+  "scale": 82.000002,
+  "size_m": [
+   0.3874,
+   1.64,
+   0.445
+  ],
+  "verts": 5626,
+  "tris": 5346,
+  "mat_faces": {
+   "Main_001": 4804,
+   "Rocket_001": 542
+  },
+  "materials": {
+   "Main_001": {
+    "node_textures": []
+   },
+   "Rocket_001": {
+    "node_textures": []
+   }
+  },
+  "texture_files": [
+   "Main_001_AO.jpeg",
+   "Main_001_albedo.jpeg",
+   "Main_001_metallic.jpeg",
+   "Main_001_normal.png",
+   "Main_001_roughness.jpeg",
+   "Rocket_001_albedo.jpeg",
+   "Rocket_001_metallic.jpeg",
+   "Rocket_001_normal.png",
+   "Rocket_001_roughness.jpeg"
+  ],
+  "fbx": "C:\\Users\\fromj\\Downloads\\FurinaWeaponSrc\\Germany\\_export\\SM_DE_panzerschreck.fbx"
+ },
+ "panzerschreck_rocket": {
+  "key": "panzerschreck_rocket",
+  "raw_size": [
+   0.6588,
+   0.088,
+   0.088
+  ],
+  "scale": 0.986608,
+  "size_m": [
+   0.0868,
+   0.65,
+   0.0868
+  ],
+  "verts": 17956,
+  "tris": 35860,
+  "mat_faces": {
+   "Dark_Olive": 11860,
+   "Tip_Metal": 1452,
+   "Olive_Paint": 22548
+  },
+  "materials": {
+   "Dark_Olive": {
+    "node_textures": [
+     "C:\\Users\\fromj\\Downloads\\FurinaWeaponSrc\\Germany\\panzerschreck/Panzerschreck_Rocket/textures\\Dark_Olive_BaseColor.png",
+     "C:\\Users\\fromj\\Downloads\\FurinaWeaponSrc\\Germany\\panzerschreck/Panzerschreck_Rocket/textures\\Dark_Olive_Normal.png",
+     "C:\\Users\\fromj\\Downloads\\FurinaWeaponSrc\\Germany\\panzerschreck/Panzerschreck_Rocket/textures\\Dark_Olive_Roughness.png",
+     "C:\\Users\\fromj\\Downloads\\FurinaWeaponSrc\\Germany\\panzerschreck/Panzerschreck_Rocket/textures\\Dark_Olive_Metallic.png"
+    ]
+   },
+   "Tip_Metal": {
+    "node_textures": [
+     "C:\\Users\\fromj\\Downloads\\FurinaWeaponSrc\\Germany\\panzerschreck/Panzerschreck_Rocket/textures\\Tip_Metal_BaseColor.png",
+     "C:\\Users\\fromj\\Downloads\\FurinaWeaponSrc\\Germany\\panzerschreck/Panzerschreck_Rocket/textures\\Tip_Metal_Normal.png",
+     "C:\\Users\\fromj\\Downloads\\FurinaWeaponSrc\\Germany\\panzerschreck/Panzerschreck_Rocket/textures\\Tip_Metal_Roughness.png",
+     "C:\\Users\\fromj\\Downloads\\FurinaWeaponSrc\\Germany\\panzerschreck/Panzerschreck_Rocket/textures\\Tip_Metal_Metallic.png"
+    ]
+   },
+   "Olive_Paint": {
+    "node_textures": [
+     "C:\\Users\\fromj\\Downloads\\FurinaWeaponSrc\\Germany\\panzerschreck/Panzerschreck_Rocket/textures\\Olive_Paint_BaseColor.png",
+     "C:\\Users\\fromj\\Downloads\\FurinaWeaponSrc\\Germany\\panzerschreck/Panzerschreck_Rocket/textures\\Olive_Paint_Normal.png",
+     "C:\\Users\\fromj\\Downloads\\FurinaWeaponSrc\\Germany\\panzerschreck/Panzerschreck_Rocket/textures\\Olive_Paint_Roughness.png",
+     "C:\\Users\\fromj\\Downloads\\FurinaWeaponSrc\\Germany\\panzerschreck/Panzerschreck_Rocket/textures\\Olive_Paint_Metallic.png"
+    ]
+   }
+  },
+  "texture_files": [
+   "Dark_Olive_BaseColor.png",
+   "Dark_Olive_Metallic.png",
+   "Dark_Olive_Normal.png",
+   "Dark_Olive_Roughness.png",
+   "Olive_Paint_BaseColor.png",
+   "Olive_Paint_Metallic.png",
+   "Olive_Paint_Normal.png",
+   "Olive_Paint_Roughness.png",
+   "Tip_Metal_BaseColor.png",
+   "Tip_Metal_Metallic.png",
+   "Tip_Metal_Normal.png",
+   "Tip_Metal_Roughness.png"
+  ],
+  "fbx": "C:\\Users\\fromj\\Downloads\\FurinaWeaponSrc\\Germany\\_export\\SM_DE_panzerschreck_rocket.fbx"
+ },
+ "pzb39": {
+  "key": "pzb39",
+  "raw_size": [
+   1.774,
+   0.388,
+   0.4872
+  ],
+  "scale": 0.913191,
+  "size_m": [
+   0.3543,
+   1.62,
+   0.4449
+  ],
+  "verts": 78702,
+  "tris": 156588,
+  "mat_faces": {
+   "Ammo_Case_Aged": 3298,
+   "Case_Fittings": 6411,
+   "Barrel_Blued": 7636,
+   "Bipod_Satin": 5694,
+   "Edges_And_Fasteners": 12250,
+   "Receiver_Blued": 3792,
+   "Wood_Foreend": 6584,
+   "Rosewood_Pistol_Panels": 1620,
+   "Metal055A_Worn_Silver": 196,
+   "Rubber004_Hard_Matte": 1260,
+   "Grip_Dark_Molded": 346,
+   "Rosewood_Cheek_Rest": 442,
+   "Prop_Brass": 15370,
+   "Prop_Tip_Steel": 6730
+  },
+  "materials": {
+   "Ammo_Case_Aged": {
+    "node_textures": [
+     "C:\\Users\\fromj\\Downloads\\FurinaWeaponSrc\\Germany\\PzB39/textures\\Metal060B_Ammo_Case_Aged_BaseColor.jpg",
+     "C:\\Users\\fromj\\Downloads\\FurinaWeaponSrc\\Germany\\PzB39/textures\\Metal060B_Surface_NormalGL.png",
+     "C:\\Users\\fromj\\Downloads\\FurinaWeaponSrc\\Germany\\PzB39/textures\\Metal060B_Ammo_Case_Aged_Roughness.png",
+     "C:\\Users\\fromj\\Downloads\\FurinaWeaponSrc\\Germany\\PzB39/textures\\Metal060B_Ammo_Case_Aged_Metallic.png"
+    ]
+   },
+   "Case_Fittings": {
+    "node_textures": [
+     "C:\\Users\\fromj\\Downloads\\FurinaWeaponSrc\\Germany\\PzB39/textures\\Metal060B_Case_Fittings_BaseColor.jpg",
+     "C:\\Users\\fromj\\Downloads\\FurinaWeaponSrc\\Germany\\PzB39/textures\\Metal060B_Surface_NormalGL.png",
+     "C:\\Users\\fromj\\Downloads\\FurinaWeaponSrc\\Germany\\PzB39/textures\\Metal060B_Case_Fittings_Roughness.png",
+     "C:\\Users\\fromj\\Downloads\\FurinaWeaponSrc\\Germany\\PzB39/textures\\Metal060B_Case_Fittings_Metallic.png"
+    ]
+   },
+   "Barrel_Blued": {
+    "node_textures": [
+     "C:\\Users\\fromj\\Downloads\\FurinaWeaponSrc\\Germany\\PzB39/textures\\Metal060B_Barrel_Blued_BaseColor.jpg",
+     "C:\\Users\\fromj\\Downloads\\FurinaWeaponSrc\\Germany\\PzB39/textures\\Metal060B_Surface_NormalGL.png",
+     "C:\\Users\\fromj\\Downloads\\FurinaWeaponSrc\\Germany\\PzB39/textures\\Metal060B_Barrel_Blued_Roughness.png",
+     "C:\\Users\\fromj\\Downloads\\FurinaWeaponSrc\\Germany\\PzB39/textures\\Metal060B_Barrel_Blued_Metallic.png"
+    ]
+   },
+   "Bipod_Satin": {
+    "node_textures": [
+     "C:\\Users\\fromj\\Downloads\\FurinaWeaponSrc\\Germany\\PzB39/textures\\Metal060B_Bipod_Satin_BaseColor.jpg",
+     "C:\\Users\\fromj\\Downloads\\FurinaWeaponSrc\\Germany\\PzB39/textures\\Metal060B_Surface_NormalGL.png",
+     "C:\\Users\\fromj\\Downloads\\FurinaWeaponSrc\\Germany\\PzB39/textures\\Metal060B_Bipod_Satin_Roughness.png",
+     "C:\\Users\\fromj\\Downloads\\FurinaWeaponSrc\\Germany\\PzB39/textures\\Metal060B_Bipod_Satin_Metallic.png"
+    ]
+   },
+   "Edges_And_Fasteners": {
+    "node_textures": [
+     "C:\\Users\\fromj\\Downloads\\FurinaWeaponSrc\\Germany\\PzB39/textures\\Metal060B_Edges_And_Fasteners_BaseColor.jpg",
+     "C:\\Users\\fromj\\Downloads\\FurinaWeaponSrc\\Germany\\PzB39/textures\\Metal060B_Surface_NormalGL.png",
+     "C:\\Users\\fromj\\Downloads\\FurinaWeaponSrc\\Germany\\PzB39/textures\\Metal060B_Edges_And_Fasteners_Roughness.png",
+     "C:\\Users\\fromj\\Downloads\\FurinaWeaponSrc\\Germany\\PzB39/textures\\Metal060B_Edges_And_Fasteners_Metallic.png"
+    ]
+   },
+   "Receiver_Blued": {
+    "node_textures": [
+     "C:\\Users\\fromj\\Downloads\\FurinaWeaponSrc\\Germany\\PzB39/textures\\Metal060B_Receiver_Blued_BaseColor.jpg",
+     "C:\\Users\\fromj\\Downloads\\FurinaWeaponSrc\\Germany\\PzB39/textures\\Metal060B_Surface_NormalGL.png",
+     "C:\\Users\\fromj\\Downloads\\FurinaWeaponSrc\\Germany\\PzB39/textures\\Metal060B_Receiver_Blued_Roughness.png",
+     "C:\\Users\\fromj\\Downloads\\FurinaWeaponSrc\\Germany\\PzB39/textures\\Metal060B_Receiver_Blued_Metallic.png"
+    ]
+   },
+   "Wood_Foreend": {
+    "node_textures": [
+     "C:\\Users\\fromj\\Downloads\\FurinaWeaponSrc\\Germany\\PzB39/textures\\Wood_Foreend_BaseColor.jpg",
+     "C:\\Users\\fromj\\Downloads\\FurinaWeaponSrc\\Germany\\PzB39/textures\\Rosewood_Veneer1_NormalGL.png",
+     "C:\\Users\\fromj\\Downloads\\FurinaWeaponSrc\\Germany\\PzB39/textures\\Wood_Foreend_Roughness.png"
+    ]
+   },
+   "Rosewood_Pistol_Panels": {
+    "node_textures": [
+     "C:\\Users\\fromj\\Downloads\\FurinaWeaponSrc\\Germany\\PzB39/textures\\Rosewood_Pistol_Panels_BaseColor.jpg",
+     "C:\\Users\\fromj\\Downloads\\FurinaWeaponSrc\\Germany\\PzB39/textures\\Rosewood_Veneer1_NormalGL.png",
+     "C:\\Users\\fromj\\Downloads\\FurinaWeaponSrc\\Germany\\PzB39/textures\\Rosewood_Pistol_Panels_Roughness.png"
+    ]
+   },
+   "Metal055A_Worn_Silver": {
+    "node_textures": [
+     "C:\\Users\\fromj\\Downloads\\FurinaWeaponSrc\\Germany\\PzB39/textures\\Metal055A_Worn_Silver_BaseColor.jpg",
+     "C:\\Users\\fromj\\Downloads\\FurinaWeaponSrc\\Germany\\PzB39/textures\\Metal055A_Worn_Silver_NormalGL.png",
+     "C:\\Users\\fromj\\Downloads\\FurinaWeaponSrc\\Germany\\PzB39/textures\\Metal055A_Worn_Silver_Roughness.png",
+     "C:\\Users\\fromj\\Downloads\\FurinaWeaponSrc\\Germany\\PzB39/textures\\Metal055A_Worn_Silver_Metallic.png"
+    ]
+   },
+   "Rubber004_Hard_Matte": {
+    "node_textures": [
+     "C:\\Users\\fromj\\Downloads\\FurinaWeaponSrc\\Germany\\PzB39/textures\\Rubber004_Hard_Matte_BaseColor.jpg",
+     "C:\\Users\\fromj\\Downloads\\FurinaWeaponSrc\\Germany\\PzB39/textures\\Rubber004_Hard_Matte_NormalGL.png",
+     "C:\\Users\\fromj\\Downloads\\FurinaWeaponSrc\\Germany\\PzB39/textures\\Rubber004_Hard_Matte_Roughness.png"
+    ]
+   },
+   "Grip_Dark_Molded": {
+    "node_textures": [
+     "C:\\Users\\fromj\\Downloads\\FurinaWeaponSrc\\Germany\\PzB39/textures\\Grip_Dark_Molded_BaseColor.jpg",
+     "C:\\Users\\fromj\\Downloads\\FurinaWeaponSrc\\Germany\\PzB39/textures\\Grip_Dark_Molded_NormalGL.png",
+     "C:\\Users\\fromj\\Downloads\\FurinaWeaponSrc\\Germany\\PzB39/textures\\Grip_Dark_Molded_Roughness.png"
+    ]
+   },
+   "Rosewood_Cheek_Rest": {
+    "node_textures": [
+     "C:\\Users\\fromj\\Downloads\\FurinaWeaponSrc\\Germany\\PzB39/textures\\Rosewood_Cheek_Rest_BaseColor.jpg",
+     "C:\\Users\\fromj\\Downloads\\FurinaWeaponSrc\\Germany\\PzB39/textures\\Rosewood_Veneer1_NormalGL.png",
+     "C:\\Users\\fromj\\Downloads\\FurinaWeaponSrc\\Germany\\PzB39/textures\\Rosewood_Cheek_Rest_Roughness.png"
+    ]
+   },
+   "Prop_Brass": {
+    "node_textures": [
+     "C:\\Users\\fromj\\Downloads\\FurinaWeaponSrc\\Germany\\PzB39/textures\\Metal060B_Prop_Brass_BaseColor.jpg",
+     "C:\\Users\\fromj\\Downloads\\FurinaWeaponSrc\\Germany\\PzB39/textures\\Metal060B_Surface_NormalGL.png",
+     "C:\\Users\\fromj\\Downloads\\FurinaWeaponSrc\\Germany\\PzB39/textures\\Metal060B_Prop_Brass_Roughness.png",
+     "C:\\Users\\fromj\\Downloads\\FurinaWeaponSrc\\Germany\\PzB39/textures\\Metal060B_Prop_Brass_Metallic.png"
+    ]
+   },
+   "Prop_Tip_Steel": {
+    "node_textures": [
+     "C:\\Users\\fromj\\Downloads\\FurinaWeaponSrc\\Germany\\PzB39/textures\\Metal060B_Prop_Tip_Steel_BaseColor.jpg",
+     "C:\\Users\\fromj\\Downloads\\FurinaWeaponSrc\\Germany\\PzB39/textures\\Metal060B_Surface_NormalGL.png",
+     "C:\\Users\\fromj\\Downloads\\FurinaWeaponSrc\\Germany\\PzB39/textures\\Metal060B_Prop_Tip_Steel_Roughness.png",
+     "C:\\Users\\fromj\\Downloads\\FurinaWeaponSrc\\Germany\\PzB39/textures\\Metal060B_Prop_Tip_Steel_Metallic.png"
+    ]
+   }
+  },
+  "texture_files": [
+   "Grip_Dark_Molded_BaseColor.jpg",
+   "Grip_Dark_Molded_NormalGL.png",
+   "Grip_Dark_Molded_Roughness.png",
+   "Metal055A_Worn_Silver_BaseColor.jpg",
+   "Metal055A_Worn_Silver_Metallic.png",
+   "Metal055A_Worn_Silver_NormalGL.png",
+   "Metal055A_Worn_Silver_Roughness.png",
+   "Metal060B_Ammo_Case_Aged_BaseColor.jpg",
+   "Metal060B_Ammo_Case_Aged_Metallic.png",
+   "Metal060B_Ammo_Case_Aged_Roughness.png",
+   "Metal060B_Barrel_Blued_BaseColor.jpg",
+   "Metal060B_Barrel_Blued_Metallic.png",
+   "Metal060B_Barrel_Blued_Roughness.png",
+   "Metal060B_Bipod_Satin_BaseColor.jpg",
+   "Metal060B_Bipod_Satin_Metallic.png",
+   "Metal060B_Bipod_Satin_Roughness.png",
+   "Metal060B_Case_Fittings_BaseColor.jpg",
+   "Metal060B_Case_Fittings_Metallic.png",
+   "Metal060B_Case_Fittings_Roughness.png",
+   "Metal060B_Edges_And_Fasteners_BaseColor.jpg",
+   "Metal060B_Edges_And_Fasteners_Metallic.png",
+   "Metal060B_Edges_And_Fasteners_Roughness.png",
+   "Metal060B_Prop_Brass_BaseColor.jpg",
+   "Metal060B_Prop_Brass_Metallic.png",
+   "Metal060B_Prop_Brass_Roughness.png",
+   "Metal060B_Prop_Tip_Steel_BaseColor.jpg",
+   "Metal060B_Prop_Tip_Steel_Metallic.png",
+   "Metal060B_Prop_Tip_Steel_Roughness.png",
+   "Metal060B_Receiver_Blued_BaseColor.jpg",
+   "Metal060B_Receiver_Blued_Metallic.png",
+   "Metal060B_Receiver_Blued_Roughness.png",
+   "Metal060B_Surface_NormalGL.png",
+   "Rosewood_Cheek_Rest_BaseColor.jpg",
+   "Rosewood_Cheek_Rest_Roughness.png",
+   "Rosewood_Pistol_Panels_BaseColor.jpg",
+   "Rosewood_Pistol_Panels_Roughness.png",
+   "Rosewood_Veneer1_NormalGL.png",
+   "Rubber004_Hard_Matte_BaseColor.jpg",
+   "Rubber004_Hard_Matte_NormalGL.png",
+   "Rubber004_Hard_Matte_Roughness.png",
+   "Wood_Foreend_BaseColor.jpg",
+   "Wood_Foreend_Roughness.png"
+  ],
+  "fbx": "C:\\Users\\fromj\\Downloads\\FurinaWeaponSrc\\Germany\\_export\\SM_DE_pzb39.fbx"
+ },
+ "grw34": {
+  "key": "grw34",
+  "raw_size": [
+   0.8869,
+   1.0433,
+   1.0603
+  ],
+  "scale": 1.0374,
+  "size_m": [
+   0.9201,
+   1.0823,
+   1.1
+  ],
+  "verts": 84,
+  "tris": 76,
+  "mat_faces": {
+   "Material": 76
+  },
+  "materials": {
+   "Material": {
+    "node_textures": []
+   }
+  },
+  "texture_files": [
+   "grw34_color_256.png"
+  ],
+  "fbx": "C:\\Users\\fromj\\Downloads\\FurinaWeaponSrc\\Germany\\_export\\SM_DE_grw34.fbx"
+ },
+ "mortar_shell": {
+  "key": "mortar_shell",
+  "raw_size": [
+   1.5262,
+   1.5831,
+   8.0792
+  ],
+  "scale": 0.040846,
+  "size_m": [
+   0.0623,
+   0.33,
+   0.0647
+  ],
+  "verts": 1818,
+  "tris": 3660,
+  "mat_faces": {
+   "None": 1870
+  },
+  "materials": {},
+  "texture_files": [],
+  "fbx": "C:\\Users\\fromj\\Downloads\\FurinaWeaponSrc\\Germany\\_export\\SM_DE_mortar_shell.fbx"
+ },
+ "zf4": {
+  "key": "zf4",
+  "raw_size": [
+   0.4774,
+   3.0538,
+   0.6936
+  ],
+  "scale": 0.088414,
+  "size_m": [
+   0.0422,
+   0.27,
+   0.0613
+  ],
+  "verts": 666,
+  "tris": 1324,
+  "mat_faces": {
+   "ZF4_MountMaterial": 75,
+   "ZF4_ScopeMaterial": 580
+  },
+  "materials": {
+   "ZF4_MountMaterial": {
+    "node_textures": [
+     "C:\\Users\\fromj\\Downloads\\FurinaWeaponSrc\\Germany\\zf4_scope/textures\\ZF4_Mount_BaseColor.png",
+     "C:\\Users\\fromj\\Downloads\\FurinaWeaponSrc\\Germany\\zf4_scope/textures\\ZF4_Mount_Normal.png",
+     "C:\\Users\\fromj\\Downloads\\FurinaWeaponSrc\\Germany\\zf4_scope/textures\\ZF4_Mount_Roughness.png",
+     "C:\\Users\\fromj\\Downloads\\FurinaWeaponSrc\\Germany\\zf4_scope/textures\\ZF4_Mount_Metallic.png"
+    ]
+   },
+   "ZF4_ScopeMaterial": {
+    "node_textures": [
+     "C:\\Users\\fromj\\Downloads\\FurinaWeaponSrc\\Germany\\zf4_scope/textures\\ZF4_Scope_BaseColor.png",
+     "C:\\Users\\fromj\\Downloads\\FurinaWeaponSrc\\Germany\\zf4_scope/textures\\ZF4_Scope_Normal.png",
+     "C:\\Users\\fromj\\Downloads\\FurinaWeaponSrc\\Germany\\zf4_scope/textures\\ZF4_Scope_Metallic.png"
+    ]
+   }
+  },
+  "texture_files": [
+   "ZF4_Mount_BaseColor.png",
+   "ZF4_Mount_Metallic.png",
+   "ZF4_Mount_Normal.png",
+   "ZF4_Mount_Roughness.png",
+   "ZF4_Scope_BaseColor.png",
+   "ZF4_Scope_Metallic.png",
+   "ZF4_Scope_Normal.png"
+  ],
+  "fbx": "C:\\Users\\fromj\\Downloads\\FurinaWeaponSrc\\Germany\\_export\\SM_DE_zf4.fbx"
+ },
+ "zf39": {
+  "key": "zf39",
+  "raw_size": [
+   38.5278,
+   285.8058,
+   44.1251
+  ],
+  "scale": 0.00098,
+  "size_m": [
+   0.0377,
+   0.28,
+   0.0432
+  ],
+  "verts": 160151,
+  "tris": 320462,
+  "mat_faces": {
+   "None": 320462
+  },
+  "materials": {},
+  "texture_files": [],
+  "fbx": "C:\\Users\\fromj\\Downloads\\FurinaWeaponSrc\\Germany\\_export\\SM_DE_zf39.fbx"
+ },
+ "zf41": {
+  "key": "zf41",
+  "raw_size": [
+   54.6362,
+   171.117,
+   57.6012
+  ],
+  "scale": 0.00076,
+  "size_m": [
+   0.0415,
+   0.13,
+   0.0438
+  ],
+  "verts": 165374,
+  "tris": 330796,
+  "mat_faces": {
+   "None": 330796
+  },
+  "materials": {},
+  "texture_files": [],
+  "fbx": "C:\\Users\\fromj\\Downloads\\FurinaWeaponSrc\\Germany\\_export\\SM_DE_zf41.fbx"
+ },
+ "ammo_7_92x94": {
+  "key": "ammo_7_92x94",
+  "raw_size": [
+   20.8059,
+   20.8059,
+   111.0016
+  ],
+  "scale": 0.001059,
+  "size_m": [
+   0.022,
+   0.1175,
+   0.022
+  ],
+  "verts": 705843,
+  "tris": 1411676,
+  "mat_faces": {
+   "Brass_Case": 887388,
+   "Copper_Projectile": 524288
+  },
+  "materials": {
+   "Brass_Case": {
+    "node_textures": [
+     "C:\\Users\\fromj\\Downloads\\FurinaWeaponSrc\\Germany\\7_92x94_ammo/textures\\Brass_BaseColor.png",
+     "C:\\Users\\fromj\\Downloads\\FurinaWeaponSrc\\Germany\\7_92x94_ammo/textures\\Metal_NormalGL.png",
+     "C:\\Users\\fromj\\Downloads\\FurinaWeaponSrc\\Germany\\7_92x94_ammo/textures\\Metal_Roughness.png",
+     "C:\\Users\\fromj\\Downloads\\FurinaWeaponSrc\\Germany\\7_92x94_ammo/textures\\Metal_Metallic.png"
+    ]
+   },
+   "Copper_Projectile": {
+    "node_textures": [
+     "C:\\Users\\fromj\\Downloads\\FurinaWeaponSrc\\Germany\\7_92x94_ammo/textures\\Copper_BaseColor.png",
+     "C:\\Users\\fromj\\Downloads\\FurinaWeaponSrc\\Germany\\7_92x94_ammo/textures\\Metal_NormalGL.png",
+     "C:\\Users\\fromj\\Downloads\\FurinaWeaponSrc\\Germany\\7_92x94_ammo/textures\\Metal_Roughness.png",
+     "C:\\Users\\fromj\\Downloads\\FurinaWeaponSrc\\Germany\\7_92x94_ammo/textures\\Metal_Metallic.png"
+    ]
+   }
+  },
+  "texture_files": [
+   "Brass_BaseColor.png",
+   "Copper_BaseColor.png",
+   "Metal_Metallic.png",
+   "Metal_NormalGL.png",
+   "Metal_Roughness.png"
+  ],
+  "fbx": "C:\\Users\\fromj\\Downloads\\FurinaWeaponSrc\\Germany\\_export\\SM_DE_ammo_7_92x94.fbx"
+ },
+ "mauser_clip": {
+  "key": "mauser_clip",
+  "raw_size": [
+   14.1975,
+   2.6034,
+   11.9621
+  ],
+  "scale": 0.005776,
+  "size_m": [
+   0.015,
+   0.082,
+   0.0691
+  ],
+  "verts": 13716,
+  "tris": 27088,
+  "mat_faces": {
+   "Material": 82,
+   "6.5": 805,
+   "case": 12485
+  },
+  "materials": {
+   "Material": {
+    "node_textures": []
+   },
+   "6.5": {
+    "node_textures": []
+   },
+   "case": {
+    "node_textures": []
+   }
+  },
+  "texture_files": [],
+  "fbx": "C:\\Users\\fromj\\Downloads\\FurinaWeaponSrc\\Germany\\_export\\SM_DE_mauser_clip.fbx"
+ }
+}
