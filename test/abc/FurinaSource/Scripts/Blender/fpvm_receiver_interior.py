@@ -77,10 +77,33 @@ def add_existing_optic(key, armature, native_to_camera):
     mesh.free()
     assert any(poly for poly in optic.data.polygons if materials[poly.material_index].endswith('_Glass')), key
     if len(optic.data.polygons) > 45000:
-        modifier = optic.modifiers.new('Scope render budget', 'DECIMATE')
-        modifier.ratio = 45000 / len(optic.data.polygons)
-        bpy.context.view_layer.objects.active = optic
-        bpy.ops.object.modifier_apply(modifier=modifier.name)
+        # 2026-11-21: 유리(렌즈) 면은 줄이지 않음. 전체를 한꺼번에 줄이면 ZF41 의 얇은 렌즈 원판(9,506면)이 뭉개져
+        # 관 벽 같은 조각만 남았고, 조준경 화면 속 화면에서 렌즈가 '이중 원통'처럼 보였음 -> 유리를 떼어 두고 나머지만 줄인 뒤 다시 합침
+        glass_ids = {i for i, name in enumerate(materials) if name.endswith('_Glass')}
+        mesh = bmesh.new(); mesh.from_mesh(optic.data)
+        lens_data = optic.data.copy(); lens_mesh = bmesh.new(); lens_mesh.from_mesh(lens_data)
+        bmesh.ops.delete(lens_mesh, geom=[f for f in lens_mesh.faces if f.material_index not in glass_ids], context='FACES')
+        bmesh.ops.delete(lens_mesh, geom=[v for v in lens_mesh.verts if not v.link_faces], context='VERTS'); lens_mesh.to_mesh(lens_data); lens_mesh.free()
+        bmesh.ops.delete(mesh, geom=[f for f in mesh.faces if f.material_index in glass_ids], context='FACES')
+        bmesh.ops.delete(mesh, geom=[v for v in mesh.verts if not v.link_faces], context='VERTS'); mesh.to_mesh(optic.data); mesh.free()
+        budget = max(1000, 45000 - len(lens_data.polygons))
+        if len(optic.data.polygons) > budget:
+            modifier = optic.modifiers.new('Scope render budget', 'DECIMATE')
+            modifier.ratio = budget / len(optic.data.polygons)
+            bpy.context.view_layer.objects.active = optic
+            bpy.ops.object.modifier_apply(modifier=modifier.name)
+        lens = bpy.data.objects.new('ScopeLens', lens_data); bpy.context.scene.collection.objects.link(lens); lens.matrix_world = optic.matrix_world.copy()
+        bpy.ops.object.select_all(action='DESELECT'); lens.select_set(True); optic.select_set(True); bpy.context.view_layer.objects.active = optic; bpy.ops.object.join()
+    if scope == 'ZF41':
+        # 실제 ZF41 은 접안부 끝에서 렌즈 한 장이 관을 꽉 채워 보임. 원본은 접안부 끝(y -1.75)에 안쪽 반지름 0.55 의 금속 고리와
+        # 여러 렌즈 조각이 겹쳐 뒤에서 보면 '이중 원'이 됨 -> 끝면 바로 바깥(y -1.70)에 관 안쪽 반지름(0.80)의 유리 원판(양면)을 덧댐
+        glass = next(i for i, name in enumerate(materials) if name == 'ZF41_Glass')
+        cx, cz, yc, rr = 0.95, 10.76, -1.70, 0.80
+        disc = bmesh.new(); disc.from_mesh(optic.data)
+        for flip in (False, True):
+            ring_v = [disc.verts.new((cx + rr * math.cos(2 * math.pi * k / 48), yc, cz + rr * math.sin(2 * math.pi * k / 48))) for k in range(48)]
+            face = disc.faces.new(ring_v[::-1] if flip else ring_v); face.material_index = glass
+        disc.to_mesh(optic.data); disc.free()
     attach_surfaces(optic.data, scope, materials)
     finish_surfaces(optic.data)
     optic.name = scope + '_Optic'

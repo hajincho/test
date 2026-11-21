@@ -6,6 +6,7 @@ D = 'C:/Users/fromj/Downloads/test/test/abc/FurinaSource/Data'; OUT = D + '/lyra
 KEYS = ['p38', 'p08', 'pp', 'kar98k', 'kar98k_zf39', 'kar98k_zf41', 'g43', 'g43_zf4', 'mp40', 'mp38', 'stg44']
 TAG = sys.argv[-1] if len(sys.argv) > 1 and not sys.argv[-1].endswith('.py') else 'all'
 if TAG == 'smoketest': KEYS = ['kar98k']
+elif TAG == 'zf41': KEYS = ['kar98k_zf41']
 elif TAG == 'v3': KEYS = ['kar98k_zf39', 'kar98k_zf41', 'g43_zf4', 'p38', 'p08', 'pp']
 elif TAG == 'stance': KEYS = ['kar98k', 'g43', 'g43_zf4', 'mp40', 'mp38', 'stg44', 'p38']
 elif TAG != 'all': KEYS = [k for k in KEYS if k in TAG.split('+')]   # 일부만 다시: 태그 'kar98k+kar98k_zf41'(ExecCmds 는 쉼표로 명령을 나눔)
@@ -17,6 +18,8 @@ STEPS = [('hip', 'key', 2.5), ('fire', 'fire', 0.0), ('smoke0', None, 0.0), ('sm
          ('sh', 'sh_on', 0.9), ('sh_fire', 'fire', 0.0), ('sh_off', 'sh_off', 1.2),
          ('ads', 'ads_on', 1.3), ('ads_fire', 'fire', 0.0), ('ads_smoke', None, 0.35), ('ads_off', 'aim_off', 1.4)]
 PISTOL_ONLY = ('sh', 'sh_fire', 'sh_off')
+if TAG == 'zf41':
+    STEPS = [('hip', 'key', 2.5), ('ads', 'ads_on', 1.5), ('ads_off', 'aim_off', 0.8)]; PISTOL_ONLY = ()
 if TAG == 'v3':   # 조준경 화면 속 화면·권총 탄창 재장전·연기 끔 확인(2026-11-21)
     STEPS = [('hip', 'key', 2.5), ('fire', 'fire', 0.0), ('smoke', None, 0.4), ('bolt_wait', None, 1.0), ('ads', 'ads_on', 1.4), ('ads_off', 'aim_off', 1.0),
              ('rl1', 'reload', 0.45), ('rl2', None, 0.3), ('rl3', None, 0.35), ('rl4', None, 0.3), ('rl5', None, 0.3), ('rl_wait', 'wait_reload', 0.6)]

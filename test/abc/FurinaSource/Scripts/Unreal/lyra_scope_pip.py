@@ -15,9 +15,9 @@ import lyra_hist_fx as H
 ROOT = Path(unreal.Paths.project_dir()).resolve(); R = {}
 ASSETS = unreal.EditorAssetLibrary; EDIT = unreal.MaterialEditingLibrary; TOOLS = unreal.AssetToolsHelpers.get_asset_tools(); SYS = ENGINE + 'KismetSystemLibrary:'
 FX = '/Game/Furina/FX'; RT_PATH = {4.0: FX + '/RT_FurinaScope', 1.5: FX + '/RT_FurinaScope15'}   # 배율별 캡처(시야가 고정 속성이라 BP 에서 못 바꿔 둘로 나눔)
-# 접안 렌즈 반지름(cm) / 눈-접안부 거리(cm) = K. ZF39 ·ZF4 는 de_scoped_build.json lens_disc_r, ZF41 은 추정 1.2cm
+# 접안 렌즈 반지름(cm) / 눈-접안부 거리(cm) = K. ZF39 ·ZF4 는 de_scoped_build.json lens_disc_r, ZF41 은 접안부 관 안쪽 0.80cm(유리 원판, fpvm_receiver_interior.py)
 OPTICS = {'ZF39': dict(K=1.638 / 15.0, power=4.0, gap=.026, line=.002, post=.013, seed=1.7),
-          'ZF41': dict(K=1.2 / 30.0, power=1.5, gap=.036, line=.0015, post=.010, seed=5.3),
+          'ZF41': dict(K=0.80 / 30.0, power=1.5, gap=.036, line=.0015, post=.010, seed=5.3),
           'ZF4': dict(K=0.9 / 11.0, power=4.0, gap=.025, line=.0017, post=.011, seed=9.1)}
 FOV = {p: 2 * math.degrees(math.atan(math.tan(math.radians(30)) / p)) for p in (4.0, 1.5)}
 
@@ -89,7 +89,8 @@ def glass_materials(rts):
         path = f'{FX}/M_FPVM_ScopeGlass_{name}'
         m = unreal.load_asset(path) if ASSETS.does_asset_exist(path) else TOOLS.create_asset(f'M_FPVM_ScopeGlass_{name}', FX, unreal.Material, unreal.MaterialFactoryNew())
         EDIT.delete_all_material_expressions(m); m.set_editor_property('shading_model', unreal.MaterialShadingModel.MSM_UNLIT)
-        m.set_editor_property('used_with_skeletal_mesh', True)   # 뷰모델(스켈레탈 메시)에 런타임으로 넣으므로 필요(없으면 기본 격자 재질로 보였음)
+        m.set_editor_property('used_with_skeletal_mesh', True)
+        m.set_editor_property('two_sided', True)   # 렌즈 면 일부가 눈 반대쪽을 향해(원본 ZF41) 한쪽만 그리면 고리처럼 비었음. 화면 좌표라 겹쳐도 같은 그림   # 뷰모델(스켈레탈 메시)에 런타임으로 넣으므로 필요(없으면 기본 격자 재질로 보였음)
         sp = EDIT.create_material_expression(m, unreal.MaterialExpressionScreenPosition, -800, 0)
         ts = EDIT.create_material_expression(m, unreal.MaterialExpressionTextureSample, -550, 0); ts.set_editor_property('texture', rts[o['power']])
         ts.set_editor_property('sampler_type', unreal.MaterialSamplerType.SAMPLERTYPE_LINEAR_COLOR)
