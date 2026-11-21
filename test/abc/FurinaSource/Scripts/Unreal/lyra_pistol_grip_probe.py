@@ -12,7 +12,7 @@ LES = lambda: unreal.get_editor_subsystem(unreal.LevelEditorSubsystem)
 def comp(p, name, cls=unreal.SceneComponent):
     for c in p.get_components_by_class(cls):
         if c.get_name() == name: return c
-BONES = ['Right-wrist', 'Left-wrist', 'Thumb0_R', 'Thumb1_R', 'Thumb2_R', 'Thumb3_R', 'IndexFinger1_R', 'IndexFinger3_R', 'MiddleFinger1_R', 'MiddleFinger3_R', 'RingFinger1_R', 'RingFinger3_R', 'LittleFinger1_R', 'LittleFinger3_R',
+BONES = ['IndexFinger2_R', 'MiddleFinger2_R', 'RingFinger2_R', 'LittleFinger2_R', 'IndexFinger2_L', 'MiddleFinger2_L', 'RingFinger2_L', 'LittleFinger2_L', 'Right-wrist', 'Left-wrist', 'Thumb0_R', 'Thumb1_R', 'Thumb2_R', 'Thumb3_R', 'IndexFinger1_R', 'IndexFinger3_R', 'MiddleFinger1_R', 'MiddleFinger3_R', 'RingFinger1_R', 'RingFinger3_R', 'LittleFinger1_R', 'LittleFinger3_R',
          'Thumb0_L', 'Thumb1_L', 'Thumb2_L', 'Thumb3_L', 'IndexFinger1_L', 'IndexFinger3_L', 'MiddleFinger1_L', 'MiddleFinger3_L', 'RingFinger1_L', 'RingFinger3_L', 'LittleFinger1_L', 'LittleFinger3_L']
 def shot(w, name): unreal.SystemLibrary.execute_console_command(w, 'HighResShot 2 filename="%s/pistol_grip_%s_%s.png"' % (D, TAG, name))
 def tick(dt):
@@ -55,6 +55,17 @@ def tick(dt):
             R['rifle_world'] = str(rifle.get_world_transform())
             ap = rifle.get_attach_parent(); R['rifle_attach'] = {'parent': ap.get_name() if ap else None, 'socket': str(rifle.get_attach_socket_name()), 'rel_loc': str(rifle.relative_location), 'rel_rot': str(rifle.relative_rotation)}
             R['hand_world'] = str(mesh.get_socket_transform('Right-wrist', unreal.RelativeTransformSpace.RTS_WORLD))
+            def qv(q): return [q.x, q.y, q.z, q.w]
+            R['rifle_q'] = qv(rifle.get_world_transform().rotation); R['rifle_loc'] = [rifle.get_world_transform().translation.x, rifle.get_world_transform().translation.y, rifle.get_world_transform().translation.z]
+            R['lw_q'] = qv(mesh.get_socket_transform('Left-wrist', unreal.RelativeTransformSpace.RTS_WORLD).rotation); R['rw_q'] = qv(mesh.get_socket_transform('Right-wrist', unreal.RelativeTransformSpace.RTS_WORLD).rotation)
+            R['bone_q'] = {}; R['bone_lq'] = {}
+            for sd in ('R', 'L'):
+                for bn in ['Thumb%d_%s' % (i, sd) for i in range(3)] + ['%sFinger%d_%s' % (f, i, sd) for f in ('Index', 'Middle', 'Ring', 'Little') for i in (1, 2, 3)] + ['%s-wrist' % ('Right' if sd == 'R' else 'Left')]:
+                    tw = mesh.get_socket_transform(bn, unreal.RelativeTransformSpace.RTS_WORLD); tl = mesh.get_socket_transform(bn, unreal.RelativeTransformSpace.RTS_PARENT_BONE_SPACE)
+                    R['bone_q'][bn] = qv(tw.rotation); R['bone_lq'][bn] = qv(tl.rotation)
+            R['bone_world'] = {}
+            for bn in ('Left-wrist', 'IndexFinger1_L', 'MiddleFinger1_L', 'LittleFinger1_L', 'MiddleFinger3_L', 'Thumb1_L'):
+                v = mesh.get_socket_location(bn); R['bone_world'][bn] = [v.x, v.y, v.z]
             save(); S['st'] = 'tp'; S['t'] = now + 0.5; return
         if st == 'tp' and now >= S['t']:
             p.get_editor_property('FurinaFPWanted').set_active(False); S['st'] = 'tp_look'; S['t'] = now + 2; return

@@ -883,3 +883,295 @@ Control Rig이 들어 올리는 회전은 컴포넌트 +X축 기준 음수 각�
 - 원인: `FurinaRifle` 은 `FurinaMesh` 의 `Right-wrist` 소켓에 붙어 손-총 관계가 고정이다. P220 프레임 경계가 소총 컴포넌트 기준 Y -8.5~10.8 인데 오른손 손가락 끝이 Y -7~-13 이어서 손잡이 뒤 3~5 cm 에 떠 있었다(FBX 의 손 위치는 FBX 프레임 기준이라 P220 모델과 어긋남). CR 로 손만 옮기면 총도 같이 따라와서 소용없다.
 - 수정(`Scripts/Unreal/lyra_pistol_fp_offset_bp.py`, ThirdPersonCharacter_BP): FurinaMagUpdate 의 권총 분기에서 `FurinaPistolFrame` 상대 위치 = VLerp((0,-4.27,0.63), (0,-13.77,0.63), IsActive(FurinaFPWanted)) -> 1인칭일 때만 9.5 cm 손 쪽으로. 3인칭은 그대로. 측정 `lyra_pistol_grip_probe_g11.json`: 프레임 Y -18.0~1.3.
 - 거리: 권총 눈 기준 오프셋 (X+1.5, Y+18, Z+3) (`lyra_cr_pistol_gunoff.py`). 손 CR 보정(`lyra_cr_pistol_rhand.py`)은 dY=0 으로 둠(총이 손에 붙어 있어 효과 없음).
+
+## 소총 재장전 시간 (2026-11-19)
+- 전술 재장전(잔탄>0, 손잡이 안 당김) 3.3초: 몽타주 속도 3.133/3.3 = 0.9494, 타이머 P2_SelF_5ce19d38 소총값 3.3.
+- 빈 탄창 재장전(잔탄 0, 손잡이 당김) 3.0초: 몽타주(FBT_EmptyMontage) 속도 2.0/3.0 = 0.6667, 타이머 FBT_TimeSel.A = 3.0.
+- 스크립트 `Scripts/Unreal/lyra_rifle_reload_times.py [전술초 빈탄창초]`(새 에디터에서 한 번). 권총(2.3초)은 그대로. HUD 점은 실제 시간 기준이라 자동 반영.
+- PIE 측정(`Data/lyra_empty_reload_probe_t33.json`): 전술 3.309초(탄창 17->20), 빈 탄창 약 3.06초(0->20), 전술 재장전 중 노리쇠 움직임 없음.
+
+## 재장전 손가락/엄지 수정 (2026-11-19)
+- 측정: `Scripts/Unreal/lyra_reload_finger_probe.py` (재장전 중 왼손 손가락/엄지의 부모 기준 로컬 회전을 매 틱 기록) -> `Data/lyra_reload_finger_probe_f1.json`(수정 전), `_d1.json`(수정 후).
+- 엄지 꿈틀: 빈 탄창 재장전 끝(약 2.9~3.4초)에 엄지 2마디가 최대 46도 움직였다가 돌아왔다. 엄지 고정(ThSet0-2)의 가중치가 ReloadSm(재장전 곡선 0 이 되면 풀림)이라 몽타주 블렌드 아웃 포즈로 풀렸기 때문. -> `ThW = Max(ReloadSm, RlFpW x (1 - PistW))`: 1인칭 소총은 엄지를 항상 고정. 수정 후 측정에서 엄지 편차 0.0/1.5/0.0 도(재장전 전 구간).
+- 손잡이 당기러 갈 때 손가락 튐: HandleFp 곡선이 0.12초에 0->1 로 올라가 손가락이 0.06초에 28~32도 튐 -> `RlHSm`(AccumulateLerp, Blend 6)로 부드럽게 (`lyra_cr_reload_finger_fix.py [Blend]`). Blend 10 에서 측정 18~21도/0.06초로 감소, 현재 6.
+- 미해결/관찰: 손잡이 접근 중 손이 카메라 바로 앞을 지나 흰 장갑 등이 화면을 크게 가리는 구간이 있음(손 위치 자체). 전술 재장전 끝에서 손가락이 0.15초 사이 약 85도 감기는 것은 손이 핸드가드로 돌아오는 자연스러운 감기(ReloadSm 감쇠).
+- 진단용 디버그 곡선 연결(`lyra_cr_dbg_wire.py on|off`)은 off 로 원복함.
+
+### 소총 전술 재장전 2.5초로 단축 (2026-11-19)
+- 전술 재장전(잔탄>0): 3.3초 -> 2.5초 (`lyra_rifle_reload_times.py 2.5 3.0`: 몽타주 속도 3.133/2.5 = 1.2532, 타이머 2.5). 빈 탄창 재장전은 3.0초 그대로, 권총(2.3초) 그대로.
+- PIE 로 다시 측정하지는 않음(값만 변경, 컴파일/저장 확인).
+
+### 1인칭 권총 왼손 아귀 보정 (2026-11-19)
+- 진단: Armpist.fbx 의 총 크기는 P220(프레임 길이 19.8 vs 19.3, 높이 14.3 vs 13.7)과 거의 같고 오른손은 이미 프레임에 맞았지만, 왼손이 프레임 아래로 1.5~6 cm 떠 있었다(`Scripts/Blender/pistol_fbx_bounds.py` -> `Data/pistol_fbx_bounds.json`, 손 뼈 위치를 총 프레임 경계와 비교; `Data/plot_fit.py <태그>` 로 측면/위/뒤 도식 `pistol_fit_plot_<태그>.png`).
+- 수정: 왼손 지지 목표(PistBAdd.A) (-0.1,-11.5,-12.8) -> (3.0,-8.7,-8.3) (`lyra_cr_pistol_reload.py 3.0 -8.7 -8.3`). 측정 손목 (3.0,-16.0,-8.3): 프레임 왼쪽 옆, 손잡이 아래쪽 모서리 높이. 손가락 끝이 손잡이 앞(Y -8~-10)을 가로질러 오른손 손가락 앞을 감싼다(`lyra_pistol_grip_probe_g14.json`).
+- 확인 못 한 것: 손 회전/손가락 굽힘 모양 세부는 도식과 1인칭 캡처로만 봤다(근접 카메라 촬영은 FP 카메라가 팔 메시의 부모라 불가).
+
+### 1인칭 권총 손가락 관통 수정 (2026-11-19)
+- 증상: 손이 총 손잡이를 뚫음(사용자 캡처). 원인: 오른손 손가락 자세는 소총 권총손잡이 감싸기 자세로 고정이고, P220 손잡이는 더 얇고 방향이 달라 손가락 관절 점이 메시 안쪽으로 들어갔다.
+- 측정: P220 메시를 FBX 로 내보내(`lyra_export_p220_mesh.py`) Blender 에서 손 뼈를 따라 점을 뿌려 부호 있는 거리 계산(`Scripts/Blender/pistol_hand_penetration*.py`). 관통 점수 7.7(가운데손가락 1.07 cm 안쪽) -> 0.
+- 해법: 총을 손에 대해 이동 (1.0,-6.5,0.5) cm + 회전(X -3°, Y(총구축) 30°). 총의 보이는 위치/각도는 그대로 두려고 손(=소총 컴포넌트)을 반대로 굴림:
+  CR `PistQw/GRotP`(GRotR x Q) 를 오른손 위치/회전(RRHOff, RRHRot)에만 적용, 손목 위치 보정 `PistRV.B`(`lyra_cr_pistol_roll.py`, 상수 `Data/pistol_roll_constants.json`)
+  BP: FurinaPistolFrame 상대 위치/회전 = (3.35,-20.03,0.59) / (P -2.6, Y 91.5, R -30.0) 을 1인칭에서만 (`lyra_pistol_fp_roll_bp.py`).  3인칭은 (0,-4.27,0.63)/(0,90,0) 그대로.
+- 검증(PIE `lyra_pistol_grip_probe_g15.json`): 소총 컴포넌트 회전이 설계한 Q 와 일치(30.15도), 프레임 경계가 예측과 0.5 cm 이내. 왼손은 0.45 -> 0 으로 미세 조정(왼손 목표 (2.82,-8.66,-8.98)).
+- 미확인: 인게임 육안 확인은 못 함(근접 외부 카메라 불가). 재장전/발사 중 관통, 걷기/앉기는 재측정 안 함.
+
+### 1인칭 권총 파지 직접 제작 (2026-11-19, "파지는 직접 만들어봐")
+- 이전 방식(소총용 애니메이션 손가락 자세에 총만 맞춤)은 실제 스킨 두께(손가락 반경 0.5~0.9 cm, `furina_hand_radius.py`)를 쓰면 어떤 위치에서도 관통이 남았다(`pistol_hand_penetration_roll2.py`).
+- 해법: 손가락 굽힘을 직접 만든다. `Scripts/Blender/pistol_finger_author.py`: 손가락 사슬(MCP/PIP/DIP/끝)을 평면 FK 로 마디별 증분(Δ MCP, Δ PIP, Δ DIP) 굽혀 P220 메시(관통: 근위 0.8/중위 0.65/말단 0.5 cm, 접촉: DIP/끝이 표면+0.25 이내)로 점수화, 격자 탐색.
+  굽힘 축은 손가락 법선(소총 컴포넌트 좌표)을 월드 -> 뼈 로컬로 변환(월드 변환 빠뜨리면 효과가 작아짐 - 고침). 결과 `Data/pistol_finger_author_g17.json`.
+- CR(`lyra_cr_pistol_fingers.py g17 [R|L|RL]`): 뼈별 `PgG_/PgQ_/PgM_/PgS_` 노드 = 로컬 회전 x FromAxisAndAngle(축, Δ), 가중치 PistW. 오른손 10개 + 왼손 8개 뼈(Δ=0 인 뼈 제외). 노드 하나당 추가가 매우 느려(1~2분/뼈) 손 단위로 나눠 실행.
+- 검증(`Scripts/Blender/pistol_finger_check.py g19`, PIE `lyra_pistol_grip_probe_g19.json`): 관통 오른손/왼손 모두 0, 접촉 간격 오른손 0, 왼손 0.3~0.4 cm.  수정 전(g17) 가운데/약지 관통 1.3/1.6 cm.
+- 한계: 손가락 사이 벌어짐(외전)과 손바닥 스킨은 모델링하지 않음. 육안 최종 확인은 사용자 화면에서.
+
+## 3인칭 등 매기 소총 / 허리 홀스터 권총 (2026-11-19, 1단계)
+- 추가 컴포넌트(ThirdPersonCharacter_BP): `FurinaSlingM4`(SkeletalMesh SK_M4A1, 소켓 Spine), `FurinaHolsterFrame`(SM_P220_Frame, 소켓 Hips) + 자식 `FurinaHolsterSlide`. (`Scripts/Unreal/lyra_gear_comps.py`)
+- 위치: PIE 뼈 월드 변환(`lyra_bone_probe.py` -> `Data/lyra_bone_probe_b1.json`)으로 소켓 상대 위치/회전을 계산(`Data/gear_place_v1.json`, 소총: 등에 대각선 총구 위·오른쪽, 조준경 뒤쪽 / 권총: 오른쪽 허리 총구 아래, 가늠자 앞쪽).
+- 로직(`lyra_gear_graph.py`): FurinaMagUpdate 타이머 맨 앞에서 1회 AttachToComponent(KeepRelative) 후 매 틱 가시성 = 소총 등 매기: 권총 장착 AND 1인칭 아님 / 홀스터 권총: 소총 장착 AND 1인칭 아님.
+- 확인(`lyra_tp_gear_probe.py t1`, `Data/tpgear_t1_*`): 소켓 부착 정상(Spine/Hips), 소총 상태에서 오른쪽 허리에 권총, 권총 상태에서 등에 소총이 대각선으로 보임. 세부 위치(허리 높이, 각도)는 육안으로 더 다듬을 여지 있음. 1인칭 가시성은 로직상 숨김이지만 이번에는 따로 캡처 확인 안 함.
+- 아직 안 한 것(다음 단계 계획): (a) 교체 모션 - 스왑 위상 곡선(컴포넌트 스케일로 ABP 에 전달)과 TP CR 에서 오른손 경로(홀스터 <-> 어깨 뒤 <-> 준비 자세), 상체(Spine/Chest/클래비클) 회전, 소총 등 이동/권총 손 이동 타이밍, 교체 시간 연장 (b) 3인칭 권총 달리기(소총 달리기 참고) + 권총 준비 자세의 상체 관절 적극 사용 (c) 뽑기/집어넣기 모션 세부.
+
+## 1인칭 권총 손-총 거리 정밀 보정 + 손가락 꿈틀거림 제거 (2026-11-19)
+### 옆면 캡처 도구 (FP 카메라가 팔의 부모라 외부 카메라가 안 되던 문제 해결)
+- `Scripts/Unreal/lyra_pistol_side_probe.py [태그]`: 레벨의 기존 액터(AtmosphericFog)를 `set_mobility(MOVABLE)` 후 `set_view_target_with_blend` 로 임시 카메라로 쓴다(PIE 에서 CameraActor 스폰 API 는 없음). 매 틱 총 프레임 중심을 따라가며 월드 기준 왼쪽/오른쪽/위/뒤 에서 촬영(총이 시선 방향에 따라 움직이므로 컨트롤 yaw 고정). 
+  캡처 `Data/pside_<태그><세트>_<뷰>.png`, 기록 `Data/lyra_pistol_side_probe_<태그>.json`(카메라/뼈 월드 좌표). `Data/side_sets_<태그>.json` 에 `[{"tag":"a","vars":{BP변수:값},"views":["left","right"]}, ...]` 를 두면 한 번의 PIE 에서 후보를 연속 비교.
+- `Data/side_overlay.py <태그>`: 기록된 카메라(FOV 90, 롤 0)로 뼈 위치를 투영해 이미지 위에 표시(빨강 오른손, 초록 왼손, 노랑 프레임 중심) -> `_ov.png`.  (UE 는 왼손 좌표계: 오른쪽 벡터 = cross(up, fwd))
+### 손-총 거리
+- 옆면 캡처 결과(`pside_s6_*`): 이전 수치 모델(Blender 부호 거리)과 달리 실제 화면에서는 권총이 양손보다 약 5~6 cm 위, 4~5 cm 앞쪽에 떠 있었고 손은 총 아래에서 펼쳐져 있었다 (관통 0 이라는 수치가 실제 스킨과 어긋났음).
+- BP 변수화: `Scripts/Unreal/lyra_pistol_fp_vars_bp.py` (FBP_VLerp/FBP_RLerp 의 FP 값 -> 실수 변수 FurinaPFLocX/Y/Z, FurinaPFRotP/Y/R) + `lyra_bp_vars_editable.py`(인스턴스 편집 가능) -> PIE 파이썬에서 `set_editor_property` 로 런타임 조절 가능.
+- 후보 비교(`pside_s11*`): a (소총 컴포넌트 기준 FP 프레임 위치 (0.99,-12.94,-4.35); 월드 기준 이전 위치에서 뒤 1.9 cm, 아래 3.9 cm) 가 가장 좋음 - 오른손이 그립 뒷면~옆면을 감싸고 검지가 방아쇠울에 닿으며 왼손이 그립 왼쪽 아래를 받친다. 이전 값 (3.345,-20.027,0.589) 대비 총이 손 쪽으로 이동. 회전은 그대로 (P -2.598, Y 91.501, R -30.034).
+### 손가락 꿈틀거림
+- 측정: `Scripts/Unreal/lyra_pistol_twitch_probe.py [태그]` (FP 권총에서 대기/시선 이동/걷기/빠른 걷기/점프/발사/재장전 구간별 손가락 32개 뼈의 부모 기준 로컬 회전 변화량·속도, 대기 자세 상수 `consts`).
+  수정 전(w5): 재장전 중 최대 82도/900도초(오른손 검지2 등), 대기 중에도 왼손 1.7도 떨림.
+- 원인: 손가락 증분(PgS_*)이 애니메이션 포즈 위에 얹히는 구조라 재장전 몽타주 손가락 동작/상태 전환 때 그대로 움직였다.
+- 수정: `Scripts/Unreal/lyra_cr_pistol_lock.py <태그> [R|L|RL]`: 뼈마다 `PgK_<뼈>` = SetRotation(Local, 상수 쿼터니언, Weight=PistW, 자식 전파) 32개를 SetHairFlow 앞에 추가 (권총 모드에서는 대기 자세로 완전 고정; 소총 모드는 PistW=0 이라 변화 없음).
+  수정 후(w6/w8/w9): 대기/걷기/점프/재장전 변화 0.02도 이내, 발사 0.4도. 남은 것: 권총 전환 직후 0.07초 동안 소총 자세 -> 권총 자세 스냅(교체 중이라 눈에 안 띔).
+- 참고: 측정에서 Thumb3_R/L 이 40도 움직인 것은 스켈레톤에 없는 이름(부모 None)이라 메시 컴포넌트 회전을 읽은 착시였음. 실험 중 CR 계층에 Thumb3_R/L 뼈(`lyra_cr_add_bone.py`)와 PgK_Thumb3_* 노드를 추가했으나 불필요(무해). 
+- 한계: 재장전 중 왼손 손가락도 대기 자세로 고정되어 탄창을 잡는 순간 손가락 변화가 없음(꿈틀거림 제거 우선).
+- 최종 확인(`pside_s12_*`, `pside_before_after.png`: 왼쪽 열 수정 전, 오른쪽 열 수정 후 / 위 오른쪽 뷰, 아래 왼쪽 뷰): BP 기본값 FurinaPFLocX/Y/Z = (0.99,-12.94,-4.35) 로 확정(저장됨). 양손이 그립을 쥔 모습 확인.
+
+## 오른손 권총 파지 꽉 쥐기 (2026-11-19, 백그라운드 작업)
+- 실측 분석(`Scripts/Blender/pistol_contact_real.py`, UE 변환을 그대로 사용): 수정 전 오른손은 중지/약지/새끼가 메시 표면 0~0.3 cm 로 닿아 있었지만 **엄지가 프레임에서 2.2 cm 떠서 위로 뻗은 상태**, 검지는 펴짐.
+- 최적화(`Scripts/Blender/pistol_grip_firm.py`: 손가락 Δ 격자 + 총 미세 이동 탐색; 목표=PIP/DIP/끝이 표면+0.25 이내, 엄지 외전 포함): 총 이동은 0(현 위치가 최적), 오른손 Δ = 검지 MCP -15, 중지 (55,0,55), 약지 (20,-15,40), 새끼 (10,0,0), 엄지 (외전30,15,30,0). 결과 `Data/pistol_grip_firm_s17.json`(뼈별 dq).
+- 적용: `Scripts/Unreal/lyra_cr_pistol_lock_apply.py` (잠금 상수 x dq, PgK_<뼈>.Value 만 갱신; 헤드리스 27초) -> 새 상수 `Data/pistol_consts_v2.json`.
+- 검증(`pside_s18_*`, 접촉 재측정): 중지/약지/새끼 관절 중심-표면 거리 0.34~0.83 cm(반경 0.5~0.65 = 접촉), 엄지 2.25 -> 0.76~1.06 cm(프레임 옆면에 누움), 검지 약간 펴짐(방아쇠울 옆). 비교 `Data/pside_grip_s17_s18.png`.
+### 백그라운드 실행 방식 (PC 입력 안 건드림)
+- CR/BP 수정: `UnrealEditor-Cmd.exe <uproject> -run=pythonscript -script="<py 경로(공백 없음) 인자...>" -unattended -nopause -nosplash -NullRHI` (약 20~30초).
+- PIE 캡처 프로브: `Scripts/run_ue_probe.ps1 -ScriptPath <py> -Tag <태그> -Done <json> -Timeout 480` 이 에디터를 `-ExecCmds="py <py> <태그>"` 로 띄우고 창을 화면 밖(x=6000)으로 옮긴 뒤 JSON 에 "done": true 가 되면 종료 (약 80초). 주의: -ExecCmds 안에 따옴표를 넣으면 명령이 잘림, .ps1 에 한글 주석을 넣으면 PowerShell 5.1 이 깨짐.
+
+## 1인칭 전용 팔: 총과 한몸으로 보이기/숨기기 (2026-11-20)
+3인칭 몸(FurinaMesh)의 팔을 1인칭에서 IK 로 총에 붙여 쓰던 방식 대신, 1인칭에서만 보이는 **팔 전용 스태틱 메시를 총 컴포넌트의 자식**으로 붙였다. 손과 총의 관계가 메시 안에 구워져 있어 어떤 상태(조준/견착/달리기/반동)에서도 손-총 오차가 0 이다.
+### 만드는 순서
+1. 자세 기록(PIE, 백그라운드): `Scripts/Unreal/lyra_fp_arms_pose_probe.py <태그>` (`p` 로 시작하는 태그는 권총으로 바꾼 뒤) -> `Data/lyra_fp_arms_pose_<태그>.json` (모든 뼈의 컴포넌트/월드 변환 + 참조 포즈, 소총/권총 프레임/카메라 변환, hip/ads/shoulder/crouch).
+2. Blender 굽기:
+   - 소총 `Scripts/Blender/fp_arms_bake.py -- <포즈> 4 0.5 <카메라 포즈> <소매접기> <출력>` -> `FBX/FPArms/SM_FurinaFPArm<L|R>_<출력>.fbx` (소총 컴포넌트 로컬 좌표).
+   - 권총 `Scripts/Blender/fp_pistol_arms_bake.py -- <포즈 p..> <출력> 4 -0.9 "R=sem,L=sem" 0 1` -> `SM_FurinaFPPistArm<L|R>_<출력>.fbx` (FurinaPistolFrame 로컬 좌표).
+   - UE 컴포넌트 공간 <-> Blender 아마추어 공간 대응은 참조 포즈 뼈 위치로 맞춘다(결과 X/−Y/Z 반사, 오차 0.0001 cm). 팔 = `Left/Right arm` 이하 뼈 가중치 합 >= 0.5 정점(한 팔 약 2000 정점, 머티리얼 SkinHair/Outfit 2개).
+3. 가져오기(헤드리스): `Scripts/Unreal/lyra_fp_arms_import.py <출력> [rifle|pistol]` -> `/Game/Furina/FPArms/SM_FurinaFPArmL/R`, `SM_FurinaFPPistArmL/R` (SK_Furina 머티리얼 슬롯 이름으로 연결, 경계 오차 0.000004 cm 이하 확인).
+4. BP(헤드리스, 처음 한 번): `lyra_fp_arms_bp.py` -> `lyra_fp_arms_bp_fix.py` -> `lyra_fp_arms_bp_pistol.py`.
+   - 컴포넌트: `FurinaFPArmL/R`(부모 FurinaRifle), `FurinaFPPistArmL/R`(부모 FurinaPistolFrame), 상대 변환 0.
+   - `FurinaMagUpdate`(0.033초) 맨 앞 `FPA_*`/`FPP_*`: 1인칭(FPCamera 활성)에서 소총이면 소총 팔, 권총이면 권총 팔을 보이고, 본체의 `Right-arm`/`Left-arm` 뼈를 숨긴다(상태가 바뀔 때만 Hide/UnHide). 3인칭이면 전용 팔 숨김 + 본체 팔 보임.
+   - 재장전(`FurinaReloading`) 중에는 왼손이 탄창을 가지러 가야 하므로 전용 왼팔을 숨기고 본체 왼팔을 보인다. 끝난 뒤 `FurinaFPArmLHold`(0.8초 감소) 또는 본체 왼손목이 구운 위치 0.5 cm 이내가 되면 다시 전용 왼팔.
+   - 뼈 숨김은 그 뼈의 애니메이션 계산을 빼 버리지만(`ExcludeHiddenBones`), FurinaMesh 가 `AlwaysTickPoseAndRefreshBones` 라서 오른손목 소켓(총이 붙은 곳)은 계속 계산된다(엔진 소스 확인).
+### 겪은 문제
+- `IsBoneHiddenByName` 은 실행 핀이 있는 함수라 실행선에 넣지 않으면 항상 거짓 -> 숨김이 풀리지 않았다(수정).
+- UE5.8 에서 `Subtract/Less/LessEqual_DoubleDouble` 을 파이썬으로 추가하면 승격 연산자가 되어 `set_pin_value` 상수가 비어 있었다(감소량 0, 비교값 0) -> `FInterpTo_Constant`, `InRange_FloatFloat` 로 교체.
+- 정조준에서 왼쪽 아래에 황갈색 판: 왼소매 끝 날개(`Sleeve_2/3_L`)의 안감이 보인 것(잘린 끝이 아님: 잘린 끝 정점 23개는 어느 상태에서도 화면 밖). 1인칭 팔만 소매 날개를 팔꿈치 쪽으로 90% 접어서(`소매접기 -0.9`) 해결. Blender 렌더(`fp_arms_render.py`, UE 화면과 일치)로 확인.
+- **P220 FBX(`Data/p220_export`)에는 충돌용 볼록 껍질 `UCX_*` 가 같이 들어 있다.** 이전의 권총 파지 스크립트들(`pistol_contact_real.py`, `pistol_grip_firm.py`, `pistol_grip_final.py` 등)은 이것까지 합쳐서 거리를 쟀기 때문에 손잡이 앞/방아쇠울 아래가 꽉 찬 상자로 계산됐다(손가락이 손잡이를 감쌀 수 없었던 원인). 새 스크립트는 `UCX_` 를 뺀다.
+- Armpist.fbx -> P220 회전 대응(경계 상자 맞춤)은 앞/뒤를 구분하지 못해 손이 뒤집혀(손가락이 뒤로 감김) 놓였다. 또 그 애니메이션의 왼손은 손잡이 바닥을 받치는 자세였다. -> 권총 손은 **P220 손잡이 실측 단면**(광선 투사 `p220_landmarks.py`: 뒷면 x=-4.25+(z+8)*0.323, 앞면 x=1.72+(z+8)*0.227, 폭 y -1.03..1.47, 방아쇠 x≈5.2 z≈-1.2)으로 목표를 잡는다.
+### 권총 파지 계산 (`fp_pistol_arms_bake.py`)
+- 목표(프레임 로컬): 오른손 MCP 줄 = 손잡이 오른쪽 면 앞쪽 62%, 손목 = 손잡이 뒤 4 cm, 엄지 = 왼쪽 면 위, 검지 끝 = 방아쇠 / 왼손 MCP 줄 = 손잡이 앞-왼쪽(오른손가락 바깥), 손바닥 = 왼쪽 면.
+- 가중 Kabsch 로 손 배치 -> 팔 2본 IK -> 손 6자유도 국소 탐색(±10°, ±1 cm; 실제 피부 정점이 관통 없이 닿게 + 설계 위치 유지 + 검지-방아쇠 거리) -> 손가락 관절별 굽힘 격자(검지/엄지는 옆 벌림 포함). 거리는 실제 피부 정점(주 뼈에 강체 근사)과 P220 표면(왼손은 오른손 피부 포함)의 부호 거리.
+- 결과(q10, 피부 정점-P220): 오른손 중지/약지/새끼 세 마디와 엄지가 표면 0~0.1 cm 접촉, 검지 끝 방아쇠(설계점과 0.2 cm), 관통은 손바닥 3정점 최대 0.47 cm. 왼손은 주먹으로 왼쪽 면과 오른손가락을 감싼다(엄지는 앞으로 뻗지 않고 접힘). 렌더 `Data/fpp_q10_*.png`(`fp_pistol_render.py`, 외부 시점).
+### UE 확인 (백그라운드 PIE, `lyra_fp_arms_probe.py <태그>`; `p` 태그 = 권총)
+- 소총(`fpa_v2_*`): 허리/내려보기/올려보기/정조준/견착/걷기/발사에서 전용 팔 L/R 보임, 본체 팔 숨김. 재장전 시작 0.015초 뒤 전용 왼팔 -> 본체 왼팔, 끝나고 0.8초 뒤 복귀. 권총 전환·3인칭에서 전용 팔 숨김 + 본체 팔 복원. 정조준 소매 안감 수정 후 `SM_FurinaFPArm*` 는 `n9` 굽기.
+- 권총(`fpa_pv1_*`, 굽기 `q10`): 1인칭 권총에서 권총 전용 팔만 보이고(소총 팔 숨김), 재장전 중 왼팔 교체, 3인칭 복원. 바깥 시점(`fpa_pv1_grip_cmp.jpg`): 오른손이 손잡이를 높게 감싸고 검지가 방아쇠에, 왼손 주먹이 왼쪽 면과 오른손가락 앞을 감싼다.
+### 남은 것 / 한계
+- 재장전이 끝나고 본체 왼손 -> 전용 왼손으로 바뀔 때 위치가 다르면 한 번 튄다(소총: 본체 왼손이 조준 피치에 따라 0.3~5.8 cm 덜 닿아서, 끝날 때 약 2.5 cm). 권총은 본체 왼손 지지 위치(CR `PistBAdd`)와 새 주먹 위치가 달라 더 클 수 있다(아직 재지 않음).
+- 권총 왼손 엄지는 앞으로 뻗지 않고 접힘. 손바닥 피부가 총에 최대 0.47(오른손)/0.59(왼손) cm 들어가는 정점이 2~3개 있다.
+- 전용 팔은 고정 자세라 손가락이 움직이지 않는다(발사 시 방아쇠 손가락 움직임 없음). 본체 팔의 그림자는 1인칭에서 전용 팔 그림자로 바뀐다.
+
+## 개발자용 무기 선택창 (Tab, 2026-11-21)
+- **Tab** 으로 열고, 열린 상태에서 **Tab / Esc** 로 닫는다. 열려 있는 동안 마우스 커서가 보이고 입력은 UI 전용(클릭해도 총이 안 나감, 시점 안 돎).
+- 위젯 `/Game/Furina/UI/WBP_FurinaWeaponMenu`(버튼+텍스트만): 1번 무기(주무기) 표 = 행 병과 7(장교/보병/돌격병/대전차병/중화기병/저격수/기갑병) x 열 국가 6(독일/일본/이탈리아/미국/소련/영국). 버튼 이름 `Btn_<병과번호>_<국가번호>`(0부터, 예 보병-미국 M1 Garand = `Btn_1_3`), 글자 `Txt_<병과>_<국가>`. **지금은 무기가 없어서 42개 모두 비활성(회색)**. 2번 무기(근접: 삽/칼)는 '비어 있음' 텍스트만.
+- 무기를 넣을 때: 해당 `Btn_c_n` 을 활성화하고 OnClicked 에 장착 로직 연결, `Current` 텍스트 갱신.
+- 만든 스크립트(헤드리스): `lyra_weapon_menu_widget.py`(위젯 생성. 새 위젯 BP 는 파이썬으로 루트 패널을 지정할 수 없어서 그래프가 비어 있는 번들 위젯 `GrindRailGuideWidgetBP/Guide_Widget_WBP` 를 복제해 루트 CanvasPanel 내용을 교체), `lyra_weapon_menu_widget_logic.py`(위젯 `CloseMenu` 이벤트 + `OnKeyDown` 재정의, 포커스 가능), `lyra_weapon_menu_pawn.py`(폰: 기존 Tab 키 노드 -> 커스텀 이벤트 `FurinaWeaponMenuToggle` 과 같은 경로, 변수 `FurinaWeaponMenu`).
+- **Tab 은 원래 마우스 상하 반전 토글(`InvertLookUp?`, FlipFlop)** 이었다. 그 연결을 끊었으므로 지금은 반전 토글 키가 없다(노드는 그래프에 남아 있음).
+- C++ 판(`FurinaSource/CppDraft/FurinaWeaponMenuComponent.*`, Slate)도 써 두었지만 이 PC 에 Windows SDK 가 없어 빌드할 수 없어서 쓰지 않는다.
+- 확인(`lyra_weapon_menu_probe.py m1`, `Data/wmenu_m1_*.png`): 열기 -> 위젯 닫기 -> 열기 -> 토글 닫기 모두 화면 추가/제거와 커서 표시가 맞게 바뀜. 한글 표시 정상. 실제 키보드 Tab/Esc 누름은 자동 확인하지 못했다(같은 이벤트 경로를 직접 호출해 확인).
+### 무기 선택창 국가별 탭으로 변경 + 크기 확대 (2026-11-21)
+- 구성: 위쪽 국가 탭 6개(순서: 제3제국, 대일본제국, 이탈리아제국, 미국, 소비에트연방, 영국) -> 선택한 국가의 표(병과 7행 x 1~3순위). 별표(★)와 `†`(대일본제국 저격수 3순위, 이탈리아제국 저격수 1~3순위)는 뺐다(`lyra_weapon_menu_nodagger.py`, 확인 `Data/wmenu_m4_snipers.jpg`). `SMLE No.1 Mk III*` 의 `*` 는 무기 이름의 일부라 둠.
+- 국가 전환: 탭 클릭 또는 숫자 1~6. 닫기: Tab / Esc. 글씨 15~26pt(제목 26, 탭 19, 병과 18, 버튼 17), 버튼 290x44, 패널 약 1.1천 x 650 px(1080p 기준).
+- 위젯 이름: `Nation_<국가>`(표, 처음엔 0만 보임), `Tab_<국가>`, `TabRow`, 버튼 `Btn_<국가>_<병과>_<순위>`(0부터; 예 미국 보병 1순위 M1 Garand = `Btn_3_1_0`), 글자 `Txt_<...>`. 아직 무기가 없어 126개 모두 비활성.
+- 스크립트: `lyra_weapon_menu_widget2.py`(같은 자산에서 내용만 교체 -> 폰 참조 유지), `lyra_weapon_menu_logic2.py`(변수 `NationIndex`, 이벤트 `ApplyNation`, `OnKeyDown` 1~6/Tab/Esc, `OnMouseButtonDown` 탭 클릭 = TabRow 안 가로 위치 6등분).
+  - 위젯 변수 지정(`bIsVariable`)은 파이썬 속성으로 안 열려 있어서 `SystemLibrary` 기본 객체의 `call_method('SetBoolPropertyByName', ...)` 로 설정. `GetWidgetFromName` 은 블루프린트에서 쓸 수 없음. `SlateBlueprintLibrary` 는 `/Script/UMG` 소속.
+- 확인(`lyra_weapon_menu_probe.py m3`, `Data/wmenu_m3_*.png`): 열기, 미국/영국 전환(표 교체 + 탭 강조), 닫기, 다시 열기/닫기 정상. 실제 마우스 클릭/숫자 키 입력은 자동 확인하지 못함(같은 이벤트를 직접 호출해 확인).
+### 무기창 Tab 닫기/클릭이 안 되던 문제 수정 (2026-11-21)
+- 원인 3가지:
+  1. 복제해 온 번들 안내 위젯의 설정이 남아 위젯 전체가 `HitTestInvisible`, 루트 `CanvasPanel_0` 도 `HitTestInvisible` -> 마우스가 닿지 않고 키보드 포커스도 받지 못함.
+  2. `OnKeyDown` 의 키 비교가 UE5.8 승격 연산자(Equal (Key))로 만들어져 비교 키 값이 비어 있었음 -> 어떤 키도 일치하지 않음.
+  3. Lyra 는 CommonUI 가 입력 모드/포커스를 관리하므로 `AddToViewport + SetInputMode` 방식이 맞지 않음.
+- 수정:
+  - 위젯 가시성 `Visible`(활성화 시에도), 루트 캔버스 `SelfHitTestInvisible`(`lyra_weapon_menu_visible.py`, `lyra_weapon_menu_rootvis.py`).
+  - 키 비교 B 값에 키 이름 직접 지정(`lyra_weapon_menu_fix3.py`).
+  - 위젯 부모 `LyraActivatableWidget`, InputConfig = Menu, 뒤로 가기 처리, 포커스 대상 = 자기 자신(`BP_GetDesiredFocusTarget`), 닫기 = `DeactivateWidget`(`lyra_weapon_menu_commonui.py`).
+  - 폰은 `PushContentToLayer_ForPlayer(UI.Layer.GameMenu)` 로 연다(`lyra_weapon_menu_pawn2.py`).
+  - 탭 클릭은 `TabRow` 캐시 지오메트리가 0 이라 위치 계산 대신 누른 순간 `Tab_i.IsHovered` 로 판정.
+- 실제 키/마우스로 확인(PIE, 화면 조작): Tab 열기 -> 미국 탭 클릭 전환 -> 숫자 6 영국 전환 -> Tab 닫기 모두 정상. Esc 는 Tab 과 같은 분기라 따로 누르지 않음.
+- 확인용 도구: `lyra_weapon_menu_watch.py`(화면에 띄운 PIE 에서 상태 기록, `Data/wm_watch_stop` 파일로 종료), `lyra_wm_live_diag*.py`(실행 중 위젯 포커스/호버/가시성 조사).
+- 추가 수정: 닫을 때 CommonUI 가 이전 입력 설정이 없어(Lyra HUD 가 지정 안 함) Menu 상태(커서 보임, 마우스 캡처 없음)로 남았다 -> 위젯 `CloseMenu` 와 폰 닫기 분기에서 `DeactivateWidget` 뒤 `SetInputMode_GameOnly` + 커서 숨김(`lyra_weapon_menu_restore.py`). 확인(`lyra_weapon_menu_probe.py m5`): 닫을 때마다 커서 False, 마우스 캡처 NoCapture -> CapturePermanently 복귀.
+
+## 독일(제3제국) 무기 모델 21종 가져오기 (2026-11-21, 모션 없음)
+- 원본 zip 20개(다운로드 폴더) -> `Downloads/FurinaWeaponSrc/Germany/<무기>/` 에 안전하게 압축 해제(경로 이탈 검사, 실행 없음, 약 1 GB, git 밖).
+- Blender 정리(`Scripts/Blender/de_weapons_build.py -- preview|export`): 형식 FBX/blend/OBJ/STL + DAE(Blender 5.2 에서 Collada 가져오기가 없어 직접 파서 작성).
+  - 바닥/카메라/조명/탄띠 제거, 한 메시로 합침, 방향 통일(총구 = UE +Y, 위 = +Z, 원점 = 경계 상자 중심), 실제 전장 길이로 축척(P38 21.6, P08 22.2, PP 17, Kar98k 111, G43 113, StG44 94, MP40 83.3, MP38 63(개머리판 접힘), MG42 122, MG34 121.9, Panzerfaust 104.5, Panzerschreck 164, 로켓 65, PzB39 162, GrW34 110(세운 상태), 박격포탄 33, ZF4 27, ZF39 28, ZF41 13, 7.92x94 탄 11.75, 클립 8.2 cm).
+  - 무기별 처리: P38 원본은 권총 2자루+탄창+탄을 늘어놓은 장면 -> 닿아 있는 부품끼리 묶어 한 자루만, 주성분 축으로 세운 뒤 수동 보정(`Data/de_weapons_orient.json`). MP40 원본 탄창은 옆에 45도로 따로 놓여 있어 **제외**(탄창 없는 MP40). Kar98k 위에 떠 있던 부품 제거. MG42 탄띠/판 제거. ZF39 는 조립 모델(main_view)만. GrW34 의 4 m 장식 고리 제거(박격포 자체는 원본이 76삼각형 저폴리). 애니메이션 포함 FBX 는 애니메이션 끄고 가져옴. 서브디비전 모디파이어 제거.
+  - 미리보기 `Data/de_prev_<키>_side.png`, 결과 `Data/de_weapons_build.json`, FBX `FurinaWeaponSrc/Germany/_export/SM_DE_<키>.fbx`.
+- 텍스처 대응(`Scripts/Tools/de_weapons_texmap.py` -> `Data/de_weapons_texmap.json`): 머티리얼 이름 + 접미사(BaseColor/albedo/_a, Normal/_n, Roughness/_r, Metallic, AO). Walther PP 는 머티리얼 이름이 GUID 라 면 수로 본체/탄 구분. 텍스처 없는 박격포탄/ZF39/ZF41/클립은 단색(어두운 금속, 황동 등).
+- UE(`Scripts/Unreal/lyra_de_weapons_import.py`): `/Game/Furina/Weapons/Germany/<키>/SM_DE_<키>`, 텍스처 `Textures/T_DE_*`, 머티리얼 인스턴스 `MI_DE_<키>_<슬롯>`. 공용 마스터 `/Game/Furina/Weapons/Materials/M_FurinaWeaponPBR`(BaseColor x Tint, Normal, Roughness/Metallic = 텍스처 x Scale + Add, AO). OpenGL 노멀은 G 채널 뒤집음. 30만 삼각형 넘는 MP38(221만)/ZF39/ZF41/7.92x94 탄(141만)은 Nanite.
+  - 확인: 크기(cm) 21종 모두 위 값과 일치, 줄 세운 캡처 `Data/de_lineup_l2_*.png`(`lyra_de_weapons_lineup.py`, 레벨 저장 안 함)에서 총구 방향/축척 확인.
+- 무기창: 제3제국 탭 21개 버튼 활성(`lyra_weapon_menu_de_buttons.py`). 누르면 `SelectedPrimary`(무기 이름)/`SelectedPrimaryKey`(모델 키, 조준경 조합은 `kar98k+zf39` 식) 변수와 '현재 선택' 글자가 바뀐다. **장착/모션은 아직 없음.** 클릭 처리는 `OnPreviewMouseButtonDown` 에서 마우스가 올라간 버튼(IsHovered)으로 판정.
+  - 확인: 버튼 21개 활성 화면 캡처(`Data/wmenu_m6_de.jpg`). 실제 마우스 클릭으로 '현재 선택' 이 바뀌는지는 아직 화면에서 눌러 보지 않았다.
+
+## 저격수 조준경 합본 (2026-11-21)
+- 이전에는 조준경을 소총에 달지 않고 무기창에 `kar98k+zf39` 같은 기록만 남겼다. 실제 장착 위치 자료를 보고 합본 메시 3개를 만들었다(`Scripts/Blender/de_scoped_build.py -- preview|export`).
+  - **Kar98k + ZF39(저포탑):** 앞 받침 = 앞 리시버 링(y 3.4), 뒤 받침 = 뒤 브리지(y 15.5), 조준경은 총열 중심선 위 4.8cm. 원본에 마운트가 없어 링+기둥을 만들었다.
+  - **Kar98k + ZF41:** 가늠자 받침 **왼쪽**에 물리고 팔이 수평으로 뻗어 조준경이 총열 위 가운데에 온다(American Rifleman).
+    - 원본 모델 방향(큰 대물 통 = 앞, 고정 팔 = 총의 왼쪽)이 원래 맞았고, 처음에 180° 돌렸던 것은 잘못이라 되돌렸다.
+    - 뒤 다리가 가늠자 받침 돌출부와 0.2cm 겹쳐 0.25cm 왼쪽으로 옮겼다.
+  - **G43 + ZF4:** 리시버 **오른쪽** 도브테일 레일. 원본 마운트(아래로 늘어진 다리 2개)가 왼쪽 장전 손잡이의 이동 경로와 겹쳐 지우고, 오른쪽 레일판·다리·링을 새로 만들었다(링 아래와 리시버 윗면 사이 1.1cm).
+- **재질(조준경은 따로 구한 모델이라 색감이 다름):**
+  - 소총 텍스처의 금속 부위(metallic>0.5) 평균을 쟀다(`Scripts/Tools/de_metal_color.py` → `Data/de_metal_color.json`): Kar98k 선형 0.08 / 거칠기 0.36, G43 0.05 / 0.30.
+  - ZF4 원본 텍스처는 평평한 회색에 늘어진 픽셀이고 금속값이 0이었다.
+  - 그래서 조준경 3종을 소총 실측값에 맞춘 단색 블루잉 강철로 바꿨다. 수집가 자료에서 원래 마감은 블루잉, 마운트는 인산염이라 ZF4 마운트는 인산염 회색으로 했다.
+  - 단품 조준경 에셋 3개에도 같은 색을 적용했다.
+- UE: `/Game/Furina/Weapons/Germany/<kar98k_zf39|kar98k_zf41|g43_zf4>/SM_DE_<키>`.
+  - `lyra_de_weapons_import.py` 가 `Data/de_scoped_texmap.json`(소총 재질 재사용 + 단색)을 합쳐 읽는다.
+  - 다시 가져올 때 예전 텍스처 매개변수를 지우도록 바꿨다.
+  - 무기창 저격수 버튼 키를 에셋 키(`kar98k_zf39` 등)로 바꿨다.
+- 확인: 옆/위/앞/뒤 렌더 `Data/de_prev_<키>_*.png`, 모음 `Data/de_scoped_sheet.jpg`.
+- 출처는 `Motion/DE_FP_MOTION_RESEARCH.md` 1-1, 2절.
+
+## 독일 무기 1인칭 모션 — Kar98k 먼저 (2026-11-21)
+- **조사:** `Motion/DE_FP_MOTION_RESEARCH.md`.
+  - 무기마다 출처를 3개 이상 정리했다. 당시 자료로 TM-E 30-451(1945)과 Lone Sentry 전재본을 썼다.
+  - 사용자가 준 볼트액션 1인칭 애니(zip)는 **참고만** 했다. 메시·뼈·키는 쓰지 않았다(`ref_fps_anim_phases.py` 로 단계별 시간과 손 경로만 수치화).
+  - 박격포 등 특수 경우는 보류 목록에 적었다.
+- **방식:** M4 의 1인칭(컨트롤 릭 + 구운 정적 팔)과 달리, 볼트·클립 같은 움직이는 부품 때문에 **팔+총 한 몸 스켈레탈 뷰모델**을 만들었다.
+  - 공용 라이브러리 `Scripts/Blender/fpvm_lib.py`, `fpvm_lib2.py`(다른 무기도 사용):
+    - `Furina_cm.fbx` 의 팔을 게임 1인칭 기록(`lyra_fp_arms_pose_a1.json`)의 카메라 기준으로 옮기고, 쇄골 자세도 게임과 같게 했다.
+    - 팔 정점만 남기고 스키닝을 유지한다.
+    - 팔꿈치 IK, 손목 회전 목표를 쓴다.
+    - 손가락: 무기 표면에 닿을 때까지 관절 순서대로 굽힌다. 볼트 손잡이 쥐기·클립 집기·엄지 누르기는 손가락 모양을 고정하고 관통이 없는 손 방향을 탐색한다.
+  - `Scripts/Blender/fpvm_kar98k.py -- pose|anim|close|export`:
+    - Kar98k 볼트(`Material_005`)를 회전부와 덮개로 나눴다.
+    - 마우저 클립(5발)을 뒤 브리지 클립 홈(y 14.3)에 꽂는다.
+    - 클립 3개(30fps):
+      - **Idle 4.0초:** 호흡.
+      - **Fire 1.2초:** 반동 → 오른손이 볼트로 → 위(90°) → 뒤(8.8cm = 7.92×57 전장 8.2cm + 여유) → 앞 → 아래 → 손잡이로 복귀. 분당 10~15발 조준 사격에 맞춘 길이다.
+      - **Reload 3.2초:** 총을 어깨에서 내려 몸 앞으로 → 볼트 열기 → 탄입대에서 클립 → 홈에 꽂기 → 엄지로 5발 눌러 넣기 → 볼트 닫기(빈 클립이 튀어나감) → 손잡이.
+  - 위치: 푸리나 팔이 39cm 로 짧아 왼손이 닿는 범위 안에서 정했다. 왼손은 앞 리시버 링 바로 앞 앞받침(장전 때는 탄창 앞으로 미끄러짐)에 둔다. 장전 자세는 클립 홈이 화면 오른쪽 아래에 보이도록 탐색했다.
+  - 정조준: 가늠쇠 끝(y -53.75)과 뒤 가늠자 홈(y -12.3, 높이 8.96)을 잇는 조준선이 화면 가운데에 오게 했다. 눈-뒤 가늠자 거리는 43cm(`fpvm_ads_calc.py` → `Data/fpvm_kar98k_ads.json`).
+- **UE:**
+  - `lyra_fpvm_import.py Kar98k kar98k` → `/Game/Furina/FPVM/Kar98k/SK_FPVM_Kar98k`, `AS_FPVM_Kar98k_<Idle|Fire|Reload>`.
+    - UE5.8 Interchange 가 다시 가져올 때 애니를 빼먹어, 에셋을 지우고 애니만 따로 다시 가져온다.
+    - 블렌더 FBX 가져오기가 장면 fps 를 24로 바꿔, 굽기 직전에 30으로 다시 맞춘다.
+  - `lyra_fpvm_bp.py`(캐릭터 BP, 노드 `VM_*`):
+    - 컴포넌트 `FurinaFPVM`(부모 FPCamera, 상대 변환 0).
+    - 1인칭 + 무기 키 `kar98k` + 권총 아님이면 뷰모델을 보이고 M4(자식 포함)와 1인칭 팔·본체 팔을 숨긴다.
+    - 사격 이벤트 앞에서 1.2초 안의 재발사를 막고 Fire 를 재생한다.
+    - 재장전 시작 때 Reload 를 재생하고, 끝나면 Idle 로 돌아간다.
+    - 정조준 가중치(21/s)로 정조준 변환을 보간한다.
+  - 무기창 버튼이 캐릭터 변수 `FurinaPrimaryKey` 에 키를 넣는다(`SetStringPropertyByName`).
+  - `lyra_fpvm_fix2.py`: 무기 마스터 재질에 '스켈레탈 메시에 사용'을 켰다(안 켜면 기본 회색 재질).
+- **확인(PIE, `lyra_fpvm_probe.py v2`, 캡처 `Data/fpvm_v2_*.png`, 모음 `Data/fpvm_v2_sheet.jpg`):**
+  - 키 설정 + 1인칭: 뷰모델 보임, M4 숨김, Idle 재생.
+  - 사격: 잔탄 20→19. 0.54초 뒤 다시 쏘면 막힘(19 유지). 1.2초 뒤에는 다시 발사.
+  - 재장전: 3.2초 애니가 게임 재장전(3초)과 함께 돈다. 클립과 탄이 화면 오른쪽 아래에 보인다.
+  - 정조준: 볼트 축이 화면 가운데 세로선(y=0)에 온다.
+  - 3인칭: 뷰모델 꺼짐, M4 다시 보임.
+- **남은 것 / 한계:**
+  - 탄은 숨긴 M4 의 총구에서 나간다. 조준점은 맞지만 총구 화염 위치가 Kar98k 총구와 다르다.
+  - 탄약·HUD 는 M4(20발, AUTO) 그대로다. Kar98k 5발 내장 탄창으로는 아직 바꾸지 않았다.
+  - 3인칭은 M4 그대로다(이번 요청은 1인칭만).
+  - 엉덩이 사격 자세에서는 볼트 조작 손이 카메라 아래라 화면에 거의 안 보인다. 어깨 견착 위치 그대로라서 그렇다.
+  - ZF39/ZF41/G43 등 나머지 무기 모션은 `Motion/DE_FP_MOTION_RESEARCH.md` 의 순서대로 남아 있다.
+  - 실수로 엔진 기본 재질 `/Engine/EngineMaterials/WorldGridMaterial` 의 '스켈레탈 메시 사용'을 켜고 저장했다가 다시 끄고 저장했다. 동작은 원래와 같지만 엔진 설치 파일이 한 번 다시 저장됐다. Epic 런처에서 UE 5.8 '확인(Verify)'을 하면 원본 파일로 돌아간다.
+
+## 조준경 재질 2차 + G43 1인칭(클립 2개 연속 장전) (2026-11-21)
+- **조준경 재질(수집가 사진·설명 참고):**
+  - ZF4 실물 사진(Legacy Collectibles): 몸체는 검은 블루잉에 일부가 닳았고, BLM 주조 마운트는 조준경보다 밝은 무광 회색이다.
+  - ZF39(Hensoldt Dialytan)는 '전체 블루잉', ZF41 은 블루잉에 일부 검은 도장이다.
+  - 조정 값(선형):
+    - 조준경 관: ZF39 0.048, ZF41 0.044, ZF4 0.032. 블루잉이라 총의 금속(0.05~0.08)보다 약간 검게.
+    - ZF4 마운트: 인산염 회색 0.17, 무광(0.62).
+    - 렌즈: 어두운 푸른 유리(거칠기 0.04).
+  - ZF39·ZF4 원본은 렌즈 없는 빈 관이라, 양 끝 0.8cm 안쪽에 내경에 맞춘 유리 원판을 넣었다(`de_scoped_build.py`). UE 캡처 `Data/de_scoped_s1_*.png`.
+- **G43 1인칭** (`Scripts/Blender/fpvm_g43.py`, 출처는 `Motion/DE_FP_MOTION_RESEARCH.md` 2절):
+  - 재질이 하나라서 볼트 캐리어(+왼쪽 장전 손잡이, 오른쪽 걸쇠, 볼트)는 연결 성분 경계로 떼어 `VM_Carrier`(뒤로 9.3cm)로 만들었다.
+  - 애니:
+    - **Fire 0.30초:** 반자동이라 반동과 캐리어 왕복만.
+    - **Reload 5.9초:** 사용자 지정대로 클립 2개를 연속으로 넣는다.
+      1. 왼손이 장전 손잡이를 당겨 연다.
+      2. 클립 1: 꽂기 → 엄지로 누르기 → 뽑아 버리기.
+      3. 클립 2: 같은 순서.
+      4. 왼손으로 살짝 당겼다 놓아 닫는다.
+  - 정조준: 뒤 가늠자 V홈(y -0.9, z 8.64)과 가늠쇠(y -54, z 8.96), 눈-가늠자 33cm.
+- **캐릭터 BP 무기별 전환**(`lyra_fpvm_bp2.py`, 노드 `VW_*`):
+  - 키가 바뀌면 다음을 키별 값으로 바꾼다: 메시, 애니 3개, 사격 간격(Kar98k 1.2초 / G43 0.25초), 재장전 길이, 정조준 위치·회전.
+  - 키가 kar98k·g43 이 아니면 뷰모델을 끈다.
+  - 메시를 바꾼 뒤 재질 슬롯 0~9 의 덮어쓰기를 비운다(`lyra_fpvm_fix4.py`). 원인: 게임 시작 때 프로젝트가 캐릭터의 모든 메시 컴포넌트에 동적 재질(MID)을 만들어 두어, G43 메시에 Kar98k 재질이 그대로 쓰였다. 처음엔 UV 문제로 의심했지만, UE 에서 다시 내보낸 FBX 의 UV 는 정상이었다.
+  - `lyra_fpvm_import.py`: 재질을 새 `SkeletalMaterial` 로 넣도록 고쳤다(예전 방식은 저장되지 않았음). 팔 메시 UV 는 1개만 남긴다.
+- **확인(PIE `lyra_fpvm_probe.py g3`, `Data/fpvm_g3_sheet.jpg`):**
+  - G43 메시, 갈색 나무, 연속 사격(0.46초 간격 정상 발사).
+  - 재장전 5.9초 동안 발사 막힘. 클립 1·2 와 탄이 화면 오른쪽 아래에 보인다.
+  - 정조준 오프셋 적용.
+  - 키를 kar98k 로 바꾸면 Kar98k 메시와 재질로 바뀐다. 3인칭 복귀 정상.
+- **남은 것:**
+  - 탄약·HUD 는 여전히 M4(20발)이다. G43 은 10발이어야 한다.
+  - 클립 홈 위치(캐리어 앞면)는 모델 형상으로 정한 가정이다.
+  - 반자동이지만 좌클릭을 누르고 있으면 0.25초마다 계속 쏜다(한 번 누를 때 한 발은 아직 아님).
+  - G43+ZF4 조준경형 1인칭은 아직이다(조준경이 리시버 위를 덮어 클립 장전 동작이 달라질 수 있음).
+
+## 1인칭 손 위치·내부 도색·낱발 각도 수정 + MP40·MP38·StG44 (2026-11-21)
+- **손 보정 공통**(`Scripts/Blender/fpvm_lib2.py`):
+  - `seat_hand`: 손바닥 가운데 피부 정점이 총 표면에 닿을 때까지 IK 목표를 손바닥 쪽으로 옮긴다(최대 3cm). 부호 없는 거리를 쓴다. 부호 거리는 모델 일부 면 법선이 안쪽이라 손을 9cm 밀어냈다.
+  - `fold_sleeves`: 소매를 접는다. `palm_gap`: 진단용.
+  - 손목 기록은 IK 목표가 아니라 실제 손목 뼈 위치를 쓴다.
+- **Kar98k·G43:**
+  - 대기 자세 위치는 각각 (32,-9,-12.5), (29,-9,-11.2)이다.
+  - 왼손 자리는 팔 길이 37cm 안에서 자동으로 찾는다. 손바닥 방향은 맞은 면의 법선으로 정한다.
+- **권총 3종:**
+  - 손이 화면 밖에 있던 문제를 고쳤다. 총 위치는 (28,-6,-6.5)이고, 팔꿈치 방향 힌트와 소매 접기, `seat_hand`를 적용했다.
+- **사격·재장전 때 부품 안쪽이 투명하게 보이던 문제:**
+  - 무기 마스터 재질 `M_FurinaWeaponPBR`를 양면(two-sided)으로 바꿨다(`lyra_fpvm_reimport.py`).
+  - 이 재질을 쓰는 모든 무기에 적용되므로, 앞으로 넣는 무기도 따로 처리할 필요가 없다.
+- **낱발 탄 각도:**
+  - 소켓 기준으로 90° 누워 있던 탄 방향을 고쳤다(`fpvm_loose_prop.py`, `Data/fpvm_round_fix.json`).
+- **MP40·MP38·StG44** (`Scripts/Blender/fpvm_smg.py -- <key> <pose|grip|anim|export>`; 근거는 `Motion/DE_FP_MOTION_RESEARCH.md` 3·4절):
+  - MP38: 접힌 채 모델링된 개머리판을 경첩(y 27) 기준 180°로 폈다.
+  - MP40: 원본에 탄창이 없어서 MP38 탄창(같은 32발 탄창)을 끼웠다.
+  - StG44: 어깨끈(Belt)을 제거하고, 총구 방향을 Z축 180°로 맞췄다(`de_stg44_fix.py`).
+  - 왼손 받침:
+    - MP38/MP40은 **탄창 하우징**을 쥔다. 당시 탄창을 쥐면 급탄 고장이 나서 하우징을 쥐도록 교육했다.
+    - StG44는 탄창 앞쪽 총열 덮개 아래를 받친다.
+    - 받침 자리가 팔 길이 안에 오도록 총의 앞뒤 위치를 자동으로 정한다. 조준선은 눈 아래 5cm다.
+    - 처음에는 오른손 기준으로 배치해서 왼손이 닿지 않았고, 화면에 손이 보이지 않았다.
+  - 애니메이션:
+    - 대기 4초.
+    - 사격 1발 주기: MP 500발/분, StG44 550발/분.
+    - 재장전 2.85초: 탄창 빼기 → 탄입대 → 새 탄창 → 장전 손잡이.
+    - MP38/MP40은 오픈볼트라서 쏠 준비 상태에서 노리쇠가 뒤에 있다.
+  - UE 반영:
+    - `lyra_fpvm_smg_bp.py`: 키별 분기, 연발, 32/32/30발, 사격 간격 변수 `FurinaFireInterval`.
+    - `lyra_fpvm_smg_refresh.py`: 메시와 애니를 다시 가져오고 정조준 값을 갱신한다.
+- **Kar98k 장전 자세 올림:**
+  - 클립 홈 목표를 화면 아래 14°에서 4°로 바꿨다(`fpvm_kar98k.py` 의 `guide_down`). 그 결과 PIE에서 홈 높이가 -27°(화면 아래 끝, 낱발이 안 보임)에서 약 -15°가 되었다.
+  - 다시 가져오기는 `lyra_fpvm_k98_refresh.py`로 했다.
+- **확인:** PIE `lyra_fpvm_probe.py k_<key>_<n>`, 캡처는 `Data/fpvm_k_<key>_<n>_*.png`.
+  - MP40/MP38/StG44:
+    - 연발로 32→29, 30→27발이 줄고, 재장전하면 32/30발로 돌아왔다.
+    - 허리·재장전·정조준 때 왼손이 화면에 보였다.
+  - Kar98k(`k_kar98k_4`): 3발 남은 상태에서 `Loose2`로 2발을 넣어 5발이 되었다. 탄두는 총구 쪽을 향해 총과 나란히 들어갔다.
+  - G43(`k_g43_2`): 3발 남은 상태에서 `Loose7`이 재생되었다. 탄 방향은 총과 나란했다.
+  - 낱발 캡처 시간은 탄이 홈에 닿는 순간에 맞췄다. probe 는 캡처 한 번에 약 0.37초가 더 걸린다.
+- **엔진 파일 주의:** 앞선 작업 중 엔진의 `WorldGridMaterial`이 한 번 수정되었다가 되돌려져 다시 저장되었다. Epic 런처에서 UE 5.8 **확인(Verify)**을 한 번 실행하는 것을 권장한다.
