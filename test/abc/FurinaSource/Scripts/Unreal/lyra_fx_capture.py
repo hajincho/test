@@ -5,14 +5,27 @@ import unreal, json, sys, time, traceback
 D = 'C:/Users/fromj/Downloads/test/test/abc/FurinaSource/Data'; OUT = D + '/lyra_fx_capture.json'
 KEYS = ['p38', 'p08', 'pp', 'kar98k', 'kar98k_zf39', 'kar98k_zf41', 'g43', 'g43_zf4', 'mp40', 'mp38', 'stg44']
 TAG = sys.argv[-1] if len(sys.argv) > 1 and not sys.argv[-1].endswith('.py') else 'all'
-if TAG != 'all': KEYS = [k for k in KEYS if k in TAG.split('+')]   # 일부만 다시: 태그 'kar98k+kar98k_zf41'(ExecCmds 는 쉼표로 명령을 나눔)
+if TAG == 'smoketest': KEYS = ['kar98k']
+elif TAG == 'v3': KEYS = ['kar98k_zf39', 'kar98k_zf41', 'g43_zf4', 'p38', 'p08', 'pp']
+elif TAG == 'stance': KEYS = ['kar98k', 'g43', 'g43_zf4', 'mp40', 'mp38', 'stg44', 'p38']
+elif TAG != 'all': KEYS = [k for k in KEYS if k in TAG.split('+')]   # 일부만 다시: 태그 'kar98k+kar98k_zf41'(ExecCmds 는 쉼표로 명령을 나눔)
 BOLT = 1.3   # 볼트액션은 사격 뒤 볼트 조작(1.2초)이 끝나야 재장전이 받아짐
 R = {'shots': [], 'events': []}; S = {'st': 'open', 't': 0, 'k': 0, 'i': 0, 'sub': 0}
 # (이름, 동작, 대기초) — 대기는 동작 뒤 캡처까지
-STEPS = [('hip', 'key', 2.5), ('fire', 'fire', 0.0), ('smoke', None, 0.35), ('bolt_wait', None, 1.0),
+if TAG == 'smoketest': STEPS0 = [('hip', 'key', 2.0), ('st0', 'smoketest', 0.05), ('st1', None, 0.5), ('st2', 'smokeinfo', 1.5)]
+STEPS = [('hip', 'key', 2.5), ('fire', 'fire', 0.0), ('smoke0', None, 0.0), ('smoke', None, 0.35), ('bolt_wait', None, 1.0),
          ('sh', 'sh_on', 0.9), ('sh_fire', 'fire', 0.0), ('sh_off', 'sh_off', 1.2),
          ('ads', 'ads_on', 1.3), ('ads_fire', 'fire', 0.0), ('ads_smoke', None, 0.35), ('ads_off', 'aim_off', 1.4)]
 PISTOL_ONLY = ('sh', 'sh_fire', 'sh_off')
+if TAG == 'v3':   # 조준경 화면 속 화면·권총 탄창 재장전·연기 끔 확인(2026-11-21)
+    STEPS = [('hip', 'key', 2.5), ('fire', 'fire', 0.0), ('smoke', None, 0.4), ('bolt_wait', None, 1.0), ('ads', 'ads_on', 1.4), ('ads_off', 'aim_off', 1.0),
+             ('rl1', 'reload', 0.45), ('rl2', None, 0.3), ('rl3', None, 0.35), ('rl4', None, 0.3), ('rl5', None, 0.3), ('rl_wait', 'wait_reload', 0.6)]
+    PISTOL_ONLY = ()
+if TAG == 'stance':   # 견착·재장전 구도 확인(2026-11-21)
+    STEPS = [('hip', 'key', 2.5), ('sh', 'sh_on', 1.0), ('sh_off', 'sh_off', 0.8), ('ads', 'ads_on', 1.3), ('ads_off', 'aim_off', 1.0),
+             ('rl1', 'reload', 0.7), ('rl2', None, 0.35), ('rl3', None, 0.35), ('rl4', None, 0.5), ('rl_wait', 'wait_reload', 0.6)]
+    PISTOL_ONLY = ()
+if TAG == 'smoketest': STEPS = STEPS0
 def save(): json.dump(R, open(OUT, 'w', encoding='utf-8'), indent=1, default=str, ensure_ascii=False)
 def setexp(n): unreal.get_default_object(unreal.LyraDeveloperSettings).set_editor_property('experience_override', unreal.PrimaryAssetId(unreal.PrimaryAssetType('LyraExperienceDefinition'), n))
 LES = lambda: unreal.get_editor_subsystem(unreal.LevelEditorSubsystem)
@@ -53,6 +66,13 @@ def tick(dt):
                 if act == 'key': unreal.get_default_object(unreal.SystemLibrary).call_method('SetStringPropertyByName', (p, 'FurinaPrimaryKey', key))
                 elif act == 'fire':
                     a0 = p.get_editor_property('FurinaAmmo'); p.call_method('FurinaRifleShot'); R['events'].append([key, 'fire', a0, p.get_editor_property('FurinaAmmo')])
+                    cnt = {}
+                    for cp in ('/Game/Furina/FX/BP_HistSmoke.BP_HistSmoke_C', '/Game/Furina/FX/BP_HistFlash.BP_HistFlash_C', '/Game/Furina/M4/BP_M4Flash.BP_M4Flash_C'):
+                        try: cnt[cp.rsplit('.', 1)[1]] = len(unreal.GameplayStatics.get_all_actors_of_class(w, unreal.load_class(None, cp)))
+                        except Exception as ex: cnt[cp] = str(ex)[:80]
+                    try: cnt['vm_on'] = p.get_editor_property('FurinaVMOn')
+                    except Exception: pass
+                    R['events'].append([key, 'spawned', cnt])
                 elif act == 'reload':
                     unreal.get_default_object(unreal.SystemLibrary).call_method('SetIntPropertyByName', (p, 'FurinaAmmo', 0)); p.call_method('FurinaRequestReload'); S['rl0'] = now
                 elif act == 'wait_reload':   # 재장전이 끝날 때까지(최대 9초)
@@ -60,6 +80,22 @@ def tick(dt):
                     R['events'].append([key, 'reload_done', round(now - S['rl0'], 2), p.get_editor_property('FurinaAmmo')])
                 elif act == 'ads_on': p.get_editor_property('FurinaADS').set_active(True)
                 elif act == 'aim_off': p.get_editor_property('FurinaADS').set_active(False)
+                elif act == 'smoketest':   # 쏜 직후 생긴 연기 액터를 카메라 앞 120cm 로 옮기고 크게·오래
+                    p.call_method('FurinaRifleShot')
+                    sm = unreal.GameplayStatics.get_all_actors_of_class(w, unreal.load_class(None, '/Game/Furina/FX/BP_HistSmoke.BP_HistSmoke_C'))
+                    cam = unreal.GameplayStatics.get_player_camera_manager(w, 0); loc = cam.get_camera_location() + cam.get_actor_forward_vector() * 120.0
+                    a_ = sm[-1]; a_.set_actor_location(loc, False, False); a_.set_life_span(30.0); S['test'] = a_
+                    m_ = a_.get_component_by_class(unreal.StaticMeshComponent).get_material(0)
+                    m_.set_scalar_parameter_value('Density', 1.0); m_.set_scalar_parameter_value('Size', 3.0); m_.set_scalar_parameter_value('Life', 30.0)
+                    R['smoketest'] = {'loc': str(loc), 'n': len(sm), 'mat': m_.get_name()}
+                elif act == 'smokeinfo':
+                    a_ = S.get('test')
+                    try:
+                        c_ = a_.get_component_by_class(unreal.StaticMeshComponent); m_ = c_.get_material(0)
+                        R['smokeinfo'] = {'age': a_.get_editor_property('SmokeAge'), 'mat': m_.get_name(), 'mesh': c_.static_mesh.get_name() if c_.static_mesh else None,
+                                          'vis': c_.is_visible(), 'bounds': str(c_.bounds.sphere_radius) if hasattr(c_, 'bounds') else None, 'life': a_.get_life_span(),
+                                          'Age_param': m_.get_scalar_parameter_value('Age'), 'Dens': m_.get_scalar_parameter_value('Density'), 'Size': m_.get_scalar_parameter_value('Size')}
+                    except Exception as ex: R['smokeinfo'] = str(ex)[:300]
                 elif act == 'sh_on': p.get_editor_property('FurinaShoulder').set_active(True)
                 elif act == 'sh_off': p.get_editor_property('FurinaShoulder').set_active(False)
                 if name == 'bolt_wait' and key.startswith('kar98k'): wait = BOLT
@@ -67,8 +103,19 @@ def tick(dt):
             if now < S['t']: return
             if S['sub'] == 1:
                 if name not in ('rl_wait', 'ads_off', 'bolt_wait', 'sh_off'):
-                    unreal.SystemLibrary.execute_console_command(w, 'HighResShot 1280x720 filename="%s/fpvm_all_%s_%s.png"' % (D, key, name))
-                    R['shots'].append([key, name, status(p)]); save()
+                    unreal.SystemLibrary.execute_console_command(w, 'HighResShot 1280x720 filename="%s/fx_%s_%s.png"' % (D, key, name))
+                    st_ = status(p)
+                    try:
+                        sm = [a for a in unreal.GameplayStatics.get_all_actors_of_class(w, unreal.load_class(None, '/Game/Furina/FX/BP_HistSmoke.BP_HistSmoke_C'))]
+                        fl = unreal.GameplayStatics.get_all_actors_of_class(w, unreal.load_class(None, '/Game/Furina/FX/BP_HistFlash.BP_HistFlash_C'))
+                        st_['smoke_n'] = len(sm); st_['flash_n'] = len(fl)
+                        if sm:
+                            a0 = sm[-1]; c0 = a0.get_component_by_class(unreal.StaticMeshComponent); m0 = c0.get_material(0) if c0 else None
+                            st_['smoke0'] = {'loc': str(a0.get_actor_location()), 'scale': str(a0.get_actor_scale3d()), 'life': a0.get_life_span(), 'mat': m0.get_name() if m0 else None,
+                                             'spawn': m0.get_scalar_parameter_value('Spawn') if isinstance(m0, unreal.MaterialInstanceDynamic) else None,
+                                             'dens': m0.get_scalar_parameter_value('Density') if isinstance(m0, unreal.MaterialInstanceDynamic) else None, 'now': unreal.GameplayStatics.get_time_seconds(w)}
+                    except Exception as ex: st_['smoke_err'] = str(ex)[:200]
+                    R['shots'].append([key, name, st_]); save()
                 S['sub'] = 2; S['t'] = now + 0.15; return
             S['i'] += 1; S['sub'] = 0; S['t'] = now + 0.05
             if S['i'] >= len(STEPS):

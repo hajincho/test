@@ -1,4 +1,6 @@
-"""blender -b --python fpvm_g43.py -- <pose|anim|export> [옵션 json] : Gewehr 43 1인칭 뷰모델(푸리나 팔 + 총 한 몸 스켈레탈)
+"""blender -b --python fpvm_g43.py -- <pose|anim|export|zf4|magreload|maganim> [옵션 json]
+ 2026-11-21: 저격용(ZF4) G43 은 탄창 교환 재장전(사용자 지정, 조준경이 클립 홈 위를 가림). 10발 탄창(성분 21 몸통 + 22 바닥판)을 VM_Mag 뼈로 떼어
+   zf4 메시에 넣고 magreload 가 AS_FPVM_G43_MagReload.fbx(3.2초: 탄창 빼기 -> 탄입대 -> 새 탄창 -> 장전 손잡이 당겼다 놓기) 를 만듦. : Gewehr 43 1인칭 뷰모델(푸리나 팔 + 총 한 몸 스켈레탈)
  근거: Motion/DE_FP_MOTION_RESEARCH.md 2절. 사용자 지시: 탄창 교환 대신 '5발 클립 두 개를 연속으로' 장전.
    - 10발 탄창을 빼지 않고 5발 클립으로 채우도록 설계(Wikipedia G43), 볼트 캐리어에 홀드오픈 걸쇠(espeholt), 장전 손잡이는 왼쪽,
    - 클립 두 개로 10발(G41 선례), 장전 뒤 장전 손잡이를 살짝 당겼다 놓아 닫음(Forgotten Weapons G41(W)). Kar98k 와 달리 볼트가 닫히며 클립을 밀어내지 않으므로 빈 클립은 손으로 뽑아 버림.
@@ -72,12 +74,16 @@ def _split_faces(g, name, take, lab):
     o = bpy.data.objects.new(name, me2); bpy.context.scene.collection.objects.link(o); o.matrix_world = g.matrix_world.copy(); return o, len(ids)
 (carrier, ncar), picked = split_comps(gun, 'W_carrier', lambda lo, hi, n: (lo[1] >= 0.3 and hi[1] <= 9.7 and lo[2] >= 5.8 and hi[2] <= 9.1) or (lo[1] >= 9.8 and hi[1] <= 16.1 and lo[2] >= 7.0 and hi[2] <= 7.7))
 OUT['carrier'] = {'faces': ncar, 'parts': picked}
+MAG = STAGE in ('zf4', 'magreload', 'maganim')
+if MAG:   # 10발 탄창: 몸통(y -0.95~8.57, z -4.07~4.57) + 바닥판(z -4.14~-2.9)
+    (mag, nmag), mpicked = split_comps(gun, 'W_mag', lambda lo, hi, n: lo[1] >= -1.1 and hi[1] <= 8.7 and lo[2] >= -4.2 and hi[2] <= 4.6 and abs(lo[0]) <= 1.25 and abs(hi[0]) <= 1.25 and n > 100)
+    OUT['mag'] = {'faces': nmag, 'parts': mpicked}
 clip = L.load_weapon('mauser_clip')
 for m in clip.data.materials:
     if m: m.name = {'Material': 'Clip_Steel', '6.5': 'Clip_Projectile', 'case': 'Clip_Case'}.get(m.name.split('.')[0] if m.name.startswith('Material') else m.name, m.name)
 rounds, nr = L.split_by(clip, 'W_rounds', lambda m, c: m in ('Clip_Case', 'Clip_Projectile'))
 G0 = L.gun_native_to_cam(GUN_POS, *GUN_ROT); C0 = G0 @ Matrix.Translation(CLIP_IN)
-for o in (gun, carrier): o.matrix_world = G0
+for o in (gun, carrier) + ((mag,) if MAG else ()): o.matrix_world = G0
 for o in (clip, rounds): o.matrix_world = C0
 bpy.context.view_layer.update()
 def nat(p, M=None): return (M or G0) @ Vector(p)
@@ -113,6 +119,13 @@ PF = fset({'Thumb': (0, 5, 5), 'IndexFinger': (70, 90, 60), 'MiddleFinger': (75,
 CHF = fset(PINCH, 'L'); K = nat(KNOB); H = L2.hand_local(arm, 'L', fax['L'], CHF); plL = ax['L']['p_local']; flL = ax['L']['f_local']
 Wch, OUT['L_ch'] = L2.search_hand(H, 'pinch', K, bvh_all, shL, excl=(K, 0.016), prefer=[(plL, dirn((-1, 0, -0.3)), 0.6), (flL, dirn((-0.3, -1, 0)), 0.4)])
 ST['L_CH'] = {'ref': 'carrier', 'W': Wch, 'fing': CHF}
+if MAG:   # 왼손: 탄창 바닥을 아래에서 감싸 쥠(짧은 탄창) / 탄입대(화면 밖)
+    WRAP = fset({'Thumb': (25, 30, 25), 'IndexFinger': (45, 55, 40), 'MiddleFinger': (50, 60, 45), 'RingFinger': (55, 65, 45), 'LittleFinger': (55, 65, 45)}, 'L')
+    bvh_m = L2.bvh_of([gun, carrier, mag]); MT = nat((0.0, 3.8, -3.0)); H = L2.hand_local(arm, 'L', fax['L'], WRAP)
+    _shL = arm.matrix_world @ arm.pose.bones['Left arm'].head
+    Wm_, OUT['L_mag'] = L2.search_hand(H, 'palm', MT, bvh_m, _shL, reach_cm=100, excl=(MT, 0.03), prefer=[(plL, dirn((0, 0, 1)), 0.6), (flL, dirn((-1, -0.3, 0)), 0.4)])
+    ST['L_MAG'] = {'ref': 'mag', 'W': Wm_, 'fing': WRAP}
+    ST['L_POUCH'] = {'ref': 'cam', 'W': Matrix.LocRotScale(Vector((0.05, 0.20, -0.42)), L.wrist_rot_for(ax['L'], Vector((0.6, -0.3, 0.2)), Vector((0.0, -0.3, 1.0))).to_quaternion(), None), 'fing': WRAP}
 bvh_gc = L2.bvh_of([gun, carrier, clip, rounds]); pl = ax['R']['p_local']; fl = ax['R']['f_local']
 CT = nat((0.0, 3.9, 3.2), C0); H = L2.hand_local(arm, 'R', fax['R'], CLIP_F)
 Wc, OUT['R_clip'] = L2.search_hand(H, 'pinch', CT, bvh_gc, shR, excl=(CT, 0.015), prefer=[(pl, dirn((1, 0, 0)), 0.4), (fl, dirn((0, -0.3, -1)), 0.4)])
@@ -128,6 +141,7 @@ def bone_at(name, parent, head_native, M):
 bone_at('VM_Gun', 'Hips', (0, 0, 0), G0); bone_at('VM_Carrier', 'VM_Gun', (0.0, 9.0, 7.5), G0)
 bone_at('VM_Clip', 'VM_Gun', (0, 0, 0), C0); bone_at('VM_Rounds', 'VM_Clip', (0, 0, 0), C0)
 for o, b in ((gun, 'VM_Gun'), (carrier, 'VM_Carrier'), (clip, 'VM_Clip'), (rounds, 'VM_Rounds')): L.bind_rigid(arm, o, b)
+if MAG: bone_at('VM_Mag', 'VM_Gun', (0.0, 3.8, -1.0), G0); L.bind_rigid(arm, mag, 'VM_Mag')
 receiver_interior = add_receiver_interior(KEY, arm, G0)
 if STAGE in ('meshfix', 'zf4'):
     carrier.data.materials.clear()
@@ -135,7 +149,7 @@ if STAGE in ('meshfix', 'zf4'):
     meshes = (body, gun, carrier, clip, rounds, receiver_interior)
     suffix = 'Interior'
     if STAGE == 'zf4':
-        meshes += (add_existing_optic('g43_zf4', arm, G0),)
+        meshes += (add_existing_optic('g43_zf4', arm, G0), mag)
         suffix = 'ZF4'
     export_mesh_only(D + r'\FBX\FPVM\SK_FPVM_G43_' + suffix + '.fbx', arm, meshes)
     raise SystemExit(0)
@@ -150,7 +164,7 @@ def gun_delta(back=0.0, up=0.0, pitch=0.0, roll=0.0, yaw=0.0, side=0.0):
     return Matrix.Translation(Vector((-back, side, up)) / 100.0) @ Matrix.Translation(pv) @ R @ Matrix.Translation(-pv)
 def frames(st):
     Gw = st['D'] @ G0; Cw = st.get('Cw') or (Gw @ Matrix.Translation(CLIP_IN))
-    return {'gun': Gw, 'carrier': Gw @ Matrix.Translation((0, st['s'], 0)), 'clip': Cw, 'cliph': st.get('Ch') or Cw, 'rounds': Cw @ Matrix.Translation((0, 0, -st['push'])), 'cam': Matrix.Identity(4)}
+    return {'gun': Gw, 'carrier': Gw @ Matrix.Translation((0, st['s'], 0)), 'clip': Cw, 'cliph': st.get('Ch') or Cw, 'rounds': Cw @ Matrix.Translation((0, 0, -st['push'])), 'cam': Matrix.Identity(4), 'mag': st.get('Mw') or Gw}
 REF0 = frames({'D': Matrix.Identity(4), 's': 0, 'push': 0})
 REL = {k: REF0[v['ref']].inverted() @ v['W'] for k, v in ST.items()}
 def hand_world(key, F): return F[ST[key]['ref']] @ REL[key]
@@ -233,6 +247,7 @@ def apply_state(st):
     set_rigid('VM_Gun', F['gun'], REF0['gun']); bpy.context.view_layer.update()
     set_rigid('VM_Carrier', F['carrier'], REF0['carrier']); set_rigid('VM_Clip', F['clip'], REF0['clip'], st['clip_vis']); bpy.context.view_layer.update()
     set_rigid('VM_Rounds', F['rounds'], REF0['rounds'], st['rounds_vis'] and st['clip_vis'])
+    if 'VM_Mag' in REST: set_rigid('VM_Mag', F['mag'], REF0['mag'])
     a, b, x, lift = st['R']; Wr = blend_W(hand_world(a, F), hand_world(b, F), x, lift / 100.0)
     la, lb, lx = st.get('L', ('L_GRIP', 'L_GRIP', 0.0)); Wl = blend_W(hand_world(la, F), hand_world(lb, F), lx, 0.02)
     for s, W in (('R', Wr), ('L', Wl)):
@@ -264,6 +279,61 @@ for m in bpy.data.materials:
     m.diffuse_color = (0.85, 0.7, 0.62, 1) if 'Skin' in m.name else (0.25, 0.3, 0.55, 1) if 'Outfit' in m.name else (0.75, 0.6, 0.25, 1) if m.name in ('Clip_Case', 'Clip_Projectile') else (0.45, 0.33, 0.22, 1)
 carrier.data.materials.clear(); cm = bpy.data.materials.get('Gewehr43')
 if cm: carrier.data.materials.append(cm)
+if MAG:
+    MRT = {'tilt': (0.0, 0.35, 2.75, 3.2), 'toMag': (0.05, 0.35), 'out': (0.35, 0.60), 'toPouch': (0.60, 1.00), 'toWell': (1.00, 1.45), 'insert': (1.45, 1.62),
+           'toCH': (1.66, 1.92), 'pull': (1.92, 2.08), 'rel': (2.08, 2.14), 'toGrip': (2.14, 2.60)}
+    def tl_magreload(t):
+        T = MRT; c = seg(t, T['tilt'][0], T['tilt'][1]) * (1 - seg(t, T['tilt'][2], T['tilt'][3]))
+        D_ = gun_delta(**{k: v * c for k, v in MAG_D.items()}); Gw = D_ @ G0
+        below = Gw @ Matrix.Translation((0.0, 1.0, -8.0)); Mpouch = ST['L_POUCH']['W'] @ (REF0['mag'].inverted() @ ST['L_MAG']['W']).inverted()
+        def bw(a, b_, x, lift=0.0): return blend_W(a @ Matrix.Scale(100, 4), b_ @ Matrix.Scale(100, 4), x, lift) @ S01
+        if t < T['out'][0]: Mw = Gw
+        elif t < T['out'][1]: Mw = bw(Gw, below, seg(t, *T['out']))
+        elif t < T['toPouch'][1]: Mw = bw(below, Mpouch, seg(t, *T['toPouch']), 0.02)
+        elif t < T['toWell'][1]: Mw = bw(Mpouch, below, seg(t, *T['toWell']), 0.03)
+        elif t < T['insert'][1]: Mw = bw(below, Gw, seg(t, *T['insert']))
+        else: Mw = Gw
+        s_ = TRAVEL * seg(t, *T['pull']) * (1 - lin(t, *T['rel']))   # 장전 손잡이를 끝까지 당겼다 놓음(캐리어가 앞으로 가며 장전)
+        if t < T['out'][0]: Lh = ('L_GRIP', 'L_MAG', seg(t, *T['toMag']))
+        elif t < T['toCH'][0]: Lh = ('L_MAG', 'L_MAG', 0)
+        elif t < T['toGrip'][0]: Lh = ('L_MAG', 'L_CH', seg(t, *T['toCH']))
+        else: Lh = ('L_CH', 'L_GRIP', seg(t, *T['toGrip']))
+        return {'D': D_, 's': s_, 'push': 0, 'R': ('R_GRIP', 'R_GRIP', 0, 0), 'L': Lh, 'Mw': Mw, 'clip_vis': 0, 'rounds_vis': 0}
+    best = None   # 기관단총과 같은 기준: 총을 조금 들어 아랫면(탄창 입구)이 화면 가운데 약간 아래에서 보이게
+    for yw in (0, 15, 30, 45):
+        for fw in (-6, -3, 0, 3):
+            for sd in (0, 4, 8):
+                for up in (-5, 0, 5):
+                    for rl in (35, 45, 55):
+                        for pt in (10, 20, 30):
+                            Dt = gun_delta(back=-fw, side=sd, up=up, pitch=pt, roll=rl, yaw=yw); F = frames({'D': Dt, 's': 0, 'push': 0})
+                            wm = hand_world('L_MAG', F).translation; wc = hand_world('L_CH', F).translation
+                            if (wm - shL).length * 100 > REACH + 2 or (wc - shL).length * 100 > REACH + 2: continue
+                            g = F['gun'] @ Vector((0.0, 3.8, -1.0)); hg, vg = view_ang(g)
+                            under = -(F['gun'].to_3x3() @ Vector((0, 0, 1))).normalized(); vis = under.dot((-g).normalized())
+                            v = abs(hg) + abs(vg + 10) + 40 * max(0, 0.40 - vis) + 2 * max(0, 24 - g.length * 100)
+                            cost = v + 0.05 * (abs(fw) + sd + abs(up) * 0.5 + rl * 0.1 + abs(pt) * 0.2 + yw * 0.1)
+                            if best is None or cost < best[0]: best = (cost, dict(back=-fw, side=sd, up=up, pitch=pt, roll=rl, yaw=yw), [round(hg, 1), round(vg, 1), round(vis, 2)])
+    MAG_D = OPT.get('mag_d') or (best[1] if best else dict(back=-3, side=0, up=5, pitch=20, roll=45, yaw=30)); OUT['mag_pose'] = {'delta': MAG_D, 'hv': best[2] if best else None}
+    if STAGE == 'maganim':
+        R_ = []
+        for nm, t in (('mrl_out', 0.5), ('mrl_pouch', 1.0), ('mrl_well', 1.5), ('mrl_ch', 2.0), ('mrl_end', 2.8)):
+            R_ += shot(nm, tl_magreload, t, ('fp', 'side'), look=tuple(G0 @ Vector((0, 0, 0))), scale=0.8)
+        OUT['renders'] = R_
+    if STAGE == 'magreload':
+        bpy.context.scene.render.fps = FPS; bpy.context.scene.render.fps_base = 1.0
+        a, n = bake_clip('MagReload', tl_magreload, 3.2)
+        for pb in PB:
+            for c in list(pb.constraints): pb.constraints.remove(c)
+        for e in list(E.values()): bpy.data.objects.remove(e)
+        arm.animation_data.action = a; s0, s1 = a.frame_range; bpy.context.scene.frame_start = round(s0); bpy.context.scene.frame_end = round(s1)
+        bpy.ops.object.select_all(action='DESELECT'); arm.select_set(True); bpy.context.view_layer.objects.active = arm
+        bpy.ops.export_scene.fbx(filepath=D + r'\FBX\FPVM\AS_FPVM_G43_MagReload.fbx', use_selection=True, object_types={'ARMATURE'}, axis_forward='-Y', axis_up='Z', apply_unit_scale=True,
+                                 add_leaf_bones=False, bake_anim=True, bake_anim_use_all_actions=False, bake_anim_use_nla_strips=False, bake_anim_simplify_factor=0.0,
+                                 armature_nodetype='NULL', primary_bone_axis='Y', secondary_bone_axis='X')
+        OUT['magreload'] = {'frames': n + 1}
+    if STAGE in ('magreload', 'maganim'):
+        json.dump(OUT, open(D + r'\Data\fpvm_g43_mag.json', 'w'), indent=1, default=str); print('FPVM_G43_MAG', json.dumps({k: OUT.get(k) for k in ('mag', 'L_mag', 'mag_pose', 'magreload')})[:800]); raise SystemExit(0)
 if STAGE == 'roundclips':
     clips = {f'Loose{i}': build_timeline(tl_reload, G0, CLIP_IN, i, .80, 4.7, 5.9) for i in (1, 2, 3, 4, 6, 7, 8, 9)}
     clips['Clip5'] = one_clip(tl_reload)

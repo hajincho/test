@@ -1,8 +1,10 @@
-"""헤드리스/에디터(편집 전용, PIE 아님): 2026-11-21 1인칭 수정분 다시 가져오기.
+"""헤드리스/에디터(편집 전용, PIE 아님): 1인칭 뷰모델 에셋 전체 다시 가져오기(2026-11-21 현재 상태, Blender 는 Tools/fpvm_export_all.sh 먼저).
+ run_ue_probe.ps1 -ScriptPath <이 파일> -Done Saved/FPVMReimport.json 으로 실행 가능("done": true 를 씀). BP 설치는 README '다시 만들기 순서'.
  1) 무기 마스터 재질 M_FurinaWeaponPBR 양면(two-sided): 장전·사격 때 드러나는 부품 안쪽 면이 투명하게 보이던 문제(앞으로 넣는 무기 공통)
  2) 낱발 탄 SM_FPVM_LooseRound 교체(소켓 기준 90° 누워 있던 탄 방향 수정)
  3) Kar98k / G43: 손 위치·소매 접기 반영 메시(Interior, ZF39, ZF41, ZF4) + 애니(Idle/Fire/Reload/LooseN/Clip5)
- 4) 권총 P38/P08/PP(총 높이·손 보정) 5) 새 무기 MP40/MP38/StG44 메시 + 애니
+ 4) 권총 P38/P08/PP(fpvm_pistols2.py: 세 자세 + 실제 탄창, 클립 13개) 5) MP40/MP38/StG44 메시 + 애니 6) G43 MagReload(저격용 탄창 교환)
+ 7) 모든 1인칭 메시에 VM_Muzzle 소켓(메시를 다시 가져오면 소켓이 빠질 수 있어 마지막에 다시 넣음)
  -> Saved/FPVMReimport.json"""
 import json, sys, traceback
 from pathlib import Path
@@ -10,6 +12,7 @@ import unreal
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from lyra_fpvm_animation_import import import_fbx, import_clip, import_pistol
 from lyra_fpvm_receiver_import import import_viewmodel, receiver_material
+import lyra_hist_fx as H
 ASSETS = unreal.EditorAssetLibrary; ROOT = Path(unreal.Paths.project_dir()).resolve(); R = {}
 def two_sided():
     m = unreal.load_asset('/Game/Furina/Weapons/Materials/M_FurinaWeaponPBR'); was = m.get_editor_property('two_sided')
@@ -27,7 +30,7 @@ def rifles():
     mat = receiver_material(); out = {}
     for name, suffix, optic in (('Kar98k', 'Interior', None), ('G43', 'Interior', None), ('Kar98k', 'ZF39', 'kar98k_zf39'), ('Kar98k', 'ZF41', 'kar98k_zf41'), ('G43', 'ZF4', 'g43_zf4')):
         mesh, data = import_viewmodel(ROOT, name, suffix, mat, optic); assert ASSETS.save_loaded_asset(mesh, False); out[mesh.get_name()] = data
-    for model, clips in (('Kar98k', ('Idle', 'Fire', 'Reload', 'Loose1', 'Loose2', 'Loose3', 'Loose4')), ('G43', ('Idle', 'Fire', 'Reload', 'Clip5', 'Loose1', 'Loose2', 'Loose3', 'Loose4', 'Loose6', 'Loose7', 'Loose8', 'Loose9'))):
+    for model, clips in (('Kar98k', ('Idle', 'Fire', 'Reload', 'Loose1', 'Loose2', 'Loose3', 'Loose4')), ('G43', ('Idle', 'Fire', 'Reload', 'MagReload', 'Clip5', 'Loose1', 'Loose2', 'Loose3', 'Loose4', 'Loose6', 'Loose7', 'Loose8', 'Loose9'))):
         folder = '/Game/Furina/FPVM/' + model; skel = unreal.load_asset(f'{folder}/SK_FPVM_{model}_Skeleton')
         for c in clips:
             a = import_clip(folder, skel, f'AS_FPVM_{model}_{c}'); assert ASSETS.save_loaded_asset(a, False); out[a.get_name()] = round(a.get_play_length(), 3)
@@ -57,11 +60,11 @@ def main():
     unreal.SystemLibrary.execute_console_command(world, cvar + ' 0')
     try:
         for name, fn in (('two_sided', two_sided), ('loose_round', loose_round), ('rifles', rifles),
-                         ('pistols', lambda: {k: import_pistol(k) for k in ('p38', 'p08', 'pp')}), ('smg', lambda: {k: smg(k) for k in ('mp40', 'mp38', 'stg44')})):
+                         ('pistols', H.pistols), ('smg', lambda: {k: smg(k) for k in ('mp40', 'mp38', 'stg44')}), ('sockets', H.sockets)):
             try: R[name] = fn()
             except Exception: R[name] = 'ERROR ' + traceback.format_exc()[-1500:]
             (ROOT / 'Saved' / 'FPVMReimport.json').write_text(json.dumps(R, indent=1, default=str), encoding='utf-8')
     finally:
         unreal.SystemLibrary.execute_console_command(world, cvar + (' 1' if flag else ' 0'))
-    print('FPVM_REIMPORT_DONE')
+    R['done'] = True; (ROOT / 'Saved' / 'FPVMReimport.json').write_text(json.dumps(R, indent=1, default=str), encoding='utf-8'); print('FPVM_REIMPORT_DONE')
 if __name__ == "__main__": main()

@@ -248,34 +248,41 @@ def tl_reload(t):
     elif t < T['toCH'][0]: Lh = ('L_MAG', 'L_MAG', 0)
     elif t < T['toGrip'][0]: Lh = ('L_MAG', 'L_CH', seg(t, *T['toCH']))
     else: Lh = ('L_CH', 'L_GRIP', seg(t, *T['toGrip']))
-    return {'D': D_, 's': s, 'L': Lh, 'Mw': Mw, 'mag_vis': vis}
+    shift = Vector((.115, .0, .032) if WK == 'stg44' else (.055, .0, .018)) * c
+    return {'D': D_, 's': s, 'L': Lh, 'Mw': Mw, 'mag_vis': vis, 'framing': shift}
 def view_ang(p): return math.degrees(math.atan2(-p.y, max(p.x, 1e-3))), math.degrees(math.atan2(p.z, max(p.x, 1e-3)))
 best = None
-for yw in (0, 15, 30, 45):   # 총구를 안쪽(왼쪽)으로 돌리면 탄창이 왼손 쪽으로 옴
+# 2026-11-21 사용자 지정: 탄창을 갈 때 총을 조금 들어 올린 채 아랫면(탄창 하우징)이 화면에 잘 보이게.
+#  비용: 하우징 입구가 화면 가운데 약간 아래(가로 -2°, 세로 -8°), 아랫면 법선이 카메라를 향함(내적 >= 0.35), 옆으로 눕히는 각도는 55° 까지(75° 는 총이 누워 보였음). 화면 구도는 UE 에서 재장전 중 뷰모델을 앞 9·아래 3cm 로 밀어 보완(lyra_fpvm_stance.py), 손이 닿고 너무 가깝지 않게
+for yw in (0, 15, 30, 45):
   for fw in (-6, -3, 0, 3):
     for sd in (0, 4, 8):
-        for up in (-10, -5, 0):
-            for rl in (15, 30, 45):
-                for pt in (-4, 4, 12):
+        for up in (-5, 0, 5):
+            for rl in (35, 45, 55):
+                for pt in (10, 20, 30):
                     Dt = gun_delta(back=-fw, side=sd, up=up, pitch=pt, roll=rl, yaw=yw); F = frames({'D': Dt, 's': 0.0})
                     wm = hand_world('L_MAG', F).translation; wc = hand_world('L_CH', F).translation
                     if (wm - shL).length * 100 > REACH + 2 or (wc - shL).length * 100 > REACH + 2: continue
                     g = F['gun'] @ Vector((SPEC['xc'], myc, max(mz) - 4.0)); hg, vg = view_ang(g)
-                    near = min((F['gun'] @ Vector((SPEC['xc'], yy, SPEC['bore_z']))).x for yy in (SPEC['recv_end'], 0.0))   # 리시버 뒤끝·가운데 중 카메라에 가까운 쪽(앞 거리)
-                    v = abs(hg - 4) + abs(vg + 15) + 2 * max(0, 24 - g.length * 100) + 3 * max(0, 18 - near * 100)
-                    cost = v + 0.05 * (abs(fw) + sd + abs(up) + rl * 0.2 + abs(pt) * 0.3 + yw * 0.1)
-                    if best is None or cost < best[0]: best = (cost, dict(back=-fw, side=sd, up=up, pitch=pt, roll=rl, yaw=yw), [round(hg, 1), round(vg, 1), round(near * 100, 1)])
-RELOAD_D = best[1] if best else dict(back=0, side=3, up=-4, pitch=0, roll=20); OUT['reload_pose'] = {'delta': RELOAD_D, 'hv': best[2] if best else None}
+                    under = -(F['gun'].to_3x3() @ Vector((0, 0, 1))).normalized(); vis = under.dot((-g).normalized())
+                    near = min((F['gun'] @ Vector((SPEC['xc'], yy, SPEC['bore_z']))).x for yy in (SPEC['recv_end'], 0.0))
+                    v = abs(hg + 0) + abs(vg + 10) + 40 * max(0, 0.40 - vis) + 2 * max(0, 24 - g.length * 100) + 1 * max(0, 8 - near * 100)
+                    cost = v + 0.05 * (abs(fw) + sd + abs(up) * 0.5 + rl * 0.1 + abs(pt) * 0.2 + yw * 0.1)
+                    if best is None or cost < best[0]: best = (cost, dict(back=-fw, side=sd, up=up, pitch=pt, roll=rl, yaw=yw), [round(hg, 1), round(vg, 1), round(near * 100, 1), round(vis, 2)])
+RELOAD_D = best[1] if best else dict(back=-1, side=3, up=4, pitch=8, roll=23); OUT['reload_pose'] = {'delta': RELOAD_D, 'hv': best[2] if best else None}
 CLIPS = {'Idle': (tl_idle, 4.0), 'Fire': (tl_fire, round(FIRE_LEN, 4)), 'Reload': (tl_reload, 2.85)}
 OUT['clips'] = {k: v[1] for k, v in CLIPS.items()}
 # ---- 적용/굽기
 PB = arm.pose.bones
 for pb in PB: pb.rotation_mode = 'QUATERNION'
+hip_rest = PB['Hips'].matrix.copy()
 def set_rigid(name, Xw, Xw0, vis=1):
     M = Xw @ Xw0.inverted() @ REST[name]
     if not vis: M = M @ Matrix.Scale(0.001, 4)
     PB[name].matrix = M
 def apply_state(st):
+    PB['Hips'].matrix = hip_rest
+    bpy.context.view_layer.update()
     F = frames(st)
     set_rigid('VM_Gun', F['gun'], REF0['gun']); bpy.context.view_layer.update()
     set_rigid('VM_Handle', F['handle'], REF0['handle']); set_rigid('VM_Mag', F['mag'], REF0['mag'], st.get('mag_vis', 1)); bpy.context.view_layer.update()
@@ -289,6 +296,9 @@ def apply_state(st):
             if err.length < 2e-4: break
             E['T_' + s].location = E['T_' + s].location + err; bpy.context.view_layer.update()
     L2.apply_fingers(arm, fax['R'], ST['R_GRIP']['fing']); L2.apply_fingers(arm, fax['L'], blend_f(ST[la]['fing'], ST[lb]['fing'], lx)); bpy.context.view_layer.update()
+    if 'framing' in st:
+        PB['Hips'].matrix = Matrix.Translation(st['framing']) @ hip_rest
+        bpy.context.view_layer.update()
 def record(): return {pb.name: arm.convert_space(pose_bone=pb, matrix=pb.matrix, from_space='POSE', to_space='LOCAL').copy() for pb in PB}
 CONS = [c for pb in PB for c in pb.constraints]
 def bake_clip(name, fn, dur):
@@ -313,7 +323,7 @@ if STAGE == 'grip':
     OUT['renders'] = R_; OUT['gap_after_apply'] = {s_: L2.palm_gap(arm, body, s_, ax[s_], bvh_gun) for s_ in 'RL'}
 elif STAGE == 'pose':
     OUT['renders'] = shot('pose', tl_idle, 0.0, ('fp', 'side', 'top', 'front'), look=tuple(G0 @ Vector((0, 0, 0))), scale=0.8)
-elif STAGE in ('anim', 'export'):
+elif STAGE in ('anim', 'export', 'reload_export'):
     if STAGE == 'anim':
         R_ = []
         for nm, fn, t in (('fire', tl_fire, 0.25 * FIRE_LEN), ('rl_mag', tl_reload, 0.45), ('rl_pouch', tl_reload, 1.0), ('rl_well', tl_reload, 1.5), ('rl_ch', tl_reload, 2.0), ('rl_end', tl_reload, 2.6)):
@@ -322,16 +332,19 @@ elif STAGE in ('anim', 'export'):
     else:
         bpy.context.scene.render.fps = FPS; bpy.context.scene.render.fps_base = 1.0
         acts = {}
-        for nm, (fn, dur) in CLIPS.items(): a, n = bake_clip(nm, fn, dur); acts[nm] = a
+        clips = CLIPS if STAGE == 'export' else {'Reload': CLIPS['Reload']}
+        for nm, (fn, dur) in clips.items(): a, n = bake_clip(nm, fn, dur); acts[nm] = a
         for pb in PB:
             for c in list(pb.constraints): pb.constraints.remove(c)
         for e in list(E.values()): bpy.data.objects.remove(e)
-        os.makedirs(D + r'\FBX\FPVM', exist_ok=True); arm.animation_data.action = acts['Idle']
-        bpy.ops.object.select_all(action='DESELECT')
-        for o in (arm, body, gun, mag, ch): o.select_set(True)
-        bpy.context.view_layer.objects.active = arm
-        bpy.ops.export_scene.fbx(filepath=D + r'\FBX\FPVM\SK_FPVM_%s.fbx' % KEY, use_selection=True, object_types={'ARMATURE', 'MESH'}, axis_forward='-Y', axis_up='Z', apply_unit_scale=True,
-                                 add_leaf_bones=False, bake_anim=False, mesh_smooth_type='FACE', path_mode='STRIP', armature_nodetype='NULL', primary_bone_axis='Y', secondary_bone_axis='X')
+        os.makedirs(D + r'\FBX\FPVM', exist_ok=True)
+        if STAGE == 'export':
+            arm.animation_data.action = acts['Idle']
+            bpy.ops.object.select_all(action='DESELECT')
+            for o in (arm, body, gun, mag, ch): o.select_set(True)
+            bpy.context.view_layer.objects.active = arm
+            bpy.ops.export_scene.fbx(filepath=D + r'\FBX\FPVM\SK_FPVM_%s.fbx' % KEY, use_selection=True, object_types={'ARMATURE', 'MESH'}, axis_forward='-Y', axis_up='Z', apply_unit_scale=True,
+                                     add_leaf_bones=False, bake_anim=False, mesh_smooth_type='FACE', path_mode='STRIP', armature_nodetype='NULL', primary_bone_axis='Y', secondary_bone_axis='X')
         for nm, a in acts.items():
             arm.animation_data.action = a; s0, s1 = a.frame_range; bpy.context.scene.frame_start = round(s0); bpy.context.scene.frame_end = round(s1)
             bpy.ops.object.select_all(action='DESELECT'); arm.select_set(True); bpy.context.view_layer.objects.active = arm

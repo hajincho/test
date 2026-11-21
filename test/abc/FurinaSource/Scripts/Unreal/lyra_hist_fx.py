@@ -11,7 +11,7 @@
   B2 권총 자세 상태(뷰모델 갱신 0.033초마다): 원하는 자세 = 정조준 ? 2 : 견착 ? 1 : 0, 바뀌면 전환 애니(T_xy) 재생 + Idle/Fire 를 그 자세 것으로
   B3 반동: 기존 반동 배율 × 무기 반동(표) × (권총 한손이면 1.5)
   B4 흔들림: 무기 배율, 정조준에서도 0.35배로 흔듦(전에는 정조준에서 안 흔듦)
-  B5 1인칭 뷰모델이면 총구 효과를 VM_Muzzle 에서: BP_HistFlash(크기·길이), NS_MuzzleFlash(Global Scale 0.2×크기), BP_HistSmoke
+  B5 1인칭 뷰모델이면 총구 효과를 VM_Muzzle 에서: BP_HistFlash(크기·길이), NS_MuzzleFlash(Global Scale 0.2×크기)
   B6 조준경: 뷰모델 전체 숨김 대신 조준경 몸통·유리 재질 슬롯만 가림(아래 총·손이 보임)
  -> Saved/HistFX.json("done": true)"""
 import json, math, sys, traceback, uuid
@@ -30,6 +30,7 @@ MESHES = {'kar98k': ('Kar98k', 'Kar98k_Interior', 'kar98k'), 'kar98k_zf39': ('Ka
           'g43': ('G43', 'G43_Interior', 'g43'), 'g43_zf4': ('G43', 'G43_ZF4', 'g43'), 'p38': ('P38', 'P38', 'p38'), 'p08': ('P08', 'P08', 'p08'), 'pp': ('PP', 'PP', 'pp'),
           'mp40': ('MP40', 'MP40', 'mp40'), 'mp38': ('MP38', 'MP38', 'mp38'), 'stg44': ('STG44', 'STG44', 'stg44')}
 TUBE_SLOTS = ('ZF39_Blued', 'ZF39_Glass', 'ZF41_Blued', 'ZF41_Glass', 'ZF4_Blued', 'ZF4_Glass')
+MOUNT_SLOTS = ('Mount_K98_Blued', 'Mount_ZF41_Satin', 'Mount_ZF4_Phosphate')   # 뒤 고리가 렌즈 가운데를 흐리게 가려서 조준 중엔 함께 가림
 LENS = {'ZF39': (4., .213, .026, .002, .013, 1.30), 'ZF41': (1.5, .165, .036, .0015, .010, 1.12), 'ZF4': (4., .207, .025, .0017, .011, 1.30)}
 
 
@@ -235,20 +236,21 @@ def flash():
 
 # ------------------------------------------------------------------ A6 연기
 SMOKE_WPO = r'''
-float age = max(Now - Spawn, 0.0); float a = saturate(age / max(Life, 0.1));
-float seed = VC.r; float ax = VC.g; float sz = VC.b;
-float grow = Size * sz * (0.7 + 2.0 * ax) * (1.0 + 3.2 * sqrt(a));
+float3 Fwd = normalize(TransformLocalVectorToWorld(Parameters, float3(0, 1, 0)));   // 총열 앞(액터 +Y)
+float age = max(Age, 0.0); float a = saturate(age / max(Life, 0.1));   // Age: 액터(BP_HistSmoke)가 틱마다 넣는 경과 초(재질 시계와 BP 시계가 달라 직접 넘김)
+float has = step(0.001, VC.r + VC.g + VC.b); float seed = lerp(0.5, VC.r, has); float ax = lerp(0.5, VC.g, has); float sz = lerp(0.8, VC.b, has);   // 정점색이 없으면 중간값
+float grow = Size * sz * (1.2 + 3.5 * ax) * (1.0 + 4.0 * sqrt(a));
 float dist = Size * (1.5 + 24.0 * ax) * (1.0 - exp(-5.0 * age));
 float3 side = normalize(cross(Fwd, float3(0, 0, 1)) + float3(1e-4, 0, 0));
 float3 drift = Fwd * dist + float3(0, 0, 1) * (3.0 * age + 2.5 * age * age) + side * (seed - 0.5) * 9.0 * a * Size;
 return Rel * (grow - 1.0) + drift;
 '''
 SMOKE_OPA = r'''
-float age = max(Now - Spawn, 0.0); float a = saturate(age / max(Life, 0.1));
+float age = max(Age, 0.0); float a = saturate(age / max(Life, 0.1));   // Age: 액터(BP_HistSmoke)가 틱마다 넣는 경과 초(재질 시계와 BP 시계가 달라 직접 넘김)
 float fadeIn = saturate(age / 0.05);
 float fade = pow(1.0 - a, 1.7);
 float edge = pow(saturate(abs(dot(normalize(N), normalize(V)))), 1.4);
-float base = Density * (0.32 - 0.16 * VC.g);
+float base = Density * (0.75 - 0.30 * saturate(VC.g));
 return saturate(base * fade * fadeIn * edge * (0.55 + 0.45 * Noise));
 '''
 
@@ -268,34 +270,30 @@ def smoke():
     m.set_editor_property('two_sided', False)
     def param(name, v, x, y):
         e = EDIT.create_material_expression(m, unreal.MaterialExpressionScalarParameter, x, y); e.set_editor_property('parameter_name', name); e.set_editor_property('default_value', v); return e
-    spawn = param('Spawn', 0.0, -900, 0); life = param('Life', 2.5, -900, 80); dens = param('Density', 1.0, -900, 160); size = param('Size', 1.0, -900, 240)
+    spawn = param('Age', 0.0, -900, 0); life = param('Life', 2.5, -900, 80); dens = param('Density', 1.0, -900, 160); size = param('Size', 1.0, -900, 240)
     tm = EDIT.create_material_expression(m, unreal.MaterialExpressionTime, -900, 320)
     vc = EDIT.create_material_expression(m, unreal.MaterialExpressionVertexColor, -900, 400)
     wp = EDIT.create_material_expression(m, unreal.MaterialExpressionWorldPosition, -1200, 480)
     op = EDIT.create_material_expression(m, unreal.MaterialExpressionObjectPositionWS, -1200, 560)
     rel = EDIT.create_material_expression(m, unreal.MaterialExpressionSubtract, -950, 520)
     EDIT.connect_material_expressions(wp, '', rel, 'A'); EDIT.connect_material_expressions(op, '', rel, 'B')
-    c010 = EDIT.create_material_expression(m, unreal.MaterialExpressionConstant3Vector, -1200, 640); c010.set_editor_property('constant', unreal.LinearColor(0, 1, 0, 0))
-    fwd = EDIT.create_material_expression(m, unreal.MaterialExpressionTransform, -950, 640)
-    fwd.set_editor_property('transform_source_type', unreal.MaterialVectorCoordTransformSource.TRANSFORMSOURCE_LOCAL); fwd.set_editor_property('transform_type', unreal.MaterialVectorCoordTransform.TRANSFORM_WORLD)
-    EDIT.connect_material_expressions(c010, '', fwd, 'Input')
     def custom(code, ins, otype, x, y):
         e = EDIT.create_material_expression(m, unreal.MaterialExpressionCustom, x, y); e.set_editor_property('output_type', otype)
         lst = []
         for nm in ins:
             it = unreal.CustomInput(); it.set_editor_property('input_name', nm); lst.append(it)
         e.set_editor_property('inputs', lst); e.set_editor_property('code', code); return e
-    w = custom(SMOKE_WPO, ('Now', 'Spawn', 'Life', 'Size', 'VC', 'Rel', 'Fwd'), unreal.CustomMaterialOutputType.CMOT_FLOAT3, -500, 300)
-    for src, o, pn in ((tm, '', 'Now'), (spawn, '', 'Spawn'), (life, '', 'Life'), (size, '', 'Size'), (vc, '', 'VC'), (rel, '', 'Rel'), (fwd, '', 'Fwd')): assert EDIT.connect_material_expressions(src, o, w, pn), pn
+    w = custom(SMOKE_WPO, ('Age', 'Life', 'Size', 'VC', 'Rel'), unreal.CustomMaterialOutputType.CMOT_FLOAT3, -500, 300)
+    for src, o, pn in ((spawn, '', 'Age'), (life, '', 'Life'), (size, '', 'Size'), (vc, '', 'VC'), (rel, '', 'Rel')): assert EDIT.connect_material_expressions(src, o, w, pn), pn
     assert EDIT.connect_material_property(w, '', unreal.MaterialProperty.MP_WORLD_POSITION_OFFSET)
     nrm = EDIT.create_material_expression(m, unreal.MaterialExpressionVertexNormalWS, -900, 760)
     cam = EDIT.create_material_expression(m, unreal.MaterialExpressionCameraVectorWS, -900, 840)
     nz = EDIT.create_material_expression(m, unreal.MaterialExpressionNoise, -900, 920)
     nz.set_editor_property('scale', 0.12); nz.set_editor_property('levels', 3); nz.set_editor_property('output_min', 0.0); nz.set_editor_property('output_max', 1.0)
-    o = custom(SMOKE_OPA, ('Now', 'Spawn', 'Life', 'Density', 'VC', 'N', 'V', 'Noise'), unreal.CustomMaterialOutputType.CMOT_FLOAT1, -500, 700)
-    for src, ou, pn in ((tm, '', 'Now'), (spawn, '', 'Spawn'), (life, '', 'Life'), (dens, '', 'Density'), (vc, '', 'VC'), (nrm, '', 'N'), (cam, '', 'V'), (nz, '', 'Noise')): assert EDIT.connect_material_expressions(src, ou, o, pn), pn
+    o = custom(SMOKE_OPA, ('Age', 'Life', 'Density', 'VC', 'N', 'V', 'Noise'), unreal.CustomMaterialOutputType.CMOT_FLOAT1, -500, 700)
+    for src, ou, pn in ((spawn, '', 'Age'), (life, '', 'Life'), (dens, '', 'Density'), (vc, '', 'VC'), (nrm, '', 'N'), (cam, '', 'V'), (nz, '', 'Noise')): assert EDIT.connect_material_expressions(src, ou, o, pn), pn
     assert EDIT.connect_material_property(o, '', unreal.MaterialProperty.MP_OPACITY)
-    col = EDIT.create_material_expression(m, unreal.MaterialExpressionConstant3Vector, -500, 100); col.set_editor_property('constant', unreal.LinearColor(0.34, 0.35, 0.37, 1))   # 무연 화약 연기: 옅은 회색
+    col = EDIT.create_material_expression(m, unreal.MaterialExpressionConstant3Vector, -500, 100); col.set_editor_property('constant', unreal.LinearColor(0.80, 0.81, 0.84, 1))   # 무연 화약 연기: 옅은 회백색(2026-11-21: 0.34 는 밝은 하늘 앞에서 안 보였음)
     assert EDIT.connect_material_property(col, '', unreal.MaterialProperty.MP_EMISSIVE_COLOR)
     EDIT.recompile_material(m); assert ASSETS.save_loaded_asset(m, False)
     mesh.set_material(0, m); assert ASSETS.save_loaded_asset(mesh, False)
@@ -331,6 +329,23 @@ def smoke():
         for n in [reset, lifeN, mid] + sets:
             wire(tail, n.find_execute_pin()); tail = n.find_then_pin()
         out['graph'] = 'added'
+    api = unreal.BlueprintEditorLibrary; have = {str(n) for n in api.list_member_variable_names(bp)}
+    if 'SmokeMID' not in have: assert api.add_member_variable(bp, 'SmokeMID', api.get_object_reference_type(unreal.MaterialInstanceDynamic))
+    if 'SmokeAge' not in have: assert api.add_member_variable(bp, 'SmokeAge', api.get_basic_type_by_name('real'))
+    api.compile_blueprint(bp)
+    ed = unreal.BlueprintGraphEditor.get_graph_editor_by_name(bp, 'EventGraph'); nodes = {n.get_name(): n for n in ed.list_all_nodes()}
+    if 'HS_TickSet' not in nodes:
+        mid = nodes['HS_MID']; t = mid.find_then_pin(); old_ = list(t.list_connected_pins()); t.break_pin_links()
+        keep = ed.add_set_member_variable_node('SmokeMID'); keep.rename('HS_KeepMID'); wire(mid.find_result_pin(), keep.find_input_pin('SmokeMID')); wire(t, keep.find_execute_pin())
+        for q in old_: wire(keep.find_then_pin(), q)
+        tick = ed.find_event_node('ReceiveTick') or api.add_event_override(bp, 'ReceiveTick', unreal.IntPoint(0, 600)); assert tick
+        add = ed.add_call_function_node(MATH + 'Add_DoubleDouble'); add.rename('HS_TickAdd')
+        wire(ed.add_get_member_variable_node('SmokeAge', '').find_output_pin('SmokeAge'), add.find_input_pin('A')); wire(tick.find_output_pin('DeltaSeconds'), add.find_input_pin('B'))
+        st_ = ed.add_set_member_variable_node('SmokeAge'); st_.rename('HS_TickSet'); wire(add.find_result_pin(), st_.find_input_pin('SmokeAge')); wire(tick.find_then_pin(), st_.find_execute_pin())
+        sp_ = ed.add_call_function_node('/Script/Engine.MaterialInstanceDynamic:SetScalarParameterValue'); sp_.rename('HS_TickParam')
+        wire(ed.add_get_member_variable_node('SmokeMID', '').find_output_pin('SmokeMID'), sp_.find_self_pin()); literal(sp_, 'ParameterName', 'Age')
+        wire(st_.find_output_pin('Output_Get'), sp_.find_input_pin('Value')); wire(st_.find_then_pin(), sp_.find_execute_pin())
+        out['tick'] = 'added'
     unreal.BlueprintEditorLibrary.compile_blueprint(bp); out['status'] = str(bp.get_editor_property('status'))
     assert bp.get_editor_property('status') != unreal.BlueprintStatus.BS_ERROR; assert ASSETS.save_loaded_asset(bp, False)
     return out
@@ -449,8 +464,6 @@ def graph(pawn):
     ok3, b3 = fxrow('Fx', 'FurinaFXTable'); ok4, b4 = fxrow('Fx2', 'FurinaFXTable2')
     fs = val(g.call('FlashSize', MATH + 'SelectFloat', A=b3.find_output_pin('Z'), B=0.6, bPickA=ok3))
     fl = val(g.call('FlashLen', MATH + 'SelectFloat', A=b4.find_output_pin('X'), B=0.8, bPickA=ok4))
-    sd = val(g.call('SmokeDen', MATH + 'SelectFloat', A=b4.find_output_pin('Y'), B=0.4, bPickA=ok4))
-    sl = val(g.call('SmokeLife', MATH + 'SelectFloat', A=b4.find_output_pin('Z'), B=2.2, bPickA=ok4))
     st = g.call('Muzzle', ENGINE + 'SceneComponent:GetSocketTransform', target=g.get('FurinaFPVM'), InSocketName='VM_Muzzle')
     bt = g.call('MuzzleBreak', MATH + 'BreakTransform', InTransform=st.find_result_pin())
     loc, rot = bt.find_output_pin('Location'), bt.find_output_pin('Rotation')
@@ -463,10 +476,7 @@ def graph(pawn):
                 Location=loc, Rotation=ns_rot)
     nsg = g.call('NSScale', '/Script/Niagara.NiagaraComponent:SetVariableFloat', target=ns.find_result_pin(), InVariableName='Global Scale', InValue=val(g.call('NSScaleV', MATH + 'Multiply_DoubleDouble', A=fs, B=0.2)))
     nsb = g.call('NSShell', '/Script/Niagara.NiagaraComponent:SetVariableBool', target=ns.find_result_pin(), InVariableName='Use Bullet Shell', InValue=False)
-    sxf = val(g.call('SmokeXf', MATH + 'MakeTransform', Location=loc, Rotation=rot, Scale=val(g.call('SmokeV', MATH + 'MakeVector', X=sd, Y=sl, Z=fl))))
-    ssp = g.call('SmokeSpawn', GS + 'BeginDeferredActorSpawnFromClass', ActorClass=FX + '/BP_HistSmoke.BP_HistSmoke_C', SpawnTransform=sxf, CollisionHandlingOverride='AlwaysSpawn')
-    sfin = g.call('SmokeFinish', GS + 'FinishSpawningActor', Actor=ssp.find_result_pin(), SpawnTransform=sxf)
-    tail = chain(brF.find_then_pin(), [sp, fin, ns, nsg, nsb, ssp, sfin])
+    tail = chain(brF.find_then_pin(), [sp, fin, ns, nsg, nsb])
     after_fns = list(g.nodes['FNS_SetUseShell'].find_then_pin().list_connected_pins())
     for t in after_fns: wire(tail, t)
     out['fx_after'] = [t.get_owning_node().get_name() for t in after_fns]; out['flash_in'] = [p.get_owning_node().get_name() for p in ins]
@@ -502,6 +512,7 @@ def main():
     assert pawn.get_editor_property('status') != unreal.BlueprintStatus.BS_ERROR, 'pawn compile error'
     R['pawn_saved'] = bool(ASSETS.save_loaded_asset(pawn, False))
 
-try: main()
-except Exception: R['error'] = traceback.format_exc()[-2000:]
-R['done'] = True; save(); print('HIST_FX', R.get('error', 'ok')[-300:])
+if __name__ == '__main__':
+    try: main()
+    except Exception: R['error'] = traceback.format_exc()[-2000:]
+    R['done'] = True; save(); print('HIST_FX', R.get('error', 'ok')[-300:])

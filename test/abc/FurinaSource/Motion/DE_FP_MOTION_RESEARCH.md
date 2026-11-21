@@ -209,3 +209,78 @@
 7. PzB 39
 8. Panzerfaust
 9. MG34 / MG42(들고 쏘기)
+
+## 5-1. 권총 세 자세(비조준 한손 / 견착 한손 팔 뻗기 / 정조준 두 손) — 2026-11-21 구현
+
+- **사용자 지정:**
+  - 비조준: 한손.
+  - 견착: 팔을 쭉 뻗은 한손, 총을 안쪽으로 기울여 정조준과 구별.
+  - 정조준: 두 손으로 기계식 조준기를 봄.
+- **역사:** 2차대전기 군·특수부대 권총 사격은 한손 지향사격 위주였습니다.
+  - Applegate의 *Kill or Get Killed*(1943, Fairbairn·Sykes와 만든 OSS 훈련 FSA) 방식:
+    - 한손으로 팔·손목을 굳힌 채 권총을 몸 가운데로 들어 올려 쏩니다.
+    - 표적이 옆에 있으면 어깨·팔꿈치가 아니라 허리로 몸을 돌립니다.
+  - 두 손 조준 자세는 전후에 퍼졌습니다:
+    - Weaver: 1959년, Jack Weaver.
+    - Isosceles: 1980년대 IPSC.
+  - 그래서 정조준만 두 손이고 나머지는 한손입니다.
+- **출처:**
+  - [2차] Wikipedia *Point shooting*(Applegate 1943, FSA) — https://en.wikipedia.org/wiki/Point_shooting
+  - [2차] Wikipedia *Weaver stance* — https://en.wikipedia.org/wiki/Weaver_stance
+  - [2차] Wikipedia *Isosceles stance* — https://en.wikipedia.org/wiki/Isosceles_stance
+  - [당시] TM-E 30-451(1945) 권총 항목: P08·P38 제원(사격 자세 기술은 없음) — https://lonesentry.com/manuals/tme30/ch7sec2sub1and2.html
+- **구현:** `Scripts/Blender/fpvm_pistols2.py`
+
+## 5-2. 권총 탄창 교환 방식(2026-11-21 구현)
+
+- **P38:** 탄창 걸쇠가 손잡이 밑 뒤쪽에 있는 힐(heel) 방식입니다. 걸쇠를 밀며 탄창을 손으로 뽑아냅니다. 마지막 발 뒤에는 슬라이드가 열린 채 멈추고, 새 탄창을 넣은 뒤 슬라이드를 당겼다 놓습니다.
+- **P08:** 손잡이 왼쪽, 방아쇠 뒤에 탄창 단추가 있습니다. 탄창 바닥에는 나무 손잡이가 있습니다. 마지막 발 뒤에는 토글이 열린 채 멈추고, 토글 손잡이를 위·뒤로 꺾었다 놓아 닫습니다.
+- **PP:** 손잡이 왼쪽, 방아쇠 뒤에 탄창 단추가 있습니다. 마지막 발 뒤에는 슬라이드가 열린 채 멈추고, 슬라이드를 당겼다 놓아 닫습니다.
+- **출처:**
+  - [당시] TM-E 30-451(1945) 권총 항목(P08·P38 제원·작동) — https://lonesentry.com/manuals/tme30/ch7sec2sub1and2.html
+  - [2차] Wikipedia *Walther P38* / *Luger pistol* / *Walther PP* — https://en.wikipedia.org/wiki/Walther_P38 , https://en.wikipedia.org/wiki/Luger_pistol , https://en.wikipedia.org/wiki/Walther_PP
+  - [2차] IMFDB *Walther P38* / *Luger P08* / *Walther PP* (영상 속 장전 장면) — https://www.imfdb.org/wiki/Walther_P38 , https://www.imfdb.org/wiki/Luger_P08 , https://www.imfdb.org/wiki/Walther_PP
+- **확인하지 못한 점:** 이 절의 걸쇠·단추 위치와 열린 채 멈춤 여부는 위 문서들에서 따로 확인하지 않았습니다. 일반적으로 알려진 사실을 바탕으로 정리했습니다.
+
+## 9. 탄약 장약량 기반 사격 효과(총구 화염·연기·반동·화면 흔들림) — 2026-11-21
+
+| 무기 | 탄약 | 탄두 g | 장약 g | 탄속 m/s | 총 kg | 총열 mm | 자유 반동 m/s (M4 대비) | 반동 J | 흔들림 | 화염 크기 | 연기 농도·지속 |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| Kar98k | 7.92×57 s.S. | 12.8 | 2.75~2.85 | 755 | 3.9 | 600 | 3.62 (×2.01) | 25.5 | 2.15 | 1.00 | 1.0 · 3.2초 |
+| Kar98k+ZF39 / ZF41 | 〃 | | | | 4.5 / 4.2(추정) | | ×1.74 / ×1.87 | 22.1 / 23.7 | 2.00 / 2.07 | 1.00 | 1.0 |
+| G43 / +ZF4 | 〃 | 12.8 | 2.8 | 760 | 4.4 / 4.9(추정) | 550 | ×1.79 / ×1.61 | 22.8 / 20.5 | 2.04 / 1.93 | 1.03 | 1.0 |
+| StG44 | 7.92×33 Kurz | 8.1 | 1.57(추정) | 685 | 5.13(장전) | 419 | ×0.81 | 5.4 | 0.99 | 0.83 | 0.75 · 2.8초 |
+| MP40 / MP38 | 9×19 Pist.Patr.08 | 8.0 | 0.36(추정) | 400 | 3.97 / 4.1(추정) | 251 | ×0.48 / ×0.46 | 1.5 | 0.52 | 0.47 | 0.36 · 2.2초 |
+| P38 | 9×19 | 8.0 | 0.36(추정) | 320 | 0.96 | 125 | ×1.58 | 3.9 | 0.84 | 0.57 | 0.36 |
+| P08 | 9×19 | 8.0 | 0.36(추정) | 375 | 0.871 | 100 | ×2.04 | 5.9 | 1.03 | 0.61 | 0.36 |
+| PP | 7.65 Browning | 4.6 | 0.17(추정) | 320 | 0.66 | 98 | ×1.31 | 1.8 | 0.58 | 0.42 | 0.25 · 2.0초 |
+
+- **계산 방법**(`Scripts/Tools/gen_hist_fx.py` → `Data/hist_fx.json`):
+  - 자유 반동은 Free recoil 식 v = (m탄·v탄 + m장약·v가스)/M을 씁니다.
+  - 가스 속도:
+    - 소총: 1,585 m/s(문서의 7×57 예시)
+    - Kurz: 1.75 v
+    - 권총탄: 1.5 v
+- **게임 환산(가정):**
+  - 반동은 M4(1.8 m/s) 대비 배율입니다. 권총을 한손으로 쥐면 1.5배를 더 곱합니다.
+  - 흔들림은 sqrt(에너지/5.5 J)입니다.
+  - 화염 크기는 sqrt(장약/2.8 g) × (600 mm/총열)^0.3입니다.
+  - 연기 농도는 sqrt(장약/2.8 g)입니다.
+- **화염 모양:**
+  - 독일 총은 맨 총구라서 M4 소염기의 꽃잎·별 모양을 껐습니다.
+  - 길이비: 소총 1.0, 기관단총 0.75, 권총 0.55.
+  - 근거: Muzzle flash 문서. 화염 크기는 장약 연소 에너지와 덜 탄 분출물 양에 좌우되고, 2차 화염은 분출물이 공기와 만나 타면서 생깁니다. Kar98k 문서에 따르면 s.S. 탄은 짧은 총열에서 예전 S 탄보다 화염이 적었습니다.
+- **연기:** 무연 화약이라 옅은 회백색 연기가 잠깐 남았다가 위로 오르며 퍼지고 사라집니다.
+- **출처:**
+  - [1] de.wikipedia *7,92 × 57 mm*(s.S. 장약 2.75~2.85 g, 12.8 g, 755 m/s) — https://de.wikipedia.org/wiki/7,92_%C3%97_57_mm
+  - [2] Wikipedia *Karabiner 98k* — https://en.wikipedia.org/wiki/Karabiner_98k
+  - [3] Wikipedia *Gewehr 43* — https://en.wikipedia.org/wiki/Gewehr_43
+  - [4] Wikipedia *7.92×33mm Kurz* — https://en.wikipedia.org/wiki/7.92%C3%9733mm_Kurz
+  - [5] Wikipedia *StG 44* — https://en.wikipedia.org/wiki/StG_44
+  - [6] Wikipedia *MP 40*, *Walther P38*, *Luger pistol*, *Walther PP*, *.32 ACP*
+  - [7] Wikipedia *Free recoil* — https://en.wikipedia.org/wiki/Free_recoil
+  - [8] Wikipedia *Muzzle flash* — https://en.wikipedia.org/wiki/Muzzle_flash
+  - [당시] TM-E 30-451(1945): Kar98k 약 9 lb, G43 10 lb, MP40 9 lb·순환 500발/분, MP43/1 2,200 ft/s — https://lonesentry.com/manuals/tme30/ch7sec2sub5.html , https://lonesentry.com/manuals/tme30/ch7sec2sub4.html
+- **출처에 숫자가 없어 추정한 값:**
+  - 장약: Kurz·9 mm·7.65 mm
+  - 무게: MP38, 조준경과 마운트

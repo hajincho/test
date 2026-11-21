@@ -26,15 +26,15 @@ STYLES = {
 }
 
 
-def source_maps(number):
+def source_maps(number, folder=FOLDER, source='FurinaSource/Textures/FPVM/Metals'):
     maps = {}
     for role, (compression, _sampler) in TEXTURES.items():
         name = f'T_FPVM_{number}_{role}'
-        path = f'{FOLDER}/{name}'
+        path = f'{folder}/{name}'
         if not ASSETS.does_asset_exist(path):
             task = unreal.AssetImportTask()
-            task.filename = str(ROOT / 'FurinaSource/Textures/FPVM/Metals' / (name + '.png'))
-            task.destination_path = FOLDER
+            task.filename = str(ROOT / source / (name + '.png'))
+            task.destination_path = folder
             task.destination_name = name
             task.automated = True
             TOOLS.import_asset_tasks([task])
@@ -47,11 +47,11 @@ def source_maps(number):
     return maps
 
 
-def rendered_metal(name, maps, tint, rough_bias):
-    path = f'{FOLDER}/M_FPVM_{name}'
+def rendered_metal(name, maps, tint, rough_bias, folder=FOLDER):
+    path = f'{folder}/M_FPVM_{name}'
     if ASSETS.does_asset_exist(path):
         return unreal.load_asset(path)
-    material = TOOLS.create_asset('M_FPVM_' + name, FOLDER, unreal.Material, unreal.MaterialFactoryNew())
+    material = TOOLS.create_asset('M_FPVM_' + name, folder, unreal.Material, unreal.MaterialFactoryNew())
     material.set_editor_property('used_with_skeletal_mesh', True)
 
     def expression(cls, x, y):

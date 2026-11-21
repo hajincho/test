@@ -45,9 +45,10 @@ def main():
     targets = {key: align(settings) for key, settings in rifles.items()}
     # The assembled artist models supply the optical centers and tube extents.
     for key, rifle, x, z, onscreen_distance, power in (
-        ('kar98k_zf39', 'kar98k', .65, 11.90, 18., 4.),
-        ('kar98k_zf41', 'kar98k', .90, 10.74, 45., 1.5),
-        ('g43_zf4', 'g43', 0., 11.50, 18., 4.),
+        # 눈-접안부 거리(cm). 2026-11-21: 조준경 안만 확대(화면 속 화면)로 바꾸며 접안 렌즈가 화면에서 반지름 약 0.12~0.17(세로 대비)로 보이게 조정
+        ('kar98k_zf39', 'kar98k', .65, 11.90, 15., 4.),
+        ('kar98k_zf41', 'kar98k', .90, 10.74, 30., 1.5),
+        ('g43_zf4', 'g43', 0., 11.50, 11., 4.),
     ):
         front_y, rear_y = scopes[key]['scope_y_range']
         settings = dict(rifles[rifle], front=[x, front_y, z], rear=[x, rear_y, z], rear_dist_cm=onscreen_distance)
