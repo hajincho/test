@@ -1,0 +1,73 @@
+{
+ "G43": [
+  [
+   "Furina_SkinHair",
+   "/Game/Furina/Materials/MI_Furina_SkinHair.MI_Furina_SkinHair"
+  ],
+  [
+   "Furina_Outfit",
+   "/Game/Furina/Materials/MI_Furina_Outfit.MI_Furina_Outfit"
+  ],
+  [
+   "Gewehr43",
+   "/Game/Furina/Weapons/Germany/g43/MI_DE_g43_Gewehr43.MI_DE_g43_Gewehr43"
+  ],
+  [
+   "Clip_Steel",
+   "/Game/Furina/Weapons/Germany/mauser_clip/MI_DE_mauser_clip_Material.MI_DE_mauser_clip_Material"
+  ],
+  [
+   "Clip_Projectile",
+   "/Game/Furina/Weapons/Germany/mauser_clip/MI_DE_mauser_clip_6_5.MI_DE_mauser_clip_6_5"
+  ],
+  [
+   "Clip_Case",
+   "/Game/Furina/Weapons/Germany/mauser_clip/MI_DE_mauser_clip_case.MI_DE_mauser_clip_case"
+  ]
+ ],
+ "Kar98k": [
+  [
+   "Furina_SkinHair",
+   "/Game/Furina/Materials/MI_Furina_SkinHair.MI_Furina_SkinHair"
+  ],
+  [
+   "Furina_Outfit",
+   "/Game/Furina/Materials/MI_Furina_Outfit.MI_Furina_Outfit"
+  ],
+  [
+   "Material_005",
+   "/Game/Furina/Weapons/Germany/kar98k/MI_DE_kar98k_Material_005.MI_DE_kar98k_Material_005"
+  ],
+  [
+   "Material",
+   "/Game/Furina/Weapons/Germany/kar98k/MI_DE_kar98k_Material.MI_DE_kar98k_Material"
+  ],
+  [
+   "Material_001",
+   "/Game/Furina/Weapons/Germany/kar98k/MI_DE_kar98k_Material_001.MI_DE_kar98k_Material_001"
+  ],
+  [
+   "Material_002",
+   "/Game/Furina/Weapons/Germany/kar98k/MI_DE_kar98k_Material_002.MI_DE_kar98k_Material_002"
+  ],
+  [
+   "Material_003",
+   "/Game/Furina/Weapons/Germany/kar98k/MI_DE_kar98k_Material_003.MI_DE_kar98k_Material_003"
+  ],
+  [
+   "Clip_Steel",
+   "/Game/Furina/Weapons/Germany/mauser_clip/MI_DE_mauser_clip_Material.MI_DE_mauser_clip_Material"
+  ],
+  [
+   "Clip_Projectile",
+   "/Game/Furina/Weapons/Germany/mauser_clip/MI_DE_mauser_clip_6_5.MI_DE_mauser_clip_6_5"
+  ],
+  [
+   "Clip_Case",
+   "/Game/Furina/Weapons/Germany/mauser_clip/MI_DE_mauser_clip_case.MI_DE_mauser_clip_case"
+  ]
+ ],
+ "FurinaVMMesh_g43": "/Game/Furina/FPVM/G43/SK_FPVM_G43.SK_FPVM_G43",
+ "FurinaVMMesh_kar98k": "/Game/Furina/FPVM/Kar98k/SK_FPVM_Kar98k.SK_FPVM_Kar98k",
+ "FurinaVMIdle_g43": "/Game/Furina/FPVM/G43/AS_FPVM_G43_Idle.AS_FPVM_G43_Idle"
+}

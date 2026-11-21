@@ -1,0 +1,560 @@
+{
+ "fps": 60,
+ "objects": [
+  {
+   "name": "arms",
+   "type": "MESH",
+   "parent": "Rig",
+   "dims_cm": [
+    60.8,
+    52.8,
+    39.3
+   ],
+   "verts": 7452,
+   "vgroups": 50,
+   "mats": [
+    "arms"
+   ]
+  },
+  {
+   "name": "Camera",
+   "type": "CAMERA",
+   "parent": null,
+   "dims_cm": [
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  {
+   "name": "Rifle",
+   "type": "MESH",
+   "parent": "Rig",
+   "dims_cm": [
+    11.5,
+    105.9,
+    43.4
+   ],
+   "verts": 10344,
+   "vgroups": 4,
+   "mats": [
+    "Rifle",
+    "Other"
+   ]
+  },
+  {
+   "name": "Rig",
+   "type": "ARMATURE",
+   "parent": null,
+   "dims_cm": [
+    111.5,
+    65.6,
+    61.4
+   ],
+   "bones": [
+    [
+     "Root",
+     null
+    ],
+    [
+     "Arm_L",
+     "Root"
+    ],
+    [
+     "UpArm_L",
+     "Arm_L"
+    ],
+    [
+     "Forearm_L",
+     "UpArm_L"
+    ],
+    [
+     "BoneTwist_03.L",
+     "Forearm_L"
+    ],
+    [
+     "BoneTwist_02.L",
+     "BoneTwist_03.L"
+    ],
+    [
+     "BoneTwist_01.L",
+     "BoneTwist_02.L"
+    ],
+    [
+     "BoneTwist_01.L_end",
+     "BoneTwist_01.L"
+    ],
+    [
+     "Arm_R",
+     "Root"
+    ],
+    [
+     "UpArm_R",
+     "Arm_R"
+    ],
+    [
+     "Forearm_R",
+     "UpArm_R"
+    ],
+    [
+     "BoneTwist_03.R",
+     "Forearm_R"
+    ],
+    [
+     "BoneTwist_02.R",
+     "BoneTwist_03.R"
+    ],
+    [
+     "BoneTwist_01.R",
+     "BoneTwist_02.R"
+    ],
+    [
+     "BoneTwist_01.R_end",
+     "BoneTwist_01.R"
+    ],
+    [
+     "IK_Hand_Cntrl_L",
+     "Root"
+    ],
+    [
+     "Hand_L",
+     "IK_Hand_Cntrl_L"
+    ],
+    [
+     "Bone_L.004",
+     "Hand_L"
+    ],
+    [
+     "Bone_L.005",
+     "Bone_L.004"
+    ],
+    [
+     "Bone_L.006",
+     "Bone_L.005"
+    ],
+    [
+     "Bone_L.007",
+     "Bone_L.006"
+    ],
+    [
+     "Bone_L.007_end",
+     "Bone_L.007"
+    ],
+    [
+     "Bone_L.008",
+     "Hand_L"
+    ],
+    [
+     "Bone_L.009",
+     "Bone_L.008"
+    ],
+    [
+     "Bone_L.010",
+     "Bone_L.009"
+    ],
+    [
+     "Bone_L.011",
+     "Bone_L.010"
+    ],
+    [
+     "Bone_L.011_end",
+     "Bone_L.011"
+    ],
+    [
+     "Bone_L.012",
+     "Hand_L"
+    ],
+    [
+     "Bone_L.013",
+     "Bone_L.012"
+    ],
+    [
+     "Bone_L.014",
+     "Bone_L.013"
+    ],
+    [
+     "Bone_L.015",
+     "Bone_L.014"
+    ],
+    [
+     "Bone_L.015_end",
+     "Bone_L.015"
+    ],
+    [
+     "Bone_L.016",
+     "Hand_L"
+    ],
+    [
+     "Bone_L.017",
+     "Bone_L.016"
+    ],
+    [
+     "Bone_L.018",
+     "Bone_L.017"
+    ],
+    [
+     "Bone_L.019",
+     "Bone_L.018"
+    ],
+    [
+     "Bone_L.019_end",
+     "Bone_L.019"
+    ],
+    [
+     "Bone_L.020",
+     "Hand_L"
+    ],
+    [
+     "Bone_L.021",
+     "Bone_L.020"
+    ],
+    [
+     "Bone_L.022",
+     "Bone_L.021"
+    ],
+    [
+     "Bone_L.022_end",
+     "Bone_L.022"
+    ],
+    [
+     "IK_PoleTrgt_L",
+     "Root"
+    ],
+    [
+     "IK_PoleTrgt_L_end",
+     "IK_PoleTrgt_L"
+    ],
+    [
+     "IK_Hand_Cntrl_R",
+     "Root"
+    ],
+    [
+     "Hand_R",
+     "IK_Hand_Cntrl_R"
+    ],
+    [
+     "Bone_R.004",
+     "Hand_R"
+    ],
+    [
+     "Bone_R.005",
+     "Bone_R.004"
+    ],
+    [
+     "Bone_R.006",
+     "Bone_R.005"
+    ],
+    [
+     "Bone_R.007",
+     "Bone_R.006"
+    ],
+    [
+     "Bone_R.007_end",
+     "Bone_R.007"
+    ],
+    [
+     "Bone_R.008",
+     "Hand_R"
+    ],
+    [
+     "Bone_R.009",
+     "Bone_R.008"
+    ],
+    [
+     "Bone_R.010",
+     "Bone_R.009"
+    ],
+    [
+     "Bone_R.011",
+     "Bone_R.010"
+    ],
+    [
+     "Bone_R.011_end",
+     "Bone_R.011"
+    ],
+    [
+     "Bone_R.012",
+     "Hand_R"
+    ],
+    [
+     "Bone_R.013",
+     "Bone_R.012"
+    ],
+    [
+     "Bone_R.014",
+     "Bone_R.013"
+    ],
+    [
+     "Bone_R.015",
+     "Bone_R.014"
+    ],
+    [
+     "Bone_R.015_end",
+     "Bone_R.015"
+    ],
+    [
+     "Bone_R.016",
+     "Hand_R"
+    ],
+    [
+     "Bone_R.017",
+     "Bone_R.016"
+    ],
+    [
+     "Bone_R.018",
+     "Bone_R.017"
+    ],
+    [
+     "Bone_R.019",
+     "Bone_R.018"
+    ],
+    [
+     "Bone_R.019_end",
+     "Bone_R.019"
+    ],
+    [
+     "Bone_R.020",
+     "Hand_R"
+    ],
+    [
+     "Bone_R.021",
+     "Bone_R.020"
+    ],
+    [
+     "Bone_R.022",
+     "Bone_R.021"
+    ],
+    [
+     "Bone_R.022_end",
+     "Bone_R.022"
+    ],
+    [
+     "IK_PoleTrgt_R",
+     "Root"
+    ],
+    [
+     "IK_PoleTrgt_R_end",
+     "IK_PoleTrgt_R"
+    ],
+    [
+     "Body",
+     "Root"
+    ],
+    [
+     "Trigger",
+     "Body"
+    ],
+    [
+     "Trigger_end",
+     "Trigger"
+    ],
+    [
+     "Bolt",
+     "Body"
+    ],
+    [
+     "Bolt_end",
+     "Bolt"
+    ],
+    [
+     "Mag",
+     "Root"
+    ],
+    [
+     "Mag_end",
+     "Mag"
+    ]
+   ],
+   "action": "Rig|Rig|FPS_Pistol_Fire"
+  },
+  {
+   "name": "Sun",
+   "type": "LIGHT",
+   "parent": null,
+   "dims_cm": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "action": "Sun|Sun|SunAction"
+  }
+ ],
+ "actions": [
+  {
+   "name": "Camera|arms|SunAction",
+   "range": [
+    1.0,
+    2.0
+   ],
+   "sec": 0.02
+  },
+  {
+   "name": "Camera|Rifle|SunAction",
+   "range": [
+    1.0,
+    2.0
+   ],
+   "sec": 0.02
+  },
+  {
+   "name": "Camera|Rig|FPS_Pistol_Fire",
+   "range": [
+    1.0,
+    15.0
+   ],
+   "sec": 0.23
+  },
+  {
+   "name": "Camera|Rig|FPS_Pistol_Fire.002",
+   "range": [
+    1.0,
+    15.0
+   ],
+   "sec": 0.23
+  },
+  {
+   "name": "Camera|Rig|SRifle_Idle",
+   "range": [
+    1.0,
+    181.0
+   ],
+   "sec": 3.0
+  },
+  {
+   "name": "Camera|Rig|SRifle_Reload",
+   "range": [
+    1.0,
+    191.0
+   ],
+   "sec": 3.17
+  },
+  {
+   "name": "Camera|Rig|SRifle_Reload_Full",
+   "range": [
+    1.0,
+    286.0
+   ],
+   "sec": 4.75
+  },
+  {
+   "name": "Camera|Rig|SRifle_Shot_nosight",
+   "range": [
+    1.0,
+    101.0
+   ],
+   "sec": 1.67
+  },
+  {
+   "name": "Camera|Rig|SRifle_Shot_sight",
+   "range": [
+    1.0,
+    101.0
+   ],
+   "sec": 1.67
+  },
+  {
+   "name": "Camera|Rig|SRifle_Walk",
+   "range": [
+    1.0,
+    76.0
+   ],
+   "sec": 1.25
+  },
+  {
+   "name": "Camera|Rig|SunAction",
+   "range": [
+    1.0,
+    2.0
+   ],
+   "sec": 0.02
+  },
+  {
+   "name": "Camera|Sun|SunAction",
+   "range": [
+    1.0,
+    2.0
+   ],
+   "sec": 0.02
+  },
+  {
+   "name": "Rig|Rig|FPS_Pistol_Fire",
+   "range": [
+    1.0,
+    15.0
+   ],
+   "sec": 0.23
+  },
+  {
+   "name": "Rig|Rig|FPS_Pistol_Fire.002",
+   "range": [
+    1.0,
+    15.0
+   ],
+   "sec": 0.23
+  },
+  {
+   "name": "Rig|Rig|SRifle_Idle",
+   "range": [
+    1.0,
+    181.0
+   ],
+   "sec": 3.0
+  },
+  {
+   "name": "Rig|Rig|SRifle_Reload",
+   "range": [
+    1.0,
+    191.0
+   ],
+   "sec": 3.17
+  },
+  {
+   "name": "Rig|Rig|SRifle_Reload_Full",
+   "range": [
+    1.0,
+    286.0
+   ],
+   "sec": 4.75
+  },
+  {
+   "name": "Rig|Rig|SRifle_Shot_nosight",
+   "range": [
+    1.0,
+    101.0
+   ],
+   "sec": 1.67
+  },
+  {
+   "name": "Rig|Rig|SRifle_Shot_sight",
+   "range": [
+    1.0,
+    101.0
+   ],
+   "sec": 1.67
+  },
+  {
+   "name": "Rig|Rig|SRifle_Walk",
+   "range": [
+    1.0,
+    76.0
+   ],
+   "sec": 1.25
+  },
+  {
+   "name": "Rig|Rig|SunAction",
+   "range": [
+    1.0,
+    2.0
+   ],
+   "sec": 0.02
+  },
+  {
+   "name": "Sun|Sun|SunAction",
+   "range": [
+    1.0,
+    2.0
+   ],
+   "sec": 0.02
+  }
+ ]
+}

@@ -1,0 +1,50 @@
+[
+ {
+  "tag": "a",
+  "vars": {
+   "FurinaPFLocX": 0.986,
+   "FurinaPFLocY": -12.944,
+   "FurinaPFLocZ": -4.355
+  },
+  "views": [
+   "right",
+   "left"
+  ]
+ },
+ {
+  "tag": "b",
+  "vars": {
+   "FurinaPFLocX": 1.874,
+   "FurinaPFLocY": -13.188,
+   "FurinaPFLocZ": -2.465
+  },
+  "views": [
+   "right",
+   "left"
+  ]
+ },
+ {
+  "tag": "c",
+  "vars": {
+   "FurinaPFLocX": 1.732,
+   "FurinaPFLocY": -11.81,
+   "FurinaPFLocZ": -2.75
+  },
+  "views": [
+   "right",
+   "left"
+  ]
+ },
+ {
+  "tag": "d",
+  "vars": {
+   "FurinaPFLocX": 2.82,
+   "FurinaPFLocY": -13.4,
+   "FurinaPFLocZ": -0.45
+  },
+  "views": [
+   "right",
+   "left"
+  ]
+ }
+]

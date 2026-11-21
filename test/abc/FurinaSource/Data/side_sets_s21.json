@@ -1,0 +1,19 @@
+[
+ {
+  "tag": "",
+  "vars": {
+   "FurinaPFLocX": -1.627142721275043,
+   "FurinaPFLocY": -10.163437533315298,
+   "FurinaPFLocZ": 0.1280937724420408,
+   "FurinaPFRotP": -10.951130072642274,
+   "FurinaPFRotY": 69.79677949448565,
+   "FurinaPFRotR": 39.05466754293742
+  },
+  "views": [
+   "left",
+   "right",
+   "top",
+   "rear"
+  ]
+ }
+]
