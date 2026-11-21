@@ -1,0 +1,19 @@
+{
+ "tag": "a1",
+ "lw": [
+  4.874664300338793,
+  3.6719670547273724,
+  1.2693845014294651
+ ],
+ "log": [
+  "added FurinaFPArmL",
+  "added FurinaFPArmR"
+ ],
+ "var": true,
+ "old_next": [
+  "FGR_Br"
+ ],
+ "added": true,
+ "status": "<BlueprintStatus.BS_UP_TO_DATE_WITH_WARNINGS: 5>",
+ "saved": true
+}

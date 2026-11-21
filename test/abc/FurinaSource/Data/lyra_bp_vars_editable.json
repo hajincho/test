@@ -1,0 +1,38 @@
+{
+ "names": [
+  "FurinaPFLocX",
+  "FurinaPFLocY",
+  "FurinaPFLocZ",
+  "FurinaPFRotP",
+  "FurinaPFRotY",
+  "FurinaPFRotR"
+ ],
+ "log": [
+  [
+   "FurinaPFLocX",
+   "ok"
+  ],
+  [
+   "FurinaPFLocY",
+   "ok"
+  ],
+  [
+   "FurinaPFLocZ",
+   "ok"
+  ],
+  [
+   "FurinaPFRotP",
+   "ok"
+  ],
+  [
+   "FurinaPFRotY",
+   "ok"
+  ],
+  [
+   "FurinaPFRotR",
+   "ok"
+  ]
+ ],
+ "status": "<BlueprintStatus.BS_UP_TO_DATE_WITH_WARNINGS: 5>",
+ "saved": true
+}

@@ -1,0 +1,19 @@
+{
+ "tag": "w1",
+ "log": [
+  [
+   9.79,
+   false,
+   null,
+   false
+  ],
+  [
+   32.04,
+   true,
+   0,
+   true
+  ]
+ ],
+ "error": "Traceback (most recent call last):\n  File \"C:/Users/fromj/Downloads/test/test/abc/FurinaSource/Scripts/Unreal/lyra_weapon_menu_watch.py\", line 28, in tick\n    m = p.get_editor_property('FurinaWeaponMenu')\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nException: SpectatorPawn: Failed to find property 'FurinaWeaponMenu' for attribute 'FurinaWeaponMenu' on 'SpectatorPawn'\n",
+ "done": true
+}

@@ -1,0 +1,18 @@
+{
+ "tag": "m2",
+ "steps": [
+  {
+   "widget": "WBP_FurinaWeaponMenu_C_0",
+   "in_viewport": true,
+   "cursor": true,
+   "step": "toggle_open",
+   "shot": "wmenu_m2_toggle_open.png"
+  }
+ ],
+ "before": {
+  "widget": null,
+  "cursor": false
+ },
+ "error": "Traceback (most recent call last):\n  File \"C:/Users/fromj/Downloads/test/test/abc/FurinaSource/Scripts/Unreal/lyra_weapon_menu_probe.py\", line 44, in tick\n    wm = p.get_editor_property('FurinaWeaponMenu'); wm.set_editor_property('NationIndex', int(act.split(':')[1])); wm.call_method('ApplyNation')\n                                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nException: UserWidget: Property 'NationIndex' for attribute 'NationIndex' on 'WBP_FurinaWeaponMenu_C' cannot be edited on instances\n",
+ "done": true
+}

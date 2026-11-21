@@ -1,0 +1,93 @@
+{
+ "IndexFinger1_R": {
+  "n": 47,
+  "len_cm": 2.488,
+  "mean_cm": 0.689,
+  "p90_cm": 0.758,
+  "max_cm": 0.823
+ },
+ "IndexFinger2_R": {
+  "n": 31,
+  "len_cm": 1.981,
+  "mean_cm": 0.537,
+  "p90_cm": 0.603,
+  "max_cm": 0.638
+ },
+ "IndexFinger3_R": {
+  "n": 25,
+  "len_cm": 1.981,
+  "mean_cm": 0.336,
+  "p90_cm": 0.501,
+  "max_cm": 0.545
+ },
+ "MiddleFinger1_R": {
+  "n": 46,
+  "len_cm": 2.84,
+  "mean_cm": 0.76,
+  "p90_cm": 0.875,
+  "max_cm": 0.977
+ },
+ "MiddleFinger2_R": {
+  "n": 33,
+  "len_cm": 2.373,
+  "mean_cm": 0.579,
+  "p90_cm": 0.699,
+  "max_cm": 0.71
+ },
+ "RingFinger1_R": {
+  "n": 46,
+  "len_cm": 2.774,
+  "mean_cm": 0.712,
+  "p90_cm": 0.836,
+  "max_cm": 0.917
+ },
+ "RingFinger2_R": {
+  "n": 37,
+  "len_cm": 2.155,
+  "mean_cm": 0.58,
+  "p90_cm": 0.665,
+  "max_cm": 0.724
+ },
+ "LittleFinger1_R": {
+  "n": 33,
+  "len_cm": 2.204,
+  "mean_cm": 0.582,
+  "p90_cm": 0.713,
+  "max_cm": 0.723
+ },
+ "LittleFinger2_R": {
+  "n": 36,
+  "len_cm": 1.486,
+  "mean_cm": 0.489,
+  "p90_cm": 0.571,
+  "max_cm": 0.61
+ },
+ "Thumb1_R": {
+  "n": 29,
+  "len_cm": 2.026,
+  "mean_cm": 0.594,
+  "p90_cm": 0.767,
+  "max_cm": 0.821
+ },
+ "Thumb2_R": {
+  "n": 31,
+  "len_cm": 2.026,
+  "mean_cm": 0.48,
+  "p90_cm": 0.725,
+  "max_cm": 0.757
+ },
+ "IndexFinger2_L": {
+  "n": 31,
+  "len_cm": 1.981,
+  "mean_cm": 0.537,
+  "p90_cm": 0.607,
+  "max_cm": 0.641
+ },
+ "MiddleFinger2_L": {
+  "n": 33,
+  "len_cm": 2.373,
+  "mean_cm": 0.579,
+  "p90_cm": 0.702,
+  "max_cm": 0.714
+ }
+}

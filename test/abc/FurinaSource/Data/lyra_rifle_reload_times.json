@@ -1,0 +1,45 @@
+{
+ "tactical_s": 2.5,
+ "empty_s": 3.0,
+ "tac_rate_before": "0.94939",
+ "tac_rate_after": "1.25320",
+ "emp_rate_before": "0.66667",
+ "emp_rate_after": "0.66667",
+ "emp_time_before": "3.00000",
+ "emp_time_after": "3.00000",
+ "sel_pins": [
+  [
+   "A",
+   "2.3",
+   []
+  ],
+  [
+   "B",
+   "3.30",
+   []
+  ],
+  [
+   "bPickA",
+   "false",
+   [
+    "P2_IsActiveFurinaPistolOn_75172c37.ReturnValue"
+   ]
+  ],
+  [
+   "ReturnValue",
+   "0.0",
+   [
+    "FBT_TimeSel.B"
+   ]
+  ]
+ ],
+ "sel_changed": [
+  [
+   "B",
+   3.3,
+   2.5
+  ]
+ ],
+ "status": "<BlueprintStatus.BS_UP_TO_DATE_WITH_WARNINGS: 5>",
+ "saved": true
+}

@@ -1,0 +1,36 @@
+{
+ "tok": "f645",
+ "log": [
+  "var FurinaVMValid",
+  "var FurinaVMLastKey",
+  "var FurinaVMMesh_kar98k",
+  "var FurinaVMIdle_kar98k",
+  "var FurinaVMFire_kar98k",
+  "var FurinaVMReload_kar98k",
+  "var FurinaVMMesh_g43",
+  "var FurinaVMIdle_g43",
+  "var FurinaVMFire_g43",
+  "var FurinaVMReload_g43",
+  "var FurinaVMAdsLoc True",
+  "var FurinaVMAdsRot True"
+ ],
+ "ads": {
+  "kar98k": [
+   "11.034700,-8.516100,5.445100",
+   "-4.121833,2.293349,2.830143"
+  ],
+  "g43": [
+   "14.835500,-9.134200,4.290400",
+   "-4.121833,2.293349,2.830143"
+  ]
+ },
+ "fmg_old_next": [
+  "VM_Br_12_f0d9"
+ ],
+ "keyeq_to": [
+  "VM_And_5_f0d9.B"
+ ],
+ "added": 45,
+ "status": "<BlueprintStatus.BS_UP_TO_DATE_WITH_WARNINGS: 5>",
+ "saved": true
+}

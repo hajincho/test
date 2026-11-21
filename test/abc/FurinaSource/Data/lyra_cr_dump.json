@@ -1,5 +1,470 @@
 {
- "RRHOff": {
+ "Fing_IndexFinger1_L": {
+  "title": "Set Rotation",
+  "pins": {
+   "ExecutePin": {
+    "val": "()",
+    "src": [
+     "FgLittleIK.ExecutePin"
+    ],
+    "dst": [
+     "Fing_IndexFinger2_L.ExecutePin"
+    ]
+   },
+   "Item": {
+    "val": "(Type=Bone,Name=\"IndexFinger1_L\")",
+    "src": [],
+    "dst": []
+   },
+   "Space": {
+    "val": "LocalSpace",
+    "src": [],
+    "dst": []
+   },
+   "bInitial": {
+    "val": "False",
+    "src": [],
+    "dst": []
+   },
+   "Value": {
+    "val": "(X=0.000000,Y=0.000000,Z=0.000000,W=1.000000)",
+    "src": [
+     "Fing_IndexFinger1_LMul.Result"
+    ],
+    "dst": []
+   },
+   "Weight": {
+    "val": "1.000000",
+    "src": [
+     "FingW.Result"
+    ],
+    "dst": []
+   },
+   "bPropagateToChildren": {
+    "val": "True",
+    "src": [],
+    "dst": []
+   },
+   "CachedIndex": {
+    "val": "(Key=(Type=None,Name=\"None\"),Index=65535,ContainerVersion=-1)",
+    "src": [],
+    "dst": []
+   }
+  }
+ },
+ "Fing_IndexFinger1_LMul": {
+  "title": "Multiply",
+  "pins": {
+   "A": {
+    "val": "(X=0.000000,Y=0.000000,Z=0.000000,W=1.000000)",
+    "src": [
+     "Fing_IndexFinger1_LGet.Transform.Rotation"
+    ],
+    "dst": []
+   },
+   "B": {
+    "val": "(X=-0.416425,Y=-0.001051,Z=-0.302692,W=0.857163)",
+    "src": [],
+    "dst": []
+   },
+   "Result": {
+    "val": "(X=0.000000,Y=0.000000,Z=0.000000,W=1.000000)",
+    "src": [],
+    "dst": [
+     "Fing_IndexFinger1_L.Value"
+    ]
+   }
+  }
+ },
+ "FingW": {
+  "title": "Multiply",
+  "pins": {
+   "A": {
+    "val": "1.000000",
+    "src": [
+     "FingW1.Result"
+    ],
+    "dst": []
+   },
+   "B": {
+    "val": "1.000000",
+    "src": [
+     "ZipInv.Result"
+    ],
+    "dst": []
+   },
+   "Result": {
+    "val": "0.000000",
+    "src": [],
+    "dst": [
+     "Fing_IndexFinger1_L.Weight",
+     "Fing_IndexFinger2_L.Weight",
+     "Fing_IndexFinger3_L.Weight",
+     "Fing_MiddleFinger1_L.Weight",
+     "Fing_MiddleFinger2_L.Weight",
+     "Fing_MiddleFinger3_L.Weight"
+    ]
+   }
+  }
+ },
+ "FgLittleIK": {
+  "title": "Basic IK",
+  "pins": {
+   "ExecutePin": {
+    "val": "()",
+    "src": [
+     "FgRingIK.ExecutePin"
+    ],
+    "dst": [
+     "Fing_IndexFinger1_L.ExecutePin"
+    ]
+   },
+   "ItemA": {
+    "val": "(Type=Bone,Name=\"LittleFinger1_L\")",
+    "src": [],
+    "dst": []
+   },
+   "ItemB": {
+    "val": "(Type=Bone,Name=\"LittleFinger2_L\")",
+    "src": [],
+    "dst": []
+   },
+   "EffectorItem": {
+    "val": "(Type=Bone,Name=\"LittleFinger3_L\")",
+    "src": [],
+    "dst": []
+   },
+   "Effector": {
+    "val": "(Rotation=(X=0.000000,Y=0.000000,Z=0.000000,W=1.000000),Translation=(X=0.000000,Y=0.000000,Z=0.000000),Scale3D=(X=1.000000,Y=1.000000,Z=1.00",
+    "src": [],
+    "dst": []
+   },
+   "PrimaryAxis": {
+    "val": "(X=0.0,Y=-1.0,Z=0.0)",
+    "src": [],
+    "dst": []
+   },
+   "SecondaryAxis": {
+    "val": "(X=0.0,Y=0.0,Z=1.0)",
+    "src": [],
+    "dst": []
+   },
+   "SecondaryAxisWeight": {
+    "val": "0.0",
+    "src": [],
+    "dst": []
+   },
+   "PoleVector": {
+    "val": "(X=0.000000,Y=0.000000,Z=1.000000)",
+    "src": [
+     "FgN.Result"
+    ],
+    "dst": []
+   },
+   "PoleVectorKind": {
+    "val": "Direction",
+    "src": [],
+    "dst": []
+   },
+   "PoleVectorSpace": {
+    "val": "(Type=Bone,Name=\"None\")",
+    "src": [],
+    "dst": []
+   },
+   "bEnableStretch": {
+    "val": "False",
+    "src": [],
+    "dst": []
+   },
+   "StretchStartRatio": {
+    "val": "0.750000",
+    "src": [],
+    "dst": []
+   },
+   "StretchMaximumRatio": {
+    "val": "1.250000",
+    "src": [],
+    "dst": []
+   },
+   "Weight": {
+    "val": "1.000000",
+    "src": [
+     "RlEnvFp.Result"
+    ],
+    "dst": []
+   },
+   "ItemALength": {
+    "val": "2.2100",
+    "src": [],
+    "dst": []
+   },
+   "ItemBLength": {
+    "val": "1.4840",
+    "src": [],
+    "dst": []
+   },
+   "bPropagateToChildren": {
+    "val": "True",
+    "src": [],
+    "dst": []
+   },
+   "DebugSettings": {
+    "val": "(bEnabled=False,Scale=10.000000,WorldOffset=(Rotation=(X=0.000000,Y=0.000000,Z=0.000000,W=1.000000),Translation=(X=0.000000,Y=0.000000,Z=0.0",
+    "src": [],
+    "dst": []
+   },
+   "CachedItemAIndex": {
+    "val": "(Key=(Type=None,Name=\"None\"),Index=65535,ContainerVersion=-1)",
+    "src": [],
+    "dst": []
+   },
+   "CachedItemBIndex": {
+    "val": "(Key=(Type=None,Name=\"None\"),Index=65535,ContainerVersion=-1)",
+    "src": [],
+    "dst": []
+   },
+   "CachedEffectorItemIndex": {
+    "val": "(Key=(Type=None,Name=\"None\"),Index=65535,ContainerVersion=-1)",
+    "src": [],
+    "dst": []
+   },
+   "CachedPoleVectorSpaceIndex": {
+    "val": "(Key=(Type=None,Name=\"None\"),Index=65535,ContainerVersion=-1)",
+    "src": [],
+    "dst": []
+   }
+  }
+ },
+ "Fing_IndexFinger1_LGet": {
+  "title": "Get Transform",
+  "pins": {
+   "Item": {
+    "val": "(Type=Bone,Name=\"IndexFinger1_L\")",
+    "src": [],
+    "dst": []
+   },
+   "Space": {
+    "val": "LocalSpace",
+    "src": [],
+    "dst": []
+   },
+   "bInitial": {
+    "val": "False",
+    "src": [],
+    "dst": []
+   },
+   "Transform": {
+    "val": "(Rotation=(X=0.000000,Y=0.000000,Z=0.000000,W=1.000000),Translation=(X=0.000000,Y=0.000000,Z=0.000000),Scale3D=(X=1.000000,Y=1.000000,Z=1.00",
+    "src": [],
+    "dst": []
+   },
+   "CachedIndex": {
+    "val": "(Key=(Type=None,Name=\"None\"),Index=65535,ContainerVersion=-1)",
+    "src": [],
+    "dst": []
+   }
+  }
+ },
+ "FingW1": {
+  "title": "Multiply",
+  "pins": {
+   "A": {
+    "val": "1.000000",
+    "src": [
+     "FingFp.Result"
+    ],
+    "dst": []
+   },
+   "B": {
+    "val": "1.000000",
+    "src": [
+     "NotReload.Result"
+    ],
+    "dst": []
+   },
+   "Result": {
+    "val": "0.000000",
+    "src": [],
+    "dst": [
+     "FingW.A"
+    ]
+   }
+  }
+ },
+ "ZipInv": {
+  "title": "Remap",
+  "pins": {
+   "Value": {
+    "val": "0.000000",
+    "src": [
+     "ZipW.Result"
+    ],
+    "dst": []
+   },
+   "SourceMinimum": {
+    "val": "0",
+    "src": [],
+    "dst": []
+   },
+   "SourceMaximum": {
+    "val": "1",
+    "src": [],
+    "dst": []
+   },
+   "TargetMinimum": {
+    "val": "1",
+    "src": [],
+    "dst": []
+   },
+   "TargetMaximum": {
+    "val": "0",
+    "src": [],
+    "dst": []
+   },
+   "bClamp": {
+    "val": "True",
+    "src": [],
+    "dst": []
+   },
+   "Result": {
+    "val": "0.000000",
+    "src": [],
+    "dst": [
+     "LShOverW.B",
+     "FingW.B"
+    ]
+   }
+  }
+ },
+ "FgRingIK": {
+  "title": "Basic IK",
+  "pins": {
+   "ExecutePin": {
+    "val": "()",
+    "src": [
+     "FgMiddleIK.ExecutePin"
+    ],
+    "dst": [
+     "FgLittleIK.ExecutePin"
+    ]
+   },
+   "ItemA": {
+    "val": "(Type=Bone,Name=\"RingFinger1_L\")",
+    "src": [],
+    "dst": []
+   },
+   "ItemB": {
+    "val": "(Type=Bone,Name=\"RingFinger2_L\")",
+    "src": [],
+    "dst": []
+   },
+   "EffectorItem": {
+    "val": "(Type=Bone,Name=\"RingFinger3_L\")",
+    "src": [],
+    "dst": []
+   },
+   "Effector": {
+    "val": "(Rotation=(X=0.000000,Y=0.000000,Z=0.000000,W=1.000000),Translation=(X=0.000000,Y=0.000000,Z=0.000000),Scale3D=(X=1.000000,Y=1.000000,Z=1.00",
+    "src": [],
+    "dst": []
+   },
+   "PrimaryAxis": {
+    "val": "(X=0.0,Y=-1.0,Z=0.0)",
+    "src": [],
+    "dst": []
+   },
+   "SecondaryAxis": {
+    "val": "(X=0.0,Y=0.0,Z=1.0)",
+    "src": [],
+    "dst": []
+   },
+   "SecondaryAxisWeight": {
+    "val": "0.0",
+    "src": [],
+    "dst": []
+   },
+   "PoleVector": {
+    "val": "(X=0.000000,Y=0.000000,Z=1.000000)",
+    "src": [
+     "FgN.Result"
+    ],
+    "dst": []
+   },
+   "PoleVectorKind": {
+    "val": "Direction",
+    "src": [],
+    "dst": []
+   },
+   "PoleVectorSpace": {
+    "val": "(Type=Bone,Name=\"None\")",
+    "src": [],
+    "dst": []
+   },
+   "bEnableStretch": {
+    "val": "False",
+    "src": [],
+    "dst": []
+   },
+   "StretchStartRatio": {
+    "val": "0.750000",
+    "src": [],
+    "dst": []
+   },
+   "StretchMaximumRatio": {
+    "val": "1.250000",
+    "src": [],
+    "dst": []
+   },
+   "Weight": {
+    "val": "1.000000",
+    "src": [
+     "RlEnvFp.Result"
+    ],
+    "dst": []
+   },
+   "ItemALength": {
+    "val": "2.7650",
+    "src": [],
+    "dst": []
+   },
+   "ItemBLength": {
+    "val": "2.1570",
+    "src": [],
+    "dst": []
+   },
+   "bPropagateToChildren": {
+    "val": "True",
+    "src": [],
+    "dst": []
+   },
+   "DebugSettings": {
+    "val": "(bEnabled=False,Scale=10.000000,WorldOffset=(Rotation=(X=0.000000,Y=0.000000,Z=0.000000,W=1.000000),Translation=(X=0.000000,Y=0.000000,Z=0.0",
+    "src": [],
+    "dst": []
+   },
+   "CachedItemAIndex": {
+    "val": "(Key=(Type=None,Name=\"None\"),Index=65535,ContainerVersion=-1)",
+    "src": [],
+    "dst": []
+   },
+   "CachedItemBIndex": {
+    "val": "(Key=(Type=None,Name=\"None\"),Index=65535,ContainerVersion=-1)",
+    "src": [],
+    "dst": []
+   },
+   "CachedEffectorItemIndex": {
+    "val": "(Key=(Type=None,Name=\"None\"),Index=65535,ContainerVersion=-1)",
+    "src": [],
+    "dst": []
+   },
+   "CachedPoleVectorSpaceIndex": {
+    "val": "(Key=(Type=None,Name=\"None\"),Index=65535,ContainerVersion=-1)",
+    "src": [],
+    "dst": []
+   }
+  }
+ },
+ "FgN": {
   "title": "Rotate Vector",
   "pins": {
    "Transform": {
@@ -10,108 +475,1255 @@
     "dst": []
    },
    "Vector": {
-    "val": "(X=-3.719000,Y=-10.781000,Z=-5.149000)",
-    "src": [
-     "PistRV.Result"
-    ],
+    "val": "(X=0.00000,Y=-0.07972,Z=0.99682)",
+    "src": [],
     "dst": []
    },
    "Result": {
     "val": "(X=0.000000,Y=0.000000,Z=0.000000)",
     "src": [],
     "dst": [
-     "RRHPos.B"
+     "FgIndexN2.Value",
+     "FgIndexD3n.Value",
+     "FgIndexIK.PoleVector",
+     "FgMiddleN2.Value",
+     "FgMiddleD3n.Value",
+     "FgMiddleIK.PoleVector"
     ]
    }
   }
  },
- "PistRV": {
-  "title": "Interpolate",
-  "pins": {
-   "A": {
-    "val": "(X=-3.719000,Y=-10.781000,Z=-5.149000)",
-    "src": [],
-    "dst": []
-   },
-   "B": {
-    "val": "(X=-3.719000,Y=-1.281000,Z=-5.149000)",
-    "src": [],
-    "dst": []
-   },
-   "T": {
-    "val": "0.000000",
-    "src": [
-     "PistW.Result"
-    ],
-    "dst": []
-   },
-   "Result": {
-    "val": "(X=0.000000,Y=0.000000,Z=0.000000)",
-    "src": [],
-    "dst": [
-     "RRHOff.Vector"
-    ]
-   }
-  }
- },
- "PistW": {
+ "RlEnvFp": {
   "title": "Multiply",
   "pins": {
    "A": {
     "val": "1.000000",
     "src": [
-     "PistC.Value"
+     "RlEnv.Result"
     ],
     "dst": []
    },
    "B": {
+    "val": "1.000000",
+    "src": [
+     "RlFpW2.Result"
+    ],
+    "dst": []
+   },
+   "Result": {
+    "val": "0.000000",
+    "src": [],
+    "dst": [
+     "RlDeltaFp.Factor",
+     "RlRotA.A",
+     "FgIndexIK.Weight",
+     "FgMiddleIK.Weight",
+     "FgRingIK.Weight",
+     "FgLittleIK.Weight"
+    ]
+   }
+  }
+ },
+ "FingFp": {
+  "title": "Remap",
+  "pins": {
+   "Value": {
+    "val": "0.000000",
+    "src": [
+     "ViewTPC.Value"
+    ],
+    "dst": []
+   },
+   "SourceMinimum": {
+    "val": "0",
+    "src": [],
+    "dst": []
+   },
+   "SourceMaximum": {
+    "val": "1",
+    "src": [],
+    "dst": []
+   },
+   "TargetMinimum": {
+    "val": "1",
+    "src": [],
+    "dst": []
+   },
+   "TargetMaximum": {
+    "val": "0",
+    "src": [],
+    "dst": []
+   },
+   "bClamp": {
+    "val": "True",
+    "src": [],
+    "dst": []
+   },
+   "Result": {
+    "val": "0.000000",
+    "src": [],
+    "dst": [
+     "FingW1.A"
+    ]
+   }
+  }
+ },
+ "NotReload": {
+  "title": "Remap",
+  "pins": {
+   "Value": {
+    "val": "0.000000",
+    "src": [
+     "ReloadW.Result"
+    ],
+    "dst": []
+   },
+   "SourceMinimum": {
+    "val": "0",
+    "src": [],
+    "dst": []
+   },
+   "SourceMaximum": {
+    "val": "1",
+    "src": [],
+    "dst": []
+   },
+   "TargetMinimum": {
+    "val": "1",
+    "src": [],
+    "dst": []
+   },
+   "TargetMaximum": {
+    "val": "0",
+    "src": [],
+    "dst": []
+   },
+   "bClamp": {
+    "val": "True",
+    "src": [],
+    "dst": []
+   },
+   "Result": {
+    "val": "0.000000",
+    "src": [],
+    "dst": [
+     "RestC.B",
+     "FingW1.B"
+    ]
+   }
+  }
+ },
+ "ZipW": {
+  "title": "Accumulate Lerp (Float)",
+  "pins": {
+   "TargetValue": {
+    "val": "0.000000",
+    "src": [
+     "ZipC.Value"
+    ],
+    "dst": []
+   },
+   "InitialValue": {
+    "val": "0.000000",
+    "src": [],
+    "dst": []
+   },
+   "Blend": {
+    "val": "8",
+    "src": [],
+    "dst": []
+   },
+   "bIntegrateDeltaTime": {
+    "val": "True",
+    "src": [],
+    "dst": []
+   },
+   "Result": {
+    "val": "0.000000",
+    "src": [],
+    "dst": [
+     "ZipInv.Value",
+     "RRHPosZip.T",
+     "LHPosZip.T",
+     "LHRotZip.T"
+    ]
+   },
+   "AccumulatedValue": {
+    "val": "",
+    "src": [],
+    "dst": []
+   },
+   "bIsInitialized": {
+    "val": "",
+    "src": [],
+    "dst": []
+   }
+  }
+ },
+ "FgMiddleIK": {
+  "title": "Basic IK",
+  "pins": {
+   "ExecutePin": {
+    "val": "()",
+    "src": [
+     "FgIndexIK.ExecutePin"
+    ],
+    "dst": [
+     "FgRingIK.ExecutePin"
+    ]
+   },
+   "ItemA": {
+    "val": "(Type=Bone,Name=\"MiddleFinger1_L\")",
+    "src": [],
+    "dst": []
+   },
+   "ItemB": {
+    "val": "(Type=Bone,Name=\"MiddleFinger2_L\")",
+    "src": [],
+    "dst": []
+   },
+   "EffectorItem": {
+    "val": "(Type=Bone,Name=\"MiddleFinger3_L\")",
+    "src": [],
+    "dst": []
+   },
+   "Effector": {
+    "val": "(Rotation=(X=0.000000,Y=0.000000,Z=0.000000,W=1.000000),Translation=(X=0.000000,Y=0.000000,Z=0.000000),Scale3D=(X=1.000000,Y=1.000000,Z=1.00",
+    "src": [],
+    "dst": []
+   },
+   "PrimaryAxis": {
+    "val": "(X=0.0,Y=-1.0,Z=0.0)",
+    "src": [],
+    "dst": []
+   },
+   "SecondaryAxis": {
+    "val": "(X=0.0,Y=0.0,Z=1.0)",
+    "src": [],
+    "dst": []
+   },
+   "SecondaryAxisWeight": {
+    "val": "0.0",
+    "src": [],
+    "dst": []
+   },
+   "PoleVector": {
+    "val": "(X=0.000000,Y=0.000000,Z=1.000000)",
+    "src": [
+     "FgN.Result"
+    ],
+    "dst": []
+   },
+   "PoleVectorKind": {
+    "val": "Direction",
+    "src": [],
+    "dst": []
+   },
+   "PoleVectorSpace": {
+    "val": "(Type=Bone,Name=\"None\")",
+    "src": [],
+    "dst": []
+   },
+   "bEnableStretch": {
+    "val": "False",
+    "src": [],
+    "dst": []
+   },
+   "StretchStartRatio": {
+    "val": "0.750000",
+    "src": [],
+    "dst": []
+   },
+   "StretchMaximumRatio": {
+    "val": "1.250000",
+    "src": [],
+    "dst": []
+   },
+   "Weight": {
+    "val": "1.000000",
+    "src": [
+     "RlEnvFp.Result"
+    ],
+    "dst": []
+   },
+   "ItemALength": {
+    "val": "2.8420",
+    "src": [],
+    "dst": []
+   },
+   "ItemBLength": {
+    "val": "2.3760",
+    "src": [],
+    "dst": []
+   },
+   "bPropagateToChildren": {
+    "val": "True",
+    "src": [],
+    "dst": []
+   },
+   "DebugSettings": {
+    "val": "(bEnabled=False,Scale=10.000000,WorldOffset=(Rotation=(X=0.000000,Y=0.000000,Z=0.000000,W=1.000000),Translation=(X=0.000000,Y=0.000000,Z=0.0",
+    "src": [],
+    "dst": []
+   },
+   "CachedItemAIndex": {
+    "val": "(Key=(Type=None,Name=\"None\"),Index=65535,ContainerVersion=-1)",
+    "src": [],
+    "dst": []
+   },
+   "CachedItemBIndex": {
+    "val": "(Key=(Type=None,Name=\"None\"),Index=65535,ContainerVersion=-1)",
+    "src": [],
+    "dst": []
+   },
+   "CachedEffectorItemIndex": {
+    "val": "(Key=(Type=None,Name=\"None\"),Index=65535,ContainerVersion=-1)",
+    "src": [],
+    "dst": []
+   },
+   "CachedPoleVectorSpaceIndex": {
+    "val": "(Key=(Type=None,Name=\"None\"),Index=65535,ContainerVersion=-1)",
+    "src": [],
+    "dst": []
+   }
+  }
+ },
+ "GRotR": {
+  "title": "Interpolate",
+  "pins": {
+   "A": {
+    "val": "(X=0.000000,Y=0.000000,Z=0.000000,W=1.000000)",
+    "src": [
+     "GRotC.Result"
+    ],
+    "dst": []
+   },
+   "B": {
+    "val": "(X=0.000000,Y=0.000000,Z=0.000000,W=1.000000)",
+    "src": [
+     "RestQ.Result"
+    ],
+    "dst": []
+   },
+   "T": {
+    "val": "0.000000",
+    "src": [
+     "RestWF.Result"
+    ],
+    "dst": []
+   },
+   "Result": {
+    "val": "(X=0.000000,Y=0.000000,Z=0.000000,W=1.000000)",
+    "src": [],
+    "dst": [
+     "RLHOff.Transform",
+     "RLHRot.A",
+     "FgU.Transform",
+     "FgN.Transform",
+     "GRotP.A"
+    ]
+   }
+  }
+ },
+ "RlEnv": {
+  "title": "Clamp",
+  "pins": {
+   "Value": {
+    "val": "0.000000",
+    "src": [
+     "RlEnvRaw.Result"
+    ],
+    "dst": []
+   },
+   "Minimum": {
+    "val": "0",
+    "src": [],
+    "dst": []
+   },
+   "Maximum": {
+    "val": "1",
+    "src": [],
+    "dst": []
+   },
+   "Result": {
+    "val": "0.000000",
+    "src": [],
+    "dst": [
+     "RlEnvTp.A",
+     "RlEnvFp.A",
+     "RlEnvH.A"
+    ]
+   }
+  }
+ },
+ "RlFpW2": {
+  "title": "Multiply",
+  "pins": {
+   "A": {
     "val": "1.000000",
     "src": [
      "RlFpW.Result"
     ],
     "dst": []
    },
+   "B": {
+    "val": "1.000000",
+    "src": [
+     "RlHInv.Result"
+    ],
+    "dst": []
+   },
    "Result": {
     "val": "0.000000",
     "src": [],
     "dst": [
-     "PistGrip.T",
-     "PistGOff.Factor",
-     "PistRV.T"
+     "RlEnvFp.B"
     ]
    }
   }
  },
- "PistGrip": {
-  "title": "Interpolate",
+ "ViewTPC": {
+  "title": "Get Curve Value",
+  "pins": {
+   "Curve": {
+    "val": "ViewTP",
+    "src": [],
+    "dst": []
+   },
+   "Valid": {
+    "val": "True",
+    "src": [],
+    "dst": []
+   },
+   "Value": {
+    "val": "0.000000",
+    "src": [],
+    "dst": [
+     "TpW0.TargetValue",
+     "FingFp.Value"
+    ]
+   },
+   "CachedCurveIndex": {
+    "val": "(Key=(Type=None,Name=\"None\"),Index=65535,ContainerVersion=-1)",
+    "src": [],
+    "dst": []
+   }
+  }
+ },
+ "ReloadW": {
+  "title": "Clamp",
+  "pins": {
+   "Value": {
+    "val": "0.000000",
+    "src": [
+     "ReloadC.Value"
+    ],
+    "dst": []
+   },
+   "Minimum": {
+    "val": "0",
+    "src": [],
+    "dst": []
+   },
+   "Maximum": {
+    "val": "1",
+    "src": [],
+    "dst": []
+   },
+   "Result": {
+    "val": "0.000000",
+    "src": [],
+    "dst": [
+     "LHandOff.T",
+     "NotReload.Value",
+     "ReloadSm.TargetValue"
+    ]
+   }
+  }
+ },
+ "ZipC": {
+  "title": "Get Curve Value",
+  "pins": {
+   "Curve": {
+    "val": "Zip",
+    "src": [],
+    "dst": []
+   },
+   "Valid": {
+    "val": "True",
+    "src": [],
+    "dst": []
+   },
+   "Value": {
+    "val": "0.000000",
+    "src": [],
+    "dst": [
+     "ZipW.TargetValue"
+    ]
+   },
+   "CachedCurveIndex": {
+    "val": "(Key=(Type=None,Name=\"None\"),Index=65535,ContainerVersion=-1)",
+    "src": [],
+    "dst": []
+   }
+  }
+ },
+ "FgIndexIK": {
+  "title": "Basic IK",
+  "pins": {
+   "ExecutePin": {
+    "val": "()",
+    "src": [
+     "ThSet2.ExecutePin"
+    ],
+    "dst": [
+     "FgMiddleIK.ExecutePin"
+    ]
+   },
+   "ItemA": {
+    "val": "(Type=Bone,Name=\"IndexFinger1_L\")",
+    "src": [],
+    "dst": []
+   },
+   "ItemB": {
+    "val": "(Type=Bone,Name=\"IndexFinger2_L\")",
+    "src": [],
+    "dst": []
+   },
+   "EffectorItem": {
+    "val": "(Type=Bone,Name=\"IndexFinger3_L\")",
+    "src": [],
+    "dst": []
+   },
+   "Effector": {
+    "val": "(Rotation=(X=0.000000,Y=0.000000,Z=0.000000,W=1.000000),Translation=(X=0.000000,Y=0.000000,Z=0.000000),Scale3D=(X=1.000000,Y=1.000000,Z=1.00",
+    "src": [],
+    "dst": []
+   },
+   "PrimaryAxis": {
+    "val": "(X=0.0,Y=-1.0,Z=0.0)",
+    "src": [],
+    "dst": []
+   },
+   "SecondaryAxis": {
+    "val": "(X=0.0,Y=0.0,Z=1.0)",
+    "src": [],
+    "dst": []
+   },
+   "SecondaryAxisWeight": {
+    "val": "0.0",
+    "src": [],
+    "dst": []
+   },
+   "PoleVector": {
+    "val": "(X=0.000000,Y=0.000000,Z=1.000000)",
+    "src": [
+     "FgN.Result"
+    ],
+    "dst": []
+   },
+   "PoleVectorKind": {
+    "val": "Direction",
+    "src": [],
+    "dst": []
+   },
+   "PoleVectorSpace": {
+    "val": "(Type=Bone,Name=\"None\")",
+    "src": [],
+    "dst": []
+   },
+   "bEnableStretch": {
+    "val": "False",
+    "src": [],
+    "dst": []
+   },
+   "StretchStartRatio": {
+    "val": "0.750000",
+    "src": [],
+    "dst": []
+   },
+   "StretchMaximumRatio": {
+    "val": "1.250000",
+    "src": [],
+    "dst": []
+   },
+   "Weight": {
+    "val": "1.000000",
+    "src": [
+     "RlEnvFp.Result"
+    ],
+    "dst": []
+   },
+   "ItemALength": {
+    "val": "2.4850",
+    "src": [],
+    "dst": []
+   },
+   "ItemBLength": {
+    "val": "1.9860",
+    "src": [],
+    "dst": []
+   },
+   "bPropagateToChildren": {
+    "val": "True",
+    "src": [],
+    "dst": []
+   },
+   "DebugSettings": {
+    "val": "(bEnabled=False,Scale=10.000000,WorldOffset=(Rotation=(X=0.000000,Y=0.000000,Z=0.000000,W=1.000000),Translation=(X=0.000000,Y=0.000000,Z=0.0",
+    "src": [],
+    "dst": []
+   },
+   "CachedItemAIndex": {
+    "val": "(Key=(Type=None,Name=\"None\"),Index=65535,ContainerVersion=-1)",
+    "src": [],
+    "dst": []
+   },
+   "CachedItemBIndex": {
+    "val": "(Key=(Type=None,Name=\"None\"),Index=65535,ContainerVersion=-1)",
+    "src": [],
+    "dst": []
+   },
+   "CachedEffectorItemIndex": {
+    "val": "(Key=(Type=None,Name=\"None\"),Index=65535,ContainerVersion=-1)",
+    "src": [],
+    "dst": []
+   },
+   "CachedPoleVectorSpaceIndex": {
+    "val": "(Key=(Type=None,Name=\"None\"),Index=65535,ContainerVersion=-1)",
+    "src": [],
+    "dst": []
+   }
+  }
+ },
+ "GRotC": {
+  "title": "Multiply",
   "pins": {
    "A": {
-    "val": "(X=0.000000,Y=0.000000,Z=0.000000)",
+    "val": "(X=0.000000,Y=0.000000,Z=0.000000,W=1.000000)",
     "src": [
-     "LHandOff3.Result"
+     "TpCantQ.Result"
     ],
     "dst": []
    },
    "B": {
-    "val": "(X=-0.1000,Y=-11.5000,Z=-12.8000)",
+    "val": "(X=0.000000,Y=0.000000,Z=0.000000,W=1.000000)",
     "src": [
-     "PistBAdd.Result"
-    ],
-    "dst": []
-   },
-   "T": {
-    "val": "0.000000",
-    "src": [
-     "PistW.Result"
+     "GRot.Result"
     ],
     "dst": []
    },
    "Result": {
-    "val": "(X=0.000000,Y=0.000000,Z=0.000000)",
+    "val": "(X=0.000000,Y=0.000000,Z=0.000000,W=1.000000)",
     "src": [],
     "dst": [
-     "RgOut.A",
-     "RgFrz.A"
+     "GRotR.A"
+    ]
+   }
+  }
+ },
+ "RestQ": {
+  "title": "Multiply",
+  "pins": {
+   "A": {
+    "val": "(X=0.000000,Y=0.000000,Z=0.000000,W=1.000000)",
+    "src": [
+     "RestQ0.Result"
+    ],
+    "dst": []
+   },
+   "B": {
+    "val": "(X=0.000000,Y=0.000000,Z=0.000000,W=1.000000)",
+    "src": [
+     "GunBob.Result"
+    ],
+    "dst": []
+   },
+   "Result": {
+    "val": "(X=0.000000,Y=0.000000,Z=0.000000,W=1.000000)",
+    "src": [],
+    "dst": [
+     "GRotR.B"
+    ]
+   }
+  }
+ },
+ "RestWF": {
+  "title": "Multiply",
+  "pins": {
+   "A": {
+    "val": "1.000000",
+    "src": [
+     "RestWF1.Result"
+    ],
+    "dst": []
+   },
+   "B": {
+    "val": "1.000000",
+    "src": [
+     "NotProne.Result"
+    ],
+    "dst": []
+   },
+   "Result": {
+    "val": "0.000000",
+    "src": [],
+    "dst": [
+     "GRotR.T",
+     "GPosR.T",
+     "BackSpineA.A",
+     "BackChestA.A"
+    ]
+   }
+  }
+ },
+ "RlEnvRaw": {
+  "title": "Multiply",
+  "pins": {
+   "A": {
+    "val": "1.000000",
+    "src": [
+     "RLCX.Value"
+    ],
+    "dst": []
+   },
+   "B": {
+    "val": "0.166667",
+    "src": [],
+    "dst": []
+   },
+   "Result": {
+    "val": "0.000000",
+    "src": [],
+    "dst": [
+     "RlEnv.Value"
+    ]
+   }
+  }
+ },
+ "RlFpW": {
+  "title": "Remap",
+  "pins": {
+   "Value": {
+    "val": "0.000000",
+    "src": [
+     "TpW.Result"
+    ],
+    "dst": []
+   },
+   "SourceMinimum": {
+    "val": "0",
+    "src": [],
+    "dst": []
+   },
+   "SourceMaximum": {
+    "val": "1",
+    "src": [],
+    "dst": []
+   },
+   "TargetMinimum": {
+    "val": "1",
+    "src": [],
+    "dst": []
+   },
+   "TargetMaximum": {
+    "val": "0",
+    "src": [],
+    "dst": []
+   },
+   "bClamp": {
+    "val": "True",
+    "src": [],
+    "dst": []
+   },
+   "Result": {
+    "val": "0.000000",
+    "src": [],
+    "dst": [
+     "RcW.B",
+     "RgW.B",
+     "RgOut.T",
+     "RlFpW2.A",
+     "RlEnvH.B",
+     "FpBk1.A"
+    ]
+   }
+  }
+ },
+ "RlHInv": {
+  "title": "Remap",
+  "pins": {
+   "Value": {
+    "val": "0.000000",
+    "src": [
+     "RlHSm.Result"
+    ],
+    "dst": []
+   },
+   "SourceMinimum": {
+    "val": "0",
+    "src": [],
+    "dst": []
+   },
+   "SourceMaximum": {
+    "val": "1",
+    "src": [],
+    "dst": []
+   },
+   "TargetMinimum": {
+    "val": "1",
+    "src": [],
+    "dst": []
+   },
+   "TargetMaximum": {
+    "val": "0",
+    "src": [],
+    "dst": []
+   },
+   "bClamp": {
+    "val": "True",
+    "src": [],
+    "dst": []
+   },
+   "Result": {
+    "val": "0.000000",
+    "src": [],
+    "dst": [
+     "RlFpW2.B"
+    ]
+   }
+  }
+ },
+ "ReloadC": {
+  "title": "Get Curve Value",
+  "pins": {
+   "Curve": {
+    "val": "RifleReload",
+    "src": [],
+    "dst": []
+   },
+   "Valid": {
+    "val": "True",
+    "src": [],
+    "dst": []
+   },
+   "Value": {
+    "val": "0.000000",
+    "src": [],
+    "dst": [
+     "ReloadW.Value"
+    ]
+   },
+   "CachedCurveIndex": {
+    "val": "(Key=(Type=None,Name=\"None\"),Index=65535,ContainerVersion=-1)",
+    "src": [],
+    "dst": []
+   }
+  }
+ },
+ "ThSet2": {
+  "title": "Set Rotation",
+  "pins": {
+   "ExecutePin": {
+    "val": "()",
+    "src": [
+     "ThSet1.ExecutePin"
+    ],
+    "dst": [
+     "FgIndexIK.ExecutePin"
+    ]
+   },
+   "Item": {
+    "val": "(Type=Bone,Name=\"Thumb2_L\")",
+    "src": [],
+    "dst": []
+   },
+   "Space": {
+    "val": "LocalSpace",
+    "src": [],
+    "dst": []
+   },
+   "bInitial": {
+    "val": "False",
+    "src": [],
+    "dst": []
+   },
+   "Value": {
+    "val": "(X=-0.00468630,Y=0.09953658,Z=-0.12640724,W=0.98696085)",
+    "src": [],
+    "dst": []
+   },
+   "Weight": {
+    "val": "1.000000",
+    "src": [
+     "ThW.Result"
+    ],
+    "dst": []
+   },
+   "bPropagateToChildren": {
+    "val": "True",
+    "src": [],
+    "dst": []
+   },
+   "CachedIndex": {
+    "val": "()",
+    "src": [],
+    "dst": []
+   }
+  }
+ },
+ "TpCantQ": {
+  "title": "From Axis And Angle",
+  "pins": {
+   "Axis": {
+    "val": "(X=0.0,Y=0.0,Z=1.0)",
+    "src": [],
+    "dst": []
+   },
+   "Angle": {
+    "val": "0.000000",
+    "src": [
+     "TpCantAng.Result"
+    ],
+    "dst": []
+   },
+   "Result": {
+    "val": "(X=0.000000,Y=0.000000,Z=0.000000,W=1.000000)",
+    "src": [],
+    "dst": [
+     "GRotC.A"
+    ]
+   }
+  }
+ },
+ "GRot": {
+  "title": "Multiply",
+  "pins": {
+   "A": {
+    "val": "(X=0.000000,Y=0.000000,Z=0.000000,W=1.000000)",
+    "src": [
+     "AimQ.Result"
+    ],
+    "dst": []
+   },
+   "B": {
+    "val": "(X=0.000000,Y=0.000000,Z=0.000000,W=1.000000)",
+    "src": [
+     "GunBob.Result"
+    ],
+    "dst": []
+   },
+   "Result": {
+    "val": "(X=0.000000,Y=0.000000,Z=0.000000,W=1.000000)",
+    "src": [],
+    "dst": [
+     "GRotC.B"
+    ]
+   }
+  }
+ },
+ "RestQ0": {
+  "title": "Multiply",
+  "pins": {
+   "A": {
+    "val": "(X=0.000000,Y=0.000000,Z=0.000000,W=1.000000)",
+    "src": [
+     "RestQz.Result"
+    ],
+    "dst": []
+   },
+   "B": {
+    "val": "(X=0.000000,Y=0.000000,Z=0.000000,W=1.000000)",
+    "src": [
+     "RestQx.Result"
+    ],
+    "dst": []
+   },
+   "Result": {
+    "val": "(X=0.000000,Y=0.000000,Z=0.000000,W=1.000000)",
+    "src": [],
+    "dst": [
+     "RestQ.A"
+    ]
+   }
+  }
+ },
+ "GunBob": {
+  "title": "Multiply",
+  "pins": {
+   "A": {
+    "val": "(X=0.000000,Y=0.000000,Z=0.000000,W=1.000000)",
+    "src": [
+     "BobQ.Result"
+    ],
+    "dst": []
+   },
+   "B": {
+    "val": "(X=0.000000,Y=0.000000,Z=0.000000,W=1.000000)",
+    "src": [
+     "GunAds.Result"
+    ],
+    "dst": []
+   },
+   "Result": {
+    "val": "(X=0.000000,Y=0.000000,Z=0.000000,W=1.000000)",
+    "src": [],
+    "dst": [
+     "GRot.B",
+     "RestQ.B"
+    ]
+   }
+  }
+ },
+ "RestWF1": {
+  "title": "Multiply",
+  "pins": {
+   "A": {
+    "val": "1.000000",
+    "src": [
+     "RestWF0.Result"
+    ],
+    "dst": []
+   },
+   "B": {
+    "val": "1.000000",
+    "src": [
+     "NotFire.Result"
+    ],
+    "dst": []
+   },
+   "Result": {
+    "val": "0.000000",
+    "src": [],
+    "dst": [
+     "RestWF.A"
+    ]
+   }
+  }
+ },
+ "NotProne": {
+  "title": "Remap",
+  "pins": {
+   "Value": {
+    "val": "0.000000",
+    "src": [
+     "ProneW.Result"
+    ],
+    "dst": []
+   },
+   "SourceMinimum": {
+    "val": "0",
+    "src": [],
+    "dst": []
+   },
+   "SourceMaximum": {
+    "val": "1",
+    "src": [],
+    "dst": []
+   },
+   "TargetMinimum": {
+    "val": "1",
+    "src": [],
+    "dst": []
+   },
+   "TargetMaximum": {
+    "val": "0",
+    "src": [],
+    "dst": []
+   },
+   "bClamp": {
+    "val": "True",
+    "src": [],
+    "dst": []
+   },
+   "Result": {
+    "val": "0.000000",
+    "src": [],
+    "dst": [
+     "RestD.B",
+     "RestWF.B"
+    ]
+   }
+  }
+ },
+ "RLCX": {
+  "title": "Get Curve Value",
+  "pins": {
+   "Curve": {
+    "val": "ReloadLX",
+    "src": [],
+    "dst": []
+   },
+   "Valid": {
+    "val": "True",
+    "src": [],
+    "dst": []
+   },
+   "Value": {
+    "val": "0.000000",
+    "src": [],
+    "dst": [
+     "RLV.X",
+     "RlEnvRaw.A"
+    ]
+   },
+   "CachedCurveIndex": {
+    "val": "(Key=(Type=None,Name=\"None\"),Index=65535,ContainerVersion=-1)",
+    "src": [],
+    "dst": []
+   }
+  }
+ },
+ "TpW": {
+  "title": "Multiply",
+  "pins": {
+   "A": {
+    "val": "1.000000",
+    "src": [
+     "TpW0.Result"
+    ],
+    "dst": []
+   },
+   "B": {
+    "val": "1.000000",
+    "src": [
+     "NotAds.Result"
+    ],
+    "dst": []
+   },
+   "Result": {
+    "val": "0.000000",
+    "src": [],
+    "dst": [
+     "TpOff.Factor",
+     "RestA.A",
+     "TpCantAng.A",
+     "LBackW.A",
+     "RlEnvTp.B",
+     "TwAng.A"
+    ]
+   }
+  }
+ },
+ "RlHSm": {
+  "title": "Accumulate Lerp (Float)",
+  "pins": {
+   "TargetValue": {
+    "val": "0.000000",
+    "src": [
+     "RlHC.Value"
+    ],
+    "dst": []
+   },
+   "InitialValue": {
+    "val": "0.000000",
+    "src": [],
+    "dst": []
+   },
+   "Blend": {
+    "val": "6.000",
+    "src": [],
+    "dst": []
+   },
+   "bIntegrateDeltaTime": {
+    "val": "True",
+    "src": [],
+    "dst": []
+   },
+   "Result": {
+    "val": "0.000000",
+    "src": [],
+    "dst": [
+     "RlHInv.Value"
+    ]
+   },
+   "AccumulatedValue": {
+    "val": "",
+    "src": [],
+    "dst": []
+   },
+   "bIsInitialized": {
+    "val": "",
+    "src": [],
+    "dst": []
+   }
+  }
+ },
+ "ThSet1": {
+  "title": "Set Rotation",
+  "pins": {
+   "ExecutePin": {
+    "val": "()",
+    "src": [
+     "ThSet0.ExecutePin"
+    ],
+    "dst": [
+     "ThSet2.ExecutePin"
+    ]
+   },
+   "Item": {
+    "val": "(Type=Bone,Name=\"Thumb1_L\")",
+    "src": [],
+    "dst": []
+   },
+   "Space": {
+    "val": "LocalSpace",
+    "src": [],
+    "dst": []
+   },
+   "bInitial": {
+    "val": "False",
+    "src": [],
+    "dst": []
+   },
+   "Value": {
+    "val": "(X=-0.32490804,Y=0.18038360,Z=-0.03940731,W=0.92754708)",
+    "src": [],
+    "dst": []
+   },
+   "Weight": {
+    "val": "1.000000",
+    "src": [
+     "ThW.Result"
+    ],
+    "dst": []
+   },
+   "bPropagateToChildren": {
+    "val": "True",
+    "src": [],
+    "dst": []
+   },
+   "CachedIndex": {
+    "val": "()",
+    "src": [],
+    "dst": []
+   }
+  }
+ },
+ "ThW": {
+  "title": "Maximum",
+  "pins": {
+   "A": {
+    "val": "0.000000",
+    "src": [
+     "ReloadSm.Result"
+    ],
+    "dst": []
+   },
+   "B": {
+    "val": "0.000000",
+    "src": [
+     "ThFp.Result"
+    ],
+    "dst": []
+   },
+   "Result": {
+    "val": "0.000000",
+    "src": [],
+    "dst": [
+     "ThSet0.Weight",
+     "ThSet1.Weight",
+     "ThSet2.Weight"
     ]
    }
   }

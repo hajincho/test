@@ -1,0 +1,11 @@
+{
+ "log": [],
+ "removed": 18,
+ "push_pins": [
+  "(TagName=\"UI.Layer.GameMenu\")",
+  "/Game/Furina/UI/WBP_FurinaWeaponMenu.WBP_FurinaWeaponMenu_C"
+ ],
+ "added": true,
+ "status": "<BlueprintStatus.BS_UP_TO_DATE_WITH_WARNINGS: 5>",
+ "saved": true
+}

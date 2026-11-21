@@ -1,0 +1,21 @@
+{
+ "w0": {
+  "active": true,
+  "nation": 0,
+  "kb_focus": false,
+  "any_focus": false,
+  "focused_desc": false,
+  "hover_self": false,
+  "visible": "<SlateVisibility.HIT_TEST_INVISIBLE: 3>",
+  "in_vp": false,
+  "tabs_hover": [
+   false,
+   false,
+   false,
+   false,
+   false,
+   false
+  ],
+  "tabrow_hover": false
+ }
+}

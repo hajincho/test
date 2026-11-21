@@ -1,0 +1,171 @@
+{
+ "classes": [
+  "EditorUtilityDialogWidget",
+  "EditorUtilityWidget",
+  "EditorUtilityWidgetBlueprint",
+  "EditorUtilityWidgetBlueprintFactory",
+  "ObjectMixerEditorUWidget",
+  "UMGWidgetTreeInfo",
+  "UserWidgetFunctionLibrary",
+  "VREditorBaseUserWidget",
+  "VREditorCameraWidgetComponent",
+  "VREditorWidgetComponent",
+  "WidgetAnimationHandleFunctionLibrary",
+  "WidgetLayoutLibrary",
+  "WidgetLibrary",
+  "WidgetLibrary_OnGameWindowCloseButtonClickedDelegate",
+  "WidgetTree"
+ ],
+ "EditorUtilityDialogWidget": [
+  "add_extension",
+  "add_field_value_changed_delegate",
+  "add_to_player_screen",
+  "add_to_viewport",
+  "find_child_widget_by_name",
+  "get_or_add_extension",
+  "on_added_to_focus_path",
+  "padding",
+  "set_desired_focus_widget",
+  "set_padding",
+  "tool_tip_widget"
+ ],
+ "EditorUtilityWidget": [
+  "add_extension",
+  "add_field_value_changed_delegate",
+  "add_to_player_screen",
+  "add_to_viewport",
+  "find_child_widget_by_name",
+  "get_or_add_extension",
+  "on_added_to_focus_path",
+  "padding",
+  "set_desired_focus_widget",
+  "set_padding",
+  "tool_tip_widget"
+ ],
+ "EditorUtilityWidgetBlueprint": [
+  "add_event_dispatcher",
+  "add_event_dispatcher_parameter"
+ ],
+ "EditorUtilityWidgetBlueprintFactory": [],
+ "ObjectMixerEditorUWidget": [
+  "add_field_value_changed_delegate",
+  "object_mixer_widget_user_config",
+  "tool_tip_widget"
+ ],
+ "UMGWidgetTreeInfo": [
+  "widgets"
+ ],
+ "UserWidgetFunctionLibrary": [
+  "get_outer_user_widget"
+ ],
+ "VREditorBaseUserWidget": [
+  "add_extension",
+  "add_field_value_changed_delegate",
+  "add_to_player_screen",
+  "add_to_viewport",
+  "get_or_add_extension",
+  "on_added_to_focus_path",
+  "padding",
+  "set_desired_focus_widget",
+  "set_padding",
+  "tool_tip_widget"
+ ],
+ "VREditorCameraWidgetComponent": [
+  "add_angular_impulse_in_degrees",
+  "add_angular_impulse_in_radians",
+  "add_asset_user_data_of_class",
+  "add_force",
+  "add_force_at_location",
+  "add_force_at_location_local",
+  "add_force_at_position",
+  "add_impulse",
+  "add_impulse_at_location",
+  "add_impulse_at_position",
+  "add_local_offset",
+  "add_local_rotation",
+  "add_local_transform",
+  "add_radial_force",
+  "add_radial_impulse",
+  "add_relative_location",
+  "add_relative_rotation",
+  "add_tick_prerequisite_actor",
+  "add_tick_prerequisite_component",
+  "add_torque_in_degrees",
+  "add_torque_in_radians",
+  "add_velocity_change_impulse_at_location",
+  "add_world_offset",
+  "add_world_rotation",
+  "add_world_transform",
+  "add_world_transform_keep_scale",
+  "get_user_widget_object",
+  "get_widget",
+  "get_widget_space",
+  "is_widget_visible",
+  "set_widget",
+  "set_widget_space"
+ ],
+ "VREditorWidgetComponent": [
+  "add_angular_impulse_in_degrees",
+  "add_angular_impulse_in_radians",
+  "add_asset_user_data_of_class",
+  "add_force",
+  "add_force_at_location",
+  "add_force_at_location_local",
+  "add_force_at_position",
+  "add_impulse",
+  "add_impulse_at_location",
+  "add_impulse_at_position",
+  "add_local_offset",
+  "add_local_rotation",
+  "add_local_transform",
+  "add_radial_force",
+  "add_radial_impulse",
+  "add_relative_location",
+  "add_relative_rotation",
+  "add_tick_prerequisite_actor",
+  "add_tick_prerequisite_component",
+  "add_torque_in_degrees",
+  "add_torque_in_radians",
+  "add_velocity_change_impulse_at_location",
+  "add_world_offset",
+  "add_world_rotation",
+  "add_world_transform",
+  "add_world_transform_keep_scale",
+  "get_user_widget_object",
+  "get_widget",
+  "get_widget_space",
+  "is_widget_visible",
+  "set_widget",
+  "set_widget_space"
+ ],
+ "WidgetAnimationHandleFunctionLibrary": [],
+ "WidgetLayoutLibrary": [
+  "get_player_screen_widget_geometry",
+  "get_viewport_widget_geometry",
+  "project_world_location_to_widget_position",
+  "remove_all_widgets",
+  "slot_as_widget_switcher_slot"
+ ],
+ "WidgetLibrary": [
+  "get_all_widgets_of_class",
+  "get_all_widgets_with_interface",
+  "get_safe_zone_padding"
+ ],
+ "WidgetLibrary_OnGameWindowCloseButtonClickedDelegate": [],
+ "WidgetTree": [],
+ "WidgetBlueprint": [
+  "add_event_dispatcher",
+  "add_event_dispatcher_parameter"
+ ],
+ "BlueprintEditorLibrary": [
+  "add_event_dispatcher",
+  "add_event_dispatcher_parameter",
+  "add_event_override",
+  "add_function_graph",
+  "add_function_override",
+  "add_member_variable"
+ ],
+ "EditorUtilitySubsystem": [
+  "find_utility_widget_from_blueprint"
+ ]
+}

@@ -1,0 +1,94 @@
+{
+ "key": "Kar98k",
+ "cleared": {
+  "SK_FPVM_Kar98k.SK_FPVM_Kar98k": true,
+  "SK_FPVM_Kar98k_Skeleton.SK_FPVM_Kar98k_Skeleton": true
+ },
+ "imported": [
+  "/Game/Furina/FPVM/Kar98k/SK_FPVM_Kar98k_Skeleton.SK_FPVM_Kar98k_Skeleton",
+  "/Game/Furina/FPVM/Kar98k/SK_FPVM_Kar98k.SK_FPVM_Kar98k"
+ ],
+ "mesh": "/Game/Furina/FPVM/Kar98k/SK_FPVM_Kar98k.SK_FPVM_Kar98k",
+ "imported_anims": [
+  "/Game/Furina/FPVM/Kar98k/ANIMS_Kar98kArmature_FPVM_Kar98k_Fire.ANIMS_Kar98kArmature_FPVM_Kar98k_Fire",
+  "/Game/Furina/FPVM/Kar98k/ANIMS_Kar98kArmature_FPVM_Kar98k_Idle.ANIMS_Kar98kArmature_FPVM_Kar98k_Idle",
+  "/Game/Furina/FPVM/Kar98k/ANIMS_Kar98kArmature_FPVM_Kar98k_Reload.ANIMS_Kar98kArmature_FPVM_Kar98k_Reload"
+ ],
+ "anims": {
+  "Fire": {
+   "path": "/Game/Furina/FPVM/Kar98k/AS_FPVM_Kar98k_Fire.AS_FPVM_Kar98k_Fire",
+   "len": 1.2,
+   "frames": null
+  },
+  "Idle": {
+   "path": "/Game/Furina/FPVM/Kar98k/AS_FPVM_Kar98k_Idle.AS_FPVM_Kar98k_Idle",
+   "len": 4.0,
+   "frames": null
+  },
+  "Reload": {
+   "path": "/Game/Furina/FPVM/Kar98k/AS_FPVM_Kar98k_Reload.AS_FPVM_Kar98k_Reload",
+   "len": 3.2,
+   "frames": null
+  }
+ },
+ "armmats": {
+  "Furina_SkinHair": "/Game/Furina/Materials/MI_Furina_SkinHair.MI_Furina_SkinHair",
+  "Furina_Outfit": "/Game/Furina/Materials/MI_Furina_Outfit.MI_Furina_Outfit"
+ },
+ "slots": [
+  [
+   "Furina_SkinHair",
+   "/Game/Furina/Materials/MI_Furina_SkinHair.MI_Furina_SkinHair"
+  ],
+  [
+   "Furina_Outfit",
+   "/Game/Furina/Materials/MI_Furina_Outfit.MI_Furina_Outfit"
+  ],
+  [
+   "Material_005",
+   "/Game/Furina/Weapons/Germany/kar98k/MI_DE_kar98k_Material_005.MI_DE_kar98k_Material_005"
+  ],
+  [
+   "Material",
+   "/Game/Furina/Weapons/Germany/kar98k/MI_DE_kar98k_Material.MI_DE_kar98k_Material"
+  ],
+  [
+   "Material_001",
+   "/Game/Furina/Weapons/Germany/kar98k/MI_DE_kar98k_Material_001.MI_DE_kar98k_Material_001"
+  ],
+  [
+   "Material_002",
+   "/Game/Furina/Weapons/Germany/kar98k/MI_DE_kar98k_Material_002.MI_DE_kar98k_Material_002"
+  ],
+  [
+   "Material_003",
+   "/Game/Furina/Weapons/Germany/kar98k/MI_DE_kar98k_Material_003.MI_DE_kar98k_Material_003"
+  ],
+  [
+   "Clip_Steel",
+   "/Game/Furina/Weapons/Germany/mauser_clip/MI_DE_mauser_clip_Material.MI_DE_mauser_clip_Material"
+  ],
+  [
+   "Clip_Projectile",
+   "/Game/Furina/Weapons/Germany/mauser_clip/MI_DE_mauser_clip_6_5.MI_DE_mauser_clip_6_5"
+  ],
+  [
+   "Clip_Case",
+   "/Game/Furina/Weapons/Germany/mauser_clip/MI_DE_mauser_clip_case.MI_DE_mauser_clip_case"
+  ]
+ ],
+ "bounds": [
+  [
+   20.7,
+   5.8,
+   -19.9
+  ],
+  [
+   55.2,
+   53.2,
+   20.6
+  ]
+ ],
+ "skeleton": "/Game/Furina/FPVM/Kar98k/SK_FPVM_Kar98k_Skeleton.SK_FPVM_Kar98k_Skeleton",
+ "saved": true
+}

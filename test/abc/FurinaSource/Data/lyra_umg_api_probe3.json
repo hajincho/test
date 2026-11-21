@@ -1,0 +1,12 @@
+{
+ "add_component_bound_event_node": "x.add_component_bound_event_node(component, event_name) -> K2Node_ComponentBoundEvent\r\nCreates a UK2Node_ComponentBoundEvent in this event graph for the given component\nand delegate event name. Returns the existing node if one already exists.\nThe graph must be an event graph.\r\n\r\nArgs:\r\n    component (ActorComponent): \r\n    event_name (Name): \r\n\r\nReturns:\r\n    K2Node_ComponentBoundEvent:",
+ "create_node_from_name": "x.create_node_from_name(node_with_category, location, context_pins, declaring_class=None) -> EdGraphNode\r\nCreates node from Catagory and Name. Example:\n                     - 'Development|PrintString'\n                     - 'Utilities|Operators|Add'\n                     - 'Utilities|FlowControl|Branch'\n                     - 'Math|Vector|VectorLength'\nWhen multiple actions share the same Category|Name string , pass DeclaringClass to\nselect the action belonging to that specific class.\r\n\r\nArgs:\r\n    node_with_category (str): \r\n    location (Vector2D): \r\n    context_pins (Array[BlueprintGraphPin]): \r\n    declaring_class (type(Class)): \r\n\r\nReturns:\r\n    EdGraphNode:",
+ "list_available_nodes": "x.list_available_nodes(context_pins) -> Array[str]\r\nList all of the nodes by name that can be added to this graph\r\n\r\nArgs:\r\n    context_pins (Array[BlueprintGraphPin]): \r\n\r\nReturns:\r\n    Array[str]: \r\n\r\n    result (Array[str]):",
+ "add_custom_event_node": "x.add_custom_event_node(event_name) -> K2Node_CustomEvent\r\nCreates a UK2Node_CustomEvent node if the current graph is an event graph, using the provided EventName\r\n\r\nArgs:\r\n    event_name (str): \r\n\r\nReturns:\r\n    K2Node_CustomEvent:",
+ "add_call_function_node": "x.add_call_function_node(function_path) -> K2Node_CallFunction\r\nCreates a UK2Node_CallFunction in the current graph invoking the function specified by FunctionPath\r\n\r\nArgs:\r\n    function_path (str): \r\n\r\nReturns:\r\n    K2Node_CallFunction:",
+ "btn_props": [
+  "is_variable",
+  "b_is_variable"
+ ],
+ "set_is_variable": "Button: Failed to find property 'is_variable' for attribute 'is_variable' on 'Button'"
+}

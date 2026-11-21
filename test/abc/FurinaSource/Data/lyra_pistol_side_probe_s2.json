@@ -1,0 +1,6 @@
+{
+ "tag": "s2",
+ "shots": [],
+ "spawn_err": "/lyra_pistol_side_probe.py\", line 38, in tick\n    cam = unreal.GameplayStatics.begin_deferred_actor_spawn_from_class(w, unreal.CameraActor, unreal.Transform(unreal.Vector(0, 0, 500), unreal.Rotator(), unreal.Vector(1, 1, 1)))\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'\n",
+ "done": true
+}

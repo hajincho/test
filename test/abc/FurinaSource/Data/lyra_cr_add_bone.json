@@ -1,0 +1,21 @@
+{
+ "args": [
+  "Thumb3_R:Thumb2_R",
+  "Thumb3_L:Thumb2_L"
+ ],
+ "log": [
+  [
+   "Thumb3_R",
+   "added"
+  ],
+  [
+   "Thumb3_L",
+   "added"
+  ]
+ ],
+ "now_has": [
+  "Thumb3_L",
+  "Thumb3_R"
+ ],
+ "saved": true
+}

@@ -1,0 +1,100 @@
+{
+ "tag": "c7",
+ "shots": [
+  "right",
+  "left",
+  "rear",
+  "top",
+  "front",
+  "rear_right"
+ ],
+ "cam": "<Object '/Game/System/DefaultEditorMap/UEDPIE_0_L_DefaultEditorOverview.L_DefaultEditorOverview:PersistentLevel.ThirdPersonCharacter_BP_C_0.TRASH_CameraComponent_0' (0x0000022ABE1A1800) Class 'CameraComponent'>",
+ "bones": {
+  "Right-wrist": [
+   -80.02,
+   -42.31,
+   -67.13
+  ],
+  "Left-wrist": [
+   -58.32,
+   -45.92,
+   -74.84
+  ],
+  "Thumb0_R": [
+   -77.34,
+   -43.09,
+   -69.3
+  ],
+  "Thumb1_R": [
+   -75.87,
+   -41.83,
+   -70.94
+  ],
+  "Thumb2_R": [
+   -73.87,
+   -41.51,
+   -70.8
+  ],
+  "IndexFinger1_R": [
+   -73.44,
+   -45.28,
+   -68.12
+  ],
+  "IndexFinger3_R": [
+   -70.77,
+   -44.05,
+   -68.7
+  ],
+  "MiddleFinger1_R": [
+   -73.47,
+   -44.65,
+   -66.43
+  ],
+  "MiddleFinger3_R": [
+   -72.51,
+   -40.25,
+   -68.85
+  ],
+  "RingFinger3_R": [
+   -72.42,
+   -39.83,
+   -67.57
+  ],
+  "LittleFinger3_R": [
+   -73.76,
+   -40.32,
+   -66.1
+  ],
+  "Thumb2_L": [
+   -54.26,
+   -50.96,
+   -78.7
+  ],
+  "IndexFinger3_L": [
+   -49.68,
+   -52.0,
+   -73.68
+  ],
+  "MiddleFinger3_L": [
+   -52.18,
+   -54.2,
+   -73.93
+  ],
+  "LittleFinger3_L": [
+   -55.03,
+   -52.39,
+   -73.83
+  ]
+ },
+ "frame_min": [
+  -1.51,
+  -18.03,
+  -8.01
+ ],
+ "frame_max": [
+  1.29,
+  1.29,
+  5.66
+ ],
+ "done": true
+}

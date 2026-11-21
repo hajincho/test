@@ -1,0 +1,957 @@
+{
+ "chain": [
+  {
+   "node": "ThSet0",
+   "title": "Set Rotation",
+   "Item": [
+    "(Type=Bone,Name=\"Thumb0_L\")",
+    []
+   ],
+   "Space": [
+    "LocalSpace",
+    []
+   ],
+   "Weight": [
+    "1.000000",
+    [
+     "ThW.Result"
+    ]
+   ],
+   "next": [
+    "ThSet1"
+   ]
+  },
+  {
+   "node": "ThSet1",
+   "title": "Set Rotation",
+   "Item": [
+    "(Type=Bone,Name=\"Thumb1_L\")",
+    []
+   ],
+   "Space": [
+    "LocalSpace",
+    []
+   ],
+   "Weight": [
+    "1.000000",
+    [
+     "ThW.Result"
+    ]
+   ],
+   "next": [
+    "ThSet2"
+   ]
+  },
+  {
+   "node": "ThSet2",
+   "title": "Set Rotation",
+   "Item": [
+    "(Type=Bone,Name=\"Thumb2_L\")",
+    []
+   ],
+   "Space": [
+    "LocalSpace",
+    []
+   ],
+   "Weight": [
+    "1.000000",
+    [
+     "ThW.Result"
+    ]
+   ],
+   "next": [
+    "FgIndexIK"
+   ]
+  },
+  {
+   "node": "FgIndexIK",
+   "title": "Basic IK",
+   "ItemA": [
+    "(Type=Bone,Name=\"IndexFinger1_L\")",
+    []
+   ],
+   "ItemB": [
+    "(Type=Bone,Name=\"IndexFinger2_L\")",
+    []
+   ],
+   "Weight": [
+    "1.000000",
+    [
+     "RlEnvFp.Result"
+    ]
+   ],
+   "ItemALength": [
+    "2.4850",
+    []
+   ],
+   "ItemBLength": [
+    "1.9860",
+    []
+   ],
+   "next": [
+    "FgMiddleIK"
+   ]
+  },
+  {
+   "node": "FgMiddleIK",
+   "title": "Basic IK",
+   "ItemA": [
+    "(Type=Bone,Name=\"MiddleFinger1_L\")",
+    []
+   ],
+   "ItemB": [
+    "(Type=Bone,Name=\"MiddleFinger2_L\")",
+    []
+   ],
+   "Weight": [
+    "1.000000",
+    [
+     "RlEnvFp.Result"
+    ]
+   ],
+   "ItemALength": [
+    "2.8420",
+    []
+   ],
+   "ItemBLength": [
+    "2.3760",
+    []
+   ],
+   "next": [
+    "FgRingIK"
+   ]
+  },
+  {
+   "node": "FgRingIK",
+   "title": "Basic IK",
+   "ItemA": [
+    "(Type=Bone,Name=\"RingFinger1_L\")",
+    []
+   ],
+   "ItemB": [
+    "(Type=Bone,Name=\"RingFinger2_L\")",
+    []
+   ],
+   "Weight": [
+    "1.000000",
+    [
+     "RlEnvFp.Result"
+    ]
+   ],
+   "ItemALength": [
+    "2.7650",
+    []
+   ],
+   "ItemBLength": [
+    "2.1570",
+    []
+   ],
+   "next": [
+    "FgLittleIK"
+   ]
+  },
+  {
+   "node": "FgLittleIK",
+   "title": "Basic IK",
+   "ItemA": [
+    "(Type=Bone,Name=\"LittleFinger1_L\")",
+    []
+   ],
+   "ItemB": [
+    "(Type=Bone,Name=\"LittleFinger2_L\")",
+    []
+   ],
+   "Weight": [
+    "1.000000",
+    [
+     "RlEnvFp.Result"
+    ]
+   ],
+   "ItemALength": [
+    "2.2100",
+    []
+   ],
+   "ItemBLength": [
+    "1.4840",
+    []
+   ],
+   "next": [
+    "Fing_IndexFinger1_L"
+   ]
+  },
+  {
+   "node": "Fing_IndexFinger1_L",
+   "title": "Set Rotation",
+   "Item": [
+    "(Type=Bone,Name=\"IndexFinger1_L\")",
+    []
+   ],
+   "Space": [
+    "LocalSpace",
+    []
+   ],
+   "Weight": [
+    "1.000000",
+    [
+     "FingW.Result"
+    ]
+   ],
+   "next": [
+    "Fing_IndexFinger2_L"
+   ]
+  },
+  {
+   "node": "Fing_IndexFinger2_L",
+   "title": "Set Rotation",
+   "Item": [
+    "(Type=Bone,Name=\"IndexFinger2_L\")",
+    []
+   ],
+   "Space": [
+    "LocalSpace",
+    []
+   ],
+   "Weight": [
+    "1.000000",
+    [
+     "FingW.Result"
+    ]
+   ],
+   "next": [
+    "Fing_IndexFinger3_L"
+   ]
+  },
+  {
+   "node": "Fing_IndexFinger3_L",
+   "title": "Set Rotation",
+   "Item": [
+    "(Type=Bone,Name=\"IndexFinger3_L\")",
+    []
+   ],
+   "Space": [
+    "LocalSpace",
+    []
+   ],
+   "Weight": [
+    "1.000000",
+    [
+     "FingW.Result"
+    ]
+   ],
+   "next": [
+    "Fing_MiddleFinger1_L"
+   ]
+  },
+  {
+   "node": "Fing_MiddleFinger1_L",
+   "title": "Set Rotation",
+   "Item": [
+    "(Type=Bone,Name=\"MiddleFinger1_L\")",
+    []
+   ],
+   "Space": [
+    "LocalSpace",
+    []
+   ],
+   "Weight": [
+    "1.000000",
+    [
+     "FingW.Result"
+    ]
+   ],
+   "next": [
+    "Fing_MiddleFinger2_L"
+   ]
+  },
+  {
+   "node": "Fing_MiddleFinger2_L",
+   "title": "Set Rotation",
+   "Item": [
+    "(Type=Bone,Name=\"MiddleFinger2_L\")",
+    []
+   ],
+   "Space": [
+    "LocalSpace",
+    []
+   ],
+   "Weight": [
+    "1.000000",
+    [
+     "FingW.Result"
+    ]
+   ],
+   "next": [
+    "Fing_MiddleFinger3_L"
+   ]
+  },
+  {
+   "node": "Fing_MiddleFinger3_L",
+   "title": "Set Rotation",
+   "Item": [
+    "(Type=Bone,Name=\"MiddleFinger3_L\")",
+    []
+   ],
+   "Space": [
+    "LocalSpace",
+    []
+   ],
+   "Weight": [
+    "1.000000",
+    [
+     "FingW.Result"
+    ]
+   ],
+   "next": [
+    "Fing_RingFinger1_L"
+   ]
+  },
+  {
+   "node": "Fing_RingFinger1_L",
+   "title": "Set Rotation",
+   "Item": [
+    "(Type=Bone,Name=\"RingFinger1_L\")",
+    []
+   ],
+   "Space": [
+    "LocalSpace",
+    []
+   ],
+   "Weight": [
+    "1.000000",
+    [
+     "FingW.Result"
+    ]
+   ],
+   "next": [
+    "Fing_RingFinger2_L"
+   ]
+  },
+  {
+   "node": "Fing_RingFinger2_L",
+   "title": "Set Rotation",
+   "Item": [
+    "(Type=Bone,Name=\"RingFinger2_L\")",
+    []
+   ],
+   "Space": [
+    "LocalSpace",
+    []
+   ],
+   "Weight": [
+    "1.000000",
+    [
+     "FingW.Result"
+    ]
+   ],
+   "next": [
+    "Fing_RingFinger3_L"
+   ]
+  },
+  {
+   "node": "Fing_RingFinger3_L",
+   "title": "Set Rotation",
+   "Item": [
+    "(Type=Bone,Name=\"RingFinger3_L\")",
+    []
+   ],
+   "Space": [
+    "LocalSpace",
+    []
+   ],
+   "Weight": [
+    "1.000000",
+    [
+     "FingW.Result"
+    ]
+   ],
+   "next": [
+    "Fing_LittleFinger1_L"
+   ]
+  },
+  {
+   "node": "Fing_LittleFinger1_L",
+   "title": "Set Rotation",
+   "Item": [
+    "(Type=Bone,Name=\"LittleFinger1_L\")",
+    []
+   ],
+   "Space": [
+    "LocalSpace",
+    []
+   ],
+   "Weight": [
+    "1.000000",
+    [
+     "FingW.Result"
+    ]
+   ],
+   "next": [
+    "Fing_LittleFinger2_L"
+   ]
+  },
+  {
+   "node": "Fing_LittleFinger2_L",
+   "title": "Set Rotation",
+   "Item": [
+    "(Type=Bone,Name=\"LittleFinger2_L\")",
+    []
+   ],
+   "Space": [
+    "LocalSpace",
+    []
+   ],
+   "Weight": [
+    "1.000000",
+    [
+     "FingW.Result"
+    ]
+   ],
+   "next": [
+    "Fing_LittleFinger3_L"
+   ]
+  },
+  {
+   "node": "Fing_LittleFinger3_L",
+   "title": "Set Rotation",
+   "Item": [
+    "(Type=Bone,Name=\"LittleFinger3_L\")",
+    []
+   ],
+   "Space": [
+    "LocalSpace",
+    []
+   ],
+   "Weight": [
+    "1.000000",
+    [
+     "FingW.Result"
+    ]
+   ],
+   "next": [
+    "SetHairFlow"
+   ]
+  },
+  {
+   "node": "SetHairFlow",
+   "title": "Set Curve Value",
+   "next": [
+    "SetHairDyn"
+   ]
+  },
+  {
+   "node": "SetHairDyn",
+   "title": "Set Curve Value",
+   "next": [
+    "SetAhogeDyn"
+   ]
+  },
+  {
+   "node": "SetAhogeDyn",
+   "title": "Set Curve Value",
+   "next": [
+    "SetDbgL"
+   ]
+  },
+  {
+   "node": "SetDbgL",
+   "title": "Set Curve Value",
+   "next": [
+    "SetDbgR"
+   ]
+  },
+  {
+   "node": "SetDbgR",
+   "title": "Set Curve Value",
+   "next": [
+    "SetDbgW"
+   ]
+  },
+  {
+   "node": "SetDbgW",
+   "title": "Set Curve Value",
+   "next": [
+    "SetDbgC"
+   ]
+  },
+  {
+   "node": "SetDbgC",
+   "title": "Set Curve Value",
+   "next": [
+    "C00Lift"
+   ]
+  },
+  {
+   "node": "C00Lift",
+   "title": "Set Rotation",
+   "Item": [
+    "(Type=Bone,Name=\"HB1_1_0\")",
+    []
+   ],
+   "Space": [
+    "GlobalSpace",
+    []
+   ],
+   "Weight": [
+    "1.000000",
+    []
+   ],
+   "next": [
+    "C00Wave"
+   ]
+  },
+  {
+   "node": "C00Wave",
+   "title": "Chain Harmonics",
+   "next": [
+    "C01Lift"
+   ]
+  },
+  {
+   "node": "C01Lift",
+   "title": "Set Rotation",
+   "Item": [
+    "(Type=Bone,Name=\"HB1_1_6\")",
+    []
+   ],
+   "Space": [
+    "GlobalSpace",
+    []
+   ],
+   "Weight": [
+    "1.000000",
+    []
+   ],
+   "next": [
+    "C01Wave"
+   ]
+  },
+  {
+   "node": "C01Wave",
+   "title": "Chain Harmonics",
+   "next": [
+    "C02Lift"
+   ]
+  },
+  {
+   "node": "C02Lift",
+   "title": "Set Rotation",
+   "Item": [
+    "(Type=Bone,Name=\"HB1_2_1\")",
+    []
+   ],
+   "Space": [
+    "GlobalSpace",
+    []
+   ],
+   "Weight": [
+    "1.000000",
+    []
+   ],
+   "next": [
+    "C02Wave"
+   ]
+  },
+  {
+   "node": "C02Wave",
+   "title": "Chain Harmonics",
+   "next": [
+    "C03Lift"
+   ]
+  },
+  {
+   "node": "C03Lift",
+   "title": "Set Rotation",
+   "Item": [
+    "(Type=Bone,Name=\"HB1_1_5\")",
+    []
+   ],
+   "Space": [
+    "GlobalSpace",
+    []
+   ],
+   "Weight": [
+    "1.000000",
+    []
+   ],
+   "next": [
+    "C03Wave"
+   ]
+  },
+  {
+   "node": "C03Wave",
+   "title": "Chain Harmonics",
+   "next": [
+    "C04Lift"
+   ]
+  },
+  {
+   "node": "C04Lift",
+   "title": "Set Rotation",
+   "Item": [
+    "(Type=Bone,Name=\"HB1_2_7\")",
+    []
+   ],
+   "Space": [
+    "GlobalSpace",
+    []
+   ],
+   "Weight": [
+    "1.000000",
+    []
+   ],
+   "next": [
+    "C04Wave"
+   ]
+  },
+  {
+   "node": "C04Wave",
+   "title": "Chain Harmonics",
+   "next": [
+    "C05Lift"
+   ]
+  },
+  {
+   "node": "C05Lift",
+   "title": "Set Rotation",
+   "Item": [
+    "(Type=Bone,Name=\"HB2_0_1\")",
+    []
+   ],
+   "Space": [
+    "GlobalSpace",
+    []
+   ],
+   "Weight": [
+    "1.000000",
+    []
+   ],
+   "next": [
+    "C05Wave"
+   ]
+  },
+  {
+   "node": "C05Wave",
+   "title": "Chain Harmonics",
+   "next": [
+    "C06Lift"
+   ]
+  },
+  {
+   "node": "C06Lift",
+   "title": "Set Rotation",
+   "Item": [
+    "(Type=Bone,Name=\"HB3_0_1\")",
+    []
+   ],
+   "Space": [
+    "GlobalSpace",
+    []
+   ],
+   "Weight": [
+    "1.000000",
+    []
+   ],
+   "next": [
+    "C06Wave"
+   ]
+  },
+  {
+   "node": "C06Wave",
+   "title": "Chain Harmonics",
+   "next": [
+    "C07Lift"
+   ]
+  },
+  {
+   "node": "C07Lift",
+   "title": "Set Rotation",
+   "Item": [
+    "(Type=Bone,Name=\"HB1_1_3\")",
+    []
+   ],
+   "Space": [
+    "GlobalSpace",
+    []
+   ],
+   "Weight": [
+    "1.000000",
+    []
+   ],
+   "next": [
+    "C07Wave"
+   ]
+  },
+  {
+   "node": "C07Wave",
+   "title": "Chain Harmonics",
+   "next": [
+    "C08Lift"
+   ]
+  },
+  {
+   "node": "C08Lift",
+   "title": "Set Rotation",
+   "Item": [
+    "(Type=Bone,Name=\"HB4_0_1\")",
+    []
+   ],
+   "Space": [
+    "GlobalSpace",
+    []
+   ],
+   "Weight": [
+    "1.000000",
+    []
+   ],
+   "next": [
+    "C08Wave"
+   ]
+  },
+  {
+   "node": "C08Wave",
+   "title": "Chain Harmonics",
+   "next": [
+    "C09Lift"
+   ]
+  },
+  {
+   "node": "C09Lift",
+   "title": "Set Rotation",
+   "Item": [
+    "(Type=Bone,Name=\"HB1_1_4\")",
+    []
+   ],
+   "Space": [
+    "GlobalSpace",
+    []
+   ],
+   "Weight": [
+    "1.000000",
+    []
+   ],
+   "next": [
+    "C09Wave"
+   ]
+  },
+  {
+   "node": "C09Wave",
+   "title": "Chain Harmonics",
+   "next": [
+    "C10Lift"
+   ]
+  },
+  {
+   "node": "C10Lift",
+   "title": "Set Rotation",
+   "Item": [
+    "(Type=Bone,Name=\"HB1_1_8\")",
+    []
+   ],
+   "Space": [
+    "GlobalSpace",
+    []
+   ],
+   "Weight": [
+    "1.000000",
+    []
+   ],
+   "next": [
+    "C10Wave"
+   ]
+  },
+  {
+   "node": "C10Wave",
+   "title": "Chain Harmonics",
+   "next": [
+    "C11Lift"
+   ]
+  },
+  {
+   "node": "C11Lift",
+   "title": "Set Rotation",
+   "Item": [
+    "(Type=Bone,Name=\"HB1_1_2\")",
+    []
+   ],
+   "Space": [
+    "GlobalSpace",
+    []
+   ],
+   "Weight": [
+    "1.000000",
+    []
+   ],
+   "next": [
+    "C11Wave"
+   ]
+  },
+  {
+   "node": "C11Wave",
+   "title": "Chain Harmonics",
+   "next": [
+    "C12Lift"
+   ]
+  },
+  {
+   "node": "C12Lift",
+   "title": "Set Rotation",
+   "Item": [
+    "(Type=Bone,Name=\"领巾\")",
+    []
+   ],
+   "Space": [
+    "GlobalSpace",
+    []
+   ],
+   "Weight": [
+    "1.000000",
+    []
+   ],
+   "next": [
+    "C13Lift"
+   ]
+  },
+  {
+   "node": "C13Lift",
+   "title": "Set Rotation",
+   "Item": [
+    "(Type=Bone,Name=\"帽D1_1\")",
+    []
+   ],
+   "Space": [
+    "GlobalSpace",
+    []
+   ],
+   "Weight": [
+    "1.000000",
+    []
+   ],
+   "next": [
+    "C13Wave"
+   ]
+  },
+  {
+   "node": "C13Wave",
+   "title": "Chain Harmonics",
+   "next": [
+    "C14Lift"
+   ]
+  },
+  {
+   "node": "C14Lift",
+   "title": "Set Rotation",
+   "Item": [
+    "(Type=Bone,Name=\"F_0_1_L\")",
+    []
+   ],
+   "Space": [
+    "GlobalSpace",
+    []
+   ],
+   "Weight": [
+    "1.000000",
+    []
+   ],
+   "next": [
+    "C14Wave"
+   ]
+  },
+  {
+   "node": "C14Wave",
+   "title": "Chain Harmonics",
+   "next": [
+    "C15Lift"
+   ]
+  },
+  {
+   "node": "C15Lift",
+   "title": "Set Rotation",
+   "Item": [
+    "(Type=Bone,Name=\"F_0_1_R\")",
+    []
+   ],
+   "Space": [
+    "GlobalSpace",
+    []
+   ],
+   "Weight": [
+    "1.000000",
+    []
+   ],
+   "next": [
+    "C15Wave"
+   ]
+  },
+  {
+   "node": "C15Wave",
+   "title": "Chain Harmonics",
+   "next": [
+    "C16Lift"
+   ]
+  },
+  {
+   "node": "C16Lift",
+   "title": "Set Rotation",
+   "Item": [
+    "(Type=Bone,Name=\"CF_1_L\")",
+    []
+   ],
+   "Space": [
+    "GlobalSpace",
+    []
+   ],
+   "Weight": [
+    "1.000000",
+    []
+   ],
+   "next": [
+    "C16Wave"
+   ]
+  },
+  {
+   "node": "C16Wave",
+   "title": "Chain Harmonics",
+   "next": [
+    "C17Lift"
+   ]
+  },
+  {
+   "node": "C17Lift",
+   "title": "Set Rotation",
+   "Item": [
+    "(Type=Bone,Name=\"CF_1_R\")",
+    []
+   ],
+   "Space": [
+    "GlobalSpace",
+    []
+   ],
+   "Weight": [
+    "1.000000",
+    []
+   ],
+   "next": [
+    "C17Wave"
+   ]
+  },
+  {
+   "node": "C17Wave",
+   "title": "Chain Harmonics",
+   "next": [
+    "C18Wave"
+   ]
+  },
+  {
+   "node": "C18Wave",
+   "title": "Chain Harmonics",
+   "next": [
+    "SetBlink"
+   ]
+  },
+  {
+   "node": "SetBlink",
+   "title": "Set Curve Value",
+   "next": []
+  }
+ ]
+}

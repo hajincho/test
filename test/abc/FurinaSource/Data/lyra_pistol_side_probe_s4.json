@@ -1,0 +1,109 @@
+{
+ "tag": "s4",
+ "shots": [
+  [
+   "left",
+   [
+    -1150.9650781801618,
+    -375.97007496824574,
+    185.7391627391025
+   ],
+   [
+    -1156.398711818555,
+    -344.28246747732516,
+    171.9054663066563
+   ]
+  ],
+  [
+   "right",
+   [
+    -1154.4408870168413,
+    -312.52269400051813,
+    183.25785167694627
+   ],
+   [
+    -1161.2351932778804,
+    -344.21030149040047,
+    196.47651023212353
+   ]
+  ],
+  [
+   "top",
+   [
+    -1141.8432411162348,
+    -329.4255579901817,
+    177.72269668205695
+   ],
+   [
+    -1166.8385517325992,
+    -344.28698326360166,
+    158.2452100363417
+   ]
+  ],
+  [
+   "front",
+   [
+    -1147.762850118702,
+    -344.3713649839518,
+    233.05718963862188
+   ],
+   [
+    -1169.8235027081466,
+    -344.1881426880662,
+    205.88562293888725
+   ]
+  ]
+ ],
+ "classes": {
+  "LyraWorldSettings": 1,
+  "Brush": 1,
+  "DirectionalLight": 1,
+  "InstancedFoliageActor": 1,
+  "AtmosphericFog": 1,
+  "BP_Sky_Sphere_C": 1,
+  "SkyLight": 1,
+  "SphereReflectionCapture": 1,
+  "StaticMeshActor": 6,
+  "LyraPlayerStart": 4,
+  "TextRenderActor": 1,
+  "B_ExperienceList3D_C": 1,
+  "BuoyancyManager": 1,
+  "DefaultPhysicsVolume": 1,
+  "GameplayDebuggerPlayerManager": 1,
+  "Actor": 1,
+  "B_LyraGameMode_C": 1,
+  "SmartObjectSubsystemRenderingActor": 1,
+  "LyraGameSession": 1,
+  "ParticleEventManager": 1,
+  "GameNetworkManager": 1,
+  "L_DefaultEditorOverview_C": 1,
+  "LyraGameState": 1,
+  "AbstractNavData": 1,
+  "LyraPlayerController": 1,
+  "LyraPlayerState": 4,
+  "LyraPlayerCameraManager": 1,
+  "B_TeleportToUserFacingExperience_C": 8,
+  "GameplayDebuggerCategoryReplicator": 1,
+  "LyraTeamPublicInfo": 2,
+  "LyraTeamPrivateInfo": 2,
+  "ThirdPersonCharacter_BP_C": 1,
+  "BP_FurinaHUD_C": 1,
+  "GCNL_Spawning_C": 4,
+  "B_AI_Controller_LyraShooter_C": 3,
+  "B_Hero_ShooterMannequin_C": 3,
+  "B_Manny_C": 2,
+  "B_Quinn_C": 1
+ },
+ "cands": [
+  "AtmosphericFog_1",
+  "Cube_2",
+  "Cube2_8",
+  "Cube7",
+  "Cube8",
+  "Cube9",
+  "Cube11",
+  "TextRenderActor_1"
+ ],
+ "cam": "AtmosphericFog_1",
+ "done": true
+}

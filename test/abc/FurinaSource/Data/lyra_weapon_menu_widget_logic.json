@@ -1,0 +1,32 @@
+{
+ "log": [
+  "close event",
+  "onkeydown"
+ ],
+ "bel": [
+  "change_member_variable_type",
+  "get_array_type",
+  "get_basic_type_by_name",
+  "get_class_reference_type",
+  "get_map_type",
+  "get_member_variable_type",
+  "get_object_reference_type",
+  "get_set_type",
+  "get_struct_type",
+  "get_typed_outer",
+  "pin_type_to_json_schema"
+ ],
+ "override": "<Object '/Game/Furina/UI/WBP_FurinaWeaponMenu.WBP_FurinaWeaponMenu:OnKeyDown' (0x000001FF3B3E2A00) Class 'EdGraph'>",
+ "okd_nodes": {
+  "K2Node_FunctionEntry_0": "K2Node_FunctionEntry",
+  "K2Node_FunctionResult_0": "K2Node_FunctionResult"
+ },
+ "keyB": [
+  "(KeyName=\"Tab\")",
+  "(KeyName=\"Escape\")"
+ ],
+ "focusable": "is_focusable",
+ "status": "<BlueprintStatus.BS_UP_TO_DATE: 3>",
+ "saved": true,
+ "focusable_after": true
+}

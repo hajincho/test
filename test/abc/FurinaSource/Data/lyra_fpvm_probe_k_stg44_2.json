@@ -1,0 +1,786 @@
+{
+ "tag": "k_stg44_2",
+ "shots": [
+  [
+   "hip",
+   4.524,
+   {
+    "vm_vis": true,
+    "rifle_vis": false,
+    "on": true,
+    "idle": true,
+    "busy_left": -12.314,
+    "ads_a": 0.0,
+    "ammo": 30,
+    "wid": "stg44",
+    "loose": false,
+    "anim_rl": "AS_FPVM_STG44_Reload",
+    "valid": true,
+    "mesh": "SK_FPVM_STG44",
+    "rl": false,
+    "fp": true,
+    "VM_Gun": [
+     9.8,
+     9.0,
+     -22.18
+    ],
+    "VM_Bolt": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "VM_Clip": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "Right wrist": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "Left wrist": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "rel_loc": [
+     0.0,
+     0.0,
+     0.0
+    ]
+   }
+  ],
+  [
+   "fire1",
+   5.13,
+   {
+    "vm_vis": true,
+    "rifle_vis": false,
+    "on": true,
+    "idle": true,
+    "busy_left": -0.042,
+    "ads_a": 0.0,
+    "ammo": 29,
+    "wid": "stg44",
+    "loose": false,
+    "anim_rl": "AS_FPVM_STG44_Reload",
+    "valid": true,
+    "mesh": "SK_FPVM_STG44",
+    "rl": false,
+    "fp": true,
+    "VM_Gun": [
+     9.8,
+     9.0,
+     -22.2
+    ],
+    "VM_Bolt": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "VM_Clip": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "Right wrist": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "Left wrist": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "rel_loc": [
+     0.0,
+     0.0,
+     0.0
+    ]
+   }
+  ],
+  [
+   "fire2",
+   5.63,
+   {
+    "vm_vis": true,
+    "rifle_vis": false,
+    "on": true,
+    "idle": true,
+    "busy_left": -0.072,
+    "ads_a": 0.0,
+    "ammo": 28,
+    "wid": "stg44",
+    "loose": false,
+    "anim_rl": "AS_FPVM_STG44_Reload",
+    "valid": true,
+    "mesh": "SK_FPVM_STG44",
+    "rl": false,
+    "fp": true,
+    "VM_Gun": [
+     9.8,
+     9.0,
+     -22.18
+    ],
+    "VM_Bolt": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "VM_Clip": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "Right wrist": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "Left wrist": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "rel_loc": [
+     0.0,
+     0.0,
+     0.0
+    ]
+   }
+  ],
+  [
+   "fire3",
+   6.152,
+   {
+    "vm_vis": true,
+    "rifle_vis": false,
+    "on": true,
+    "idle": true,
+    "busy_left": -0.044,
+    "ads_a": 0.0,
+    "ammo": 27,
+    "wid": "stg44",
+    "loose": false,
+    "anim_rl": "AS_FPVM_STG44_Reload",
+    "valid": true,
+    "mesh": "SK_FPVM_STG44",
+    "rl": false,
+    "fp": true,
+    "VM_Gun": [
+     9.8,
+     9.0,
+     -22.2
+    ],
+    "VM_Bolt": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "VM_Clip": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "Right wrist": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "Left wrist": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "rel_loc": [
+     0.0,
+     0.0,
+     0.0
+    ]
+   }
+  ],
+  [
+   "rl_a",
+   6.879,
+   {
+    "vm_vis": true,
+    "rifle_vis": false,
+    "on": true,
+    "idle": false,
+    "busy_left": 2.516,
+    "ads_a": 0.0,
+    "ammo": 0,
+    "wid": "stg44",
+    "loose": false,
+    "anim_rl": "AS_FPVM_STG44_Reload",
+    "valid": true,
+    "mesh": "SK_FPVM_STG44",
+    "rl": true,
+    "fp": true,
+    "VM_Gun": [
+     10.44,
+     0.55,
+     -23.39
+    ],
+    "VM_Bolt": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "VM_Clip": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "Right wrist": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "Left wrist": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "rel_loc": [
+     0.0,
+     0.0,
+     0.0
+    ]
+   }
+  ],
+  [
+   "rl_b",
+   7.588,
+   {
+    "vm_vis": true,
+    "rifle_vis": false,
+    "on": true,
+    "idle": false,
+    "busy_left": 1.807,
+    "ads_a": 0.0,
+    "ammo": 0,
+    "wid": "stg44",
+    "loose": false,
+    "anim_rl": "AS_FPVM_STG44_Reload",
+    "valid": true,
+    "mesh": "SK_FPVM_STG44",
+    "rl": true,
+    "fp": true,
+    "VM_Gun": [
+     10.47,
+     0.55,
+     -23.39
+    ],
+    "VM_Bolt": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "VM_Clip": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "Right wrist": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "Left wrist": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "rel_loc": [
+     0.0,
+     0.0,
+     0.0
+    ]
+   }
+  ],
+  [
+   "rl_c",
+   8.304,
+   {
+    "vm_vis": true,
+    "rifle_vis": false,
+    "on": true,
+    "idle": false,
+    "busy_left": 1.091,
+    "ads_a": 0.0,
+    "ammo": 0,
+    "wid": "stg44",
+    "loose": false,
+    "anim_rl": "AS_FPVM_STG44_Reload",
+    "valid": true,
+    "mesh": "SK_FPVM_STG44",
+    "rl": true,
+    "fp": true,
+    "VM_Gun": [
+     10.47,
+     0.55,
+     -23.39
+    ],
+    "VM_Bolt": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "VM_Clip": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "Right wrist": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "Left wrist": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "rel_loc": [
+     0.0,
+     0.0,
+     0.0
+    ]
+   }
+  ],
+  [
+   "rl_d",
+   8.981,
+   {
+    "vm_vis": true,
+    "rifle_vis": false,
+    "on": true,
+    "idle": false,
+    "busy_left": 0.414,
+    "ads_a": 0.0,
+    "ammo": 0,
+    "wid": "stg44",
+    "loose": false,
+    "anim_rl": "AS_FPVM_STG44_Reload",
+    "valid": true,
+    "mesh": "SK_FPVM_STG44",
+    "rl": true,
+    "fp": true,
+    "VM_Gun": [
+     10.45,
+     0.55,
+     -23.4
+    ],
+    "VM_Bolt": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "VM_Clip": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "Right wrist": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "Left wrist": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "rel_loc": [
+     0.0,
+     0.0,
+     0.0
+    ]
+   }
+  ],
+  [
+   "rl_e",
+   9.773,
+   {
+    "vm_vis": true,
+    "rifle_vis": false,
+    "on": true,
+    "idle": true,
+    "busy_left": -0.378,
+    "ads_a": 0.0,
+    "ammo": 30,
+    "wid": "stg44",
+    "loose": false,
+    "anim_rl": "AS_FPVM_STG44_Reload",
+    "valid": true,
+    "mesh": "SK_FPVM_STG44",
+    "rl": false,
+    "fp": true,
+    "VM_Gun": [
+     9.8,
+     9.0,
+     -22.18
+    ],
+    "VM_Bolt": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "VM_Clip": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "Right wrist": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "Left wrist": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "rel_loc": [
+     0.0,
+     0.0,
+     0.0
+    ]
+   }
+  ],
+  [
+   "rl_f",
+   10.739,
+   {
+    "vm_vis": true,
+    "rifle_vis": false,
+    "on": true,
+    "idle": true,
+    "busy_left": -1.344,
+    "ads_a": 0.0,
+    "ammo": 30,
+    "wid": "stg44",
+    "loose": false,
+    "anim_rl": "AS_FPVM_STG44_Reload",
+    "valid": true,
+    "mesh": "SK_FPVM_STG44",
+    "rl": false,
+    "fp": true,
+    "VM_Gun": [
+     9.8,
+     9.0,
+     -22.18
+    ],
+    "VM_Bolt": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "VM_Clip": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "Right wrist": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "Left wrist": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "rel_loc": [
+     0.0,
+     0.0,
+     0.0
+    ]
+   }
+  ],
+  [
+   "rl_end",
+   12.606,
+   {
+    "vm_vis": true,
+    "rifle_vis": false,
+    "on": true,
+    "idle": true,
+    "busy_left": -3.211,
+    "ads_a": 0.0,
+    "ammo": 30,
+    "wid": "stg44",
+    "loose": false,
+    "anim_rl": "AS_FPVM_STG44_Reload",
+    "valid": true,
+    "mesh": "SK_FPVM_STG44",
+    "rl": false,
+    "fp": true,
+    "VM_Gun": [
+     9.8,
+     9.0,
+     -22.18
+    ],
+    "VM_Bolt": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "VM_Clip": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "Right wrist": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "Left wrist": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "rel_loc": [
+     0.0,
+     0.0,
+     0.0
+    ]
+   }
+  ],
+  [
+   "ads",
+   14.18,
+   {
+    "vm_vis": true,
+    "rifle_vis": false,
+    "on": true,
+    "idle": true,
+    "busy_left": -4.785,
+    "ads_a": 1.0,
+    "ammo": 30,
+    "wid": "stg44",
+    "loose": false,
+    "anim_rl": "AS_FPVM_STG44_Reload",
+    "valid": true,
+    "mesh": "SK_FPVM_STG44",
+    "rl": false,
+    "fp": true,
+    "VM_Gun": [
+     26.0,
+     0.22,
+     -17.18
+    ],
+    "VM_Bolt": [
+     18.18,
+     -7.99,
+     6.06
+    ],
+    "VM_Clip": [
+     18.18,
+     -7.99,
+     6.06
+    ],
+    "Right wrist": [
+     18.18,
+     -7.99,
+     6.06
+    ],
+    "Left wrist": [
+     18.18,
+     -7.99,
+     6.06
+    ],
+    "rel_loc": [
+     18.18,
+     -7.99,
+     6.06
+    ]
+   }
+  ],
+  [
+   "ads_fire",
+   14.61,
+   {
+    "vm_vis": true,
+    "rifle_vis": false,
+    "on": true,
+    "idle": true,
+    "busy_left": -0.022,
+    "ads_a": 1.0,
+    "ammo": 29,
+    "wid": "stg44",
+    "loose": false,
+    "anim_rl": "AS_FPVM_STG44_Reload",
+    "valid": true,
+    "mesh": "SK_FPVM_STG44",
+    "rl": false,
+    "fp": true,
+    "VM_Gun": [
+     26.0,
+     0.22,
+     -17.2
+    ],
+    "VM_Bolt": [
+     18.18,
+     -7.99,
+     6.06
+    ],
+    "VM_Clip": [
+     18.18,
+     -7.99,
+     6.06
+    ],
+    "Right wrist": [
+     18.18,
+     -7.99,
+     6.06
+    ],
+    "Left wrist": [
+     18.18,
+     -7.99,
+     6.06
+    ],
+    "rel_loc": [
+     18.18,
+     -7.99,
+     6.06
+    ]
+   }
+  ],
+  [
+   "hip3",
+   16.046,
+   {
+    "vm_vis": true,
+    "rifle_vis": false,
+    "on": true,
+    "idle": true,
+    "busy_left": -1.458,
+    "ads_a": 0.0,
+    "ammo": 29,
+    "wid": "stg44",
+    "loose": false,
+    "anim_rl": "AS_FPVM_STG44_Reload",
+    "valid": true,
+    "mesh": "SK_FPVM_STG44",
+    "rl": false,
+    "fp": true,
+    "VM_Gun": [
+     9.8,
+     9.0,
+     -22.18
+    ],
+    "VM_Bolt": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "VM_Clip": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "Right wrist": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "Left wrist": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "rel_loc": [
+     0.0,
+     0.0,
+     0.0
+    ]
+   }
+  ]
+ ],
+ "events": [
+  [
+   "fire1",
+   4.99,
+   "ammo",
+   30,
+   29
+  ],
+  [
+   "fire2",
+   5.46,
+   "ammo",
+   29,
+   28
+  ],
+  [
+   "fire3",
+   6.01,
+   "ammo",
+   28,
+   27
+  ],
+  [
+   "reload",
+   6.47
+  ],
+  [
+   "ads_fire",
+   14.49,
+   "ammo",
+   30,
+   29
+  ]
+ ],
+ "before": {
+  "vm_vis": false,
+  "rifle_vis": true,
+  "on": false,
+  "idle": false,
+  "busy_left": -7.79,
+  "ads_a": 0.0,
+  "ammo": 20,
+  "wid": "legacy",
+  "loose": false,
+  "anim_rl": "AS_FPVM_Kar98k_Reload",
+  "valid": false,
+  "mesh": "SK_FPVM_Kar98k",
+  "rl": false,
+  "fp": false,
+  "VM_Gun": [
+   21.0,
+   9.0,
+   -12.5
+  ],
+  "VM_Bolt": [
+   2.54,
+   8.79,
+   -6.9
+  ],
+  "VM_Clip": [
+   9.9,
+   8.32,
+   -3.4
+  ],
+  "Right wrist": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "Left wrist": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "rel_loc": [
+   0.0,
+   0.0,
+   0.0
+  ]
+ },
+ "done": true
+}

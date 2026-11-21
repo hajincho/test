@@ -1,0 +1,52 @@
+{
+ "tag": "o3",
+ "shots": [
+  0,
+  1,
+  2,
+  3,
+  4,
+  5
+ ],
+ "comps": [
+  [
+   "cam",
+   "CameraComponent",
+   false,
+   null
+  ],
+  [
+   "cam",
+   "FollowCamera",
+   true,
+   "CameraBoom"
+  ],
+  [
+   "cam",
+   "FPCamera",
+   false,
+   "FurinaMesh"
+  ],
+  [
+   "arm",
+   "CameraBoom",
+   true,
+   330.0
+  ]
+ ],
+ "after_dual": [
+  [
+   "CameraComponent",
+   true
+  ],
+  [
+   "FollowCamera",
+   true
+  ],
+  [
+   "FPCamera",
+   true
+  ]
+ ],
+ "done": true
+}

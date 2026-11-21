@@ -1,0 +1,151 @@
+{
+ "ref": {
+  "v_m4_ms": 1.8,
+  "e_m4_j": 5.51
+ },
+ "weapons": {
+  "kar98k": {
+   "ammo": "7.92x57 s.S.",
+   "impulse_ns": 14.102,
+   "recoil_v_ms": 3.616,
+   "recoil_e_j": 25.5,
+   "recoil": 2.009,
+   "shake": 2.151,
+   "flash": 1.0,
+   "flash_len": 1.0,
+   "smoke": 1.0,
+   "smoke_life": 3.2,
+   "kind": "rifle"
+  },
+  "kar98k_zf39": {
+   "ammo": "7.92x57 s.S.",
+   "impulse_ns": 14.102,
+   "recoil_v_ms": 3.134,
+   "recoil_e_j": 22.1,
+   "recoil": 1.741,
+   "shake": 2.003,
+   "flash": 1.0,
+   "flash_len": 1.0,
+   "smoke": 1.0,
+   "smoke_life": 3.2,
+   "kind": "rifle"
+  },
+  "kar98k_zf41": {
+   "ammo": "7.92x57 s.S.",
+   "impulse_ns": 14.102,
+   "recoil_v_ms": 3.358,
+   "recoil_e_j": 23.67,
+   "recoil": 1.865,
+   "shake": 2.073,
+   "flash": 1.0,
+   "flash_len": 1.0,
+   "smoke": 1.0,
+   "smoke_life": 3.2,
+   "kind": "rifle"
+  },
+  "g43": {
+   "ammo": "7.92x57 s.S.",
+   "impulse_ns": 14.166,
+   "recoil_v_ms": 3.22,
+   "recoil_e_j": 22.8,
+   "recoil": 1.789,
+   "shake": 2.035,
+   "flash": 1.026,
+   "flash_len": 1.0,
+   "smoke": 1.0,
+   "smoke_life": 3.2,
+   "kind": "rifle"
+  },
+  "g43_zf4": {
+   "ammo": "7.92x57 s.S.",
+   "impulse_ns": 14.166,
+   "recoil_v_ms": 2.891,
+   "recoil_e_j": 20.48,
+   "recoil": 1.606,
+   "shake": 1.928,
+   "flash": 1.026,
+   "flash_len": 1.0,
+   "smoke": 1.0,
+   "smoke_life": 3.2,
+   "kind": "rifle"
+  },
+  "stg44": {
+   "ammo": "7.92x33 Kurz",
+   "impulse_ns": 7.431,
+   "recoil_v_ms": 1.448,
+   "recoil_e_j": 5.38,
+   "recoil": 0.805,
+   "shake": 0.988,
+   "flash": 0.834,
+   "flash_len": 0.75,
+   "smoke": 0.749,
+   "smoke_life": 2.8,
+   "kind": "smg"
+  },
+  "mp40": {
+   "ammo": "9x19 Pist.Patr.08",
+   "impulse_ns": 3.416,
+   "recoil_v_ms": 0.86,
+   "recoil_e_j": 1.47,
+   "recoil": 0.478,
+   "shake": 0.517,
+   "flash": 0.466,
+   "flash_len": 0.75,
+   "smoke": 0.359,
+   "smoke_life": 2.17,
+   "kind": "smg"
+  },
+  "mp38": {
+   "ammo": "9x19 Pist.Patr.08",
+   "impulse_ns": 3.416,
+   "recoil_v_ms": 0.833,
+   "recoil_e_j": 1.42,
+   "recoil": 0.463,
+   "shake": 0.508,
+   "flash": 0.466,
+   "flash_len": 0.75,
+   "smoke": 0.359,
+   "smoke_life": 2.17,
+   "kind": "smg"
+  },
+  "p38": {
+   "ammo": "9x19 Pist.Patr.08",
+   "impulse_ns": 2.733,
+   "recoil_v_ms": 2.847,
+   "recoil_e_j": 3.89,
+   "recoil": 1.581,
+   "shake": 0.84,
+   "flash": 0.574,
+   "flash_len": 0.55,
+   "smoke": 0.359,
+   "smoke_life": 2.17,
+   "kind": "pistol"
+  },
+  "p08": {
+   "ammo": "9x19 Pist.Patr.08",
+   "impulse_ns": 3.203,
+   "recoil_v_ms": 3.677,
+   "recoil_e_j": 5.89,
+   "recoil": 2.043,
+   "shake": 1.034,
+   "flash": 0.614,
+   "flash_len": 0.55,
+   "smoke": 0.359,
+   "smoke_life": 2.17,
+   "kind": "pistol"
+  },
+  "pp": {
+   "ammo": "7.65 Browning",
+   "impulse_ns": 1.554,
+   "recoil_v_ms": 2.354,
+   "recoil_e_j": 1.83,
+   "recoil": 1.308,
+   "shake": 0.576,
+   "flash": 0.424,
+   "flash_len": 0.55,
+   "smoke": 0.246,
+   "smoke_life": 1.99,
+   "kind": "pistol"
+  }
+ }
+}

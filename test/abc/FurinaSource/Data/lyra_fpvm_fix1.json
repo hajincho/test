@@ -1,0 +1,17 @@
+{
+ "parents": {
+  "/Engine/EngineMaterials/WorldGridMaterial.WorldGridMaterial": {
+   "was": false,
+   "saved": true
+  }
+ },
+ "ads_nodes": [
+  "VM_AdsB_62_f0d9"
+ ],
+ "ads_set": [
+  "11.034700,-8.516100,5.445100",
+  "-4.121833,2.293349,2.830143"
+ ],
+ "status": "<BlueprintStatus.BS_UP_TO_DATE_WITH_WARNINGS: 5>",
+ "saved": true
+}

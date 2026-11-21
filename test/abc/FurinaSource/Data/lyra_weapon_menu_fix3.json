@@ -1,0 +1,25 @@
+{
+ "keys": {
+  "WK_Tab": "Tab",
+  "WK_Esc": "Escape",
+  "WK_K0": "One",
+  "WK_K1": "Two",
+  "WK_K2": "Three",
+  "WK_K3": "Four",
+  "WK_K4": "Five",
+  "WK_K5": "Six"
+ },
+ "removed": 19,
+ "status": "<BlueprintStatus.BS_UP_TO_DATE: 3>",
+ "saved": true,
+ "keys_after_compile": {
+  "WK_Tab": "Tab",
+  "WK_Esc": "Escape",
+  "WK_K0": "One",
+  "WK_K1": "Two",
+  "WK_K2": "Three",
+  "WK_K3": "Four",
+  "WK_K4": "Five",
+  "WK_K5": "Six"
+ }
+}

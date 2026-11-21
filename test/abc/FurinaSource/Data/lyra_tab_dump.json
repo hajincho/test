@@ -1,0 +1,71 @@
+{
+ "imc": [],
+ "nodes": {
+  "Get Look Rate:K2Node_VariableGet_2": {
+   "title": "Get InvertLookUp?",
+   "pins": [
+    [
+     "InvertLookUp?",
+     "false",
+     [
+      "K2Node_CallFunction_10"
+     ]
+    ]
+   ]
+  },
+  "EventGraph:K2Node_VariableSet_5": {
+   "title": "Set InvertLookUp?",
+   "pins": [
+    [
+     "execute",
+     "",
+     [
+      "K2Node_MacroInstance_1",
+      "K2Node_MacroInstance_1"
+     ]
+    ],
+    [
+     "InvertLookUp?",
+     "false",
+     [
+      "K2Node_MacroInstance_1"
+     ]
+    ],
+    [
+     "then",
+     "",
+     [
+      "K2Node_CallFunction_23"
+     ]
+    ],
+    [
+     "Output_Get",
+     "false",
+     []
+    ]
+   ]
+  },
+  "EventGraph:K2Node_InputKey_1": {
+   "title": "Tab",
+   "pins": [
+    [
+     "Pressed",
+     "",
+     [
+      "K2Node_MacroInstance_1"
+     ]
+    ],
+    [
+     "Released",
+     "",
+     []
+    ],
+    [
+     "Key",
+     "",
+     []
+    ]
+   ]
+  }
+ }
+}

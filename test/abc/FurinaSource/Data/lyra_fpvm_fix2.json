@@ -1,0 +1,99 @@
+{
+ "wg_before": true,
+ "wg_saved": true,
+ "wg_after": false,
+ "slots": [
+  [
+   "Furina_SkinHair",
+   "/Game/Furina/Materials/MI_Furina_SkinHair.MI_Furina_SkinHair"
+  ],
+  [
+   "Furina_Outfit",
+   "/Game/Furina/Materials/MI_Furina_Outfit.MI_Furina_Outfit"
+  ],
+  [
+   "Material_005",
+   "/Game/Furina/Weapons/Germany/kar98k/MI_DE_kar98k_Material_005.MI_DE_kar98k_Material_005"
+  ],
+  [
+   "Material",
+   "/Game/Furina/Weapons/Germany/kar98k/MI_DE_kar98k_Material.MI_DE_kar98k_Material"
+  ],
+  [
+   "Material_001",
+   "/Game/Furina/Weapons/Germany/kar98k/MI_DE_kar98k_Material_001.MI_DE_kar98k_Material_001"
+  ],
+  [
+   "Material_002",
+   "/Game/Furina/Weapons/Germany/kar98k/MI_DE_kar98k_Material_002.MI_DE_kar98k_Material_002"
+  ],
+  [
+   "Material_003",
+   "/Game/Furina/Weapons/Germany/kar98k/MI_DE_kar98k_Material_003.MI_DE_kar98k_Material_003"
+  ],
+  [
+   "Clip_Steel",
+   "/Game/Furina/Weapons/Germany/mauser_clip/MI_DE_mauser_clip_Material.MI_DE_mauser_clip_Material"
+  ],
+  [
+   "Clip_Projectile",
+   "/Game/Furina/Weapons/Germany/mauser_clip/MI_DE_mauser_clip_6_5.MI_DE_mauser_clip_6_5"
+  ],
+  [
+   "Clip_Case",
+   "/Game/Furina/Weapons/Germany/mauser_clip/MI_DE_mauser_clip_case.MI_DE_mauser_clip_case"
+  ]
+ ],
+ "mesh_saved": true,
+ "check": [
+  [
+   "Furina_SkinHair",
+   "/Game/Furina/Materials/MI_Furina_SkinHair.MI_Furina_SkinHair"
+  ],
+  [
+   "Furina_Outfit",
+   "/Game/Furina/Materials/MI_Furina_Outfit.MI_Furina_Outfit"
+  ],
+  [
+   "Material_005",
+   "/Game/Furina/Weapons/Germany/kar98k/MI_DE_kar98k_Material_005.MI_DE_kar98k_Material_005"
+  ],
+  [
+   "Material",
+   "/Game/Furina/Weapons/Germany/kar98k/MI_DE_kar98k_Material.MI_DE_kar98k_Material"
+  ],
+  [
+   "Material_001",
+   "/Game/Furina/Weapons/Germany/kar98k/MI_DE_kar98k_Material_001.MI_DE_kar98k_Material_001"
+  ],
+  [
+   "Material_002",
+   "/Game/Furina/Weapons/Germany/kar98k/MI_DE_kar98k_Material_002.MI_DE_kar98k_Material_002"
+  ],
+  [
+   "Material_003",
+   "/Game/Furina/Weapons/Germany/kar98k/MI_DE_kar98k_Material_003.MI_DE_kar98k_Material_003"
+  ],
+  [
+   "Clip_Steel",
+   "/Game/Furina/Weapons/Germany/mauser_clip/MI_DE_mauser_clip_Material.MI_DE_mauser_clip_Material"
+  ],
+  [
+   "Clip_Projectile",
+   "/Game/Furina/Weapons/Germany/mauser_clip/MI_DE_mauser_clip_6_5.MI_DE_mauser_clip_6_5"
+  ],
+  [
+   "Clip_Case",
+   "/Game/Furina/Weapons/Germany/mauser_clip/MI_DE_mauser_clip_case.MI_DE_mauser_clip_case"
+  ]
+ ],
+ "bases": {
+  "/Game/Furina/Materials/M_Furina_Opaque.M_Furina_Opaque": {
+   "was": true
+  },
+  "/Game/Furina/Weapons/Materials/M_FurinaWeaponPBR.M_FurinaWeaponPBR": {
+   "was": false,
+   "saved": true
+  }
+ }
+}

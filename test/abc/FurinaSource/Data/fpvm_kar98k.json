@@ -1,0 +1,168 @@
+{
+ "stage": "export",
+ "arms": {
+  "phi_err": 3.7235102710676524e-05,
+  "K_det": 9.999981549863479e-07,
+  "scale": 0.009999993849950711,
+  "bones_kept": 53,
+  "arm_verts": 4128,
+  "Left_shoulder_cm": [
+   -17.26,
+   10.25,
+   -19.04
+  ],
+  "Left_len_cm": [
+   21.14,
+   18.02
+  ],
+  "Right_shoulder_cm": [
+   -17.26,
+   -10.25,
+   -19.04
+  ],
+  "Right_len_cm": [
+   21.14,
+   18.02
+  ]
+ },
+ "clavicle_err_cm": {
+  "L": 1.34,
+  "R": 0.77
+ },
+ "sleeves_folded": 8,
+ "gun_pos": [
+  32.0,
+  -9.0,
+  -12.5
+ ],
+ "gun_rot": [
+  2.5,
+  4.0,
+  -3.0
+ ],
+ "yL": 9.0,
+ "sight_native": {
+  "front": [
+   0.646,
+   -52.812,
+   9.464
+  ],
+  "rear_top": [
+   0.966,
+   -4.226,
+   9.153
+  ]
+ },
+ "R_grip": {
+  "wrist_cm": [
+   1.04,
+   -13.06,
+   -11.21
+  ],
+  "miss_cm": 0.29,
+  "pole": 0
+ },
+ "seat_cm": {
+  "R_GRIP": {
+   "gap_cm": 0.06,
+   "moved_cm": 0.0
+  },
+  "L_GRIP": {
+   "gap_cm": 0.038,
+   "moved_cm": 0.0
+  },
+  "L_RELOAD": {
+   "gap_cm": 0.038,
+   "moved_cm": 0.0
+  }
+ },
+ "L_grip": {
+  "wrist_cm": [
+   21.86,
+   -4.56,
+   -13.7
+  ],
+  "miss_cm": 0.32,
+  "pole": 180
+ },
+ "L_reload": {
+  "wrist_cm": [
+   21.86,
+   -4.56,
+   -13.7
+  ],
+  "miss_cm": 0.36
+ },
+ "R_bolt": {
+  "score": 0.112,
+  "pen_cm": 0.0
+ },
+ "R_clip": {
+  "score": 0.631,
+  "pen_cm": 0.011
+ },
+ "R_push": {
+  "score": 0.04,
+  "pen_cm": 0.0
+ },
+ "states": [
+  "R_GRIP",
+  "L_GRIP",
+  "L_RELOAD",
+  "R_BOLT",
+  "R_CLIP",
+  "R_PUSH",
+  "R_POUCH"
+ ],
+ "knob_lifted_native": [
+  -2.71,
+  17.87,
+  9.94
+ ],
+ "reload_pose": {
+  "delta": {
+   "back": -3,
+   "side": 6,
+   "up": 0,
+   "pitch": 0,
+   "roll": 26,
+   "yaw": 8
+  },
+  "cost": 13.19,
+  "guide_hv_wrist_hv_dist": [
+   11.5,
+   -2.6,
+   41.2,
+   -2.7,
+   21.0
+  ]
+ },
+ "actions": {
+  "Idle": {
+   "action": "FPVM_Kar98k_Idle",
+   "frames": 121
+  },
+  "Fire": {
+   "action": "FPVM_Kar98k_Fire",
+   "frames": 37
+  },
+  "Reload": {
+   "action": "FPVM_Kar98k_Reload",
+   "frames": 97
+  }
+ },
+ "fbx": "C:\\Users\\fromj\\Downloads\\test\\test\\abc\\FurinaSource\\FBX\\FPVM\\SK_FPVM_Kar98k.fbx",
+ "fps": 30,
+ "mats": [
+  "Clip_Case",
+  "Clip_Projectile",
+  "Clip_Steel",
+  "Furina_Outfit",
+  "Furina_SkinHair",
+  "Material",
+  "Material_001",
+  "Material_002",
+  "Material_003",
+  "Material_005"
+ ]
+}

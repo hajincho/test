@@ -1,0 +1,5 @@
+{
+ "tag": "c1",
+ "shots": [],
+ "error": "Traceback (most recent call last):\n  File \"C:/Users/fromj/Downloads/test/test/abc/FurinaSource/Scripts/Unreal/lyra_pistol_hand_closeup.py\", line 39, in tick\n    t0 = unreal.Transform(); a = unreal.GameplayStatics.begin_deferred_actor_spawn_from_class(w, unreal.CameraActor, t0); a = unreal.GameplayStatics.finish_spawning_actor(a, t0)\n                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'\n"
+}

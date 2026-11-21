@@ -1,0 +1,5 @@
+{
+ "tag": "t2",
+ "shots": [],
+ "error": "Traceback (most recent call last):\n  File \"C:/Users/fromj/Downloads/test/test/abc/FurinaSource/Scripts/Unreal/lyra_tp_pistol_probe.py\", line 34, in tick\n    if ac != p and ('Mannequin' in ac.get_class().get_name() or 'Manny' in ac.get_class().get_name() or 'Quinn' in ac.get_class().get_name()): ac.k2_destroy_actor(); n_d += 1\n                                                                                                                                               ^^^^^^^^^^^^^^^^^^^\nAttributeError: 'LyraCharacter' object has no attribute 'k2_destroy_actor'\n"
+}

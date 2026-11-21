@@ -1,0 +1,12 @@
+{
+ "log": [
+  "added FurinaSlingM4",
+  "added FurinaHolsterFrame",
+  "added FurinaHolsterSlide",
+  "socket err SkeletalMeshComponent: Failed to find property 'attach_socket_name' for attribut",
+  "socket err StaticMeshComponent: Failed to find property 'attach_socket_name' for attribute "
+ ],
+ "rifle_mesh": "<Object '/Game/Furina/M4/SK_M4A1.SK_M4A1' (0x0000020FAA538C00) Class 'SkeletalMesh'>",
+ "status": "<BlueprintStatus.BS_UP_TO_DATE_WITH_WARNINGS: 5>",
+ "saved": true
+}

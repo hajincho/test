@@ -1,0 +1,15 @@
+{
+ "key": "Thumb",
+ "hier": "<class 'RigHierarchy'>",
+ "n_keys": 329,
+ "match": [
+  "Thumb0_L",
+  "Thumb1_L",
+  "Thumb2_L",
+  "Thumb3_L",
+  "Thumb0_R",
+  "Thumb1_R",
+  "Thumb2_R",
+  "Thumb3_R"
+ ]
+}

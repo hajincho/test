@@ -1,0 +1,817 @@
+{
+ "tag": "w2",
+ "mesh_ok": true,
+ "stages": {
+  "idle": {
+   "n": 169,
+   "bones": {
+    "Thumb0_R": [
+     14.98,
+     148.9
+    ],
+    "Thumb1_R": [
+     14.85,
+     148.7
+    ],
+    "Thumb2_R": [
+     0.32,
+     4.5
+    ],
+    "Thumb3_R": [
+     0.0,
+     0.0
+    ],
+    "Thumb0_L": [
+     11.31,
+     375.6
+    ],
+    "Thumb1_L": [
+     0.37,
+     17.3
+    ],
+    "Thumb2_L": [
+     5.23,
+     163.9
+    ],
+    "Thumb3_L": [
+     0.0,
+     0.0
+    ],
+    "IndexFinger1_R": [
+     0.63,
+     12.8
+    ],
+    "IndexFinger2_R": [
+     0.0,
+     0.0
+    ],
+    "IndexFinger3_R": [
+     0.63,
+     8.6
+    ],
+    "MiddleFinger1_R": [
+     14.72,
+     148.6
+    ],
+    "MiddleFinger2_R": [
+     30.27,
+     298.3
+    ],
+    "MiddleFinger3_R": [
+     15.39,
+     149.4
+    ],
+    "RingFinger1_R": [
+     15.03,
+     149.4
+    ],
+    "RingFinger2_R": [
+     45.21,
+     447.0
+    ],
+    "RingFinger3_R": [
+     15.3,
+     149.4
+    ],
+    "LittleFinger1_R": [
+     15.2,
+     149.3
+    ],
+    "LittleFinger2_R": [
+     14.82,
+     148.9
+    ],
+    "LittleFinger3_R": [
+     0.4,
+     8.6
+    ],
+    "IndexFinger1_L": [
+     61.73,
+     3653.2
+    ],
+    "IndexFinger2_L": [
+     11.25,
+     683.1
+    ],
+    "IndexFinger3_L": [
+     29.23,
+     1768.3
+    ],
+    "MiddleFinger1_L": [
+     37.62,
+     2876.4
+    ],
+    "MiddleFinger2_L": [
+     34.42,
+     2048.0
+    ],
+    "MiddleFinger3_L": [
+     29.4,
+     1973.2
+    ],
+    "RingFinger1_L": [
+     21.3,
+     1945.4
+    ],
+    "RingFinger2_L": [
+     66.23,
+     1860.1
+    ],
+    "RingFinger3_L": [
+     73.51,
+     2304.2
+    ],
+    "LittleFinger1_L": [
+     25.43,
+     1174.4
+    ],
+    "LittleFinger2_L": [
+     30.49,
+     1115.5
+    ],
+    "LittleFinger3_L": [
+     51.53,
+     1594.8
+    ]
+   },
+   "worst_dev": 73.51,
+   "worst_speed": 3653.2
+  },
+  "look": {
+   "n": 169,
+   "bones": {
+    "Thumb0_R": [
+     0.06,
+     1.5
+    ],
+    "Thumb1_R": [
+     0.27,
+     3.7
+    ],
+    "Thumb2_R": [
+     0.29,
+     4.1
+    ],
+    "Thumb3_R": [
+     40.0,
+     60.7
+    ],
+    "Thumb0_L": [
+     0.65,
+     23.3
+    ],
+    "Thumb1_L": [
+     0.6,
+     4.0
+    ],
+    "Thumb2_L": [
+     0.64,
+     3.7
+    ],
+    "Thumb3_L": [
+     40.0,
+     60.7
+    ],
+    "IndexFinger1_R": [
+     0.55,
+     7.9
+    ],
+    "IndexFinger2_R": [
+     0.0,
+     0.0
+    ],
+    "IndexFinger3_R": [
+     0.55,
+     7.9
+    ],
+    "MiddleFinger1_R": [
+     0.48,
+     5.2
+    ],
+    "MiddleFinger2_R": [
+     0.42,
+     5.1
+    ],
+    "MiddleFinger3_R": [
+     0.59,
+     7.3
+    ],
+    "RingFinger1_R": [
+     0.5,
+     6.1
+    ],
+    "RingFinger2_R": [
+     0.33,
+     4.6
+    ],
+    "RingFinger3_R": [
+     0.46,
+     6.6
+    ],
+    "LittleFinger1_R": [
+     0.46,
+     8.2
+    ],
+    "LittleFinger2_R": [
+     0.34,
+     7.2
+    ],
+    "LittleFinger3_R": [
+     0.41,
+     8.3
+    ],
+    "IndexFinger1_L": [
+     1.54,
+     47.3
+    ],
+    "IndexFinger2_L": [
+     1.14,
+     6.6
+    ],
+    "IndexFinger3_L": [
+     1.35,
+     8.5
+    ],
+    "MiddleFinger1_L": [
+     1.25,
+     45.7
+    ],
+    "MiddleFinger2_L": [
+     0.76,
+     5.5
+    ],
+    "MiddleFinger3_L": [
+     1.12,
+     8.1
+    ],
+    "RingFinger1_L": [
+     1.11,
+     45.0
+    ],
+    "RingFinger2_L": [
+     0.29,
+     5.8
+    ],
+    "RingFinger3_L": [
+     0.41,
+     6.5
+    ],
+    "LittleFinger1_L": [
+     1.08,
+     43.8
+    ],
+    "LittleFinger2_L": [
+     0.44,
+     7.2
+    ],
+    "LittleFinger3_L": [
+     0.52,
+     8.5
+    ]
+   },
+   "worst_dev": 40.0,
+   "worst_speed": 60.7
+  },
+  "walk": {
+   "n": 160,
+   "bones": {
+    "Thumb0_R": [
+     0.15,
+     5.1
+    ],
+    "Thumb1_R": [
+     0.3,
+     4.8
+    ],
+    "Thumb2_R": [
+     0.32,
+     4.4
+    ],
+    "Thumb3_R": [
+     27.94,
+     1648.0
+    ],
+    "Thumb0_L": [
+     0.86,
+     25.4
+    ],
+    "Thumb1_L": [
+     0.53,
+     2.4
+    ],
+    "Thumb2_L": [
+     0.57,
+     2.7
+    ],
+    "Thumb3_L": [
+     27.94,
+     1648.0
+    ],
+    "IndexFinger1_R": [
+     0.63,
+     11.7
+    ],
+    "IndexFinger2_R": [
+     0.0,
+     0.0
+    ],
+    "IndexFinger3_R": [
+     0.62,
+     8.2
+    ],
+    "MiddleFinger1_R": [
+     0.53,
+     10.6
+    ],
+    "MiddleFinger2_R": [
+     0.46,
+     5.6
+    ],
+    "MiddleFinger3_R": [
+     0.66,
+     8.4
+    ],
+    "RingFinger1_R": [
+     0.47,
+     9.7
+    ],
+    "RingFinger2_R": [
+     0.33,
+     4.6
+    ],
+    "RingFinger3_R": [
+     0.47,
+     6.5
+    ],
+    "LittleFinger1_R": [
+     0.5,
+     8.8
+    ],
+    "LittleFinger2_R": [
+     0.35,
+     7.3
+    ],
+    "LittleFinger3_R": [
+     0.4,
+     8.5
+    ],
+    "IndexFinger1_L": [
+     1.77,
+     50.8
+    ],
+    "IndexFinger2_L": [
+     1.0,
+     3.7
+    ],
+    "IndexFinger3_L": [
+     1.19,
+     6.4
+    ],
+    "MiddleFinger1_L": [
+     1.8,
+     50.2
+    ],
+    "MiddleFinger2_L": [
+     0.66,
+     3.4
+    ],
+    "MiddleFinger3_L": [
+     0.96,
+     5.3
+    ],
+    "RingFinger1_L": [
+     1.81,
+     50.0
+    ],
+    "RingFinger2_L": [
+     0.6,
+     5.5
+    ],
+    "RingFinger3_L": [
+     0.79,
+     8.0
+    ],
+    "LittleFinger1_L": [
+     1.84,
+     49.6
+    ],
+    "LittleFinger2_L": [
+     0.75,
+     7.7
+    ],
+    "LittleFinger3_L": [
+     0.88,
+     9.0
+    ]
+   },
+   "worst_dev": 27.94,
+   "worst_speed": 1648.0
+  },
+  "walkfast": {
+   "n": 152,
+   "bones": {
+    "Thumb0_R": [
+     0.05,
+     1.1
+    ],
+    "Thumb1_R": [
+     0.24,
+     2.1
+    ],
+    "Thumb2_R": [
+     0.26,
+     2.2
+    ],
+    "Thumb3_R": [
+     0.0,
+     0.0
+    ],
+    "Thumb0_L": [
+     0.58,
+     22.5
+    ],
+    "Thumb1_L": [
+     0.56,
+     2.5
+    ],
+    "Thumb2_L": [
+     0.61,
+     2.9
+    ],
+    "Thumb3_L": [
+     0.0,
+     0.0
+    ],
+    "IndexFinger1_R": [
+     0.51,
+     4.0
+    ],
+    "IndexFinger2_R": [
+     0.0,
+     0.0
+    ],
+    "IndexFinger3_R": [
+     0.51,
+     4.7
+    ],
+    "MiddleFinger1_R": [
+     0.46,
+     5.4
+    ],
+    "MiddleFinger2_R": [
+     0.38,
+     3.6
+    ],
+    "MiddleFinger3_R": [
+     0.55,
+     5.4
+    ],
+    "RingFinger1_R": [
+     0.5,
+     6.9
+    ],
+    "RingFinger2_R": [
+     0.33,
+     5.2
+    ],
+    "RingFinger3_R": [
+     0.47,
+     7.4
+    ],
+    "LittleFinger1_R": [
+     0.46,
+     9.4
+    ],
+    "LittleFinger2_R": [
+     0.35,
+     8.4
+    ],
+    "LittleFinger3_R": [
+     0.41,
+     9.7
+    ],
+    "IndexFinger1_L": [
+     1.43,
+     45.0
+    ],
+    "IndexFinger2_L": [
+     1.07,
+     4.8
+    ],
+    "IndexFinger3_L": [
+     1.27,
+     5.6
+    ],
+    "MiddleFinger1_L": [
+     1.21,
+     43.6
+    ],
+    "MiddleFinger2_L": [
+     0.72,
+     3.0
+    ],
+    "MiddleFinger3_L": [
+     1.06,
+     4.3
+    ],
+    "RingFinger1_L": [
+     1.07,
+     43.0
+    ],
+    "RingFinger2_L": [
+     0.29,
+     5.4
+    ],
+    "RingFinger3_L": [
+     0.4,
+     6.5
+    ],
+    "LittleFinger1_L": [
+     1.03,
+     41.8
+    ],
+    "LittleFinger2_L": [
+     0.43,
+     7.2
+    ],
+    "LittleFinger3_L": [
+     0.51,
+     8.4
+    ]
+   },
+   "worst_dev": 1.43,
+   "worst_speed": 45.0
+  },
+  "jump": {
+   "n": 110,
+   "bones": {
+    "Thumb0_R": [
+     0.06,
+     0.6
+    ],
+    "Thumb1_R": [
+     0.27,
+     3.6
+    ],
+    "Thumb2_R": [
+     0.29,
+     4.0
+    ],
+    "Thumb3_R": [
+     0.0,
+     0.0
+    ],
+    "Thumb0_L": [
+     0.66,
+     22.5
+    ],
+    "Thumb1_L": [
+     0.58,
+     4.4
+    ],
+    "Thumb2_L": [
+     0.62,
+     3.6
+    ],
+    "Thumb3_L": [
+     0.0,
+     0.0
+    ],
+    "IndexFinger1_R": [
+     0.55,
+     7.6
+    ],
+    "IndexFinger2_R": [
+     0.0,
+     0.0
+    ],
+    "IndexFinger3_R": [
+     0.55,
+     7.6
+    ],
+    "MiddleFinger1_R": [
+     0.47,
+     5.0
+    ],
+    "MiddleFinger2_R": [
+     0.41,
+     4.9
+    ],
+    "MiddleFinger3_R": [
+     0.59,
+     7.0
+    ],
+    "RingFinger1_R": [
+     0.47,
+     4.1
+    ],
+    "RingFinger2_R": [
+     0.33,
+     3.3
+    ],
+    "RingFinger3_R": [
+     0.47,
+     4.7
+    ],
+    "LittleFinger1_R": [
+     0.5,
+     6.1
+    ],
+    "LittleFinger2_R": [
+     0.34,
+     3.7
+    ],
+    "LittleFinger3_R": [
+     0.39,
+     4.3
+    ],
+    "IndexFinger1_L": [
+     1.55,
+     45.7
+    ],
+    "IndexFinger2_L": [
+     1.11,
+     6.9
+    ],
+    "IndexFinger3_L": [
+     1.31,
+     9.2
+    ],
+    "MiddleFinger1_L": [
+     1.27,
+     44.2
+    ],
+    "MiddleFinger2_L": [
+     0.74,
+     5.9
+    ],
+    "MiddleFinger3_L": [
+     1.08,
+     8.7
+    ],
+    "RingFinger1_L": [
+     1.12,
+     43.5
+    ],
+    "RingFinger2_L": [
+     0.59,
+     5.3
+    ],
+    "RingFinger3_L": [
+     0.79,
+     6.6
+    ],
+    "LittleFinger1_L": [
+     1.09,
+     42.3
+    ],
+    "LittleFinger2_L": [
+     0.74,
+     5.3
+    ],
+    "LittleFinger3_L": [
+     0.88,
+     6.5
+    ]
+   },
+   "worst_dev": 1.55,
+   "worst_speed": 45.7
+  },
+  "idle2": {
+   "n": 102,
+   "bones": {
+    "Thumb0_R": [
+     0.17,
+     5.3
+    ],
+    "Thumb1_R": [
+     0.31,
+     5.2
+    ],
+    "Thumb2_R": [
+     0.33,
+     5.0
+    ],
+    "Thumb3_R": [
+     0.0,
+     0.0
+    ],
+    "Thumb0_L": [
+     0.81,
+     25.1
+    ],
+    "Thumb1_L": [
+     0.27,
+     1.5
+    ],
+    "Thumb2_L": [
+     0.32,
+     2.0
+    ],
+    "Thumb3_L": [
+     0.0,
+     0.0
+    ],
+    "IndexFinger1_R": [
+     0.65,
+     12.1
+    ],
+    "IndexFinger2_R": [
+     0.0,
+     0.0
+    ],
+    "IndexFinger3_R": [
+     0.64,
+     8.7
+    ],
+    "MiddleFinger1_R": [
+     0.54,
+     10.9
+    ],
+    "MiddleFinger2_R": [
+     0.47,
+     6.3
+    ],
+    "MiddleFinger3_R": [
+     0.67,
+     8.9
+    ],
+    "RingFinger1_R": [
+     0.46,
+     10.0
+    ],
+    "RingFinger2_R": [
+     0.32,
+     4.9
+    ],
+    "RingFinger3_R": [
+     0.46,
+     6.9
+    ],
+    "LittleFinger1_R": [
+     0.39,
+     9.8
+    ],
+    "LittleFinger2_R": [
+     0.34,
+     7.9
+    ],
+    "LittleFinger3_R": [
+     0.4,
+     9.1
+    ],
+    "IndexFinger1_L": [
+     1.68,
+     50.2
+    ],
+    "IndexFinger2_L": [
+     0.54,
+     3.0
+    ],
+    "IndexFinger3_L": [
+     0.64,
+     3.7
+    ],
+    "MiddleFinger1_L": [
+     1.71,
+     49.6
+    ],
+    "MiddleFinger2_L": [
+     0.48,
+     3.5
+    ],
+    "MiddleFinger3_L": [
+     0.71,
+     5.2
+    ],
+    "RingFinger1_L": [
+     1.73,
+     49.4
+    ],
+    "RingFinger2_L": [
+     0.52,
+     5.8
+    ],
+    "RingFinger3_L": [
+     0.75,
+     8.3
+    ],
+    "LittleFinger1_L": [
+     1.76,
+     49.0
+    ],
+    "LittleFinger2_L": [
+     0.7,
+     8.1
+    ],
+    "LittleFinger3_L": [
+     0.82,
+     9.4
+    ]
+   },
+   "worst_dev": 1.76,
+   "worst_speed": 50.2
+  }
+ },
+ "done": true
+}

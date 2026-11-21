@@ -1,0 +1,11 @@
+{
+ "sl": "<class 'SlateLibrary'>",
+ "n": 1,
+ "w0": {
+  "active": true,
+  "nation": 0,
+  "size": "<Struct 'Vector2D' (0x000001E07C500760) {x: 0.000000, y: 0.000000}>",
+  "abs0": "<Struct 'Vector2D' (0x000001E060DEA120) {x: 0.000000, y: 0.000000}>",
+  "abs_size": "<Struct 'Vector2D' (0x000001E060DEA120) {x: 0.000000, y: 0.000000}>"
+ }
+}

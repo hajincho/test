@@ -1,0 +1,16 @@
+{
+ "before": "<SlateVisibility.HIT_TEST_INVISIBLE: 3>",
+ "activated_visibility_before": "<SlateVisibility.SELF_HIT_TEST_INVISIBLE: 4>",
+ "set_visibility_on_activated_before": "False",
+ "status": "<BlueprintStatus.BS_UP_TO_DATE: 3>",
+ "saved": true,
+ "after": "<SlateVisibility.VISIBLE: 0>",
+ "tree_vis": {
+  "Panel": "<SlateVisibility.VISIBLE: 0>",
+  "Tab_0": "<SlateVisibility.VISIBLE: 0>",
+  "CanvasPanel_0": "<SlateVisibility.HIT_TEST_INVISIBLE: 3>",
+  "VBox": "<SlateVisibility.SELF_HIT_TEST_INVISIBLE: 4>",
+  "Nation_0": "<SlateVisibility.VISIBLE: 0>",
+  "TabRow": "<SlateVisibility.SELF_HIT_TEST_INVISIBLE: 4>"
+ }
+}

@@ -1,0 +1,79 @@
+{
+ "key": "G43",
+ "cleared": {
+  "AS_FPVM_G43_Fire.AS_FPVM_G43_Fire": true,
+  "AS_FPVM_G43_Idle.AS_FPVM_G43_Idle": true,
+  "AS_FPVM_G43_Reload.AS_FPVM_G43_Reload": true,
+  "SK_FPVM_G43.SK_FPVM_G43": true,
+  "SK_FPVM_G43_Skeleton.SK_FPVM_G43_Skeleton": true
+ },
+ "imported": [
+  "/Game/Furina/FPVM/G43/SK_FPVM_G43_Skeleton.SK_FPVM_G43_Skeleton",
+  "/Game/Furina/FPVM/G43/SK_FPVM_G43.SK_FPVM_G43",
+  "/Game/Furina/FPVM/G43/SK_FPVM_G43Armature_FPVM_G43_Fire.SK_FPVM_G43Armature_FPVM_G43_Fire",
+  "/Game/Furina/FPVM/G43/SK_FPVM_G43Armature_FPVM_G43_Idle.SK_FPVM_G43Armature_FPVM_G43_Idle",
+  "/Game/Furina/FPVM/G43/SK_FPVM_G43Armature_FPVM_G43_Reload.SK_FPVM_G43Armature_FPVM_G43_Reload"
+ ],
+ "mesh": "/Game/Furina/FPVM/G43/SK_FPVM_G43.SK_FPVM_G43",
+ "anims": {
+  "Fire": {
+   "path": "/Game/Furina/FPVM/G43/AS_FPVM_G43_Fire.AS_FPVM_G43_Fire",
+   "len": 0.3,
+   "frames": null
+  },
+  "Idle": {
+   "path": "/Game/Furina/FPVM/G43/AS_FPVM_G43_Idle.AS_FPVM_G43_Idle",
+   "len": 4.0,
+   "frames": null
+  },
+  "Reload": {
+   "path": "/Game/Furina/FPVM/G43/AS_FPVM_G43_Reload.AS_FPVM_G43_Reload",
+   "len": 5.9,
+   "frames": null
+  }
+ },
+ "armmats": {
+  "Furina_SkinHair": "/Game/Furina/Materials/MI_Furina_SkinHair.MI_Furina_SkinHair",
+  "Furina_Outfit": "/Game/Furina/Materials/MI_Furina_Outfit.MI_Furina_Outfit"
+ },
+ "slots": [
+  [
+   "Furina_SkinHair",
+   "/Game/Furina/Materials/MI_Furina_SkinHair.MI_Furina_SkinHair"
+  ],
+  [
+   "Furina_Outfit",
+   "/Game/Furina/Materials/MI_Furina_Outfit.MI_Furina_Outfit"
+  ],
+  [
+   "Gewehr43",
+   "/Game/Furina/Weapons/Germany/g43/MI_DE_g43_Gewehr43.MI_DE_g43_Gewehr43"
+  ],
+  [
+   "Clip_Steel",
+   "/Game/Furina/Weapons/Germany/mauser_clip/MI_DE_mauser_clip_Material.MI_DE_mauser_clip_Material"
+  ],
+  [
+   "Clip_Projectile",
+   "/Game/Furina/Weapons/Germany/mauser_clip/MI_DE_mauser_clip_6_5.MI_DE_mauser_clip_6_5"
+  ],
+  [
+   "Clip_Case",
+   "/Game/Furina/Weapons/Germany/mauser_clip/MI_DE_mauser_clip_case.MI_DE_mauser_clip_case"
+  ]
+ ],
+ "bounds": [
+  [
+   18.3,
+   5.8,
+   -19.2
+  ],
+  [
+   56.2,
+   53.2,
+   21.3
+  ]
+ ],
+ "skeleton": "/Game/Furina/FPVM/G43/SK_FPVM_G43_Skeleton.SK_FPVM_G43_Skeleton",
+ "saved": true
+}

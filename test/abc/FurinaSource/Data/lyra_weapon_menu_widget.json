@@ -1,0 +1,18 @@
+{
+ "log": [],
+ "wt": "<Object '/Game/Furina/UI/WBP_FurinaWeaponMenu.WBP_FurinaWeaponMenu:WidgetTree' (0x0000022D38170500) Class 'WidgetTree'>",
+ "roots": [
+  "CanvasPanel_0"
+ ],
+ "old_children": [
+  "TextBlock_2",
+  "TextBlock",
+  "TextBlock_1",
+  "TextBlock_5",
+  "TextBlock_3",
+  "TextBlock_4"
+ ],
+ "status": "<BlueprintStatus.BS_UP_TO_DATE: 3>",
+ "saved": true,
+ "n_widgets": null
+}

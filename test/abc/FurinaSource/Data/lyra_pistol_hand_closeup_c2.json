@@ -1,0 +1,5 @@
+{
+ "tag": "c2",
+ "shots": [],
+ "error": "Traceback (most recent call last):\n  File \"C:/Users/fromj/Downloads/test/test/abc/FurinaSource/Scripts/Unreal/lyra_pistol_hand_closeup.py\", line 39, in tick\n    cam = comp(p, 'FPCamera'); cam.detach_from_component(unreal.DetachmentTransformRules(unreal.DetachmentRule.KEEP_WORLD, unreal.DetachmentRule.KEEP_WORLD, unreal.DetachmentRule.KEEP_WORLD, False))\n                                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'unreal' has no attribute 'DetachmentTransformRules'\n"
+}

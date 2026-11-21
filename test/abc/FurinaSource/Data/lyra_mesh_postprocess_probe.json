@@ -1,0 +1,10 @@
+{
+ "mesh": "/Game/Furina/SK_Furina.SK_Furina",
+ "anim_class": "<Object '/Game/Furina/ABP_Furina.ABP_Furina_C' (0x0000026C9314A800) Class 'AnimBlueprintGeneratedClass'>",
+ "anim_mode": "<AnimationMode.ANIMATION_BLUEPRINT: 0>",
+ "post_process_anim_blueprint": null,
+ "physics_asset": null,
+ "shadow_physics_asset": null,
+ "comp_physics_asset": "None",
+ "sockets": "err SkeletalMesh: Property 'Sockets' for attribute 'sockets' on 'SkeletalMesh' is pr"
+}

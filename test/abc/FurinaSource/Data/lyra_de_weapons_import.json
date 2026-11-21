@@ -1,0 +1,71 @@
+{
+ "weapons": {
+  "stg44": {
+   "nanite": false,
+   "size_cm": [
+    4.8,
+    94.0,
+    34.47
+   ],
+   "slots": [
+    [
+     "Stock",
+     "Stock",
+     [
+      "ao",
+      "basecolor",
+      "metallic",
+      "normal",
+      "roughness"
+     ]
+    ],
+    [
+     "Body",
+     "Body",
+     [
+      "ao",
+      "basecolor",
+      "metallic",
+      "normal",
+      "roughness"
+     ]
+    ],
+    [
+     "Belt",
+     "Belt",
+     [
+      "ao",
+      "basecolor",
+      "metallic",
+      "normal",
+      "roughness"
+     ]
+    ],
+    [
+     "Magazine",
+     "Magazine",
+     [
+      "ao",
+      "basecolor",
+      "metallic",
+      "normal",
+      "roughness"
+     ]
+    ],
+    [
+     "Barrel",
+     "Barrel",
+     [
+      "ao",
+      "basecolor",
+      "metallic",
+      "normal",
+      "roughness"
+     ]
+    ]
+   ],
+   "saved": true
+  }
+ },
+ "master": "/Game/Furina/Weapons/Materials/M_FurinaWeaponPBR.M_FurinaWeaponPBR"
+}

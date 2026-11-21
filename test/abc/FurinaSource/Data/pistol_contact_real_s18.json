@@ -1,0 +1,98 @@
+{
+ "tag": "s18",
+ "view": "left",
+ "fit_err": [
+  0.5999998066589125,
+  0.5999996987286957
+ ],
+ "joints": {
+  "IndexFinger1_L": 1.235,
+  "IndexFinger1_R": 2.75,
+  "IndexFinger2_L": -0.592,
+  "IndexFinger2_R": 2.223,
+  "IndexFinger3_L": -0.517,
+  "IndexFinger3_R": 1.348,
+  "Left-wrist": 1.117,
+  "LittleFinger1_L": -0.496,
+  "LittleFinger1_R": -0.001,
+  "LittleFinger2_L": 0.26,
+  "LittleFinger2_R": 0.644,
+  "LittleFinger3_L": 0.081,
+  "LittleFinger3_R": 0.679,
+  "MiddleFinger1_L": 0.132,
+  "MiddleFinger1_R": 1.888,
+  "MiddleFinger2_L": -0.845,
+  "MiddleFinger2_R": 0.341,
+  "MiddleFinger3_L": 0.628,
+  "MiddleFinger3_R": 0.827,
+  "Right-wrist": 2.484,
+  "RingFinger1_L": -1.101,
+  "RingFinger1_R": 0.816,
+  "RingFinger2_L": 0.273,
+  "RingFinger2_R": 0.67,
+  "RingFinger3_L": 0.149,
+  "RingFinger3_R": 0.706,
+  "Thumb0_L": 1.414,
+  "Thumb0_R": 2.186,
+  "Thumb1_L": 2.193,
+  "Thumb1_R": 1.056,
+  "Thumb2_L": 2.394,
+  "Thumb2_R": 0.757,
+  "Thumb3_L": 127.668,
+  "Thumb3_R": 127.668
+ },
+ "summary": {
+  "R_Index": [
+   2.75,
+   2.223,
+   1.348
+  ],
+  "R_Middle": [
+   1.888,
+   0.341,
+   0.827
+  ],
+  "R_Ring": [
+   0.816,
+   0.67,
+   0.706
+  ],
+  "R_Little": [
+   -0.001,
+   0.644,
+   0.679
+  ],
+  "R_Thumb": [
+   2.186,
+   1.056,
+   0.757
+  ],
+  "R_wrist": 2.484,
+  "L_Index": [
+   1.235,
+   -0.592,
+   -0.517
+  ],
+  "L_Middle": [
+   0.132,
+   -0.845,
+   0.628
+  ],
+  "L_Ring": [
+   -1.101,
+   0.273,
+   0.149
+  ],
+  "L_Little": [
+   -0.496,
+   0.26,
+   0.081
+  ],
+  "L_Thumb": [
+   1.414,
+   2.193,
+   2.394
+  ],
+  "L_wrist": 1.117
+ }
+}

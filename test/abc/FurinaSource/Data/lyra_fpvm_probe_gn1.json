@@ -1,0 +1,192 @@
+{
+ "tag": "gn1",
+ "shots": [
+  [
+   "hip",
+   4.515,
+   {
+    "vm_vis": true,
+    "rifle_vis": false,
+    "on": true,
+    "idle": true,
+    "busy_left": -12.239,
+    "ads_a": 0.0,
+    "ammo": 20,
+    "valid": true,
+    "mesh": "SK_FPVM_G43",
+    "rl": false,
+    "fp": true,
+    "VM_Gun": [
+     18.5,
+     9.0,
+     -11.2
+    ],
+    "VM_Bolt": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "VM_Clip": [
+     12.45,
+     8.84,
+     -3.14
+    ],
+    "Right wrist": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "Left wrist": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "rel_loc": [
+     0.0,
+     0.0,
+     0.0
+    ]
+   }
+  ],
+  [
+   "hip_flat",
+   5.993,
+   {
+    "vm_vis": true,
+    "rifle_vis": false,
+    "on": true,
+    "idle": true,
+    "busy_left": -13.717,
+    "ads_a": 0.0,
+    "ammo": 20,
+    "valid": true,
+    "mesh": "SK_FPVM_G43",
+    "rl": false,
+    "fp": true,
+    "VM_Gun": [
+     18.5,
+     9.0,
+     -11.2
+    ],
+    "VM_Bolt": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "VM_Clip": [
+     12.39,
+     8.82,
+     -3.18
+    ],
+    "Right wrist": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "Left wrist": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "rel_loc": [
+     0.0,
+     0.0,
+     0.0
+    ]
+   }
+  ],
+  [
+   "hip_orig",
+   7.383,
+   {
+    "vm_vis": true,
+    "rifle_vis": false,
+    "on": true,
+    "idle": true,
+    "busy_left": -15.107,
+    "ads_a": 0.0,
+    "ammo": 20,
+    "valid": true,
+    "mesh": "SK_FPVM_G43",
+    "rl": false,
+    "fp": true,
+    "VM_Gun": [
+     18.5,
+     9.0,
+     -11.2
+    ],
+    "VM_Bolt": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "VM_Clip": [
+     12.4,
+     8.84,
+     -3.18
+    ],
+    "Right wrist": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "Left wrist": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "rel_loc": [
+     0.0,
+     0.0,
+     0.0
+    ]
+   }
+  ]
+ ],
+ "events": [],
+ "before": {
+  "vm_vis": false,
+  "rifle_vis": true,
+  "on": false,
+  "idle": false,
+  "busy_left": -7.724,
+  "ads_a": 0.0,
+  "ammo": 20,
+  "valid": false,
+  "mesh": "SK_FPVM_Kar98k",
+  "rl": false,
+  "fp": false,
+  "VM_Gun": [
+   21.0,
+   9.0,
+   -12.5
+  ],
+  "VM_Bolt": [
+   2.54,
+   8.79,
+   -6.9
+  ],
+  "VM_Clip": [
+   9.9,
+   8.32,
+   -3.4
+  ],
+  "Right wrist": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "Left wrist": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "rel_loc": [
+   0.0,
+   0.0,
+   0.0
+  ]
+ },
+ "mat2": "MID_MI_DE_kar98k_Material_005_0",
+ "done": true
+}

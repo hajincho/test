@@ -1,0 +1,22 @@
+{
+ "defaults": [
+  -1.62714,
+  -10.16344,
+  0.12809,
+  -10.95113,
+  69.79678,
+  39.05467
+ ],
+ "type": "real",
+ "note": "exists",
+ "status": "<BlueprintStatus.BS_UP_TO_DATE_WITH_WARNINGS: 5>",
+ "cdo": {
+  "FurinaPFLocX": -1.62714,
+  "FurinaPFLocY": -10.16344,
+  "FurinaPFLocZ": 0.12809,
+  "FurinaPFRotP": -10.95113,
+  "FurinaPFRotY": 69.79678,
+  "FurinaPFRotR": 39.05467
+ },
+ "saved": true
+}

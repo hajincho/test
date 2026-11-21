@@ -1,0 +1,26 @@
+{
+ "mode": "off",
+ "links": [
+  [
+   "LD.Result",
+   "SetDbgL.Value",
+   true
+  ],
+  [
+   "RD.Result",
+   "SetDbgR.Value",
+   true
+  ],
+  [
+   "SlopeW.Result",
+   "SetDbgW.Value",
+   true
+  ],
+  [
+   "Run.Result",
+   "SetDbgC.Value",
+   true
+  ]
+ ],
+ "saved": true
+}

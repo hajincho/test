@@ -1,0 +1,52 @@
+{
+ "tag": "m5",
+ "steps": [
+  {
+   "widget": "WBP_FurinaWeaponMenu_C_0",
+   "in_viewport": false,
+   "cursor": true,
+   "step": "toggle_open",
+   "shot": "wmenu_m5_toggle_open.png"
+  },
+  {
+   "widget": "WBP_FurinaWeaponMenu_C_0",
+   "in_viewport": false,
+   "cursor": true,
+   "step": "nation1",
+   "shot": "wmenu_m5_nation1.png"
+  },
+  {
+   "widget": "WBP_FurinaWeaponMenu_C_0",
+   "in_viewport": false,
+   "cursor": true,
+   "step": "nation2",
+   "shot": "wmenu_m5_nation2.png"
+  },
+  {
+   "widget": "WBP_FurinaWeaponMenu_C_0",
+   "in_viewport": false,
+   "cursor": false,
+   "step": "close_widget",
+   "shot": "wmenu_m5_close_widget.png"
+  },
+  {
+   "widget": "WBP_FurinaWeaponMenu_C_0",
+   "in_viewport": false,
+   "cursor": true,
+   "step": "toggle_open2",
+   "shot": "wmenu_m5_toggle_open2.png"
+  },
+  {
+   "widget": "WBP_FurinaWeaponMenu_C_0",
+   "in_viewport": false,
+   "cursor": false,
+   "step": "toggle_close",
+   "shot": "wmenu_m5_toggle_close.png"
+  }
+ ],
+ "before": {
+  "widget": null,
+  "cursor": false
+ },
+ "done": true
+}

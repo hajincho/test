@@ -1,0 +1,5 @@
+{
+ "tag": "c3",
+ "shots": [],
+ "error": "Traceback (most recent call last):\n  File \"C:/Users/fromj/Downloads/test/test/abc/FurinaSource/Scripts/Unreal/lyra_pistol_hand_closeup.py\", line 39, in tick\n    cam = comp(p, 'FPCamera'); cam.k2_detach_from_component(unreal.DetachmentRule.KEEP_WORLD, unreal.DetachmentRule.KEEP_WORLD, unreal.DetachmentRule.KEEP_WORLD, False)\n                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: 'CameraComponent' object has no attribute 'k2_detach_from_component'\n"
+}

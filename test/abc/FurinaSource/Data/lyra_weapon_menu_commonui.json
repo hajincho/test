@@ -1,0 +1,17 @@
+{
+ "log": [
+  "removed old close nodes 4",
+  "focus target",
+  "cdo input_config",
+  "cdo is_back_handler",
+  "cdo is_focusable"
+ ],
+ "parent": "<Object '/Script/LyraGame.LyraActivatableWidget' (0x0000026AAA8D3C00) Class 'Class'>",
+ "status": "<BlueprintStatus.BS_UP_TO_DATE: 3>",
+ "saved": true,
+ "check": {
+  "input_config": "<LyraWidgetInputMode.MENU: 3>",
+  "is_back_handler": "True",
+  "is_focusable": "True"
+ }
+}

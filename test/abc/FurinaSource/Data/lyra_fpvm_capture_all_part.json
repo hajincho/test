@@ -1,0 +1,127 @@
+{
+ "shots": [
+  [
+   "kar98k",
+   "hip",
+   {
+    "ammo": 5,
+    "wid": "kar98k",
+    "rl": false,
+    "mesh": "SK_FPVM_Kar98k_Interior",
+    "vm_vis": true,
+    "ads_a": 0.0
+   }
+  ],
+  [
+   "kar98k",
+   "fire",
+   {
+    "ammo": 4,
+    "wid": "kar98k",
+    "rl": false,
+    "mesh": "SK_FPVM_Kar98k_Interior",
+    "vm_vis": true,
+    "ads_a": 0.0
+   }
+  ],
+  [
+   "kar98k",
+   "reload",
+   {
+    "ammo": 0,
+    "wid": "kar98k",
+    "rl": true,
+    "mesh": "SK_FPVM_Kar98k_Interior",
+    "vm_vis": true,
+    "ads_a": 0.0
+   }
+  ],
+  [
+   "kar98k",
+   "ads",
+   {
+    "ammo": 5,
+    "wid": "kar98k",
+    "rl": false,
+    "mesh": "SK_FPVM_Kar98k_Interior",
+    "vm_vis": true,
+    "ads_a": 1.0
+   }
+  ],
+  [
+   "kar98k_zf41",
+   "hip",
+   {
+    "ammo": 5,
+    "wid": "kar98k",
+    "rl": false,
+    "mesh": "SK_FPVM_Kar98k_ZF41",
+    "vm_vis": true,
+    "ads_a": 0.0
+   }
+  ],
+  [
+   "kar98k_zf41",
+   "fire",
+   {
+    "ammo": 4,
+    "wid": "kar98k",
+    "rl": false,
+    "mesh": "SK_FPVM_Kar98k_ZF41",
+    "vm_vis": true,
+    "ads_a": 0.0
+   }
+  ],
+  [
+   "kar98k_zf41",
+   "reload",
+   {
+    "ammo": 0,
+    "wid": "kar98k",
+    "rl": true,
+    "mesh": "SK_FPVM_Kar98k_ZF41",
+    "vm_vis": true,
+    "ads_a": 0.0
+   }
+  ],
+  [
+   "kar98k_zf41",
+   "ads",
+   {
+    "ammo": 5,
+    "wid": "kar98k",
+    "rl": false,
+    "mesh": "SK_FPVM_Kar98k_ZF41",
+    "vm_vis": false,
+    "ads_a": 1.0
+   }
+  ]
+ ],
+ "events": [
+  [
+   "kar98k",
+   "fire",
+   5,
+   4
+  ],
+  [
+   "kar98k",
+   "reload_done",
+   3.2,
+   5
+  ],
+  [
+   "kar98k_zf41",
+   "fire",
+   5,
+   4
+  ],
+  [
+   "kar98k_zf41",
+   "reload_done",
+   3.21,
+   5
+  ]
+ ],
+ "done": true
+}

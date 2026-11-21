@@ -1,0 +1,138 @@
+{
+ "tag": "q10",
+ "meshes": {
+  "L": {
+   "imported": [
+    "/Game/Furina/FPArms/SM_FurinaFPPistArmL.SM_FurinaFPPistArmL"
+   ],
+   "slots": [
+    [
+     "Furina_SkinHair",
+     "/Game/Furina/Materials/MI_Furina_SkinHair.MI_Furina_SkinHair"
+    ],
+    [
+     "Furina_Outfit",
+     "/Game/Furina/Materials/MI_Furina_Outfit.MI_Furina_Outfit"
+    ]
+   ],
+   "bmin": [
+    -43.40421676635742,
+    -16.00454330444336,
+    -14.671957015991211
+   ],
+   "bmax": [
+    4.5694708824157715,
+    0.4372907280921936,
+    -0.13898611068725586
+   ],
+   "exp_bmin": [
+    -43.404215574264526,
+    -16.004547476768494,
+    -14.67195749282837
+   ],
+   "exp_bmax": [
+    4.5694708824157715,
+    0.4372909665107727,
+    -0.13898611068725586
+   ],
+   "bbox_err": 4.172325134277344e-06,
+   "nv": 2080,
+   "saved": true
+  },
+  "R": {
+   "imported": [
+    "/Game/Furina/FPArms/SM_FurinaFPPistArmR.SM_FurinaFPPistArmR"
+   ],
+   "slots": [
+    [
+     "Furina_SkinHair",
+     "/Game/Furina/Materials/MI_Furina_SkinHair.MI_Furina_SkinHair"
+    ],
+    [
+     "Furina_Outfit",
+     "/Game/Furina/Materials/MI_Furina_Outfit.MI_Furina_Outfit"
+    ]
+   ],
+   "bmin": [
+    -46.77854537963867,
+    -4.209745407104492,
+    -12.324249267578125
+   ],
+   "bmax": [
+    5.418449878692627,
+    10.270145416259766,
+    0.5924701690673828
+   ],
+   "exp_bmin": [
+    -46.77854776382446,
+    -4.209745675325394,
+    -12.324249744415283
+   ],
+   "exp_bmax": [
+    5.418449640274048,
+    10.270144045352936,
+    0.5924701690673828
+   ],
+   "bbox_err": 2.384185791015625e-06,
+   "nv": 2150,
+   "saved": true
+  }
+ },
+ "kind": "pistol",
+ "sk_slots": {
+  "Furina_Face": "/Game/Furina/Materials/MI_Furina_Face.MI_Furina_Face",
+  "Furina_SkinHair": "/Game/Furina/Materials/MI_Furina_SkinHair.MI_Furina_SkinHair",
+  "Furina_HairDetail": "/Game/Furina/Materials/MI_Furina_HairDetail.MI_Furina_HairDetail",
+  "Furina_Outfit": "/Game/Furina/Materials/MI_Furina_Outfit.MI_Furina_Outfit",
+  "Furina_HairSheen": "/Game/Furina/Materials/MI_Furina_HairSheen.MI_Furina_HairSheen"
+ },
+ "mesh_tick_opt": "<VisibilityBasedAnimTickOption.ALWAYS_TICK_POSE_AND_REFRESH_BONES: 0>",
+ "components": [
+  "ArrowComponent",
+  "CameraBoom",
+  "CameraComponent",
+  "CapsuleComponent",
+  "CharacterMovement",
+  "FPCamera",
+  "FollowCamera",
+  "FurinaADS",
+  "FurinaADSRestoreTP",
+  "FurinaBolt",
+  "FurinaCrouch",
+  "FurinaFPArmL",
+  "FurinaFPArmR",
+  "FurinaFPPistArmL",
+  "FurinaFPPistArmR",
+  "FurinaFPWanted",
+  "FurinaFireHold",
+  "FurinaHandle",
+  "FurinaHolsterFrame",
+  "FurinaHolsterSlide",
+  "FurinaMag",
+  "FurinaMagHandRef",
+  "FurinaMesh",
+  "FurinaPistolFrame",
+  "FurinaPistolOn",
+  "FurinaPistolSlide",
+  "FurinaProne",
+  "FurinaRifle",
+  "FurinaSemi",
+  "FurinaShoulder",
+  "FurinaShoulderAuto",
+  "FurinaShoulderLeft",
+  "FurinaSlingM4",
+  "FurinaSpecial",
+  "FurinaSpeedCap",
+  "FurinaSwapping",
+  "FurinaZip",
+  "Grind_Rail_Component_BP",
+  "HealthComponent",
+  "Homing_Attack_Component_BP",
+  "LyraHero",
+  "Mesh",
+  "None",
+  "PawnExtComponent",
+  "Platformer_Component_BP"
+ ],
+ "rifle_cls": "SkeletalMeshComponent"
+}

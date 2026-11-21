@@ -1,0 +1,89 @@
+{
+ "tag": "s6",
+ "shots": [
+  [
+   "left",
+   [
+    -958.6,
+    -344.2,
+    186.4
+   ]
+  ],
+  [
+   "right",
+   [
+    -958.6,
+    -344.2,
+    186.4
+   ]
+  ],
+  [
+   "top",
+   [
+    -972.7,
+    -344.3,
+    158.4
+   ]
+  ],
+  [
+   "rear",
+   [
+    -958.6,
+    -344.2,
+    186.2
+   ]
+  ]
+ ],
+ "classes": {
+  "LyraWorldSettings": 1,
+  "Brush": 1,
+  "DirectionalLight": 1,
+  "InstancedFoliageActor": 1,
+  "AtmosphericFog": 1,
+  "BP_Sky_Sphere_C": 1,
+  "SkyLight": 1,
+  "SphereReflectionCapture": 1,
+  "StaticMeshActor": 6,
+  "LyraPlayerStart": 4,
+  "TextRenderActor": 1,
+  "B_ExperienceList3D_C": 1,
+  "BuoyancyManager": 1,
+  "DefaultPhysicsVolume": 1,
+  "GameplayDebuggerPlayerManager": 1,
+  "Actor": 1,
+  "B_LyraGameMode_C": 1,
+  "SmartObjectSubsystemRenderingActor": 1,
+  "LyraGameSession": 1,
+  "ParticleEventManager": 1,
+  "GameNetworkManager": 1,
+  "L_DefaultEditorOverview_C": 1,
+  "LyraGameState": 1,
+  "AbstractNavData": 1,
+  "LyraPlayerController": 1,
+  "LyraPlayerState": 4,
+  "LyraPlayerCameraManager": 1,
+  "B_TeleportToUserFacingExperience_C": 8,
+  "GameplayDebuggerCategoryReplicator": 1,
+  "LyraTeamPublicInfo": 2,
+  "LyraTeamPrivateInfo": 2,
+  "ThirdPersonCharacter_BP_C": 1,
+  "BP_FurinaHUD_C": 1,
+  "GCNL_Spawning_C": 4,
+  "B_AI_Controller_LyraShooter_C": 3,
+  "B_Hero_ShooterMannequin_C": 3,
+  "B_Quinn_C": 2,
+  "B_Manny_C": 1
+ },
+ "cands": [
+  "AtmosphericFog_1",
+  "Cube_2",
+  "Cube2_8",
+  "Cube7",
+  "Cube8",
+  "Cube9",
+  "Cube11",
+  "TextRenderActor_1"
+ ],
+ "cam": "AtmosphericFog_1",
+ "done": true
+}

@@ -1,0 +1,25 @@
+{
+ "args": [
+  "C:/Users/fromj/Downloads/test/test/abc/FurinaSource/Data/lyra_pistol_twitch_probe_w5.json",
+  "C:/Users/fromj/Downloads/test/test/abc/FurinaSource/Data/pistol_grip_final_s19.json",
+  "C:/Users/fromj/Downloads/test/test/abc/FurinaSource/Data/pistol_consts_v3.json"
+ ],
+ "changed": [
+  "IndexFinger1_R",
+  "IndexFinger2_R",
+  "IndexFinger3_R",
+  "MiddleFinger1_R",
+  "MiddleFinger2_R",
+  "MiddleFinger3_R",
+  "RingFinger1_R",
+  "RingFinger2_R",
+  "RingFinger3_R",
+  "LittleFinger1_R",
+  "LittleFinger2_R",
+  "LittleFinger3_R",
+  "Thumb0_R",
+  "Thumb1_R",
+  "Thumb2_R"
+ ],
+ "saved": true
+}
