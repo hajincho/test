@@ -1466,14 +1466,15 @@ Control Rig이 들어 올리는 회전은 컴포넌트 +X축 기준 음수 각�
 - 언리얼 반영: `lyra_hist_fx.pistols` + `sockets`(권총만), `lyra_pistol_cases.py`, `lyra_class_fp_arms2.py slots`, `lyra_fpvm_ads_update.py`.
 - 참고: 에디터가 엔진 플러그인 단언(`AsyncGameplayMessageSystem` OuterWorld.IsValid)으로 한 번 충돌해 다시 켰다(작업 스크립트와 무관).
 
-## 손·손가락 ↔ 총 정합 1cm 이내 작업 (2026-11-22, 진행 중)
-- **측정 도구:** `Scripts/Blender/fpvm_grip_audit.py -- <SK> <클립> [render] [hand=Body|Arms_<Key>] [frames=N]` — 손가락 마디(가운데·끝)·손바닥의 총 표면 틈/파고듦(안·밖은 6방향 광선, 면 법선은 모델마다 뒤집혀 있어 안 씀), 손목-총 흔들림, 6방향 렌더. 전체: `Scripts/Tools/grip_audit_all.sh [render]`(무기 10 × 손 15) → `grip_audit_summary.py`.
+## 손·손가락 ↔ 총 정합 1cm 이내 작업 (2026-11-22)
+- **측정 도구:** `Scripts/Blender/fpvm_grip_audit.py -- <SK> <클립> [render] [hand=Body|Arms_<Key>] [frames=N]` — 손가락 마디(가운데·끝)·손바닥의 총 표면 틈/파고듦(안·밖은 6방향 광선, 면 법선은 모델마다 뒤집혀 있어 안 씀), 손목-총 흔들림, 6방향 렌더(`Data/audit_<SK>_<손>_<R|L>_<방향>.png`, 묶음 `Scripts/Tools/sheet6.py`). 전체: `Scripts/Tools/grip_audit_all.sh [render]`(무기 10 × 손 15, `PAIRS_OVERRIDE` 로 일부만) → `grip_audit_summary.py` → `Data/grip_audit_summary.json`.
 - **찾은 원인과 수정:**
-  1. 병과 팔(Arms_*)이 휴식 자세 굳히기에서 빠져 손목 10~40cm·손가락 4~11cm 어긋남(게임에서 '흐느적') → `fpvm_lib.bake_arms_rest(arm, [body] + CA)`(소총·기관단총·대전차 4개 스크립트).
+  1. 병과 팔(Arms_*)이 휴식 자세 굳히기에서 빠져 손목 10~40cm·손가락 4~11cm 어긋남(게임에서 '흐느적') → `fpvm_lib.bake_arms_rest(arm, [body] + CA)`(소총·기관단총·대전차 4개 스크립트). 병과 팔 UV 1개로.
   2. 손가락 자동 쥐기가 뼈 선만 보고 손끝이 닿으면 멈춰 손가락이 펴진 채 남음 → 피부 정점 기준 풀이 `fpvm_grip.py`(세 관절 격자+좌표 하강, 파고듦 벌점, 지나가는 길 검사). `fpvm_lib2.grip_fingers` 가 자동으로 씀(`FPVM_GRIP_SEG=1` 이면 예전 방식). 뿌리 관절 한계 95°, 엄지 35/45/50°.
-  3. 소총·기관단총·판처슈렉 오른손 검지 → 방아쇠울 자동 찾기 `fpvm_grip.trigger_target`(손가락 벌림 `<뼈>@spread` 키, 손끝 넘어감 벌점).
-  4. 기관단총 오른손을 2cm 올리고 손가락을 손잡이 축에 수직으로(`SPEC fR`), 왼손 높이 MP40 5.5 / MP38 3.25(`hold_dz`), G43 왼손 `yL` 8.0.
+  3. 소총·기관단총·판처슈렉 오른손 검지 → 방아쇠울 자동 찾기 `fpvm_grip.trigger_target`(손가락 벌림 `<뼈>@spread` 키, 손끝 넘어감 벌점). 판처파우스트는 방아쇠울이 없어 제외.
+  4. 기관단총 오른손을 2cm 올리고 손가락을 손잡이 축에 수직으로(`SPEC fR`), 왼손 MP40 `hold_dz` 5.5 / MP38 3.5·`hold_dy` -0.75, G43 왼손 `yL` 8.0(모두 측정으로 고름).
   5. 애니 굽기 때 IK 목표 보정 3번 → 12번(손목이 1.5~2.5cm 덜 닿았음, 판처슈렉에서 확인).
+  6. **1인칭이 푸리나 손:** 시작 무기가 비어 예전 M4 + 푸리나 전용 1인칭 팔이 나왔음 → BeginPlay 에서 무기 키가 비어 있으면 `kar98k`(`Scripts/Unreal/lyra_default_primary.py`, 노드 `DEFW_*`). 독일·일본 무기 메시에는 병과 팔 14종이 있어 지금 외형 팔만 보임(PIE 확인: 보병 → `CAInfantry` 슬롯만 보이고 푸리나 슬롯 가림). 남은 예전 메시 `SK_FPVM_Kar98k`·`SK_FPVM_G43`(병과 슬롯 없음)은 게임에서 쓰지 않음.
 - **언리얼 쪽 확인:** 클립 압축으로 손이 총 위에서 미끄러지는 양 최대 0.21cm(`Scripts/Unreal/lyra_fpvm_hand_drift.py`) — 원인 아님.
-- **마지막 측정(5번 수정 전):** Kar98k·G43·MP40·StG44·P38·P08·PP·판처파우스트 손 15개 모두 1cm 이내. MP38 왼손 검지 가운데 마디(병과 6종 1.0~1.34cm), 판처슈렉(5번 원인)은 남음.
-- **남은 일(다음에 이어서):** 5번 반영한 내보내기는 끝남(권총 제외 전부) → `grip_audit_all.sh render` 다시 측정 → 언리얼 `lyra_fpvm_reimport.py` + `lyra_launchers.py assets` → `lyra_class_fp_arms2.py slots` → `lyra_pzf60_material.py` → `lyra_pistol_cases.py` → `lyra_fpvm_ads_update.py` → 게임에서 확인. 언리얼 에셋은 아직 예전 메시.
+- **최종 측정(대기 자세, 손 15개):** 최대 틈/파고듦 cm — Kar98k 0.77/0.24, G43 0.54/0.30, StG44 0.35/0.50, P38 0.55/0.58, P08 0.92/0.95, PP 0.93/0.31, 판처파우스트 0.64/0.33, 판처슈렉 0.53/0.34(모두 1cm 이내). 남음: MP40 왼손 검지 가운데 마디(병과 5종 최대 1.16), MP38 왼손 새끼·검지 가운데 마디(병과 6종 최대 1.29). 푸리나 손은 두 총 모두 1cm 이내. 손목-총 흔들림은 모든 무기 0.00cm.
+- 언리얼 반영 완료: `lyra_fpvm_reimport.py`, `lyra_launchers.py assets`, `lyra_class_fp_arms2.py slots`, `lyra_pzf60_material.py`, `lyra_pistol_cases.py`, `lyra_fpvm_ads_update.py`, `lyra_default_primary.py`.

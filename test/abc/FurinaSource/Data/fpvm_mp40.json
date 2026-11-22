@@ -1,6 +1,6 @@
 {
  "key": "mp40",
- "stage": "export",
+ "stage": "grip",
  "arms": {
   "phi_err": 3.7235102710676524e-05,
   "K_det": 9.999981549863479e-07,
@@ -90,7 +90,7 @@
   [
    -0.34,
    -14.14,
-   4.43
+   4.93
   ]
  ],
  "R_grip": {
@@ -108,7 +108,7 @@
    "moved_cm": 0.0
   },
   "L": {
-   "gap_cm": 0.001,
+   "gap_cm": 0.03,
    "moved_cm": 0.0
   }
  },
@@ -180,11 +180,11 @@
   0.0
  ],
  "L_hold": {
-  "score": 1.174,
-  "pen_cm": 0.11,
-  "wrist_err_cm": 0.02
+  "score": 1.145,
+  "pen_cm": 0.0,
+  "wrist_err_cm": 0.01
  },
- "L_reach_cm": 38.1,
+ "L_reach_cm": 37.6,
  "L_mag": {
   "score": 0.267,
   "pen_cm": 0.0
@@ -214,7 +214,38 @@
   "Fire": 0.12,
   "Reload": 2.85
  },
- "exported": true,
+ "renders": [
+  "C:\\Users\\fromj\\Downloads\\test\\test\\abc\\FurinaSource\\Data\\fpvm_mp40_gripR_side.png",
+  "C:\\Users\\fromj\\Downloads\\test\\test\\abc\\FurinaSource\\Data\\fpvm_mp40_gripR_left.png",
+  "C:\\Users\\fromj\\Downloads\\test\\test\\abc\\FurinaSource\\Data\\fpvm_mp40_gripR_top.png",
+  "C:\\Users\\fromj\\Downloads\\test\\test\\abc\\FurinaSource\\Data\\fpvm_mp40_gripR_front.png",
+  "C:\\Users\\fromj\\Downloads\\test\\test\\abc\\FurinaSource\\Data\\fpvm_mp40_gripL_side.png",
+  "C:\\Users\\fromj\\Downloads\\test\\test\\abc\\FurinaSource\\Data\\fpvm_mp40_gripL_left.png",
+  "C:\\Users\\fromj\\Downloads\\test\\test\\abc\\FurinaSource\\Data\\fpvm_mp40_gripL_top.png",
+  "C:\\Users\\fromj\\Downloads\\test\\test\\abc\\FurinaSource\\Data\\fpvm_mp40_gripL_front.png"
+ ],
+ "gap_after_apply": {
+  "R": {
+   "gap_cm": 0.05,
+   "n": 16,
+   "wrist_cm": [
+    -9.4,
+    -13.8,
+    -16.4
+   ],
+   "mesh_verts_total": null
+  },
+  "L": {
+   "gap_cm": 0.03,
+   "n": 15,
+   "wrist_cm": [
+    20.4,
+    -10.1,
+    -10.3
+   ],
+   "mesh_verts_total": null
+  }
+ },
  "mats": [
   "Furina_Outfit",
   "Furina_SkinHair",

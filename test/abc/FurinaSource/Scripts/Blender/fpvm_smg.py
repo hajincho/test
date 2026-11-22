@@ -17,7 +17,7 @@ D = L.D; FPS = 30; KEY = WK.upper(); OUT = {'key': WK, 'stage': STAGE}
 SPEC = {   # 2026-11-22: 오른손 손잡이 높이를 2cm 쯤 올리고 손가락을 손잡이 축에 수직(앞쪽)으로(fR) -> 검지가 방아쇠에 닿음(예전 grip z MP40 -4.0 / MP38 -0.5 / StG44 0.0, fR (0.15,-0.45,-0.88))
  'mp40': dict(grip=(-0.84, 15.6, -2.0), fR=(0.15, -0.9, -0.45), hold_dz=5.5, xc=-0.34, bore_z=5.7, ch_box=((1.3, -9.0, 5.0), (3.5, -6.9, 7.0)), travel=9.0, rpm=500, cap=32, rear_y=0.0, front_y=(-40.0, -37.8), recv_end=13.5,
              mag_own=True, fire_len=60.0 / 500),
- 'mp38': dict(grip=(-0.75, 25.5, 1.5), fR=(0.15, -0.9, -0.45), hold_dz=3.25, xc=-0.75, bore_z=10.6, ch_box=((1.0, 1.3, 9.5), (3.9, 3.4, 11.6)), travel=9.0, rpm=500, cap=32, rear_y=10.0, front_y=(-31.6, -29.0), recv_end=24.0,
+ 'mp38': dict(grip=(-0.75, 25.5, 1.5), fR=(0.15, -0.9, -0.45), hold_dz=3.5, hold_dy=-0.75, xc=-0.75, bore_z=10.6, ch_box=((1.0, 1.3, 9.5), (3.9, 3.4, 11.6)), travel=9.0, rpm=500, cap=32, rear_y=10.0, front_y=(-31.6, -29.0), recv_end=24.0,
              mag_mat='Magazine_Steel', mag_box=((-3.0, -7.0, -15.0), (1.2, 0.0, 10.6)), unfold=(-0.75, 27.0), fire_len=60.0 / 500),
  'stg44': dict(grip=(0.22, 18.3, 2.0), fR=(0.15, -0.9, -0.45), xc=0.22, bore_z=10.44, ch_box=((0.8, 0.7, 12.1), (3.1, 2.1, 13.4)), travel=8.0, rpm=550, cap=30, rear_y=-3.0, front_y=(-47.1, -42.6), recv_end=19.0,
              mag_mat='Magazine', mag_zmax=0.0, hold='guard', fire_len=60.0 / 550),   # 정리본에서 어깨끈 제거·방향 통일 완료(de_stg44_fix.py)
@@ -114,7 +114,7 @@ _my = [v.co.y for v in mag.data.vertices]; my0, my1 = min(_my), max(_my); myc = 
 HOLD = SPEC.get('hold', 'housing')
 if HOLD == 'housing':
     band = P[(P[:, 1] >= my0 + 0.5) & (P[:, 1] <= my1 - 0.5) & (np.abs(P[:, 0] - SPEC['xc']) < 2.5)]
-    HB = float(band[:, 2].min()); HOLD_N = Vector((SPEC['xc'], myc, HB + OPT.get('hold_dz', SPEC.get('hold_dz', 3.0))))   # 하우징 아래쪽(MP38 하우징이 더 짧음); OUT['housing_bottom'] = round(HB, 2)
+    HB = float(band[:, 2].min()); HOLD_N = Vector((SPEC['xc'], myc + OPT.get('hold_dy', SPEC.get('hold_dy', 0.0)), HB + OPT.get('hold_dz', SPEC.get('hold_dz', 3.0))))   # 하우징 아래쪽(MP38 하우징이 더 짧음); OUT['housing_bottom'] = round(HB, 2)
 else:
     HOLD_N = Vector((SPEC['xc'], my0 - SPEC.get('guard_ahead', 5.0), SPEC['bore_z'] - 3.0))
 sh = arm.matrix_world @ arm.pose.bones['Left arm'].head

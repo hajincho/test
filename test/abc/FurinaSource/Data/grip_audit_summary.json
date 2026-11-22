@@ -1,91 +1,91 @@
 {
  "G43": {
   "Arms_AntiTank": {
-   "gap": 0.63,
-   "pen": 0.03,
+   "gap": 0.2,
+   "pen": 0.24,
    "fail": [],
    "drift": 0.0
   },
   "Arms_Armor": {
-   "gap": 0.75,
+   "gap": 0.23,
    "pen": 0.26,
    "fail": [],
    "drift": 0.0
   },
   "Arms_Assault": {
-   "gap": 0.79,
-   "pen": 0.18,
+   "gap": 0.06,
+   "pen": 0.23,
    "fail": [],
    "drift": 0.0
   },
   "Arms_Heavy": {
-   "gap": 0.81,
-   "pen": 0.04,
+   "gap": 0.54,
+   "pen": 0.13,
    "fail": [],
    "drift": 0.0
   },
   "Arms_Infantry": {
-   "gap": 0.75,
+   "gap": 0.25,
    "pen": 0.3,
    "fail": [],
    "drift": 0.0
   },
   "Arms_JpAntiTank": {
-   "gap": 0.79,
+   "gap": 0.09,
    "pen": 0.18,
    "fail": [],
    "drift": 0.0
   },
   "Arms_JpArmor": {
-   "gap": 0.73,
-   "pen": 0.2,
+   "gap": 0.19,
+   "pen": 0.27,
    "fail": [],
    "drift": 0.0
   },
   "Arms_JpAssault": {
-   "gap": 0.75,
+   "gap": 0.25,
    "pen": 0.17,
    "fail": [],
    "drift": 0.0
   },
   "Arms_JpHeavy": {
-   "gap": 0.76,
+   "gap": 0.23,
    "pen": 0.26,
    "fail": [],
    "drift": 0.0
   },
   "Arms_JpInfantry": {
-   "gap": 0.75,
-   "pen": 0.01,
+   "gap": 0.19,
+   "pen": 0.19,
    "fail": [],
    "drift": 0.0
   },
   "Arms_JpOfficer": {
-   "gap": 0.72,
-   "pen": 0.17,
+   "gap": 0.19,
+   "pen": 0.23,
    "fail": [],
    "drift": 0.0
   },
   "Arms_JpSniper": {
-   "gap": 0.75,
+   "gap": 0.23,
    "pen": 0.27,
    "fail": [],
    "drift": 0.0
   },
   "Arms_Officer": {
-   "gap": 0.73,
+   "gap": 0.41,
    "pen": 0.27,
    "fail": [],
    "drift": 0.0
   },
   "Arms_Sniper": {
-   "gap": 0.78,
-   "pen": 0.2,
+   "gap": 0.12,
+   "pen": 0.22,
    "fail": [],
    "drift": 0.0
   },
   "Body": {
-   "gap": 0.81,
+   "gap": 0.2,
    "pen": 0.17,
    "fail": [],
    "drift": 0.0
@@ -93,288 +93,299 @@
  },
  "Kar98k": {
   "Arms_AntiTank": {
-   "gap": 1.37,
-   "pen": 0.15,
+   "gap": 0.59,
+   "pen": 0.24,
    "fail": [],
    "drift": 0.0
   },
   "Arms_Armor": {
-   "gap": 1.54,
-   "pen": 0.18,
+   "gap": 0.76,
+   "pen": 0.16,
    "fail": [],
    "drift": 0.0
   },
   "Arms_Assault": {
-   "gap": 1.47,
-   "pen": 0.16,
+   "gap": 0.71,
+   "pen": 0.2,
    "fail": [],
    "drift": 0.0
   },
   "Arms_Heavy": {
-   "gap": 1.52,
-   "pen": 0.08,
+   "gap": 0.75,
+   "pen": 0.22,
    "fail": [],
    "drift": 0.0
   },
   "Arms_Infantry": {
-   "gap": 1.52,
-   "pen": 0.21,
+   "gap": 0.72,
+   "pen": 0.12,
    "fail": [],
    "drift": 0.0
   },
   "Arms_JpAntiTank": {
-   "gap": 1.5,
-   "pen": 0.11,
+   "gap": 0.72,
+   "pen": 0.14,
    "fail": [],
    "drift": 0.0
   },
   "Arms_JpArmor": {
-   "gap": 1.45,
-   "pen": 0.17,
-   "fail": [],
-   "drift": 0.0
-  },
-  "Arms_JpAssault": {
-   "gap": 1.51,
+   "gap": 0.66,
    "pen": 0.16,
    "fail": [],
    "drift": 0.0
   },
+  "Arms_JpAssault": {
+   "gap": 0.72,
+   "pen": 0.15,
+   "fail": [],
+   "drift": 0.0
+  },
   "Arms_JpHeavy": {
-   "gap": 1.55,
-   "pen": 0.17,
+   "gap": 0.76,
+   "pen": 0.19,
    "fail": [],
    "drift": 0.0
   },
   "Arms_JpInfantry": {
-   "gap": 1.47,
-   "pen": 0.17,
+   "gap": 0.7,
+   "pen": 0.2,
    "fail": [],
    "drift": 0.0
   },
   "Arms_JpOfficer": {
-   "gap": 1.44,
-   "pen": 0.17,
+   "gap": 0.66,
+   "pen": 0.14,
    "fail": [],
    "drift": 0.0
   },
   "Arms_JpSniper": {
-   "gap": 1.53,
-   "pen": 0.18,
+   "gap": 0.77,
+   "pen": 0.16,
    "fail": [],
    "drift": 0.0
   },
   "Arms_Officer": {
-   "gap": 1.53,
+   "gap": 0.73,
    "pen": 0.16,
    "fail": [],
    "drift": 0.0
   },
   "Arms_Sniper": {
-   "gap": 1.47,
-   "pen": 0.16,
+   "gap": 0.75,
+   "pen": 0.24,
    "fail": [],
    "drift": 0.0
   },
   "Body": {
-   "gap": 1.52,
-   "pen": 0.11,
+   "gap": 0.7,
+   "pen": 0.2,
    "fail": [],
    "drift": 0.0
   }
  },
  "MP38": {
   "Arms_AntiTank": {
-   "gap": 1.34,
-   "pen": 0.38,
+   "gap": 1.25,
+   "pen": 0.24,
    "fail": [
-    "L_IndexFinger_mid"
+    "L_LittleFinger_mid"
    ],
    "drift": 0.0
   },
   "Arms_Armor": {
-   "gap": 0.94,
-   "pen": 0.32,
-   "fail": [],
+   "gap": 1.02,
+   "pen": 0.22,
+   "fail": [
+    "L_LittleFinger_mid"
+   ],
    "drift": 0.0
   },
   "Arms_Assault": {
-   "gap": 1.1,
-   "pen": 0.46,
+   "gap": 1.11,
+   "pen": 0.37,
    "fail": [
-    "L_IndexFinger_mid"
+    "L_LittleFinger_mid"
    ],
    "drift": 0.0
   },
   "Arms_Heavy": {
-   "gap": 1.11,
-   "pen": 0.43,
+   "gap": 1.2,
+   "pen": 0.44,
    "fail": [
-    "L_IndexFinger_mid"
+    "L_LittleFinger_mid"
    ],
    "drift": 0.0
   },
   "Arms_Infantry": {
+   "gap": 0.98,
+   "pen": 0.22,
+   "fail": [],
+   "drift": 0.0
+  },
+  "Arms_JpAntiTank": {
+   "gap": 0.95,
+   "pen": 0.27,
+   "fail": [],
+   "drift": 0.0
+  },
+  "Arms_JpArmor": {
+   "gap": 0.97,
+   "pen": 0.32,
+   "fail": [],
+   "drift": 0.0
+  },
+  "Arms_JpAssault": {
+   "gap": 0.98,
+   "pen": 0.25,
+   "fail": [],
+   "drift": 0.0
+  },
+  "Arms_JpHeavy": {
+   "gap": 0.96,
+   "pen": 0.15,
+   "fail": [],
+   "drift": 0.0
+  },
+  "Arms_JpInfantry": {
    "gap": 0.97,
    "pen": 0.38,
    "fail": [],
    "drift": 0.0
   },
-  "Arms_JpAntiTank": {
-   "gap": 0.89,
-   "pen": 0.67,
-   "fail": [],
-   "drift": 0.0
-  },
-  "Arms_JpArmor": {
-   "gap": 0.92,
-   "pen": 0.38,
-   "fail": [],
-   "drift": 0.0
-  },
-  "Arms_JpAssault": {
-   "gap": 0.94,
-   "pen": 0.38,
-   "fail": [],
-   "drift": 0.0
-  },
-  "Arms_JpHeavy": {
-   "gap": 0.92,
-   "pen": 0.32,
-   "fail": [],
-   "drift": 0.0
-  },
-  "Arms_JpInfantry": {
-   "gap": 0.95,
-   "pen": 0.37,
-   "fail": [],
-   "drift": 0.0
-  },
   "Arms_JpOfficer": {
-   "gap": 0.94,
-   "pen": 0.47,
+   "gap": 0.97,
+   "pen": 0.2,
    "fail": [],
    "drift": 0.0
   },
   "Arms_JpSniper": {
-   "gap": 1.11,
-   "pen": 0.43,
-   "fail": [
-    "L_IndexFinger_mid"
-   ],
+   "gap": 0.96,
+   "pen": 0.26,
+   "fail": [],
    "drift": 0.0
   },
   "Arms_Officer": {
-   "gap": 1.21,
-   "pen": 0.41,
+   "gap": 1.28,
+   "pen": 0.37,
    "fail": [
-    "L_IndexFinger_mid"
+    "L_LittleFinger_mid"
    ],
    "drift": 0.0
   },
   "Arms_Sniper": {
-   "gap": 1.1,
-   "pen": 0.48,
+   "gap": 1.29,
+   "pen": 0.53,
    "fail": [
-    "L_IndexFinger_mid"
+    "L_IndexFinger_mid",
+    "L_LittleFinger_mid"
    ],
    "drift": 0.0
   },
   "Body": {
-   "gap": 0.87,
-   "pen": 0.66,
+   "gap": 0.9,
+   "pen": 0.32,
    "fail": [],
    "drift": 0.0
   }
  },
  "MP40": {
   "Arms_AntiTank": {
-   "gap": 0.64,
-   "pen": 0.46,
-   "fail": [],
+   "gap": 1.15,
+   "pen": 0.32,
+   "fail": [
+    "L_IndexFinger_mid"
+   ],
    "drift": 0.0
   },
   "Arms_Armor": {
-   "gap": 0.56,
-   "pen": 0.42,
+   "gap": 0.62,
+   "pen": 0.6,
    "fail": [],
    "drift": 0.0
   },
   "Arms_Assault": {
-   "gap": 0.75,
-   "pen": 0.52,
-   "fail": [],
+   "gap": 1.05,
+   "pen": 0.55,
+   "fail": [
+    "L_IndexFinger_mid"
+   ],
    "drift": 0.0
   },
   "Arms_Heavy": {
-   "gap": 0.46,
-   "pen": 0.48,
-   "fail": [],
+   "gap": 1.03,
+   "pen": 0.4,
+   "fail": [
+    "L_IndexFinger_mid"
+   ],
    "drift": 0.0
   },
   "Arms_Infantry": {
-   "gap": 0.78,
-   "pen": 0.49,
+   "gap": 0.64,
+   "pen": 0.66,
    "fail": [],
    "drift": 0.0
   },
   "Arms_JpAntiTank": {
-   "gap": 0.54,
-   "pen": 0.52,
+   "gap": 0.68,
+   "pen": 0.38,
    "fail": [],
    "drift": 0.0
   },
   "Arms_JpArmor": {
-   "gap": 0.54,
-   "pen": 0.54,
+   "gap": 0.8,
+   "pen": 0.45,
    "fail": [],
    "drift": 0.0
   },
   "Arms_JpAssault": {
-   "gap": 0.78,
-   "pen": 0.56,
+   "gap": 0.55,
+   "pen": 0.45,
    "fail": [],
    "drift": 0.0
   },
   "Arms_JpHeavy": {
-   "gap": 0.56,
-   "pen": 0.42,
-   "fail": [],
-   "drift": 0.0
-  },
-  "Arms_JpInfantry": {
-   "gap": 0.6,
-   "pen": 0.51,
-   "fail": [],
-   "drift": 0.0
-  },
-  "Arms_JpOfficer": {
-   "gap": 0.55,
+   "gap": 0.74,
    "pen": 0.59,
    "fail": [],
    "drift": 0.0
   },
+  "Arms_JpInfantry": {
+   "gap": 0.81,
+   "pen": 0.55,
+   "fail": [],
+   "drift": 0.0
+  },
+  "Arms_JpOfficer": {
+   "gap": 0.81,
+   "pen": 0.88,
+   "fail": [],
+   "drift": 0.0
+  },
   "Arms_JpSniper": {
-   "gap": 0.63,
-   "pen": 0.48,
+   "gap": 0.64,
+   "pen": 0.61,
    "fail": [],
    "drift": 0.0
   },
   "Arms_Officer": {
-   "gap": 0.56,
-   "pen": 0.57,
-   "fail": [],
+   "gap": 1.16,
+   "pen": 0.44,
+   "fail": [
+    "L_IndexFinger_mid"
+   ],
    "drift": 0.0
   },
   "Arms_Sniper": {
-   "gap": 0.5,
-   "pen": 0.56,
-   "fail": [],
+   "gap": 1.05,
+   "pen": 0.43,
+   "fail": [
+    "L_IndexFinger_mid"
+   ],
    "drift": 0.0
   },
   "Body": {
-   "gap": 0.5,
-   "pen": 0.45,
+   "gap": 0.67,
+   "pen": 0.42,
    "fail": [],
    "drift": 0.0
   }
@@ -571,7 +582,7 @@
    "drift": 0.0
   },
   "Arms_Armor": {
-   "gap": 0.34,
+   "gap": 0.29,
    "pen": 0.16,
    "fail": [],
    "drift": 0.0
@@ -589,7 +600,7 @@
    "drift": 0.0
   },
   "Arms_Infantry": {
-   "gap": 0.44,
+   "gap": 0.4,
    "pen": 0.18,
    "fail": [],
    "drift": 0.0
@@ -607,13 +618,13 @@
    "drift": 0.0
   },
   "Arms_JpAssault": {
-   "gap": 0.42,
+   "gap": 0.39,
    "pen": 0.33,
    "fail": [],
    "drift": 0.0
   },
   "Arms_JpHeavy": {
-   "gap": 0.32,
+   "gap": 0.22,
    "pen": 0.16,
    "fail": [],
    "drift": 0.0
@@ -631,7 +642,7 @@
    "drift": 0.0
   },
   "Arms_JpSniper": {
-   "gap": 0.25,
+   "gap": 0.22,
    "pen": 0.15,
    "fail": [],
    "drift": 0.0
@@ -644,7 +655,7 @@
   },
   "Arms_Sniper": {
    "gap": 0.62,
-   "pen": 0.49,
+   "pen": 0.3,
    "fail": [],
    "drift": 0.0
   },
@@ -657,150 +668,93 @@
  },
  "PANZERSCHRECK": {
   "Arms_AntiTank": {
-   "gap": 1.7,
-   "pen": 0.3,
-   "fail": [
-    "L_RingFinger_tip",
-    "R_MiddleFinger_tip",
-    "R_RingFinger_tip"
-   ],
+   "gap": 0.15,
+   "pen": 0.0,
+   "fail": [],
    "drift": 0.0
   },
   "Arms_Armor": {
-   "gap": 1.74,
-   "pen": 0.3,
-   "fail": [
-    "L_RingFinger_tip",
-    "R_MiddleFinger_tip",
-    "R_RingFinger_tip"
-   ],
+   "gap": 0.29,
+   "pen": 0.33,
+   "fail": [],
    "drift": 0.0
   },
   "Arms_Assault": {
-   "gap": 1.56,
-   "pen": 0.32,
-   "fail": [
-    "L_RingFinger_tip",
-    "R_MiddleFinger_tip",
-    "R_RingFinger_tip"
-   ],
+   "gap": 0.07,
+   "pen": 0.0,
+   "fail": [],
    "drift": 0.0
   },
   "Arms_Heavy": {
-   "gap": 1.39,
-   "pen": 0.26,
-   "fail": [
-    "L_RingFinger_tip",
-    "R_MiddleFinger_tip"
-   ],
+   "gap": 0.12,
+   "pen": 0.13,
+   "fail": [],
    "drift": 0.0
   },
   "Arms_Infantry": {
-   "gap": 1.9,
-   "pen": 0.28,
-   "fail": [
-    "L_RingFinger_tip",
-    "R_MiddleFinger_tip",
-    "R_RingFinger_tip"
-   ],
+   "gap": 0.5,
+   "pen": 0.34,
+   "fail": [],
    "drift": 0.0
   },
   "Arms_JpAntiTank": {
-   "gap": 1.45,
-   "pen": 0.26,
-   "fail": [
-    "L_RingFinger_tip",
-    "R_MiddleFinger_tip",
-    "R_RingFinger_tip"
-   ],
+   "gap": 0.34,
+   "pen": 0.0,
+   "fail": [],
    "drift": 0.0
   },
   "Arms_JpArmor": {
-   "gap": 1.56,
-   "pen": 0.3,
-   "fail": [
-    "L_RingFinger_tip",
-    "R_MiddleFinger_tip",
-    "R_RingFinger_tip"
-   ],
+   "gap": 0.14,
+   "pen": 0.34,
+   "fail": [],
    "drift": 0.0
   },
   "Arms_JpAssault": {
-   "gap": 1.89,
-   "pen": 0.32,
-   "fail": [
-    "L_RingFinger_tip",
-    "R_MiddleFinger_tip",
-    "R_RingFinger_tip"
-   ],
+   "gap": 0.53,
+   "pen": 0.0,
+   "fail": [],
    "drift": 0.0
   },
   "Arms_JpHeavy": {
-   "gap": 1.74,
-   "pen": 0.31,
-   "fail": [
-    "L_RingFinger_tip",
-    "R_MiddleFinger_tip",
-    "R_RingFinger_tip"
-   ],
+   "gap": 0.23,
+   "pen": 0.33,
+   "fail": [],
    "drift": 0.0
   },
   "Arms_JpInfantry": {
-   "gap": 1.57,
-   "pen": 0.26,
-   "fail": [
-    "L_RingFinger_tip",
-    "R_MiddleFinger_tip",
-    "R_RingFinger_tip"
-   ],
+   "gap": 0.12,
+   "pen": 0.07,
+   "fail": [],
    "drift": 0.0
   },
   "Arms_JpOfficer": {
-   "gap": 1.56,
-   "pen": 0.29,
-   "fail": [
-    "L_RingFinger_tip",
-    "R_MiddleFinger_tip",
-    "R_RingFinger_tip"
-   ],
+   "gap": 0.14,
+   "pen": 0.0,
+   "fail": [],
    "drift": 0.0
   },
   "Arms_JpSniper": {
-   "gap": 1.66,
-   "pen": 0.29,
-   "fail": [
-    "L_RingFinger_tip",
-    "R_MiddleFinger_tip",
-    "R_RingFinger_tip"
-   ],
+   "gap": 0.18,
+   "pen": 0.34,
+   "fail": [],
    "drift": 0.0
   },
   "Arms_Officer": {
-   "gap": 1.42,
-   "pen": 0.31,
-   "fail": [
-    "L_RingFinger_tip",
-    "R_MiddleFinger_tip"
-   ],
+   "gap": 0.16,
+   "pen": 0.33,
+   "fail": [],
    "drift": 0.0
   },
   "Arms_Sniper": {
-   "gap": 1.23,
-   "pen": 0.32,
-   "fail": [
-    "L_RingFinger_tip",
-    "R_MiddleFinger_tip"
-   ],
+   "gap": 0.04,
+   "pen": 0.06,
+   "fail": [],
    "drift": 0.0
   },
   "Body": {
-   "gap": 1.45,
-   "pen": 0.31,
-   "fail": [
-    "L_RingFinger_tip",
-    "R_MiddleFinger_tip",
-    "R_RingFinger_tip"
-   ],
+   "gap": 0.3,
+   "pen": 0.0,
+   "fail": [],
    "drift": 0.0
   }
  },
@@ -898,92 +852,92 @@
  },
  "STG44": {
   "Arms_AntiTank": {
-   "gap": 0.11,
-   "pen": 0.32,
+   "gap": 0.05,
+   "pen": 0.5,
    "fail": [],
    "drift": 0.0
   },
   "Arms_Armor": {
-   "gap": 0.13,
-   "pen": 0.21,
+   "gap": 0.06,
+   "pen": 0.18,
    "fail": [],
    "drift": 0.0
   },
   "Arms_Assault": {
-   "gap": 0.28,
+   "gap": 0.21,
    "pen": 0.36,
    "fail": [],
    "drift": 0.0
   },
   "Arms_Heavy": {
    "gap": 0.27,
-   "pen": 0.23,
+   "pen": 0.19,
    "fail": [],
    "drift": 0.0
   },
   "Arms_Infantry": {
-   "gap": 0.26,
-   "pen": 0.21,
-   "fail": [],
-   "drift": 0.0
-  },
-  "Arms_JpAntiTank": {
-   "gap": 0.38,
-   "pen": 0.24,
-   "fail": [],
-   "drift": 0.0
-  },
-  "Arms_JpArmor": {
-   "gap": 0.23,
-   "pen": 0.21,
-   "fail": [],
-   "drift": 0.0
-  },
-  "Arms_JpAssault": {
-   "gap": 0.14,
-   "pen": 0.22,
-   "fail": [],
-   "drift": 0.0
-  },
-  "Arms_JpHeavy": {
-   "gap": 0.3,
-   "pen": 0.24,
-   "fail": [],
-   "drift": 0.0
-  },
-  "Arms_JpInfantry": {
-   "gap": 0.27,
-   "pen": 0.21,
-   "fail": [],
-   "drift": 0.0
-  },
-  "Arms_JpOfficer": {
-   "gap": 0.23,
-   "pen": 0.21,
-   "fail": [],
-   "drift": 0.0
-  },
-  "Arms_JpSniper": {
-   "gap": 0.33,
-   "pen": 0.21,
-   "fail": [],
-   "drift": 0.0
-  },
-  "Arms_Officer": {
-   "gap": 0.23,
+   "gap": 0.05,
    "pen": 0.27,
    "fail": [],
    "drift": 0.0
   },
+  "Arms_JpAntiTank": {
+   "gap": 0.04,
+   "pen": 0.22,
+   "fail": [],
+   "drift": 0.0
+  },
+  "Arms_JpArmor": {
+   "gap": 0.05,
+   "pen": 0.27,
+   "fail": [],
+   "drift": 0.0
+  },
+  "Arms_JpAssault": {
+   "gap": 0.17,
+   "pen": 0.3,
+   "fail": [],
+   "drift": 0.0
+  },
+  "Arms_JpHeavy": {
+   "gap": 0.05,
+   "pen": 0.18,
+   "fail": [],
+   "drift": 0.0
+  },
+  "Arms_JpInfantry": {
+   "gap": 0.07,
+   "pen": 0.3,
+   "fail": [],
+   "drift": 0.0
+  },
+  "Arms_JpOfficer": {
+   "gap": 0.06,
+   "pen": 0.34,
+   "fail": [],
+   "drift": 0.0
+  },
+  "Arms_JpSniper": {
+   "gap": 0.06,
+   "pen": 0.18,
+   "fail": [],
+   "drift": 0.0
+  },
+  "Arms_Officer": {
+   "gap": 0.35,
+   "pen": 0.22,
+   "fail": [],
+   "drift": 0.0
+  },
   "Arms_Sniper": {
-   "gap": 0.3,
-   "pen": 0.37,
+   "gap": 0.26,
+   "pen": 0.26,
    "fail": [],
    "drift": 0.0
   },
   "Body": {
-   "gap": 0.24,
-   "pen": 0.28,
+   "gap": 0.03,
+   "pen": 0.26,
    "fail": [],
    "drift": 0.0
   }

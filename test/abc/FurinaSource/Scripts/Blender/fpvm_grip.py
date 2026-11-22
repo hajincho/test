@@ -113,7 +113,8 @@ def _path_ok(F, bvh, a, n=4, cap=0.5):
 
 
 def solve_finger(F, bvh, lim, thumb=False, tgt=None, step=8):
-    w = (0.2, 0.6, 1.0) if thumb else (0.5, 0.8, 1.2)
+    import os
+    w = (0.2, 0.6, 1.0) if thumb else tuple(float(x) for x in os.environ.get('FPVM_GRIP_W', '0.5,0.8,1.2').split(','))
     if tgt is not None:   # 방아쇠 검지: 먼저 뼈만으로(피부 무시) 패드가 목표에 가장 가까운 벌림 각을 고름
         best = None
         for sp in range(-50, 51, 5):   # 검지 벌림(뿌리 관절 옆으로 + 손 비틀림 몫까지)
