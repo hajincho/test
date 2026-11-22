@@ -16,7 +16,7 @@ D = L.D; FPS = 30; KEY = WK.upper(); OUT = {'key': WK, 'stage': STAGE}
 SPEC = {'mg34': dict(grip=(-2.4, 27.5, -4.5), fR=(0.15, -0.74, -0.67), xc=-2.9, bore_z=2.8, ch_box=((-11.6, 21.8, -0.8), (-4.4, 24.4, 2.3)), travel=9.0, rpm=900, cap=50,
                      rear_y=4.5, front_y=(-49.4, -47.4), recv_end=40.0, hold='guard', guard_ahead=-8.4, gun_pos=[36.0, -8.0, -13.0], gun_rot=[4.0, 0.0, -8.0],   # 배치: fpvm_place_search.py(두 손 닿고 드럼·리시버·왼손이 화면 안)
                      fire_len=60.0 / 900,
-                     mag_mats=('mg 34 mag', 'p line', '7.92х57 l'), drum_hook=(0.8, 9.8, 1.7), cover_box=((-6.6, 8.6, 3.0), (1.6, 22.4, 8.0)), cover_hinge=(-2.9, 9.4, 5.6), cover_open=85.0)}[WK]
+                     mag_mats=('mg 34 mag', 'p line', '7.92х57 l'), drum_hook=(0.8, 9.8, 1.7), cover_box=((-6.4, 9.8, 4.0), (1.5, 24.0, 8.0)), cover_hinge=(-2.9, 10.0, 5.2), cover_open=85.0)}[WK]
 CLAV = {'L': [-10.73, 9.89, -16.11], 'R': [-17.46, -9.78, -17.09]}; REACH = OPT.get('reach', 37.5)
 POLE = {'R': Vector((-0.10, -0.12, -0.18)), 'L': Vector((-0.08, 0.14, -0.20))}
 # ---- 팔
@@ -100,9 +100,18 @@ lab, comps, co = comps_of(gun)
 ch, nch = split_faces(gun, 'W_handle', comp_sel(lambda lo, hi: all(lo[i] >= lo_b[i] and hi[i] <= hi_b[i] for i in range(3))))
 OUT['handle_faces'] = nch
 # 급탄 덮개(2026-11-22 고증: 드럼을 달 때 덮개를 열고 탄띠 앞 고리들을 급탄판에 놓은 뒤 닫음 - mg42.us 포럼, Athlon, MIS 1943)
-CB = SPEC['cover_box']   # 성분 단위(영역 안에 통째로 든 판·리벳만; 면 단위로 자르면 리시버·가늠자 조각이 들려 뾰족해졌음)
+CB = SPEC['cover_box']   # 덮개 전체(위에서 본 둥근 뒤끝 판 y 10~23.6, 리시버 윗면 z 4.7 위): 꼭짓점이 모두 영역 안인 면 + 영역 안 성분(리벳 등)
 lab, comps, co = comps_of(gun)
-cover, ncov = split_faces(gun, 'W_cover', comp_sel(lambda lo, hi: all(lo[i] >= CB[0][i] and hi[i] <= CB[1][i] for i in range(3)))); OUT['cover_faces'] = ncov
+_inbox = lambda p: all(CB[0][i] <= p[i] <= CB[1][i] for i in range(3))
+_cin = set(ci for ci, idx in enumerate(comps) if all(CB[0][i] - 0.3 <= co[idx][:, i].min() and co[idx][:, i].max() <= CB[1][i] + 0.3 for i in range(3)))
+cover, ncov = split_faces(gun, 'W_cover', lambda f: lab[f.verts[0].index] in _cin or all(_inbox(v.co) for v in f.verts)); OUT['cover_faces'] = ncov
+_rest = np.array([v.co[:] for v in gun.data.vertices]); _r = _rest[(_rest[:, 1] > 10.5) & (_rest[:, 1] < 23.5) & (_rest[:, 0] > -6.0) & (_rest[:, 0] < 0.2)]; _cv = np.array([v.co[:] for v in cover.data.vertices])
+_bmr = bmesh.new(); _bmr.from_mesh(gun.data); _hi = []
+for _f in _bmr.faces:
+    _c = np.array([v.co[:] for v in _f.verts])
+    if (_c[:, 2] > 5.0).any() and ((_c[:, 1] > 10.5) & (_c[:, 1] < 23.5)).any() and ((_c[:, 0] > -6.0) & (_c[:, 0] < 0.2)).any(): _hi.append([_c.min(0).round(1).tolist(), _c.max(0).round(1).tolist()])
+_bmr.free(); OUT['cover_rest_faces'] = _hi[:12]; OUT['cover_rest_n'] = len(_hi)
+OUT['cover_check'] = {'rest_zmax': round(float(_r[:, 2].max()), 2) if len(_r) else None, 'cover_y': [round(float(_cv[:, 1].min()), 2), round(float(_cv[:, 1].max()), 2)], 'cover_z': [round(float(_cv[:, 2].min()), 2), round(float(_cv[:, 2].max()), 2)]}
 OUT['tris'] = {o.name: decimate(o, t) for o, t in ((gun, 70000), (mag, 9000), (ch, 4000), (cover, 6000))}
 # 조준선(앞 가늠쇠 = 총구 쪽 가운데 줄 최고점, 뒤 가늠자 = 같은 높이(조준선 ∥ 총열))
 P = np.array([v.co[:] for v in gun.data.vertices]); f0, f1 = SPEC['front_y']
