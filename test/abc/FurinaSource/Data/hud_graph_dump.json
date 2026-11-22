@@ -1,0 +1,3641 @@
+{
+"K2Node_FPAH_Draw": {
+"cls": "K2Node_Event",
+"fn": "",
+"exec": [
+[
+"then",
+[
+"M4HUD_Cast.execute"
+]
+]
+],
+"in": []
+},
+"K2Node_FPAH_Pawn": {
+"cls": "K2Node_CallFunction",
+"fn": "",
+"exec": [],
+"in": []
+},
+"K2Node_FPAH_AdsFF": {
+"cls": "K2Node_CallFunction",
+"fn": "",
+"exec": [],
+"in": [
+[
+"self",
+"",
+[
+"K2Node_FPAH_Pawn.ReturnValue"
+]
+],
+[
+"ComponentClass",
+"/Script/Engine.ActorComponent",
+[]
+],
+[
+"Tag",
+"FurinaADS",
+[]
+]
+]
+},
+"K2Node_FPAH_AdsF": {
+"cls": "K2Node_CallFunction",
+"fn": "",
+"exec": [],
+"in": [
+[
+"self",
+"",
+[
+"K2Node_FPAH_AdsFF.ReturnValue"
+]
+]
+]
+},
+"K2Node_FPAH_IsAds": {
+"cls": "K2Node_IfThenElse",
+"fn": "",
+"exec": [
+[
+"else",
+[
+"K2Node_FPAH_LineH.execute"
+]
+]
+],
+"in": [
+[
+"Condition",
+"true",
+[
+"K2Node_FPAH_AdsF.ReturnValue"
+]
+]
+]
+},
+"K2Node_FPAH_CXD": {
+"cls": "K2Node_CallFunction",
+"fn": "",
+"exec": [],
+"in": [
+[
+"InInt",
+"0",
+[
+"K2Node_FPAH_Draw.SizeX"
+]
+]
+]
+},
+"K2Node_FPAH_CX": {
+"cls": "K2Node_CallFunction",
+"fn": "",
+"exec": [],
+"in": [
+[
+"A",
+"0.0",
+[
+"K2Node_FPAH_CXD.ReturnValue"
+]
+],
+[
+"B",
+"0.5",
+[]
+]
+]
+},
+"K2Node_FPAH_CYD": {
+"cls": "K2Node_CallFunction",
+"fn": "",
+"exec": [],
+"in": [
+[
+"InInt",
+"0",
+[
+"K2Node_FPAH_Draw.SizeY"
+]
+]
+]
+},
+"K2Node_FPAH_CY": {
+"cls": "K2Node_CallFunction",
+"fn": "",
+"exec": [],
+"in": [
+[
+"A",
+"0.0",
+[
+"K2Node_FPAH_CYD.ReturnValue"
+]
+],
+[
+"B",
+"0.5",
+[]
+]
+]
+},
+"K2Node_FPAH_XL": {
+"cls": "K2Node_CallFunction",
+"fn": "",
+"exec": [],
+"in": [
+[
+"A",
+"0.0",
+[
+"K2Node_FPAH_CX.ReturnValue"
+]
+],
+[
+"B",
+"-11.000000",
+[]
+]
+]
+},
+"K2Node_FPAH_XR": {
+"cls": "K2Node_CallFunction",
+"fn": "",
+"exec": [],
+"in": [
+[
+"A",
+"0.0",
+[
+"K2Node_FPAH_CX.ReturnValue"
+]
+],
+[
+"B",
+"11.000000",
+[]
+]
+]
+},
+"K2Node_FPAH_YT": {
+"cls": "K2Node_CallFunction",
+"fn": "",
+"exec": [],
+"in": [
+[
+"A",
+"0.0",
+[
+"K2Node_FPAH_CY.ReturnValue"
+]
+],
+[
+"B",
+"-11.000000",
+[]
+]
+]
+},
+"K2Node_FPAH_YB": {
+"cls": "K2Node_CallFunction",
+"fn": "",
+"exec": [],
+"in": [
+[
+"A",
+"0.0",
+[
+"K2Node_FPAH_CY.ReturnValue"
+]
+],
+[
+"B",
+"11.000000",
+[]
+]
+]
+},
+"K2Node_FPAH_LineH": {
+"cls": "K2Node_CallFunction",
+"fn": "",
+"exec": [
+[
+"then",
+[
+"K2Node_FPAH_LineV.execute"
+]
+]
+],
+"in": [
+[
+"StartScreenX",
+"0.0",
+[
+"K2Node_FPAH_XL.ReturnValue"
+]
+],
+[
+"StartScreenY",
+"0.0",
+[
+"K2Node_FPAH_CY.ReturnValue"
+]
+],
+[
+"EndScreenX",
+"0.0",
+[
+"K2Node_FPAH_XR.ReturnValue"
+]
+],
+[
+"EndScreenY",
+"0.0",
+[
+"K2Node_FPAH_CY.ReturnValue"
+]
+],
+[
+"LineColor",
+"(R=1.000000,G=1.000000,B=1.000000,A=0.900000)",
+[]
+],
+[
+"LineThickness",
+"2.000000",
+[]
+]
+]
+},
+"K2Node_FPAH_LineV": {
+"cls": "K2Node_CallFunction",
+"fn": "",
+"exec": [],
+"in": [
+[
+"StartScreenX",
+"0.0",
+[
+"K2Node_FPAH_CX.ReturnValue"
+]
+],
+[
+"StartScreenY",
+"0.0",
+[
+"K2Node_FPAH_YT.ReturnValue"
+]
+],
+[
+"EndScreenX",
+"0.0",
+[
+"K2Node_FPAH_CX.ReturnValue"
+]
+],
+[
+"EndScreenY",
+"0.0",
+[
+"K2Node_FPAH_YB.ReturnValue"
+]
+],
+[
+"LineColor",
+"(R=1.000000,G=1.000000,B=1.000000,A=0.900000)",
+[]
+],
+[
+"LineThickness",
+"2.000000",
+[]
+]
+]
+},
+"K2Node_DynamicCast_0": {
+"cls": "K2Node_DynamicCast",
+"fn": "",
+"exec": [],
+"in": []
+},
+"M4HUD_Cast": {
+"cls": "K2Node_DynamicCast",
+"fn": "",
+"exec": [
+[
+"then",
+[
+"HistoricalView_DrawOnlyLegacy.execute"
+]
+],
+[
+"CastFailed",
+[
+"K2Node_FPAH_IsAds.execute"
+]
+]
+],
+"in": [
+[
+"Object",
+"",
+[
+"M4HUD_Pawn.ReturnValue"
+]
+]
+]
+},
+"M4HUD_Pawn": {
+"cls": "K2Node_CallFunction",
+"fn": "",
+"exec": [],
+"in": []
+},
+"M4HUD_Ammo": {
+"cls": "K2Node_VariableGet",
+"fn": "",
+"exec": [],
+"in": [
+[
+"self",
+"",
+[
+"M4HUD_Cast.AsThird Person Character BP"
+]
+]
+]
+},
+"M4HUD_Number": {
+"cls": "K2Node_CallFunction",
+"fn": "",
+"exec": [],
+"in": [
+[
+"InInt",
+"0",
+[
+"M4HUD_Ammo.FurinaAmmo"
+]
+]
+]
+},
+"M4HUD_Label": {
+"cls": "K2Node_CommutativeAssociativeBinaryOperator",
+"fn": "",
+"exec": [],
+"in": [
+[
+"A",
+"",
+[
+"M4HUD_Number.ReturnValue"
+]
+],
+[
+"B",
+"/",
+[]
+]
+]
+},
+"M4HUD_DrawAmmo": {
+"cls": "K2Node_CallFunction",
+"fn": "",
+"exec": [
+[
+"then",
+[
+"FM_DrawMode.execute"
+]
+]
+],
+"in": [
+[
+"Text",
+"",
+[
+"P2H_Name_fb9151.ReturnValue"
+]
+],
+[
+"TextColor",
+"(R=0.8,G=0.96,B=1.0,A=1.0)",
+[]
+],
+[
+"ScreenX",
+"0.0",
+[
+"TFPHUD_NumX.ReturnValue"
+]
+],
+[
+"ScreenY",
+"0.0",
+[
+"K2Node_CallFunction_147.ReturnValue"
+]
+],
+[
+"Font",
+"/Game/3DPlatformerGameBundle/Fonts/Kenvector_Future_Font.Ken",
+[]
+],
+[
+"Scale",
+"1.000000",
+[
+"TFPHUD_FontScale.ReturnValue"
+]
+],
+[
+"bScalePosition",
+"false",
+[]
+]
+]
+},
+"M4HUD_ScreenX": {
+"cls": "K2Node_PromotableOperator",
+"fn": "",
+"exec": [],
+"in": [
+[
+"A",
+"",
+[
+"K2Node_FPAH_Draw.SizeX"
+]
+],
+[
+"B",
+"150",
+[]
+]
+]
+},
+"K2Node_CallFunction_232": {
+"cls": "K2Node_CallFunction",
+"fn": "",
+"exec": [],
+"in": [
+[
+"InInt",
+"0",
+[
+"M4HUD_ScreenX.ReturnValue"
+]
+]
+]
+},
+"M4HUD_ScreenY": {
+"cls": "K2Node_PromotableOperator",
+"fn": "",
+"exec": [],
+"in": [
+[
+"A",
+"",
+[
+"K2Node_FPAH_Draw.SizeY"
+]
+],
+[
+"B",
+"55",
+[]
+]
+]
+},
+"K2Node_CallFunction_233": {
+"cls": "K2Node_CallFunction",
+"fn": "",
+"exec": [],
+"in": [
+[
+"InInt",
+"0",
+[
+"M4HUD_ScreenY.ReturnValue"
+]
+]
+]
+},
+"TFPHUD_Width": {
+"cls": "K2Node_PromotableOperator",
+"fn": "",
+"exec": [],
+"in": [
+[
+"A",
+"",
+[
+"TFPHUD_ScreenXFloat.ReturnValue"
+]
+],
+[
+"B",
+"",
+[
+"TFPHUD_WidthLiteralB.ReturnValue"
+]
+]
+]
+},
+"TFPHUD_WidthClamp": {
+"cls": "K2Node_CallFunction",
+"fn": "",
+"exec": [],
+"in": [
+[
+"Value",
+"0.0",
+[
+"K2Node_CallFunction_144.ReturnValue"
+]
+],
+[
+"Min",
+"360",
+[]
+],
+[
+"Max",
+"540",
+[]
+]
+]
+},
+"K2Node_CallFunction_140": {
+"cls": "K2Node_CallFunction",
+"fn": "",
+"exec": [],
+"in": [
+[
+"InInt",
+"0",
+[
+"TFPHUD_Width.ReturnValue"
+]
+]
+]
+},
+"TFPHUD_Height": {
+"cls": "K2Node_PromotableOperator",
+"fn": "",
+"exec": [],
+"in": [
+[
+"A",
+"",
+[
+"TFPHUD_WidthClamp.ReturnValue"
+]
+],
+[
+"B",
+"",
+[
+"TFPHUD_HeightLiteralB.ReturnValue"
+]
+]
+]
+},
+"TFPHUD_Right": {
+"cls": "K2Node_PromotableOperator",
+"fn": "",
+"exec": [],
+"in": [
+[
+"A",
+"",
+[
+"TFPHUD_ScreenXFloat.ReturnValue"
+]
+],
+[
+"B",
+"",
+[
+"TFPHUD_RightLiteralB.ReturnValue"
+]
+]
+]
+},
+"TFPHUD_Bottom": {
+"cls": "K2Node_PromotableOperator",
+"fn": "",
+"exec": [],
+"in": [
+[
+"A",
+"",
+[
+"TFPHUD_ScreenYFloat.ReturnValue"
+]
+],
+[
+"B",
+"",
+[
+"TFPHUD_BottomLiteralB.ReturnValue"
+]
+]
+]
+},
+"TFPHUD_X": {
+"cls": "K2Node_PromotableOperator",
+"fn": "",
+"exec": [],
+"in": [
+[
+"A",
+"",
+[
+"TFPHUD_Right.ReturnValue"
+]
+],
+[
+"B",
+"",
+[
+"TFPHUD_WidthClamp.ReturnValue"
+]
+]
+]
+},
+"TFPHUD_Y": {
+"cls": "K2Node_PromotableOperator",
+"fn": "",
+"exec": [],
+"in": [
+[
+"A",
+"",
+[
+"TFPHUD_Bottom.ReturnValue"
+]
+],
+[
+"B",
+"",
+[
+"TFPHUD_Height.ReturnValue"
+]
+]
+]
+},
+"TFPHUD_Frame": {
+"cls": "K2Node_CallFunction",
+"fn": "",
+"exec": [
+[
+"then",
+[
+"M4HUD_DrawAmmo.execute"
+]
+]
+],
+"in": [
+[
+"Material",
+"/Game/Furina/UI/M_FurinaHUD.M_FurinaHUD",
+[]
+],
+[
+"ScreenX",
+"0.0",
+[
+"TFPHUD_X.ReturnValue"
+]
+],
+[
+"ScreenY",
+"0.0",
+[
+"K2Node_CallFunction_145.ReturnValue"
+]
+],
+[
+"ScreenW",
+"0.0",
+[
+"TFPHUD_WidthClamp.ReturnValue"
+]
+],
+[
+"ScreenH",
+"0.0",
+[
+"K2Node_CallFunction_146.ReturnValue"
+]
+],
+[
+"MaterialU",
+"0.0",
+[]
+],
+[
+"MaterialV",
+"0.0",
+[]
+],
+[
+"MaterialUWidth",
+"1",
+[]
+],
+[
+"MaterialVHeight",
+"1",
+[]
+],
+[
+"Scale",
+"1.000000",
+[]
+],
+[
+"bScalePosition",
+"false",
+[]
+],
+[
+"Rotation",
+"0.000000",
+[]
+]
+]
+},
+"K2Node_CallFunction_141": {
+"cls": "K2Node_CallFunction",
+"fn": "",
+"exec": [],
+"in": [
+[
+"InInt",
+"0",
+[
+"TFPHUD_Y.ReturnValue"
+]
+]
+]
+},
+"K2Node_CallFunction_142": {
+"cls": "K2Node_CallFunction",
+"fn": "",
+"exec": [],
+"in": [
+[
+"InInt",
+"0",
+[
+"TFPHUD_Height.ReturnValue"
+]
+]
+]
+},
+"TFPHUD_NumXOffset": {
+"cls": "K2Node_PromotableOperator",
+"fn": "",
+"exec": [],
+"in": [
+[
+"A",
+"",
+[
+"TFPHUD_WidthClamp.ReturnValue"
+]
+],
+[
+"B",
+"",
+[
+"TFPHUD_NumXOffsetLiteralB.ReturnValue"
+]
+]
+]
+},
+"TFPHUD_NumX": {
+"cls": "K2Node_PromotableOperator",
+"fn": "",
+"exec": [],
+"in": [
+[
+"A",
+"",
+[
+"TFPHUD_X.ReturnValue"
+]
+],
+[
+"B",
+"",
+[
+"TFPHUD_NumXOffset.ReturnValue"
+]
+]
+]
+},
+"TFPHUD_NumYOffset": {
+"cls": "K2Node_PromotableOperator",
+"fn": "",
+"exec": [],
+"in": [
+[
+"A",
+"",
+[
+"TFPHUD_Height.ReturnValue"
+]
+],
+[
+"B",
+"",
+[
+"TFPHUD_NumYOffsetLiteralB.ReturnValue"
+]
+]
+]
+},
+"TFPHUD_NumY": {
+"cls": "K2Node_PromotableOperator",
+"fn": "",
+"exec": [],
+"in": [
+[
+"A",
+"",
+[
+"TFPHUD_Y.ReturnValue"
+]
+],
+[
+"B",
+"",
+[
+"TFPHUD_NumYOffset.ReturnValue"
+]
+]
+]
+},
+"K2Node_CallFunction_143": {
+"cls": "K2Node_CallFunction",
+"fn": "",
+"exec": [],
+"in": [
+[
+"InInt",
+"0",
+[
+"TFPHUD_NumY.ReturnValue"
+]
+]
+]
+},
+"TFPHUD_FontScale": {
+"cls": "K2Node_PromotableOperator",
+"fn": "",
+"exec": [],
+"in": [
+[
+"A",
+"",
+[
+"TFPHUD_WidthClamp.ReturnValue"
+]
+],
+[
+"B",
+"",
+[
+"TFPHUD_FontScaleLiteralB.ReturnValue"
+]
+]
+]
+},
+"TFPHUD_Reserve": {
+"cls": "K2Node_VariableGet",
+"fn": "",
+"exec": [],
+"in": [
+[
+"self",
+"",
+[
+"M4HUD_Cast.AsThird Person Character BP"
+]
+]
+]
+},
+"TFPHUD_ReserveString": {
+"cls": "K2Node_CallFunction",
+"fn": "",
+"exec": [],
+"in": [
+[
+"InInt",
+"0",
+[
+"TFPHUD_Reserve.FurinaReserve"
+]
+]
+]
+},
+"TFPHUD_LiveAmmo": {
+"cls": "K2Node_CommutativeAssociativeBinaryOperator",
+"fn": "",
+"exec": [],
+"in": [
+[
+"A",
+"",
+[
+"M4HUD_Label.ReturnValue"
+]
+],
+[
+"B",
+"",
+[
+"TFPHUD_ReserveString.ReturnValue"
+]
+]
+]
+},
+"K2Node_Event_0": {
+"cls": "K2Node_Event",
+"fn": "",
+"exec": [
+[
+"then",
+[
+"TFPHUD_CleanupTimer.execute"
+]
+]
+],
+"in": []
+},
+"TFPHUD_CleanupTimer": {
+"cls": "K2Node_CallFunction",
+"fn": "",
+"exec": [],
+"in": [
+[
+"FunctionName",
+"FurinaHideDemoGuides",
+[]
+],
+[
+"Time",
+".5",
+[]
+],
+[
+"bLooping",
+"true",
+[]
+],
+[
+"bMaxOncePerFrame",
+"false",
+[]
+],
+[
+"InitialStartDelay",
+"0.000000",
+[]
+],
+[
+"InitialStartDelayVariance",
+"0.000000",
+[]
+]
+]
+},
+"K2Node_CustomEvent_0": {
+"cls": "K2Node_CustomEvent",
+"fn": "",
+"exec": [
+[
+"then",
+[
+"TFPHUD_Guides0.execute"
+]
+]
+],
+"in": []
+},
+"TFPHUD_Guides0": {
+"cls": "K2Node_CallFunction",
+"fn": "",
+"exec": [
+[
+"then",
+[
+"TFPHUD_Loop0.Exec"
+]
+]
+],
+"in": [
+[
+"WidgetClass",
+"/Game/3DPlatformerGameBundle/Widgets/Guide_Widget_WBP.Guide_",
+[]
+],
+[
+"TopLevelOnly",
+"false",
+[]
+]
+]
+},
+"TFPHUD_Loop0": {
+"cls": "K2Node_MacroInstance",
+"fn": "",
+"exec": [
+[
+"LoopBody",
+[
+"TFPHUD_Hide0.execute"
+]
+],
+[
+"Completed",
+[
+"TFPHUD_Guides1.execute"
+]
+]
+],
+"in": [
+[
+"Array",
+"",
+[
+"TFPHUD_Guides0.FoundWidgets"
+]
+]
+]
+},
+"TFPHUD_ScreenXFloat": {
+"cls": "K2Node_CallFunction",
+"fn": "",
+"exec": [],
+"in": [
+[
+"InInt",
+"0",
+[
+"K2Node_FPAH_Draw.SizeX"
+]
+]
+]
+},
+"TFPHUD_ScreenYFloat": {
+"cls": "K2Node_CallFunction",
+"fn": "",
+"exec": [],
+"in": [
+[
+"InInt",
+"0",
+[
+"K2Node_FPAH_Draw.SizeY"
+]
+]
+]
+},
+"TFPHUD_WidthLiteralB": {
+"cls": "K2Node_CallFunction",
+"fn": "",
+"exec": [],
+"in": [
+[
+"Value",
+"0.3",
+[]
+]
+]
+},
+"K2Node_CallFunction_144": {
+"cls": "K2Node_CallFunction",
+"fn": "",
+"exec": [],
+"in": [
+[
+"InInt",
+"0",
+[
+"TFPHUD_Width.ReturnValue"
+]
+]
+]
+},
+"TFPHUD_HeightLiteralB": {
+"cls": "K2Node_CallFunction",
+"fn": "",
+"exec": [],
+"in": [
+[
+"Value",
+"3",
+[]
+]
+]
+},
+"TFPHUD_RightLiteralB": {
+"cls": "K2Node_CallFunction",
+"fn": "",
+"exec": [],
+"in": [
+[
+"Value",
+"24",
+[]
+]
+]
+},
+"TFPHUD_BottomLiteralB": {
+"cls": "K2Node_CallFunction",
+"fn": "",
+"exec": [],
+"in": [
+[
+"Value",
+"24",
+[]
+]
+]
+},
+"K2Node_CallFunction_145": {
+"cls": "K2Node_CallFunction",
+"fn": "",
+"exec": [],
+"in": [
+[
+"InInt",
+"0",
+[
+"TFPHUD_Y.ReturnValue"
+]
+]
+]
+},
+"K2Node_CallFunction_146": {
+"cls": "K2Node_CallFunction",
+"fn": "",
+"exec": [],
+"in": [
+[
+"InInt",
+"0",
+[
+"TFPHUD_Height.ReturnValue"
+]
+]
+]
+},
+"TFPHUD_NumXOffsetLiteralB": {
+"cls": "K2Node_CallFunction",
+"fn": "",
+"exec": [],
+"in": [
+[
+"Value",
+"0.075",
+[]
+]
+]
+},
+"TFPHUD_NumYOffsetLiteralB": {
+"cls": "K2Node_CallFunction",
+"fn": "",
+"exec": [],
+"in": [
+[
+"Value",
+"0.085",
+[]
+]
+]
+},
+"K2Node_CallFunction_147": {
+"cls": "K2Node_CallFunction",
+"fn": "",
+"exec": [],
+"in": [
+[
+"InInt",
+"0",
+[
+"TFPHUD_NumY.ReturnValue"
+]
+]
+]
+},
+"TFPHUD_FontScaleLiteralB": {
+"cls": "K2Node_CallFunction",
+"fn": "",
+"exec": [],
+"in": [
+[
+"Value",
+"0.004732510288065843",
+[]
+]
+]
+},
+"TFPHUD_Hide0": {
+"cls": "K2Node_CallFunction",
+"fn": "",
+"exec": [],
+"in": [
+[
+"self",
+"",
+[
+"TFPHUD_Loop0.Array Element"
+]
+],
+[
+"InVisibility",
+"Collapsed",
+[]
+]
+]
+},
+"TFPHUD_Guides1": {
+"cls": "K2Node_CallFunction",
+"fn": "",
+"exec": [
+[
+"then",
+[
+"TFPHUD_Loop1.Exec"
+]
+]
+],
+"in": [
+[
+"WidgetClass",
+"/Game/3DPlatformerGameBundle/Widgets/GrindRailGuideWidgetBP/",
+[]
+],
+[
+"TopLevelOnly",
+"false",
+[]
+]
+]
+},
+"TFPHUD_Loop1": {
+"cls": "K2Node_MacroInstance",
+"fn": "",
+"exec": [
+[
+"LoopBody",
+[
+"TFPHUD_Hide1.execute"
+]
+],
+[
+"Completed",
+[
+"TFPHUD_Guides2.execute"
+]
+]
+],
+"in": [
+[
+"Array",
+"",
+[
+"TFPHUD_Guides1.FoundWidgets"
+]
+]
+]
+},
+"TFPHUD_Hide1": {
+"cls": "K2Node_CallFunction",
+"fn": "",
+"exec": [],
+"in": [
+[
+"self",
+"",
+[
+"TFPHUD_Loop1.Array Element"
+]
+],
+[
+"InVisibility",
+"Collapsed",
+[]
+]
+]
+},
+"TFPHUD_Guides2": {
+"cls": "K2Node_CallFunction",
+"fn": "",
+"exec": [
+[
+"then",
+[
+"TFPHUD_Loop2.Exec"
+]
+]
+],
+"in": [
+[
+"WidgetClass",
+"/Game/3DPlatformerGameBundle/Widgets/HomingAttackGuideWidget",
+[]
+],
+[
+"TopLevelOnly",
+"false",
+[]
+]
+]
+},
+"TFPHUD_Loop2": {
+"cls": "K2Node_MacroInstance",
+"fn": "",
+"exec": [
+[
+"LoopBody",
+[
+"TFPHUD_Hide2.execute"
+]
+],
+[
+"Completed",
+[
+"TFPHUD_Guides3.execute"
+]
+]
+],
+"in": [
+[
+"Array",
+"",
+[
+"TFPHUD_Guides2.FoundWidgets"
+]
+]
+]
+},
+"TFPHUD_Hide2": {
+"cls": "K2Node_CallFunction",
+"fn": "",
+"exec": [],
+"in": [
+[
+"self",
+"",
+[
+"TFPHUD_Loop2.Array Element"
+]
+],
+[
+"InVisibility",
+"Collapsed",
+[]
+]
+]
+},
+"TFPHUD_Guides3": {
+"cls": "K2Node_CallFunction",
+"fn": "",
+"exec": [
+[
+"then",
+[
+"TFPHUD_Loop3.Exec"
+]
+]
+],
+"in": [
+[
+"WidgetClass",
+"/Game/3DPlatformerGameBundle/Widgets/JumpPadGuideWidgetBP/Gu",
+[]
+],
+[
+"TopLevelOnly",
+"false",
+[]
+]
+]
+},
+"TFPHUD_Loop3": {
+"cls": "K2Node_MacroInstance",
+"fn": "",
+"exec": [
+[
+"LoopBody",
+[
+"TFPHUD_Hide3.execute"
+]
+],
+[
+"Completed",
+[
+"TFPHUD_WorldNotes.execute"
+]
+]
+],
+"in": [
+[
+"Array",
+"",
+[
+"TFPHUD_Guides3.FoundWidgets"
+]
+]
+]
+},
+"TFPHUD_Hide3": {
+"cls": "K2Node_CallFunction",
+"fn": "",
+"exec": [],
+"in": [
+[
+"self",
+"",
+[
+"TFPHUD_Loop3.Array Element"
+]
+],
+[
+"InVisibility",
+"Collapsed",
+[]
+]
+]
+},
+"TFPHUD_WorldNotes": {
+"cls": "K2Node_CallFunction",
+"fn": "",
+"exec": [
+[
+"then",
+[
+"TFPHUD_NoteLoop.Exec"
+]
+]
+],
+"in": [
+[
+"ActorClass",
+"/Script/Engine.TextRenderActor",
+[]
+]
+]
+},
+"TFPHUD_NoteLoop": {
+"cls": "K2Node_MacroInstance",
+"fn": "",
+"exec": [
+[
+"LoopBody",
+[
+"TFPHUD_HideWorldNotes.execute"
+]
+]
+],
+"in": [
+[
+"Array",
+"",
+[
+"TFPHUD_WorldNotes.OutActors"
+]
+]
+]
+},
+"TFPHUD_HideWorldNotes": {
+"cls": "K2Node_CallFunction",
+"fn": "",
+"exec": [],
+"in": [
+[
+"self",
+"",
+[
+"TFPHUD_NoteLoop.Array Element"
+]
+],
+[
+"bNewHidden",
+"true",
+[]
+]
+]
+},
+"FHUD_ReloadGet": {
+"cls": "K2Node_VariableGet",
+"fn": "",
+"exec": [],
+"in": [
+[
+"self",
+"",
+[
+"M4HUD_Cast.AsThird Person Character BP"
+]
+]
+]
+},
+"FHUD_AmmoF": {
+"cls": "K2Node_CallFunction",
+"fn": "",
+"exec": [],
+"in": [
+[
+"InInt",
+"0",
+[
+"M4HUD_Ammo.FurinaAmmo"
+]
+]
+]
+},
+"FHUD_ReserveF": {
+"cls": "K2Node_CallFunction",
+"fn": "",
+"exec": [],
+"in": [
+[
+"InInt",
+"0",
+[
+"TFPHUD_Reserve.FurinaReserve"
+]
+]
+]
+},
+"FHUD_ReloadF": {
+"cls": "K2Node_CallFunction",
+"fn": "",
+"exec": [],
+"in": [
+[
+"InBool",
+"false",
+[
+"FHUD_ReloadGet.FurinaReloading"
+]
+]
+]
+},
+"FHUD_SetAmmo": {
+"cls": "K2Node_CallMaterialParameterCollectionFunction",
+"fn": "",
+"exec": [
+[
+"then",
+[
+"FHUD_SetReserve.execute"
+]
+]
+],
+"in": [
+[
+"Collection",
+"/Game/Furina/UI/MPC_FurinaHUD.MPC_FurinaHUD",
+[]
+],
+[
+"ParameterName",
+"Ammo",
+[]
+],
+[
+"ParameterValue",
+"0.0",
+[
+"FHUD_AmmoF.ReturnValue"
+]
+]
+]
+},
+"FHUD_SetReserve": {
+"cls": "K2Node_CallMaterialParameterCollectionFunction",
+"fn": "",
+"exec": [
+[
+"then",
+[
+"FHUD_SetReload.execute"
+]
+]
+],
+"in": [
+[
+"Collection",
+"/Game/Furina/UI/MPC_FurinaHUD.MPC_FurinaHUD",
+[]
+],
+[
+"ParameterName",
+"Reserve",
+[]
+],
+[
+"ParameterValue",
+"0.0",
+[
+"FHUD_ReserveF.ReturnValue"
+]
+]
+]
+},
+"FHUD_SetReload": {
+"cls": "K2Node_CallMaterialParameterCollectionFunction",
+"fn": "",
+"exec": [
+[
+"then",
+[
+"FHUD_SetReloadP.execute"
+]
+]
+],
+"in": [
+[
+"Collection",
+"/Game/Furina/UI/MPC_FurinaHUD.MPC_FurinaHUD",
+[]
+],
+[
+"ParameterName",
+"Reloading",
+[]
+],
+[
+"ParameterValue",
+"0.0",
+[
+"FHUD_ReloadF.ReturnValue"
+]
+]
+]
+},
+"FHUD_ReloadElapsed": {
+"cls": "K2Node_CallFunction",
+"fn": "",
+"exec": [],
+"in": [
+[
+"Object",
+"",
+[
+"M4HUD_Cast.AsThird Person Character BP"
+]
+],
+[
+"FunctionName",
+"FurinaFinishReload",
+[]
+]
+]
+},
+"FHUD_ReloadDiv": {
+"cls": "K2Node_PromotableOperator",
+"fn": "",
+"exec": [],
+"in": [
+[
+"A",
+"",
+[
+"FHUD_ReloadElapsed.ReturnValue"
+]
+],
+[
+"B",
+"",
+[
+"FHUD2_Max.ReturnValue"
+]
+]
+]
+},
+"FHUD_ReloadClamp": {
+"cls": "K2Node_CallFunction",
+"fn": "",
+"exec": [],
+"in": [
+[
+"Value",
+"0.0",
+[
+"FHUD_ReloadDiv.ReturnValue"
+]
+],
+[
+"Min",
+"0.0",
+[]
+],
+[
+"Max",
+"1.0",
+[]
+]
+]
+},
+"FHUD_SetReloadP": {
+"cls": "K2Node_CallMaterialParameterCollectionFunction",
+"fn": "",
+"exec": [
+[
+"then",
+[
+"P2H_SetWeapon_88c856.execute"
+]
+]
+],
+"in": [
+[
+"Collection",
+"/Game/Furina/UI/MPC_FurinaHUD.MPC_FurinaHUD",
+[]
+],
+[
+"ParameterName",
+"ReloadP",
+[]
+],
+[
+"ParameterValue",
+"0.0",
+[
+"FHUD_ReloadClamp.ReturnValue"
+]
+]
+]
+},
+"FM_HudGetSemi": {
+"cls": "K2Node_VariableGet",
+"fn": "",
+"exec": [],
+"in": [
+[
+"self",
+"",
+[
+"M4HUD_Cast.AsThird Person Character BP"
+]
+]
+]
+},
+"FM_HudIsSemi": {
+"cls": "K2Node_CallFunction",
+"fn": "",
+"exec": [],
+"in": [
+[
+"self",
+"",
+[
+"FM_HudGetSemi.FurinaSemi"
+]
+]
+]
+},
+"FM_HudText": {
+"cls": "K2Node_CallFunction",
+"fn": "",
+"exec": [],
+"in": [
+[
+"A",
+"SEMI",
+[]
+],
+[
+"B",
+"AUTO",
+[]
+],
+[
+"bPickA",
+"false",
+[
+"P2H_Or_9cdb94.ReturnValue"
+]
+]
+]
+},
+"FM_DrawMode": {
+"cls": "K2Node_CallFunction",
+"fn": "",
+"exec": [
+[
+"then",
+[
+"LCH_HudDraw.execute"
+]
+]
+],
+"in": [
+[
+"Text",
+"",
+[
+"FM_HudText.ReturnValue"
+]
+],
+[
+"TextColor",
+"(R=0.8,G=0.96,B=1.0,A=1.0)",
+[]
+],
+[
+"ScreenX",
+"0.0",
+[
+"FM_HudX.ReturnValue"
+]
+],
+[
+"ScreenY",
+"0.0",
+[
+"K2Node_CallFunction_91.ReturnValue"
+]
+],
+[
+"Font",
+"/Game/3DPlatformerGameBundle/Fonts/Kenvector_Future_Font.Ken",
+[]
+],
+[
+"Scale",
+"1.000000",
+[
+"FM_HudScale.ReturnValue"
+]
+],
+[
+"bScalePosition",
+"false",
+[]
+]
+]
+},
+"FM_HudYOff": {
+"cls": "K2Node_PromotableOperator",
+"fn": "",
+"exec": [],
+"in": [
+[
+"A",
+"",
+[
+"TFPHUD_Height.ReturnValue"
+]
+],
+[
+"B",
+"",
+[
+"FM_HudYLit.ReturnValue"
+]
+]
+]
+},
+"FM_HudY": {
+"cls": "K2Node_PromotableOperator",
+"fn": "",
+"exec": [],
+"in": [
+[
+"A",
+"",
+[
+"TFPHUD_Y.ReturnValue"
+]
+],
+[
+"B",
+"",
+[
+"FM_HudYOff.ReturnValue"
+]
+]
+]
+},
+"K2Node_CallFunction_91": {
+"cls": "K2Node_CallFunction",
+"fn": "",
+"exec": [],
+"in": [
+[
+"InInt",
+"0",
+[
+"FM_HudY.ReturnValue"
+]
+]
+]
+},
+"FM_HudScale": {
+"cls": "K2Node_PromotableOperator",
+"fn": "",
+"exec": [],
+"in": [
+[
+"A",
+"",
+[
+"TFPHUD_FontScale.ReturnValue"
+]
+],
+[
+"B",
+"0.75",
+[]
+]
+]
+},
+"FM_HudXOff": {
+"cls": "K2Node_PromotableOperator",
+"fn": "",
+"exec": [],
+"in": [
+[
+"A",
+"",
+[
+"TFPHUD_Width.ReturnValue"
+]
+],
+[
+"B",
+"0.545",
+[]
+]
+]
+},
+"FM_HudX": {
+"cls": "K2Node_PromotableOperator",
+"fn": "",
+"exec": [],
+"in": [
+[
+"A",
+"",
+[
+"TFPHUD_X.ReturnValue"
+]
+],
+[
+"B",
+"",
+[
+"FM_HudXOff.ReturnValue"
+]
+]
+]
+},
+"FM_HudYLit": {
+"cls": "K2Node_CallFunction",
+"fn": "",
+"exec": [],
+"in": [
+[
+"Value",
+"0.64",
+[]
+]
+]
+},
+"P2H_GetPistol_7e7eec": {
+"cls": "K2Node_VariableGet",
+"fn": "",
+"exec": [],
+"in": [
+[
+"self",
+"",
+[
+"M4HUD_Cast.AsThird Person Character BP"
+]
+]
+]
+},
+"P2H_IsPistol_be3dd7": {
+"cls": "K2Node_CallFunction",
+"fn": "",
+"exec": [],
+"in": [
+[
+"self",
+"",
+[
+"P2H_GetPistol_7e7eec.FurinaPistolOn"
+]
+]
+]
+},
+"P2H_Name_fb9151": {
+"cls": "K2Node_CallFunction",
+"fn": "",
+"exec": [],
+"in": [
+[
+"A",
+"P220",
+[]
+],
+[
+"B",
+"M4A1",
+[]
+],
+[
+"bPickA",
+"false",
+[
+"P2H_IsPistol_be3dd7.ReturnValue"
+]
+]
+]
+},
+"P2H_Or_9cdb94": {
+"cls": "K2Node_CommutativeAssociativeBinaryOperator",
+"fn": "",
+"exec": [],
+"in": [
+[
+"A",
+"false",
+[
+"FM_HudIsSemi.ReturnValue"
+]
+],
+[
+"B",
+"false",
+[
+"P2H_IsPistol_be3dd7.ReturnValue"
+]
+]
+]
+},
+"P2H_SetWeapon_88c856": {
+"cls": "K2Node_CallMaterialParameterCollectionFunction",
+"fn": "",
+"exec": [
+[
+"then",
+[
+"P2H_SetMagSize_76ea36.execute"
+]
+]
+],
+"in": [
+[
+"Collection",
+"/Game/Furina/UI/MPC_FurinaHUD.MPC_FurinaHUD",
+[]
+],
+[
+"ParameterName",
+"Weapon",
+[]
+],
+[
+"ParameterValue",
+"0.0",
+[
+"P2H_SelWeapon_482e5d.ReturnValue"
+]
+]
+]
+},
+"P2H_SelWeapon_482e5d": {
+"cls": "K2Node_CallFunction",
+"fn": "",
+"exec": [],
+"in": [
+[
+"A",
+"0.0",
+[
+"P2H_Lit_1b6607.ReturnValue"
+]
+],
+[
+"B",
+"0.0",
+[
+"P2H_Lit_c62a02.ReturnValue"
+]
+],
+[
+"bPickA",
+"false",
+[
+"P2H_IsPistol_be3dd7.ReturnValue"
+]
+]
+]
+},
+"P2H_Lit_1b6607": {
+"cls": "K2Node_CallFunction",
+"fn": "",
+"exec": [],
+"in": [
+[
+"Value",
+"1.0",
+[]
+]
+]
+},
+"P2H_Lit_c62a02": {
+"cls": "K2Node_CallFunction",
+"fn": "",
+"exec": [],
+"in": [
+[
+"Value",
+"0.0",
+[]
+]
+]
+},
+"P2H_SetMagSize_76ea36": {
+"cls": "K2Node_CallMaterialParameterCollectionFunction",
+"fn": "",
+"exec": [
+[
+"then",
+[
+"TFPHUD_Frame.execute"
+]
+]
+],
+"in": [
+[
+"Collection",
+"/Game/Furina/UI/MPC_FurinaHUD.MPC_FurinaHUD",
+[]
+],
+[
+"ParameterName",
+"MagSize",
+[]
+],
+[
+"ParameterValue",
+"0.0",
+[
+"P2H_SelMagSize_6acea3.ReturnValue"
+]
+]
+]
+},
+"P2H_SelMagSize_6acea3": {
+"cls": "K2Node_CallFunction",
+"fn": "",
+"exec": [],
+"in": [
+[
+"A",
+"0.0",
+[
+"P2H_Lit_81c712.ReturnValue"
+]
+],
+[
+"B",
+"0.0",
+[
+"P2H_Lit_29f19a.ReturnValue"
+]
+],
+[
+"bPickA",
+"false",
+[
+"P2H_IsPistol_be3dd7.ReturnValue"
+]
+]
+]
+},
+"P2H_Lit_81c712": {
+"cls": "K2Node_CallFunction",
+"fn": "",
+"exec": [],
+"in": [
+[
+"Value",
+"8.0",
+[]
+]
+]
+},
+"P2H_Lit_29f19a": {
+"cls": "K2Node_CallFunction",
+"fn": "",
+"exec": [],
+"in": [
+[
+"Value",
+"20.0",
+[]
+]
+]
+},
+"FHUD2_Remaining": {
+"cls": "K2Node_CallFunction",
+"fn": "",
+"exec": [],
+"in": [
+[
+"Object",
+"",
+[
+"M4HUD_Cast.AsThird Person Character BP"
+]
+],
+[
+"FunctionName",
+"FurinaFinishReload",
+[]
+]
+]
+},
+"FHUD2_Sum": {
+"cls": "K2Node_PromotableOperator",
+"fn": "",
+"exec": [],
+"in": [
+[
+"A",
+"",
+[
+"FHUD_ReloadElapsed.ReturnValue"
+]
+],
+[
+"B",
+"",
+[
+"FHUD2_Remaining.ReturnValue"
+]
+]
+]
+},
+"FHUD2_Max": {
+"cls": "K2Node_CommutativeAssociativeBinaryOperator",
+"fn": "",
+"exec": [],
+"in": [
+[
+"A",
+"0.0",
+[
+"FHUD2_Sum.ReturnValue"
+]
+],
+[
+"B",
+"0.01",
+[]
+]
+]
+},
+"K2Node_VariableGet_0": {
+"cls": "K2Node_VariableGet",
+"fn": "",
+"exec": [],
+"in": [
+[
+"self",
+"",
+[
+"M4HUD_Cast.AsThird Person Character BP"
+]
+]
+]
+},
+"HistoricalView_DrawOnlyLegacy": {
+"cls": "K2Node_IfThenElse",
+"fn": "",
+"exec": [
+[
+"then",
+[
+"ScopeView_HasGlass.execute"
+]
+],
+[
+"else",
+[
+"FHUD_SetAmmo.execute"
+]
+]
+],
+"in": [
+[
+"Condition",
+"true",
+[]
+]
+]
+},
+"K2Node_VariableGet_1": {
+"cls": "K2Node_VariableGet",
+"fn": "",
+"exec": [],
+"in": [
+[
+"self",
+"",
+[
+"M4HUD_Cast.AsThird Person Character BP"
+]
+]
+]
+},
+"K2Node_VariableGet_2": {
+"cls": "K2Node_VariableGet",
+"fn": "",
+"exec": [],
+"in": [
+[
+"self",
+"",
+[
+"M4HUD_Cast.AsThird Person Character BP"
+]
+]
+]
+},
+"ScopeView_HasGlass": {
+"cls": "K2Node_IfThenElse",
+"fn": "",
+"exec": [],
+"in": [
+[
+"Condition",
+"true",
+[
+"K2Node_VariableGet_1.FurinaScopeActive"
+]
+]
+]
+},
+"K2Node_CallFunction_111": {
+"cls": "K2Node_CallFunction",
+"fn": "",
+"exec": [],
+"in": [
+[
+"InInt",
+"0",
+[
+"K2Node_FPAH_Draw.SizeX"
+]
+]
+]
+},
+"K2Node_CallFunction_112": {
+"cls": "K2Node_CallFunction",
+"fn": "",
+"exec": [],
+"in": [
+[
+"InInt",
+"0",
+[
+"K2Node_FPAH_Draw.SizeY"
+]
+]
+]
+},
+"K2Node_CallFunction_293": {
+"cls": "K2Node_CallFunction",
+"fn": "",
+"exec": [],
+"in": [
+[
+"InInt",
+"0",
+[
+"K2Node_FPAH_Draw.SizeX"
+]
+]
+]
+},
+"K2Node_CallFunction_294": {
+"cls": "K2Node_CallFunction",
+"fn": "",
+"exec": [],
+"in": [
+[
+"InInt",
+"0",
+[
+"K2Node_FPAH_Draw.SizeY"
+]
+]
+]
+},
+"K2Node_CallFunction_327": {
+"cls": "K2Node_CallFunction",
+"fn": "",
+"exec": [],
+"in": [
+[
+"InInt",
+"0",
+[
+"K2Node_FPAH_Draw.SizeX"
+]
+]
+]
+},
+"K2Node_CallFunction_328": {
+"cls": "K2Node_CallFunction",
+"fn": "",
+"exec": [],
+"in": [
+[
+"InInt",
+"0",
+[
+"K2Node_FPAH_Draw.SizeY"
+]
+]
+]
+},
+"ScopeView_SquareSize": {
+"cls": "K2Node_CommutativeAssociativeBinaryOperator",
+"fn": "",
+"exec": [],
+"in": [
+[
+"A",
+"0.0",
+[
+"K2Node_CallFunction_361.ReturnValue"
+]
+],
+[
+"B",
+"0.0",
+[
+"K2Node_CallFunction_362.ReturnValue"
+]
+]
+]
+},
+"K2Node_CallFunction_361": {
+"cls": "K2Node_CallFunction",
+"fn": "",
+"exec": [],
+"in": [
+[
+"InInt",
+"0",
+[
+"K2Node_FPAH_Draw.SizeX"
+]
+]
+]
+},
+"K2Node_CallFunction_362": {
+"cls": "K2Node_CallFunction",
+"fn": "",
+"exec": [],
+"in": [
+[
+"InInt",
+"0",
+[
+"K2Node_FPAH_Draw.SizeY"
+]
+]
+]
+},
+"ScopeView_HorizontalRemainder": {
+"cls": "K2Node_PromotableOperator",
+"fn": "",
+"exec": [],
+"in": [
+[
+"A",
+"",
+[
+"K2Node_FPAH_Draw.SizeX"
+]
+],
+[
+"B",
+"",
+[
+"ScopeView_SquareSize.ReturnValue"
+]
+]
+]
+},
+"ScopeView_SquareX": {
+"cls": "K2Node_PromotableOperator",
+"fn": "",
+"exec": [],
+"in": [
+[
+"A",
+"",
+[
+"ScopeView_HorizontalRemainder.ReturnValue"
+]
+],
+[
+"B",
+"0.5",
+[]
+]
+]
+},
+"ScopeView_VerticalRemainder": {
+"cls": "K2Node_PromotableOperator",
+"fn": "",
+"exec": [],
+"in": [
+[
+"A",
+"",
+[
+"K2Node_FPAH_Draw.SizeY"
+]
+],
+[
+"B",
+"",
+[
+"ScopeView_SquareSize.ReturnValue"
+]
+]
+]
+},
+"ScopeView_SquareY": {
+"cls": "K2Node_PromotableOperator",
+"fn": "",
+"exec": [],
+"in": [
+[
+"A",
+"",
+[
+"ScopeView_VerticalRemainder.ReturnValue"
+]
+],
+[
+"B",
+"0.5",
+[]
+]
+]
+},
+"ScopeView_SquareRight": {
+"cls": "K2Node_PromotableOperator",
+"fn": "",
+"exec": [],
+"in": [
+[
+"A",
+"",
+[
+"ScopeView_SquareX.ReturnValue"
+]
+],
+[
+"B",
+"",
+[
+"ScopeView_SquareSize.ReturnValue"
+]
+]
+]
+},
+"ScopeView_SquareBottom": {
+"cls": "K2Node_PromotableOperator",
+"fn": "",
+"exec": [],
+"in": [
+[
+"A",
+"",
+[
+"ScopeView_SquareY.ReturnValue"
+]
+],
+[
+"B",
+"",
+[
+"ScopeView_SquareSize.ReturnValue"
+]
+]
+]
+},
+"ScopeView_MatteTint": {
+"cls": "K2Node_CallFunction",
+"fn": "",
+"exec": [],
+"in": [
+[
+"R",
+"0.002",
+[]
+],
+[
+"G",
+"0.002",
+[]
+],
+[
+"B",
+"0.003",
+[]
+],
+[
+"A",
+"1.000000",
+[]
+]
+]
+},
+"ScopeView_ReticleTint": {
+"cls": "K2Node_CallFunction",
+"fn": "",
+"exec": [],
+"in": [
+[
+"R",
+"1.0",
+[]
+],
+[
+"G",
+"1.0",
+[]
+],
+[
+"B",
+"1.0",
+[]
+],
+[
+"A",
+"1.000000",
+[]
+]
+]
+},
+"ScopeView_MaskLeft": {
+"cls": "K2Node_CallFunction",
+"fn": "",
+"exec": [
+[
+"then",
+[
+"ScopeView_MaskRight.execute"
+]
+]
+],
+"in": [
+[
+"RectColor",
+"(R=0,G=0,B=0,A=1)",
+[
+"ScopeView_MatteTint.ReturnValue"
+]
+],
+[
+"ScreenX",
+"0.0",
+[]
+],
+[
+"ScreenY",
+"0.0",
+[]
+],
+[
+"ScreenW",
+"0.0",
+[
+"ScopeView_SquareX.ReturnValue"
+]
+],
+[
+"ScreenH",
+"0.0",
+[
+"K2Node_CallFunction_363.ReturnValue"
+]
+]
+]
+},
+"K2Node_CallFunction_363": {
+"cls": "K2Node_CallFunction",
+"fn": "",
+"exec": [],
+"in": [
+[
+"InInt",
+"0",
+[
+"K2Node_FPAH_Draw.SizeY"
+]
+]
+]
+},
+"ScopeView_MaskRight": {
+"cls": "K2Node_CallFunction",
+"fn": "",
+"exec": [
+[
+"then",
+[
+"ScopeView_MaskTop.execute"
+]
+]
+],
+"in": [
+[
+"RectColor",
+"(R=0,G=0,B=0,A=1)",
+[
+"ScopeView_MatteTint.ReturnValue"
+]
+],
+[
+"ScreenX",
+"0.0",
+[
+"ScopeView_SquareRight.ReturnValue"
+]
+],
+[
+"ScreenY",
+"0.0",
+[]
+],
+[
+"ScreenW",
+"0.0",
+[
+"ScopeView_SquareX.ReturnValue"
+]
+],
+[
+"ScreenH",
+"0.0",
+[
+"K2Node_CallFunction_364.ReturnValue"
+]
+]
+]
+},
+"K2Node_CallFunction_364": {
+"cls": "K2Node_CallFunction",
+"fn": "",
+"exec": [],
+"in": [
+[
+"InInt",
+"0",
+[
+"K2Node_FPAH_Draw.SizeY"
+]
+]
+]
+},
+"ScopeView_MaskTop": {
+"cls": "K2Node_CallFunction",
+"fn": "",
+"exec": [
+[
+"then",
+[
+"ScopeView_MaskBottom.execute"
+]
+]
+],
+"in": [
+[
+"RectColor",
+"(R=0,G=0,B=0,A=1)",
+[
+"ScopeView_MatteTint.ReturnValue"
+]
+],
+[
+"ScreenX",
+"0.0",
+[
+"ScopeView_SquareX.ReturnValue"
+]
+],
+[
+"ScreenY",
+"0.0",
+[]
+],
+[
+"ScreenW",
+"0.0",
+[
+"ScopeView_SquareSize.ReturnValue"
+]
+],
+[
+"ScreenH",
+"0.0",
+[
+"ScopeView_SquareY.ReturnValue"
+]
+]
+]
+},
+"ScopeView_MaskBottom": {
+"cls": "K2Node_CallFunction",
+"fn": "",
+"exec": [
+[
+"then",
+[
+"ScopeView_Reticle_ZF39.execute"
+]
+]
+],
+"in": [
+[
+"RectColor",
+"(R=0,G=0,B=0,A=1)",
+[
+"ScopeView_MatteTint.ReturnValue"
+]
+],
+[
+"ScreenX",
+"0.0",
+[
+"ScopeView_SquareX.ReturnValue"
+]
+],
+[
+"ScreenY",
+"0.0",
+[
+"ScopeView_SquareBottom.ReturnValue"
+]
+],
+[
+"ScreenW",
+"0.0",
+[
+"ScopeView_SquareSize.ReturnValue"
+]
+],
+[
+"ScreenH",
+"0.0",
+[
+"ScopeView_SquareY.ReturnValue"
+]
+]
+]
+},
+"K2Node_VariableGet_3": {
+"cls": "K2Node_VariableGet",
+"fn": "",
+"exec": [],
+"in": [
+[
+"self",
+"",
+[
+"M4HUD_Cast.AsThird Person Character BP"
+]
+]
+]
+},
+"ScopeView_SelectReticle_ZF39": {
+"cls": "K2Node_CallFunction",
+"fn": "",
+"exec": [],
+"in": [
+[
+"A",
+"",
+[
+"K2Node_VariableGet_3.FurinaPrimaryKey"
+]
+],
+[
+"B",
+"kar98k_zf39",
+[]
+]
+]
+},
+"ScopeView_Reticle_ZF39": {
+"cls": "K2Node_IfThenElse",
+"fn": "",
+"exec": [
+[
+"then",
+[
+"ScopeView_DrawReticle_ZF39.execute"
+]
+],
+[
+"else",
+[
+"ScopeView_Reticle_ZF41.execute"
+]
+]
+],
+"in": [
+[
+"Condition",
+"true",
+[
+"ScopeView_SelectReticle_ZF39.ReturnValue"
+]
+]
+]
+},
+"ScopeView_DrawReticle_ZF39": {
+"cls": "K2Node_CallFunction",
+"fn": "",
+"exec": [],
+"in": [
+[
+"Texture",
+"/Game/Furina/FPVM/T_FPVM_View_ZF39.T_FPVM_View_ZF39",
+[]
+],
+[
+"ScreenX",
+"0.0",
+[
+"ScopeView_SquareX.ReturnValue"
+]
+],
+[
+"ScreenY",
+"0.0",
+[
+"ScopeView_SquareY.ReturnValue"
+]
+],
+[
+"ScreenW",
+"0.0",
+[
+"ScopeView_SquareSize.ReturnValue"
+]
+],
+[
+"ScreenH",
+"0.0",
+[
+"ScopeView_SquareSize.ReturnValue"
+]
+],
+[
+"TextureU",
+"0.0",
+[]
+],
+[
+"TextureV",
+"0.0",
+[]
+],
+[
+"TextureUWidth",
+"1.0",
+[]
+],
+[
+"TextureVHeight",
+"1.0",
+[]
+],
+[
+"TintColor",
+"(R=1.000000,G=1.000000,B=1.000000,A=1.000000)",
+[
+"ScopeView_ReticleTint.ReturnValue"
+]
+],
+[
+"BlendMode",
+"BLEND_Translucent",
+[]
+],
+[
+"Scale",
+"1.000000",
+[]
+],
+[
+"bScalePosition",
+"false",
+[]
+],
+[
+"Rotation",
+"0.000000",
+[]
+]
+]
+},
+"ScopeView_SelectReticle_ZF41": {
+"cls": "K2Node_CallFunction",
+"fn": "",
+"exec": [],
+"in": [
+[
+"A",
+"",
+[
+"K2Node_VariableGet_3.FurinaPrimaryKey"
+]
+],
+[
+"B",
+"kar98k_zf41",
+[]
+]
+]
+},
+"ScopeView_Reticle_ZF41": {
+"cls": "K2Node_IfThenElse",
+"fn": "",
+"exec": [
+[
+"then",
+[
+"ScopeView_DrawReticle_ZF41.execute"
+]
+],
+[
+"else",
+[
+"ScopeView_Reticle_ZF4.execute"
+]
+]
+],
+"in": [
+[
+"Condition",
+"true",
+[
+"ScopeView_SelectReticle_ZF41.ReturnValue"
+]
+]
+]
+},
+"ScopeView_DrawReticle_ZF41": {
+"cls": "K2Node_CallFunction",
+"fn": "",
+"exec": [],
+"in": [
+[
+"Texture",
+"/Game/Furina/FPVM/T_FPVM_View_ZF41.T_FPVM_View_ZF41",
+[]
+],
+[
+"ScreenX",
+"0.0",
+[
+"ScopeView_SquareX.ReturnValue"
+]
+],
+[
+"ScreenY",
+"0.0",
+[
+"ScopeView_SquareY.ReturnValue"
+]
+],
+[
+"ScreenW",
+"0.0",
+[
+"ScopeView_SquareSize.ReturnValue"
+]
+],
+[
+"ScreenH",
+"0.0",
+[
+"ScopeView_SquareSize.ReturnValue"
+]
+],
+[
+"TextureU",
+"0.0",
+[]
+],
+[
+"TextureV",
+"0.0",
+[]
+],
+[
+"TextureUWidth",
+"1.0",
+[]
+],
+[
+"TextureVHeight",
+"1.0",
+[]
+],
+[
+"TintColor",
+"(R=1.000000,G=1.000000,B=1.000000,A=1.000000)",
+[
+"ScopeView_ReticleTint.ReturnValue"
+]
+],
+[
+"BlendMode",
+"BLEND_Translucent",
+[]
+],
+[
+"Scale",
+"1.000000",
+[]
+],
+[
+"bScalePosition",
+"false",
+[]
+],
+[
+"Rotation",
+"0.000000",
+[]
+]
+]
+},
+"ScopeView_SelectReticle_ZF4": {
+"cls": "K2Node_CallFunction",
+"fn": "",
+"exec": [],
+"in": [
+[
+"A",
+"",
+[
+"K2Node_VariableGet_3.FurinaPrimaryKey"
+]
+],
+[
+"B",
+"g43_zf4",
+[]
+]
+]
+},
+"ScopeView_Reticle_ZF4": {
+"cls": "K2Node_IfThenElse",
+"fn": "",
+"exec": [
+[
+"then",
+[
+"ScopeView_DrawReticle_ZF4.execute"
+]
+]
+],
+"in": [
+[
+"Condition",
+"true",
+[
+"ScopeView_SelectReticle_ZF4.ReturnValue"
+]
+]
+]
+},
+"ScopeView_DrawReticle_ZF4": {
+"cls": "K2Node_CallFunction",
+"fn": "",
+"exec": [],
+"in": [
+[
+"Texture",
+"/Game/Furina/FPVM/T_FPVM_View_ZF4.T_FPVM_View_ZF4",
+[]
+],
+[
+"ScreenX",
+"0.0",
+[
+"ScopeView_SquareX.ReturnValue"
+]
+],
+[
+"ScreenY",
+"0.0",
+[
+"ScopeView_SquareY.ReturnValue"
+]
+],
+[
+"ScreenW",
+"0.0",
+[
+"ScopeView_SquareSize.ReturnValue"
+]
+],
+[
+"ScreenH",
+"0.0",
+[
+"ScopeView_SquareSize.ReturnValue"
+]
+],
+[
+"TextureU",
+"0.0",
+[]
+],
+[
+"TextureV",
+"0.0",
+[]
+],
+[
+"TextureUWidth",
+"1.0",
+[]
+],
+[
+"TextureVHeight",
+"1.0",
+[]
+],
+[
+"TintColor",
+"(R=1.000000,G=1.000000,B=1.000000,A=1.000000)",
+[
+"ScopeView_ReticleTint.ReturnValue"
+]
+],
+[
+"BlendMode",
+"BLEND_Translucent",
+[]
+],
+[
+"Scale",
+"1.000000",
+[]
+],
+[
+"bScalePosition",
+"false",
+[]
+],
+[
+"Rotation",
+"0.000000",
+[]
+]
+]
+},
+"K2Node_VariableGet_4": {
+"cls": "K2Node_VariableGet",
+"fn": "",
+"exec": [],
+"in": [
+[
+"self",
+"",
+[
+"M4HUD_Cast.AsThird Person Character BP"
+]
+]
+]
+},
+"LCH_HudK0": {
+"cls": "K2Node_CommutativeAssociativeBinaryOperator",
+"fn": "",
+"exec": [],
+"in": [
+[
+"A",
+"",
+[
+"K2Node_VariableGet_4.FurinaGameWeaponId"
+]
+],
+[
+"B",
+"_",
+[]
+]
+]
+},
+"K2Node_VariableGet_5": {
+"cls": "K2Node_VariableGet",
+"fn": "",
+"exec": [],
+"in": [
+[
+"self",
+"",
+[
+"M4HUD_Cast.AsThird Person Character BP"
+]
+]
+]
+},
+"LCH_HudIdx": {
+"cls": "K2Node_CallFunction",
+"fn": "",
+"exec": [],
+"in": [
+[
+"InInt",
+"0",
+[
+"K2Node_VariableGet_5.FurinaZeroIdx"
+]
+]
+]
+},
+"LCH_HudK1": {
+"cls": "K2Node_CommutativeAssociativeBinaryOperator",
+"fn": "",
+"exec": [],
+"in": [
+[
+"A",
+"",
+[
+"LCH_HudK0.ReturnValue"
+]
+],
+[
+"B",
+"",
+[
+"LCH_HudIdx.ReturnValue"
+]
+]
+]
+},
+"K2Node_VariableGet_6": {
+"cls": "K2Node_VariableGet",
+"fn": "",
+"exec": [],
+"in": [
+[
+"self",
+"",
+[
+"M4HUD_Cast.AsThird Person Character BP"
+]
+]
+]
+},
+"LCH_HudFind": {
+"cls": "K2Node_CallFunction",
+"fn": "",
+"exec": [],
+"in": [
+[
+"TargetMap",
+"",
+[
+"K2Node_VariableGet_6.FurinaZeroInfo"
+]
+],
+[
+"Key",
+"",
+[
+"LCH_HudK1.ReturnValue"
+]
+]
+]
+},
+"LCH_HudBreak": {
+"cls": "K2Node_CallFunction",
+"fn": "",
+"exec": [],
+"in": [
+[
+"InVec",
+"0, 0, 0",
+[
+"LCH_HudFind.Value"
+]
+]
+]
+},
+"LCH_HudM": {
+"cls": "K2Node_CallFunction",
+"fn": "",
+"exec": [],
+"in": [
+[
+"A",
+"0.0",
+[
+"LCH_HudBreak.Y"
+]
+]
+]
+},
+"LCH_HudMs": {
+"cls": "K2Node_CallFunction",
+"fn": "",
+"exec": [],
+"in": [
+[
+"InInt",
+"0",
+[
+"LCH_HudM.ReturnValue"
+]
+]
+]
+},
+"LCH_HudS1": {
+"cls": "K2Node_CommutativeAssociativeBinaryOperator",
+"fn": "",
+"exec": [],
+"in": [
+[
+"A",
+"ZERO ",
+[]
+],
+[
+"B",
+"",
+[
+"LCH_HudMs.ReturnValue"
+]
+]
+]
+},
+"LCH_HudS2": {
+"cls": "K2Node_CommutativeAssociativeBinaryOperator",
+"fn": "",
+"exec": [],
+"in": [
+[
+"A",
+"",
+[
+"LCH_HudS1.ReturnValue"
+]
+],
+[
+"B",
+"m",
+[]
+]
+]
+},
+"LCH_HudText": {
+"cls": "K2Node_CallFunction",
+"fn": "",
+"exec": [],
+"in": [
+[
+"A",
+"",
+[
+"LCH_HudS2.ReturnValue"
+]
+],
+[
+"bPickA",
+"false",
+[
+"LCH_HudFind.ReturnValue"
+]
+]
+]
+},
+"LCH_HudDraw": {
+"cls": "K2Node_CallFunction",
+"fn": "",
+"exec": [
+[
+"then",
+[
+"K2Node_FPAH_IsAds.execute"
+]
+]
+],
+"in": [
+[
+"Text",
+"",
+[
+"LCH_HudText.ReturnValue"
+]
+],
+[
+"TextColor",
+"(R=0.8,G=0.96,B=1.0,A=1.0)",
+[]
+],
+[
+"ScreenX",
+"0.0",
+[
+"FM_HudX.ReturnValue"
+]
+],
+[
+"ScreenY",
+"0.0",
+[
+"LCH_HudY.ReturnValue"
+]
+],
+[
+"Font",
+"/Game/3DPlatformerGameBundle/Fonts/Kenvector_Future_Font.Ken",
+[]
+],
+[
+"Scale",
+"1.000000",
+[
+"FM_HudScale.ReturnValue"
+]
+],
+[
+"bScalePosition",
+"false",
+[]
+]
+]
+},
+"LCH_HudYOff": {
+"cls": "K2Node_PromotableOperator",
+"fn": "",
+"exec": [],
+"in": [
+[
+"A",
+"",
+[
+"TFPHUD_Height.ReturnValue"
+]
+]
+]
+},
+"LCH_HudY": {
+"cls": "K2Node_PromotableOperator",
+"fn": "",
+"exec": [],
+"in": [
+[
+"A",
+"",
+[
+"K2Node_CallFunction_91.ReturnValue"
+]
+],
+[
+"B",
+"",
+[
+"LCH_HudYOff.ReturnValue"
+]
+]
+]
+}
+}

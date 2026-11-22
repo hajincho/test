@@ -15,6 +15,9 @@ if TAG == 'caseslow': KEYS = ['p38', 'p08', 'pp']
 elif TAG == 'psh': KEYS = ['p38', 'p08', 'pp']
 elif TAG == 'v3': KEYS = ['kar98k_zf39', 'kar98k_zf41', 'g43_zf4', 'p38', 'p08', 'pp']
 elif TAG == 'stance': KEYS = ['kar98k', 'g43', 'g43_zf4', 'mp40', 'mp38', 'stg44', 'p38']
+elif TAG == 'lchlive': KEYS = ['panzerfaust']   # 화면에 띄운 PIE 에서 실제 마우스 휠로 영점 확인(40초 동안 상태 기록)
+elif TAG == 'zero': KEYS = ['kar98k_zf39', 'g43_zf4', 'kar98k', 'mp40', 'p38']   # 영점 300/200/25 m 확인(쏜 순간 탄 방향)
+elif TAG == 'lch': KEYS = ['panzerfaust', 'panzerschreck']   # 대전차 화기(2026-11-21): 영점 휠·발사체·재장전
 elif TAG != 'all': KEYS = [k for k in KEYS if k in TAG.split('+')]   # 일부만 다시: 태그 'kar98k+kar98k_zf41'(ExecCmds 는 쉼표로 명령을 나눔)
 BOLT = 1.3   # 볼트액션은 사격 뒤 볼트 조작(1.2초)이 끝나야 재장전이 받아짐
 R = {'shots': [], 'events': []}; S = {'st': 'open', 't': 0, 'k': 0, 'i': 0, 'sub': 0}
@@ -41,6 +44,15 @@ if TAG == 'stance':   # 견착·재장전 구도 확인(2026-11-21)
              ('rl1', 'reload', 0.7), ('rl2', None, 0.35), ('rl3', None, 0.35), ('rl4', None, 0.5), ('rl_wait', 'wait_reload', 0.6)]
     PISTOL_ONLY = ()
 if TAG == 'smoketest': STEPS = STEPS0
+if TAG == 'lchlive':
+    STEPS = [('hip', 'key', 2.5), ('fpon', 'fp_on', 0.8), ('ads', 'ads_on', 1.0)] + [('w%02d' % i, None, 2.0) for i in range(25)]; PISTOL_ONLY = ()
+if TAG == 'zero':
+    STEPS = [('hip', 'key', 2.5), ('fpon', 'fp_on', 0.8), ('ads', 'ads_on', 1.5), ('afire', 'fire', 0.03), ('ads_off', 'aim_off', 1.6)]; PISTOL_ONLY = ()
+if TAG == 'lch':
+    STEPS = [('hip', 'key', 2.5), ('fpon', 'fp_on', 0.8), ('ads0', 'ads_on', 1.3), ('ads1', 'zero_up', 0.8), ('ads2', 'zero_up', 0.8), ('ads2b', 'zero_up', 0.5), ('ads1b', 'zero_down', 0.8),
+             ('afire', 'fire', 0.03), ('fly1', None, 0.12), ('fly2', None, 0.4), ('boom', None, 0.8), ('ads_off', 'aim_off', 0.8), ('empty', None, 0.5),
+             ('rl1', 'reload_now', 0.5), ('rl2', None, 0.9), ('rl3', None, 0.8), ('rl4', None, 0.8), ('rl_wait', 'wait_reload', 0.6), ('hfire', 'fire', 0.03), ('hfly', None, 0.3), ('hboom', None, 1.0)]
+    PISTOL_ONLY = ()
 def save(): json.dump(R, open(OUT, 'w', encoding='utf-8'), indent=1, default=str, ensure_ascii=False)
 def setexp(n): unreal.get_default_object(unreal.LyraDeveloperSettings).set_editor_property('experience_override', unreal.PrimaryAssetId(unreal.PrimaryAssetType('LyraExperienceDefinition'), n))
 LES = lambda: unreal.get_editor_subsystem(unreal.LevelEditorSubsystem)
@@ -81,6 +93,15 @@ def tick(dt):
                 if act == 'key': unreal.get_default_object(unreal.SystemLibrary).call_method('SetStringPropertyByName', (p, 'FurinaPrimaryKey', key))
                 elif act == 'fire':
                     a0 = p.get_editor_property('FurinaAmmo'); p.call_method('FurinaRifleShot'); R['events'].append([key, 'fire', a0, p.get_editor_property('FurinaAmmo')])
+                    try:   # 쏜 바로 그 순간의 탄(카메라 기준): 위치 cm, 방향 각(위 +, 오른쪽 +)
+                        cam = unreal.GameplayStatics.get_player_camera_manager(w, 0); ct = unreal.Transform(cam.get_camera_location(), cam.get_camera_rotation(), unreal.Vector(1, 1, 1)); bl = []
+                        for cp in ('/Game/Furina/FP/BP_FurinaBullet.BP_FurinaBullet_C', '/Game/Furina/P220/BP_P220Bullet.BP_P220Bullet_C', '/Game/Furina/FP/BP_FurinaPzfWarhead.BP_FurinaPzfWarhead_C', '/Game/Furina/FP/BP_FurinaPzsRocket.BP_FurinaPzsRocket_C'):
+                            for a_ in unreal.GameplayStatics.get_all_actors_of_class(w, unreal.load_class(None, cp)):
+                                l_ = unreal.MathLibrary.inverse_transform_location(ct, a_.get_actor_location()); v_ = unreal.MathLibrary.inverse_transform_direction(ct, a_.get_velocity())
+                                if l_.x < 300: bl.append([cp.rsplit('.', 1)[1][:-2], [round(l_.x, 2), round(l_.y, 2), round(l_.z, 2)], round(v_.length()),
+                                           round(unreal.MathLibrary.radians_to_degrees(unreal.MathLibrary.atan2(v_.z, v_.x)), 4), round(unreal.MathLibrary.radians_to_degrees(unreal.MathLibrary.atan2(v_.y, v_.x)), 4)])
+                        R['events'].append([key, 'shot_dir', p.get_editor_property('FurinaVMLastKey'), bool(p.get_editor_property('FurinaADS').is_active()), bl])
+                    except Exception as ex: R['events'].append([key, 'shot_dir_err', str(ex)[:200]])
                     cnt = {}
                     for cp in ('/Game/Furina/FX/BP_HistSmoke.BP_HistSmoke_C', '/Game/Furina/FX/BP_HistFlash.BP_HistFlash_C', '/Game/Furina/M4/BP_M4Flash.BP_M4Flash_C'):
                         try: cnt[cp.rsplit('.', 1)[1]] = len(unreal.GameplayStatics.get_all_actors_of_class(w, unreal.load_class(None, cp)))
@@ -93,6 +114,10 @@ def tick(dt):
                 elif act == 'wait_reload':   # 재장전이 끝날 때까지(최대 9초)
                     if p.get_editor_property('FurinaReloading') and now - S['rl0'] < 9.0: return
                     R['events'].append([key, 'reload_done', round(now - S['rl0'], 2), p.get_editor_property('FurinaAmmo')])
+                elif act in ('zero_up', 'zero_down'):   # 휠 입력 주입(Enhanced Input). 실패하면 기록만
+                    p.call_method('FurinaZeroUp' if act == 'zero_up' else 'FurinaZeroDown'); R['events'].append([key, act, p.get_editor_property('FurinaZeroIdx')])
+                elif act == 'fp_on': p.get_editor_property('FurinaFPWanted').set_active(True)
+                elif act == 'reload_now': p.call_method('FurinaRequestReload'); S['rl0'] = now
                 elif act == 'ads_on': p.get_editor_property('FurinaADS').set_active(True)
                 elif act == 'aim_off': p.get_editor_property('FurinaADS').set_active(False)
                 elif act == 'smoketest':   # 쏜 직후 생긴 연기 액터를 카메라 앞 120cm 로 옮기고 크게·오래
@@ -142,6 +167,17 @@ def tick(dt):
                                 cs.append([cp.rsplit('.', 1)[1][:-2], [round(l_.x, 1), round(l_.y, 1), round(l_.z, 1)], [round(v_.x), round(v_.y), round(v_.z)] if v_ else None])
                         st_['cases'] = cs
                     except Exception as ex: st_['case_err'] = str(ex)[:200]
+                    if TAG in ('lch', 'lchlive'):
+                        try:
+                            st_['zero_idx'] = p.get_editor_property('FurinaZeroIdx'); st_['ads_loc'] = str(p.get_editor_property('FurinaVMAdsLoc')); st_['ads_rot'] = str(p.get_editor_property('FurinaVMAdsRot'))
+                            cam = unreal.GameplayStatics.get_player_camera_manager(w, 0); ct = unreal.Transform(cam.get_camera_location(), cam.get_camera_rotation(), unreal.Vector(1, 1, 1)); pr = []
+                            for cp in ('/Game/Furina/FP/BP_FurinaPzfWarhead.BP_FurinaPzfWarhead_C', '/Game/Furina/FP/BP_FurinaPzsRocket.BP_FurinaPzsRocket_C'):
+                                for a_ in unreal.GameplayStatics.get_all_actors_of_class(w, unreal.load_class(None, cp)):
+                                    l_ = unreal.MathLibrary.inverse_transform_location(ct, a_.get_actor_location()); v_ = unreal.MathLibrary.inverse_transform_direction(ct, a_.get_velocity())
+                                    pr.append([cp.rsplit('.', 1)[1][:-2], [round(l_.x, 1), round(l_.y, 1), round(l_.z, 1)], [round(v_.x), round(v_.y), round(v_.z)],
+                                               round(unreal.MathLibrary.radians_to_degrees(unreal.MathLibrary.atan2(v_.z, max(v_.x, 1e-3))), 2)])
+                            st_['fov'] = round(cam.get_fov_angle(), 2); st_['proj'] = pr; st_['reloading'] = bool(p.get_editor_property('FurinaReloading')); st_['reserve'] = p.get_editor_property('FurinaReserve')
+                        except Exception as ex: st_['lch_err'] = str(ex)[:300]
                     R['shots'].append([key, name, st_]); save()
                 S['sub'] = 2; S['t'] = now + 0.15; return
             S['i'] += 1; S['sub'] = 0; S['t'] = now + 0.05

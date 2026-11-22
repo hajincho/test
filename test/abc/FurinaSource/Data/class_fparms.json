@@ -1,0 +1,114 @@
+{
+ "infantry": {
+  "key": "infantry",
+  "verts": 2675,
+  "moved": 2675,
+  "slots": [
+   "Mat14"
+  ],
+  "len_ratio": {
+   "Left arm": 1.075,
+   "Left elbow": 0.995,
+   "Right arm": 1.075,
+   "Right elbow": 0.995
+  },
+  "fbx": "FBX\\Classes\\FPArms_infantry.fbx"
+ },
+ "assault": {
+  "key": "assault",
+  "verts": 9042,
+  "moved": 9042,
+  "slots": [
+   "Mat01",
+   "Mat05",
+   "Mat11"
+  ],
+  "len_ratio": {
+   "Left arm": 0.977,
+   "Left elbow": 0.937,
+   "Right arm": 0.977,
+   "Right elbow": 0.937
+  },
+  "fbx": "FBX\\Classes\\FPArms_assault.fbx"
+ },
+ "officer": {
+  "key": "officer",
+  "verts": 2573,
+  "moved": 2573,
+  "slots": [
+   "Mat02",
+   "Mat05"
+  ],
+  "len_ratio": {
+   "Left arm": 0.975,
+   "Left elbow": 0.962,
+   "Right arm": 0.975,
+   "Right elbow": 0.962
+  },
+  "fbx": "FBX\\Classes\\FPArms_officer.fbx"
+ },
+ "antitank": {
+  "key": "antitank",
+  "verts": 2414,
+  "moved": 2414,
+  "slots": [
+   "Mat07"
+  ],
+  "len_ratio": {
+   "Left arm": 1.213,
+   "Left elbow": 1.098,
+   "Right arm": 1.213,
+   "Right elbow": 1.098
+  },
+  "fbx": "FBX\\Classes\\FPArms_antitank.fbx"
+ },
+ "heavy": {
+  "key": "heavy",
+  "verts": 3747,
+  "moved": 3747,
+  "slots": [
+   "Mat05",
+   "Mat08"
+  ],
+  "len_ratio": {
+   "Left arm": 0.998,
+   "Left elbow": 0.994,
+   "Right arm": 0.998,
+   "Right elbow": 0.994
+  },
+  "fbx": "FBX\\Classes\\FPArms_heavy.fbx"
+ },
+ "sniper": {
+  "key": "sniper",
+  "verts": 9108,
+  "moved": 9108,
+  "slots": [
+   "Mat03",
+   "Mat04"
+  ],
+  "len_ratio": {
+   "Left arm": 1.019,
+   "Left elbow": 1.008,
+   "Right arm": 1.019,
+   "Right elbow": 1.008
+  },
+  "fbx": "FBX\\Classes\\FPArms_sniper.fbx"
+ },
+ "armor": {
+  "key": "armor",
+  "verts": 3603,
+  "moved": 3603,
+  "slots": [
+   "Mat04",
+   "Mat07",
+   "Mat08"
+  ],
+  "len_ratio": {
+   "Left arm": 0.928,
+   "Left elbow": 0.966,
+   "Right arm": 0.928,
+   "Right elbow": 0.966
+  },
+  "fbx": "FBX\\Classes\\FPArms_armor.fbx"
+ }
+}

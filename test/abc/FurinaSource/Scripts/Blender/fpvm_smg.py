@@ -14,26 +14,21 @@ import fpvm_lib as L, fpvm_lib2 as L2
 A = sys.argv[sys.argv.index('--') + 1:]; WK = A[0]; STAGE = A[1] if len(A) > 1 else 'pose'; OPT = json.loads(A[2]) if len(A) > 2 else {}
 D = L.D; FPS = 30; KEY = WK.upper(); OUT = {'key': WK, 'stage': STAGE}
 # 무기별 수치(정리 후 원본 cm: 총구 -Y, 위 +Z, 총의 오른쪽 -X)
-SPEC = {
- 'mp40': dict(grip=(-0.84, 15.6, -4.0), xc=-0.34, bore_z=5.7, ch_box=((1.3, -9.0, 5.0), (3.5, -6.9, 7.0)), travel=9.0, rpm=500, cap=32, rear_y=0.0, front_y=(-40.0, -37.8), recv_end=13.5,
+SPEC = {   # 2026-11-22: 오른손 손잡이 높이를 2cm 쯤 올리고 손가락을 손잡이 축에 수직(앞쪽)으로(fR) -> 검지가 방아쇠에 닿음(예전 grip z MP40 -4.0 / MP38 -0.5 / StG44 0.0, fR (0.15,-0.45,-0.88))
+ 'mp40': dict(grip=(-0.84, 15.6, -2.0), fR=(0.15, -0.9, -0.45), hold_dz=5.5, xc=-0.34, bore_z=5.7, ch_box=((1.3, -9.0, 5.0), (3.5, -6.9, 7.0)), travel=9.0, rpm=500, cap=32, rear_y=0.0, front_y=(-40.0, -37.8), recv_end=13.5,
              mag_own=True, fire_len=60.0 / 500),
- 'mp38': dict(grip=(-0.75, 25.5, -0.5), xc=-0.75, bore_z=10.6, ch_box=((1.0, 1.3, 9.5), (3.9, 3.4, 11.6)), travel=9.0, rpm=500, cap=32, rear_y=10.0, front_y=(-31.6, -29.0), recv_end=24.0,
-             mag_mat='Magazine_Steel', mag_box=((-3.0, -7.0, -15.0), (1.2, 0.0, 10.6)), unfold=(-0.75, 27.0), hold_dz=1.8, fire_len=60.0 / 500),
- 'stg44': dict(grip=(0.22, 18.3, 0.0), xc=0.22, bore_z=10.44, ch_box=((0.8, 0.7, 12.1), (3.1, 2.1, 13.4)), travel=8.0, rpm=550, cap=30, rear_y=-3.0, front_y=(-47.1, -42.6), recv_end=19.0,
+ 'mp38': dict(grip=(-0.75, 25.5, 1.5), fR=(0.15, -0.9, -0.45), hold_dz=3.25, xc=-0.75, bore_z=10.6, ch_box=((1.0, 1.3, 9.5), (3.9, 3.4, 11.6)), travel=9.0, rpm=500, cap=32, rear_y=10.0, front_y=(-31.6, -29.0), recv_end=24.0,
+             mag_mat='Magazine_Steel', mag_box=((-3.0, -7.0, -15.0), (1.2, 0.0, 10.6)), unfold=(-0.75, 27.0), fire_len=60.0 / 500),
+ 'stg44': dict(grip=(0.22, 18.3, 2.0), fR=(0.15, -0.9, -0.45), xc=0.22, bore_z=10.44, ch_box=((0.8, 0.7, 12.1), (3.1, 2.1, 13.4)), travel=8.0, rpm=550, cap=30, rear_y=-3.0, front_y=(-47.1, -42.6), recv_end=19.0,
              mag_mat='Magazine', mag_zmax=0.0, hold='guard', fire_len=60.0 / 550),   # 정리본에서 어깨끈 제거·방향 통일 완료(de_stg44_fix.py)
 }[WK]
 CLAV = {'L': [-10.73, 9.89, -16.11], 'R': [-17.46, -9.78, -17.09]}; REACH = OPT.get('reach', 37.5)
 POLE = {'R': Vector((-0.10, -0.12, -0.18)), 'L': Vector((-0.08, 0.14, -0.20))}
 # ---- 팔
 arm, body, info = L.load_arms('a1', 0); OUT['arms'] = info; arm.name = 'Armature'
+CA = L.class_arm_objects(arm)   # 병과 캐릭터 7종 1인칭 팔(같은 팔 뼈대, 재질 CA<Key>_*): 내보낼 때 함께 선택
 OUT['clavicle_err_cm'] = L2.pose_clavicles(arm, CLAV); OUT['sleeves'] = L2.fold_sleeves(arm)
-bpy.ops.object.select_all(action='DESELECT'); bpy.context.view_layer.objects.active = body; body.select_set(True)
-if body.data.shape_keys: body.shape_key_clear()
-for mod in list(body.modifiers):
-    if mod.type == 'ARMATURE': bpy.ops.object.modifier_apply(modifier=mod.name)
-bpy.ops.object.select_all(action='DESELECT'); bpy.context.view_layer.objects.active = arm; arm.select_set(True)
-bpy.ops.object.mode_set(mode='POSE'); bpy.ops.pose.armature_apply(selected=False); bpy.ops.object.mode_set(mode='OBJECT')
-_m = body.modifiers.new('Armature', 'ARMATURE'); _m.object = arm
+L.bake_arms_rest(arm, [body] + CA)   # 푸리나 팔 + 병과 팔 모두 같은 휴식 자세로(2026-11-22)
 for _uv in list(body.data.uv_layers)[1:]: body.data.uv_layers.remove(_uv)
 # ---- 총(정리) + 부품 분리
 gun = L.load_weapon(WK)
@@ -114,12 +109,12 @@ front = [SPEC['xc'], float(cen[cen[:, 2].argmax(), 1]), float(cen[:, 2].max())];
 OUT['sight'] = {'front': front, 'rear': rear}
 # ---- 배치(2026-11-21 수정): 왼손 받침 자리(MP38/MP40 = 탄창 하우징, StG44 = 탄창 앞 총열 덮개)가 왼팔 길이(37.5cm) 안에 오도록 총을 앞뒤로 맞춤.
 #  이전엔 오른손 기준(손잡이 = 눈 앞 4cm)이라 왼손이 닿지 않아 하우징 뒤 좁은 틈을 위에서 잡았고 화면에 손이 안 보였음. 조준선은 눈 아래 5cm(허리 사격 자세).
-gx, gy, gz = SPEC['grip']; GUN_ROT = OPT.get('gun_rot', [2.5, 4.0, -3.0])
+gx, gy, gz = OPT.get('grip', SPEC['grip']); GUN_ROT = OPT.get('gun_rot', [2.5, 4.0, -3.0])
 _my = [v.co.y for v in mag.data.vertices]; my0, my1 = min(_my), max(_my); myc = 0.5 * (my0 + my1); OUT['mag_y'] = [round(my0, 2), round(my1, 2)]
 HOLD = SPEC.get('hold', 'housing')
 if HOLD == 'housing':
     band = P[(P[:, 1] >= my0 + 0.5) & (P[:, 1] <= my1 - 0.5) & (np.abs(P[:, 0] - SPEC['xc']) < 2.5)]
-    HB = float(band[:, 2].min()); HOLD_N = Vector((SPEC['xc'], myc, HB + SPEC.get('hold_dz', 3.0)))   # 하우징 아래쪽(MP38 하우징이 더 짧음); OUT['housing_bottom'] = round(HB, 2)
+    HB = float(band[:, 2].min()); HOLD_N = Vector((SPEC['xc'], myc, HB + OPT.get('hold_dz', SPEC.get('hold_dz', 3.0))))   # 하우징 아래쪽(MP38 하우징이 더 짧음); OUT['housing_bottom'] = round(HB, 2)
 else:
     HOLD_N = Vector((SPEC['xc'], my0 - SPEC.get('guard_ahead', 5.0), SPEC['bore_z'] - 3.0))
 sh = arm.matrix_world @ arm.pose.bones['Left arm'].head
@@ -142,10 +137,12 @@ def ray(bvh, o_native, d_native):
 ST = {}
 # 오른손: 권총손잡이 오른쪽 면, 손가락 앞-아래로 감쌈
 rc, rn = ray(bvh_gun, (gx - 10.0, gy, gz), (1, 0, 0)); assert rc is not None, 'grip ray miss'
-fR = dirn((0.15, -0.45, -0.88)); pR = (-rn).normalized()
+fR = dirn(tuple(OPT.get('fR', SPEC.get('fR', (0.15, -0.45, -0.88))))); pR = (-rn).normalized()
 OUT['R_grip'] = solve_place('R', rc, fR, pR); OUT['R_grip']['pole'] = L2.calib_pole(arm, E, 'R', E['T_R'].location.copy(), rc + POLE['R']); solve_place('R', rc, fR, pR)
 OUT.setdefault('seat', {})['R'] = L2.seat_hand(arm, body, E, 'R', ax['R'], bvh_gun)
-ST['R_GRIP'] = {'ref': 'gun', 'W': wrist_world('R'), 'fing': L2.grip_fingers(arm, 'R', fax['R'], bvh_gun, r_cm=0.55, limits={'Thumb': (20, 25, 25), 'default': (85, 100, 75)})}
+import fpvm_grip; _trig, OUT['trigger'] = fpvm_grip.trigger_target(arm, 'R', bvh_gun, G0)   # 검지 = 방아쇠울 안 방아쇠 앞면(2026-11-22)
+ST['R_GRIP'] = {'ref': 'gun', 'W': wrist_world('R'), 'fing': L2.grip_fingers(arm, 'R', fax['R'], bvh_gun, r_cm=0.55, limits={'Thumb': (20, 25, 25), 'default': (85, 100, 75)}, targets={'IndexFinger': (_trig[0], 1.0, _trig[1])} if _trig is not None else None)}
+OUT['R_grip_fingers'] = fpvm_grip.LAST.get('R')
 # 왼손 받침. MP38/MP40: 탄창 하우징을 왼쪽에서 감쌈(당시 교범: 탄창 자체를 쥐면 급탄 불량 -> 하우징을 쥘 것). StG44: 탄창 앞 총열 덮개 아래를 받침.
 sh = arm.matrix_world @ arm.pose.bones['Left arm'].head; plL = ax['L']['p_local']; flL = ax['L']['f_local']
 WRAP0 = {'Thumb': (25, 30, 25), 'IndexFinger': (45, 55, 40), 'MiddleFinger': (50, 60, 45), 'RingFinger': (55, 65, 45), 'LittleFinger': (55, 65, 45)}
@@ -161,7 +158,7 @@ if HOLD == 'housing':
     WL, OUT['L_hold'] = L2.search_hand(Hh, 'palm', hit, bvh_all, sh, reach_cm=REACH + 1.0, excl=(hit, 0.03),
                                       prefer=[(plL, dirn((-1, 0, 0)), 0.7), (flL, dirn((-0.2, -1.0, -0.5)), 0.4)])
     l_, r_, _ = WL.decompose(); E['T_L'].location = l_; E['T_L'].rotation_quaternion = r_; E['P_L'].location = l_ + POLE['L']; bpy.context.view_layer.update()
-    for _ in range(3):
+    for _ in range(12):   # IK 목표 보정 3번으론 손목이 1.5~2.5cm 덜 닿았음(판처슈렉, 2026-11-22)
         err = l_ - (arm.matrix_world @ arm.pose.bones['Left wrist'].head)
         if err.length < 2e-4: break
         E['T_L'].location = E['T_L'].location + err; bpy.context.view_layer.update()
@@ -174,9 +171,7 @@ else:
     OUT['seat']['L'] = L2.seat_hand(arm, body, E, 'L', ax['L'], bvh_gun)
 OUT['L_reach_cm'] = round(((arm.matrix_world @ arm.pose.bones['Left wrist'].head) - sh).length * 100, 1)
 ST['L_GRIP'] = {'ref': 'gun', 'W': wrist_world('L'), 'fing': L2.grip_fingers(arm, 'L', fax['L'], bvh_gun, r_cm=0.55, limits={'Thumb': (25, 30, 30), 'default': (85, 100, 75)})}
-if HOLD == 'guard':   # 총열 덮개 옆면에 닿아 둘째·셋째 마디가 펴진 채 멈춘 손가락을 덮개 위로 살짝 감기게
-    for f_ in ('IndexFinger', 'MiddleFinger', 'RingFinger', 'LittleFinger'):
-        b_ = L.fbones('L', f_); fg = ST['L_GRIP']['fing']; fg[b_[1]] = max(fg.get(b_[1], 0.0), 35.0); fg[b_[2]] = max(fg.get(b_[2], 0.0), 30.0)
+# (2026-11-22) 예전 '둘째·셋째 마디 최소 35/30°' 보정은 뺌: 피부 기준 풀이(fpvm_grip)가 덮개를 직접 감쌈
 shL = sh; shR = arm.matrix_world @ arm.pose.bones['Right arm'].head
 def fset(v, s): return {b: a for f, vals in v.items() for b, a in zip(L.fbones(s, f), vals)}
 PINCH = {'Thumb': (20, 30, 25), 'IndexFinger': (55, 65, 45), 'MiddleFinger': (70, 85, 60), 'RingFinger': (75, 90, 60), 'LittleFinger': (75, 90, 60)}
@@ -293,7 +288,7 @@ def apply_state(st):
         l, r, _ = W.decompose(); E['T_' + s].location = l; E['T_' + s].rotation_quaternion = r; E['P_' + s].location = l + POLE[s]
     bpy.context.view_layer.update()
     for s, W in (('R', Wr), ('L', Wl)):
-        for _ in range(3):
+        for _ in range(12):   # IK 목표 보정 3번으론 손목이 1.5~2.5cm 덜 닿았음(판처슈렉, 2026-11-22)
             err = W.translation - (arm.matrix_world @ PB['%s wrist' % L2.SIDE[s]].head)
             if err.length < 2e-4: break
             E['T_' + s].location = E['T_' + s].location + err; bpy.context.view_layer.update()
@@ -344,6 +339,7 @@ elif STAGE in ('anim', 'export', 'reload_export'):
             arm.animation_data.action = acts['Idle']
             bpy.ops.object.select_all(action='DESELECT')
             for o in (arm, body, gun, mag, ch): o.select_set(True)
+            for o in CA: o.select_set(True)   # 병과 캐릭터 7종 1인칭 팔
             bpy.context.view_layer.objects.active = arm
             bpy.ops.export_scene.fbx(filepath=D + r'\FBX\FPVM\SK_FPVM_%s.fbx' % KEY, use_selection=True, object_types={'ARMATURE', 'MESH'}, axis_forward='-Y', axis_up='Z', apply_unit_scale=True,
                                      add_leaf_bones=False, bake_anim=False, mesh_smooth_type='FACE', path_mode='STRIP', armature_nodetype='NULL', primary_bone_axis='Y', secondary_bone_axis='X')

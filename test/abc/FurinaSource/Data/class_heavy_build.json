@@ -1,0 +1,544 @@
+{
+ "key": "heavy",
+ "class": "중화기병",
+ "height_cm": 166.0,
+ "pmx": "FBX\\Classes\\source\\heavy\\诺艾尔.pmx",
+ "scale": 9.181199570077428,
+ "mmd_height_units": 18.080426063388586,
+ "excluded_materials": [],
+ "materials": [
+  {
+   "slot": "Mat00",
+   "name": "眼睛",
+   "texture": "Texture/头发.jpg",
+   "diffuse": [
+    0.753,
+    0.753,
+    0.753,
+    1.0
+   ]
+  },
+  {
+   "slot": "Mat01",
+   "name": "皮肤",
+   "texture": "Texture/衣服.jpg",
+   "diffuse": [
+    0.753,
+    0.753,
+    0.753,
+    1.0
+   ]
+  },
+  {
+   "slot": "Mat02",
+   "name": "眼白",
+   "texture": "Texture/脸.jpg",
+   "diffuse": [
+    0.753,
+    0.753,
+    0.753,
+    1.0
+   ]
+  },
+  {
+   "slot": "Mat03",
+   "name": "脸",
+   "texture": "Texture/脸.jpg",
+   "diffuse": [
+    0.753,
+    0.753,
+    0.753,
+    1.0
+   ]
+  },
+  {
+   "slot": "Mat04",
+   "name": "头发",
+   "texture": "Texture/头发.jpg",
+   "diffuse": [
+    0.753,
+    0.753,
+    0.753,
+    1.0
+   ]
+  },
+  {
+   "slot": "Mat05",
+   "name": "肩甲",
+   "texture": "Texture/头发.jpg",
+   "diffuse": [
+    0.753,
+    0.753,
+    0.753,
+    1.0
+   ]
+  },
+  {
+   "slot": "Mat06",
+   "name": "下半身",
+   "texture": "Texture/衣服.jpg",
+   "diffuse": [
+    0.753,
+    0.753,
+    0.753,
+    1.0
+   ]
+  },
+  {
+   "slot": "Mat07",
+   "name": "裙子",
+   "texture": "Texture/衣服.jpg",
+   "diffuse": [
+    0.753,
+    0.753,
+    0.753,
+    1.0
+   ]
+  },
+  {
+   "slot": "Mat08",
+   "name": "衣服",
+   "texture": "Texture/衣服.jpg",
+   "diffuse": [
+    0.753,
+    0.753,
+    0.753,
+    1.0
+   ]
+  },
+  {
+   "slot": "Mat09",
+   "name": "裙饰",
+   "texture": "Texture/衣服.jpg",
+   "diffuse": [
+    0.753,
+    0.753,
+    0.753,
+    1.0
+   ]
+  },
+  {
+   "slot": "Mat10",
+   "name": "表情",
+   "texture": "Texture/表情.png",
+   "diffuse": [
+    0.753,
+    0.753,
+    0.753,
+    1.0
+   ]
+  }
+ ],
+ "textures_dir": "FBX\\Classes\\source\\heavy",
+ "n_unmapped_bones": 171,
+ "unmapped_sample": {
+  "+ToothBone U A01": "Head",
+  "+ToothBone D A01": "Head",
+  "+SleeveS L C01": "Left arm",
+  "+HairS R B01": "Head",
+  "+HairS R B02": "Head",
+  "+HairS R B03": "Head",
+  "+HairS R D01": "Head",
+  "+HairB L A02": "Head",
+  "+HairB CB A02": "Head",
+  "+HairB R A02": "Head",
+  "+HairS L D01": "Head",
+  "+HairS R D02": "Head",
+  "+HairS L D02": "Head",
+  "左胸上2": "Chest",
+  "右胸上2": "Chest",
+  "q_4_5": "Hips",
+  "q_4_6": "Hips",
+  "q_5_6": "Hips",
+  "q_5_5": "Hips",
+  "q_6_3": "Hips",
+  "q_6_4": "Hips",
+  "q_7_3": "Hips",
+  "q_7_2": "Hips",
+  "q_6_2": "Hips",
+  "q_7_4": "Hips",
+  "q_10_1": "Hips",
+  "q_10_2": "Hips",
+  "q_9_1": "Hips",
+  "q_9_0": "Hips",
+  "q_9_2": "Hips",
+  "q_3_4": "Hips",
+  "q_3_5": "Hips",
+  "q_4_4": "Hips",
+  "q_4_3": "Hips",
+  "q_3_3": "Hips",
+  "q_9_4": "Hips",
+  "q_9_3": "Hips",
+  "q_11_3": "Hips",
+  "q_11_4": "Hips",
+  "q_10_3": "Hips"
+ },
+ "groups": [
+  "Chest",
+  "Eye_L",
+  "Eye_R",
+  "Head",
+  "Hips",
+  "IndexFinger1_L",
+  "IndexFinger1_R",
+  "IndexFinger2_L",
+  "IndexFinger2_R",
+  "IndexFinger3_L",
+  "IndexFinger3_R",
+  "Left ankle",
+  "Left arm",
+  "Left elbow",
+  "Left knee",
+  "Left leg",
+  "Left shoulder",
+  "Left toe",
+  "Left wrist",
+  "LittleFinger1_L",
+  "LittleFinger1_R",
+  "LittleFinger2_L",
+  "LittleFinger2_R",
+  "LittleFinger3_L",
+  "LittleFinger3_R",
+  "MiddleFinger1_L",
+  "MiddleFinger1_R",
+  "MiddleFinger2_L",
+  "MiddleFinger2_R",
+  "MiddleFinger3_L",
+  "MiddleFinger3_R",
+  "Neck",
+  "Right ankle",
+  "Right arm",
+  "Right elbow",
+  "Right knee",
+  "Right leg",
+  "Right shoulder",
+  "Right toe",
+  "Right wrist",
+  "RingFinger1_L",
+  "RingFinger1_R",
+  "RingFinger2_L",
+  "RingFinger2_R",
+  "RingFinger3_L",
+  "RingFinger3_R",
+  "Spine",
+  "Thumb0_L",
+  "Thumb0_R",
+  "Thumb1_L",
+  "Thumb1_R",
+  "Thumb2_L",
+  "Thumb2_R"
+ ],
+ "joints": {
+  "Hips": [
+   0.0,
+   -3.9,
+   94.39
+  ],
+  "Spine": [
+   0.0,
+   -5.91,
+   100.05
+  ],
+  "Chest": [
+   0.0,
+   -5.35,
+   111.94
+  ],
+  "Neck": [
+   0.0,
+   -0.03,
+   129.16
+  ],
+  "Head": [
+   0.0,
+   -1.19,
+   136.74
+  ],
+  "Left shoulder": [
+   1.69,
+   0.09,
+   126.64
+  ],
+  "Left arm": [
+   10.14,
+   0.52,
+   123.51
+  ],
+  "Left elbow": [
+   27.05,
+   0.97,
+   110.68
+  ],
+  "Left leg": [
+   7.76,
+   -3.9,
+   91.07
+  ],
+  "Left knee": [
+   6.18,
+   -3.76,
+   51.11
+  ],
+  "Left ankle": [
+   4.49,
+   1.28,
+   9.73
+  ],
+  "Left toe": [
+   5.31,
+   -3.27,
+   3.32
+  ],
+  "Thumb0_L": [
+   43.16,
+   -2.1,
+   97.07
+  ],
+  "Thumb1_L": [
+   44.81,
+   -3.7,
+   95.49
+  ],
+  "Thumb2_L": [
+   46.31,
+   -4.18,
+   94.17
+  ],
+  "IndexFinger1_L": [
+   47.43,
+   -1.71,
+   95.17
+  ],
+  "IndexFinger2_L": [
+   49.53,
+   -1.65,
+   93.77
+  ],
+  "IndexFinger3_L": [
+   51.24,
+   -1.57,
+   92.72
+  ],
+  "MiddleFinger1_L": [
+   47.43,
+   0.11,
+   95.28
+  ],
+  "MiddleFinger2_L": [
+   49.91,
+   0.04,
+   93.83
+  ],
+  "MiddleFinger3_L": [
+   51.9,
+   -0.02,
+   92.48
+  ],
+  "RingFinger1_L": [
+   47.09,
+   1.79,
+   95.23
+  ],
+  "RingFinger2_L": [
+   49.54,
+   1.57,
+   93.87
+  ],
+  "RingFinger3_L": [
+   51.44,
+   1.39,
+   92.8
+  ],
+  "LittleFinger1_L": [
+   46.28,
+   3.03,
+   95.34
+  ],
+  "LittleFinger2_L": [
+   48.23,
+   2.97,
+   94.25
+  ],
+  "LittleFinger3_L": [
+   49.51,
+   2.82,
+   93.47
+  ],
+  "Left wrist": [
+   41.67,
+   0.09,
+   99.54
+  ],
+  "Right shoulder": [
+   -1.69,
+   0.09,
+   126.64
+  ],
+  "Right arm": [
+   -10.14,
+   0.52,
+   123.51
+  ],
+  "Right elbow": [
+   -27.05,
+   0.97,
+   110.68
+  ],
+  "Right leg": [
+   -7.76,
+   -3.9,
+   91.07
+  ],
+  "Right knee": [
+   -6.18,
+   -3.76,
+   51.11
+  ],
+  "Right ankle": [
+   -4.49,
+   1.28,
+   9.73
+  ],
+  "Right toe": [
+   -5.31,
+   -3.27,
+   3.32
+  ],
+  "Thumb0_R": [
+   -43.16,
+   -2.1,
+   97.07
+  ],
+  "Thumb1_R": [
+   -44.81,
+   -3.7,
+   95.49
+  ],
+  "Thumb2_R": [
+   -46.31,
+   -4.18,
+   94.17
+  ],
+  "IndexFinger1_R": [
+   -47.43,
+   -1.71,
+   95.17
+  ],
+  "IndexFinger2_R": [
+   -49.52,
+   -1.65,
+   93.77
+  ],
+  "IndexFinger3_R": [
+   -51.24,
+   -1.58,
+   92.72
+  ],
+  "MiddleFinger1_R": [
+   -47.43,
+   0.11,
+   95.28
+  ],
+  "MiddleFinger2_R": [
+   -49.91,
+   0.04,
+   93.83
+  ],
+  "MiddleFinger3_R": [
+   -51.9,
+   -0.02,
+   92.48
+  ],
+  "RingFinger1_R": [
+   -47.09,
+   1.79,
+   95.23
+  ],
+  "RingFinger2_R": [
+   -49.54,
+   1.57,
+   93.87
+  ],
+  "RingFinger3_R": [
+   -51.44,
+   1.39,
+   92.8
+  ],
+  "LittleFinger1_R": [
+   -46.28,
+   3.03,
+   95.34
+  ],
+  "LittleFinger2_R": [
+   -48.23,
+   2.97,
+   94.25
+  ],
+  "LittleFinger3_R": [
+   -49.51,
+   2.82,
+   93.47
+  ],
+  "Right wrist": [
+   -41.67,
+   0.09,
+   99.54
+  ]
+ },
+ "dir_err_deg_max": 0.0,
+ "body_bones": [
+  "Hips",
+  "Spine",
+  "Chest",
+  "Neck",
+  "Head",
+  "Left shoulder",
+  "Left arm",
+  "Left elbow",
+  "Left leg",
+  "Left knee",
+  "Left ankle",
+  "Left toe",
+  "Thumb0_L",
+  "Thumb1_L",
+  "Thumb2_L",
+  "IndexFinger1_L",
+  "IndexFinger2_L",
+  "IndexFinger3_L",
+  "MiddleFinger1_L",
+  "MiddleFinger2_L",
+  "MiddleFinger3_L",
+  "RingFinger1_L",
+  "RingFinger2_L",
+  "RingFinger3_L",
+  "LittleFinger1_L",
+  "LittleFinger2_L",
+  "LittleFinger3_L",
+  "Left wrist",
+  "Right shoulder",
+  "Right arm",
+  "Right elbow",
+  "Right leg",
+  "Right knee",
+  "Right ankle",
+  "Right toe",
+  "Thumb0_R",
+  "Thumb1_R",
+  "Thumb2_R",
+  "IndexFinger1_R",
+  "IndexFinger2_R",
+  "IndexFinger3_R",
+  "MiddleFinger1_R",
+  "MiddleFinger2_R",
+  "MiddleFinger3_R",
+  "RingFinger1_R",
+  "RingFinger2_R",
+  "RingFinger3_R",
+  "LittleFinger1_R",
+  "LittleFinger2_R",
+  "LittleFinger3_R",
+  "Right wrist"
+ ],
+ "verts": 16545,
+ "exported": "FBX\\Classes\\heavy_cm.fbx"
+}

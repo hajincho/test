@@ -25,15 +25,10 @@ GUN_POS = OPT.get('gun_pos', [29.0, -9.0, -11.2]); GUN_ROT = OPT.get('gun_rot', 
 CLAV = {'L': [-10.73, 9.89, -16.11], 'R': [-17.46, -9.78, -17.09]}; REACH = OPT.get('reach', 37.0)
 POLE = {'R': Vector((-0.12, -0.10, -0.15)), 'L': Vector((-0.10, 0.12, -0.15))}
 arm, body, info = L.load_arms('a1', 0); OUT['arms'] = info; arm.name = 'Armature'
+CA = L.class_arm_objects(arm)   # 병과 캐릭터 7종 1인칭 팔(같은 팔 뼈대, 재질 CA<Key>_*): 내보낼 때 함께 선택
 OUT['clavicle_err_cm'] = L2.pose_clavicles(arm, CLAV)
 OUT['sleeves_folded'] = L2.fold_sleeves(arm)   # 소매 날개 접기(손 가림 방지), 아래에서 휴식 자세로 굳힘
-bpy.ops.object.select_all(action='DESELECT'); bpy.context.view_layer.objects.active = body; body.select_set(True)
-if body.data.shape_keys: body.shape_key_clear()
-for mod in list(body.modifiers):
-    if mod.type == 'ARMATURE': bpy.ops.object.modifier_apply(modifier=mod.name)
-bpy.ops.object.select_all(action='DESELECT'); bpy.context.view_layer.objects.active = arm; arm.select_set(True)
-bpy.ops.object.mode_set(mode='POSE'); bpy.ops.pose.armature_apply(selected=False); bpy.ops.object.mode_set(mode='OBJECT')
-_m = body.modifiers.new('Armature', 'ARMATURE'); _m.object = arm
+L.bake_arms_rest(arm, [body] + CA)   # 푸리나 팔 + 병과 팔 모두 같은 휴식 자세로(2026-11-22)
 for _uv in list(body.data.uv_layers)[1:]: body.data.uv_layers.remove(_uv)   # 팔 메시 UV 1개만(무기 메시와 UV 채널 수를 맞춤: UE 합칠 때 무기 UV 가 어긋나던 문제)
 gun = L.load_weapon('g43')
 if GUN_POS[0] is None:
@@ -42,6 +37,7 @@ if GUN_POS[0] is None:
         Gt = L.gun_native_to_cam([px, GUN_POS[1], GUN_POS[2]], *GUN_ROT); w = Gt @ Vector((0.0, YL, 2.0)) + Vector((-0.005, 0.03, -0.035))
         if (w - sh0).length * 100 <= REACH: GUN_POS[0] = float(px); break
 OUT['gun_pos'] = GUN_POS[:]; OUT['gun_rot'] = GUN_ROT[:]
+OPT.setdefault('yL', 8.0)   # 2026-11-22: 왼손 탄창 뒤쪽(자동 6.5 에선 새끼손가락이 탄창 뒤 끝을 지나 허공, 손가락 정합 측정으로 고름)
 if 'yL' not in OPT:   # 왼손: 어깨에서 REACH 안에 닿는 가장 앞쪽 아래면(케이 98k: 탄창 바닥판 앞 / G43: 탄창 아래)
     _sh = arm.matrix_world @ arm.pose.bones['Left arm'].head; _G = L.gun_native_to_cam(GUN_POS, *GUN_ROT)
     for _y in [v * 0.5 for v in range(-20, 41)]:
@@ -100,7 +96,9 @@ ST = {}
 _h = bvh_all.ray_cast(G0 @ Vector(R_CONTACT), dirn((1, 0, 0)), 2.0); rc = _h[0]; fR = dirn((0.15, -0.65, -0.75)); pR = (-_h[1]).normalized()   # 손바닥 = 닿는 면의 반대 법선(면에 평평하게)
 OUT['R_grip'] = solve_place('R', rc, fR, pR); OUT['R_grip']['pole'] = L2.calib_pole(arm, E, 'R', E['T_R'].location.copy(), rc + POLE['R']); solve_place('R', rc, fR, pR)
 OUT.setdefault('seat_cm', {})['R_GRIP'] = L2.seat_hand(arm, body, E, 'R', ax['R'], bvh_all)   # 손바닥을 총 표면에 붙임(떠 있던 문제)
-ST['R_GRIP'] = {'ref': 'gun', 'W': wrist_world('R'), 'fing': L2.grip_fingers(arm, 'R', fax['R'], bvh_all, r_cm=0.55, limits={'Thumb': (20, 25, 25), 'default': (85, 100, 75)})}
+import fpvm_grip; _trig, OUT['trigger'] = fpvm_grip.trigger_target(arm, 'R', bvh_all, G0)   # 검지 = 방아쇠울 안 방아쇠 앞면(2026-11-22)
+ST['R_GRIP'] = {'ref': 'gun', 'W': wrist_world('R'), 'fing': L2.grip_fingers(arm, 'R', fax['R'], bvh_all, r_cm=0.55, limits={'Thumb': (20, 25, 25), 'default': (85, 100, 75)}, targets={'IndexFinger': (_trig[0], 1.0, _trig[1])} if _trig is not None else None)}
+OUT['R_grip_fingers'] = fpvm_grip.LAST.get('R')
 _h = bvh_all.ray_cast(G0 @ Vector((BORE[0], YL, -15.0)), dirn((0, 0, 1)), 2.0); lc = _h[0]; fL = dirn((-1.0, -0.25, 0.15)); pL = (-_h[1]).normalized(); lc2 = lc - fL * 0.015
 OUT['L_grip'] = solve_place('L', lc2, fL, pL); OUT['L_grip']['pole'] = L2.calib_pole(arm, E, 'L', E['T_L'].location.copy(), lc2 + POLE['L']); solve_place('L', lc2, fL, pL)
 OUT.setdefault('seat_cm', {})['L_GRIP'] = L2.seat_hand(arm, body, E, 'L', ax['L'], bvh_all)   # 손바닥을 총 표면에 붙임(떠 있던 문제)
@@ -254,7 +252,7 @@ def apply_state(st):
         l, r, _ = W.decompose(); E['T_' + s].location = l; E['T_' + s].rotation_quaternion = r; E['P_' + s].location = l + POLE[s]
     bpy.context.view_layer.update()
     for s, W in (('R', Wr), ('L', Wl)):
-        for _ in range(3):
+        for _ in range(12):   # IK 목표 보정 3번으론 손목이 1.5~2.5cm 덜 닿았음(판처슈렉, 2026-11-22)
             err = W.translation - (arm.matrix_world @ PB['%s wrist' % L2.SIDE[s]].head)
             if err.length < 2e-4: break
             E['T_' + s].location = E['T_' + s].location + err; bpy.context.view_layer.update()
@@ -370,6 +368,7 @@ elif STAGE in ('anim', 'export'):
         os.makedirs(D + r'\FBX\FPVM', exist_ok=True); fn = D + r'\FBX\FPVM\SK_FPVM_%s.fbx' % KEY
         bpy.ops.object.select_all(action='DESELECT')
         for o in (arm, body, gun, carrier, clip, rounds, receiver_interior): o.select_set(True)
+        for o in CA: o.select_set(True)   # 병과 캐릭터 7종 1인칭 팔
         bpy.context.view_layer.objects.active = arm
         bpy.ops.export_scene.fbx(filepath=fn, use_selection=True, object_types={'ARMATURE', 'MESH'}, axis_forward='-Y', axis_up='Z', apply_unit_scale=True, add_leaf_bones=False,
                                  bake_anim=True, bake_anim_use_all_actions=True, bake_anim_use_nla_strips=False, bake_anim_force_startend_keying=True, bake_anim_simplify_factor=0.0,

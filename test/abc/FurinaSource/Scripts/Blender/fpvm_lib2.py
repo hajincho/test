@@ -66,8 +66,17 @@ def seg_hit(bvh, a, b, r, n=4):
         if dist < r or (p - loc).dot(nrm) < 0 and dist < 3 * r: return True
     return False
 
-def grip_fingers(arm, s, fax, bvh, r_cm=0.75, step=3.0, limits=None, skip=(), preset=None):
-    """손가락을 관절 순서대로 굽혀 무기 표면에 닿기 직전까지. preset={손가락: [각1,각2,각3]} 이면 그 값으로 고정.
+def grip_fingers(arm, s, fax, bvh, r_cm=0.75, step=3.0, limits=None, skip=(), preset=None, targets=None):
+    """2026-11-22: 손 메시(Body)가 있으면 피부 기준 풀이(fpvm_grip.grip_fingers_mesh)를 씀 - 예전 뼈 선 방식은 손가락이 펴진 채 멈추고 피부가 총에 파고들었음.
+    환경변수 FPVM_GRIP_SEG=1 이면 예전 방식.
+    """
+    import os, fpvm_grip
+    if os.environ.get('FPVM_GRIP_SEG') != '1' and fpvm_grip.body_of(arm) is not None:
+        return fpvm_grip.grip_fingers_mesh(arm, s, fax, bvh, limits=limits, skip=skip, preset=preset, targets=targets)
+    return grip_fingers_seg(arm, s, fax, bvh, r_cm, step, limits, skip, preset)
+
+def grip_fingers_seg(arm, s, fax, bvh, r_cm=0.75, step=3.0, limits=None, skip=(), preset=None):
+    """(예전) 손가락을 관절 순서대로 굽혀 무기 표면에 닿기 직전까지. preset={손가락: [각1,각2,각3]} 이면 그 값으로 고정.
     반환: {뼈: 각도(°)}. 회전은 뼈 로컬 축(fax) 기준 쿼터니언으로 pose_bone.rotation_quaternion 에 곱해 넣음."""
     lim = limits or {'Thumb': (35, 45, 50), 'default': (85, 100, 75)}
     bpy.context.view_layer.objects.active = arm; bpy.ops.object.mode_set(mode='POSE'); res = {}; r = r_cm / 100.0
@@ -90,8 +99,14 @@ def grip_fingers(arm, s, fax, bvh, r_cm=0.75, step=3.0, limits=None, skip=(), pr
     bpy.ops.object.mode_set(mode='OBJECT'); return res
 
 def apply_fingers(arm, fax, angles):
+    """angles {뼈: 굽힘 각}; '<뼈>@spread' 키는 그 뼈의 좌우 벌림(굽힘 뒤에 곱함, 2026-11-22 방아쇠 검지)"""
     for b, a in angles.items():
+        if '@' in b: continue
         pb = arm.pose.bones[b]; pb.rotation_mode = 'QUATERNION'; pb.rotation_quaternion = Quaternion(fax[b], math.radians(a))
+    for k, a in angles.items():
+        if not k.endswith('@spread') or not a: continue
+        b = k[:-7]; pb = arm.pose.bones[b]; ab = Vector((0, 1, 0)).cross(Vector(fax[b])).normalized()
+        pb.rotation_quaternion = Quaternion(ab, math.radians(a)) @ pb.rotation_quaternion
 
 def render_views(prefix, fov=85.0, views=('fp', 'side', 'top'), res=(1280, 720), look=None, scale=0.9):
     sc = bpy.context.scene; sc.render.engine = 'BLENDER_WORKBENCH'; sh = sc.display.shading; sh.light = 'STUDIO'; sh.color_type = 'MATERIAL'; sh.show_cavity = True

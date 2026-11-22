@@ -1,0 +1,521 @@
+{
+ "sk": "Kar98k_Interior",
+ "clip": "Kar98k_Fire",
+ "frames": [
+  2,
+  7,
+  12,
+  17,
+  23,
+  28,
+  33,
+  38
+ ],
+ "per_frame": [
+  {
+   "frame": 2,
+   "R": {
+    "Thumb": {
+     "gap_cm": 0.0,
+     "pen_cm": 1.54
+    },
+    "IndexFinger": {
+     "gap_cm": 0.0,
+     "pen_cm": 0.3
+    },
+    "MiddleFinger": {
+     "gap_cm": 0.0,
+     "pen_cm": 0.42
+    },
+    "RingFinger": {
+     "gap_cm": 0.0,
+     "pen_cm": 0.38
+    },
+    "LittleFinger": {
+     "gap_cm": 0.0,
+     "pen_cm": 0.24
+    },
+    "Palm": {
+     "gap_cm": 0.0,
+     "pen_cm": 1.43
+    }
+   },
+   "L": {
+    "Thumb": {
+     "gap_cm": 0.0,
+     "pen_cm": 1.49
+    },
+    "IndexFinger": {
+     "gap_cm": 0.0,
+     "pen_cm": 0.93
+    },
+    "MiddleFinger": {
+     "gap_cm": 0.0,
+     "pen_cm": 0.72
+    },
+    "RingFinger": {
+     "gap_cm": 0.0,
+     "pen_cm": 0.76
+    },
+    "LittleFinger": {
+     "gap_cm": 0.0,
+     "pen_cm": 0.98
+    },
+    "Palm": {
+     "gap_cm": 0.27,
+     "pen_cm": 0.0
+    }
+   }
+  },
+  {
+   "frame": 7,
+   "R": {
+    "Thumb": {
+     "gap_cm": 0.0,
+     "pen_cm": 1.54
+    },
+    "IndexFinger": {
+     "gap_cm": 0.0,
+     "pen_cm": 0.3
+    },
+    "MiddleFinger": {
+     "gap_cm": 0.0,
+     "pen_cm": 0.42
+    },
+    "RingFinger": {
+     "gap_cm": 0.0,
+     "pen_cm": 0.38
+    },
+    "LittleFinger": {
+     "gap_cm": 0.0,
+     "pen_cm": 0.24
+    },
+    "Palm": {
+     "gap_cm": 0.0,
+     "pen_cm": 1.43
+    }
+   },
+   "L": {
+    "Thumb": {
+     "gap_cm": 0.0,
+     "pen_cm": 1.49
+    },
+    "IndexFinger": {
+     "gap_cm": 0.0,
+     "pen_cm": 0.93
+    },
+    "MiddleFinger": {
+     "gap_cm": 0.0,
+     "pen_cm": 0.72
+    },
+    "RingFinger": {
+     "gap_cm": 0.0,
+     "pen_cm": 0.76
+    },
+    "LittleFinger": {
+     "gap_cm": 0.0,
+     "pen_cm": 0.98
+    },
+    "Palm": {
+     "gap_cm": 0.27,
+     "pen_cm": 0.0
+    }
+   }
+  },
+  {
+   "frame": 12,
+   "R": {
+    "Thumb": {
+     "gap_cm": 0.0,
+     "pen_cm": 1.54
+    },
+    "IndexFinger": {
+     "gap_cm": 0.0,
+     "pen_cm": 0.3
+    },
+    "MiddleFinger": {
+     "gap_cm": 0.0,
+     "pen_cm": 0.42
+    },
+    "RingFinger": {
+     "gap_cm": 0.0,
+     "pen_cm": 0.38
+    },
+    "LittleFinger": {
+     "gap_cm": 0.0,
+     "pen_cm": 0.24
+    },
+    "Palm": {
+     "gap_cm": 0.0,
+     "pen_cm": 1.43
+    }
+   },
+   "L": {
+    "Thumb": {
+     "gap_cm": 0.0,
+     "pen_cm": 1.49
+    },
+    "IndexFinger": {
+     "gap_cm": 0.0,
+     "pen_cm": 0.93
+    },
+    "MiddleFinger": {
+     "gap_cm": 0.0,
+     "pen_cm": 0.72
+    },
+    "RingFinger": {
+     "gap_cm": 0.0,
+     "pen_cm": 0.76
+    },
+    "LittleFinger": {
+     "gap_cm": 0.0,
+     "pen_cm": 0.98
+    },
+    "Palm": {
+     "gap_cm": 0.27,
+     "pen_cm": 0.0
+    }
+   }
+  },
+  {
+   "frame": 17,
+   "R": {
+    "Thumb": {
+     "gap_cm": 0.0,
+     "pen_cm": 1.54
+    },
+    "IndexFinger": {
+     "gap_cm": 0.0,
+     "pen_cm": 0.3
+    },
+    "MiddleFinger": {
+     "gap_cm": 0.0,
+     "pen_cm": 0.42
+    },
+    "RingFinger": {
+     "gap_cm": 0.0,
+     "pen_cm": 0.38
+    },
+    "LittleFinger": {
+     "gap_cm": 0.0,
+     "pen_cm": 0.24
+    },
+    "Palm": {
+     "gap_cm": 0.0,
+     "pen_cm": 1.43
+    }
+   },
+   "L": {
+    "Thumb": {
+     "gap_cm": 0.0,
+     "pen_cm": 1.49
+    },
+    "IndexFinger": {
+     "gap_cm": 0.0,
+     "pen_cm": 0.93
+    },
+    "MiddleFinger": {
+     "gap_cm": 0.0,
+     "pen_cm": 0.72
+    },
+    "RingFinger": {
+     "gap_cm": 0.0,
+     "pen_cm": 0.76
+    },
+    "LittleFinger": {
+     "gap_cm": 0.0,
+     "pen_cm": 0.98
+    },
+    "Palm": {
+     "gap_cm": 0.27,
+     "pen_cm": 0.0
+    }
+   }
+  },
+  {
+   "frame": 23,
+   "R": {
+    "Thumb": {
+     "gap_cm": 0.0,
+     "pen_cm": 1.54
+    },
+    "IndexFinger": {
+     "gap_cm": 0.0,
+     "pen_cm": 0.3
+    },
+    "MiddleFinger": {
+     "gap_cm": 0.0,
+     "pen_cm": 0.42
+    },
+    "RingFinger": {
+     "gap_cm": 0.0,
+     "pen_cm": 0.38
+    },
+    "LittleFinger": {
+     "gap_cm": 0.0,
+     "pen_cm": 0.24
+    },
+    "Palm": {
+     "gap_cm": 0.0,
+     "pen_cm": 1.43
+    }
+   },
+   "L": {
+    "Thumb": {
+     "gap_cm": 0.0,
+     "pen_cm": 1.49
+    },
+    "IndexFinger": {
+     "gap_cm": 0.0,
+     "pen_cm": 0.93
+    },
+    "MiddleFinger": {
+     "gap_cm": 0.0,
+     "pen_cm": 0.72
+    },
+    "RingFinger": {
+     "gap_cm": 0.0,
+     "pen_cm": 0.76
+    },
+    "LittleFinger": {
+     "gap_cm": 0.0,
+     "pen_cm": 0.98
+    },
+    "Palm": {
+     "gap_cm": 0.27,
+     "pen_cm": 0.0
+    }
+   }
+  },
+  {
+   "frame": 28,
+   "R": {
+    "Thumb": {
+     "gap_cm": 0.0,
+     "pen_cm": 1.54
+    },
+    "IndexFinger": {
+     "gap_cm": 0.0,
+     "pen_cm": 0.3
+    },
+    "MiddleFinger": {
+     "gap_cm": 0.0,
+     "pen_cm": 0.42
+    },
+    "RingFinger": {
+     "gap_cm": 0.0,
+     "pen_cm": 0.38
+    },
+    "LittleFinger": {
+     "gap_cm": 0.0,
+     "pen_cm": 0.24
+    },
+    "Palm": {
+     "gap_cm": 0.0,
+     "pen_cm": 1.43
+    }
+   },
+   "L": {
+    "Thumb": {
+     "gap_cm": 0.0,
+     "pen_cm": 1.49
+    },
+    "IndexFinger": {
+     "gap_cm": 0.0,
+     "pen_cm": 0.93
+    },
+    "MiddleFinger": {
+     "gap_cm": 0.0,
+     "pen_cm": 0.72
+    },
+    "RingFinger": {
+     "gap_cm": 0.0,
+     "pen_cm": 0.76
+    },
+    "LittleFinger": {
+     "gap_cm": 0.0,
+     "pen_cm": 0.98
+    },
+    "Palm": {
+     "gap_cm": 0.27,
+     "pen_cm": 0.0
+    }
+   }
+  },
+  {
+   "frame": 33,
+   "R": {
+    "Thumb": {
+     "gap_cm": 0.0,
+     "pen_cm": 1.54
+    },
+    "IndexFinger": {
+     "gap_cm": 0.0,
+     "pen_cm": 0.3
+    },
+    "MiddleFinger": {
+     "gap_cm": 0.0,
+     "pen_cm": 0.42
+    },
+    "RingFinger": {
+     "gap_cm": 0.0,
+     "pen_cm": 0.38
+    },
+    "LittleFinger": {
+     "gap_cm": 0.0,
+     "pen_cm": 0.24
+    },
+    "Palm": {
+     "gap_cm": 0.0,
+     "pen_cm": 1.43
+    }
+   },
+   "L": {
+    "Thumb": {
+     "gap_cm": 0.0,
+     "pen_cm": 1.49
+    },
+    "IndexFinger": {
+     "gap_cm": 0.0,
+     "pen_cm": 0.93
+    },
+    "MiddleFinger": {
+     "gap_cm": 0.0,
+     "pen_cm": 0.72
+    },
+    "RingFinger": {
+     "gap_cm": 0.0,
+     "pen_cm": 0.76
+    },
+    "LittleFinger": {
+     "gap_cm": 0.0,
+     "pen_cm": 0.98
+    },
+    "Palm": {
+     "gap_cm": 0.27,
+     "pen_cm": 0.0
+    }
+   }
+  },
+  {
+   "frame": 38,
+   "R": {
+    "Thumb": {
+     "gap_cm": 0.0,
+     "pen_cm": 1.54
+    },
+    "IndexFinger": {
+     "gap_cm": 0.0,
+     "pen_cm": 0.3
+    },
+    "MiddleFinger": {
+     "gap_cm": 0.0,
+     "pen_cm": 0.42
+    },
+    "RingFinger": {
+     "gap_cm": 0.0,
+     "pen_cm": 0.38
+    },
+    "LittleFinger": {
+     "gap_cm": 0.0,
+     "pen_cm": 0.24
+    },
+    "Palm": {
+     "gap_cm": 0.0,
+     "pen_cm": 1.43
+    }
+   },
+   "L": {
+    "Thumb": {
+     "gap_cm": 0.0,
+     "pen_cm": 1.49
+    },
+    "IndexFinger": {
+     "gap_cm": 0.0,
+     "pen_cm": 0.93
+    },
+    "MiddleFinger": {
+     "gap_cm": 0.0,
+     "pen_cm": 0.72
+    },
+    "RingFinger": {
+     "gap_cm": 0.0,
+     "pen_cm": 0.76
+    },
+    "LittleFinger": {
+     "gap_cm": 0.0,
+     "pen_cm": 0.98
+    },
+    "Palm": {
+     "gap_cm": 0.27,
+     "pen_cm": 0.0
+    }
+   }
+  }
+ ],
+ "wrist_drift_vs_gun": {
+  "R": {
+   "pos_cm": 0.0,
+   "rot_deg": 0.0
+  },
+  "L": {
+   "pos_cm": 0.0,
+   "rot_deg": 0.0
+  }
+ },
+ "worst": {
+  "R_Thumb": {
+   "gap_max": 0.0,
+   "pen_max": 1.54
+  },
+  "R_IndexFinger": {
+   "gap_max": 0.0,
+   "pen_max": 0.3
+  },
+  "R_MiddleFinger": {
+   "gap_max": 0.0,
+   "pen_max": 0.42
+  },
+  "R_RingFinger": {
+   "gap_max": 0.0,
+   "pen_max": 0.38
+  },
+  "R_LittleFinger": {
+   "gap_max": 0.0,
+   "pen_max": 0.24
+  },
+  "R_Palm": {
+   "gap_max": 0.0,
+   "pen_max": 1.43
+  },
+  "L_Thumb": {
+   "gap_max": 0.0,
+   "pen_max": 1.49
+  },
+  "L_IndexFinger": {
+   "gap_max": 0.0,
+   "pen_max": 0.93
+  },
+  "L_MiddleFinger": {
+   "gap_max": 0.0,
+   "pen_max": 0.72
+  },
+  "L_RingFinger": {
+   "gap_max": 0.0,
+   "pen_max": 0.76
+  },
+  "L_LittleFinger": {
+   "gap_max": 0.0,
+   "pen_max": 0.98
+  },
+  "L_Palm": {
+   "gap_max": 0.27,
+   "pen_max": 0.0
+  }
+ },
+ "fail": [
+  "L_Thumb",
+  "R_Palm",
+  "R_Thumb"
+ ]
+}

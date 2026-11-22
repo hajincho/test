@@ -75,7 +75,8 @@ def load_arms(pose_tag='a1', sample=0, th=0.5):
     arm.matrix_world = Matrix(K.tolist()); body.matrix_world = arm.matrix_world @ MB
     bpy.ops.object.select_all(action='DESELECT'); arm.select_set(True); body.select_set(True); bpy.context.view_layer.objects.active = arm
     bpy.ops.object.transform_apply(location=True, rotation=True, scale=True)
-    info['bones_kept'] = len(arm.data.bones); info['arm_verts'] = len(body.data.vertices)
+    info['bones_kept'] = len(arm.data.bones); info['arm_verts'] = len(body.data.vertices); info['K'] = K.tolist()   # 아마추어 로컬(cm) -> 카메라 공간(m)
+    global _LAST_K; _LAST_K = Matrix(K.tolist())
     for side in ('Left', 'Right'):
         h = arm.data.bones['%s arm' % side].head_local; e = arm.data.bones['%s elbow' % side].head_local; w = arm.data.bones['%s wrist' % side].head_local
         info['%s_shoulder_cm' % side] = [round(v * 100, 2) for v in h]; info['%s_len_cm' % side] = [round((e - h).length * 100, 2), round((w - e).length * 100, 2)]
@@ -97,7 +98,31 @@ def load_weapon(key):
     bpy.context.view_layer.objects.active = obs[0]; bpy.ops.object.transform_apply(location=True, rotation=True, scale=True)
     if len(obs) > 1: bpy.ops.object.join()
     g = bpy.context.view_layer.objects.active; g.data.transform(Matrix.Scale(100, 4)); g.name = 'W_' + key   # 원본 cm 로
+    if key == 'p38': seat_p38_slide(g)
     return g
+P38_SLIDE_SHIFT_CM = 3.31
+def seat_p38_slide(g):
+    """원본 P38 은 슬라이드가 뒤로 3.3cm 당겨진(후퇴) 상태로 모델링돼 있음(슬라이드 앞 y -1.74 > 프레임 앞 -5.05, 뒤끝이 공이치기를 덮음).
+    슬라이드에 붙은 성분(윗몸·가늠자·안전장치·약실표시 핀 등: 성분 최저 z >= 2.2, 최소 y >= -1.8)을 앞(-Y)으로 옮겨 장전 완료 위치(슬라이드 앞 = 프레임 앞)로."""
+    bm = bmesh.new(); bm.from_mesh(g.data); bm.verts.ensure_lookup_table()
+    same = {}
+    for v in bm.verts: same.setdefault(tuple(round(c, 3) for c in v.co), []).append(v)
+    lab = {}; comps = []
+    for v in bm.verts:
+        if v.index in lab: continue
+        st = [v]; lab[v.index] = len(comps); ids = []
+        while st:
+            x = st.pop(); ids.append(x)
+            for y in [e.other_vert(x) for e in x.link_edges] + same[tuple(round(c, 3) for c in x.co)]:
+                if y.index not in lab: lab[y.index] = len(comps); st.append(y)
+        comps.append(ids)
+    moved = 0
+    for ids in comps:
+        if min(v.co.z for v in ids) >= 2.2 and min(v.co.y for v in ids) >= -1.8:
+            for v in ids: v.co.y -= P38_SLIDE_SHIFT_CM
+            moved += len(ids)
+    bm.to_mesh(g.data); bm.free(); g.data.update()
+    return moved
 def split_by(g, name, face_pred):
     """face_pred(material_name, centroid_cm) 가 참인 면을 떼어 새 오브젝트로."""
     bm = bmesh.new(); bm.from_mesh(g.data); mats = [m.name if m else '' for m in g.data.materials]
@@ -149,3 +174,95 @@ def finger_axes(arm, side, axes):
             else: ax = d.cross(p_world)
             out[bn] = (b.matrix_local.to_3x3().inverted() @ ax.normalized()).normalized()
     return out
+
+
+# ------------------------------------------------------------------ 병과 캐릭터 1인칭 팔(2026-11-22)
+CLASS_KEYS = (('officer', 'Officer'), ('infantry', 'Infantry'), ('assault', 'Assault'), ('antitank', 'AntiTank'), ('heavy', 'Heavy'), ('sniper', 'Sniper'), ('armor', 'Armor'),
+              ('jp_officer', 'JpOfficer'), ('jp_infantry', 'JpInfantry'), ('jp_assault', 'JpAssault'), ('jp_antitank', 'JpAntiTank'), ('jp_heavy', 'JpHeavy'), ('jp_sniper', 'JpSniper'), ('jp_armor', 'JpArmor'))
+SLEEVE_MAX_CM = {'arm': 5.0, 'elbow': 3.8}   # 1인칭에서 화면을 가리던 큰 소매(미카·유라·진·아야토 등): 팔 축에서 이 반지름 밖은 축 쪽으로 당김(손·손가락은 그대로)
+_LAST_K = None
+def class_arm_objects(arm, K=None, th=0.5):
+    """1인칭 무기 메시에 함께 넣을 병과 캐릭터 7종의 팔·손 메시(같은 팔 뼈대 arm 에 스키닝). 재질 이름 CA<Key>_<원래 슬롯>(언리얼에서 캐릭터별로 보이기/가리기).
+    캐릭터 팔(FBX/Classes/<key>_cm.fbx, 뼈 방향은 푸리나와 같음)을 뼈마다 '푸리나 관절 + (정점 - 캐릭터 관절) × 길이비'로 옮겨 푸리나 1인칭 팔 길이에 맞추고 K(아마추어 cm -> 카메라 m)로.
+    언리얼 리더 포즈로 별도 메시를 따라가게 하면 이 뷰모델 구조에서 축소·엇나가서(2026-11-22 시험) 무기 메시 안에 같이 넣는다."""
+    K = K or _LAST_K; assert K is not None, 'load_arms 먼저'
+    before = set(bpy.data.objects)
+    bpy.ops.import_scene.fbx(filepath=D + r'\FBX\Furina_cm.fbx', automatic_bone_orientation=False, ignore_leaf_bones=False)
+    fa = [o for o in bpy.data.objects if o not in before and o.type == 'ARMATURE'][0]
+    fur = {b.name: (b.head_local.copy(), (b.tail_local - b.head_local).length) for b in fa.data.bones}; FI = fa.matrix_world.inverted()
+    for o in [o for o in bpy.data.objects if o not in before]: bpy.data.objects.remove(o, do_unlink=True)
+    out = []
+    for key, Key in CLASS_KEYS:
+        before = set(bpy.data.objects)
+        bpy.ops.import_scene.fbx(filepath=D + r'\FBX\Classes\%s_cm.fbx' % key, automatic_bone_orientation=False, ignore_leaf_bones=False)
+        new = [o for o in bpy.data.objects if o not in before]
+        ca = [o for o in new if o.type == 'ARMATURE'][0]; cm = [o for o in new if o.type == 'MESH'][0]; CW = ca.matrix_world.copy()
+        cls = {b.name: (FI @ (CW @ b.head_local), (FI @ (CW @ b.tail_local) - FI @ (CW @ b.head_local)).length) for b in ca.data.bones}
+        def desc(b):
+            r = [b.name]
+            for c in b.children: r += desc(c)
+            return r
+        chain = set(desc(ca.data.bones['Left arm'])) | set(desc(ca.data.bones['Right arm']))
+        me = cm.data; me.transform(FI @ cm.matrix_world); cm.parent = None; cm.matrix_world = Matrix.Identity(4)
+        gi = {g.index: g.name for g in cm.vertex_groups}
+        keep = [sum(g.weight for g in v.groups if gi.get(g.group) in chain) >= th for v in me.vertices]
+        bm = bmesh.new(); bm.from_mesh(me); bm.verts.ensure_lookup_table()
+        bmesh.ops.delete(bm, geom=[v for v in bm.verts if not keep[v.index]], context='VERTS'); bm.to_mesh(me); bm.free()
+        for v in me.vertices:
+            acc = Vector((0, 0, 0)); tot = 0.0
+            for g in v.groups:
+                n = gi.get(g.group)
+                if not n or n not in cls or n not in fur or g.weight <= 0: continue
+                hc, lc = cls[n]; hf, lf = fur[n]; sc = (lf / lc) if (n in chain and lc > 0.3) else 1.0
+                acc += g.weight * (hf + (v.co - hc) * sc); tot += g.weight
+            if tot > 0: v.co = acc / tot
+        # 큰 소매 줄이기: 손목·손가락 가중치가 작은 정점만, 지배 뼈(위팔/아래팔) 축에서 반지름 제한
+        hand_like = lambda n: n and (('wrist' in n) or ('Finger' in n) or n.startswith('Thumb'))
+        for v in me.vertices:
+            ws = [(gi.get(g.group), g.weight) for g in v.groups if g.weight > 0]
+            if not ws: continue
+            n, _ = max(ws, key=lambda t: t[1])
+            if not n or n not in fur: continue
+            if sum(w for nn, w in ws if nn and ('Finger' in nn or nn.startswith('Thumb'))) > 0.2: continue   # 손가락은 그대로
+            if n.endswith(' wrist'):   # 손목 지배 정점 중 손목 관절 앞(팔꿈치 쪽) = 소맷부리 -> 아래팔 축 기준으로 줄임
+                el = fur[n.replace(' wrist', ' elbow')][0]; wr = fur[n][0]; ab = wr - el
+                if (v.co - el).dot(ab) / ab.length_squared > 1.02: continue
+                n = n.replace(' wrist', ' elbow')
+            elif sum(w for nn, w in ws if hand_like(nn)) > 0.3: continue
+            kind = 'arm' if n.endswith(' arm') else ('elbow' if n.endswith(' elbow') else None)
+            if not kind: continue
+            child = n.replace(' arm', ' elbow') if kind == 'arm' else n.replace(' elbow', ' wrist')
+            a = fur[n][0]; b = fur[child][0]; ab = b - a
+            t = max(0.0, min(1.0, (v.co - a).dot(ab) / ab.length_squared)); pnt = a + ab * t; d = v.co - pnt
+            if d.length > SLEEVE_MAX_CM[kind]: v.co = pnt + d.normalized() * SLEEVE_MAX_CM[kind]
+        me.transform(K)
+        for m in list(cm.modifiers): cm.modifiers.remove(m)
+        for g in list(cm.vertex_groups):
+            if g.name not in arm.data.bones: cm.vertex_groups.remove(g)
+        used = {p.material_index for p in me.polygons}
+        mats = list(me.materials)
+        for i, m in enumerate(mats):
+            if m is not None and i in used:
+                nm = 'CA%s_%s' % (Key, m.name.split('.')[0]); mm = bpy.data.materials.get(nm) or m.copy(); mm.name = nm; me.materials[i] = mm
+        bpy.context.view_layer.objects.active = cm
+        for i in reversed(range(len(cm.material_slots))):
+            if i not in used: cm.active_material_index = i; bpy.ops.object.material_slot_remove()
+        cm.parent = arm; cm.matrix_parent_inverse = arm.matrix_world.inverted()
+        md = cm.modifiers.new('Armature', 'ARMATURE'); md.object = arm
+        for uv in list(me.uv_layers)[1:]: me.uv_layers.remove(uv)   # UV 1개(무기 메시와 UV 채널 수 맞춤)
+        bpy.data.objects.remove(ca, do_unlink=True); cm.name = 'Arms_' + Key; out.append(cm)
+    return out
+
+
+def bake_arms_rest(arm, meshes):
+    """지금 팔 자세(쇄골·소매 접기)를 휴식 자세로 굳힘: 메시마다 아마추어 모디파이어를 적용(변형을 정점에 굳힘) -> 뼈 휴식 자세 갱신 -> 모디파이어 다시 연결.
+    2026-11-22: 예전엔 푸리나 팔(body)만 굳히고 병과 팔(Arms_*)은 빼먹어, 게임에서 보이는 병과 팔이 새 휴식 자세와 어긋나 손목 10~40cm·손가락 4~11cm 틀어져 있었음."""
+    for o in meshes:
+        bpy.ops.object.select_all(action='DESELECT'); bpy.context.view_layer.objects.active = o; o.select_set(True)
+        if o.data.shape_keys: o.shape_key_clear()   # 얼굴 표정 등 셰이프키(팔에는 불필요, 있으면 모디파이어 적용이 안 됨)
+        for mod in list(o.modifiers):
+            if mod.type == 'ARMATURE': bpy.ops.object.modifier_apply(modifier=mod.name)
+    bpy.ops.object.select_all(action='DESELECT'); bpy.context.view_layer.objects.active = arm; arm.select_set(True)
+    bpy.ops.object.mode_set(mode='POSE'); bpy.ops.pose.armature_apply(selected=False); bpy.ops.object.mode_set(mode='OBJECT')
+    for o in meshes:
+        m = o.modifiers.new('Armature', 'ARMATURE'); m.object = arm

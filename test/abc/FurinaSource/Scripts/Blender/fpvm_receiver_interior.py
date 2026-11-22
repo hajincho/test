@@ -54,6 +54,9 @@ def export_mesh_only(path, armature, meshes):
     bpy.ops.object.select_all(action='DESELECT')
     for obj in (armature, *meshes):
         obj.select_set(True)
+    for obj in armature.children:   # 병과 캐릭터 7종 1인칭 팔(fpvm_lib.class_arm_objects)
+        if obj.name.startswith('Arms_'):
+            obj.select_set(True)
     bpy.context.view_layer.objects.active = armature
     bpy.ops.export_scene.fbx(
         filepath=str(path), use_selection=True, object_types={'ARMATURE', 'MESH'},

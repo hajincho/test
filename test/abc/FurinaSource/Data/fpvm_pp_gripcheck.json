@@ -1,0 +1,169 @@
+{
+ "key": "pp",
+ "mag": {
+  "faces": 1034,
+  "parts": [
+   [
+    [
+     -0.8,
+     3.08,
+     -5.2
+    ],
+    [
+     0.67,
+     6.39,
+     -5.09
+    ],
+    93
+   ],
+   [
+    [
+     -0.59,
+     1.78,
+     -5.14
+    ],
+    [
+     0.46,
+     6.38,
+     3.27
+    ],
+    908
+   ],
+   [
+    [
+     -0.25,
+     4.67,
+     -5.24
+    ],
+    [
+     0.12,
+     5.04,
+     -5.19
+    ],
+    25
+   ]
+  ],
+  "bottom": [
+   -0.07,
+   4.37,
+   -5.14
+  ],
+  "d_ins": [
+   0.001,
+   -0.151,
+   0.989
+  ]
+ },
+ "grip_r": {
+  "section_y": [
+   1.85,
+   6.43
+  ],
+  "axis": [
+   0.0,
+   0.362,
+   -0.932
+  ],
+  "fwd": [
+   0.0,
+   -0.932,
+   -0.362
+  ],
+  "z": 0.3,
+  "guard": 1.8,
+  "trig": [
+   0.0,
+   -0.6,
+   0.3
+  ]
+ },
+ "index_trigger": {
+  "angles": [
+   -10,
+   98,
+   56
+  ],
+  "spread": 30,
+  "miss_cm": 0.02
+ },
+ "arm_len_cm": 39.2,
+ "reach_cm": {
+  "H": 35.4,
+  "S": 38.2,
+  "A": 39.2
+ },
+ "muzzle": {
+  "native_cm": [
+   -0.067,
+   -8.5,
+   3.864
+  ],
+  "ue_cam_cm": [
+   36.1961305141449,
+   5.506514012813568,
+   -2.053898759186268
+  ],
+  "ue_fwd": [
+   0.9966145157814026,
+   -0.04351304844021797,
+   0.06975655257701874
+  ],
+  "ue_up": [
+   -0.07187751680612564,
+   -0.04924752935767174,
+   0.996196985244751
+  ]
+ },
+ "L_mag": {
+  "score": 0.035,
+  "pen_cm": 0.0
+ },
+ "L_slide": {
+  "score": 0.011,
+  "pen_cm": 0.0
+ },
+ "reload_pose": {
+  "pose": {
+   "fwd": -4,
+   "side": 4,
+   "up": 4,
+   "yaw": 65,
+   "pitch": 30,
+   "roll": -35
+  },
+  "hv_vis": [
+   -2.2,
+   -14.7,
+   0.42
+  ]
+ },
+ "clips": {
+  "Idle": 4.0,
+  "Fire": 0.3,
+  "IdleS": 4.0,
+  "FireS": 0.3,
+  "IdleA": 4.0,
+  "FireA": 0.3,
+  "T_HS": 0.2,
+  "T_SH": 0.2,
+  "T_HA": 0.25,
+  "T_AH": 0.25,
+  "T_SA": 0.22,
+  "T_AS": 0.22,
+  "Reload": 2.5
+ },
+ "grip_renders": [
+  "C:\\Users\\fromj\\Downloads\\test\\test\\abc\\FurinaSource\\Data\\fpvm_pp_grip_H_left.png",
+  "C:\\Users\\fromj\\Downloads\\test\\test\\abc\\FurinaSource\\Data\\fpvm_pp_grip_H_right.png",
+  "C:\\Users\\fromj\\Downloads\\test\\test\\abc\\FurinaSource\\Data\\fpvm_pp_grip_H_top.png",
+  "C:\\Users\\fromj\\Downloads\\test\\test\\abc\\FurinaSource\\Data\\fpvm_pp_grip_H_bottom.png",
+  "C:\\Users\\fromj\\Downloads\\test\\test\\abc\\FurinaSource\\Data\\fpvm_pp_grip_H_front.png",
+  "C:\\Users\\fromj\\Downloads\\test\\test\\abc\\FurinaSource\\Data\\fpvm_pp_grip_H_back.png",
+  "C:\\Users\\fromj\\Downloads\\test\\test\\abc\\FurinaSource\\Data\\fpvm_pp_grip_A_left.png",
+  "C:\\Users\\fromj\\Downloads\\test\\test\\abc\\FurinaSource\\Data\\fpvm_pp_grip_A_right.png",
+  "C:\\Users\\fromj\\Downloads\\test\\test\\abc\\FurinaSource\\Data\\fpvm_pp_grip_A_top.png",
+  "C:\\Users\\fromj\\Downloads\\test\\test\\abc\\FurinaSource\\Data\\fpvm_pp_grip_A_bottom.png",
+  "C:\\Users\\fromj\\Downloads\\test\\test\\abc\\FurinaSource\\Data\\fpvm_pp_grip_A_front.png",
+  "C:\\Users\\fromj\\Downloads\\test\\test\\abc\\FurinaSource\\Data\\fpvm_pp_grip_A_back.png"
+ ]
+}

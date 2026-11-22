@@ -73,12 +73,12 @@ def split_magazine(gun, key):
 
 def main():
     arm, hands, _ = rig.load_arms('a1'); arm.name = 'Armature'
+    CA = rig.class_arm_objects(arm)   # 병과 캐릭터 7종 1인칭 팔(같은 팔 뼈대, 재질 CA<Key>_*): 내보낼 때 함께 선택
     if hands.data.shape_keys: hands.shape_key_clear()
     for uv in list(hands.data.uv_layers)[1:]: hands.data.uv_layers.remove(uv)
     poses.fold_sleeves(arm)
     gun = rig.load_weapon(KEY); top = visual_top(gun, KEY)
-    if KEY == 'p38':   # 원본의 슬라이드(윗몸)가 뒤로 0.83cm 물러나 있던 것 보정(다른 작업분 유지)
-        top.data.transform(Matrix.Translation((0, -.83, 0)))
+    # P38 슬라이드 후퇴 보정은 fpvm_lib.load_weapon(seat_p38_slide, 3.31cm)에서 함(2026-11-21)
     mag, mag_c, mag_bot, d_ins, OUT['mag'] = split_magazine(gun, KEY)
     transform = rig.gun_native_to_cam(PISTOL_POS, 2.5, 4., -3.)
     for prop in (gun, top, mag): prop.matrix_world = transform
@@ -87,17 +87,71 @@ def main():
     grip_y = {'p38': 5.5, 'p08': 6., 'pp': 4.6}[KEY]
     ax = {s: rig.hand_axes(arm, s) for s in 'LR'}; fax = {s: rig.finger_axes(arm, s, ax[s]) for s in 'LR'}
     controls = {}; WREST = {}   # WREST: 실제 손목 위치(두 손 자세). IK 목표(controls)는 팔 길이 밖일 수 있음(팔을 끝까지 뻗은 자세)
+    # 오른손 그립(2026-11-22 재작성, 6방향 렌더로 검증): 손바닥 = 손잡이 윗부분 오른쪽 면(슬라이드 바로 아래), 손가락 = 손잡이 축에 수직으로 앞쪽(앞면을 감쌈),
+    # 검지 = 방아쇠울 안 방아쇠 앞면(GRIP_R['trig']). 예전에는 손잡이 중간에 손가락을 거의 아래(-z .88)로 둬서 손이 탄창 바닥을 쥐고 검지도 손잡이를 감쌌음.
+    GRIP_R = {'p38': {'z': 0.0, 'guard': 2.6, 'trig': (0.0, -0.6, -0.45)}, 'p08': {'z': 0.6, 'guard': 3.2, 'trig': (0.0, 0.85, 1.1), 'mid_y': 4.6, 'axis': (0.0, 0.57, -0.82), 'flat': 0.8},
+              'pp': {'z': 0.3, 'guard': 1.8, 'trig': (0.0, -0.6, 0.3)}}[KEY]
+    GRIP_R.update(OPT.get('grip_r', {}))
+    NAT = np.vstack([np.array([v.co[:] for v in o.data.vertices]) for o in (gun, top, mag)])
+    def gsec(z):
+        for w in (0.7, 1.2, 2.0, 3.0):   # 성긴 메시(P08 손잡이는 큰 면 몇 개라 z -1~-2 에 정점이 없음): 잡힐 때까지 폭을 넓힘
+            S = NAT[(np.abs(NAT[:, 2] - z) < w) & (NAT[:, 1] > GRIP_R['guard'])]
+            if len(S) >= 6: break
+        return float(S[:, 1].min()), float(S[:, 1].max())
+    if 'mid_y' in GRIP_R:   # P08: 손잡이가 크게 눕고 메시가 성겨 단면 대신 옆모습에서 읽은 값
+        gf = gb = GRIP_R['mid_y'] - 0.3; g_axis = Vector(GRIP_R['axis']).normalized()
+    else:
+        gf, gb = gsec(GRIP_R['z']); gf2, gb2 = gsec(GRIP_R['z'] - 3.0)
+        g_axis = Vector((0.0, (gf2 + gb2) / 2 - (gf + gb) / 2, -3.0)).normalized()          # 손잡이 축(아래로)
+    g_fwd = (Vector((0, -1, 0)) - g_axis * Vector((0, -1, 0)).dot(g_axis)).normalized()  # 축에 수직, 앞쪽
+    g_fwd = (g_fwd + Vector((0, -1, 0)) * GRIP_R.get('flat', 0.0)).normalized()   # P08: 손잡이가 많이 누워 손가락을 수평 쪽으로(검지 뿌리를 방아쇠 높이로)
+    OUT['grip_r'] = {'section_y': [round(gf, 2), round(gb, 2)], 'axis': [round(c, 3) for c in g_axis], 'fwd': [round(c, 3) for c in g_fwd], **{k: v for k, v in GRIP_R.items()}}
     for side, sign in (('R', 1), ('L', -1)):
-        point = transform @ Vector((-sign * 9., grip_y - (0. if side == 'R' else 1.5), -2.2))
+        if side == 'R':
+            point = transform @ Vector((-9.0, (gf + gb) / 2 + 0.3, GRIP_R['z']))
+        else:
+            point = transform @ Vector((-sign * 9., grip_y - 1.5, -2.2))
         direction = (transform.to_3x3() @ Vector((sign, 0, 0))).normalized()
         contact = mesh.ray_cast(point, direction, .3)[0]
         if contact is None: contact = transform @ Vector((-sign * 1.05, grip_y, -2.2))
-        finger_dir = (transform.to_3x3() @ Vector((0, -.48, -.88))).normalized()
+        finger_dir = (transform.to_3x3() @ (g_fwd if side == 'R' else Vector((0, -.48, -.88)))).normalized()
         pole = Vector((-.04, -.20 * sign, -.28))
         poses.place_hand(arm, ik, side, ax[side], contact, finger_dir, direction, palm_off_cm=1.35, along=.42, elbow_hint_m=contact + pole)
         poses.calib_pole(arm, ik, side, ik['T_' + side].location, contact + pole)
         poses.seat_hand(arm, hands, ik, side, ax[side], mesh)
-        grip = poses.grip_fingers(arm, side, fax[side], mesh, r_cm=0.55, limits={'Thumb': (20, 25, 25), 'default': (76, 90, 64)})
+        grip = poses.grip_fingers(arm, side, fax[side], mesh, r_cm=0.55, limits={'Thumb': (20, 25, 25), 'default': (76, 90, 64)}, skip=('IndexFinger',) if side == 'R' else ())
+        if side == 'R':   # 검지: 지문 면(끝마디 70%)이 방아쇠 앞면 목표에 닿는 관절 각(굵게 -> 곱게 탐색)
+            tgt = transform @ Vector(GRIP_R['trig']); bns = rig.fbones('R', 'IndexFinger'); pbs = [arm.pose.bones[b] for b in bns]
+            bpy.context.view_layer.objects.active = arm; bpy.ops.object.mode_set(mode='POSE')
+            abd = Vector((0, 1, 0)).cross(Vector(fax['R'][bns[0]])).normalized()   # 첫마디 좌우 벌림 축(뼈 길이 축 × 굽힘 축)
+            SPREAD = [0.0]
+            def pad(a):
+                for j, (b, pb, ang) in enumerate(zip(bns, pbs, a)):
+                    pb.rotation_mode = 'QUATERNION'; q = Quaternion(fax['R'][b], math.radians(ang))
+                    pb.rotation_quaternion = (Quaternion(abd, math.radians(SPREAD[0])) @ q) if j == 0 else q
+                bpy.context.view_layer.update(); return arm.matrix_world @ pbs[2].head.lerp(pbs[2].tail, 0.6)
+            inv = transform.inverted()
+            def cost(a):
+                pp_ = pad(a); tip = inv @ (arm.matrix_world @ pbs[2].tail)
+                return (pp_ - tgt).length + 0.01 * max(0.0, (GRIP_R['trig'][1] - 0.4) - tip.y)   # 손끝이 방아쇠 앞면보다 0.4cm 넘게 앞으로 나가면 벌점(cm 당 1cm)
+            best = None
+            for sp in (-50, -40, -30, -20, -10, 0, 10, 20, 30, 40):
+              SPREAD[0] = sp
+              for a1 in range(-16, 72, 8):
+                for a2 in range(0, 100, 10):
+                    for a3 in range(0, 70, 10):
+                        d = cost((a1, a2, a3))
+                        if best is None or d < best[0]: best = (d, (a1, a2, a3), sp)
+            c0 = best[1]; SPREAD[0] = best[2]
+            for a1 in range(max(-20, c0[0] - 8), c0[0] + 9, 2):
+                for a2 in range(max(0, c0[1] - 10), c0[1] + 11, 3):
+                    for a3 in range(max(0, c0[2] - 10), c0[2] + 11, 3):
+                        d = cost((a1, a2, a3))
+                        if d < best[0]: best = (d, (a1, a2, a3), best[2])
+            pad(best[1]); bpy.ops.object.mode_set(mode='OBJECT')
+            for b, ang in zip(bns, best[1]): grip[b] = float(ang)
+            INDEX_SPREAD = (bns[0], abd.copy(), float(best[2]))
+            OUT['index_trigger'] = {'angles': best[1], 'spread': best[2], 'miss_cm': round(best[0] * 100, 2)}
         controls[side] = (ik['T_' + side].location.copy(), ik['T_' + side].rotation_quaternion.copy(), pole, grip)
         WREST[side] = (arm.matrix_world @ arm.pose.bones['%s wrist' % poses.SIDE[side]].head).copy()
     grip_one = dict(controls['R'][3])
@@ -175,6 +229,7 @@ def main():
                 if err.length < 2e-4: break
                 ik['T_' + s].location = ik['T_' + s].location + err; bpy.context.view_layer.update()
         poses.apply_fingers(arm, fax['R'], fing_R or gripR); poses.apply_fingers(arm, fax['L'], fL)
+        ib, iax, isp = INDEX_SPREAD; pbi = arm.pose.bones[ib]; pbi.rotation_quaternion = Quaternion(iax, math.radians(isp)) @ pbi.rotation_quaternion   # 검지 첫마디 벌림(방아쇠 쪽)
         arm.pose.bones['VM_Gun'].matrix = D @ rest['VM_Gun']; bpy.context.view_layer.update()
         acc = Matrix.Translation((-.008 * ext, 0, .003 * ext))
         if KEY == 'p08': acc = Matrix.Translation(top_pivot) @ Matrix.Rotation(math.radians(-18 * ext), 4, 'Y') @ Matrix.Translation(-top_pivot)
@@ -183,8 +238,8 @@ def main():
         Mw = mag_W if mag_W is not None else D @ M0
         arm.pose.bones['VM_Mag'].matrix = Mw @ M0.inverted() @ rest['VM_Mag']
         bpy.context.view_layer.update()
-    LON = {'H': 0.0, 'S': 0.0, 'A': 1.0}; DBG = {}
-    def fingR(s): return controls['R'][3] if s == 'A' else grip_one
+    LON = {'H': 0.0, 'S': 0.0, 'A': 0.0}; DBG = {}   # 정조준도 오른손 한 손(2026-11-22, 사용자 지정): 왼손은 쉬는 자세
+    def fingR(s): return grip_one
     clips = {}
     for s in 'HSA':
         def idle(t, s=s):
@@ -250,6 +305,25 @@ def main():
         pose_state(D, L_W=LW, fing_L=fl, fing_R=grip_one, mag_W=Mw, slide=s)
     clips['Reload'] = (reload, RL_LEN)
     OUT['clips'] = {k: v[1] for k, v in clips.items()}
+    if MODE == 'gripcheck':   # 오른손 그립 6방향(총 기준 위·아래·왼·오른·앞·뒤) 정사영 확대 -> Data/fpvm_<key>_grip_<자세>_<방향>.png
+        for o in CA: o.hide_render = True
+        for m in bpy.data.materials: m.diffuse_color = (0.95, 0.72, 0.6, 1) if ('Skin' in m.name or 'Outfit' in m.name) else (0.25, 0.27, 0.3, 1)
+        sc = bpy.context.scene; sc.render.engine = 'BLENDER_WORKBENCH'; sc.display.shading.light = 'STUDIO'; sc.display.shading.color_type = 'MATERIAL'
+        sc.display.shading.show_xray = False; sc.render.resolution_x = sc.render.resolution_y = 700; sc.world = sc.world or bpy.data.worlds.new('w')
+        cam = bpy.data.objects.new('GripCam', bpy.data.cameras.new('GripCam')); sc.collection.objects.link(cam); sc.camera = cam; cam.data.type = 'ORTHO'; cam.data.ortho_scale = OPT.get('scale', 0.2); cam.data.clip_end = 5
+        R3 = transform.to_3x3(); gx = (R3 @ Vector((1, 0, 0))).normalized(); gy = (R3 @ Vector((0, 1, 0))).normalized(); gz = (R3 @ Vector((0, 0, 1))).normalized()
+        views = {'left': (gx, gz), 'right': (-gx, gz), 'top': (gz, -gy), 'bottom': (-gz, -gy), 'front': (-gy, gz), 'back': (gy, gz)}
+        files = []
+        for st, fn in (('H', clips['Idle'][0]), ('A', clips['IdleA'][0])):
+            fn(0.0); bpy.context.view_layer.update()
+            c = transform @ Vector((0.0, grip_y - 1.0, -1.5))
+            for nm, (d, up) in views.items():
+                cam.location = c + d * 0.6
+                z = d.normalized(); x = up.cross(z).normalized(); y = z.cross(x)   # 카메라 -Z 가 보는 방향(-d)
+                cam.matrix_world = Matrix((x, y, z)).transposed().to_4x4() @ Matrix.Identity(4); cam.location = c + d * 0.6
+                sc.render.filepath = str(Path(rig.D) / 'Data' / f'fpvm_{KEY}_grip_{st}_{nm}.png'); bpy.ops.render.render(write_still=True); files.append(sc.render.filepath)
+        OUT['grip_renders'] = files
+        json.dump(OUT, open(Path(rig.D) / 'Data' / f'fpvm_{KEY}_gripcheck.json', 'w'), indent=1, default=str); print('GRIPCHECK', len(files)); return
     if MODE in ('preview', 'rlpreview'):
         for m in bpy.data.materials: m.diffuse_color = (0.85, 0.7, 0.62, 1) if 'Skin' in m.name else (0.25, 0.3, 0.55, 1) if 'Outfit' in m.name else (0.3, 0.3, 0.32, 1)
         mag.data.materials.clear(); mm = bpy.data.materials.new('MagPreview'); mm.diffuse_color = (0.75, 0.45, 0.15, 1); mag.data.materials.append(mm)
@@ -285,6 +359,7 @@ def main():
         if MODE == 'export':
             arm.animation_data.action = actions['IdleA']   # 메시 기준 자세 = 정조준(두 손)
             for o in (hands, gun, top, mag): o.select_set(True)
+            for o in CA: o.select_set(True)   # 병과 캐릭터 7종 1인칭 팔
             bpy.ops.export_scene.fbx(filepath=str(path), use_selection=True, object_types={'ARMATURE', 'MESH'}, axis_forward='-Y', axis_up='Z', add_leaf_bones=False,
                                      armature_nodetype='NULL', bake_anim=False, mesh_smooth_type='FACE', path_mode='STRIP')
             bpy.ops.object.select_all(action='DESELECT'); arm.select_set(True)

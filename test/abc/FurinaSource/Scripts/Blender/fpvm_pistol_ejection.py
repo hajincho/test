@@ -14,7 +14,6 @@ EJECT = {'p38': (0.85, 0.25, 0.45), 'p08': (-0.30, 0.35, 0.85), 'pp': (-0.85, 0.
 OUT = {}
 for key in ('p38', 'p08', 'pp'):
     gun = L.load_weapon(key); top = visual_top(gun, key)
-    if key == 'p38': top.data.transform(__import__('mathutils').Matrix.Translation((0, -.83, 0)))
     P = np.array([v.co[:] for v in gun.data.vertices]); T = np.array([v.co[:] for v in top.data.vertices]); A_ = np.vstack([P, T])
     ymin = A_[:, 1].min(); breech_y = ymin + BARREL_MM[key] / 10.0; port_y = breech_y + 0.8
     sl = P[P[:, 1] < ymin + 0.3]; bore_z = float((sl[:, 2].min() + sl[:, 2].max()) / 2); bore_x = float((sl[:, 0].min() + sl[:, 0].max()) / 2)

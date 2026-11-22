@@ -1245,7 +1245,7 @@ Control Rig이 들어 올리는 회전은 컴포넌트 +X축 기준 음수 각�
 `powershell -File Scripts/run_ue_probe.ps1 -ScriptPath <py> -Tag <태그> -Done <결과 json>`
 이 명령은 열려 있는 에디터를 닫으니, 먼저 저장해야 한다.
 1. **Blender 내보내기**(`Scripts/Tools/fpvm_export_all.sh`): `A`와 `B`를 병렬로 돌린 뒤 `C`를 돌린다.
-   - A: Kar98k(+ZF39/ZF41), 권총 3종(`fpvm_pistols2.py`)
+   - A: Kar98k(+ZF39/ZF41), 권총 3종(`fpvm_pistols2.py`), 판처파우스트·판처슈렉(`fpvm_launchers.py`)
    - B: G43(+ZF4·`magreload`), MP40/MP38/StG44
    - C: 낱발 탄, 총구 위치(`fpvm_muzzle_points.py`), 정조준 변환(`fpvm_ads_calc.py all`), 연기 덩어리, 사격 효과 수치(`gen_hist_fx.py`)
    - 예전 `fpvm_pistols.py`(두 손 클립 3개)는 더 쓰지 않는다. 일괄 스크립트도 `fpvm_pistols2.py`로 바꿨다.
@@ -1263,7 +1263,11 @@ Control Rig이 들어 올리는 회전은 컴포넌트 +X축 기준 음수 각�
    6. 정조준 값 갱신(정조준 변환이 바뀌었을 때만): `lyra_fpvm_ads_update.py`
    7. 조준경 화면 속 화면, 연기 끄기, 권총 재장전 길이 2.5초·구도: `lyra_scope_pip.py`
       - 에셋만 다시 만들 때는 `lyra_scope_glass_flag.py`를 쓴다.
-4. **확인:** `lyra_fx_capture.py <all|stance|v3|무기+무기>` → `Data/fx_*.png`
+   8. 권총 탄피·견착: `lyra_pistol_cases.py` → `lyra_pistol_shoulder_reach.py`
+   9. 대전차 화기 + 소총 영점: `lyra_launchers.py`(에셋·BP·HUD 모두) → `lyra_launchers_fix1.py`(적중 기록, 이름으로 부르는 영점 이벤트)
+   10. 십자선 복구 + P38 슬라이드 정위치: `lyra_crosshair_p38.py`
+   11. 병과 캐릭터 7종 + 무기창 병과 버튼: `lyra_class_fp_head.py` → `lyra_classes.py`(Blender `build_class_on_furina.py -- <키> build` 7종 먼저)
+4. **확인:** `lyra_fx_capture.py <all|stance|v3|lch|zero|무기+무기>` → `Data/fx_*.png`
 - **주의:**
   - 3번 스크립트들은 노드 이름(접두사 `HFX_`, `STC_`, `PIP_` 등)으로 서로를 찾아 이어 붙인다. 순서를 바꾸면 찾을 노드가 없어 실패한다. 이미 설치된 BP에 다시 돌리면 대부분 'already installed'로 건너뛴다.
   - 연기(`BP_HistSmoke`)는 7번에서 실행선을 끊어 꺼 두었다. 다시 켜려면 `HFX_NSShell` 다음에 `HFX_SmokeSpawn`을 다시 이으면 된다.
@@ -1349,3 +1353,127 @@ Control Rig이 들어 올리는 회전은 컴포넌트 +X축 기준 음수 각�
 - **결과:** 손과 권총이 눈에서 약 33cm로 멀어지고, 소매를 포함한 아래팔이 화면 아래에서 가운데까지 길게 보인다.
 - **확인:** PIE `lyra_fx_capture.py psh`, `Data/psh_compare.jpg`(위 = 전, 아래 = 후).
 - **다시 만들기 순서:** 3번 BP 설치의 7번(`lyra_scope_pip.py`) 다음에 `lyra_pistol_cases.py` → `lyra_pistol_shoulder_reach.py`를 돌린다.
+
+## 판처파우스트·판처슈렉 + 휠 영점 + 소총 영점 300/200 m (2026-11-21)
+- **사용자 지정:**
+  - 판처파우스트는 탄두가 날아가므로 관과 탄두를 나눈다.
+  - 정조준 영점은 마우스 휠로 올리고 내린다. 비조준 때는 가장 낮은 영점을 쓴다.
+  - 판처슈렉은 파일 안의 탄두(로켓)를 쓰고 고증을 지킨다.
+  - 저격총 정조준 영점은 300 m, 나머지는 특이한 경우가 아니면 200 m다.
+- **근거:** `Motion/DE_FP_MOTION_RESEARCH.md` 7, 7-1, 10절. 당시 자료는 TM-E 30-451(1945)이다.
+- **Blender**(`Scripts/Blender/fpvm_launchers.py -- <panzerfaust|panzerschreck> <pose|ads|anim|export>`):
+  - 판처파우스트(Pzf 60):
+    - 관 입구(y −27.6) 앞 덩어리(탄두·꼬리 마개·Korn)를 `VM_Warhead` 뼈로 떼었다. 가늠자 판은 `VM_Leaf`(접기·세우기)다.
+    - 가늠자 구멍 30/60/80 m는 탄두 45 m/s 포물선 발사각(4.18°, 8.45°, 11.40°)에 맞게 판 높이를 다시 매핑했다. 원본은 30 m 구멍이 Korn보다 낮았다.
+    - 정조준 화면 가운데에서 Korn 끝이 V 홈 안에 보인다(`Data/lch_pzf_korn.jpg`).
+  - 판처슈렉(RPzB 54):
+    - 원본은 총구가 +Y라 Z축으로 180° 돌렸다. 원본 안 로켓 면(`Rocket_001`)은 지우고, 단품 로켓 모델(65 cm)을 같은 자리에 `VM_Rocket` 뼈로 넣었다.
+    - 방아쇠 앞 사각 고리는 장전 레버(`VM_Lever`)로 정했다. 조준점은 방패 창(사수 왼쪽) 가운데다.
+  - 영점별 정조준 변환은 같은 영점에서 관을 발사각만큼 든 자세다. `Data/fpvm_launchers_ads.json`에 쓰고, `fpvm_ads_calc.py all` 이 `fpvm_view_alignment.json`에 `<키>_0~2`로 합친다.
+  - 애니 4개:
+    - Idle 4 s, IdleEmpty 4 s(탄두·로켓 없음).
+    - Fire: Pzf 1.0 s, Pzs 0.8 s. 무반동이라 작게 들썩인다.
+    - Reload: Pzf 3.0 s(빈 관 내림 → 새 관 → 가늠자 세움), Pzs 4.0 s(견착 유지 → 로켓이 뒤에서 들어와 걸림 → 배선·신호 흔들림 → 왼손 장전 레버).
+  - 판처파우스트 발사체 메시 `FBX/FPVM/SM_FPVM_PzfWarhead.fbx`: 탄두에 관 안에 있던 꼬리대와 날개 4장을 단순한 형상으로 붙였다.
+- **언리얼**(`Scripts/Unreal/lyra_launchers.py`, 노드 접두사 `LCH_`):
+  - 에셋:
+    - `/Game/Furina/FPVM/<PANZERFAUST|PANZERSCHRECK>/`에 메시와 애니 4개를 넣었다.
+    - 소켓: `VM_Muzzle`(관 앞 끝), `VM_Launch`(발사 위치), `VM_Rear`(관 뒤 끝, 후폭풍).
+  - 발사체 `/Game/Furina/FP/BP_FurinaPzfWarhead`(45 m/s), `BP_FurinaPzsRocket`(110 m/s, 연기 꼬리):
+    - `BP_FurinaBullet`을 복제했다. 직격 피해 300(GAS)은 그대로 쓰고, 공기 저항과 도탄은 껐다.
+    - 적중하면 폭발(`NS_Grenade_Explosion`)과 소리가 나고, 반경 2.5 m 안 다른 폰에 120 피해를 준 뒤 사라진다.
+    - 쏜 사람(Owner)과는 부딪히지 않는다.
+  - 캐릭터 BP:
+    - 무기 키 분기: 기관단총 다음, 권총 앞. 탄은 1발이다. 장착할 때 탄이 없으면 빈 대기 애니를 쓴다.
+    - 사격: 소총탄 대신 `VM_Launch`에서 발사체를 낸다. 방향 = 카메라 + 위로 발사각(정조준 = 고른 영점, 비조준 = 가장 낮은 영점). 쏜 뒤 대기 애니는 빈 것이고, 관 뒤 끝에 후폭풍 화염이 난다.
+    - 재장전: 재장전 애니가 끝나면 탄이 있는 대기 애니로 돌아온다.
+    - 휠: 입력 `IA_FurinaZeroUp/Down`(MouseScrollUp/Down, `Default_IMC`)으로 영점 칸 0~2를 바꾸고 정조준 변환을 교체한다. 정조준 보간 때문에 관이 부드럽게 들린다. 같은 동작을 커스텀 이벤트 `FurinaZeroUp/Down`으로도 부를 수 있다.
+  - HUD: 대전차 화기면 탄 수 옆에 `ZERO 60m`를 표시한다.
+- **소총 영점**(같은 스크립트):
+  - 정조준 조준점 = 카메라 + 카메라 앞 × 영점 거리. 예전에는 숨긴 3인칭 소총 가늠자에서 50 m였다.
+  - 영점 거리: 저격총(`kar98k_zf39`, `kar98k_zf41`, `g43_zf4`) 300 m, 나머지 200 m.
+  - 권총은 특이한 경우로 보고 25 m로 정했다. 고정 가늠자의 근거리 권총이라 200 m 영점은 맞지 않는다고 판단했다.
+  - 3인칭 M4는 예전 50 m를 그대로 둔다. 낙차 보정 상한은 200 → 400 m로 올렸다.
+- **확인(PIE):**
+  - `lyra_fx_capture.py lch`(`Data/lch_pzf_pie.jpg`, `lch_pzs_pie.jpg`):
+    - 영점 칸이 0 → 1 → 2(2에서 멈춤) → 1로 바뀌고, 정조준 회전 차이가 4.27°·2.95°(Pzf), 1.17°·1.17°(Pzs)다.
+    - 쏘면 탄 1 → 0이 되고, 대기 애니가 빈 것으로 바뀐다.
+    - 탄두 발사각 측정값: 정조준 60 m에서 8.4°(목표 8.45°), 비조준에서 약 5.0°(목표 4.18°). 0.8° 차이는 흔들림 때문으로 추정한다.
+    - 폭발, 재장전 뒤 탄 1발이 된다.
+  - 실제 마우스 휠(화면 조작, `lchlive`): 0 → 1 → 2 → 2 → 1 → 0으로 바뀌었다. 정조준 시야각 60°는 휠로 바뀌지 않았다.
+  - `zero`(쏜 순간 탄 방향, 카메라 기준 위로):
+    - MP40(200 m) 0.088°(계산 0.089°), P38(25 m) 0.145°(계산 0.153°).
+    - Kar98k(200 m) 0.109°, 저격총(300 m) 0.149°(계산 0.118°).
+    - 0.02~0.03° 차이는 원래 있던 탄 퍼짐(같은 기록에서 좌우 ±0.03°)으로 추정한다.
+- **남은 것 / 한계:**
+  - HUD의 `ZERO` 글자는 고해상도 캡처에 HUD가 찍히지 않아 화면으로 확인하지 못했다.
+  - 판처슈렉 가늠쇠 눈금 모양은 자료가 없다. 장전 레버 부품과 장전 순서도 추정이다.
+  - 탄두와 로켓은 기본 맵의 포털 충돌 캡슐(`B_TeleportToUserFacingExperience`)에도 맞아 터진다.
+  - 판처파우스트 비조준은 손이 화면 아래라 거의 안 보인다.
+  - 판처슈렉 방패가 비조준에서도 화면 아래 절반을 가린다(실물 크기).
+  - 3인칭은 아직 M4다.
+
+## 십자선 복구 · P38 슬라이드 정위치 (2026-11-22)
+- **에디터를 끄지 않고 실행:** `python Scripts/Tools/ue_remote_run.py <스크립트.py> [인수]` 로 열려 있는 에디터에 파이썬을 보낸다(프로젝트 설정 `bRemoteExecution=True`). PIE 중이면 에셋 스크립트가 'End PIE first' 로 멈춘다.
+- **십자선(`lyra_crosshair_p38.py`):** 독일 무기(1인칭 뷰모델)를 들면 `lyra_fpvm_primary.hide_weapon_hud` 가 무기 HUD 를 통째로 막아 조준경이 아닐 때 아무것도 그리지 않았다. `ScopeView_HasGlass` 의 else → `LCH_HudDraw`(영점 글자) → `K2Node_FPAH_IsAds`(정조준이 아니면 십자선)로 이었다. 옛 M4 탄수 틀은 계속 숨김. 확인: PIE 에서 M4·P38 비조준 화면 가운데 십자선(`Data/look_p38_hip.png`).
+- **P38 슬라이드:** 원본 모델이 슬라이드를 3.31cm 당긴(후퇴) 상태였다(슬라이드 앞 y -1.74 > 프레임 앞 -5.05, 뒤끝이 공이치기를 덮음). `fpvm_lib.seat_p38_slide` 가 불러올 때 슬라이드에 붙은 부품(윗몸·가늠자·안전장치·핀)을 앞으로 옮긴다(예전 0.83cm 보정 두 곳은 지움). 가늠자가 앞으로 간 만큼 눈-가늠자 거리를 35.31cm 로 늘려 정조준 화면 구도는 그대로(`fpvm_ads_calc.py`). P38 메시·클립 13개·`VM_Muzzle`/`VM_CaseFX` 소켓·정조준 상수를 다시 넣었다.
+  - 참고: P38/P08 메시의 소켓 목록에 같은 이름이 여러 번 들어 있다(전부터 있었고 다시 가져오며 늘었다). 첫 번째 것이 쓰이므로 동작에는 문제없다.
+
+## 제3제국 병과 캐릭터 7종 (2026-11-22)
+- **받은 모델**(`Downloads/제3제국/<병과> <키>cm.zip`, 원신 MMD PMX, 키 = 의상 포함 발바닥~맨 위, 사용자 지정): 장교 진 173, 보병 미카 165, 돌격병 케이아 184, 대전차병 클레 125, 중화기병 노엘 166, 저격수 엠버 163, 기갑병 유라 171.
+  - 원본 사본: `FBX/Classes/source/<키>/`(압축 안 이름이 Shift-JIS 라 그 인코딩으로 풀었음). **사용 규칙: 재배포·상업 이용·18금 등 금지(miHoYo 저작권)** → 공개 저장소에 올리지 말 것.
+- **Blender `build_class_on_furina.py -- <키> [build|preview]`** → `FBX/Classes/<키>_cm.fbx`, `Data/class_<키>_build.json`, 미리보기 `Data/class_<키>_*.png`, `class_all_rest_front.jpg`.
+  - PMX 는 `Scripts/Blender/pmx_reader.py`(직접 만든 PMX 2.x 파서)로 읽는다(Blender 5.2 에 MMD 가져오기 없음). (x, z, y) 축 변환 + 면 감김 뒤집기.
+  - 원래 MMD 가중치를 표준 뼈 이름(下半身·上半身·首·頭·左腕·左ひじ·左手首·左足(D)·指… ) → 푸리나 뼈로 합침. 머리카락·치마 등 물리 뼈는 가장 가까운 조상 뼈로(흔들림 없음).
+  - 관절(몸 21 + 손가락 30)은 각 모델 PMX 뼈 위치, 뼈 방향은 푸리나와 같게 돌려 굳힘 → 언리얼 `SK_Furina_Skeleton` 의 이 51개 뼈 이동 리타깃 = Skeleton, Hips = AnimationScaled 로 푸리나 애니메이션을 각 몸 비율로 재생.
+  - 숨은 재질(알파 0)과 MMD 반사 덧칠 층(이름 끝 `+`, spa/sph 텍스처)은 뺀다. 불투명으로 그리면 머리가 검게 덮였다(미카 `髮+`).
+- **언리얼 `lyra_classes.py [import|retarget|pawn|menu|delete|all]`**(열린 에디터에 `ue_remote_run.py` 로 보냄): `/Game/Furina/Classes/<Key>/SK_Class_<Key>`, `T_<Key>_NN`(색 텍스처로 고정: 유라 푸른 옷 텍스처가 노멀맵으로 자동 판정돼 연두색으로 보였음), `MI_<Key>_MatNN`(부모 `M_Furina_Opaque`).
+  - 캐릭터 BP: 이벤트 `FurinaLookOfficer/Infantry/Assault/AntiTank/Heavy/Sniper/Armor` = 메시 교체 → 재질 덮어쓰기 비우기(라이라가 시작할 때 현재 재질로 만든 동적 인스턴스가 남지 않게) → `FurinaLook` 저장. 1인칭이고 외형이 푸리나가 아니면 `Head` 뼈 숨김(`lyra_class_fp_head.py`).
+  - **기본 외형 = 보병(미카)**. 푸리나는 에셋(`SK_Furina` 등)과 이벤트 `FurinaLookFurina` 만 남기고 버튼은 없앴다(비활성, 나중에 쓸 때 이 이벤트를 부르면 됨).
+  - 무기창(Tab) '병과 (외형)' 줄: 장교·보병·돌격병·대전차병·중화기병·저격수·기갑병 7개 모두 활성(툴팁에 캐릭터·키).
+  - 받은 군인 모델(`ww2-german-wehrmacht-soldier`)은 에셋·원본·스크립트 모두 지웠다.
+- **확인(PIE):** 시작 = 보병, 7종 이벤트로 3인칭 모습(`Data/class_pie_sheet.jpg`), 1인칭 머리 숨김(`Data/cls_fp.jpg`). 경계 상자 높이: 장교 173.2, 보병 164.6, 돌격병 184.1, 대전차병 125.0, 중화기병 166.3, 저격수 163.1, 기갑병 171.2 cm.
+  - 실제 마우스로 병과 버튼을 누르는 것은 확인하지 못했다(이벤트 직접 호출로 확인).
+  - 한계: 1인칭 뷰모델 팔은 여전히 푸리나 소매. 치마·머리카락 물리 흔들림 없음(조상 뼈에 붙음). 죽고 다시 나오면 기본(보병). 3인칭 총 잡는 손은 푸리나 팔 길이 기준 컨트롤 릭이라 캐릭터별로 어긋날 수 있다. 표정(모프)은 가져오지 않았다.
+
+## 조준경 정조준 감도 (2026-11-22)
+- **`lyra_scope_sensitivity.py`:** 조준경으로 정조준할 때(`FurinaScopeActive`: 조준경 무기 + 정조준 + 재장전 아님) 마우스 회전량 × 1/배율. 렌즈 속 화면(시야각 2·atan(tan30°/배율))이 기존 정조준(60°)과 같은 속도로 움직인다. ZF39·ZF4(4배) 0.25배, ZF41(1.5배) 0.667배, 조준경 없는 무기와 비조준은 그대로.
+  - 노드: `SENS_One`, `SENS_InvZoom`, `SENS_Scale`, `SENS_MulYaw`/`SENS_MulPitch`(IA_Look → AddControllerYaw/PitchInput 의 Val 앞).
+  - 확인(PIE): Kar98k ZF39 정조준 → 배율 4, 감도 0.25 / ZF41 → 1.5, 0.667 / Kar98k(가늠자) → 1.0. 실제 마우스로 움직여 본 것은 아니다(변수 값으로 확인).
+
+## 병과 캐릭터 1인칭 팔 · 3인칭 몸 비율 · 대일본제국 7종 · 판처파우스트 60 재질 (2026-11-22)
+- **1인칭 팔(14종):** 리더 포즈로 별도 팔 메시를 따라가게 하는 방식은 이 뷰모델에서 팔이 축소·엇나가 버림. `fpvm_lib.class_arm_objects` 가 모든 1인칭 무기 메시(14개)에 병과 캐릭터 14종 팔을 같은 팔 뼈대로 함께 넣는다(재질 슬롯 `CA<Key>_MatNN`, 무기 스크립트 5개가 load_arms 직후 만들고 메시 내보낼 때 같이 선택, `fpvm_receiver_interior.export_mesh_only` 도 포함).
+  - 캐릭터 팔은 뼈마다 '푸리나 관절 + (정점 - 캐릭터 관절) × 길이비'로 1인칭 팔 길이에 맞춤(무기 쥐는 손 위치 그대로). 큰 소매는 팔 축에서 5cm(위팔)·3.8cm(아래팔, 손목 앞 소맷부리 포함) 밖을 당김(`SLEEVE_MAX_CM`, 손가락 제외).
+  - 언리얼: `lyra_class_fp_arms2.py`(슬롯마다 `MI_<Key>_MatNN`, 시점 갱신마다 (외형 + 무기 메시)가 바뀌면 지금 외형 팔 슬롯만 보이고 나머지·푸리나 팔은 `M_FPVM_Hidden`, 이 재질은 스켈레탈 메시 사용을 켬). 무기 메시를 다시 가져온 뒤에는 `lyra_class_fp_arms2.py slots` 와 `lyra_pzf60_material.py` 를 다시 실행.
+  - 시작: BeginPlay → `LOOK_StartLook`(보병) → 타이머(`FMG_Timer`). 정리 중 이 연결이 끊겨 타이머가 멈췄던 것을 복구.
+- **3인칭 몸 비율(수정·확인):** 원인 = 애니메이션 뼈 이동이 푸리나 길이로 풀리고, `CR_FurinaSecondary` 의 다리·팔·손가락 IK 길이가 푸리나 값(39.40/41.22, 21.14/18.02cm 등)으로 고정 -> 클레는 다리가 늘어 무릎이 굽고 발이 바닥 아래로.
+  - 캐릭터마다 자기 뼈대 `SKM_<Key>_Skeleton`(푸리나 뼈대와 호환, Hips = AnimationScaled; `lyra_class_skeletons.py`), ABP 컨트롤 릭 노드 'Set Initial Transforms From Mesh' 켬(`lyra_abp_cr_refpose.py`).
+  - 컨트롤 릭 맨 앞(`CL_` 노드): 몸·손가락 뼈 50개를 '부모 지금 위치 + 부모 지금 회전 × 부모 기준 회전⁻¹ × (자식 기준 위치 - 부모 기준 위치)'로(이 계층은 Hips 에 100배 크기가 있어 로컬 값을 쓰면 몸이 접힘), IK 길이 = 기준 자세 관절 거리, 경사 게이트 입력 = 엉덩이 높이 / (메시 Hips 높이 / 92.76). 엉덩이 높이 자체는 뼈대의 AnimationScaled 에 맡김(컨트롤 릭에서 또 곱하면 두 번 줄어듦).
+  - 순서: `lyra_cr_class_lengths.py` → `lyra_cr_class_iklen.py` → `lyra_cr_class_local_fix.py` → `lyra_cr_class_global_fix.py`(자동 재컴파일 끄고 한 번에; 켠 채로는 에디터가 멈춤) → `CL_HipsScaled.Factor` = 1. 보정 전 백업: 스크래치 `CR_FurinaSecondary.before_classlen.uasset`.
+  - 확인(PIE, 서서): 발끝 높이가 모든 캐릭터 7~13cm(푸리나 8.4)로 같은 바닥, 클레 엉덩이 63.7·머리 95cm 등 각자 비율(`Data/legs_sheet.jpg`).
+- **대일본제국 7종:** 장교 아야토 187, 보병 토마 186, 돌격병 헤이조 166, 대전차병 요이미야 163, 중화기병 라이덴 177, 저격수 사라 178, 기갑병 이토 190(의상 포함). Blender `build_class_on_furina.py -- jp_<병과>`(PMX 가 여러 개면 가장 큰 것 = 캐릭터), 언리얼 `lyra_classes_jp.py`(자기 뼈대 메시 `SKM_Jp*`, 이벤트 `FurinaLookJp*`, 무기창 '병과 (외형) - 대일본제국' 줄 `Look_8..14`). 미리보기 `Data/class_jp_*.jpg`, 1인칭 `Data/fparms_jp_sheet.jpg`.
+- **판처파우스트 60:** 받은 `panzerfaust-60.zip` 의 모델은 이미 1인칭 판처파우스트에 들어가 있던 파일과 같음(`fpvm_panzerfaust60.py`, 체크섬 동일). 비어 있던 재질 슬롯 `Panzerfaust60Surface` 에 받은 텍스처 4장으로 `MI_DE_panzerfaust60`(부모 `M_FurinaWeaponPBR`)을 만들어 1인칭 메시와 발사체 탄두에 지정(`lyra_pzf60_material.py`).
+- **머리카락·망토 흔들림(남음):** `pmx_reader.py` 가 강체·조인트를 읽음(물리 뼈 34~275개/캐릭터). 이 뼈들을 캐릭터 뼈대에 살리고, 메시별 물리 에셋 + ABP 의 Rigid Body 노드(또는 컴포넌트 물리)로 흔들림을 붙이는 단계가 남음.
+
+## 권총 그립 재작성 + 정조준 한 손 (2026-11-22)
+- **문제(6방향 렌더로 확인):** 손이 손잡이 아래쪽(탄창 바닥 근처)을 쥐고 손가락이 탄창 밑을 감쌌으며, 검지도 손잡이를 감싸 방아쇠울 밖에 있었다. 원인은 손바닥을 손잡이 중간에 두고 손가락 방향을 거의 아래(-z 0.88)로 잡은 것과 검지를 다른 손가락처럼 계산한 것.
+- **수정(`fpvm_pistols2.py`, `GRIP_R`):**
+  - 손바닥: 손잡이 윗부분 오른쪽 면(높은 그립). 손가락: 손잡이 축(단면 두 높이로 계산)에 수직인 앞쪽 -> 가운데·약지·새끼가 방아쇠울 아래 손잡이 앞면을 감쌈, 엄지는 프레임 왼쪽 면.
+  - 검지: 감싸기 계산에서 빼고, 지문 면(끝마디 60%)이 방아쇠 앞면 목표에 닿는 관절 각 + 첫마디 좌우 벌림을 탐색(손끝이 방아쇠 앞으로 0.4cm 넘게 나가면 벌점). 결과 빗나감: P38 0.14cm, PP 0.27cm, P08 0.63cm.
+  - P08 은 손잡이가 크게 눕고 메시가 성겨(z -1~-2 에 정점 없음) 단면 대신 옆모습에서 읽은 값(손잡이 중심 y 4.6, 축 (0, 0.57, -0.82))과 손가락 방향을 수평 쪽으로(`flat` 0.8).
+  - 정조준(A)도 오른손 한 손(사용자 지정): 왼손은 쉬는 자세, 오른손 손가락은 비조준과 같은 그립.
+- **검증:** `blender ... fpvm_pistols2.py -- <p38|p08|pp> gripcheck` -> `Data/fpvm_<key>_grip_<H|A>_<left|right|top|bottom|front|back>.png`, 묶음 `Data/grip_all_H.jpg`, `grip_all_A.jpg`. 게임 화면 `Data/pgrip_game.jpg`(비조준/정조준).
+- 언리얼 반영: `lyra_hist_fx.pistols` + `sockets`(권총만), `lyra_pistol_cases.py`, `lyra_class_fp_arms2.py slots`, `lyra_fpvm_ads_update.py`.
+- 참고: 에디터가 엔진 플러그인 단언(`AsyncGameplayMessageSystem` OuterWorld.IsValid)으로 한 번 충돌해 다시 켰다(작업 스크립트와 무관).
+
+## 손·손가락 ↔ 총 정합 1cm 이내 작업 (2026-11-22, 진행 중)
+- **측정 도구:** `Scripts/Blender/fpvm_grip_audit.py -- <SK> <클립> [render] [hand=Body|Arms_<Key>] [frames=N]` — 손가락 마디(가운데·끝)·손바닥의 총 표면 틈/파고듦(안·밖은 6방향 광선, 면 법선은 모델마다 뒤집혀 있어 안 씀), 손목-총 흔들림, 6방향 렌더. 전체: `Scripts/Tools/grip_audit_all.sh [render]`(무기 10 × 손 15) → `grip_audit_summary.py`.
+- **찾은 원인과 수정:**
+  1. 병과 팔(Arms_*)이 휴식 자세 굳히기에서 빠져 손목 10~40cm·손가락 4~11cm 어긋남(게임에서 '흐느적') → `fpvm_lib.bake_arms_rest(arm, [body] + CA)`(소총·기관단총·대전차 4개 스크립트).
+  2. 손가락 자동 쥐기가 뼈 선만 보고 손끝이 닿으면 멈춰 손가락이 펴진 채 남음 → 피부 정점 기준 풀이 `fpvm_grip.py`(세 관절 격자+좌표 하강, 파고듦 벌점, 지나가는 길 검사). `fpvm_lib2.grip_fingers` 가 자동으로 씀(`FPVM_GRIP_SEG=1` 이면 예전 방식). 뿌리 관절 한계 95°, 엄지 35/45/50°.
+  3. 소총·기관단총·판처슈렉 오른손 검지 → 방아쇠울 자동 찾기 `fpvm_grip.trigger_target`(손가락 벌림 `<뼈>@spread` 키, 손끝 넘어감 벌점).
+  4. 기관단총 오른손을 2cm 올리고 손가락을 손잡이 축에 수직으로(`SPEC fR`), 왼손 높이 MP40 5.5 / MP38 3.25(`hold_dz`), G43 왼손 `yL` 8.0.
+  5. 애니 굽기 때 IK 목표 보정 3번 → 12번(손목이 1.5~2.5cm 덜 닿았음, 판처슈렉에서 확인).
+- **언리얼 쪽 확인:** 클립 압축으로 손이 총 위에서 미끄러지는 양 최대 0.21cm(`Scripts/Unreal/lyra_fpvm_hand_drift.py`) — 원인 아님.
+- **마지막 측정(5번 수정 전):** Kar98k·G43·MP40·StG44·P38·P08·PP·판처파우스트 손 15개 모두 1cm 이내. MP38 왼손 검지 가운데 마디(병과 6종 1.0~1.34cm), 판처슈렉(5번 원인)은 남음.
+- **남은 일(다음에 이어서):** 5번 반영한 내보내기는 끝남(권총 제외 전부) → `grip_audit_all.sh render` 다시 측정 → 언리얼 `lyra_fpvm_reimport.py` + `lyra_launchers.py assets` → `lyra_class_fp_arms2.py slots` → `lyra_pzf60_material.py` → `lyra_pistol_cases.py` → `lyra_fpvm_ads_update.py` → 게임에서 확인. 언리얼 에셋은 아직 예전 메시.

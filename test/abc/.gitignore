@@ -23,3 +23,7 @@ Saved/Config/
 .DS_Store
 # Furina work files: generated renders/logs are kept in git, scratch is not
 FurinaSource/Scratch/
+FurinaSource/Data/audit_*.png
+FurinaSource/Data/audit_logs/
+FurinaSource/Data/grip_audit_*__*__*.json
+__pycache__/
