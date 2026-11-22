@@ -1,6 +1,6 @@
 """에디터(편집 전용, 2026-11-22): MG42 설치물(1단계) -> Saved/MG42Emplacement.json
  Blender mg42_assets.py export 결과(FBX/MG42, Data/mg42_emplacement.json)를 씀. 좌표: Blender cm (x, y, z) -> UE (x, -y, z), 총구 = UE +Y.
- A) 에셋: SM_MG42_Deployed(양각대 편 총) / SM_MG42_BoxOpen / SM_MG42_BoxClosed / SM_MG42_BeltUnit(탄 한 발 + 고리)
+ A) 에셋: SM_MG42_Deployed(양각대 편 총, 설치) / SM_MG42_Folded(양각대 접은 총, 들고 다니기) / SM_MG42_BoxOpen / SM_MG42_BoxClosed / SM_MG42_BeltUnit(탄 한 발 + 고리)
     재질: 총 = 기존 MI_DE_mg42_*, 상자 = 받은 텍스처(Box_*)로 MI_MG42_Box, 탄 = 황동 탄피·구리 뇌관·톰백 탄두·흑색 강철 고리(MI, M_FurinaWeaponPBR 의 Tint/Metal/Rough)
  B) BP_FurinaMG42(Actor): Gun, Box, Belt(InstancedStaticMesh 250개 = 늘어진 탄띠 SpanN 개 + 상자 안 자리), 변수 Rounds(250)·SpanN·Orig(자리 변환 250개)
     이벤트 ApplyRounds: 남은 탄 수만큼만 보임 - 늘어진 탄띠는 급탄구 쪽부터 남고, 상자 안은 깊은 자리부터 남음(탄띠가 위에서부터 빠져나감). BeginPlay 때 한 번.
@@ -45,13 +45,13 @@ def assets():
     out = {}
     world = unreal.get_editor_subsystem(unreal.UnrealEditorSubsystem).get_editor_world(); cv = 'Interchange.FeatureFlags.Import.FBX'
     unreal.SystemLibrary.execute_console_command(world, cv + ' 0')
-    try: M = {n: import_sm(n) for n in ('SM_MG42_Deployed', 'SM_MG42_BoxOpen', 'SM_MG42_BoxClosed', 'SM_MG42_BeltUnit')}
+    try: M = {n: import_sm(n) for n in ('SM_MG42_Deployed', 'SM_MG42_Folded', 'SM_MG42_BoxOpen', 'SM_MG42_BoxClosed', 'SM_MG42_BeltUnit')}
     finally: unreal.SystemLibrary.execute_console_command(world, cv + ' 1')
     # 총: 기존 재질
     src = {str(s.material_slot_name): s.material_interface for s in unreal.load_asset('/Game/Furina/Weapons/Germany/mg42/SM_DE_mg42').static_materials}
-    g = M['SM_MG42_Deployed']
-    for i, s in enumerate(g.static_materials):
-        if str(s.material_slot_name) in src: g.set_material(i, src[str(s.material_slot_name)])
+    for g in (M['SM_MG42_Deployed'], M['SM_MG42_Folded']):   # 설치(양각대 폄) / 들고 다니기(양각대 접음)
+        for i, s in enumerate(g.static_materials):
+            if str(s.material_slot_name) in src: g.set_material(i, src[str(s.material_slot_name)])
     # 상자 텍스처
     texs = {}
     for k, (param, srgb) in {'BaseColor': ('BaseColorTex', True), 'NormalGL': ('NormalTex', False), 'Roughness': ('RoughTex', False), 'Metallic': ('MetalTex', False)}.items():

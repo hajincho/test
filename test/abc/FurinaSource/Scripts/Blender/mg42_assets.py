@@ -46,6 +46,36 @@ FEED = Vector((float(rec[:, 0].max()) + 0.5, 7.0, BORE_Z + 1.0)); OUT['feed'] = 
 # 양각대 축(조준 회전 중심): 양각대 위 끝 = 총열 덮개 앞쪽, 총열 높이
 BIPOD = Vector((0.0, float(feet[:, 1].mean()), BORE_Z)); OUT['bipod_pivot'] = [round(c, 2) for c in BIPOD]
 
+# 1-1) 들고 다닐 때: 양각대 접힌 총(사용자 지정 2026-11-22). 다리 두 개(성분: 총열 덮개 앞 y<-28, 땅까지 내려오는 것)를
+#      위 경첩(다리 윗끝 정점 평균) 축으로 뒤(+Y)로 돌려 총열 덮개 아래 양옆에 나란히(MG42 양각대는 덮개를 따라 뒤로 접힘)
+def fold_bipod(src):
+    o = src.copy(); o.data = src.data.copy(); o.name = 'MG42_Folded'; bpy.context.scene.collection.objects.link(o)
+    bm = bmesh.new(); bm.from_mesh(o.data); bm.verts.ensure_lookup_table(); lab = [-1] * len(bm.verts); comps = []
+    for v in bm.verts:
+        if lab[v.index] >= 0: continue
+        st = [v]; lab[v.index] = len(comps); idx = []
+        while st:
+            x_ = st.pop(); idx.append(x_.index)
+            for e in x_.link_edges:
+                y_ = e.other_vert(x_)
+                if lab[y_.index] < 0: lab[y_.index] = len(comps); st.append(y_)
+        comps.append(idx)
+    P = np.array([v.co[:] for v in bm.verts]); legs = []
+    for idx in comps:
+        c = P[idx]
+        if c[:, 1].max() < -28 and c[:, 2].min() < 1.0 and (c[:, 0].max() - c[:, 0].min()) > 10: legs.append(idx)
+    info = []
+    for idx in legs:
+        c = P[idx]; side = 1.0 if c[:, 0].mean() > 0 else -1.0
+        top = c[c[:, 2] > c[:, 2].max() - 1.5]; foot = c[c[:, 2] < c[:, 2].min() + 1.5]
+        hinge = Vector(tuple(top.mean(0))); axis = (Vector(tuple(foot.mean(0))) - hinge).normalized()
+        tgt = Vector((side * 0.07, 1.0, -0.10)).normalized(); q = axis.rotation_difference(tgt)
+        M_ = Matrix.Translation(hinge) @ q.to_matrix().to_4x4() @ Matrix.Translation(-hinge)
+        for i in idx: bm.verts[i].co = M_ @ bm.verts[i].co
+        info.append({'side': side, 'hinge': [round(v_, 2) for v_ in hinge], 'turn_deg': round(math.degrees(q.angle), 1)})
+    bm.to_mesh(o.data); bm.free(); return o, info
+gun_folded, OUT['bipod_fold'] = fold_bipod(gun)
+
 # ---------------------------------------------------------------- 2) 탄 한 발 단위
 def lathe(name, prof, segs=20, cap_lo=True, cap_hi=True, z0=0.0):
     bm = bmesh.new(); rings = []
@@ -179,18 +209,19 @@ def export(o, name):
                              mesh_smooth_type='FACE', path_mode='STRIP', add_leaf_bones=False, bake_anim=False)
 
 
-for o in (gun, unit, closed, opened): o.matrix_world = Matrix.Scale(0.01, 4)
+for o in (gun, gun_folded, unit, closed, opened): o.matrix_world = Matrix.Scale(0.01, 4)
 if STAGE == 'export':
-    export(gun, 'SM_MG42_Deployed'); export(unit, 'SM_MG42_BeltUnit'); export(closed, 'SM_MG42_BoxClosed'); export(opened, 'SM_MG42_BoxOpen'); OUT['exported'] = True
+    export(gun, 'SM_MG42_Deployed'); export(gun_folded, 'SM_MG42_Folded'); export(unit, 'SM_MG42_BeltUnit'); export(closed, 'SM_MG42_BoxClosed'); export(opened, 'SM_MG42_BoxOpen'); OUT['exported'] = True
 if STAGE in ('check', 'export'):   # 확인 렌더: 설치 전체(탄 250발 자리 + 입구-급탄구 직선)
     for s in EMP['span'] + EMP['slots'][len(EMP['span']):]:
         u = unit.copy(); u.data = unit.data; bpy.context.scene.collection.objects.link(u)
         x = Vector(s['xdir']); z = Vector(s['zdir']); y = z.cross(x)
         u.matrix_world = Matrix.Scale(0.01, 4) @ Matrix.Translation(Vector(s['loc'])) @ Matrix((x, y, z)).transposed().to_4x4()
     ob = opened.copy(); ob.data = opened.data; bpy.context.scene.collection.objects.link(ob); ob.matrix_world = Matrix.Scale(0.01, 4) @ Matrix.Translation(BOX_POS) @ Matrix.Rotation(BOX_YAW, 4, 'Z')
+    gun_folded.matrix_world = Matrix.Translation((0.0, 0.0, 0.6)) @ Matrix.Scale(0.01, 4)   # 확인용: 위로 60cm
     sc = bpy.context.scene; sc.render.engine = 'BLENDER_WORKBENCH'; sc.display.shading.color_type = 'MATERIAL'; sc.render.resolution_x = 1200; sc.render.resolution_y = 700
     cam = bpy.data.objects.new('C', bpy.data.cameras.new('C')); sc.collection.objects.link(cam); sc.camera = cam; cam.data.lens = 35
-    for nm, eye in (('emp_a', Vector((1.3, 0.9, 0.8))), ('emp_b', Vector((0.5, -0.4, 0.5))), ('emp_top', Vector((0.19, 0.11, 1.2)))):
+    for nm, eye in (('emp_a', Vector((1.6, 1.0, 1.2))), ('emp_b', Vector((0.5, -0.4, 0.5))), ('emp_top', Vector((0.19, 0.11, 1.2)))):
         tgt = Vector((0.1, 0.0, 0.05)) if nm != 'emp_top' else Vector((0.19, 0.111, 0.0)); d = (tgt - eye).normalized(); xx = d.cross(Vector((0, 0, 1)) if nm != 'emp_top' else Vector((0, 1, 0))).normalized(); yy = xx.cross(d)
         cam.matrix_world = Matrix((xx, yy, -d)).transposed().to_4x4(); cam.location = eye
         sc.render.filepath = os.path.join(D, 'Data', 'mg42_' + nm + '.png'); bpy.ops.render.render(write_still=True)
