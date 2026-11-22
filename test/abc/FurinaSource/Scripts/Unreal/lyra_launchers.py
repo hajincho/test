@@ -26,7 +26,8 @@ ROOT = Path(unreal.Paths.project_dir()).resolve(); DATA = ROOT / 'FurinaSource' 
 ASSETS = unreal.EditorAssetLibrary; TOOLS = unreal.AssetToolsHelpers.get_asset_tools(); API = unreal.BlueprintEditorLibrary
 GS = ENGINE + 'GameplayStatics:'; SYSL = ENGINE + 'KismetSystemLibrary:'; MAP = ENGINE + 'BlueprintMapLibrary:'; GAS = '/Script/GameplayAbilities.'
 LJ = json.loads((DATA / 'fpvm_launchers_ads.json').read_text(encoding='utf-8'))
-W = {'panzerfaust': dict(name='PANZERFAUST', bp='BP_FurinaPzfWarhead', speed=4500.0, radius=7.0, dmg=300.0, splash=(250.0, 120.0),
+W = {'panzerfaust': dict(name='PANZERFAUST', bp='BP_FurinaPzfWarhead', speed=round(LJ['panzerfaust'].get('v0_ms', 45.0) * 100.0, 1),   # 2026-11-22: 가늠자 구멍에서 구한 실효 속도(약 39 m/s)
+                         radius=7.0, dmg=300.0, splash=(250.0, 120.0),
                          mesh='/Game/Furina/FPVM/PANZERFAUST/SM_FPVM_PzfWarhead', trail=None, fx=(0.3, 1.6, 1.4), fx2=(0.6, 2.0, 4.0), rear=(2.2, 3.5)),
      'panzerschreck': dict(name='PANZERSCHRECK', bp='BP_FurinaPzsRocket', speed=11000.0, radius=4.4, dmg=300.0, splash=(250.0, 120.0),
                            mesh='/Game/Furina/Weapons/Germany/panzerschreck_rocket/SM_DE_panzerschreck_rocket', trail='/Game/Effects/Particles/Explosion/NS_Grenade_Trail.NS_Grenade_Trail',

@@ -1478,3 +1478,12 @@ Control Rig이 들어 올리는 회전은 컴포넌트 +X축 기준 음수 각�
 - **언리얼 쪽 확인:** 클립 압축으로 손이 총 위에서 미끄러지는 양 최대 0.21cm(`Scripts/Unreal/lyra_fpvm_hand_drift.py`) — 원인 아님.
 - **최종 측정(대기 자세, 손 15개):** 최대 틈/파고듦 cm — Kar98k 0.77/0.24, G43 0.54/0.30, StG44 0.35/0.50, P38 0.55/0.58, P08 0.92/0.95, PP 0.93/0.31, 판처파우스트 0.64/0.33, 판처슈렉 0.53/0.34(모두 1cm 이내). 남음: MP40 왼손 검지 가운데 마디(병과 5종 최대 1.16), MP38 왼손 새끼·검지 가운데 마디(병과 6종 최대 1.29). 푸리나 손은 두 총 모두 1cm 이내. 손목-총 흔들림은 모든 무기 0.00cm.
 - 언리얼 반영 완료: `lyra_fpvm_reimport.py`, `lyra_launchers.py assets`, `lyra_class_fp_arms2.py slots`, `lyra_pzf60_material.py`, `lyra_pistol_cases.py`, `lyra_fpvm_ads_update.py`, `lyra_default_primary.py`.
+
+## 판처파우스트 안 보임 · 대전차 화기 조준 고증 · 병과 버튼 나라 탭 기준 (2026-11-22)
+- **판처파우스트가 안 보이던 버그:** 재질 덮어쓰기는 컴포넌트에 '슬롯 번호'로 남는다. Kar98k 등에서 가린 병과 팔 슬롯 번호가 판처파우스트에서는 본체 슬롯(`Panzerfaust60Surface`) 번호라 본체가 가림 재질로 남았다(장착 때 0~9번만 되돌림). → 팔 슬롯 고르기(외형+메시가 바뀔 때)에서 무기 슬롯도 기본 재질로 되돌림, 조준경 몸통 가림 상태도 초기화(`Scripts/Unreal/lyra_fpvm_slot_reset.py`, 노드 `FPRS_`).
+- **자료:** bergflak.com [가늠자](https://www.bergflak.com/pssight.html)·[방패](https://www.bergflak.com/psshield.html)·[사용법](https://www.bergflak.com/psuse.html), [Tank Archives 판처파우스트 교범 번역](https://www.tankarchives.com/2020/12/panzerfaust-manual.html), [Axis History Forum 판처파우스트 설명서](https://forum.axishistory.com/viewtopic.php?p=264132), Wikipedia [Panzerfaust](https://en.wikipedia.org/wiki/Panzerfaust)·[Panzerschreck](https://en.wikipedia.org/wiki/Panzerschreck).
+- **판처슈렉(RPzB 54) 정조준:** 뒤 가늠자는 방패 바로 뒤 관 옆에 용접되고 방패 고정쇠가 그 앞에 끼어 유리창이 조준선 위에 온다. 앞 가늠자는 열린 틀 + 흰 기둥, 뒤 가늠자는 앞지름 홈(0·15·30). 원본 모델의 가늠자 틀은 창보다 9cm 낮아 조준선이 창을 지나지 않았다 → 원본 틀을 지우고 창 중심을 지나는 조준선에 홈판(가운데 + 양옆 15·30 홈)과 앞 틀·기둥을 새로 만듦(150 m 에서 기둥 끝이 홈 바닥). 눈 = 홈 뒤 28cm(예전 창 중심 뒤 40cm, 가늠자 없이 창만 봄). `fpvm_launchers.py`.
+- **판처파우스트 60 영점:** 받은 모델의 실제 가늠자를 잼(판 구멍 높이 5.2/7.55/10.0cm = 30/60/80 m, 가늠쇠 = 탄두 맨 위). 예전에는 공식으로 정한 높이를 써서 이 모델 구멍과 안 맞아 80 m 에선 눈이 판의 막힌 곳을 지났고 탄두 끝이 구멍에 안 보였다. 이제 각 구멍 가운데에 탄두 끝이 보임(`Data/pzf_ads_zoom.jpg`). 조준선 각 5.56°/10.85°/16.12° 에서 거꾸로 구한 실효 속도 39.1 m/s(공기 저항 포함, 사료 45 m/s 와 맞음)를 탄두 속도로 씀. 겨드랑이 자세라 눈 = 판 뒤 34cm(예전 24cm 는 판이 화면 세로를 다 덮음), 대기 자세는 예전 그대로.
+- **병과(외형) 버튼:** 나라별 두 줄 대신 한 줄. 위 국가 탭이 대일본제국이면 같은 병과의 일본 캐릭터, 그 밖(제3제국 등)이면 독일 캐릭터(`Scripts/Unreal/lyra_look_by_nation.py`, 노드 `LN_`; 일본 줄 `LookRow2` 는 접음).
+- **확인:** PIE 에서 판처파우스트 보임, 대전차 화기 정조준 캡처 `Data/lch_game_new.jpg`. 병과 버튼은 배선(형변환 → NationIndex==1 분기 → 일본/독일 이벤트)으로 확인, 실제 마우스 클릭은 못 해 봄.
+- 참고: 메뉴를 고친 직후 PIE 시작에서 에디터가 Python 쓰레기 수거 중 충돌(스크립트가 쥔 위젯 객체)해 다시 켰다. 저장은 충돌 전에 끝나 있었다.

@@ -24,11 +24,11 @@ G_MS2 = 9.81
 def elev_deg(r_m, v): return math.degrees(0.5 * math.asin(G_MS2 * r_m / v ** 2))
 if PZF:
     V0 = 45.0; ZERO_M = [30, 60, 80]          # Pzf 60: 45 m/s, 가늠자 30/60/80 m
-    KORN = Vector((0.0, -43.0, 3.19)); LEAF_Y = -11.1; EYE_CM = 24.0
-    HIP = Vector((-4.0, -5.0, -7.0))          # 비조준: 정조준(60 m) 자세에서 뒤 2, 오른쪽 5, 아래 7 cm(겨드랑이 쪽)
+    KORN = Vector((0.0, -43.0, 3.19)); LEAF_Y = -11.1; EYE_CM = OPT.get('eye_cm', 34.0)   # 2026-11-22: 겨드랑이에 낀 자세라 눈이 가늠자 판 뒤 34cm(45cm 는 팔이 관에 안 닿음)(예전 24cm 는 판이 화면 세로를 다 덮음)
+    HIP = Vector((-4.0 - (EYE_CM - 24.0), -5.0, -7.0))   # 비조준: 정조준(60 m) 자세에서 뒤·오른쪽 5·아래 7 cm(겨드랑이 쪽). 눈 거리를 늘린 만큼 뒤로(대기 자세·팔 닿는 거리는 예전 그대로)
 else:
     V0 = 110.0; ZERO_M = [100, 150, 200]      # RPzB 54 로켓 약 110 m/s
-    WIN = Vector((10.99, -39.1, 10.9)); EYE_CM = 40.0
+    WIN = Vector((10.99, -39.1, 10.9)); EYE_CM = 28.0   # 눈 = 뒤 가늠자 홈 뒤 28cm(방패 바로 뒤 얼굴, 2026-11-22; 예전 창 중심 40cm)
     HIP = Vector((-3.0, -6.0, -10.0))
 THETA = [elev_deg(r, V0) for r in ZERO_M]; OUT['zero'] = {'m': ZERO_M, 'v_ms': V0, 'elev_deg': [round(t, 3) for t in THETA]}
 CLAV = {'L': [-10.73, 9.89, -16.11], 'R': [-17.46, -9.78, -17.09]}; REACH = OPT.get('reach', 37.5)
@@ -63,13 +63,27 @@ def comp_faces(pred):
     return lambda f: lab[f.verts[0].index] in take
 PARTS = {}
 if PZF:
-    SEE = 0.3   # 눈 축은 V 홈 끝보다 0.3cm 위 -> Korn 끝이 홈 안에 살짝 보임(Korn 끝이 조준점)
-    NEW_Z = [KORN.z + (LEAF_Y - KORN.y) * math.tan(math.radians(t)) - SEE for t in THETA]
-    REAR = [Vector((0.0, LEAF_Y, z + SEE)) for z in NEW_Z]
     LEAF_HINGE = Vector((0.0, -13.0, -2.8)); AXIS_Z = -5.1; R_TUBE = 2.43
     WAR_C = Vector((0.0, -40.0, AXIS_Z)); MUZ = Vector((0.0, -27.6, AXIS_Z)); BACK = Vector((0.0, 52.25, AXIS_Z))
     source = os.path.join(D, 'FBX', 'FPVM', 'Panzerfaust60Source', 'panzerfaust.fbx')
     gun, PARTS['warhead'], PARTS['leaf'] = load_panzerfaust60(source, MUZ.y, BACK.y, AXIS_Z)
+    # 2026-11-22: 받은 Pzf 60 모델의 실제 가늠자로 조준(예전 공식 높이 NEW_Z 는 이 모델 구멍과 안 맞아 80 m 에선 눈이 판 막힌 곳을 지났음)
+    #   가늠쇠 = 탄두 맨 위(Korn), 뒤 = 가늠자 판 구멍 3개(아래부터 30/60/80 m). 각 구멍 가운데 -> 탄두 끝 선이 관보다 기운 각 = 그 영점 발사각.
+    from mathutils.bvhtree import BVHTree
+    _Lv = np.array([v.co[:] for v in PARTS['leaf'].data.vertices]); _Hv = np.array([v.co[:] for v in PARTS['warhead'].data.vertices])
+    KORN = Vector(tuple(_Hv[_Hv[:, 2].argmax()])); KORN.x = 0.0
+    _lb = BVHTree.FromPolygons([tuple(v) for v in _Lv], [tuple(p.vertices) for p in PARTS['leaf'].data.polygons]); _y0 = _Lv[:, 1].max() + 1.0
+    _zs = np.arange(KORN.z + 0.5, _Lv[:, 2].max(), 0.05); _open = [z for z in _zs if _lb.ray_cast(Vector((0.0, _y0, z)), Vector((0, -1, 0)), 10.0)[0] is None]
+    _grp = []
+    for z in _open:
+        if _grp and z - _grp[-1][-1] < 0.08: _grp[-1].append(z)
+        else: _grp.append([z])
+    _grp = [g for g in _grp if g[-1] - g[0] > 0.3][:3]; assert len(_grp) == 3, ('leaf holes', [(g[0], g[-1]) for g in _grp])
+    LEAF_Y = float((_Lv[:, 1].min() + _Lv[:, 1].max()) / 2)
+    REAR = [Vector((0.0, LEAF_Y, (g[0] + g[-1]) / 2)) for g in _grp]
+    THETA = [math.degrees(math.atan((r.z - KORN.z) / (r.y - KORN.y))) for r in REAR]
+    V0 = float(np.mean([math.sqrt(m * G_MS2 / math.sin(math.radians(2 * t))) for m, t in zip(ZERO_M, THETA)]))   # 공기 저항 든 실효 속도(약 39 m/s)
+    OUT['zero'] = {'m': ZERO_M, 'v_ms': round(V0, 2), 'elev_deg': [round(t, 3) for t in THETA], 'holes_z': [[round(g[0], 2), round(g[-1], 2)] for g in _grp], 'korn': [round(c, 2) for c in KORN], 'leaf_y': round(LEAF_Y, 2)}
 else:
     gun = L.load_weapon(WK)
     mats = [m.name if m else '' for m in gun.data.materials]
@@ -81,8 +95,38 @@ else:
     # 총구 -Y 로(Z 180°) + 관 축(원본 x 12.62, z 1.83) 을 원점으로
     M = Matrix.Translation((12.62, 0.0, -1.83)) @ Matrix.Rotation(math.pi, 4, 'Z')
     for o in (gun, PARTS['lever']): o.data.transform(M)
+    # 2026-11-22 고증 가늠자(bergflak.com pssight/psshield, Soviet 교범 '가늠자 홈 다섯'): 뒤 가늠자는 방패 바로 뒤 관 옆에 용접, 방패 고정쇠가 그 앞에 끼어 유리창이 조준선 위에 오게 함.
+    #   원본 모델의 뒤(y -33.3)·앞(y -79.7) 가늠자 틀은 유리창(중심 x 11, z 10.9)보다 9cm 낮아 조준선이 창을 지나지 않음 -> 지우고 창 중심을 지나는 조준선에 새로 만듦.
+    #   뒤 = 홈판(가운데 0, 양옆 15·30 앞지름 홈), 앞 = 열린 틀 + 가운데 기둥(150 m 에서 기둥 끝이 홈 바닥에 맞음 - 'T34 가 150 m 에서 기둥 폭').
+    def _sight_comp(lo, hi):
+        return (-34.3 <= lo[1] and hi[1] <= -32.3 and lo[0] >= 2.4 and hi[2] <= 5.3) or (-80.4 <= lo[1] and hi[1] <= -78.9 and hi[0] <= 9.8 and lo[2] >= -3.6)
+    _bm = bmesh.new(); _bm.from_mesh(gun.data); _bm.faces.ensure_lookup_table()
+    _lab, _comps, _co = comps_of(gun); _take = set(ci for ci, idx in enumerate(_comps) if _sight_comp(_co[idx].min(0), _co[idx].max(0)))
+    _old = [f_ for f_ in _bm.faces if _lab[f_.verts[0].index] in _take]; OUT['old_sight_faces'] = len(_old)
+    bmesh.ops.delete(_bm, geom=_old, context='FACES'); bmesh.ops.delete(_bm, geom=[v for v in _bm.verts if not v.link_faces], context='VERTS')
+    _mi = mats.index('Main_001')
+    def _box(c, sz):
+        r = bmesh.ops.create_cube(_bm, size=1.0); vs = r['verts']
+        for v in vs: v.co = Vector((c[0] + v.co.x * sz[0], c[1] + v.co.y * sz[1], c[2] + v.co.z * sz[2]))
+        for f_ in {f_ for v in vs for f_ in v.link_faces}: f_.material_index = _mi
+    SX = 10.99; TH1 = elev_deg(150, 110.0)   # 조준선: 창 중심 x, 관보다 150 m 발사각만큼 아래로 기움
+    NOTCH = Vector((SX, -33.3, 11.25)); POST = Vector((SX, -79.7, NOTCH.z - (79.7 - 33.3) * math.tan(math.radians(TH1))))
+    # 뒤 가늠자 홈판(두께 0.3, 폭 7, 높이 2.4) - 홈 바닥 = NOTCH.z, 홈 폭 0.5, 깊이 0.8, 앞지름 홈 ±1.3(15)·±2.6(30)
+    _hz = NOTCH.z + 0.8; _plate_top = _hz
+    for x0, x1 in ((-3.5, -2.85), (-2.35, -1.55), (-1.05, -0.25), (0.25, 1.05), (1.55, 2.35), (2.85, 3.5)):
+        _box((SX + (x0 + x1) / 2, NOTCH.y, NOTCH.z + 0.4), (x1 - x0, 0.3, 0.8))
+    _box((SX, NOTCH.y, NOTCH.z - 0.8), (7.0, 0.3, 1.6))
+    _box(((SX + 4.6) / 2, NOTCH.y, NOTCH.z - 1.4), (SX - 4.6, 0.6, 0.6))           # 받침대(관 왼쪽 위에서 홈판까지)
+    _box((5.0, NOTCH.y, (NOTCH.z - 1.4 + 2.5) / 2), (0.6, 0.6, NOTCH.z - 1.4 - 2.5))
+    # 앞 가늠자: 열린 틀(폭 6, 높이 7, 굵기 0.4) + 가운데 기둥(폭 0.35, 끝 = POST.z)
+    _fb = POST.z - 3.6; _ft = POST.z + 3.0
+    _box((SX, POST.y, _fb), (6.0, 0.4, 0.4)); _box((SX, POST.y, _ft), (6.0, 0.4, 0.4))
+    _box((SX - 3.0, POST.y, (_fb + _ft) / 2), (0.4, 0.4, _ft - _fb)); _box((SX + 3.0, POST.y, (_fb + _ft) / 2), (0.4, 0.4, _ft - _fb))
+    _box((SX, POST.y, (_fb + POST.z) / 2), (0.35, 0.4, POST.z - _fb))
+    _box(((SX - 3.0 + 4.6) / 2, POST.y, _fb), (SX - 3.0 - 4.6, 0.6, 0.6)); _box((4.6, POST.y, (_fb + 2.5) / 2), (0.6, 0.6, _fb - 2.5))
+    _bm.to_mesh(gun.data); _bm.free(); OUT['pzs_sight'] = {'notch': list(NOTCH), 'post_tip': list(POST), 'elev150_deg': round(TH1, 3)}
     rk = L.load_weapon('panzerschreck_rocket'); rk.name = 'W_rocket'; rk.data.transform(Matrix.Translation((0.0, 44.66, 0.0))); PARTS['rocket'] = rk   # 꼬리 끝 y 77.2(원본 로켓 자리)
-    REAR = [WIN.copy() for _ in THETA]; AXIS_Z = 0.0; R_TUBE = 4.95
+    REAR = [Vector((10.99, -33.3, 11.25)) for _ in THETA]; AXIS_Z = 0.0; R_TUBE = 4.95   # 2026-11-22: 뒤 가늠자 홈 바닥(창 중심을 지나는 조준선)
     ROCKET_C = Vector((0.0, 44.66, 0.0)); MUZ = Vector((0.0, -82.0, 0.0)); BACK = Vector((0.0, 82.0, 0.0))
     LEVER_PIV = Vector((0.0, -7.44, -4.1))
 OUT['parts'] = {k: len(o.data.polygons) for k, o in PARTS.items()}; OUT['gun_faces'] = len(gun.data.polygons)
