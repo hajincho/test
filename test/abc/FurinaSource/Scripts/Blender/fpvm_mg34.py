@@ -16,7 +16,7 @@ D = L.D; FPS = 30; KEY = WK.upper(); OUT = {'key': WK, 'stage': STAGE}
 SPEC = {'mg34': dict(grip=(-2.4, 27.5, -4.5), fR=(0.15, -0.74, -0.67), xc=-2.9, bore_z=2.8, ch_box=((-11.6, 21.8, -0.8), (-4.4, 24.4, 2.3)), travel=9.0, rpm=900, cap=50,
                      rear_y=4.5, front_y=(-49.4, -47.4), recv_end=40.0, hold='guard', guard_ahead=-8.4, gun_pos=[36.0, -8.0, -13.0], gun_rot=[4.0, 0.0, -8.0],   # 배치: fpvm_place_search.py(두 손 닿고 드럼·리시버·왼손이 화면 안)
                      fire_len=60.0 / 900,
-                     mag_mats=('mg 34 mag', 'p line', '7.92х57 l'), drum_hook=(0.8, 9.8, 1.7), cover_box=((-6.4, 9.8, 4.0), (1.5, 24.0, 8.0)), cover_hinge=(-2.9, 10.0, 5.2), cover_open=85.0)}[WK]
+                     mag_mats=('mg 34 mag', 'p line', '7.92х57 l'), drum_hook=(0.8, 9.8, 1.7), cover_box=((-6.4, 9.8, 3.8), (1.5, 27.0, 8.0)), cover_hinge=(-2.9, 10.0, 5.2), cover_open=85.0)}[WK]
 CLAV = {'L': [-10.73, 9.89, -16.11], 'R': [-17.46, -9.78, -17.09]}; REACH = OPT.get('reach', 37.5)
 POLE = {'R': Vector((-0.10, -0.12, -0.18)), 'L': Vector((-0.08, 0.14, -0.20))}
 # ---- 팔

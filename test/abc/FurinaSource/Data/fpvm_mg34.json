@@ -1,6 +1,6 @@
 {
  "key": "mg34",
- "stage": "anim",
+ "stage": "export",
  "arms": {
   "phi_err": 3.7235102710676524e-05,
   "K_det": 9.999981549863479e-07,
@@ -59,170 +59,25 @@
  "sleeves": 8,
  "mag_faces": 4246,
  "handle_faces": 338,
- "cover_faces": 630,
- "cover_rest_faces": [
-  [
-   [
-    -0.2,
-    19.7,
-    3.9
-   ],
-   [
-    -0.2,
-    24.8,
-    5.0
-   ]
-  ],
-  [
-   [
-    -0.8,
-    19.7,
-    4.6
-   ],
-   [
-    -0.3,
-    26.9,
-    5.4
-   ]
-  ],
-  [
-   [
-    -0.3,
-    19.7,
-    4.3
-   ],
-   [
-    -0.2,
-    26.9,
-    5.0
-   ]
-  ],
-  [
-   [
-    -5.6,
-    19.7,
-    4.6
-   ],
-   [
-    -5.5,
-    26.9,
-    5.4
-   ]
-  ],
-  [
-   [
-    -5.5,
-    19.7,
-    4.7
-   ],
-   [
-    -5.0,
-    26.9,
-    5.5
-   ]
-  ],
-  [
-   [
-    -5.0,
-    19.7,
-    4.7
-   ],
-   [
-    -0.8,
-    26.9,
-    5.5
-   ]
-  ],
-  [
-   [
-    -5.6,
-    19.7,
-    3.9
-   ],
-   [
-    -5.6,
-    26.9,
-    5.0
-   ]
-  ],
-  [
-   [
-    -0.2,
-    10.3,
-    3.9
-   ],
-   [
-    -0.2,
-    10.6,
-    5.0
-   ]
-  ],
-  [
-   [
-    -0.2,
-    19.7,
-    3.9
-   ],
-   [
-    -0.0,
-    19.7,
-    5.0
-   ]
-  ],
-  [
-   [
-    -5.6,
-    10.3,
-    3.9
-   ],
-   [
-    -5.6,
-    10.6,
-    5.0
-   ]
-  ],
-  [
-   [
-    -0.0,
-    10.6,
-    3.9
-   ],
-   [
-    -0.0,
-    19.7,
-    5.1
-   ]
-  ],
-  [
-   [
-    -5.8,
-    10.6,
-    3.9
-   ],
-   [
-    -5.8,
-    19.7,
-    5.1
-   ]
-  ]
- ],
- "cover_rest_n": 30,
+ "cover_faces": 677,
+ "cover_rest_faces": [],
+ "cover_rest_n": 0,
  "cover_check": {
-  "rest_zmax": 5.49,
+  "rest_zmax": 3.87,
   "cover_y": [
    9.86,
-   23.66
+   26.94
   ],
   "cover_z": [
-   3.9,
+   3.83,
    6.3
   ]
  },
  "tris": {
-  "W_mg34": 13551,
+  "W_mg34": 13504,
   "W_mag": 4246,
   "W_handle": 338,
-  "W_cover": 630
+  "W_cover": 677
  },
  "sight": {
   "front": [
@@ -368,20 +223,7 @@
   "Fire": 0.0667,
   "Reload": 4.8
  },
- "renders": [
-  "C:\\Users\\fromj\\Downloads\\test\\test\\abc\\FurinaSource\\Data\\fpvm_mg34_rl_open_fp.png",
-  "C:\\Users\\fromj\\Downloads\\test\\test\\abc\\FurinaSource\\Data\\fpvm_mg34_rl_open_side.png",
-  "C:\\Users\\fromj\\Downloads\\test\\test\\abc\\FurinaSource\\Data\\fpvm_mg34_rl_unhook_fp.png",
-  "C:\\Users\\fromj\\Downloads\\test\\test\\abc\\FurinaSource\\Data\\fpvm_mg34_rl_unhook_side.png",
-  "C:\\Users\\fromj\\Downloads\\test\\test\\abc\\FurinaSource\\Data\\fpvm_mg34_rl_hooked_fp.png",
-  "C:\\Users\\fromj\\Downloads\\test\\test\\abc\\FurinaSource\\Data\\fpvm_mg34_rl_hooked_side.png",
-  "C:\\Users\\fromj\\Downloads\\test\\test\\abc\\FurinaSource\\Data\\fpvm_mg34_rl_tray_fp.png",
-  "C:\\Users\\fromj\\Downloads\\test\\test\\abc\\FurinaSource\\Data\\fpvm_mg34_rl_tray_side.png",
-  "C:\\Users\\fromj\\Downloads\\test\\test\\abc\\FurinaSource\\Data\\fpvm_mg34_rl_close_fp.png",
-  "C:\\Users\\fromj\\Downloads\\test\\test\\abc\\FurinaSource\\Data\\fpvm_mg34_rl_close_side.png",
-  "C:\\Users\\fromj\\Downloads\\test\\test\\abc\\FurinaSource\\Data\\fpvm_mg34_rl_pull_fp.png",
-  "C:\\Users\\fromj\\Downloads\\test\\test\\abc\\FurinaSource\\Data\\fpvm_mg34_rl_pull_side.png"
- ],
+ "exported": true,
  "mats": [
   "7.92\u044557 l",
   "Furina_Outfit",
