@@ -7,7 +7,7 @@ from mathutils import Vector
 import fpvm_lib as L
 D = L.D; OUT = {}
 POSE = {'kar98k': ([32.0, -9.0, -12.5], [2.5, 4.0, -3.0]), 'g43': ([29.0, -9.0, -11.2], [2.5, 4.0, -3.0])}
-for k in ('mp40', 'mp38', 'stg44'):
+for k in ('mp40', 'mp38', 'stg44', 'mg34'):
     d = json.load(open(os.path.join(D, 'Data', 'fpvm_%s_ads_in.json' % k))); POSE[k] = (d['gun_pos'], d['gun_rot'])
 for k, (pos, rot) in POSE.items():
     g = L.load_weapon(k); P = np.array([v.co[:] for v in g.data.vertices]); ymin = P[:, 1].min()

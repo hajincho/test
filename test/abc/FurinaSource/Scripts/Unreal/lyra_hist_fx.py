@@ -28,7 +28,7 @@ PISTOLS = ('p38', 'p08', 'pp')
 PCLIPS = ('Idle', 'Fire', 'IdleS', 'FireS', 'IdleA', 'FireA', 'Reload', 'T_HS', 'T_SH', 'T_HA', 'T_AH', 'T_SA', 'T_AS')
 MESHES = {'kar98k': ('Kar98k', 'Kar98k_Interior', 'kar98k'), 'kar98k_zf39': ('Kar98k', 'Kar98k_ZF39', 'kar98k'), 'kar98k_zf41': ('Kar98k', 'Kar98k_ZF41', 'kar98k'),
           'g43': ('G43', 'G43_Interior', 'g43'), 'g43_zf4': ('G43', 'G43_ZF4', 'g43'), 'p38': ('P38', 'P38', 'p38'), 'p08': ('P08', 'P08', 'p08'), 'pp': ('PP', 'PP', 'pp'),
-          'mp40': ('MP40', 'MP40', 'mp40'), 'mp38': ('MP38', 'MP38', 'mp38'), 'stg44': ('STG44', 'STG44', 'stg44')}
+          'mp40': ('MP40', 'MP40', 'mp40'), 'mp38': ('MP38', 'MP38', 'mp38'), 'stg44': ('STG44', 'STG44', 'stg44'), 'mg34': ('MG34', 'MG34', 'mg34')}
 TUBE_SLOTS = ('ZF39_Blued', 'ZF39_Glass', 'ZF41_Blued', 'ZF41_Glass', 'ZF4_Blued', 'ZF4_Glass')
 MOUNT_SLOTS = ('Mount_K98_Blued', 'Mount_ZF41_Satin', 'Mount_ZF4_Phosphate')   # 뒤 고리가 렌즈 가운데를 흐리게 가려서 조준 중엔 함께 가림
 LENS = {'ZF39': (4., .213, .026, .002, .013, 1.30), 'ZF41': (1.5, .165, .036, .0015, .010, 1.12), 'ZF4': (4., .207, .025, .0017, .011, 1.30)}
