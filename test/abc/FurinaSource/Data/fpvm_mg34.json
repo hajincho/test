@@ -181,6 +181,14 @@
   "score": 0.529,
   "pen_cm": 0.324
  },
+ "R_cover": {
+  "score": 0.451,
+  "pen_cm": 0.31
+ },
+ "L_tray": {
+  "score": 5.394,
+  "pen_cm": 5.067
+ },
  "reload_pose": {
   "delta": {
    "back": -3,

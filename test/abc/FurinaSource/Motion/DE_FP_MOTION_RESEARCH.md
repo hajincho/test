@@ -333,3 +333,6 @@
   - [수집가] mp44.nl *Patronenkasten 34/41* — https://www.mp44.nl/equipment/patronenkasten.htm , fjm44 상자·끈 — https://fjm44.com/articles/mg-3442-ammunition-box-patronenkasten-34-arr-42/
   - [2차] Wikipedia *MG 34*, *MG 42*; Athlon Outdoors *Full-Auto Sentry: MG34* — https://athlonoutdoors.com/article/german-mg34-machine-gun/
 - **MG34 드럼 장전 때 급탄 덮개(2026-11-22 보강, 사용자 지적):** 드럼(바구니)을 단 채 장전하려면 덮개를 열고 탄띠 앞 고리들을 급탄판에 놓은 뒤 덮개를 닫고 탄을 멈춤까지 당김(드럼을 먼저 달면 덮개를 열어야 함) - mg42.us 포럼 *Basic MG-34 questions*(https://www.mg42.us/viewtopic.php?t=12714). 드럼은 덮개를 든 뒤 급탄판 왼쪽에 담 - Athlon Outdoors(https://athlonoutdoors.com/article/german-mg34-machine-gun/). 드럼 앞 끝을 걸고 뒤를 돌려 끼움, 탄을 갈퀴에 걸릴 때까지 당긴 뒤 장전 손잡이 - MIS 1943(위). -> 구현 순서: 덮개 열기 -> 드럼 빼기 -> 새 드럼 걸기(앞 고리, 뒤 돌림) -> 탄띠 앞 고리가 급탄판에 -> 덮개 닫기 -> 오른쪽 장전 손잡이 당겼다 앞으로.
+- **MG34 재장전 영상 분석(2026-11-22, 사용자 제공 YouTube 'MG34 reload'(Danyal Davies) 녹화 18.5초 -> 0.31초 간격 60프레임, `Data/mg34_video_sheet_b/c.jpg`):**
+  #13~20 오른손이 손잡이를 놓고 덮개 뒤끝 멈치를 누름 -> #21~25 덮개가 앞 경첩으로 거의 세워짐(~85°) -> #26~35 두 손으로 탄띠를 들어 왼쪽에서 급탄판에 놓고 첫 탄을 급탄 자리로 당김 -> #36~40 오른손이 위에서 덮개를 눌러 닫음 -> #41~44 오른손이 오른쪽 장전 손잡이를 끝까지 당김 -> #45~57 오른손 손잡이, 사격 자세(탄띠는 급탄구에서 땅으로 늘어짐).
+  구현(드럼판, 사용자 지정 '탄띠가 원통 탄창으로 바뀔 뿐'): 오른손 덮개 열기(85°) -> 손잡이로 -> 왼손 드럼 교체 -> 왼손 탄띠 앞 고리를 급탄판에 놓고 당김 -> 오른손 덮개 눌러 닫기 -> 오른손 장전 손잡이 -> 손잡이(4.8초).
