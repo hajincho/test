@@ -221,7 +221,7 @@
  "clips": {
   "Idle": 4.0,
   "Fire": 0.0667,
-  "Reload": 4.8
+  "Reload": 5.9
  },
  "exported": true,
  "mats": [

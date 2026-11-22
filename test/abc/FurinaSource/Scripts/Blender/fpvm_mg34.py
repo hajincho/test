@@ -248,9 +248,9 @@ def tl_fire(t):   # 한 발 주기(분당 rpm): 반동 + 노리쇠(손잡이) �
     if OPEN: s = SPEC['travel'] * (1 - lin(t, 0.0, 0.25 * FIRE_LEN)) if t < 0.25 * FIRE_LEN else SPEC['travel'] * lin(t, 0.25 * FIRE_LEN, 0.9 * FIRE_LEN)
     else: s = 0.0   # StG44: 장전 손잡이는 사격 때 움직이지 않는 것으로(자료 엇갈림 -> 보수적으로)
     return {'D': gun_delta(back=1.2 * k, up=0.4 * k, pitch=1.6 * k, roll=0.4 * k), 's': s, 'L': ('L_GRIP', 'L_GRIP', 0), 'mag_vis': 1}
-RT = {'tilt': (0.0, 0.45, 4.40, 4.8), 'rToCov': (0.05, 0.40), 'open': (0.40, 0.70), 'rBack1': (0.70, 1.00), 'toMag': (0.55, 0.95), 'unhook': (0.95, 1.20), 'out': (1.20, 1.45),
-      'toPouch': (1.45, 1.85), 'toWell': (1.85, 2.30), 'hook': (2.30, 2.55), 'toTray': (2.55, 2.80), 'pullBelt': (2.80, 2.95), 'toGrip': (2.95, 3.30),
-      'rToCov2': (2.80, 3.10), 'close': (3.10, 3.30), 'toCH': (3.30, 3.55), 'pull': (3.55, 3.75), 'push': (3.82, 3.98), 'rBack': (3.98, 4.35)}
+RT = {'tilt': (0.0, 0.45, 5.50, 5.9), 'rToCov': (0.05, 0.40), 'open': (0.40, 0.70), 'rBack1': (0.70, 1.00), 'toMag': (0.55, 0.95), 'unhook': (0.95, 1.20), 'out': (1.20, 1.70),
+      'toPouch': (1.70, 2.50), 'toWell': (2.50, 3.40), 'hook': (3.40, 3.65), 'toTray': (3.65, 3.90), 'pullBelt': (3.90, 4.05), 'toGrip': (4.05, 4.40),
+      'rToCov2': (3.90, 4.20), 'close': (4.20, 4.40), 'toCH': (4.40, 4.65), 'pull': (4.65, 4.85), 'push': (4.92, 5.08), 'rBack': (5.08, 5.45)}   # 2026-11-22 사용자 지정: 빈 드럼 치우고 새 드럼 대기까지(빼기~걸기 전) 1.1 -> 2.2초
 HOOK = Vector(SPEC['drum_hook'])
 def drum_swing(Gw, a):   # 드럼 뒤를 앞 고리 축(총의 위 방향)으로 바깥(+X)으로 a도
     return Gw @ Matrix.Translation(HOOK) @ Matrix.Rotation(math.radians(-a), 4, 'Z') @ Matrix.Translation(-HOOK)
@@ -301,7 +301,7 @@ for yw in (-30, -15, 0, 15):
                     cost = v + 0.05 * (abs(fw) + sd + abs(up) * 0.5 + abs(rl) * 0.1 + abs(pt) * 0.2 + abs(yw) * 0.1)
                     if best is None or cost < best[0]: best = (cost, dict(back=-fw, side=sd, up=up, pitch=pt, roll=rl, yaw=yw), [round(hg, 1), round(vg, 1), round(near * 100, 1), round(vis, 2)])
 RELOAD_D = best[1] if best else dict(back=-1, side=3, up=4, pitch=8, roll=23); OUT['reload_pose'] = {'delta': RELOAD_D, 'hv': best[2] if best else None}
-CLIPS = {'Idle': (tl_idle, 4.0), 'Fire': (tl_fire, round(FIRE_LEN, 4)), 'Reload': (tl_reload, 4.8)}
+CLIPS = {'Idle': (tl_idle, 4.0), 'Fire': (tl_fire, round(FIRE_LEN, 4)), 'Reload': (tl_reload, 5.9)}
 OUT['clips'] = {k: v[1] for k, v in CLIPS.items()}
 # ---- 적용/굽기
 PB = arm.pose.bones
