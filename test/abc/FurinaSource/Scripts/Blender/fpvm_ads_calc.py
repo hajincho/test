@@ -60,7 +60,7 @@ def main():
     ):
         # P38: 슬라이드 정위치 보정으로 가늠자가 3.31cm 앞으로 감 -> 눈-가늠자 거리도 같이 늘려 화면 속 총·팔 위치 유지
         targets[key] = align({'gun_pos': (28., -6., -6.5), 'gun_rot': (2.5, 4., -3.), 'rear': rear, 'front': front, 'rear_dist_cm': 32. + (3.31 if key == 'p38' else 0.)})
-    for key in ('mp40', 'mp38', 'stg44'):   # 기관단총/돌격소총(fpvm_smg.py export 가 입력을 씀)
+    for key in ('mp40', 'mp38', 'stg44', 'mg34'):   # 기관단총/돌격소총(fpvm_smg.py export 가 입력을 씀)
         f = data / f'fpvm_{key}_ads_in.json'
         if f.is_file(): targets[key] = align(json.loads(f.read_text(encoding='utf-8')))
     lf = data / 'fpvm_launchers_ads.json'   # 대전차 화기(fpvm_launchers.py export): 영점별 정조준 변환. 키 = <무기> (가장 낮은 영점), <무기>_<0|1|2>

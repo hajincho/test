@@ -17,6 +17,7 @@ elif TAG == 'v3': KEYS = ['kar98k_zf39', 'kar98k_zf41', 'g43_zf4', 'p38', 'p08',
 elif TAG == 'stance': KEYS = ['kar98k', 'g43', 'g43_zf4', 'mp40', 'mp38', 'stg44', 'p38']
 elif TAG == 'lchlive': KEYS = ['panzerfaust']   # 화면에 띄운 PIE 에서 실제 마우스 휠로 영점 확인(40초 동안 상태 기록)
 elif TAG == 'zero': KEYS = ['kar98k_zf39', 'g43_zf4', 'kar98k', 'mp40', 'p38']   # 영점 300/200/25 m 확인(쏜 순간 탄 방향)
+elif TAG == 'mg34': KEYS = ['mg34']
 elif TAG == 'lch': KEYS = ['panzerfaust', 'panzerschreck']   # 대전차 화기(2026-11-21): 영점 휠·발사체·재장전
 elif TAG != 'all': KEYS = [k for k in KEYS if k in TAG.split('+')]   # 일부만 다시: 태그 'kar98k+kar98k_zf41'(ExecCmds 는 쉼표로 명령을 나눔)
 BOLT = 1.3   # 볼트액션은 사격 뒤 볼트 조작(1.2초)이 끝나야 재장전이 받아짐

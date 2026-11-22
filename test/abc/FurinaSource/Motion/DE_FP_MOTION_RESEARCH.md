@@ -318,3 +318,17 @@
   - [당시] TM-E 30-451 *German antitank weapons*(1945), Lone Sentry 전재본 — https://lonesentry.com/manuals/tme30/ch7sec2sub7.html
   - [2차] Wikipedia *Panzerschreck* — https://en.wikipedia.org/wiki/Panzerschreck
   - [2차] Wikipedia(독일어) *Raketenpanzerbüchse* — https://de.wikipedia.org/wiki/Raketenpanzerb%C3%BCchse
+
+## 11. MG34(들고 쏘기만) / MG42(설치 사격만) — 2026-11-22 조사·구현
+- **사용자 지정:** MG34 는 설치 사격 없이 돌격소총처럼(허리·견착), 재장전 = 50발 탄띠 드럼(Gurttrommel 34) 교체. MG42 는 설치 사격만: 평소엔 총을 어깨에 메고 왼손에 탄약 상자, 설치하면 상자와 250발 탄띠가 연결된 채 바닥에 놓임, 설치된 총 가까이에서 스페이스 = 사격 준비 자세, 재장전 = 새 상자를 꺼내 탄띠 연결. 쏠수록 상자 안 탄이 줄고 탄띠가 줄자처럼 감겨 올라가며 흔들림(물리). 설치 동작 자체는 아직 만들지 않음.
+- **MG34 드럼 장전(당시 미군 정보 교범 1943):** 드럼 뚜껑 멈치를 누르고 열어 탄띠 꼬리표를 뺌 -> 꼬리표를 (왼쪽) 급탄구에 넣음(고리 열린 쪽 아래) -> 드럼 앞 좁은 끝을 급탄판 아래 돌기에 걸고 -> 뒤쪽을 총 쪽으로 돌려 스프링 멈치가 걸리게 -> 그다음은 탄띠 상자와 같음: 덮개는 열거나 닫은 채, 첫 탄이 급탄 갈퀴 3개에 걸릴 때까지 탄띠를 당김 -> 오른쪽 장전 손잡이를 '끝까지' 당겼다가 앞으로. 방아쇠 위 E = 단발, 아래 D = 연발. 연발은 '튀는 경향'이 커 부사수가 양각대를 누름.
+- **MG34 들고 쏘기:** 당시 가죽 멜빵을 '전진하며 허리에서 쏠 때' 받침으로 썼다는 기록과 사진(bergflak, 동부전선 사진). 교범에 있었는지·흔했는지는 자료가 엇갈림(포럼 증언 양쪽) -> 짧은 연사, 개머리판은 옆구리(허리) 또는 어깨.
+- **MG42 탄띠 장전(같은 교범):** 덮개 뒤끝 멈치를 앞으로 밀어 덮개를 엶 -> 꼬리표를 왼쪽 급탄구에(고리 열린 쪽 아래) -> 첫 탄이 갈퀴에 걸릴 때까지(약 탄 3개 폭) 당김(급탄구를 덮을 만큼은 아님) -> 쏠 때가 되면 장전 손잡이를 끝까지 당겼다가 '딸깍' 소리가 날 때까지 앞으로. 발사 속도 분당 1,050~1,350, 양각대 경기관총 25.5 lb, 연발 250발마다 총열 교환.
+- **탄약 상자(Patronenkasten 34/41):** 7.92mm 탄띠 300발(50발 탄띠 묶음), 상자 손잡이로 들고 다님, 운반 끈(Tragegurt 34). 사용자 지정에 따라 250발 탄띠 1줄로.
+- **출처:**
+  - [당시] MIS Special Series No.14 *German Infantry Weapons* (1943) MG34 — https://www.lonesentry.com/manuals/german-infantry-weapons/mg34-machine-gun.html
+  - [당시] 같은 교범 MG42 — https://3g.lonesentry.com/manuals/german-infantry-weapons/mg42-machine-gun.html
+  - [당시] TM E9-206A *German 7.9mm Dual Purpose Machine Gun MG34* (1943) — https://www.brpguns.com/content/28653950-War-Department-technical-Manual-tm-e9-206a-german-7-9-Mm-Dual-Purpose-Machine-Gun-Mg-34-13-April-1943.pdf
+  - [수집가] bergflak *MG34 and MG42 slings* — https://www.bergflak.com/Mgrem.html
+  - [수집가] mp44.nl *Patronenkasten 34/41* — https://www.mp44.nl/equipment/patronenkasten.htm , fjm44 상자·끈 — https://fjm44.com/articles/mg-3442-ammunition-box-patronenkasten-34-arr-42/
+  - [2차] Wikipedia *MG 34*, *MG 42*; Athlon Outdoors *Full-Auto Sentry: MG34* — https://athlonoutdoors.com/article/german-mg34-machine-gun/
