@@ -59,10 +59,12 @@
  "sleeves": 8,
  "mag_faces": 4246,
  "handle_faces": 338,
+ "cover_faces": 356,
  "tris": {
-  "W_mg34": 14181,
+  "W_mg34": 13825,
   "W_mag": 4246,
-  "W_handle": 338
+  "W_handle": 338,
+  "W_cover": 356
  },
  "sight": {
   "front": [
@@ -175,6 +177,10 @@
   "score": 1.023,
   "pen_cm": 0.928
  },
+ "L_cover": {
+  "score": 0.529,
+  "pen_cm": 0.324
+ },
  "reload_pose": {
   "delta": {
    "back": -3,
@@ -194,7 +200,7 @@
  "clips": {
   "Idle": 4.0,
   "Fire": 0.0667,
-  "Reload": 4.0
+  "Reload": 4.8
  },
  "exported": true,
  "mats": [

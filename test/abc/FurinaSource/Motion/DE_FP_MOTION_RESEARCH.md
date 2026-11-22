@@ -332,3 +332,4 @@
   - [수집가] bergflak *MG34 and MG42 slings* — https://www.bergflak.com/Mgrem.html
   - [수집가] mp44.nl *Patronenkasten 34/41* — https://www.mp44.nl/equipment/patronenkasten.htm , fjm44 상자·끈 — https://fjm44.com/articles/mg-3442-ammunition-box-patronenkasten-34-arr-42/
   - [2차] Wikipedia *MG 34*, *MG 42*; Athlon Outdoors *Full-Auto Sentry: MG34* — https://athlonoutdoors.com/article/german-mg34-machine-gun/
+- **MG34 드럼 장전 때 급탄 덮개(2026-11-22 보강, 사용자 지적):** 드럼(바구니)을 단 채 장전하려면 덮개를 열고 탄띠 앞 고리들을 급탄판에 놓은 뒤 덮개를 닫고 탄을 멈춤까지 당김(드럼을 먼저 달면 덮개를 열어야 함) - mg42.us 포럼 *Basic MG-34 questions*(https://www.mg42.us/viewtopic.php?t=12714). 드럼은 덮개를 든 뒤 급탄판 왼쪽에 담 - Athlon Outdoors(https://athlonoutdoors.com/article/german-mg34-machine-gun/). 드럼 앞 끝을 걸고 뒤를 돌려 끼움, 탄을 갈퀴에 걸릴 때까지 당긴 뒤 장전 손잡이 - MIS 1943(위). -> 구현 순서: 덮개 열기 -> 드럼 빼기 -> 새 드럼 걸기(앞 고리, 뒤 돌림) -> 탄띠 앞 고리가 급탄판에 -> 덮개 닫기 -> 오른쪽 장전 손잡이 당겼다 앞으로.

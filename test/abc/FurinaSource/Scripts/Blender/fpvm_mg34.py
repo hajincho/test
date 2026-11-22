@@ -16,7 +16,7 @@ D = L.D; FPS = 30; KEY = WK.upper(); OUT = {'key': WK, 'stage': STAGE}
 SPEC = {'mg34': dict(grip=(-2.4, 27.5, -4.5), fR=(0.15, -0.74, -0.67), xc=-2.9, bore_z=2.8, ch_box=((-11.6, 21.8, -0.8), (-4.4, 24.4, 2.3)), travel=9.0, rpm=900, cap=50,
                      rear_y=4.5, front_y=(-49.4, -47.4), recv_end=40.0, hold='guard', guard_ahead=-8.4, gun_pos=[36.0, -8.0, -13.0], gun_rot=[4.0, 0.0, -8.0],   # 배치: fpvm_place_search.py(두 손 닿고 드럼·리시버·왼손이 화면 안)
                      fire_len=60.0 / 900,
-                     mag_mats=('mg 34 mag', 'p line', '7.92х57 l'), drum_hook=(0.8, 9.8, 1.7))}[WK]
+                     mag_mats=('mg 34 mag', 'p line', '7.92х57 l'), drum_hook=(0.8, 9.8, 1.7), cover_box=((-6.6, 8.6, 3.0), (1.6, 22.4, 8.0)), cover_hinge=(-2.9, 9.4, 5.6), cover_open=75.0)}[WK]
 CLAV = {'L': [-10.73, 9.89, -16.11], 'R': [-17.46, -9.78, -17.09]}; REACH = OPT.get('reach', 37.5)
 POLE = {'R': Vector((-0.10, -0.12, -0.18)), 'L': Vector((-0.08, 0.14, -0.20))}
 # ---- 팔
@@ -99,7 +99,11 @@ lab, comps, co = comps_of(gun)
 (lo_b, hi_b) = SPEC['ch_box']
 ch, nch = split_faces(gun, 'W_handle', comp_sel(lambda lo, hi: all(lo[i] >= lo_b[i] and hi[i] <= hi_b[i] for i in range(3))))
 OUT['handle_faces'] = nch
-OUT['tris'] = {o.name: decimate(o, t) for o, t in ((gun, 70000), (mag, 9000), (ch, 4000))}
+# 급탄 덮개(2026-11-22 고증: 드럼을 달 때 덮개를 열고 탄띠 앞 고리들을 급탄판에 놓은 뒤 닫음 - mg42.us 포럼, Athlon, MIS 1943)
+CB = SPEC['cover_box']   # 성분 단위(영역 안에 통째로 든 판·리벳만; 면 단위로 자르면 리시버·가늠자 조각이 들려 뾰족해졌음)
+lab, comps, co = comps_of(gun)
+cover, ncov = split_faces(gun, 'W_cover', comp_sel(lambda lo, hi: all(lo[i] >= CB[0][i] and hi[i] <= CB[1][i] for i in range(3)))); OUT['cover_faces'] = ncov
+OUT['tris'] = {o.name: decimate(o, t) for o, t in ((gun, 70000), (mag, 9000), (ch, 4000), (cover, 6000))}
 # 조준선(앞 가늠쇠 = 총구 쪽 가운데 줄 최고점, 뒤 가늠자 = 같은 높이(조준선 ∥ 총열))
 P = np.array([v.co[:] for v in gun.data.vertices]); f0, f1 = SPEC['front_y']
 cen = P[(P[:, 1] >= f0) & (P[:, 1] <= f1) & (np.abs(P[:, 0] - SPEC['xc']) < 0.15)]
@@ -122,10 +126,10 @@ if 'gun_x' not in OPT:
     while gxp > gy - 30 and ((_G(gxp) @ HOLD_N) - sh).length * 100 > REACH + OPT.get('reach_slack', 1.0): gxp -= 0.5
 GUN_POS = OPT.get('gun_pos', SPEC.get('gun_pos') or [round(gxp, 2), -9.0, round(-OPT.get('sight_drop', 5.0) - front[2], 2)]); OUT['gun_pos'] = GUN_POS; OUT['hold'] = [HOLD, [round(c, 2) for c in HOLD_N]]
 G0 = L.gun_native_to_cam(GUN_POS, *GUN_ROT)
-for o in (gun, mag, ch): o.matrix_world = G0
+for o in (gun, mag, ch, cover): o.matrix_world = G0
 bpy.context.view_layer.update()
 def dirn(d, M=None): return ((M or G0).to_3x3() @ Vector(d)).normalized()
-bvh_all = L2.bvh_of([gun, mag, ch]); bvh_gun = L2.bvh_of([gun, ch])
+bvh_all = L2.bvh_of([gun, mag, ch, cover]); bvh_gun = L2.bvh_of([gun, ch, cover])
 E = L2.setup_ik(arm); ax = {s: L.hand_axes(arm, s) for s in 'LR'}; fax = {s: L.finger_axes(arm, s, ax[s]) for s in 'LR'}
 def solve_place(s, contact, f, p, along=0.45, off=1.6): return L2.place_hand(arm, E, s, ax[s], contact, f, p, palm_off_cm=off, along=along, elbow_hint_m=contact + POLE[s])
 def wrist_world(s):
@@ -186,13 +190,17 @@ plR = ax['R']['p_local']; flR = ax['R']['f_local']
 hc = [v.co for v in ch.data.vertices]; kn = G0 @ (sum(hc, Vector()) / len(hc)); H = L2.hand_local(arm, 'R', fax['R'], fset(PINCH, 'R'))
 Wch, OUT['R_ch'] = L2.search_hand(H, 'pinch', kn, bvh_all, shR, reach_cm=100, excl=(kn, 0.016), prefer=[(plR, dirn((1, 0, -0.2)), 0.6), (flR, dirn((0.2, -1, 0)), 0.4)])
 ST['R_CH'] = {'ref': 'handle', 'W': Wch, 'fing': fset(PINCH, 'R')}
+ct = G0 @ Vector((SPEC['xc'], CB[1][1] - 1.0, CB[1][2] - 1.5)); H = L2.hand_local(arm, 'L', fax['L'], fset(PINCH, 'L'))
+Wcv, OUT['L_cover'] = L2.search_hand(H, 'pinch', ct, bvh_all, shL, reach_cm=100, excl=(ct, 0.016), prefer=[(plL, dirn((0, 0.3, -1)), 0.6), (flL, dirn((-0.3, 0, -1)), 0.4)])
+ST['L_COVER'] = {'ref': 'cover', 'W': Wcv, 'fing': fset(PINCH, 'L')}
 Wpouch = Matrix.LocRotScale(Vector((0.05, 0.22, -0.42)), L.wrist_rot_for(ax['L'], Vector((0.6, -0.3, 0.2)), Vector((0.0, -0.3, 1.0))).to_quaternion(), None)
 ST['L_POUCH'] = {'ref': 'cam', 'W': Wpouch, 'fing': fset(WRAP, 'L')}
 # ---- 뼈
 def bone_at(name, parent, head_native):
     h = G0 @ Vector(head_native); t = G0 @ (Vector(head_native) + Vector((0, -5.0, 0))); L.add_bone(arm, name, parent, h, t)
 bone_at('VM_Gun', 'Hips', (0, 0, 0)); bone_at('VM_Mag', 'VM_Gun', (SPEC['xc'], myc, mzc)); bone_at('VM_Handle', 'VM_Gun', tuple(G0.inverted() @ kn))
-for o, b in ((gun, 'VM_Gun'), (mag, 'VM_Mag'), (ch, 'VM_Handle')): L.bind_rigid(arm, o, b)
+bone_at('VM_Cover', 'VM_Gun', SPEC['cover_hinge'])
+for o, b in ((gun, 'VM_Gun'), (mag, 'VM_Mag'), (ch, 'VM_Handle'), (cover, 'VM_Cover')): L.bind_rigid(arm, o, b)
 REST = {b.name: b.matrix_local.copy() for b in arm.data.bones}
 # ---- 운동학
 def ease(x): x = min(max(x, 0.0), 1.0); return x * x * (3 - 2 * x)
@@ -206,7 +214,8 @@ OPEN = False   # MG34: 장전 손잡이는 당겼다 앞으로 밀어 두고 사
 REST_S = SPEC['travel'] if OPEN else 0.0
 def frames(st):
     Gw = st['D'] @ G0; Mw = st.get('Mw') or Gw
-    return {'gun': Gw, 'mag': Mw, 'handle': Gw @ Matrix.Translation((0, st['s'], 0)), 'cam': Matrix.Identity(4)}
+    HG = Vector(SPEC['cover_hinge']); Cw = Gw @ Matrix.Translation(HG) @ Matrix.Rotation(math.radians(st.get('cv', 0.0)), 4, 'X') @ Matrix.Translation(-HG)   # 덮개: 앞 경첩(X 축)으로 뒤끝이 위로
+    return {'gun': Gw, 'mag': Mw, 'handle': Gw @ Matrix.Translation((0, st['s'], 0)), 'cover': Cw, 'cam': Matrix.Identity(4)}
 REF0 = frames({'D': Matrix.Identity(4), 's': 0.0})
 REL = {k: REF0[v['ref']].inverted() @ v['W'] for k, v in ST.items()}
 def hand_world(key, F): return F[ST[key]['ref']] @ REL[key]
@@ -223,8 +232,9 @@ def tl_fire(t):   # 한 발 주기(분당 rpm): 반동 + 노리쇠(손잡이) �
     if OPEN: s = SPEC['travel'] * (1 - lin(t, 0.0, 0.25 * FIRE_LEN)) if t < 0.25 * FIRE_LEN else SPEC['travel'] * lin(t, 0.25 * FIRE_LEN, 0.9 * FIRE_LEN)
     else: s = 0.0   # StG44: 장전 손잡이는 사격 때 움직이지 않는 것으로(자료 엇갈림 -> 보수적으로)
     return {'D': gun_delta(back=1.2 * k, up=0.4 * k, pitch=1.6 * k, roll=0.4 * k), 's': s, 'L': ('L_GRIP', 'L_GRIP', 0), 'mag_vis': 1}
-RT = {'tilt': (0.0, 0.45, 3.55, 4.0), 'toMag': (0.05, 0.45), 'unhook': (0.45, 0.70), 'out': (0.70, 0.95), 'toPouch': (0.95, 1.40), 'toWell': (1.40, 1.90), 'hook': (1.90, 2.15),
-      'toGrip': (2.15, 2.50), 'toCH': (2.25, 2.60), 'pull': (2.60, 2.85), 'push': (2.92, 3.10), 'rBack': (3.10, 3.50)}
+RT = {'tilt': (0.0, 0.45, 4.35, 4.8), 'toCover': (0.05, 0.40), 'open': (0.40, 0.70), 'toMag': (0.70, 0.98), 'unhook': (0.98, 1.20), 'out': (1.20, 1.45), 'toPouch': (1.45, 1.85),
+      'toWell': (1.85, 2.30), 'hook': (2.30, 2.55), 'toCover2': (2.55, 2.85), 'close': (2.85, 3.10), 'toGrip': (3.10, 3.45), 'toCH': (3.20, 3.50), 'pull': (3.50, 3.72),
+      'push': (3.78, 3.95), 'rBack': (3.95, 4.30)}
 HOOK = Vector(SPEC['drum_hook'])
 def drum_swing(Gw, a):   # 드럼 뒤를 앞 고리 축(총의 위 방향)으로 바깥(+X)으로 a도
     return Gw @ Matrix.Translation(HOOK) @ Matrix.Rotation(math.radians(-a), 4, 'Z') @ Matrix.Translation(-HOOK)
@@ -243,13 +253,18 @@ def tl_reload(t):
     elif t < T['hook'][1]: Mw = drum_swing(Gw, 25.0 * (1 - seg(t, *T['hook'])))
     else: Mw = Gw
     s = SPEC['travel'] * seg(t, *T['pull']) * (1 - seg(t, *T['push']))   # 끝까지 당겼다가 앞으로 밀어 둠
-    if t < T['toMag'][1]: Lh = ('L_GRIP', 'L_MAG', seg(t, *T['toMag']))
-    elif t < T['toGrip'][0]: Lh = ('L_MAG', 'L_MAG', 0)
-    else: Lh = ('L_MAG', 'L_GRIP', seg(t, *T['toGrip']))
+    cv = SPEC['cover_open'] * seg(t, *T['open']) * (1 - seg(t, *T['close']))
+    if t < T['toCover'][1]: Lh = ('L_GRIP', 'L_COVER', seg(t, *T['toCover']))
+    elif t < T['open'][1]: Lh = ('L_COVER', 'L_COVER', 0)
+    elif t < T['toMag'][1]: Lh = ('L_COVER', 'L_MAG', seg(t, *T['toMag']))
+    elif t < T['toCover2'][0]: Lh = ('L_MAG', 'L_MAG', 0)
+    elif t < T['toCover2'][1]: Lh = ('L_MAG', 'L_COVER', seg(t, *T['toCover2']))
+    elif t < T['toGrip'][0]: Lh = ('L_COVER', 'L_COVER', 0)
+    else: Lh = ('L_COVER', 'L_GRIP', seg(t, *T['toGrip']))
     if t < T['toCH'][0]: Rh = ('R_GRIP', 'R_GRIP', 0)
     elif t < T['rBack'][0]: Rh = ('R_GRIP', 'R_CH', seg(t, *T['toCH']))
     else: Rh = ('R_CH', 'R_GRIP', seg(t, *T['rBack']))
-    return {'D': D_, 's': s, 'L': Lh, 'R': Rh, 'Mw': Mw, 'mag_vis': 1, 'framing': Vector((.06, .0, .02)) * c}
+    return {'D': D_, 's': s, 'cv': cv, 'L': Lh, 'R': Rh, 'Mw': Mw, 'mag_vis': 1, 'framing': Vector((.06, .0, .02)) * c}
 def view_ang(p): return math.degrees(math.atan2(-p.y, max(p.x, 1e-3))), math.degrees(math.atan2(p.z, max(p.x, 1e-3)))
 best = None
 # 재장전 때 총을 조금 들어 오른쪽으로 비틀어 드럼(왼쪽 면)이 화면 가운데 약간 아래에 보이게. 왼손(드럼)·오른손(장전 손잡이)이 어깨에서 닿는 자세만.
@@ -269,7 +284,7 @@ for yw in (-30, -15, 0, 15):
                     cost = v + 0.05 * (abs(fw) + sd + abs(up) * 0.5 + abs(rl) * 0.1 + abs(pt) * 0.2 + abs(yw) * 0.1)
                     if best is None or cost < best[0]: best = (cost, dict(back=-fw, side=sd, up=up, pitch=pt, roll=rl, yaw=yw), [round(hg, 1), round(vg, 1), round(near * 100, 1), round(vis, 2)])
 RELOAD_D = best[1] if best else dict(back=-1, side=3, up=4, pitch=8, roll=23); OUT['reload_pose'] = {'delta': RELOAD_D, 'hv': best[2] if best else None}
-CLIPS = {'Idle': (tl_idle, 4.0), 'Fire': (tl_fire, round(FIRE_LEN, 4)), 'Reload': (tl_reload, 4.0)}
+CLIPS = {'Idle': (tl_idle, 4.0), 'Fire': (tl_fire, round(FIRE_LEN, 4)), 'Reload': (tl_reload, 4.8)}
 OUT['clips'] = {k: v[1] for k, v in CLIPS.items()}
 # ---- 적용/굽기
 PB = arm.pose.bones
@@ -284,7 +299,7 @@ def apply_state(st):
     bpy.context.view_layer.update()
     F = frames(st)
     set_rigid('VM_Gun', F['gun'], REF0['gun']); bpy.context.view_layer.update()
-    set_rigid('VM_Handle', F['handle'], REF0['handle']); set_rigid('VM_Mag', F['mag'], REF0['mag'], st.get('mag_vis', 1)); bpy.context.view_layer.update()
+    set_rigid('VM_Handle', F['handle'], REF0['handle']); set_rigid('VM_Mag', F['mag'], REF0['mag'], st.get('mag_vis', 1)); set_rigid('VM_Cover', F['cover'], REF0['cover']); bpy.context.view_layer.update()
     ra_, rb_, rx_ = st.get('R', ('R_GRIP', 'R_GRIP', 0)); Wr = blend_W(hand_world(ra_, F), hand_world(rb_, F), rx_, 0.03 if ra_ != rb_ else 0.0)
     la, lb, lx = st['L']; Wl = blend_W(hand_world(la, F), hand_world(lb, F), lx, 0.03 if la != lb else 0.0)
     for s, W in (('R', Wr), ('L', Wl)):
@@ -326,7 +341,7 @@ elif STAGE == 'pose':
 elif STAGE in ('anim', 'export', 'reload_export'):
     if STAGE == 'anim':
         R_ = []
-        for nm, fn, t in (('fire', tl_fire, 0.25 * FIRE_LEN), ('rl_unhook', tl_reload, 0.7), ('rl_out', tl_reload, 0.95), ('rl_well', tl_reload, 1.9), ('rl_hooked', tl_reload, 2.2), ('rl_pull', tl_reload, 2.85), ('rl_end', tl_reload, 3.7)):
+        for nm, fn, t in (('rl_open', tl_reload, 0.7), ('rl_unhook', tl_reload, 1.2), ('rl_well', tl_reload, 2.3), ('rl_hooked', tl_reload, 2.6), ('rl_close', tl_reload, 3.0), ('rl_pull', tl_reload, 3.72)):
             R_ += shot(nm, fn, t, ('fp', 'side'), look=tuple(G0 @ Vector((0, 0, 0))), scale=0.8)
         OUT['renders'] = R_
     else:
@@ -341,7 +356,7 @@ elif STAGE in ('anim', 'export', 'reload_export'):
         if STAGE == 'export':
             arm.animation_data.action = acts['Idle']
             bpy.ops.object.select_all(action='DESELECT')
-            for o in (arm, body, gun, mag, ch): o.select_set(True)
+            for o in (arm, body, gun, mag, ch, cover): o.select_set(True)
             for o in CA: o.select_set(True)   # 병과 캐릭터 7종 1인칭 팔
             bpy.context.view_layer.objects.active = arm
             bpy.ops.export_scene.fbx(filepath=D + r'\FBX\FPVM\SK_FPVM_%s.fbx' % KEY, use_selection=True, object_types={'ARMATURE', 'MESH'}, axis_forward='-Y', axis_up='Z', apply_unit_scale=True,
@@ -355,6 +370,6 @@ elif STAGE in ('anim', 'export', 'reload_export'):
         OUT['exported'] = True
         # 정조준 입력(fpvm_ads_calc.py all 이 읽음)
         json.dump({'gun_pos': GUN_POS, 'gun_rot': GUN_ROT, 'rear': rear, 'front': front, 'rear_dist_cm': (SPEC['recv_end'] - rear[1]) + 7.0}, open(D + r'\Data\fpvm_%s_ads_in.json' % WK, 'w'))
-OUT['mats'] = sorted({m.name for o in (body, gun, mag, ch) for m in o.data.materials if m}); OUT['spec'] = {k: v for k, v in SPEC.items() if k in ('rpm', 'cap', 'travel', 'fire_len')}
+OUT['mats'] = sorted({m.name for o in (body, gun, mag, ch, cover) for m in o.data.materials if m}); OUT['spec'] = {k: v for k, v in SPEC.items() if k in ('rpm', 'cap', 'travel', 'fire_len')}
 json.dump(OUT, open(D + r'\Data\fpvm_%s.json' % WK, 'w'), indent=1, default=str)
 print('FPVM_MG34_OK', json.dumps({k: OUT.get(k) for k in ('gun_pos', 'yL', 'seat', 'L_mag', 'L_ch', 'handle_faces', 'mag_faces', 'tris', 'sight', 'reload_pose', 'unfolded_verts')})[:1600])
