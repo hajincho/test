@@ -39,7 +39,7 @@
   "K_det": 9.999981549863479e-07,
   "scale": 0.009999993849950711,
   "bones_kept": 53,
-  "arm_verts": 4128,
+  "arm_verts": 6519,
   "K": [
    [
     3.586359292873098e-09,
@@ -83,7 +83,8 @@
   "Right_len_cm": [
    21.14,
    18.02
-  ]
+  ],
+  "fp_char": "robin"
  },
  "clavicle_err_cm": {
   "L": 1.34,
@@ -106,11 +107,11 @@
  },
  "seat": {
   "R": {
-   "gap_cm": 0.012,
+   "gap_cm": 0.007,
    "moved_cm": 0.0
   },
   "L": {
-   "gap_cm": 0.012,
+   "gap_cm": 0.04,
    "moved_cm": 0.0
   }
  },
@@ -119,41 +120,41 @@
   "Thumb": {
    "cost": 0.0,
    "gap_cm": [
-    -0.05,
-    -0.06,
-    -0.08
-   ]
-  },
-  "IndexFinger": {
-   "cost": 0.197,
-   "gap_cm": [
-    0.39,
+    -0.02,
     -0.07,
     -0.07
    ]
   },
-  "MiddleFinger": {
-   "cost": 0.411,
+  "IndexFinger": {
+   "cost": 0.196,
    "gap_cm": [
-    0.82,
-    -0.08,
-    -0.05
+    0.39,
+    -0.01,
+    -0.04
+   ]
+  },
+  "MiddleFinger": {
+   "cost": 0.395,
+   "gap_cm": [
+    0.79,
+    -0.01,
+    -0.03
    ]
   },
   "RingFinger": {
-   "cost": 0.486,
+   "cost": 0.478,
    "gap_cm": [
-    0.97,
-    -0.06,
-    -0.01
+    0.95,
+    -0.03,
+    -0.08
    ]
   },
   "LittleFinger": {
-   "cost": 0.402,
+   "cost": 0.327,
    "gap_cm": [
-    0.8,
-    -0.06,
-    -0.02
+    0.65,
+    -0.07,
+    -0.03
    ]
   }
  },
@@ -293,8 +294,14 @@
   }
  },
  "mats": [
-  "Furina_Outfit",
-  "Furina_SkinHair",
+  "CARobin_Mat06",
+  "CARobin_Mat12",
+  "CARobin_Mat13",
+  "CARobin_Mat18",
+  "CARobin_Mat23",
+  "CARobin_Mat24",
+  "CARobin_Mat25",
+  "CARobin_Mat26",
   "Panzerfaust60Surface"
  ]
 }

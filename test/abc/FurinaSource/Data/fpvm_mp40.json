@@ -1,12 +1,12 @@
 {
  "key": "mp40",
- "stage": "grip",
+ "stage": "export",
  "arms": {
   "phi_err": 3.7235102710676524e-05,
   "K_det": 9.999981549863479e-07,
   "scale": 0.009999993849950711,
   "bones_kept": 53,
-  "arm_verts": 4128,
+  "arm_verts": 6519,
   "K": [
    [
     3.586359292873098e-09,
@@ -50,7 +50,8 @@
   "Right_len_cm": [
    21.14,
    18.02
-  ]
+  ],
+  "fp_char": "robin"
  },
  "clavicle_err_cm": {
   "L": 1.34,
@@ -90,7 +91,7 @@
   [
    -0.34,
    -14.14,
-   4.93
+   4.43
   ]
  ],
  "R_grip": {
@@ -104,11 +105,11 @@
  },
  "seat": {
   "R": {
-   "gap_cm": 0.035,
+   "gap_cm": 0.107,
    "moved_cm": 0.0
   },
   "L": {
-   "gap_cm": 0.03,
+   "gap_cm": 0.021,
    "moved_cm": 0.0
   }
  },
@@ -116,7 +117,7 @@
   "holes": 63,
   "face": 38,
   "native_cm": [
-   -0.0,
+   0.0,
    9.11,
    -2.15
   ],
@@ -133,43 +134,43 @@
  },
  "R_grip_fingers": {
   "Thumb": {
-   "cost": 0.085,
+   "cost": 0.147,
    "gap_cm": [
-    -0.07,
-    -0.08,
-    0.08
+    0.01,
+    -0.1,
+    -0.09
    ]
   },
   "IndexFinger": {
-   "cost": 0.168,
+   "cost": 0.185,
    "gap_cm": [
-    0.68,
-    -0.1,
-    -0.09
+    0.74,
+    0.02,
+    -0.1
    ],
-   "spread": 30.0,
-   "pad_miss_cm": 0.07
+   "spread": 26.0,
+   "pad_miss_cm": 0.18
   },
   "MiddleFinger": {
-   "cost": 0.037,
+   "cost": 0.161,
    "gap_cm": [
-    0.06,
-    0.0,
-    -0.05
+    0.32,
+    -0.02,
+    -0.03
    ]
   },
   "RingFinger": {
-   "cost": 0.037,
+   "cost": 0.047,
    "gap_cm": [
-    0.06,
+    0.07,
     0.0,
-    0.0
+    0.01
    ]
   },
   "LittleFinger": {
-   "cost": 0.015,
+   "cost": 0.012,
    "gap_cm": [
-    0.02,
+    0.01,
     0.0,
     0.0
    ]
@@ -180,11 +181,11 @@
   0.0
  ],
  "L_hold": {
-  "score": 1.145,
-  "pen_cm": 0.0,
-  "wrist_err_cm": 0.01
+  "score": 1.174,
+  "pen_cm": 0.11,
+  "wrist_err_cm": 0.02
  },
- "L_reach_cm": 37.6,
+ "L_reach_cm": 38.1,
  "L_mag": {
   "score": 0.267,
   "pen_cm": 0.0
@@ -214,41 +215,16 @@
   "Fire": 0.12,
   "Reload": 2.85
  },
- "renders": [
-  "C:\\Users\\fromj\\Downloads\\test\\test\\abc\\FurinaSource\\Data\\fpvm_mp40_gripR_side.png",
-  "C:\\Users\\fromj\\Downloads\\test\\test\\abc\\FurinaSource\\Data\\fpvm_mp40_gripR_left.png",
-  "C:\\Users\\fromj\\Downloads\\test\\test\\abc\\FurinaSource\\Data\\fpvm_mp40_gripR_top.png",
-  "C:\\Users\\fromj\\Downloads\\test\\test\\abc\\FurinaSource\\Data\\fpvm_mp40_gripR_front.png",
-  "C:\\Users\\fromj\\Downloads\\test\\test\\abc\\FurinaSource\\Data\\fpvm_mp40_gripL_side.png",
-  "C:\\Users\\fromj\\Downloads\\test\\test\\abc\\FurinaSource\\Data\\fpvm_mp40_gripL_left.png",
-  "C:\\Users\\fromj\\Downloads\\test\\test\\abc\\FurinaSource\\Data\\fpvm_mp40_gripL_top.png",
-  "C:\\Users\\fromj\\Downloads\\test\\test\\abc\\FurinaSource\\Data\\fpvm_mp40_gripL_front.png"
- ],
- "gap_after_apply": {
-  "R": {
-   "gap_cm": 0.05,
-   "n": 16,
-   "wrist_cm": [
-    -9.4,
-    -13.8,
-    -16.4
-   ],
-   "mesh_verts_total": null
-  },
-  "L": {
-   "gap_cm": 0.03,
-   "n": 15,
-   "wrist_cm": [
-    20.4,
-    -10.1,
-    -10.3
-   ],
-   "mesh_verts_total": null
-  }
- },
+ "exported": true,
  "mats": [
-  "Furina_Outfit",
-  "Furina_SkinHair",
+  "CARobin_Mat06",
+  "CARobin_Mat12",
+  "CARobin_Mat13",
+  "CARobin_Mat18",
+  "CARobin_Mat23",
+  "CARobin_Mat24",
+  "CARobin_Mat25",
+  "CARobin_Mat26",
   "MP40"
  ],
  "spec": {

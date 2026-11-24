@@ -1,0 +1,17 @@
+{
+  "master_inputs": {
+    "BASE_COLOR": "MaterialExpressionTextureSampleParameter2D",
+    "EMISSIVE_COLOR": null,
+    "ROUGHNESS": 0.7699999809265137,
+    "SPECULAR": 0.30000001192092896,
+    "NORMAL": null
+  },
+  "third_person": {
+    "material": "/Game/Furina/Classes/Robin/Materials/MI_Robin_Mat18.MI_Robin_Mat18",
+    "base_texture": "/Game/Furina/Classes/Robin/Textures/T_Robin_02.T_Robin_02"
+  },
+  "first_person": {
+    "material": "/Game/Furina/Classes/Robin/Materials/MI_Robin_Mat18.MI_Robin_Mat18",
+    "base_texture": "/Game/Furina/Classes/Robin/Textures/T_Robin_02.T_Robin_02"
+  }
+}

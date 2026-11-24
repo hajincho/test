@@ -1,0 +1,12 @@
+[
+ {
+  "tmp": "M_S00",
+  "slot": "UV_P08Luger_Barrel_Standard",
+  "material": "MI_DE_p08_UV_P08Luger_Barrel_Standard"
+ },
+ {
+  "tmp": "M_S01",
+  "slot": "UV_P08Luger_Body",
+  "material": "MI_DE_p08_UV_P08Luger_Body"
+ }
+]

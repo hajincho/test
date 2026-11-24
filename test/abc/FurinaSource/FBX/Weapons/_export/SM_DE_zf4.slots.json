@@ -1,0 +1,12 @@
+[
+ {
+  "tmp": "M_S00",
+  "slot": "ZF4_MountMaterial",
+  "material": "MI_DE_zf4_ZF4_MountMaterial"
+ },
+ {
+  "tmp": "M_S01",
+  "slot": "ZF4_ScopeMaterial",
+  "material": "MI_DE_zf4_ZF4_ScopeMaterial"
+ }
+]

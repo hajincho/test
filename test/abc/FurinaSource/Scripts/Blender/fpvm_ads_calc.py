@@ -4,7 +4,7 @@
  출력: UE 행렬(행벡터 규약: x_plane..w_plane) + 위치(cm)/쿼터니언"""
 import sys, json, math
 from pathlib import Path
-sys.path.insert(0, r'C:\Users\fromj\Downloads\test\test\abc\FurinaSource\Scripts\Blender')
+sys.path.insert(0, __import__('os').path.dirname(__import__('os').path.abspath(__file__)))
 from mathutils import Matrix, Vector
 import fpvm_lib as L
 def align(settings):

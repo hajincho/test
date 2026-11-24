@@ -1,0 +1,27 @@
+[
+ {
+  "tmp": "M_S00",
+  "slot": "Stock",
+  "material": "MI_DE_stg44_Stock"
+ },
+ {
+  "tmp": "M_S01",
+  "slot": "Body",
+  "material": "MI_DE_stg44_Body"
+ },
+ {
+  "tmp": "M_S02",
+  "slot": "Belt",
+  "material": "MI_DE_stg44_Belt"
+ },
+ {
+  "tmp": "M_S03",
+  "slot": "Magazine",
+  "material": "MI_DE_stg44_Magazine"
+ },
+ {
+  "tmp": "M_S04",
+  "slot": "Barrel",
+  "material": "MI_DE_stg44_Barrel"
+ }
+]

@@ -4,7 +4,7 @@
 입력 json: {"grip": [x,y,z], "holds": [[x,y,z], ...](후보), "show": [[x,y,z], ...], "butt_y": 61, "reach": 37.5}
 출력: 가장 좋은 gun_pos(cm), gun_rot(°), hold 와 점수. 좌표는 정리본 원래 좌표(cm, 총구 -Y)."""
 import sys, json, math, itertools
-sys.path.insert(0, r'C:\Users\fromj\Downloads\test\test\abc\FurinaSource\Scripts\Blender')
+sys.path.insert(0, __import__('os').path.dirname(__import__('os').path.abspath(__file__)))
 from mathutils import Vector
 import fpvm_lib as L
 A = json.loads(sys.argv[sys.argv.index('--') + 1])

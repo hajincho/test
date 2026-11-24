@@ -7,7 +7,7 @@
  내부: 무기 재질은 UE 에서 양면(two-sided)으로 그려 장전·사격 때 드러나는 안쪽 면이 투명하게 보이지 않게(lyra_fpvm_twosided.py).
  출력: FBX/FPVM/SK_FPVM_<KEY>.fbx(메시) + AS_FPVM_<KEY>_<Idle|Fire|Reload>.fbx, Data/fpvm_<key>.json(조준선·속도 등)"""
 import bpy, bmesh, sys, json, math, os
-sys.path.insert(0, r'C:\Users\fromj\Downloads\test\test\abc\FurinaSource\Scripts\Blender')
+sys.path.insert(0, __import__('os').path.dirname(__import__('os').path.abspath(__file__)))
 import numpy as np
 from mathutils import Matrix, Vector, Quaternion
 import fpvm_lib as L, fpvm_lib2 as L2
@@ -170,7 +170,7 @@ else:
     OUT['L_grip'] = solve_place('L', lc2, fL, pL); OUT['L_grip']['pole'] = L2.calib_pole(arm, E, 'L', E['T_L'].location.copy(), lc2 + POLE['L']); solve_place('L', lc2, fL, pL)
     OUT['seat']['L'] = L2.seat_hand(arm, body, E, 'L', ax['L'], bvh_gun)
 OUT['L_reach_cm'] = round(((arm.matrix_world @ arm.pose.bones['Left wrist'].head) - sh).length * 100, 1)
-ST['L_GRIP'] = {'ref': 'gun', 'W': wrist_world('L'), 'fing': L2.grip_fingers(arm, 'L', fax['L'], bvh_gun, r_cm=0.55, limits={'Thumb': (25, 30, 30), 'default': (85, 100, 75)})}
+ST['L_GRIP'] = {'ref': 'gun', 'W': wrist_world('L'), 'fing': L2.grip_fingers(arm, 'L', fax['L'], bvh_gun, r_cm=0.55, limits={'Thumb': (35, 45, 50), 'default': (87, 100, 70)})}
 # (2026-11-22) 예전 '둘째·셋째 마디 최소 35/30°' 보정은 뺌: 피부 기준 풀이(fpvm_grip)가 덮개를 직접 감쌈
 shL = sh; shR = arm.matrix_world @ arm.pose.bones['Right arm'].head
 def fset(v, s): return {b: a for f, vals in v.items() for b, a in zip(L.fbones(s, f), vals)}
@@ -211,8 +211,7 @@ REF0 = frames({'D': Matrix.Identity(4), 's': 0.0})
 REL = {k: REF0[v['ref']].inverted() @ v['W'] for k, v in ST.items()}
 def hand_world(key, F): return F[ST[key]['ref']] @ REL[key]
 def blend_W(Wa, Wb, x, lift=0.0):
-    la, ra, _ = Wa.decompose(); lb, rb, _ = Wb.decompose(); l = la.lerp(lb, x) + Vector((0, 0, lift * math.sin(math.pi * x)))
-    return Matrix.LocRotScale(l, ra.slerp(rb, x), None)
+    return L2.blend_hand_motion(Wa, Wb, x, lift)
 def blend_f(fa, fb, x): return {b: fa.get(b, 0.0) * (1 - x) + fb.get(b, 0.0) * x for b in set(fa) | set(fb)}
 FIRE_LEN = SPEC['fire_len']
 def tl_idle(t):
@@ -288,10 +287,7 @@ def apply_state(st):
         l, r, _ = W.decompose(); E['T_' + s].location = l; E['T_' + s].rotation_quaternion = r; E['P_' + s].location = l + POLE[s]
     bpy.context.view_layer.update()
     for s, W in (('R', Wr), ('L', Wl)):
-        for _ in range(12):   # IK 목표 보정 3번으론 손목이 1.5~2.5cm 덜 닿았음(판처슈렉, 2026-11-22)
-            err = W.translation - (arm.matrix_world @ PB['%s wrist' % L2.SIDE[s]].head)
-            if err.length < 2e-4: break
-            E['T_' + s].location = E['T_' + s].location + err; bpy.context.view_layer.update()
+        L2.settle_wrist(arm, E, s, W.translation)
     L2.apply_fingers(arm, fax['R'], ST['R_GRIP']['fing']); L2.apply_fingers(arm, fax['L'], blend_f(ST[la]['fing'], ST[lb]['fing'], lx)); bpy.context.view_layer.update()
     if 'framing' in st:
         PB['Hips'].matrix = Matrix.Translation(st['framing']) @ hip_rest
@@ -304,10 +300,10 @@ def bake_clip(name, fn, dur):
     for f in range(n + 1): apply_state(fn(min(dur, f / FPS))); rec.append(record())
     for c in CONS: c.mute = True
     act = bpy.data.actions.new('FPVM_%s_%s' % (KEY, name)); arm.animation_data_create(); arm.animation_data.action = act
+    previous = {}
     for f, Rr in enumerate(rec):
         for pb in PB:
-            pb.matrix_basis = Rr[pb.name]
-            for path in ('location', 'rotation_quaternion', 'scale'): pb.keyframe_insert(path, frame=f + 1, group=pb.name)
+            L2.key_baked_pose(pb, Rr[pb.name], f + 1, previous)
     act.use_fake_user = True; return act, n
 def shot(name, fn, t, views=('fp', 'side'), look=(0.12, -0.05, -0.12), scale=0.9):
     for c in CONS: c.mute = False

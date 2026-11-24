@@ -1,10 +1,13 @@
 """(lyra_fx_capture.py: 사격 효과·권총 3자세·조준경 확인용 변형, 2026-11-21) Lyra 에디터(`py <파일> [태그]`, run_ue_probe.ps1 백그라운드): 지금 반영된 1인칭 무기 11종을 한 번의 PIE 에서 차례로 캡처(2026-11-21).
  무기마다: 대기(허리) -> 사격 직후 -> 재장전 중(시작 1.2초 뒤) -> 정조준. 재장전이 끝날 때까지 기다린 뒤 다음 무기로.
  캡처: Data/fpvm_all_<키>_<단계>.png   기록: Data/lyra_fpvm_capture_all.json("done": true)"""
-import unreal, json, sys, time, traceback
-D = 'C:/Users/fromj/Downloads/test/test/abc/FurinaSource/Data'; OUT = D + '/lyra_fx_capture.json'
+import unreal, json, os, sys, time, traceback
+D = (unreal.Paths.convert_relative_path_to_full(unreal.Paths.project_dir()) + 'FurinaSource/Data').replace(chr(92), '/')
+D = next((arg.split('=', 1)[1] for arg in sys.argv[1:] if arg.startswith('out=')), D)
+os.makedirs(D, exist_ok=True)
+OUT = D + '/lyra_fx_capture.json'
 KEYS = ['p38', 'p08', 'pp', 'kar98k', 'kar98k_zf39', 'kar98k_zf41', 'g43', 'g43_zf4', 'mp40', 'mp38', 'stg44']
-TAG = sys.argv[-1] if len(sys.argv) > 1 and not sys.argv[-1].endswith('.py') else 'all'
+TAG = next((arg for arg in sys.argv[1:] if '=' not in arg), 'all')
 if TAG == 'smoketest': KEYS = ['kar98k']
 elif TAG == 'zf41': KEYS = ['kar98k_zf41']
 elif TAG == 'mp40rl': KEYS = ['mp40', 'mp38']
@@ -18,8 +21,22 @@ elif TAG == 'stance': KEYS = ['kar98k', 'g43', 'g43_zf4', 'mp40', 'mp38', 'stg44
 elif TAG == 'lchlive': KEYS = ['panzerfaust']   # 화면에 띄운 PIE 에서 실제 마우스 휠로 영점 확인(40초 동안 상태 기록)
 elif TAG == 'zero': KEYS = ['kar98k_zf39', 'g43_zf4', 'kar98k', 'mp40', 'p38']   # 영점 300/200/25 m 확인(쏜 순간 탄 방향)
 elif TAG == 'mg34': KEYS = ['mg34']
+elif TAG == 'rcase': KEYS = ['kar98k', 'g43', 'kar98k_zf39', 'g43_zf4']   # 소총 탄피(2026-11-23)
+elif TAG == 'rcaseslow': KEYS = ['kar98k', 'g43']
+elif TAG == 'grips': KEYS += ['mg34', 'panzerfaust', 'panzerschreck']
 elif TAG == 'lch': KEYS = ['panzerfaust', 'panzerschreck']   # 대전차 화기(2026-11-21): 영점 휠·발사체·재장전
-elif TAG != 'all': KEYS = [k for k in KEYS if k in TAG.split('+')]   # 일부만 다시: 태그 'kar98k+kar98k_zf41'(ExecCmds 는 쉼표로 명령을 나눔)
+elif TAG != 'all':
+    requested_keys = TAG.split('+')
+    allowed_keys = KEYS + ['mg34', 'panzerfaust', 'panzerschreck']
+    if any(key not in allowed_keys for key in requested_keys):
+        raise ValueError(f'알 수 없는 캡처 태그: {TAG}')
+    KEYS = requested_keys
+if TAG == 'grips':
+    subset = next((arg.split('=', 1)[1].split('+') for arg in sys.argv[1:] if arg.startswith('keys=')), KEYS)
+    if any(key not in KEYS for key in subset):
+        raise ValueError(f'알 수 없는 뷰모델 키: {subset}')
+    KEYS = subset
+    grip_ammo = next((int(arg.split('=', 1)[1]) for arg in sys.argv[1:] if arg.startswith('ammo=')), 0)
 BOLT = 1.3   # 볼트액션은 사격 뒤 볼트 조작(1.2초)이 끝나야 재장전이 받아짐
 R = {'shots': [], 'events': []}; S = {'st': 'open', 't': 0, 'k': 0, 'i': 0, 'sub': 0}
 # (이름, 동작, 대기초) — 대기는 동작 뒤 캡처까지
@@ -32,6 +49,13 @@ if TAG == 'caseslow':   # 0.1배속으로 탄피 확인
     STEPS = [('hip', 'key', 2.5), ('slow', 'slomo', 0.3), ('fire', 'fire', 0.3), ('s1', None, 0.3), ('s2', None, 0.3), ('s3', None, 0.6), ('ads', 'ads_on', 6.0), ('afire', 'fire', 0.3), ('as1', None, 0.3), ('as2', None, 0.3), ('as3', None, 0.6), ('ads_off', 'aim_off', 4.0), ('fast', 'slomo1', 0.5)]; PISTOL_ONLY = ()
 if TAG == 'case':
     STEPS = [('hip', 'key', 2.5), ('fire', 'fire', 0.03), ('c1', None, 0.0), ('c2', None, 0.0), ('c3', None, 0.2), ('ads', 'ads_on', 1.3), ('afire', 'fire', 0.03), ('ac1', None, 0.0), ('ac2', None, 0.0), ('ads_off', 'aim_off', 0.8)]; PISTOL_ONLY = ()
+if TAG == 'rcase':   # Kar98k 는 볼트를 당기는 0.5초 뒤, G43 은 쏜 즉시 탄피
+    STEPS = [('hip', 'key', 2.5), ('fire', 'fire', 0.03), ('c1', None, 0.12), ('c2', None, 0.40), ('c3', None, 0.15), ('c4', None, 0.25), ('bolt_wait', None, 1.0)]; PISTOL_ONLY = ()
+if TAG == 'rcaseslow':
+    STEPS = [('hip', 'key', 2.5), ('slow', 'slomo', 0.2), ('fire', 'fire', 0.0),
+             ('c1', None, 0.2), ('c2', None, 0.3), ('c3', None, 0.4), ('c4', None, 0.4),
+             ('fast', 'slomo1', 0.2), ('bolt_wait', None, 1.0)]
+    PISTOL_ONLY = ()
 if TAG == 'mp40rl':
     STEPS = [('hip', 'key', 2.5), ('rl1', 'reload', 0.3), ('rl2', None, 0.15), ('rl3', None, 0.3), ('rl4', None, 0.2), ('rl5', None, 0.2), ('rl_wait', 'wait_reload', 0.6)]; PISTOL_ONLY = ()
 if TAG == 'zf41':
@@ -43,6 +67,9 @@ if TAG == 'v3':   # 조준경 화면 속 화면·권총 탄창 재장전·연기
 if TAG == 'stance':   # 견착·재장전 구도 확인(2026-11-21)
     STEPS = [('hip', 'key', 2.5), ('sh', 'sh_on', 1.0), ('sh_off', 'sh_off', 0.8), ('ads', 'ads_on', 1.3), ('ads_off', 'aim_off', 1.0),
              ('rl1', 'reload', 0.7), ('rl2', None, 0.35), ('rl3', None, 0.35), ('rl4', None, 0.5), ('rl_wait', 'wait_reload', 0.6)]
+if TAG == 'grips':
+    STEPS = [('hip', 'key', 1.4), ('ads', 'ads_on', 0.8), ('ads_off', 'aim_off', 0.6),
+             ('rl1', 'reload', 0.45), ('rl2', None, 0.55), ('rl3', None, 0.8), ('rl_wait', 'wait_reload', 0.4)]
     PISTOL_ONLY = ()
 if TAG == 'smoketest': STEPS = STEPS0
 if TAG == 'lchlive':
@@ -63,7 +90,9 @@ def comp(p, name, cls=unreal.ActorComponent):
 def status(p):
     vm = comp(p, 'FurinaFPVM', unreal.SkeletalMeshComponent)
     an = p.get_editor_property('FurinaVMAnimIdle')
-    return {'stance': p.get_editor_property('FurinaPStance'), 'idle_anim': an.get_name() if an else None, 'tube_hidden': p.get_editor_property('FurinaScopeTubeHidden'),
+    reload_anim = p.get_editor_property('FurinaVMAnimReload')
+    return {'stance': p.get_editor_property('FurinaPStance'), 'idle_anim': an.get_name() if an else None,
+            'reload_anim': reload_anim.get_name() if reload_anim else None, 'reserve': p.get_editor_property('FurinaReserve'), 'tube_hidden': p.get_editor_property('FurinaScopeTubeHidden'),
             'last_key': str(p.get_editor_property('FurinaVMLastKey')), 'n_panims': len(p.get_editor_property('FurinaPAnims')), 'ammo': p.get_editor_property('FurinaAmmo'), 'wid': str(p.get_editor_property('FurinaGameWeaponId')), 'rl': bool(p.get_editor_property('FurinaReloading')),
             'mesh': (vm.get_skeletal_mesh_asset().get_name() if vm and vm.get_skeletal_mesh_asset() else None), 'vm_vis': vm.is_visible() if vm else None, 'ads_a': round(p.get_editor_property('FurinaVMAds'), 3)}
 def tick(dt):
@@ -71,9 +100,15 @@ def tick(dt):
         now = time.time(); st = S['st']
         if st == 'done': return
         if st == 'open':
-            setexp('B_Furina_Experience'); unreal.EditorLoadingAndSavingUtils.load_map('/Game/System/DefaultEditorMap/L_DefaultEditorOverview'); S['st'] = 'play'; S['t'] = now + 4; return
+            S['st'] = 'loading'
+            setexp('B_Furina_Experience')
+            editor_world = unreal.get_editor_subsystem(unreal.UnrealEditorSubsystem).get_editor_world()
+            if editor_world.get_name() != 'L_DefaultEditorOverview':
+                unreal.EditorLoadingAndSavingUtils.load_map('/Game/System/DefaultEditorMap/L_DefaultEditorOverview')
+            S['st'] = 'play'; S['t'] = time.time() + 4; return
+        if st == 'loading': return
         if st == 'play':
-            if now >= S['t']: LES().editor_request_begin_play(); S['st'] = 'wait'; S['t'] = now + 90
+            if now >= S['t']: S['st'] = 'wait'; S['t'] = now + 90; LES().editor_request_begin_play()
             return
         w = unreal.get_editor_subsystem(unreal.UnrealEditorSubsystem).get_game_world(); p = unreal.GameplayStatics.get_player_pawn(w, 0) if w else None
         pc = unreal.GameplayStatics.get_player_controller(w, 0) if w else None
@@ -111,10 +146,17 @@ def tick(dt):
                     except Exception: pass
                     R['events'].append([key, 'spawned', cnt])
                 elif act == 'reload':
-                    unreal.get_default_object(unreal.SystemLibrary).call_method('SetIntPropertyByName', (p, 'FurinaAmmo', 0)); p.call_method('FurinaRequestReload'); S['rl0'] = now
+                    properties = unreal.get_default_object(unreal.SystemLibrary)
+                    if TAG == 'grips':
+                        properties.call_method('SetIntPropertyByName', (p, 'FurinaReserve', 64))
+                    properties.call_method('SetIntPropertyByName', (p, 'FurinaAmmo', grip_ammo if TAG == 'grips' else 0))
+                    p.call_method('FurinaRequestReload'); S['rl0'] = now
+                    if TAG == 'grips':
+                        R['events'].append([key, 'reload_requested', bool(p.get_editor_property('FurinaReloading'))])
                 elif act == 'wait_reload':   # 재장전이 끝날 때까지(최대 9초)
-                    if p.get_editor_property('FurinaReloading') and now - S['rl0'] < 9.0: return
-                    R['events'].append([key, 'reload_done', round(now - S['rl0'], 2), p.get_editor_property('FurinaAmmo')])
+                    reloading = p.get_editor_property('FurinaReloading')
+                    if reloading and now - S['rl0'] < 9.0: return
+                    R['events'].append([key, 'reload_timeout' if reloading else 'reload_done', round(now - S['rl0'], 2), p.get_editor_property('FurinaAmmo')])
                 elif act in ('zero_up', 'zero_down'):   # 휠 입력 주입(Enhanced Input). 실패하면 기록만
                     p.call_method('FurinaZeroUp' if act == 'zero_up' else 'FurinaZeroDown'); R['events'].append([key, act, p.get_editor_property('FurinaZeroIdx')])
                 elif act == 'fp_on': p.get_editor_property('FurinaFPWanted').set_active(True)
@@ -142,6 +184,7 @@ def tick(dt):
                 elif act == 'sh_on': p.get_editor_property('FurinaShoulder').set_active(True)
                 elif act == 'sh_off': p.get_editor_property('FurinaShoulder').set_active(False)
                 if name == 'bolt_wait' and key.startswith('kar98k'): wait = BOLT
+                if TAG == 'rcaseslow' and name == 'c1' and key == 'kar98k': wait = 4.7
                 S['sub'] = 1; S['t'] = now + wait; return
             if now < S['t']: return
             if S['sub'] == 1:
@@ -161,12 +204,15 @@ def tick(dt):
                     try:
                         cam = unreal.GameplayStatics.get_player_camera_manager(w, 0); ct = unreal.Transform(cam.get_camera_location(), cam.get_camera_rotation(), unreal.Vector(1, 1, 1))
                         cs = []
-                        for cp in ('/Game/Furina/FX/Pistol/BP_FPVM_9mmCase.BP_FPVM_9mmCase_C', '/Game/Furina/FX/Pistol/BP_FPVM_32Case.BP_FPVM_32Case_C'):
+                        for cp in ('/Game/Furina/FX/Pistol/BP_FPVM_9mmCase.BP_FPVM_9mmCase_C', '/Game/Furina/FX/Pistol/BP_FPVM_32Case.BP_FPVM_32Case_C', '/Game/Furina/FX/Rifle/BP_FPVM_792Case.BP_FPVM_792Case_C'):
                             for a_ in unreal.GameplayStatics.get_all_actors_of_class(w, unreal.load_class(None, cp)):
-                                l_ = unreal.MathLibrary.inverse_transform_location(ct, a_.get_actor_location()); c_ = a_.get_component_by_class(unreal.StaticMeshComponent)
+                                c_ = a_.get_component_by_class(unreal.StaticMeshComponent)
+                                loc = c_.get_world_location() if c_ else a_.get_actor_location()
+                                l_ = unreal.MathLibrary.inverse_transform_location(ct, loc)
                                 v_ = unreal.MathLibrary.inverse_transform_direction(ct, c_.get_physics_linear_velocity()) if c_ else None
                                 cs.append([cp.rsplit('.', 1)[1][:-2], [round(l_.x, 1), round(l_.y, 1), round(l_.z, 1)], [round(v_.x), round(v_.y), round(v_.z)] if v_ else None])
                         st_['cases'] = cs
+                        st_['case_sample_time'] = round(unreal.GameplayStatics.get_time_seconds(w), 3)
                     except Exception as ex: st_['case_err'] = str(ex)[:200]
                     if TAG in ('lch', 'lchlive'):
                         try:
@@ -187,7 +233,7 @@ def tick(dt):
                 if S['k'] >= len(KEYS): S['st'] = 'end'; S['t'] = now + 0.5
             return
         if st == 'end' and now >= S['t']:
-            R['done'] = True; save(); LES().editor_request_end_play(); S['st'] = 'ending'; S['t'] = now + 6; return
+            R['done'] = True; save(); S['st'] = 'ending'; S['t'] = now + 6; LES().editor_request_end_play(); return
         if st == 'ending' and now >= S['t']:
             S['st'] = 'done'; unreal.unregister_slate_post_tick_callback(S['h'])
     except Exception:

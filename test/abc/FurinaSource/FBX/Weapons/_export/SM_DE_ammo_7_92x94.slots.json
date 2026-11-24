@@ -1,0 +1,12 @@
+[
+ {
+  "tmp": "M_S00",
+  "slot": "Brass_Case",
+  "material": "MI_DE_ammo_7_92x94_Brass_Case"
+ },
+ {
+  "tmp": "M_S01",
+  "slot": "Copper_Projectile",
+  "material": "MI_DE_ammo_7_92x94_Copper_Projectile"
+ }
+]

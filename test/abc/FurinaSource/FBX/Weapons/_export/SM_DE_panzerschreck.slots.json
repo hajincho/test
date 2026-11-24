@@ -1,0 +1,12 @@
+[
+ {
+  "tmp": "M_S00",
+  "slot": "Main_001",
+  "material": "MI_DE_panzerschreck_Main_001"
+ },
+ {
+  "tmp": "M_S01",
+  "slot": "Rocket_001",
+  "material": "MI_DE_panzerschreck_Rocket_001"
+ }
+]

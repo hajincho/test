@@ -1,0 +1,22 @@
+[
+ {
+  "tmp": "M_S00",
+  "slot": "p_line",
+  "material": "MI_DE_mg34_p_line"
+ },
+ {
+  "tmp": "M_S01",
+  "slot": "7_92х57_l",
+  "material": "MI_DE_mg34_7_92x57_l"
+ },
+ {
+  "tmp": "M_S02",
+  "slot": "mg_34_mag",
+  "material": "MI_DE_mg34_mg_34_mag"
+ },
+ {
+  "tmp": "M_S03",
+  "slot": "mg_34",
+  "material": "MI_DE_mg34_mg_34"
+ }
+]

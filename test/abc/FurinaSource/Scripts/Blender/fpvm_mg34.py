@@ -6,7 +6,7 @@
  모델: 정리본 SM_DE_mg34(총구 -Y, 위 +Z, 총의 오른쪽 -X). 드럼('mg 34 mag')과 급탄판 위 짧은 탄띠('p line', 탄)를 W_mag 로 함께.
  출력: FBX/FPVM/SK_FPVM_MG34.fbx + AS_FPVM_MG34_<Idle|Fire|Reload>.fbx, Data/fpvm_mg34.json"""
 import bpy, bmesh, sys, json, math, os
-sys.path.insert(0, r'C:\Users\fromj\Downloads\test\test\abc\FurinaSource\Scripts\Blender')
+sys.path.insert(0, __import__('os').path.dirname(__import__('os').path.abspath(__file__)))
 import numpy as np
 from mathutils import Matrix, Vector, Quaternion
 import fpvm_lib as L, fpvm_lib2 as L2
@@ -236,8 +236,7 @@ REF0 = frames({'D': Matrix.Identity(4), 's': 0.0})
 REL = {k: REF0[v['ref']].inverted() @ v['W'] for k, v in ST.items()}
 def hand_world(key, F): return F[ST[key]['ref']] @ REL[key]
 def blend_W(Wa, Wb, x, lift=0.0):
-    la, ra, _ = Wa.decompose(); lb, rb, _ = Wb.decompose(); l = la.lerp(lb, x) + Vector((0, 0, lift * math.sin(math.pi * x)))
-    return Matrix.LocRotScale(l, ra.slerp(rb, x), None)
+    return L2.blend_hand_motion(Wa, Wb, x, lift)
 def blend_f(fa, fb, x): return {b: fa.get(b, 0.0) * (1 - x) + fb.get(b, 0.0) * x for b in set(fa) | set(fb)}
 FIRE_LEN = SPEC['fire_len']
 def tl_idle(t):
@@ -323,10 +322,7 @@ def apply_state(st):
         l, r, _ = W.decompose(); E['T_' + s].location = l; E['T_' + s].rotation_quaternion = r; E['P_' + s].location = l + POLE[s]
     bpy.context.view_layer.update()
     for s, W in (('R', Wr), ('L', Wl)):
-        for _ in range(12):   # IK 목표 보정 3번으론 손목이 1.5~2.5cm 덜 닿았음(판처슈렉, 2026-11-22)
-            err = W.translation - (arm.matrix_world @ PB['%s wrist' % L2.SIDE[s]].head)
-            if err.length < 2e-4: break
-            E['T_' + s].location = E['T_' + s].location + err; bpy.context.view_layer.update()
+        L2.settle_wrist(arm, E, s, W.translation)
     L2.apply_fingers(arm, fax['R'], blend_f(ST[ra_]['fing'], ST[rb_]['fing'], rx_)); L2.apply_fingers(arm, fax['L'], blend_f(ST[la]['fing'], ST[lb]['fing'], lx)); bpy.context.view_layer.update()
     if 'framing' in st:
         PB['Hips'].matrix = Matrix.Translation(st['framing']) @ hip_rest
@@ -339,10 +335,10 @@ def bake_clip(name, fn, dur):
     for f in range(n + 1): apply_state(fn(min(dur, f / FPS))); rec.append(record())
     for c in CONS: c.mute = True
     act = bpy.data.actions.new('FPVM_%s_%s' % (KEY, name)); arm.animation_data_create(); arm.animation_data.action = act
+    previous = {}
     for f, Rr in enumerate(rec):
         for pb in PB:
-            pb.matrix_basis = Rr[pb.name]
-            for path in ('location', 'rotation_quaternion', 'scale'): pb.keyframe_insert(path, frame=f + 1, group=pb.name)
+            L2.key_baked_pose(pb, Rr[pb.name], f + 1, previous)
     act.use_fake_user = True; return act, n
 def shot(name, fn, t, views=('fp', 'side'), look=(0.12, -0.05, -0.12), scale=0.9):
     for c in CONS: c.mute = False

@@ -135,23 +135,26 @@ def main():
                 pp_ = pad(a); tip = inv @ (arm.matrix_world @ pbs[2].tail)
                 return (pp_ - tgt).length + 0.01 * max(0.0, (GRIP_R['trig'][1] - 0.4) - tip.y)   # 손끝이 방아쇠 앞면보다 0.4cm 넘게 앞으로 나가면 벌점(cm 당 1cm)
             best = None
-            for sp in (-50, -40, -30, -20, -10, 0, 10, 20, 30, 40):
+            for sp in range(-25, 26, 5):
               SPREAD[0] = sp
-              for a1 in range(-16, 72, 8):
+              for a1 in range(-8, 72, 8):
                 for a2 in range(0, 100, 10):
                     for a3 in range(0, 70, 10):
-                        d = cost((a1, a2, a3))
+                        if abs(a3 - 0.7 * a2) > 30: continue
+                        d = cost((a1, a2, a3)) + 0.00012 * abs(sp)
                         if best is None or d < best[0]: best = (d, (a1, a2, a3), sp)
             c0 = best[1]; SPREAD[0] = best[2]
-            for a1 in range(max(-20, c0[0] - 8), c0[0] + 9, 2):
-                for a2 in range(max(0, c0[1] - 10), c0[1] + 11, 3):
-                    for a3 in range(max(0, c0[2] - 10), c0[2] + 11, 3):
-                        d = cost((a1, a2, a3))
+            for a1 in range(max(-8, c0[0] - 8), min(73, c0[0] + 9), 2):
+                for a2 in range(max(0, c0[1] - 10), min(96, c0[1] + 11), 3):
+                    for a3 in range(max(0, c0[2] - 10), min(66, c0[2] + 11), 3):
+                        if abs(a3 - 0.7 * a2) > 30: continue
+                        d = cost((a1, a2, a3)) + 0.00012 * abs(SPREAD[0])
                         if d < best[0]: best = (d, (a1, a2, a3), best[2])
-            pad(best[1]); bpy.ops.object.mode_set(mode='OBJECT')
+            miss = (pad(best[1]) - tgt).length
+            bpy.ops.object.mode_set(mode='OBJECT')
             for b, ang in zip(bns, best[1]): grip[b] = float(ang)
             INDEX_SPREAD = (bns[0], abd.copy(), float(best[2]))
-            OUT['index_trigger'] = {'angles': best[1], 'spread': best[2], 'miss_cm': round(best[0] * 100, 2)}
+            OUT['index_trigger'] = {'angles': best[1], 'spread': best[2], 'miss_cm': round(miss * 100, 2)}
         controls[side] = (ik['T_' + side].location.copy(), ik['T_' + side].rotation_quaternion.copy(), pole, grip)
         WREST[side] = (arm.matrix_world @ arm.pose.bones['%s wrist' % poses.SIDE[side]].head).copy()
     grip_one = dict(controls['R'][3])
@@ -214,9 +217,11 @@ def main():
         wantR = D @ WREST['R']; DBG['wantR'] = wantR
         if L_W is None:
             x = L_on; Won = Matrix.LocRotScale(D @ locL, D.to_quaternion() @ rotL, None)
-            la, ra, _ = Matrix.LocRotScale(rest_loc, rest_rot, None).decompose(); lb, rb, _ = Won.decompose()
-            bump = Vector((0, 0, .06 * math.sin(math.pi * x))) * (1 if 0 < x < 1 else 0)
-            lL = la.lerp(lb, x) + bump; rL = ra.slerp(rb, x); wantL = rest_loc.lerp(D @ WREST['L'], x) + bump; poleUse = poleL * x + L_REST_POLE * (1 - x)
+            moved = poses.blend_hand_motion(Matrix.LocRotScale(rest_loc, rest_rot, None), Won, x, 0.025)
+            lL, rL, _ = moved.decompose()
+            clearance = lL - rest_loc.lerp(Won.translation, x)
+            wantL = rest_loc.lerp(D @ WREST['L'], x) + clearance
+            poleUse = poleL * x + L_REST_POLE * (1 - x)
             fL = fing_L or blend_f(RELAX, gripL, x)
         else:
             lL, rL, _ = L_W.decompose(); wantL = lL; poleUse = L_REST_POLE; fL = fing_L or WRAP
@@ -224,10 +229,7 @@ def main():
             ik['T_' + s].location = l; ik['T_' + s].rotation_quaternion = r; ik['P_' + s].location = l + pole
         bpy.context.view_layer.update()
         for s, l in (('R', wantR), ('L', wantL)):
-            for _ in range(6):
-                err = l - (arm.matrix_world @ arm.pose.bones['%s wrist' % poses.SIDE[s]].head)
-                if err.length < 2e-4: break
-                ik['T_' + s].location = ik['T_' + s].location + err; bpy.context.view_layer.update()
+            poses.settle_wrist(arm, ik, s, l, relax_arm=(s == 'L'))
         poses.apply_fingers(arm, fax['R'], fing_R or gripR); poses.apply_fingers(arm, fax['L'], fL)
         ib, iax, isp = INDEX_SPREAD; pbi = arm.pose.bones[ib]; pbi.rotation_quaternion = Quaternion(iax, math.radians(isp)) @ pbi.rotation_quaternion   # 검지 첫마디 벌림(방아쇠 쪽)
         arm.pose.bones['VM_Gun'].matrix = D @ rest['VM_Gun']; bpy.context.view_layer.update()
@@ -275,7 +277,7 @@ def main():
          'toSlide': (1.62, 1.88), 'pull': (1.88, 2.02), 'rel': (2.02, 2.07), 'toRest': (2.07, 2.45), 'down': (2.10, 2.50)}
     seg = lambda t, ab: unit_interval(t, *ab)
     def bw(Wa, Wb, x, lift=0.0):
-        la, ra, _ = Wa.decompose(); lb, rb, _ = Wb.decompose(); return Matrix.LocRotScale(la.lerp(lb, x) + Vector((0, 0, lift * math.sin(math.pi * x))), ra.slerp(rb, x), None)
+        return poses.blend_hand_motion(Wa, Wb, x, lift)
     def reload(t):
         k = seg(t, T['up']) * (1 - seg(t, T['down'])); D = mix(stance_D('H'), D_RL, k)
         insw = (D.to_3x3() @ ins_w).normalized(); M_in = D @ M0
@@ -345,10 +347,10 @@ def main():
                 frames.append({b.name: arm.convert_space(pose_bone=b, matrix=b.matrix, from_space='POSE', to_space='LOCAL').copy() for b in arm.pose.bones})
             for c in constraints: c.mute = True
             act = bpy.data.actions.new(f'FPVM_{KEY.upper()}_{name}'); act.use_fake_user = True; arm.animation_data.action = act
+            previous = {}
             for f, mats in enumerate(frames, 1):
                 for b in arm.pose.bones:
-                    b.matrix_basis = mats[b.name]
-                    for path in ('location', 'rotation_quaternion', 'scale'): b.keyframe_insert(data_path=path, frame=f, group=b.name)
+                    poses.key_baked_pose(b, mats[b.name], f, previous)
             actions[name] = act
         for b in arm.pose.bones:
             for c in list(b.constraints): b.constraints.remove(c)

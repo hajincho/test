@@ -6,7 +6,7 @@
   "K_det": 9.999981549863479e-07,
   "scale": 0.009999993849950711,
   "bones_kept": 53,
-  "arm_verts": 4128,
+  "arm_verts": 6519,
   "K": [
    [
     3.586359292873098e-09,
@@ -50,31 +50,32 @@
   "Right_len_cm": [
    21.14,
    18.02
-  ]
+  ],
+  "fp_char": "robin"
  },
  "clavicle_err_cm": {
   "L": 1.34,
   "R": 0.77
  },
  "sleeves": 8,
- "unfolded_verts": 75533,
- "mag_faces": 95486,
+ "unfolded_verts": 71254,
+ "mag_faces": 95482,
  "handle_faces": 27096,
  "tris": {
-  "W_mp38": 69999,
-  "W_mag": 9000,
+  "W_mp38": 70000,
+  "W_mag": 8999,
   "W_handle": 4000
  },
  "sight": {
   "front": [
    -0.75,
-   -29.462604522705078,
-   14.312603950500488
+   -29.461042404174805,
+   14.318431854248047
   ],
   "rear": [
    -0.75,
    10.0,
-   14.312603950500488
+   14.318431854248047
   ]
  },
  "mag_y": [
@@ -84,7 +85,7 @@
  "gun_pos": [
   17.5,
   -9.0,
-  -19.31
+  -19.32
  ],
  "hold": [
   "housing",
@@ -96,83 +97,83 @@
  ],
  "R_grip": {
   "wrist_cm": [
-   -10.76,
-   -14.18,
-   -18.82
+   -10.79,
+   -14.15,
+   -18.9
   ],
   "miss_cm": 0.49,
   "pole": 0
  },
  "seat": {
   "R": {
-   "gap_cm": 0.001,
+   "gap_cm": 0.011,
    "moved_cm": 0.0
   },
   "L": {
-   "gap_cm": 0.016,
+   "gap_cm": 0.065,
    "moved_cm": 0.0
   }
  },
  "trigger": {
-  "holes": 109,
-  "face": 47,
+  "holes": 108,
+  "face": 48,
   "native_cm": [
    -1.5,
-   20.23,
-   1.26
+   20.27,
+   1.16
   ],
   "mcp_native_cm": [
-   -3.44,
-   20.83,
-   0.46
+   -3.49,
+   20.87,
+   0.36
   ],
   "tip_native_cm": [
-   -2.92,
-   15.32,
-   -2.82
+   -2.94,
+   15.36,
+   -2.93
   ]
  },
  "R_grip_fingers": {
   "Thumb": {
-   "cost": 2.796,
+   "cost": 0.003,
    "gap_cm": [
-    -0.16,
-    -0.07,
-    -0.08
+    -0.04,
+    -0.01,
+    -0.1
    ]
   },
   "IndexFinger": {
-   "cost": 0.655,
+   "cost": 0.512,
    "gap_cm": [
-    1.01,
-    -0.08,
-    -0.1
+    1.21,
+    0.18,
+    -0.09
    ],
-   "spread": 28.0,
-   "pad_miss_cm": 0.39
+   "spread": 15.0,
+   "pad_miss_cm": 0.51
   },
   "MiddleFinger": {
-   "cost": 0.255,
+   "cost": 0.221,
    "gap_cm": [
-    0.49,
-    0.01,
-    -0.06
+    0.43,
+    -0.06,
+    0.0
    ]
   },
   "RingFinger": {
-   "cost": 0.922,
+   "cost": 0.832,
    "gap_cm": [
-    1.84,
-    -0.09,
-    -0.01
+    1.66,
+    -0.08,
+    -0.09
    ]
   },
   "LittleFinger": {
-   "cost": 0.545,
+   "cost": 0.594,
    "gap_cm": [
-    1.09,
-    -0.06,
-    -0.08
+    1.19,
+    -0.09,
+    -0.02
    ]
   }
  },
@@ -181,8 +182,8 @@
   0.0
  ],
  "L_hold": {
-  "score": 1.151,
-  "pen_cm": 0.276,
+  "score": 1.153,
+  "pen_cm": 0.279,
   "wrist_err_cm": 0.09
  },
  "L_reach_cm": 37.8,
@@ -219,9 +220,15 @@
  "mats": [
   "Blued_Barrel",
   "Blued_Receiver",
+  "CARobin_Mat06",
+  "CARobin_Mat12",
+  "CARobin_Mat13",
+  "CARobin_Mat18",
+  "CARobin_Mat23",
+  "CARobin_Mat24",
+  "CARobin_Mat25",
+  "CARobin_Mat26",
   "Dark_Cast_Alloy",
-  "Furina_Outfit",
-  "Furina_SkinHair",
   "Magazine_Steel",
   "Rosewood_Dark_Grip",
   "Rosewood_Foregrip",

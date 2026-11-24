@@ -1,18 +1,18 @@
 {
  "shots": [
   [
-   "mg34",
+   "kar98k",
    "hip",
    {
     "stance": 0,
-    "idle_anim": "AS_FPVM_MG34_Idle",
+    "idle_anim": "AS_FPVM_Kar98k_Idle",
     "tube_hidden": false,
-    "last_key": "mg34",
+    "last_key": "kar98k",
     "n_panims": 39,
-    "ammo": 50,
-    "wid": "mg34",
+    "ammo": 5,
+    "wid": "kar98k",
     "rl": false,
-    "mesh": "SK_FPVM_MG34",
+    "mesh": "SK_FPVM_Kar98k_Interior",
     "vm_vis": true,
     "ads_a": 0.0,
     "smoke_n": 0,
@@ -21,18 +21,18 @@
    }
   ],
   [
-   "mg34",
+   "kar98k",
    "fire",
    {
     "stance": 0,
-    "idle_anim": "AS_FPVM_MG34_Idle",
+    "idle_anim": "AS_FPVM_Kar98k_Idle",
     "tube_hidden": false,
-    "last_key": "mg34",
+    "last_key": "kar98k",
     "n_panims": 39,
-    "ammo": 49,
-    "wid": "mg34",
+    "ammo": 4,
+    "wid": "kar98k",
     "rl": false,
-    "mesh": "SK_FPVM_MG34",
+    "mesh": "SK_FPVM_Kar98k_Interior",
     "vm_vis": true,
     "ads_a": 0.0,
     "smoke_n": 0,
@@ -41,18 +41,154 @@
    }
   ],
   [
-   "mg34",
-   "smoke0",
+   "kar98k",
+   "c1",
    {
     "stance": 0,
-    "idle_anim": "AS_FPVM_MG34_Idle",
+    "idle_anim": "AS_FPVM_Kar98k_Idle",
     "tube_hidden": false,
-    "last_key": "mg34",
+    "last_key": "kar98k",
     "n_panims": 39,
-    "ammo": 49,
-    "wid": "mg34",
+    "ammo": 4,
+    "wid": "kar98k",
     "rl": false,
-    "mesh": "SK_FPVM_MG34",
+    "mesh": "SK_FPVM_Kar98k_Interior",
+    "vm_vis": true,
+    "ads_a": 0.0,
+    "smoke_n": 0,
+    "flash_n": 0,
+    "cases": [
+     [
+      "BP_FPVM_792Case",
+      [
+       28.0,
+       9.4,
+       -4.9
+      ],
+      [
+       -71,
+       297,
+       127
+      ]
+     ]
+    ]
+   }
+  ],
+  [
+   "kar98k",
+   "c2",
+   {
+    "stance": 0,
+    "idle_anim": "AS_FPVM_Kar98k_Idle",
+    "tube_hidden": false,
+    "last_key": "kar98k",
+    "n_panims": 39,
+    "ammo": 4,
+    "wid": "kar98k",
+    "rl": false,
+    "mesh": "SK_FPVM_Kar98k_Interior",
+    "vm_vis": true,
+    "ads_a": 0.0,
+    "smoke_n": 0,
+    "flash_n": 0,
+    "cases": [
+     [
+      "BP_FPVM_792Case",
+      [
+       26.4,
+       8.8,
+       -3.9
+      ],
+      [
+       -71,
+       297,
+       -132
+      ]
+     ]
+    ]
+   }
+  ],
+  [
+   "kar98k",
+   "c3",
+   {
+    "stance": 0,
+    "idle_anim": "AS_FPVM_Kar98k_Idle",
+    "tube_hidden": false,
+    "last_key": "kar98k",
+    "n_panims": 39,
+    "ammo": 4,
+    "wid": "kar98k",
+    "rl": false,
+    "mesh": "SK_FPVM_Kar98k_Interior",
+    "vm_vis": true,
+    "ads_a": 0.0,
+    "smoke_n": 0,
+    "flash_n": 0,
+    "cases": [
+     [
+      "BP_FPVM_792Case",
+      [
+       25.0,
+       8.8,
+       -3.1
+      ],
+      [
+       -71,
+       296,
+       -318
+      ]
+     ]
+    ]
+   }
+  ],
+  [
+   "kar98k",
+   "c4",
+   {
+    "stance": 0,
+    "idle_anim": "AS_FPVM_Kar98k_Idle",
+    "tube_hidden": false,
+    "last_key": "kar98k",
+    "n_panims": 39,
+    "ammo": 4,
+    "wid": "kar98k",
+    "rl": false,
+    "mesh": "SK_FPVM_Kar98k_Interior",
+    "vm_vis": true,
+    "ads_a": 0.0,
+    "smoke_n": 0,
+    "flash_n": 0,
+    "cases": [
+     [
+      "BP_FPVM_792Case",
+      [
+       23.6,
+       8.8,
+       -2.9
+      ],
+      [
+       -70,
+       295,
+       -546
+      ]
+     ]
+    ]
+   }
+  ],
+  [
+   "g43",
+   "hip",
+   {
+    "stance": 0,
+    "idle_anim": "AS_FPVM_G43_Idle",
+    "tube_hidden": false,
+    "last_key": "g43",
+    "n_panims": 39,
+    "ammo": 10,
+    "wid": "g43",
+    "rl": false,
+    "mesh": "SK_FPVM_G43_Interior",
     "vm_vis": true,
     "ads_a": 0.0,
     "smoke_n": 0,
@@ -61,18 +197,188 @@
    }
   ],
   [
-   "mg34",
-   "smoke",
+   "g43",
+   "fire",
    {
     "stance": 0,
-    "idle_anim": "AS_FPVM_MG34_Idle",
+    "idle_anim": "AS_FPVM_G43_Idle",
     "tube_hidden": false,
-    "last_key": "mg34",
+    "last_key": "g43",
     "n_panims": 39,
-    "ammo": 49,
-    "wid": "mg34",
+    "ammo": 9,
+    "wid": "g43",
     "rl": false,
-    "mesh": "SK_FPVM_MG34",
+    "mesh": "SK_FPVM_G43_Interior",
+    "vm_vis": true,
+    "ads_a": 0.0,
+    "smoke_n": 0,
+    "flash_n": 0,
+    "cases": [
+     [
+      "BP_FPVM_792Case",
+      [
+       31.9,
+       9.7,
+       -5.2
+      ],
+      [
+       49,
+       353,
+       148
+      ]
+     ]
+    ]
+   }
+  ],
+  [
+   "g43",
+   "c1",
+   {
+    "stance": 0,
+    "idle_anim": "AS_FPVM_G43_Idle",
+    "tube_hidden": false,
+    "last_key": "g43",
+    "n_panims": 39,
+    "ammo": 9,
+    "wid": "g43",
+    "rl": false,
+    "mesh": "SK_FPVM_G43_Interior",
+    "vm_vis": true,
+    "ads_a": 0.0,
+    "smoke_n": 0,
+    "flash_n": 0,
+    "cases": [
+     [
+      "BP_FPVM_792Case",
+      [
+       34.1,
+       10.3,
+       -5.8
+      ],
+      [
+       44,
+       353,
+       -35
+      ]
+     ]
+    ]
+   }
+  ],
+  [
+   "g43",
+   "c2",
+   {
+    "stance": 0,
+    "idle_anim": "AS_FPVM_G43_Idle",
+    "tube_hidden": false,
+    "last_key": "g43",
+    "n_panims": 39,
+    "ammo": 9,
+    "wid": "g43",
+    "rl": false,
+    "mesh": "SK_FPVM_G43_Interior",
+    "vm_vis": true,
+    "ads_a": 0.0,
+    "smoke_n": 0,
+    "flash_n": 0,
+    "cases": [
+     [
+      "BP_FPVM_792Case",
+      [
+       30.8,
+       10.3,
+       -4.1
+      ],
+      [
+       43,
+       352,
+       -325
+      ]
+     ]
+    ]
+   }
+  ],
+  [
+   "g43",
+   "c3",
+   {
+    "stance": 0,
+    "idle_anim": "AS_FPVM_G43_Idle",
+    "tube_hidden": false,
+    "last_key": "g43",
+    "n_panims": 39,
+    "ammo": 9,
+    "wid": "g43",
+    "rl": false,
+    "mesh": "SK_FPVM_G43_Interior",
+    "vm_vis": true,
+    "ads_a": 0.0,
+    "smoke_n": 0,
+    "flash_n": 0,
+    "cases": [
+     [
+      "BP_FPVM_792Case",
+      [
+       31.1,
+       10.3,
+       -4.7
+      ],
+      [
+       43,
+       351,
+       -518
+      ]
+     ]
+    ]
+   }
+  ],
+  [
+   "g43",
+   "c4",
+   {
+    "stance": 0,
+    "idle_anim": "AS_FPVM_G43_Idle",
+    "tube_hidden": false,
+    "last_key": "g43",
+    "n_panims": 39,
+    "ammo": 9,
+    "wid": "g43",
+    "rl": false,
+    "mesh": "SK_FPVM_G43_Interior",
+    "vm_vis": true,
+    "ads_a": 0.0,
+    "smoke_n": 0,
+    "flash_n": 0,
+    "cases": [
+     [
+      "BP_FPVM_792Case",
+      [
+       34.1,
+       10.3,
+       -5.8
+      ],
+      [
+       -56,
+       22,
+       -43
+      ]
+     ]
+    ]
+   }
+  ],
+  [
+   "kar98k_zf39",
+   "hip",
+   {
+    "stance": 0,
+    "idle_anim": "AS_FPVM_Kar98k_Idle",
+    "tube_hidden": false,
+    "last_key": "kar98k_zf39",
+    "n_panims": 39,
+    "ammo": 4,
+    "wid": "kar98k",
+    "rl": false,
+    "mesh": "SK_FPVM_Kar98k_ZF39",
     "vm_vis": true,
     "ads_a": 0.0,
     "smoke_n": 0,
@@ -81,94 +387,380 @@
    }
   ],
   [
-   "mg34",
-   "ads",
+   "kar98k_zf39",
+   "fire",
    {
     "stance": 0,
-    "idle_anim": "AS_FPVM_MG34_Idle",
+    "idle_anim": "AS_FPVM_Kar98k_Idle",
     "tube_hidden": false,
-    "last_key": "mg34",
+    "last_key": "kar98k_zf39",
     "n_panims": 39,
-    "ammo": 49,
-    "wid": "mg34",
+    "ammo": 3,
+    "wid": "kar98k",
     "rl": false,
-    "mesh": "SK_FPVM_MG34",
+    "mesh": "SK_FPVM_Kar98k_ZF39",
     "vm_vis": true,
-    "ads_a": 1.0,
+    "ads_a": 0.0,
     "smoke_n": 0,
     "flash_n": 0,
     "cases": []
    }
   ],
   [
-   "mg34",
-   "ads_fire",
+   "kar98k_zf39",
+   "c1",
    {
     "stance": 0,
-    "idle_anim": "AS_FPVM_MG34_Idle",
+    "idle_anim": "AS_FPVM_Kar98k_Idle",
     "tube_hidden": false,
-    "last_key": "mg34",
+    "last_key": "kar98k_zf39",
     "n_panims": 39,
-    "ammo": 48,
-    "wid": "mg34",
+    "ammo": 3,
+    "wid": "kar98k",
     "rl": false,
-    "mesh": "SK_FPVM_MG34",
+    "mesh": "SK_FPVM_Kar98k_ZF39",
     "vm_vis": true,
-    "ads_a": 1.0,
+    "ads_a": 0.0,
+    "smoke_n": 0,
+    "flash_n": 0,
+    "cases": [
+     [
+      "BP_FPVM_792Case",
+      [
+       27.2,
+       9.4,
+       -5.2
+      ],
+      [
+       -61,
+       297,
+       162
+      ]
+     ]
+    ]
+   }
+  ],
+  [
+   "kar98k_zf39",
+   "c2",
+   {
+    "stance": 0,
+    "idle_anim": "AS_FPVM_Kar98k_Idle",
+    "tube_hidden": false,
+    "last_key": "kar98k_zf39",
+    "n_panims": 39,
+    "ammo": 3,
+    "wid": "kar98k",
+    "rl": false,
+    "mesh": "SK_FPVM_Kar98k_ZF39",
+    "vm_vis": true,
+    "ads_a": 0.0,
+    "smoke_n": 0,
+    "flash_n": 0,
+    "cases": [
+     [
+      "BP_FPVM_792Case",
+      [
+       24.8,
+       9.4,
+       -4.3
+      ],
+      [
+       -61,
+       297,
+       -67
+      ]
+     ]
+    ]
+   }
+  ],
+  [
+   "kar98k_zf39",
+   "c3",
+   {
+    "stance": 0,
+    "idle_anim": "AS_FPVM_Kar98k_Idle",
+    "tube_hidden": false,
+    "last_key": "kar98k_zf39",
+    "n_panims": 39,
+    "ammo": 3,
+    "wid": "kar98k",
+    "rl": false,
+    "mesh": "SK_FPVM_Kar98k_ZF39",
+    "vm_vis": true,
+    "ads_a": 0.0,
+    "smoke_n": 0,
+    "flash_n": 0,
+    "cases": [
+     [
+      "BP_FPVM_792Case",
+      [
+       27.0,
+       9.4,
+       -5.7
+      ],
+      [
+       -61,
+       296,
+       -197
+      ]
+     ]
+    ]
+   }
+  ],
+  [
+   "kar98k_zf39",
+   "c4",
+   {
+    "stance": 0,
+    "idle_anim": "AS_FPVM_Kar98k_Idle",
+    "tube_hidden": false,
+    "last_key": "kar98k_zf39",
+    "n_panims": 39,
+    "ammo": 3,
+    "wid": "kar98k",
+    "rl": false,
+    "mesh": "SK_FPVM_Kar98k_ZF39",
+    "vm_vis": true,
+    "ads_a": 0.0,
+    "smoke_n": 0,
+    "flash_n": 0,
+    "cases": [
+     [
+      "BP_FPVM_792Case",
+      [
+       28.2,
+       9.4,
+       -5.7
+      ],
+      [
+       -61,
+       296,
+       -421
+      ]
+     ]
+    ]
+   }
+  ],
+  [
+   "g43_zf4",
+   "hip",
+   {
+    "stance": 0,
+    "idle_anim": "AS_FPVM_G43_Idle",
+    "tube_hidden": false,
+    "last_key": "g43_zf4",
+    "n_panims": 39,
+    "ammo": 9,
+    "wid": "g43",
+    "rl": false,
+    "mesh": "SK_FPVM_G43_ZF4",
+    "vm_vis": true,
+    "ads_a": 0.0,
     "smoke_n": 0,
     "flash_n": 0,
     "cases": []
    }
   ],
   [
-   "mg34",
-   "ads_smoke",
+   "g43_zf4",
+   "fire",
    {
     "stance": 0,
-    "idle_anim": "AS_FPVM_MG34_Idle",
+    "idle_anim": "AS_FPVM_G43_Idle",
     "tube_hidden": false,
-    "last_key": "mg34",
+    "last_key": "g43_zf4",
     "n_panims": 39,
-    "ammo": 48,
-    "wid": "mg34",
+    "ammo": 8,
+    "wid": "g43",
     "rl": false,
-    "mesh": "SK_FPVM_MG34",
+    "mesh": "SK_FPVM_G43_ZF4",
     "vm_vis": true,
-    "ads_a": 1.0,
+    "ads_a": 0.0,
     "smoke_n": 0,
     "flash_n": 0,
-    "cases": []
+    "cases": [
+     [
+      "BP_FPVM_792Case",
+      [
+       31.5,
+       10.7,
+       -5.6
+      ],
+      [
+       43,
+       354,
+       149
+      ]
+     ]
+    ]
+   }
+  ],
+  [
+   "g43_zf4",
+   "c1",
+   {
+    "stance": 0,
+    "idle_anim": "AS_FPVM_G43_Idle",
+    "tube_hidden": false,
+    "last_key": "g43_zf4",
+    "n_panims": 39,
+    "ammo": 8,
+    "wid": "g43",
+    "rl": false,
+    "mesh": "SK_FPVM_G43_ZF4",
+    "vm_vis": true,
+    "ads_a": 0.0,
+    "smoke_n": 0,
+    "flash_n": 0,
+    "cases": [
+     [
+      "BP_FPVM_792Case",
+      [
+       29.2,
+       10.3,
+       -3.7
+      ],
+      [
+       44,
+       353,
+       -45
+      ]
+     ]
+    ]
+   }
+  ],
+  [
+   "g43_zf4",
+   "c2",
+   {
+    "stance": 0,
+    "idle_anim": "AS_FPVM_G43_Idle",
+    "tube_hidden": false,
+    "last_key": "g43_zf4",
+    "n_panims": 39,
+    "ammo": 8,
+    "wid": "g43",
+    "rl": false,
+    "mesh": "SK_FPVM_G43_ZF4",
+    "vm_vis": true,
+    "ads_a": 0.0,
+    "smoke_n": 0,
+    "flash_n": 0,
+    "cases": [
+     [
+      "BP_FPVM_792Case",
+      [
+       29.6,
+       10.3,
+       -4.5
+      ],
+      [
+       44,
+       352,
+       -334
+      ]
+     ]
+    ]
+   }
+  ],
+  [
+   "g43_zf4",
+   "c3",
+   {
+    "stance": 0,
+    "idle_anim": "AS_FPVM_G43_Idle",
+    "tube_hidden": false,
+    "last_key": "g43_zf4",
+    "n_panims": 39,
+    "ammo": 8,
+    "wid": "g43",
+    "rl": false,
+    "mesh": "SK_FPVM_G43_ZF4",
+    "vm_vis": true,
+    "ads_a": 0.0,
+    "smoke_n": 0,
+    "flash_n": 0,
+    "cases": [
+     [
+      "BP_FPVM_792Case",
+      [
+       31.9,
+       10.3,
+       -5.2
+      ],
+      [
+       44,
+       351,
+       -496
+      ]
+     ]
+    ]
+   }
+  ],
+  [
+   "g43_zf4",
+   "c4",
+   {
+    "stance": 0,
+    "idle_anim": "AS_FPVM_G43_Idle",
+    "tube_hidden": false,
+    "last_key": "g43_zf4",
+    "n_panims": 39,
+    "ammo": 8,
+    "wid": "g43",
+    "rl": false,
+    "mesh": "SK_FPVM_G43_ZF4",
+    "vm_vis": true,
+    "ads_a": 0.0,
+    "smoke_n": 0,
+    "flash_n": 0,
+    "cases": [
+     [
+      "BP_FPVM_792Case",
+      [
+       30.0,
+       10.3,
+       -4.1
+      ],
+      [
+       -70,
+       52,
+       54
+      ]
+     ]
+    ]
    }
   ]
  ],
  "events": [
   [
-   "mg34",
+   "kar98k",
    "fire",
-   50,
-   49
+   5,
+   4
   ],
   [
-   "mg34",
+   "kar98k",
    "shot_dir",
-   "mg34",
+   "kar98k",
    false,
    [
     [
      "BP_FurinaBullet",
      [
-      61.81,
-      6.67,
-      -6.63
+      47.55,
+      -27.39,
+      -52.14
      ],
      91000,
-     5.1179,
-     -4.3059
+     26.2459,
+     13.5168
     ]
    ]
   ],
   [
-   "mg34",
+   "kar98k",
    "spawned",
    {
     "BP_HistSmoke_C": 0,
@@ -178,32 +770,102 @@
    }
   ],
   [
-   "mg34",
+   "g43",
    "fire",
-   49,
-   48
+   10,
+   9
   ],
   [
-   "mg34",
+   "g43",
    "shot_dir",
-   "mg34",
-   true,
+   "g43",
+   false,
    [
     [
      "BP_FurinaBullet",
      [
-      67.75,
-      -0.03,
-      -6.36
+      60.22,
+      -3.24,
+      -17.68
      ],
      91000,
-     0.0874,
-     0.0147
+     11.1304,
+     2.3736
     ]
    ]
   ],
   [
-   "mg34",
+   "g43",
+   "spawned",
+   {
+    "BP_HistSmoke_C": 0,
+    "BP_HistFlash_C": 1,
+    "BP_M4Flash_C": 0,
+    "vm_on": true
+   }
+  ],
+  [
+   "kar98k_zf39",
+   "fire",
+   4,
+   3
+  ],
+  [
+   "kar98k_zf39",
+   "shot_dir",
+   "kar98k_zf39",
+   false,
+   [
+    [
+     "BP_FurinaBullet",
+     [
+      61.76,
+      5.99,
+      -7.36
+     ],
+     91000,
+     5.3003,
+     -3.3953
+    ]
+   ]
+  ],
+  [
+   "kar98k_zf39",
+   "spawned",
+   {
+    "BP_HistSmoke_C": 0,
+    "BP_HistFlash_C": 1,
+    "BP_M4Flash_C": 0,
+    "vm_on": true
+   }
+  ],
+  [
+   "g43_zf4",
+   "fire",
+   9,
+   8
+  ],
+  [
+   "g43_zf4",
+   "shot_dir",
+   "g43_zf4",
+   false,
+   [
+    [
+     "BP_FurinaBullet",
+     [
+      61.8,
+      6.45,
+      -6.86
+     ],
+     91000,
+     5.7212,
+     -4.0402
+    ]
+   ]
+  ],
+  [
+   "g43_zf4",
    "spawned",
    {
     "BP_HistSmoke_C": 0,

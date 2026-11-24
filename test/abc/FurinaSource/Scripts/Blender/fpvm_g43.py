@@ -1,4 +1,4 @@
-"""blender -b --python fpvm_g43.py -- <pose|anim|export|zf4|magreload|maganim> [옵션 json]
+"""blender -b --python fpvm_g43.py -- <pose|anim|export|zf4|magreload|maganim|reloadanim|roundclips> [옵션 json]
  2026-11-21: 저격용(ZF4) G43 은 탄창 교환 재장전(사용자 지정, 조준경이 클립 홈 위를 가림). 10발 탄창(성분 21 몸통 + 22 바닥판)을 VM_Mag 뼈로 떼어
    zf4 메시에 넣고 magreload 가 AS_FPVM_G43_MagReload.fbx(3.2초: 탄창 빼기 -> 탄입대 -> 새 탄창 -> 장전 손잡이 당겼다 놓기) 를 만듦. : Gewehr 43 1인칭 뷰모델(푸리나 팔 + 총 한 몸 스켈레탈)
  근거: Motion/DE_FP_MOTION_RESEARCH.md 2절. 사용자 지시: 탄창 교환 대신 '5발 클립 두 개를 연속으로' 장전.
@@ -10,7 +10,7 @@
  클립(30fps): Idle 4.0, Fire 0.30(반자동: 반동 + 캐리어 왕복), Reload 5.9(왼손 장전 손잡이로 열기 -> 클립1 꽂고 눌러 넣고 뽑아 버림 -> 클립2 같은 방식 -> 왼손으로 살짝 당겼다 놓아 닫기)
  결과 -> Data/fpvm_g43.json, FBX/FPVM/SK_FPVM_G43.fbx"""
 import bpy, bmesh, sys, json, math, os
-sys.path.insert(0, r'C:\Users\fromj\Downloads\test\test\abc\FurinaSource\Scripts\Blender')
+sys.path.insert(0, __import__('os').path.dirname(__import__('os').path.abspath(__file__)))
 import numpy as np
 from mathutils import Matrix, Vector, Quaternion
 import fpvm_lib as L, fpvm_lib2 as L2
@@ -167,8 +167,7 @@ REF0 = frames({'D': Matrix.Identity(4), 's': 0, 'push': 0})
 REL = {k: REF0[v['ref']].inverted() @ v['W'] for k, v in ST.items()}
 def hand_world(key, F): return F[ST[key]['ref']] @ REL[key]
 def blend_W(Wa, Wb, x, lift=0.0):
-    la, ra, _ = Wa.decompose(); lb, rb, _ = Wb.decompose(); l = la.lerp(lb, x) + Vector((0, 0, lift * math.sin(math.pi * x)))
-    return Matrix.LocRotScale(l, ra.slerp(rb, x), None)
+    return L2.blend_hand_motion(Wa, Wb, x, lift)
 def blend_f(fa, fb, x): return {b: fa.get(b, 0.0) * (1 - x) + fb.get(b, 0.0) * x for b in set(fa) | set(fb)}
 S01 = Matrix.Scale(0.01, 4)
 def tl_idle(t):
@@ -202,7 +201,7 @@ def tl_reload(t):
     elif t < cy['toss'][0]: Cw = lifted(seg(t, *cy['lift']))
     else:
         x = seg(t, *cy['toss']); Cw = lifted(1.0) @ Matrix.Translation(Vector((-10.0 * x, 3.0 * x, 8.0 * x - 10.0 * x * x))) @ Matrix.Rotation(math.radians(-120 * x), 4, 'Y')
-    Ch = lifted(1.0) if t >= cy['toss'][0] else Cw   # 던진 뒤에는 손 기준을 던진 순간 위치로 고정
+    Ch = lifted(1.0) if t >= cy['toss'][0] or (cy is CY[1] and t < cy['guide'][0]) else Cw
     st['Cw'] = Cw; st['Ch'] = Ch
     st['clip_vis'] = 1 if cy['vis'] <= t < cy['toss'][1] else 0
     st['push'] = PUSH * seg(t, *cy['push']); st['rounds_vis'] = 1 if cy['vis'] <= t < cy['push'][1] else 0
@@ -240,7 +239,61 @@ def set_rigid(name, Xw, Xw0, vis=1):
     M = Xw @ Xw0.inverted() @ REST[name]
     if not vis: M = M @ Matrix.Scale(0.001, 4)
     PB[name].matrix = M
-def apply_state(st):
+
+
+def solve_reload_arm(side, target):
+    """Solve the animated wrist target with fixed limb lengths and a stable elbow plane."""
+    label = L2.SIDE[side]
+    collar, upper, lower, wrist = (PB[f'{label} {name}'] for name in ('shoulder', 'arm', 'elbow', 'wrist'))
+    local_target = arm.matrix_world.inverted() @ target
+    origin, bind_elbow, bind_wrist = (REST[bone.name].translation for bone in (upper, lower, wrist))
+    bind_upper, bind_lower = bind_elbow - origin, bind_wrist - bind_elbow
+    a, b = bind_upper.length, bind_lower.length
+    goal = local_target.translation
+    reach = goal - origin
+    # Keep a soft reserve near full extension and a small clavicle contribution.
+    collar.matrix_basis = Matrix.Identity(4)
+    if reach.length > a + b - 0.018:
+        pivot = REST[collar.name].translation
+        clavicle = origin - pivot
+        adjustment = reach.normalized() * min(0.018, reach.length - (a + b - 0.018))
+        rotation = clavicle.rotation_difference(clavicle + adjustment)
+        rotation = Quaternion().slerp(rotation, min(1.0, math.radians(8) / max(rotation.angle, 1e-6)))
+        collar.matrix = Matrix.Translation(pivot) @ rotation.to_matrix().to_4x4() @ Matrix.Translation(-pivot) @ REST[collar.name]
+        origin = pivot + rotation @ clavicle
+        reach = goal - origin
+    axis = reach.normalized()
+    distance = min(a + b - 0.010, max(abs(a - b) + 0.030, reach.length))
+    end = origin + axis * distance
+    hint = arm.matrix_world.inverted().to_3x3() @ POLE[side]
+    radial = (hint - axis * hint.dot(axis)).normalized()
+    hand = local_target.to_3x3() @ ax[side]['f_local']
+    preferred = -(hand - axis * hand.dot(axis))
+    along = (distance * distance + a * a - b * b) / (2.0 * distance)
+    height = math.sqrt(max(0.0, a * a - along * along))
+    elbow = origin + axis * along + radial * height
+    bend = math.degrees((end - elbow).angle(hand, 0.0))
+    if preferred.length > 1e-5:
+        weight = ease((bend - 35.0) / 42.0)
+        turn = math.radians(55.0) * weight * axis.dot(radial.cross(preferred.normalized()))
+        elbow = origin + axis * along + Quaternion(axis, turn) @ radial * height
+
+    upper_rotation = bind_upper.rotation_difference(elbow - origin) @ REST[upper.name].to_quaternion()
+    lower_rotation = bind_lower.rotation_difference(end - elbow) @ REST[lower.name].to_quaternion()
+    wrist_rotation = local_target.to_quaternion()
+    forearm = (end - elbow).normalized()
+    bind_relative = REST[lower.name].to_quaternion().inverted() @ REST[wrist.name].to_quaternion()
+    delta = lower_rotation.inverted() @ wrist_rotation @ bind_relative.inverted()
+    twist = Vector((delta.x, delta.y, delta.z)).dot(lower_rotation.inverted() @ forearm)
+    lower_rotation = Quaternion(forearm, 0.72 * delta.w * twist) @ lower_rotation
+    upper.matrix = Matrix.LocRotScale(origin, upper_rotation, None)
+    bpy.context.view_layer.update()
+    lower.matrix = Matrix.LocRotScale(elbow, lower_rotation, None)
+    bpy.context.view_layer.update()
+    wrist.matrix = Matrix.LocRotScale(end, wrist_rotation, None)
+
+
+def apply_state(st, stable_arms=False):
     F = frames(st)
     set_rigid('VM_Gun', F['gun'], REF0['gun']); bpy.context.view_layer.update()
     set_rigid('VM_Carrier', F['carrier'], REF0['carrier']); set_rigid('VM_Clip', F['clip'], REF0['clip'], st['clip_vis']); bpy.context.view_layer.update()
@@ -248,31 +301,34 @@ def apply_state(st):
     if 'VM_Mag' in REST: set_rigid('VM_Mag', F['mag'], REF0['mag'])
     a, b, x, lift = st['R']; Wr = blend_W(hand_world(a, F), hand_world(b, F), x, lift / 100.0)
     la, lb, lx = st.get('L', ('L_GRIP', 'L_GRIP', 0.0)); Wl = blend_W(hand_world(la, F), hand_world(lb, F), lx, 0.02)
-    for s, W in (('R', Wr), ('L', Wl)):
-        l, r, _ = W.decompose(); E['T_' + s].location = l; E['T_' + s].rotation_quaternion = r; E['P_' + s].location = l + POLE[s]
-    bpy.context.view_layer.update()
-    for s, W in (('R', Wr), ('L', Wl)):
-        for _ in range(12):   # IK 목표 보정 3번으론 손목이 1.5~2.5cm 덜 닿았음(판처슈렉, 2026-11-22)
-            err = W.translation - (arm.matrix_world @ PB['%s wrist' % L2.SIDE[s]].head)
-            if err.length < 2e-4: break
-            E['T_' + s].location = E['T_' + s].location + err; bpy.context.view_layer.update()
+    if stable_arms:
+        for s, W in (('R', Wr), ('L', Wl)):
+            solve_reload_arm(s, W)
+    else:
+        for s, W in (('R', Wr), ('L', Wl)):
+            l, r, _ = W.decompose(); E['T_' + s].location = l; E['T_' + s].rotation_quaternion = r; E['P_' + s].location = l + POLE[s]
+        bpy.context.view_layer.update()
+        for s, W in (('R', Wr), ('L', Wl)):
+            L2.settle_wrist(arm, E, s, W.translation)
     L2.apply_fingers(arm, fax['R'], blend_f(ST[a]['fing'], ST[b]['fing'], x)); L2.apply_fingers(arm, fax['L'], blend_f(ST[la]['fing'], ST[lb]['fing'], lx)); bpy.context.view_layer.update()
 def record(): return {pb.name: arm.convert_space(pose_bone=pb, matrix=pb.matrix, from_space='POSE', to_space='LOCAL').copy() for pb in PB}
 CONS = [c for pb in PB for c in pb.constraints]
 def bake_clip(name, fn, dur):
     n = int(round(dur * FPS)); rec = []
-    for c in CONS: c.mute = False
-    for f in range(n + 1): apply_state(fn(f / FPS)); rec.append(record())
+    stable_arms = name == 'Reload' or name == 'Clip5' or name.startswith('Loose')
+    for c in CONS: c.mute = stable_arms
+    for f in range(n + 1): apply_state(fn(f / FPS), stable_arms); rec.append(record())
     for c in CONS: c.mute = True
     act = bpy.data.actions.new('FPVM_%s_%s' % (KEY, name)); arm.animation_data_create(); arm.animation_data.action = act
+    previous = {}
     for f, Rr in enumerate(rec):
         for pb in PB:
-            pb.matrix_basis = Rr[pb.name]
-            for path in ('location', 'rotation_quaternion', 'scale'): pb.keyframe_insert(path, frame=f + 1, group=pb.name)
+            L2.key_baked_pose(pb, Rr[pb.name], f + 1, previous)
     act.use_fake_user = True; return act, n
 def shot(name, fn, t, views=('fp', 'side'), look=(0.12, -0.05, -0.12), scale=0.9):
-    for c in CONS: c.mute = False
-    apply_state(fn(t)); return L2.render_views(D + r'\Data\fpvm_g43_%s' % name, views=views, look=look, scale=scale)
+    stable_arms = fn is tl_reload
+    for c in CONS: c.mute = stable_arms
+    apply_state(fn(t), stable_arms); return L2.render_views(D + r'\Data\fpvm_g43_%s' % name, views=views, look=look, scale=scale)
 for m in bpy.data.materials:
     m.diffuse_color = (0.85, 0.7, 0.62, 1) if 'Skin' in m.name else (0.25, 0.3, 0.55, 1) if 'Outfit' in m.name else (0.75, 0.6, 0.25, 1) if m.name in ('Clip_Case', 'Clip_Projectile') else (0.45, 0.33, 0.22, 1)
 carrier.data.materials.clear(); cm = bpy.data.materials.get('Gewehr43')
@@ -332,10 +388,17 @@ if MAG:
         OUT['magreload'] = {'frames': n + 1}
     if STAGE in ('magreload', 'maganim'):
         json.dump(OUT, open(D + r'\Data\fpvm_g43_mag.json', 'w'), indent=1, default=str); print('FPVM_G43_MAG', json.dumps({k: OUT.get(k) for k in ('mag', 'L_mag', 'mag_pose', 'magreload')})[:800]); raise SystemExit(0)
-if STAGE == 'roundclips':
+if STAGE in ('reloadanim', 'roundclips'):
+    directory = OPT.get('output', D)
+    os.makedirs(os.path.join(directory, 'FBX', 'FPVM'), exist_ok=True)
+    if STAGE == 'reloadanim':
+        export_animations(directory, KEY, arm, E, {'Reload': CLIPS['Reload']}, bake_clip, FPS)
+        raise SystemExit(0)
     clips = {f'Loose{i}': build_timeline(tl_reload, G0, CLIP_IN, i, .80, 4.7, 5.9) for i in (1, 2, 3, 4, 6, 7, 8, 9)}
     clips['Clip5'] = one_clip(tl_reload)
-    export_animations(D, 'G43', arm, E, clips, bake_clip, FPS)
+    if selected := OPT.get('clips'):
+        clips = {name: clips[name] for name in selected}
+    export_animations(directory, KEY, arm, E, clips, bake_clip, FPS)
     raise SystemExit(0)
 if STAGE == 'grip':   # 손 위치 확대(오른손 손잡이 / 왼손 앞받침)
     R_ = []

@@ -20,6 +20,7 @@ def import_fbx(filename, folder, name, *, mesh, skeleton=None, animations=True):
     options.set_editor_property('import_materials', False)
     options.set_editor_property('import_textures', False)
     options.set_editor_property('create_physics_asset', False)
+    options.set_editor_property('reset_to_fbx_on_material_conflict', True)   # 2026-11-23: 재질 슬롯이 바뀌면(캐릭터 통일) 예전 슬롯을 번호대로 남기지 말고 FBX 기준으로
     if skeleton:
         options.set_editor_property('skeleton', skeleton)
     settings = options.get_editor_property('anim_sequence_import_data')

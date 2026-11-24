@@ -1,0 +1,74 @@
+{
+  "robin_fp_skin": {
+    "asset": "/Game/Furina/Classes/Robin/Materials/MI_Robin_FP_Mat18.MI_Robin_FP_Mat18",
+    "color_scale": 0.84,
+    "texture": "/Game/Furina/Classes/Robin/Textures/T_Robin_02.T_Robin_02"
+  },
+  "slots": {
+    "SK_FPVM_MG34": [
+      1,
+      []
+    ],
+    "SK_FPVM_MP40": [
+      1,
+      []
+    ],
+    "SK_FPVM_MP38": [
+      1,
+      []
+    ],
+    "SK_FPVM_P08": [
+      1,
+      []
+    ],
+    "SK_FPVM_P38": [
+      1,
+      []
+    ],
+    "SK_FPVM_PANZERFAUST": [
+      1,
+      []
+    ],
+    "SK_FPVM_PP": [
+      1,
+      []
+    ],
+    "SK_FPVM_PANZERSCHRECK": [
+      1,
+      []
+    ],
+    "SK_FPVM_STG44": [
+      1,
+      []
+    ],
+    "SK_FPVM_G43_Interior": [
+      1,
+      []
+    ],
+    "SK_FPVM_G43_ZF4": [
+      1,
+      []
+    ],
+    "SK_FPVM_Kar98k_Interior": [
+      1,
+      []
+    ],
+    "SK_FPVM_Kar98k_ZF39": [
+      1,
+      []
+    ],
+    "SK_FPVM_G43": [
+      0,
+      []
+    ],
+    "SK_FPVM_Kar98k": [
+      0,
+      []
+    ],
+    "SK_FPVM_Kar98k_ZF41": [
+      1,
+      []
+    ]
+  },
+  "done": true
+}

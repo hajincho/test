@@ -1,0 +1,102 @@
+{
+ "shots": [
+  {
+   "name": "tp_side",
+   "toe_above_floor": [
+    9.9,
+    9.9
+   ],
+   "head_above_floor": 142.3,
+   "vm": "SK_FPVM_MP40",
+   "vm_vis": false,
+   "vm_mats": {
+    "0": "MI_DE_mp40_MP40",
+    "1": "MI_Robin_Mat06",
+    "2": "MI_Robin_Mat12",
+    "3": "MI_Robin_Mat13",
+    "4": "MI_Robin_Mat18",
+    "5": "MI_Robin_Mat23",
+    "6": "MI_Robin_Mat24",
+    "7": "MI_Robin_Mat25",
+    "8": "MI_Robin_Mat26"
+   }
+  },
+  {
+   "name": "fp_before",
+   "toe_above_floor": [
+    9.9,
+    9.9
+   ],
+   "head_above_floor": 142.4,
+   "vm": "SK_FPVM_MP40",
+   "vm_vis": true,
+   "vm_mats": {
+    "0": "MI_DE_mp40_MP40",
+    "1": "MI_Robin_Mat06",
+    "2": "MI_Robin_Mat12",
+    "3": "MI_Robin_Mat13",
+    "4": "MI_Robin_Mat18",
+    "5": "MI_Robin_Mat23",
+    "6": "MI_Robin_Mat24",
+    "7": "MI_Robin_Mat25",
+    "8": "MI_Robin_Mat26"
+   }
+  },
+  {
+   "name": "fp_after",
+   "toe_above_floor": [
+    9.9,
+    9.9
+   ],
+   "head_above_floor": 142.6,
+   "vm": "SK_FPVM_MP40",
+   "vm_vis": true,
+   "vm_mats": {
+    "0": "MI_DE_mp40_MP40",
+    "1": "MI_Robin_Mat06",
+    "2": "MI_Robin_Mat12",
+    "3": "MI_Robin_Mat13",
+    "4": "MI_Robin_FP_Mat18",
+    "5": "MI_Robin_Mat23",
+    "6": "MI_Robin_Mat24",
+    "7": "MI_Robin_Mat25",
+    "8": "MI_Robin_Mat26"
+   }
+  }
+ ],
+ "look": "robin",
+ "mesh": "SKM_Robin",
+ "n_mats": 29,
+ "mats": [
+  "MID_MI_Robin_Mat00_0",
+  "MID_MI_Robin_Mat01_0",
+  "MID_MI_Robin_Mat02_0",
+  "MID_MI_Robin_Mat03_0",
+  "MID_MI_Robin_Mat04_0",
+  "MID_MI_Robin_Mat05_0",
+  "MID_MI_Robin_Mat06_0",
+  "MID_MI_Robin_Mat07_0",
+  "MID_MI_Robin_Mat08_0",
+  "MID_MI_Robin_Mat09_0",
+  "MID_MI_Robin_Mat10_0",
+  "MID_MI_Robin_Mat11_0",
+  "MID_MI_Robin_Mat12_0",
+  "MID_MI_Robin_Mat13_0",
+  "MID_MI_Robin_Mat14_0",
+  "MID_MI_Robin_Mat15_0",
+  "MID_MI_Robin_Mat16_0",
+  "MID_MI_Robin_Mat17_0",
+  "MID_MI_Robin_Mat18_0",
+  "MID_MI_Robin_Mat19_0",
+  "MID_MI_Robin_Mat20_0",
+  "MID_MI_Robin_Mat21_0",
+  "MID_MI_Robin_Mat22_0",
+  "MID_MI_Robin_Mat23_0",
+  "MID_MI_Robin_Mat24_0",
+  "MID_MI_Robin_Mat25_0",
+  "MID_MI_Robin_Mat26_0",
+  "MID_MI_Robin_Mat27_0",
+  "MID_MI_Robin_Mat28_0"
+ ],
+ "done": true
+}

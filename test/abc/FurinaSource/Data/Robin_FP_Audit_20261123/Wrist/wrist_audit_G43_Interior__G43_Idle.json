@@ -1,0 +1,220 @@
+{
+ "sk": "G43_Interior",
+ "clip": "G43_Idle",
+ "offset_from_wrist_cm": [
+  0.8,
+  1.6
+ ],
+ "reference_width_cm": {
+  "R": [
+   3.118,
+   3.175
+  ],
+  "L": [
+   3.119,
+   3.177
+  ]
+ },
+ "per_frame": [
+  {
+   "frame": 2,
+   "R": {
+    "width_cm": [
+     3.649,
+     3.18
+    ],
+    "bend_deg": 74.1,
+    "width_ratio": [
+     1.17,
+     1.002
+    ]
+   },
+   "L": {
+    "width_cm": [
+     2.646,
+     3.18
+    ],
+    "bend_deg": 56.25,
+    "width_ratio": [
+     0.848,
+     1.001
+    ]
+   }
+  },
+  {
+   "frame": 19,
+   "R": {
+    "width_cm": [
+     3.649,
+     3.18
+    ],
+    "bend_deg": 74.1,
+    "width_ratio": [
+     1.17,
+     1.002
+    ]
+   },
+   "L": {
+    "width_cm": [
+     2.646,
+     3.18
+    ],
+    "bend_deg": 56.25,
+    "width_ratio": [
+     0.848,
+     1.001
+    ]
+   }
+  },
+  {
+   "frame": 36,
+   "R": {
+    "width_cm": [
+     3.649,
+     3.18
+    ],
+    "bend_deg": 74.1,
+    "width_ratio": [
+     1.17,
+     1.002
+    ]
+   },
+   "L": {
+    "width_cm": [
+     2.646,
+     3.18
+    ],
+    "bend_deg": 56.25,
+    "width_ratio": [
+     0.848,
+     1.001
+    ]
+   }
+  },
+  {
+   "frame": 53,
+   "R": {
+    "width_cm": [
+     3.649,
+     3.18
+    ],
+    "bend_deg": 74.1,
+    "width_ratio": [
+     1.17,
+     1.002
+    ]
+   },
+   "L": {
+    "width_cm": [
+     2.646,
+     3.18
+    ],
+    "bend_deg": 56.25,
+    "width_ratio": [
+     0.848,
+     1.001
+    ]
+   }
+  },
+  {
+   "frame": 71,
+   "R": {
+    "width_cm": [
+     3.649,
+     3.18
+    ],
+    "bend_deg": 74.1,
+    "width_ratio": [
+     1.17,
+     1.002
+    ]
+   },
+   "L": {
+    "width_cm": [
+     2.646,
+     3.18
+    ],
+    "bend_deg": 56.25,
+    "width_ratio": [
+     0.848,
+     1.001
+    ]
+   }
+  },
+  {
+   "frame": 88,
+   "R": {
+    "width_cm": [
+     3.649,
+     3.18
+    ],
+    "bend_deg": 74.1,
+    "width_ratio": [
+     1.17,
+     1.002
+    ]
+   },
+   "L": {
+    "width_cm": [
+     2.646,
+     3.18
+    ],
+    "bend_deg": 56.25,
+    "width_ratio": [
+     0.848,
+     1.001
+    ]
+   }
+  },
+  {
+   "frame": 105,
+   "R": {
+    "width_cm": [
+     3.649,
+     3.18
+    ],
+    "bend_deg": 74.1,
+    "width_ratio": [
+     1.17,
+     1.002
+    ]
+   },
+   "L": {
+    "width_cm": [
+     2.646,
+     3.18
+    ],
+    "bend_deg": 56.25,
+    "width_ratio": [
+     0.848,
+     1.001
+    ]
+   }
+  },
+  {
+   "frame": 122,
+   "R": {
+    "width_cm": [
+     3.649,
+     3.18
+    ],
+    "bend_deg": 74.1,
+    "width_ratio": [
+     1.17,
+     1.002
+    ]
+   },
+   "L": {
+    "width_cm": [
+     2.646,
+     3.18
+    ],
+    "bend_deg": 56.25,
+    "width_ratio": [
+     0.848,
+     1.001
+    ]
+   }
+  }
+ ]
+}

@@ -46,6 +46,7 @@ def import_viewmodel(root, name, suffix, material, optic_key=None):
     ui.set_editor_property('import_materials', False)
     ui.set_editor_property('import_textures', False)
     ui.set_editor_property('create_physics_asset', False)
+    ui.set_editor_property('reset_to_fbx_on_material_conflict', True)   # 2026-11-23: 재질 슬롯이 바뀌면(캐릭터 통일) 예전 슬롯을 번호대로 남기지 말고 FBX 기준으로
     ui.set_editor_property('skeleton', skeleton)
     skeletal_options = ui.get_editor_property('skeletal_mesh_import_data')
     skeletal_options.set_editor_property('normal_import_method', unreal.FBXNormalImportMethod.FBXNIM_IMPORT_NORMALS)

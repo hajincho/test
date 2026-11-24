@@ -13,7 +13,7 @@
        Data/fpvm_<key>.json, Data/fpvm_launchers_ads.json(영점별 정조준 변환, 발사각, 소켓).
  gameplay는 바뀐 클립 하나만 내보내며 Panzerfaust의 경우 빈 관 모델도 함께 내보낸다."""
 import bpy, bmesh, sys, json, math, os
-sys.path.insert(0, r'C:\Users\fromj\Downloads\test\test\abc\FurinaSource\Scripts\Blender')
+sys.path.insert(0, __import__('os').path.dirname(__import__('os').path.abspath(__file__)))
 import numpy as np
 from mathutils import Matrix, Vector, Quaternion
 import fpvm_lib as L, fpvm_lib2 as L2
@@ -226,8 +226,7 @@ REF0 = frames({'D': Matrix.Identity(4)})
 REL = {k: REF0[v['ref']].inverted() @ v['W'] for k, v in ST.items()}
 def hand_world(key, F): return F[ST[key]['ref']] @ REL[key]
 def blend_W(Wa, Wb, x, lift=0.0):
-    la, ra, _ = Wa.decompose(); lb, rb, _ = Wb.decompose(); l = la.lerp(lb, x) + Vector((0, 0, lift * math.sin(math.pi * x)))
-    return Matrix.LocRotScale(l, ra.slerp(rb, x), None)
+    return L2.blend_hand_motion(Wa, Wb, x, lift)
 def blend_f(fa, fb, x): return {b: fa.get(b, 0.0) * (1 - x) + fb.get(b, 0.0) * x for b in set(fa) | set(fb)}
 def breathe(t): ph = 2 * math.pi * t / 4.0; return gun_delta(up=0.25 * math.sin(ph), pitch=0.25 * math.sin(ph + 0.6), roll=0.15 * math.sin(ph * 0.5))
 LEAF_FOLD = 85.0   # 가늠자 접힘(앞으로 눕힘)
@@ -280,10 +279,7 @@ def apply_state(st):
         l, r, _ = W.decompose(); E['T_' + s].location = l; E['T_' + s].rotation_quaternion = r; E['P_' + s].location = l + POLE[s]
     bpy.context.view_layer.update()
     for s, W in (('R', Wr), ('L', Wl)):
-        for _ in range(12):   # IK 목표 보정 3번으론 손목이 1.5~2.5cm 덜 닿았음(판처슈렉, 2026-11-22)
-            err = W.translation - (arm.matrix_world @ PB['%s wrist' % L2.SIDE[s]].head)
-            if err.length < 2e-4: break
-            E['T_' + s].location = E['T_' + s].location + err; bpy.context.view_layer.update()
+        L2.settle_wrist(arm, E, s, W.translation)
     L2.apply_fingers(arm, fax['R'], ST['R_GRIP']['fing']); L2.apply_fingers(arm, fax['L'], blend_f(ST[la]['fing'], ST[lb]['fing'], lx)); bpy.context.view_layer.update()
 def record(): return {pb.name: arm.convert_space(pose_bone=pb, matrix=pb.matrix, from_space='POSE', to_space='LOCAL').copy() for pb in PB}
 CONS = [c for pb in PB for c in pb.constraints]
@@ -293,10 +289,10 @@ def bake_clip(name, fn, dur):
     for f in range(n + 1): apply_state(fn(min(dur, f / FPS))); rec.append(record())
     for c in CONS: c.mute = True
     act = bpy.data.actions.new('FPVM_%s_%s' % (KEY, name)); arm.animation_data_create(); arm.animation_data.action = act
+    previous = {}
     for f, Rr in enumerate(rec):
         for pb in PB:
-            pb.matrix_basis = Rr[pb.name]
-            for path in ('location', 'rotation_quaternion', 'scale'): pb.keyframe_insert(path, frame=f + 1, group=pb.name)
+            L2.key_baked_pose(pb, Rr[pb.name], f + 1, previous)
     act.use_fake_user = True; return act, n
 for m in bpy.data.materials:
     m.diffuse_color = (0.85, 0.7, 0.62, 1) if 'Skin' in m.name else (0.25, 0.3, 0.55, 1) if 'Outfit' in m.name else (0.36, 0.38, 0.30, 1)

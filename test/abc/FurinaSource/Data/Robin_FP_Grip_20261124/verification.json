@@ -1,0 +1,760 @@
+{
+  "imported_animations": {
+    "AS_FPVM_Kar98k_Idle": {
+      "previous_seconds": 4.0,
+      "saved": true,
+      "seconds": 4.0,
+      "fbx_sha256": "b114b502b9f4f38f9f79fe9d0b2c173c04b11c238ff28dcef25fc5ee7ddc22d3"
+    },
+    "AS_FPVM_G43_Idle": {
+      "previous_seconds": 4.0,
+      "saved": true,
+      "seconds": 4.0,
+      "fbx_sha256": "0d9436074676c1a5f30cadcc1300d24df0ddd2b8519894963ff9a70648471c6d"
+    },
+    "AS_FPVM_MG34_Idle": {
+      "previous_seconds": 4.0,
+      "saved": true,
+      "seconds": 4.0,
+      "fbx_sha256": "9197c3d319114d3be4bc226614545b08385ae580819055e9260247cabdad66ca"
+    },
+    "AS_FPVM_STG44_Idle": {
+      "previous_seconds": 4.0,
+      "saved": true,
+      "seconds": 4.0,
+      "fbx_sha256": "aeeacbd3cd9d6828c24e611dd7a11def69328716681a0c0118a562aec0378981"
+    },
+    "AS_FPVM_PANZERFAUST_Idle": {
+      "previous_seconds": 4.0,
+      "saved": true,
+      "seconds": 4.0,
+      "fbx_sha256": "606f0cc584bd0ad154dcb2605eeb47cdfe1882cf005be3f3a034528508392a68"
+    },
+    "AS_FPVM_PANZERSCHRECK_Idle": {
+      "previous_seconds": 4.0,
+      "saved": true,
+      "seconds": 4.0,
+      "fbx_sha256": "cf7a148d2071934224cecef3ddb111c52daf49609cfb9cffa08b8827698df7ba"
+    },
+    "AS_FPVM_P38_IdleA": {
+      "previous_seconds": 4.0,
+      "saved": true,
+      "seconds": 4.0,
+      "fbx_sha256": "75098027046d72357902be2193f2b34e207730f8ff4c9027a769553a072dc84f"
+    },
+    "AS_FPVM_MP38_Idle": {
+      "previous_seconds": 4.0,
+      "saved": true,
+      "seconds": 4.0,
+      "fbx_sha256": "11b12478aca3ed16bcdfe07cc392a2bd2dbdcc4450d65a863a43fadf26c360fd"
+    },
+    "AS_FPVM_MP40_Idle": {
+      "previous_seconds": 4.0,
+      "saved": true,
+      "seconds": 4.0,
+      "fbx_sha256": "708ed739dab0c91b03d4c59e36191164329221453a2259db72402763f551214f"
+    },
+    "AS_FPVM_P08_IdleA": {
+      "previous_seconds": 4.0,
+      "saved": true,
+      "seconds": 4.0,
+      "fbx_sha256": "b6582b007fe62b73e41a36bd9a3e90efa50aa3ef52190d4920c42e060484bd7e"
+    },
+    "AS_FPVM_PP_IdleA": {
+      "previous_seconds": 4.0,
+      "saved": true,
+      "seconds": 4.0,
+      "fbx_sha256": "ebfff16929d46c2babf225a4ecef819ecb7219b8685f24064923ac34b033d79f"
+    },
+    "AS_FPVM_G43_MagReload": {
+      "previous_seconds": 3.200000047683716,
+      "saved": true,
+      "seconds": 3.2,
+      "fbx_sha256": "9d0907714f021b37bf2a153e9345c0579a25b9bd64a97d36b5fe6f709c2d4160"
+    },
+    "AS_FPVM_Kar98k_Reload": {
+      "previous_seconds": 3.200000047683716,
+      "saved": true,
+      "seconds": 3.2,
+      "fbx_sha256": "ee8948d8fbb5c1107376766bcc564ec4f442530c92c478b639ed40cf5f0efaa1"
+    },
+    "AS_FPVM_MG34_Reload": {
+      "previous_seconds": 5.900000095367432,
+      "saved": true,
+      "seconds": 5.9,
+      "fbx_sha256": "ea29c0d2bdbfe64d2b68aea4f94f8ca7d74aeed8126b898d84af78370fe4cc5e"
+    },
+    "AS_FPVM_P08_Reload": {
+      "previous_seconds": 2.5,
+      "saved": true,
+      "seconds": 2.5,
+      "fbx_sha256": "4d59300f8292740ff2e2ef77b05101cd1912f8bf300215e6a68a308f0d121c2d"
+    },
+    "AS_FPVM_P38_Reload": {
+      "previous_seconds": 2.5,
+      "saved": true,
+      "seconds": 2.5,
+      "fbx_sha256": "fb8ca53a22e66a468b9ca6eb94c575e9b73ad7d2e0151fd50790d69961cf1c7c"
+    },
+    "AS_FPVM_PANZERFAUST_Reload": {
+      "previous_seconds": 3.0,
+      "saved": true,
+      "seconds": 3.0,
+      "fbx_sha256": "b2f57f2194d5b5387cc7efa06e6a272b17fc125334d5f87c16f495773abe0f52"
+    },
+    "AS_FPVM_PANZERSCHRECK_Reload": {
+      "previous_seconds": 4.0,
+      "saved": true,
+      "seconds": 4.0,
+      "fbx_sha256": "91cbe4fb4418f1a479a53b7f1c409ed267bde08dc589a6826420f129bbd9da1d"
+    },
+    "AS_FPVM_PP_Reload": {
+      "previous_seconds": 2.5,
+      "saved": true,
+      "seconds": 2.5,
+      "fbx_sha256": "1c32168bb3a229031aa16d1a60845f0763fdedfc42542a55913131d904232f87"
+    },
+    "AS_FPVM_STG44_Reload": {
+      "previous_seconds": 2.866666555404663,
+      "saved": true,
+      "seconds": 2.8667,
+      "fbx_sha256": "8a66fc6f62ce1024539331c0ecc6363519ea36deaf62cc1e97554a912482046b"
+    },
+    "AS_FPVM_MP40_Fire": {
+      "previous_seconds": 0.13333334028720856,
+      "saved": true,
+      "seconds": 0.1333,
+      "fbx_sha256": "3d04aea236c35869b0149f336eb4fb6eaabcffb3afb42d1d2f9808dcbe85c54a"
+    },
+    "AS_FPVM_MP40_Reload": {
+      "previous_seconds": 2.866666555404663,
+      "saved": true,
+      "seconds": 2.8667,
+      "fbx_sha256": "3d71b51d8963cf82554debac4b728012d1f36fb13e28b696d18fd2e47a6724e1"
+    },
+    "AS_FPVM_MP38_Fire": {
+      "previous_seconds": 0.13333334028720856,
+      "saved": true,
+      "seconds": 0.1333,
+      "fbx_sha256": "c484b05618856aba75b62e4c5b299920effa5d1c9b03f9f64b9b7a73eb9f2d20"
+    },
+    "AS_FPVM_MP38_Reload": {
+      "previous_seconds": 2.866666555404663,
+      "saved": true,
+      "seconds": 2.8667,
+      "fbx_sha256": "f5e64e0ace8dd2bbb0a4c6db1d8d83dbf5c99a66a623ad6cbef9721d2788f679"
+    },
+    "AS_FPVM_G43_Reload": {
+      "previous_seconds": 5.900000095367432,
+      "saved": true,
+      "seconds": 5.9,
+      "fbx_sha256": "23d697ed01fbabdecd0f53012d4d04a7660192a6ef68925980fceef18b0f7075"
+    },
+    "AS_FPVM_P38_Idle": {
+      "previous_seconds": 4.0,
+      "saved": true,
+      "seconds": 4.0,
+      "fbx_sha256": "d847c9ee886337ce87a38ed50b939adb70dea28e5ac4b57869754309f1f999ae"
+    },
+    "AS_FPVM_P08_IdleS": {
+      "previous_seconds": 4.0,
+      "saved": true,
+      "seconds": 4.0,
+      "fbx_sha256": "6ecea96b9d29c8aa775bf7692bf4bfcad9b204dc5f2aad575fd26755557dbce9"
+    },
+    "AS_FPVM_PP_IdleS": {
+      "previous_seconds": 4.0,
+      "saved": true,
+      "seconds": 4.0,
+      "fbx_sha256": "3cfd57c90a971931015026b5722adf699632847c96677ad2f77c1c344ca5cddd"
+    },
+    "AS_FPVM_P08_Idle": {
+      "previous_seconds": 4.0,
+      "saved": true,
+      "seconds": 4.0,
+      "fbx_sha256": "c7e8700e2e17471af4f1cc2a9fdb18a584e2062a39bb8dc6743ce873bec11143"
+    },
+    "AS_FPVM_PP_Idle": {
+      "previous_seconds": 4.0,
+      "saved": true,
+      "seconds": 4.0,
+      "fbx_sha256": "486e65c2c83337fe155880a12de11d86c5a488cfa125ba055abb6e53a6d26d01"
+    },
+    "AS_FPVM_P08_Fire": {
+      "previous_seconds": 0.30000001192092896,
+      "saved": true,
+      "seconds": 0.3,
+      "fbx_sha256": "449266606d8c453b7d93a64ec4217a9548766b6ee461f0a734fedcf91b1a2803"
+    },
+    "AS_FPVM_PP_Fire": {
+      "previous_seconds": 0.30000001192092896,
+      "saved": true,
+      "seconds": 0.3,
+      "fbx_sha256": "659478aa0f0f84156aa1b2d8f349e61b1f93a35294d9fee6732662befc89edff"
+    },
+    "AS_FPVM_G43_Clip5": {
+      "previous_seconds": 3.8333332538604736,
+      "saved": true,
+      "seconds": 3.8333,
+      "fbx_sha256": "ccadbda84f4c984384f8b5712de4eea8d5c25d3e217ea0cb817b114e2fb1081a"
+    },
+    "AS_FPVM_G43_Loose3": {
+      "previous_seconds": 3.9000000953674316,
+      "saved": true,
+      "seconds": 3.9,
+      "fbx_sha256": "71ab46ccac6989c14a28d9216a10acab2adae5e35f0df208392705e24f19dc0d"
+    },
+    "AS_FPVM_G43_Loose4": {
+      "previous_seconds": 4.5333333015441895,
+      "saved": true,
+      "seconds": 4.5333,
+      "fbx_sha256": "0230787da18a9853b070fc42a905fec2cd8688b7f409773b4e2dae487ad3e02e"
+    },
+    "AS_FPVM_G43_Loose6": {
+      "previous_seconds": 5.766666889190674,
+      "saved": true,
+      "seconds": 5.7667,
+      "fbx_sha256": "8742471472d3cf34da3ea9c408c743dea22b32986a648589617f718edcb6f8c5"
+    },
+    "AS_FPVM_G43_Loose7": {
+      "previous_seconds": 6.400000095367432,
+      "saved": true,
+      "seconds": 6.4,
+      "fbx_sha256": "3a75a1a1c863b7aba78ac18b753398eee608cd0f5b20e3c1a881293538546add"
+    },
+    "AS_FPVM_G43_Loose8": {
+      "previous_seconds": 7.0333333015441895,
+      "saved": true,
+      "seconds": 7.0333,
+      "fbx_sha256": "dedbcbd4b4ab734571c2e1b1bde373d5d744927fed7a380bf174f2f85381b4cb"
+    },
+    "AS_FPVM_G43_Loose9": {
+      "previous_seconds": 7.666666507720947,
+      "saved": true,
+      "seconds": 7.6667,
+      "fbx_sha256": "0032c2e547e30f1f00b571b4cff05e7759017a52b93ddfc0b2c3485d89b4cd8a"
+    }
+  },
+  "reconnected_reload_route": [
+    "mp40",
+    "mp38",
+    "stg44",
+    "panzerfaust",
+    "panzerschreck"
+  ],
+  "grip_contact": {
+    "MP38": {
+      "Idle": {
+        "frames": [
+          4,
+          21,
+          38,
+          55,
+          73,
+          90,
+          107,
+          124
+        ],
+        "threshold_failures": [],
+        "worst_sections_cm": {
+          "L_IndexFinger_mid": {
+            "gap_max": 0.91,
+            "pen_max": 0.0
+          },
+          "L_LittleFinger_mid": {
+            "gap_max": 0.93,
+            "pen_max": 0.0
+          },
+          "L_Palm": {
+            "gap_max": 0.0,
+            "pen_max": 0.41
+          }
+        },
+        "wrist_drift_vs_gun": {
+          "R": {
+            "pos_cm": 0.0,
+            "rot_deg": 0.0
+          },
+          "L": {
+            "pos_cm": 0.03,
+            "rot_deg": 0.0
+          }
+        }
+      },
+      "Fire": {
+        "frames": [
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "threshold_failures": [],
+        "worst_sections_cm": {
+          "L_IndexFinger_mid": {
+            "gap_max": 0.94,
+            "pen_max": 0.0
+          },
+          "L_LittleFinger_mid": {
+            "gap_max": 0.97,
+            "pen_max": 0.0
+          },
+          "L_Palm": {
+            "gap_max": 0.0,
+            "pen_max": 0.41
+          }
+        },
+        "wrist_drift_vs_gun": {
+          "R": {
+            "pos_cm": 0.01,
+            "rot_deg": 0.0
+          },
+          "L": {
+            "pos_cm": 0.06,
+            "rot_deg": 0.0
+          }
+        }
+      }
+    },
+    "MP40": {
+      "Idle": {
+        "frames": [
+          4,
+          21,
+          38,
+          55,
+          73,
+          90,
+          107,
+          124
+        ],
+        "threshold_failures": [],
+        "worst_sections_cm": {
+          "L_IndexFinger_mid": {
+            "gap_max": 0.63,
+            "pen_max": 0.0
+          },
+          "L_Palm": {
+            "gap_max": 0.0,
+            "pen_max": 0.1
+          }
+        },
+        "wrist_drift_vs_gun": {
+          "R": {
+            "pos_cm": 0.0,
+            "rot_deg": 0.0
+          },
+          "L": {
+            "pos_cm": 0.06,
+            "rot_deg": 0.0
+          }
+        }
+      },
+      "Fire": {
+        "frames": [
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "threshold_failures": [],
+        "worst_sections_cm": {
+          "L_IndexFinger_mid": {
+            "gap_max": 0.69,
+            "pen_max": 0.0
+          },
+          "L_Palm": {
+            "gap_max": 0.0,
+            "pen_max": 0.32
+          }
+        },
+        "wrist_drift_vs_gun": {
+          "R": {
+            "pos_cm": 0.0,
+            "rot_deg": 0.0
+          },
+          "L": {
+            "pos_cm": 0.06,
+            "rot_deg": 0.0
+          }
+        }
+      }
+    },
+    "P08": {
+      "Idle": {
+        "frames": [
+          3,
+          20,
+          37,
+          54,
+          72,
+          89,
+          106,
+          123
+        ],
+        "threshold_failures": [],
+        "worst_sections_cm": {
+          "R_Thumb_tip": {
+            "gap_max": 0.08,
+            "pen_max": 0.24
+          },
+          "R_MiddleFinger_mid": {
+            "gap_max": 0.4,
+            "pen_max": 0.15
+          },
+          "R_Palm": {
+            "gap_max": 0.0,
+            "pen_max": 0.72
+          }
+        },
+        "wrist_drift_vs_gun": {
+          "R": {
+            "pos_cm": 0.31,
+            "rot_deg": 0.0
+          },
+          "L": {
+            "pos_cm": 0.25,
+            "rot_deg": 0.0
+          }
+        }
+      },
+      "Fire": {
+        "frames": [
+          3,
+          4,
+          6,
+          7,
+          8,
+          9,
+          11,
+          12
+        ],
+        "threshold_failures": [],
+        "worst_sections_cm": {
+          "R_Thumb_tip": {
+            "gap_max": 0.0,
+            "pen_max": 0.05
+          },
+          "R_MiddleFinger_mid": {
+            "gap_max": 0.24,
+            "pen_max": 0.0
+          },
+          "R_Palm": {
+            "gap_max": 0.0,
+            "pen_max": 0.45
+          }
+        },
+        "wrist_drift_vs_gun": {
+          "R": {
+            "pos_cm": 0.0,
+            "rot_deg": 0.0
+          },
+          "L": {
+            "pos_cm": 1.11,
+            "rot_deg": 5.83
+          }
+        }
+      }
+    },
+    "PP": {
+      "Idle": {
+        "frames": [
+          3,
+          20,
+          37,
+          54,
+          72,
+          89,
+          106,
+          123
+        ],
+        "threshold_failures": [],
+        "worst_sections_cm": {
+          "R_Thumb_tip": {
+            "gap_max": 0.68,
+            "pen_max": 0.0
+          },
+          "R_RingFinger_tip": {
+            "gap_max": 0.3,
+            "pen_max": 0.16
+          },
+          "R_Palm": {
+            "gap_max": 0.0,
+            "pen_max": 0.48
+          }
+        },
+        "wrist_drift_vs_gun": {
+          "R": {
+            "pos_cm": 0.34,
+            "rot_deg": 0.0
+          },
+          "L": {
+            "pos_cm": 0.25,
+            "rot_deg": 0.0
+          }
+        }
+      },
+      "Fire": {
+        "frames": [
+          3,
+          4,
+          6,
+          7,
+          8,
+          9,
+          11,
+          12
+        ],
+        "threshold_failures": [],
+        "worst_sections_cm": {
+          "R_Thumb_tip": {
+            "gap_max": 0.37,
+            "pen_max": 0.0
+          },
+          "R_RingFinger_tip": {
+            "gap_max": 0.0,
+            "pen_max": 0.01
+          },
+          "R_Palm": {
+            "gap_max": 0.0,
+            "pen_max": 0.41
+          }
+        },
+        "wrist_drift_vs_gun": {
+          "R": {
+            "pos_cm": 0.0,
+            "rot_deg": 0.0
+          },
+          "L": {
+            "pos_cm": 1.1,
+            "rot_deg": 5.83
+          }
+        }
+      }
+    }
+  },
+  "motion": {
+    "G43_Reload": {
+      "L": {
+        "wrist_jerk_p95_m_s3_before": 63368.08,
+        "wrist_jerk_p95_m_s3_after": 315.01,
+        "forearm_to_hand_angle_peak_deg_after": 108.09
+      },
+      "R": {
+        "wrist_jerk_p95_m_s3_before": 178.9,
+        "wrist_jerk_p95_m_s3_after": 193.01,
+        "forearm_to_hand_angle_peak_deg_after": 67.82
+      }
+    },
+    "G43_MagReload": {
+      "L": {
+        "wrist_jerk_p95_m_s3_before": 1741.56,
+        "wrist_jerk_p95_m_s3_after": 303.75,
+        "forearm_to_hand_angle_peak_deg_after": 83.17
+      },
+      "R": {
+        "wrist_jerk_p95_m_s3_before": 14.32,
+        "wrist_jerk_p95_m_s3_after": 14.32,
+        "forearm_to_hand_angle_peak_deg_after": 39.05
+      }
+    },
+    "MG34_Reload": {
+      "L": {
+        "wrist_jerk_p95_m_s3_before": 192.01,
+        "wrist_jerk_p95_m_s3_after": 228.96,
+        "forearm_to_hand_angle_peak_deg_after": 103.27
+      },
+      "R": {
+        "wrist_jerk_p95_m_s3_before": 1698.55,
+        "wrist_jerk_p95_m_s3_after": 427.72,
+        "forearm_to_hand_angle_peak_deg_after": 125.21
+      }
+    },
+    "STG44_Reload": {
+      "L": {
+        "wrist_jerk_p95_m_s3_before": 4052.82,
+        "wrist_jerk_p95_m_s3_after": 586.62,
+        "forearm_to_hand_angle_peak_deg_after": 79.34
+      },
+      "R": {
+        "wrist_jerk_p95_m_s3_before": 44.2,
+        "wrist_jerk_p95_m_s3_after": 79.04,
+        "forearm_to_hand_angle_peak_deg_after": 72.28
+      }
+    },
+    "MP38_Reload": {
+      "L": {
+        "wrist_jerk_p95_m_s3_before": 519.53,
+        "wrist_jerk_p95_m_s3_after": 260.72,
+        "forearm_to_hand_angle_peak_deg_after": 79.43
+      },
+      "R": {
+        "wrist_jerk_p95_m_s3_before": 31.05,
+        "wrist_jerk_p95_m_s3_after": 41.01,
+        "forearm_to_hand_angle_peak_deg_after": 65.34
+      }
+    },
+    "MP40_Reload": {
+      "L": {
+        "wrist_jerk_p95_m_s3_before": 621.75,
+        "wrist_jerk_p95_m_s3_after": 268.93,
+        "forearm_to_hand_angle_peak_deg_after": 106.53
+      },
+      "R": {
+        "wrist_jerk_p95_m_s3_before": 23.93,
+        "wrist_jerk_p95_m_s3_after": 32.77,
+        "forearm_to_hand_angle_peak_deg_after": 60.19
+      }
+    }
+  },
+  "g43_reload_adjacent_frame_displacement": {
+    "AS_FPVM_G43_Clip5": {
+      "frames": 116,
+      "old_step_cm": {
+        "Left elbow": 42.28,
+        "Left wrist": 78.32,
+        "Right elbow": 7.9,
+        "Right wrist": 9.38
+      },
+      "new_step_cm": {
+        "Left elbow": 6.14,
+        "Left wrist": 5.33,
+        "Right elbow": 6.32,
+        "Right wrist": 4.91
+      }
+    },
+    "AS_FPVM_G43_Loose3": {
+      "frames": 118,
+      "old_step_cm": {
+        "Left elbow": 42.28,
+        "Left wrist": 78.32,
+        "Right elbow": 9.09,
+        "Right wrist": 10.38
+      },
+      "new_step_cm": {
+        "Left elbow": 5.54,
+        "Left wrist": 4.67,
+        "Right elbow": 11.68,
+        "Right wrist": 10.39
+      }
+    },
+    "AS_FPVM_G43_Loose4": {
+      "frames": 137,
+      "old_step_cm": {
+        "Left elbow": 42.28,
+        "Left wrist": 78.32,
+        "Right elbow": 9.09,
+        "Right wrist": 10.43
+      },
+      "new_step_cm": {
+        "Left elbow": 5.66,
+        "Left wrist": 4.67,
+        "Right elbow": 11.68,
+        "Right wrist": 10.42
+      }
+    },
+    "AS_FPVM_G43_Loose6": {
+      "frames": 174,
+      "old_step_cm": {
+        "Left elbow": 42.28,
+        "Left wrist": 78.32,
+        "Right elbow": 9.09,
+        "Right wrist": 10.43
+      },
+      "new_step_cm": {
+        "Left elbow": 5.65,
+        "Left wrist": 4.67,
+        "Right elbow": 12.51,
+        "Right wrist": 10.43
+      }
+    },
+    "AS_FPVM_G43_Loose7": {
+      "frames": 193,
+      "old_step_cm": {
+        "Left elbow": 42.28,
+        "Left wrist": 78.32,
+        "Right elbow": 9.09,
+        "Right wrist": 10.43
+      },
+      "new_step_cm": {
+        "Left elbow": 5.51,
+        "Left wrist": 4.67,
+        "Right elbow": 12.83,
+        "Right wrist": 10.43
+      }
+    },
+    "AS_FPVM_G43_Loose8": {
+      "frames": 212,
+      "old_step_cm": {
+        "Left elbow": 42.28,
+        "Left wrist": 78.32,
+        "Right elbow": 9.09,
+        "Right wrist": 10.43
+      },
+      "new_step_cm": {
+        "Left elbow": 5.27,
+        "Left wrist": 4.67,
+        "Right elbow": 12.87,
+        "Right wrist": 10.43
+      }
+    },
+    "AS_FPVM_G43_Loose9": {
+      "frames": 231,
+      "old_step_cm": {
+        "Left elbow": 42.28,
+        "Left wrist": 78.32,
+        "Right elbow": 9.09,
+        "Right wrist": 10.43
+      },
+      "new_step_cm": {
+        "Left elbow": 5.21,
+        "Left wrist": 4.67,
+        "Right elbow": 12.6,
+        "Right wrist": 10.43
+      }
+    },
+    "AS_FPVM_G43_Reload": {
+      "frames": 178,
+      "old_step_cm": {
+        "Left elbow": 42.28,
+        "Left wrist": 78.32,
+        "Right elbow": 15.12,
+        "Right wrist": 23.74
+      },
+      "new_step_cm": {
+        "Left elbow": 5.21,
+        "Left wrist": 4.67,
+        "Right elbow": 6.32,
+        "Right wrist": 4.93
+      }
+    }
+  },
+  "pie_14": {
+    "shots": 70,
+    "reload_clip_completed": 13,
+    "completed_ammo": {
+      "p38": 8,
+      "p08": 8,
+      "pp": 8,
+      "kar98k": 5,
+      "kar98k_zf39": 5,
+      "kar98k_zf41": 5,
+      "g43": 10,
+      "g43_zf4": 10,
+      "mp40": 32,
+      "mp38": 32,
+      "stg44": 30,
+      "mg34": 50,
+      "panzerschreck": 1
+    },
+    "ordinary_reload_disabled": [
+      "panzerfaust"
+    ],
+    "log": "Verified/lyra_fx_capture.json"
+  },
+  "g43_partial_playback": {
+    "AS_FPVM_G43_Clip5": "Partial5/lyra_fx_capture.json",
+    "AS_FPVM_G43_Loose3": "Partial7/lyra_fx_capture.json"
+  }
+}

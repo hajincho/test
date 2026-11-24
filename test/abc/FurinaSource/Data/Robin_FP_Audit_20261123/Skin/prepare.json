@@ -1,0 +1,8 @@
+{
+  "robin_fp_skin": {
+    "asset": "/Game/Furina/Classes/Robin/Materials/MI_Robin_FP_Mat18.MI_Robin_FP_Mat18",
+    "color_scale": 0.84,
+    "texture": "/Game/Furina/Classes/Robin/Textures/T_Robin_02.T_Robin_02"
+  },
+  "done": true
+}

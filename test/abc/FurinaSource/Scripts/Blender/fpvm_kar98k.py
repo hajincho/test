@@ -6,7 +6,7 @@
  클립(30fps): Idle 4.0초(호흡), Fire 1.2초(반동 + 볼트 위-뒤-앞-아래, 1.0~1.4초 = 분당 10~15발 조준 사격), Reload 3.2초(클립 장전 5발).
  결과 수치 -> Data/fpvm_kar98k.json (조준선 점: ADS 정렬용)"""
 import bpy, sys, json, math, os
-sys.path.insert(0, r'C:\Users\fromj\Downloads\test\test\abc\FurinaSource\Scripts\Blender')
+sys.path.insert(0, __import__('os').path.dirname(__import__('os').path.abspath(__file__)))
 import numpy as np
 from mathutils import Matrix, Vector, Quaternion
 import fpvm_lib as L, fpvm_lib2 as L2
@@ -160,8 +160,7 @@ REF0 = frames({'D': Matrix.Identity(4), 'theta': 0, 's': 0, 'push': 0})
 REL = {k: REF0[v['ref']].inverted() @ v['W'] for k, v in ST.items()}
 def hand_world(key, F): return F[ST[key]['ref']] @ REL[key]
 def blend_W(Wa, Wb, x, lift=0.0):
-    la, ra, _ = Wa.decompose(); lb, rb, _ = Wb.decompose(); l = la.lerp(lb, x) + Vector((0, 0, lift * math.sin(math.pi * x)))
-    return Matrix.LocRotScale(l, ra.slerp(rb, x), None)
+    return L2.blend_hand_motion(Wa, Wb, x, lift)
 def blend_f(fa, fb, x): return {b: fa.get(b, 0.0) * (1 - x) + fb.get(b, 0.0) * x for b in set(fa) | set(fb)}
 # ---------------------------------------------------------------- 클립 타임라인: 시간 -> (총 변환, 볼트, 손 상태 키 + 섞기 비율, 클립/탄 표시)
 def tl_idle(t):
@@ -243,10 +242,7 @@ def apply_state(st):
         l, r, _ = W.decompose(); E['T_' + s].location = l; E['T_' + s].rotation_quaternion = r; E['P_' + s].location = l + POLE[s]
     bpy.context.view_layer.update()
     for s, W in (('R', Wr), ('L', Wl)):   # IK 오차 보정
-        for _ in range(12):   # IK 목표 보정 3번으론 손목이 1.5~2.5cm 덜 닿았음(판처슈렉, 2026-11-22)
-            err = W.translation - (arm.matrix_world @ PB['%s wrist' % L2.SIDE[s]].head)
-            if err.length < 2e-4: break
-            E['T_' + s].location = E['T_' + s].location + err; bpy.context.view_layer.update()
+        L2.settle_wrist(arm, E, s, W.translation)
     L2.apply_fingers(arm, fax['R'], blend_f(ST[a]['fing'], ST[b]['fing'], x)); L2.apply_fingers(arm, fax['L'], blend_f(ST[la]['fing'], ST[lb]['fing'], lx)); bpy.context.view_layer.update()
     return F
 def record():
@@ -258,10 +254,10 @@ def bake_clip(name, fn, dur):
     for f in range(n + 1): apply_state(fn(f / FPS)); rec.append(record())
     for c in CONS: c.mute = True
     act = bpy.data.actions.new('FPVM_Kar98k_' + name); arm.animation_data_create(); arm.animation_data.action = act
+    previous = {}
     for f, R in enumerate(rec):
         for pb in PB:
-            pb.matrix_basis = R[pb.name]
-            for path in ('location', 'rotation_quaternion', 'scale'): pb.keyframe_insert(path, frame=f + 1, group=pb.name)
+            L2.key_baked_pose(pb, R[pb.name], f + 1, previous)
     act.use_fake_user = True; return act, n
 def shot(name, fn, t, views=('fp', 'side'), look=(0.12, -0.05, -0.12), scale=0.9):
     for c in CONS: c.mute = False

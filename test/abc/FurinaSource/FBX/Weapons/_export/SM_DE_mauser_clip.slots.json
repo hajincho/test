@@ -1,0 +1,17 @@
+[
+ {
+  "tmp": "M_S00",
+  "slot": "Material",
+  "material": "MI_DE_mauser_clip_Material"
+ },
+ {
+  "tmp": "M_S01",
+  "slot": "6_5",
+  "material": "MI_DE_mauser_clip_6_5"
+ },
+ {
+  "tmp": "M_S02",
+  "slot": "case",
+  "material": "MI_DE_mauser_clip_case"
+ }
+]

@@ -1,0 +1,119 @@
+{
+ "G43_Interior": {
+  "Body": {
+   "gap": 0.52,
+   "pen": 0.2,
+   "fail": [],
+   "drift": 0.0
+  }
+ },
+ "G43_ZF4": {
+  "Body": {
+   "gap": 0.52,
+   "pen": 0.2,
+   "fail": [],
+   "drift": 0.0
+  }
+ },
+ "Kar98k_Interior": {
+  "Body": {
+   "gap": 0.74,
+   "pen": 0.07,
+   "fail": [],
+   "drift": 0.0
+  }
+ },
+ "Kar98k_ZF39": {
+  "Body": {
+   "gap": 0.74,
+   "pen": 0.07,
+   "fail": [],
+   "drift": 0.0
+  }
+ },
+ "Kar98k_ZF41": {
+  "Body": {
+   "gap": 0.74,
+   "pen": 0.07,
+   "fail": [],
+   "drift": 0.0
+  }
+ },
+ "MG34": {
+  "Body": {
+   "gap": 0.18,
+   "pen": 0.28,
+   "fail": [],
+   "drift": 0.0
+  }
+ },
+ "MP38": {
+  "Body": {
+   "gap": 1.41,
+   "pen": 0.41,
+   "fail": [
+    "L_IndexFinger_mid",
+    "L_LittleFinger_mid"
+   ],
+   "drift": 0.0
+  }
+ },
+ "MP40": {
+  "Body": {
+   "gap": 1.18,
+   "pen": 0.11,
+   "fail": [
+    "L_IndexFinger_mid"
+   ],
+   "drift": 0.0
+  }
+ },
+ "P08": {
+  "Body": {
+   "gap": 0.67,
+   "pen": 0.42,
+   "fail": [],
+   "drift": 0.0
+  }
+ },
+ "P38": {
+  "Body": {
+   "gap": 0.46,
+   "pen": 0.21,
+   "fail": [],
+   "drift": 0.0
+  }
+ },
+ "PANZERFAUST": {
+  "Body": {
+   "gap": 0.11,
+   "pen": 0.11,
+   "fail": [],
+   "drift": 0.0
+  }
+ },
+ "PANZERSCHRECK": {
+  "Body": {
+   "gap": 0.22,
+   "pen": 0.05,
+   "fail": [],
+   "drift": 0.0
+  }
+ },
+ "PP": {
+  "Body": {
+   "gap": 0.79,
+   "pen": 0.15,
+   "fail": [],
+   "drift": 0.0
+  }
+ },
+ "STG44": {
+  "Body": {
+   "gap": 0.07,
+   "pen": 0.11,
+   "fail": [],
+   "drift": 0.0
+  }
+ }
+}

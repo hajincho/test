@@ -100,7 +100,9 @@ def _eval(F, bvh, a, w, tgt, pen_cap=None):
         c += w[2] * min(max(g[2], 0.0), 4.0) + tgt[1] * np.linalg.norm(F.pad(Ms) - np.array(tgt[0])) * 100
         if len(tgt) > 2:   # 손끝이 목표 면을 넘어 반대편으로 나가면 벌점(0.4cm 넘는 만큼)
             over = float(np.dot((Ms[2] @ F.Ltip)[:3] - np.array(tgt[0]), np.array(tgt[2]))) * 100; c += 5.0 * max(over - 0.4, 0.0)
-    c += 0.004 * abs(a[2] - 0.7 * a[1])
+    c += 0.025 * abs(a[2] - 0.7 * a[1])
+    c += 0.025 * max(0.0, a[0] - 75.0) + 0.025 * max(0.0, a[1] - 90.0)
+    c += 0.018 * abs(F.spread) + 0.025 * max(0.0, -a[0])
     return c, g
 
 
@@ -117,15 +119,15 @@ def solve_finger(F, bvh, lim, thumb=False, tgt=None, step=8):
     w = (0.2, 0.6, 1.0) if thumb else tuple(float(x) for x in os.environ.get('FPVM_GRIP_W', '0.5,0.8,1.2').split(','))
     if tgt is not None:   # 방아쇠 검지: 먼저 뼈만으로(피부 무시) 패드가 목표에 가장 가까운 벌림 각을 고름
         best = None
-        for sp in range(-50, 51, 5):   # 검지 벌림(뿌리 관절 옆으로 + 손 비틀림 몫까지)
+        for sp in range(-25, 26, 5):
             F.spread = float(sp)
-            for a1 in range(-16, int(lim[0]) + 1, 8):
+            for a1 in range(-8, int(lim[0]) + 1, 8):
                 for a2 in range(0, int(lim[1]) + 1, 10):
                     a3 = min(0.7 * a2, lim[2]); d = np.linalg.norm(F.pad(F.mats((a1, a2, a3))) - np.array(tgt[0]))
                     if best is None or d < best[0]: best = (d, sp)
         F.spread = float(best[1])
     cands = []
-    for a1 in np.arange(-16 if tgt is not None else 0, lim[0] + 0.1, step):
+    for a1 in np.arange(-8 if tgt is not None else 0, lim[0] + 0.1, step):
         for a2 in np.arange(0, lim[1] + 0.1, step):
             for a3 in np.arange(0, lim[2] + 0.1, step):
                 if not thumb and abs(a3 - 0.7 * a2) > 30: continue
@@ -136,8 +138,8 @@ def solve_finger(F, bvh, lim, thumb=False, tgt=None, step=8):
         if _path_ok(F, bvh, a): best = (c, list(a)); break
     if best is None: best = (cands[0][0], list(cands[0][1])) if cands else (0.0, [0.0, 0.0, 0.0])
     c, a = best
-    lo = [-16.0 if tgt is not None else 0.0, 0.0, 0.0]   # 방아쇠 검지는 첫마디 약간 젖힘 허용(권총과 같게)
-    nv = 4 if tgt is not None else 3   # 방아쇠 검지는 벌림(F.spread, ±30°)도 같이 다듬음
+    lo = [-8.0 if tgt is not None else 0.0, 0.0, 0.0]
+    nv = 4 if tgt is not None else 3
     for st in (4.0, 2.0, 1.0):
         improved = True
         while improved:
@@ -145,11 +147,14 @@ def solve_finger(F, bvh, lim, thumb=False, tgt=None, step=8):
             for j in range(nv):
                 for sg in (-1, 1):
                     if j == 3:
-                        old_sp = F.spread; F.spread = min(max(old_sp + sg * st, -50.0), 50.0); cb, _ = _eval(F, bvh, a, w, tgt)
+                        old_sp = F.spread; F.spread = min(max(old_sp + sg * st, -25.0), 25.0); cb, _ = _eval(F, bvh, a, w, tgt, pen_cap=1.0)
                         if cb < c - 1e-4: c, improved = cb, True
                         else: F.spread = old_sp
                         continue
-                    b = list(a); b[j] = min(max(b[j] + sg * st, lo[j]), lim[j]); cb, _ = _eval(F, bvh, b, w, tgt)
+                    b = list(a); b[j] = min(max(b[j] + sg * st, lo[j]), lim[j])
+                    if not thumb and abs(b[2] - 0.7 * b[1]) > 30:
+                        continue
+                    cb, _ = _eval(F, bvh, b, w, tgt, pen_cap=1.0)
                     if cb < c - 1e-4: c, a, improved = cb, b, True
     _, g = _eval(F, bvh, a, w, tgt); d = {'cost': round(c, 3), 'gap_cm': [round(x, 2) for x in g]}
     if tgt is not None: d['spread'] = F.spread; d['pad_miss_cm'] = round(float(np.linalg.norm(F.pad(F.verts(a)[1]) - np.array(tgt[0]))) * 100, 2)
@@ -173,8 +178,8 @@ def grip_fingers_mesh(arm, s, fax, bvh, limits=None, skip=(), preset=None, targe
         if preset and f in preset: res.update(dict(zip(bns, preset[f]))); continue
         F = Finger(arm, body, s, f, fax); tg = (targets or {}).get(f)
         lm = lim.get(f, lim['default'])
-        if f == 'Thumb': lm = (max(lm[0], 35), max(lm[1], 45), max(lm[2], 50))   # 엄지가 반대편까지 감싸게(파고듦은 비용이 막음)
-        else: lm = (max(lm[0], 95), max(lm[1], 105), max(lm[2], 80))   # 뿌리 관절 85° 에 걸려 새끼·약지가 덜 감기던 것(실제 굽힘 90~100°)
+        caps = (38, 48, 53) if f == 'Thumb' else (87, 100, 70)
+        lm = tuple(min(authored, cap) for authored, cap in zip(lm, caps))
         a, d = solve_finger(F, bvh, lm, thumb=(f == 'Thumb'), tgt=tg); res.update(dict(zip(bns, a))); diag[f] = d
         if F.spread: res[bns[0] + '@spread'] = F.spread
     import fpvm_lib2; fpvm_lib2.apply_fingers(arm, fax, res)

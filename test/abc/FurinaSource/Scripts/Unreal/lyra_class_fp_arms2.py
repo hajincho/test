@@ -4,7 +4,8 @@
  1) 모든 SK_FPVM_* 의 CA<Key>_MatNN 슬롯 = /Game/Furina/Classes/<Key>/Materials/MI_<Key>_MatNN
  2) 시점 갱신(FurinaViewUpdate, 0.05초)마다 (외형 + 무기 메시)가 바뀌었으면 FurinaFPVM 의 재질 슬롯을 돌며:
     CA 슬롯 = 지금 외형(대소문자 무시 'CA'+FurinaLook 로 시작)이면 원래 재질, 아니면 가림 재질(M_FPVM_Hidden)
-    Furina_ 슬롯 = 외형이 푸리나면 원래 재질, 아니면 가림 재질. 무기 슬롯은 건드리지 않음."""
+    Furina_ 슬롯 = 외형이 푸리나면 원래 재질, 아니면 가림 재질. 무기 슬롯은 건드리지 않음.
+ robin_skin_preview는 1인칭 Robin 피부 보정 재질을 준비한다. robin_skin은 해당 피부 슬롯에도 지정한다."""
 import json, sys, traceback, uuid
 from pathlib import Path
 import unreal
@@ -14,22 +15,75 @@ from lyra_fpvm_optics import ENGINE, MATH, PAWN, STRINGS, Graph, wire, chain
 ROOT = Path(unreal.Paths.project_dir()).resolve(); R = {}
 ASSETS = unreal.EditorAssetLibrary; BEL = unreal.BlueprintEditorLibrary
 HIDDEN = '/Game/Furina/FX/M_FPVM_Hidden'; SYS = ENGINE + 'KismetSystemLibrary:'
+ROBIN_MATERIALS = '/Game/Furina/Classes/Robin/Materials'
+ROBIN_FP_SKIN = ROBIN_MATERIALS + '/MI_Robin_FP_Mat18'
 
 
-def assign_slots():
+def robin_fp_skin():
+    """Robin의 기존 피부 텍스처를 그대로 쓰는 1인칭 밝기 보정 재질."""
+    mel = unreal.MaterialEditingLibrary
+    master_path = ROBIN_MATERIALS + '/M_Robin_FP_Skin'
+    master = unreal.load_asset(master_path) if ASSETS.does_asset_exist(master_path) else ASSETS.duplicate_asset(
+        '/Game/Furina/Materials/M_Furina_Opaque', master_path)
+    assert master, master_path
+    base_color = unreal.MaterialProperty.MP_BASE_COLOR
+    base = mel.get_material_property_input_node(master, base_color)
+    if isinstance(base, unreal.MaterialExpressionTextureSampleParameter2D):
+        tone = mel.create_material_expression(master, unreal.MaterialExpressionScalarParameter, -400, 180)
+        tone.set_editor_property('parameter_name', 'FPBaseColorScale')
+        tone.set_editor_property('default_value', 1.0)
+        multiply = mel.create_material_expression(master, unreal.MaterialExpressionMultiply, -120, 0)
+        assert mel.connect_material_expressions(base, 'RGB', multiply, 'A')
+        assert mel.connect_material_expressions(tone, '', multiply, 'B')
+        assert mel.connect_material_property(multiply, '', base_color)
+        mel.recompile_material(master)
+    else:
+        assert isinstance(base, unreal.MaterialExpressionMultiply), str(base)
+    assert ASSETS.save_loaded_asset(master, False), master_path
+
+    skin = unreal.load_asset(ROBIN_FP_SKIN) if ASSETS.does_asset_exist(ROBIN_FP_SKIN) else ASSETS.duplicate_asset(
+        ROBIN_MATERIALS + '/MI_Robin_Mat18', ROBIN_FP_SKIN)
+    assert skin, ROBIN_FP_SKIN
+    original = unreal.load_asset(ROBIN_MATERIALS + '/MI_Robin_Mat18')
+    texture = mel.get_material_instance_texture_parameter_value(original, 'BaseTex')
+    assert texture
+    mel.set_material_instance_parent(skin, master)
+    mel.set_material_instance_texture_parameter_value(skin, 'BaseTex', texture)
+    assert mel.get_material_instance_texture_parameter_value(skin, 'BaseTex') == texture
+    color_scale = 0.84
+    mel.set_material_instance_scalar_parameter_value(skin, 'FPBaseColorScale', color_scale)
+    assert abs(mel.get_material_instance_scalar_parameter_value(skin, 'FPBaseColorScale') - color_scale) < 0.001
+    assert ASSETS.save_loaded_asset(skin, False), ROBIN_FP_SKIN
+    return {'asset': skin.get_path_name(), 'color_scale': color_scale, 'texture': texture.get_path_name()}
+
+
+def assign_slots(robin_skin_only=False):
     ar = unreal.AssetRegistryHelpers.get_asset_registry(); out = {}
+    if robin_skin_only:
+        R['slots'] = out
+    fp_skin = unreal.load_asset(ROBIN_FP_SKIN) if ASSETS.does_asset_exist(ROBIN_FP_SKIN) else None
     for a in ar.get_assets_by_path('/Game/Furina/FPVM', True):
         if str(a.asset_class_path.asset_name) != 'SkeletalMesh' or not str(a.asset_name).startswith('SK_FPVM_'): continue
-        m = unreal.load_asset(str(a.package_name)); slots = list(m.materials); n = 0; miss = []
+        m = unreal.load_asset(str(a.package_name)); slots = list(m.materials); n = 0; miss = []; changed = False
         for s in slots:
             sn = str(s.material_slot_name)
             if not sn.startswith('CA'): continue
+            if robin_skin_only and sn != 'CARobin_Mat18': continue
             Key, mat = sn[2:].split('_', 1)
-            mi = unreal.load_asset(f'/Game/Furina/Classes/{Key}/Materials/MI_{Key}_{mat}')
-            if mi: s.material_interface = mi; n += 1
+            mi = fp_skin if sn == 'CARobin_Mat18' and fp_skin else unreal.load_asset(f'/Game/Furina/Classes/{Key}/Materials/MI_{Key}_{mat}')
+            if mi:
+                if s.material_interface != mi:
+                    s.material_interface = mi; changed = True
+                n += 1
             else: miss.append(sn)
-        if n or miss:
-            m.set_editor_property('materials', slots); assert ASSETS.save_loaded_asset(m, False)
+        if changed or (robin_skin_only and n):
+            original_slots = list(m.materials)
+            if changed:
+                m.set_editor_property('materials', slots)
+            if not ASSETS.save_loaded_asset(m, False):
+                if changed:
+                    m.set_editor_property('materials', original_slots)
+                raise RuntimeError(f'재질 슬롯 저장 실패: {m.get_path_name()}')
         out[str(a.asset_name)] = [n, miss]
     return out
 
@@ -103,6 +157,11 @@ def pawn():
 def run():
     assert not unreal.get_editor_subsystem(unreal.UnrealEditorSubsystem).get_game_world(), 'End PIE first'
     only = [a for a in sys.argv[1:] if not a.endswith('.py')]
+    if only in (['robin_skin'], ['robin_skin_preview']):
+        R['robin_fp_skin'] = robin_fp_skin()
+        if only == ['robin_skin']:
+            R['slots'] = assign_slots(robin_skin_only=True)
+        return
     if not only or 'slots' in only[0]: R['slots'] = assign_slots()
     if not only or 'pawn' in only[0]: R['pawn'] = pawn()
 

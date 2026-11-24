@@ -12,7 +12,7 @@ MG42 설치(거치) 사격용 에셋:
 import bpy, bmesh, sys, json, math, os
 import numpy as np
 from mathutils import Vector, Matrix, Quaternion
-sys.path.insert(0, r'C:\Users\fromj\Downloads\test\test\abc\FurinaSource\Scripts\Blender')
+sys.path.insert(0, __import__('os').path.dirname(__import__('os').path.abspath(__file__)))
 import fpvm_lib as L
 A = sys.argv[sys.argv.index('--') + 1:]; STAGE = A[0] if A else 'check'
 D = L.D; OUTD = os.path.join(D, 'FBX', 'MG42'); os.makedirs(OUTD, exist_ok=True)

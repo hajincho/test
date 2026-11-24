@@ -19,7 +19,7 @@
   "K_det": 9.999981549863479e-07,
   "scale": 0.009999993849950711,
   "bones_kept": 53,
-  "arm_verts": 4128,
+  "arm_verts": 6519,
   "K": [
    [
     3.586359292873098e-09,
@@ -63,15 +63,16 @@
   "Right_len_cm": [
    21.14,
    18.02
-  ]
+  ],
+  "fp_char": "robin"
  },
  "clavicle_err_cm": {
   "L": 1.34,
   "R": 0.77
  },
  "sleeves": 8,
- "lever_faces": 70,
- "old_sight_faces": 228,
+ "lever_faces": 60,
+ "old_sight_faces": 0,
  "pzs_sight": {
   "notch": [
    10.989999771118164,
@@ -86,10 +87,10 @@
   "elev150_deg": 3.493
  },
  "parts": {
-  "lever": 70,
-  "rocket": 35860
+  "lever": 60,
+  "rocket": 33222
  },
- "gun_faces": 4580,
+ "gun_faces": 4798,
  "grip_ray": {
   "n": 172,
   "center_nat": [
@@ -114,11 +115,11 @@
  },
  "seat": {
   "R": {
-   "gap_cm": 0.024,
+   "gap_cm": 0.173,
    "moved_cm": 0.0
   },
   "L": {
-   "gap_cm": 0.079,
+   "gap_cm": 0.042,
    "moved_cm": 0.0
   }
  },
@@ -143,45 +144,45 @@
  },
  "R_grip_fingers": {
   "Thumb": {
-   "cost": 0.032,
+   "cost": 0.015,
    "gap_cm": [
-    0.03,
     0.0,
+    -0.07,
     0.0
    ]
   },
   "IndexFinger": {
-   "cost": 0.67,
+   "cost": 0.442,
    "gap_cm": [
+    0.18,
     0.2,
-    0.71,
-    0.01
+    0.0
    ],
-   "spread": 41.0,
-   "pad_miss_cm": 0.65
+   "spread": 37.0,
+   "pad_miss_cm": 0.43
   },
   "MiddleFinger": {
-   "cost": 0.014,
+   "cost": 0.026,
    "gap_cm": [
     0.01,
-    0.0,
+    0.02,
     0.0
    ]
   },
   "RingFinger": {
-   "cost": 0.004,
+   "cost": 0.015,
    "gap_cm": [
-    0.0,
-    0.0,
+    0.01,
+    0.01,
     0.0
    ]
   },
   "LittleFinger": {
-   "cost": 0.842,
+   "cost": 0.004,
    "gap_cm": [
-    -0.09,
     -0.02,
-    0.7
+    0.0,
+    0.0
    ]
   }
  },
@@ -325,9 +326,15 @@
   }
  },
  "mats": [
+  "CARobin_Mat06",
+  "CARobin_Mat12",
+  "CARobin_Mat13",
+  "CARobin_Mat18",
+  "CARobin_Mat23",
+  "CARobin_Mat24",
+  "CARobin_Mat25",
+  "CARobin_Mat26",
   "Dark_Olive",
-  "Furina_Outfit",
-  "Furina_SkinHair",
   "Main_001",
   "Olive_Paint",
   "Rocket_001",

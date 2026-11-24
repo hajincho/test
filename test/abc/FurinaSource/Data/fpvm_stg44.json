@@ -6,7 +6,7 @@
   "K_det": 9.999981549863479e-07,
   "scale": 0.009999993849950711,
   "bones_kept": 53,
-  "arm_verts": 4128,
+  "arm_verts": 6519,
   "K": [
    [
     3.586359292873098e-09,
@@ -50,24 +50,25 @@
   "Right_len_cm": [
    21.14,
    18.02
-  ]
+  ],
+  "fp_char": "robin"
  },
  "clavicle_err_cm": {
   "L": 1.34,
   "R": 0.77
  },
  "sleeves": 8,
- "mag_faces": 1349,
- "handle_faces": 302,
+ "mag_faces": 2544,
+ "handle_faces": 514,
  "tris": {
-  "W_stg44": 19201,
-  "W_mag": 1349,
-  "W_handle": 302
+  "W_stg44": 33695,
+  "W_mag": 2544,
+  "W_handle": 514
  },
  "sight": {
   "front": [
    0.22,
-   -43.42739486694336,
+   -45.29431915283203,
    17.233081817626953
   ],
   "rear": [
@@ -104,11 +105,11 @@
  },
  "seat": {
   "R": {
-   "gap_cm": 0.033,
+   "gap_cm": 0.012,
    "moved_cm": 0.0
   },
   "L": {
-   "gap_cm": 0.005,
+   "gap_cm": 0.114,
    "moved_cm": 0.0
   }
  },
@@ -133,44 +134,44 @@
  },
  "R_grip_fingers": {
   "Thumb": {
-   "cost": 0.014,
+   "cost": 0.086,
    "gap_cm": [
-    -0.07,
-    -0.08,
-    0.01
+    0.0,
+    -0.1,
+    -0.04
    ]
   },
   "IndexFinger": {
-   "cost": 0.226,
+   "cost": 0.407,
    "gap_cm": [
-    0.32,
-    -0.05,
-    -0.08
+    0.28,
+    0.09,
+    -0.09
    ],
-   "spread": 28.0,
-   "pad_miss_cm": 0.16
+   "spread": 30.0,
+   "pad_miss_cm": 0.38
   },
   "MiddleFinger": {
-   "cost": 0.368,
+   "cost": 0.353,
    "gap_cm": [
-    0.71,
-    0.01,
+    0.69,
+    0.0,
     0.0
    ]
   },
   "RingFinger": {
-   "cost": 0.473,
+   "cost": 0.407,
    "gap_cm": [
-    0.9,
-    0.0,
-    -0.08
+    0.8,
+    0.01,
+    -0.06
    ]
   },
   "LittleFinger": {
-   "cost": 0.068,
+   "cost": 0.112,
    "gap_cm": [
-    0.12,
-    0.01,
+    0.21,
+    0.0,
     0.0
    ]
   }
@@ -218,8 +219,14 @@
  "mats": [
   "Barrel",
   "Body",
-  "Furina_Outfit",
-  "Furina_SkinHair",
+  "CARobin_Mat06",
+  "CARobin_Mat12",
+  "CARobin_Mat13",
+  "CARobin_Mat18",
+  "CARobin_Mat23",
+  "CARobin_Mat24",
+  "CARobin_Mat25",
+  "CARobin_Mat26",
   "Magazine",
   "Stock"
  ],

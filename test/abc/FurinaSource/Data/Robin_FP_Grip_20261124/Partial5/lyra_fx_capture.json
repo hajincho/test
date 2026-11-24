@@ -1,0 +1,133 @@
+{
+ "shots": [
+  [
+   "g43",
+   "hip",
+   {
+    "stance": 0,
+    "idle_anim": "AS_FPVM_G43_Idle",
+    "reload_anim": "AS_FPVM_G43_Reload",
+    "reserve": 600,
+    "tube_hidden": false,
+    "last_key": "g43",
+    "n_panims": 39,
+    "ammo": 10,
+    "wid": "g43",
+    "rl": false,
+    "mesh": "SK_FPVM_G43_Interior",
+    "vm_vis": true,
+    "ads_a": 0.0,
+    "smoke_n": 0,
+    "flash_n": 0,
+    "cases": [],
+    "case_sample_time": 10.547
+   }
+  ],
+  [
+   "g43",
+   "ads",
+   {
+    "stance": 0,
+    "idle_anim": "AS_FPVM_G43_Idle",
+    "reload_anim": "AS_FPVM_G43_Reload",
+    "reserve": 600,
+    "tube_hidden": false,
+    "last_key": "g43",
+    "n_panims": 39,
+    "ammo": 10,
+    "wid": "g43",
+    "rl": false,
+    "mesh": "SK_FPVM_G43_Interior",
+    "vm_vis": true,
+    "ads_a": 1.0,
+    "smoke_n": 0,
+    "flash_n": 0,
+    "cases": [],
+    "case_sample_time": 11.939
+   }
+  ],
+  [
+   "g43",
+   "rl1",
+   {
+    "stance": 0,
+    "idle_anim": "AS_FPVM_G43_Idle",
+    "reload_anim": "AS_FPVM_G43_Clip5",
+    "reserve": 64,
+    "tube_hidden": false,
+    "last_key": "g43",
+    "n_panims": 39,
+    "ammo": 5,
+    "wid": "g43",
+    "rl": true,
+    "mesh": "SK_FPVM_G43_Interior",
+    "vm_vis": true,
+    "ads_a": 0.0,
+    "smoke_n": 0,
+    "flash_n": 0,
+    "cases": [],
+    "case_sample_time": 13.828
+   }
+  ],
+  [
+   "g43",
+   "rl2",
+   {
+    "stance": 0,
+    "idle_anim": "AS_FPVM_G43_Idle",
+    "reload_anim": "AS_FPVM_G43_Clip5",
+    "reserve": 64,
+    "tube_hidden": false,
+    "last_key": "g43",
+    "n_panims": 39,
+    "ammo": 5,
+    "wid": "g43",
+    "rl": true,
+    "mesh": "SK_FPVM_G43_Interior",
+    "vm_vis": true,
+    "ads_a": 0.0,
+    "smoke_n": 0,
+    "flash_n": 0,
+    "cases": [],
+    "case_sample_time": 14.908
+   }
+  ],
+  [
+   "g43",
+   "rl3",
+   {
+    "stance": 0,
+    "idle_anim": "AS_FPVM_G43_Idle",
+    "reload_anim": "AS_FPVM_G43_Clip5",
+    "reserve": 64,
+    "tube_hidden": false,
+    "last_key": "g43",
+    "n_panims": 39,
+    "ammo": 5,
+    "wid": "g43",
+    "rl": true,
+    "mesh": "SK_FPVM_G43_Interior",
+    "vm_vis": true,
+    "ads_a": 0.0,
+    "smoke_n": 0,
+    "flash_n": 0,
+    "cases": [],
+    "case_sample_time": 16.241
+   }
+  ]
+ ],
+ "events": [
+  [
+   "g43",
+   "reload_requested",
+   true
+  ],
+  [
+   "g43",
+   "reload_done",
+   4.45,
+   10
+  ]
+ ],
+ "done": true
+}

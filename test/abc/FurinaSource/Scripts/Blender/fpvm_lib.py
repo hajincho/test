@@ -7,7 +7,9 @@ import bpy, bmesh, json, math
 import numpy as np
 from mathutils import Matrix, Vector, Quaternion
 from mathutils.bvhtree import BVHTree
-D = r'C:\Users\fromj\Downloads\test\test\abc\FurinaSource'; EXP = r'C:\Users\fromj\Downloads\FurinaWeaponSrc\Germany\_export'
+import os as _os   # 2026-11-23: 프로젝트를 Downloads 에서 옮겨 옛 고정 경로가 없어짐 -> 이 파일 위치 기준(환경변수 FURINA_D / FURINA_EXP 로 바꿀 수 있음)
+D = _os.environ.get('FURINA_D') or _os.path.dirname(_os.path.dirname(_os.path.dirname(_os.path.abspath(__file__))))
+EXP = _os.environ.get('FURINA_EXP') or _os.path.join(D, 'FBX', 'Weapons', '_export')   # 무기 정리본 SM_DE_<키>.fbx (lyra_export_weapon_src.py 가 언리얼 SM_DE_* 에서 다시 뽑음)
 FINGERS = ['Thumb', 'IndexFinger', 'MiddleFinger', 'RingFinger', 'LittleFinger']
 def qmat(q):
     x, y, z, w = q
@@ -80,6 +82,9 @@ def load_arms(pose_tag='a1', sample=0, th=0.5):
     for side in ('Left', 'Right'):
         h = arm.data.bones['%s arm' % side].head_local; e = arm.data.bones['%s elbow' % side].head_local; w = arm.data.bones['%s wrist' % side].head_local
         info['%s_shoulder_cm' % side] = [round(v * 100, 2) for v in h]; info['%s_len_cm' % side] = [round((e - h).length * 100, 2), round((w - e).length * 100, 2)]
+    if FP_CHAR != 'furina':   # 2026-11-23 캐릭터 통일: 1인칭 팔 메시 = 통일 캐릭터 팔(같은 팔 뼈대, 재질 CA<Key>_*) -> 손가락 쥐기·소매 접기·휴식 자세 굳히기가 모두 이 피부 기준
+        ca = class_arm_objects(arm, keys=((FP_CHAR, FP_KEY),)); bpy.data.objects.remove(body, do_unlink=True); body = ca[0]; body.name = 'Body'
+        info['fp_char'] = FP_CHAR; info['arm_verts'] = len(body.data.vertices)
     return arm, body, info
 
 # ------------------------------------------------------------------ 무기
@@ -98,8 +103,24 @@ def load_weapon(key):
     bpy.context.view_layer.objects.active = obs[0]; bpy.ops.object.transform_apply(location=True, rotation=True, scale=True)
     if len(obs) > 1: bpy.ops.object.join()
     g = bpy.context.view_layer.objects.active; g.data.transform(Matrix.Scale(100, 4)); g.name = 'W_' + key   # 원본 cm 로
+    _restore_ue_export(g, key)
     if key == 'p38': seat_p38_slide(g)
     return g
+UE_SANITIZED = {'6_5': '6.5', 'p_line': 'p line', '7_92х57_l': '7.92х57 l', 'mg_34_mag': 'mg 34 mag', 'mg_34': 'mg 34'}   # 언리얼 슬롯 이름(점·빈칸 -> _) -> 원래 재질 이름
+def _restore_ue_export(g, key):
+    """언리얼에서 다시 뽑은 원본(lyra_export_weapon_src.py)이면: 임시 재질 이름 M_SNN -> 원래 슬롯 이름(.slots.json), 언리얼이 UV·법선 경계에서 쪼갠 정점을 다시 붙임(연결 성분이 원본과 같게)."""
+    side = _os.path.join(EXP, 'SM_DE_%s.slots.json' % key)
+    if not _os.path.exists(side): return
+    table = {t['tmp']: t['slot'] for t in json.load(open(side, encoding='utf-8'))}
+    for m in g.data.materials:
+        if m is None: continue
+        base = m.name.split('.')[0]
+        if base in table: m.name = UE_SANITIZED.get(table[base], table[base])
+    bm = bmesh.new(); bm.from_mesh(g.data)   # 같은 재질 안에서만 붙임(언리얼은 재질 구역마다 정점을 따로 둠; 다른 재질 부품끼리 붙으면 성분이 합쳐짐 - MP38 탄창)
+    for mi in sorted({f.material_index for f in bm.faces}):
+        vs = list({v for f in bm.faces if f.material_index == mi for v in f.verts})
+        bmesh.ops.remove_doubles(bm, verts=vs, dist=1e-4)
+    bm.to_mesh(g.data); bm.free()
 P38_SLIDE_SHIFT_CM = 3.31
 def seat_p38_slide(g):
     """원본 P38 은 슬라이드가 뒤로 3.3cm 당겨진(후퇴) 상태로 모델링돼 있음(슬라이드 앞 y -1.74 > 프레임 앞 -5.05, 뒤끝이 공이치기를 덮음).
@@ -180,8 +201,15 @@ def finger_axes(arm, side, axes):
 CLASS_KEYS = (('officer', 'Officer'), ('infantry', 'Infantry'), ('assault', 'Assault'), ('antitank', 'AntiTank'), ('heavy', 'Heavy'), ('sniper', 'Sniper'), ('armor', 'Armor'),
               ('jp_officer', 'JpOfficer'), ('jp_infantry', 'JpInfantry'), ('jp_assault', 'JpAssault'), ('jp_antitank', 'JpAntiTank'), ('jp_heavy', 'JpHeavy'), ('jp_sniper', 'JpSniper'), ('jp_armor', 'JpArmor'))
 SLEEVE_MAX_CM = {'arm': 5.0, 'elbow': 3.8}   # 1인칭에서 화면을 가리던 큰 소매(미카·유라·진·아야토 등): 팔 축에서 이 반지름 밖은 축 쪽으로 당김(손·손가락은 그대로)
+SLEEVE_CUT = {'robin': {'mats': ('Mat23', 'Mat24', 'Mat25', 'Mat26'), 'r_cm': (5.5, 3.9), 'no_clamp': True, 'drop': ('Mat07',)},   # Robin: 위팔 프릴 소매(袖外·袖內·袖金屬·袖珠, 최대 13cm), Mat07 = 왼팔에 묻은 드레스 조각
+              'sparxie': {'mats': ('Mat29', 'Mat20', 'Mat19'), 'r_cm': (4.6, 3.9), 'no_clamp': True, 'drop': ('Mat21',)}}   # drop: 어깨 카드 장식(肩飾)은 1인칭 팔에서 뺌   # 소매(袖)·소매 레이스(袖花边): 어깨부터 종 모양으로 최대 32cm 퍼짐 -> 위팔 4.6 / 아래팔 3.9cm 안으로
 _LAST_K = None
-def class_arm_objects(arm, K=None, th=0.5):
+# 2026-11-23 사용자 지정: 캐릭터 통일(Sparxie). 1인칭 팔은 이 캐릭터 하나(load_arms 의 body), 병과 팔 14종은 넣지 않음. FURINA_FP_CHAR=furina 면 예전 방식(푸리나 몸 + 병과 팔 14종)
+FP_CHAR = _os.environ.get('FURINA_FP_CHAR', 'robin'); FP_KEY = {'sparxie': 'Sparxie', 'robin': 'Robin'}.get(FP_CHAR, FP_CHAR.title())   # 2026-11-23: Sparxie -> Robin 으로 교체(사용자 지정)
+def class_arm_objects(arm, K=None, th=0.5, keys=None):
+    if keys is None:
+        if FP_CHAR != 'furina': return []   # 통일 캐릭터: 팔은 load_arms 가 이미 넣음
+        keys = CLASS_KEYS
     """1인칭 무기 메시에 함께 넣을 병과 캐릭터 7종의 팔·손 메시(같은 팔 뼈대 arm 에 스키닝). 재질 이름 CA<Key>_<원래 슬롯>(언리얼에서 캐릭터별로 보이기/가리기).
     캐릭터 팔(FBX/Classes/<key>_cm.fbx, 뼈 방향은 푸리나와 같음)을 뼈마다 '푸리나 관절 + (정점 - 캐릭터 관절) × 길이비'로 옮겨 푸리나 1인칭 팔 길이에 맞추고 K(아마추어 cm -> 카메라 m)로.
     언리얼 리더 포즈로 별도 메시를 따라가게 하면 이 뷰모델 구조에서 축소·엇나가서(2026-11-22 시험) 무기 메시 안에 같이 넣는다."""
@@ -192,7 +220,7 @@ def class_arm_objects(arm, K=None, th=0.5):
     fur = {b.name: (b.head_local.copy(), (b.tail_local - b.head_local).length) for b in fa.data.bones}; FI = fa.matrix_world.inverted()
     for o in [o for o in bpy.data.objects if o not in before]: bpy.data.objects.remove(o, do_unlink=True)
     out = []
-    for key, Key in CLASS_KEYS:
+    for key, Key in keys:
         before = set(bpy.data.objects)
         bpy.ops.import_scene.fbx(filepath=D + r'\FBX\Classes\%s_cm.fbx' % key, automatic_bone_orientation=False, ignore_leaf_bones=False)
         new = [o for o in bpy.data.objects if o not in before]
@@ -218,7 +246,40 @@ def class_arm_objects(arm, K=None, th=0.5):
             if tot > 0: v.co = acc / tot
         # 큰 소매 줄이기: 손목·손가락 가중치가 작은 정점만, 지배 뼈(위팔/아래팔) 축에서 반지름 제한
         hand_like = lambda n: n and (('wrist' in n) or ('Finger' in n) or n.startswith('Thumb'))
-        for v in me.vertices:
+        cut = SLEEVE_CUT.get(key)
+        if cut:   # 반지름을 눌러 자르면(clamp) 겹친 천이 구겨져 덩어리·꼬인 손목이 됨 -> 팔 따라 1cm 단면마다 '가장 넓은 폭 -> 목표 반지름' 비율로 소매 전체를 고르게 줄임(모양 유지, 겹침 없음)
+            mi = {i for i, m in enumerate(me.materials) if m and m.name.split('.')[0] in cut['mats']}
+            di = {i for i, m in enumerate(me.materials) if m and m.name.split('.')[0] in cut.get('drop', ())}
+            if di:
+                bm = bmesh.new(); bm.from_mesh(me); bmesh.ops.delete(bm, geom=[f for f in bm.faces if f.material_index in di], context='FACES_ONLY')
+                bmesh.ops.delete(bm, geom=[v for v in bm.verts if not v.link_faces], context='VERTS'); bm.to_mesh(me); bm.free()
+            sv = {vi for p in me.polygons if p.material_index in mi for vi in p.vertices}
+            lines = {s: (fur['%s arm' % s][0], fur['%s elbow' % s][0], fur['%s wrist' % s][0]) for s in ('Left', 'Right')}
+            def foot(co):
+                best = None
+                for s, (A0, E0, W0) in lines.items():
+                    for k, (a, b, s0) in enumerate(((A0, E0, 0.0), (E0, W0, (E0 - A0).length))):
+                        ab = b - a; t = max(0.0, min(1.0, (co - a).dot(ab) / ab.length_squared)); p = a + ab * t; d = co - p
+                        if best is None or d.length < best[0]: best = (d.length, s, s0 + t * ab.length, p, d, k)
+                return best
+            F = {vi: foot(me.vertices[vi].co) for vi in sv}; mx = {}
+            for vi, (r, s, sp, p, d, k) in F.items(): key2 = (s, int(sp)); mx[key2] = max(mx.get(key2, 0.0), r)
+            for vi, (r, s, sp, p, d, k) in F.items():
+                m_ = max(mx.get((s, int(sp) + j), 0.0) for j in (-2, -1, 0, 1, 2))
+                tgt = cut['r_cm'][k]; f = min(1.0, tgt / m_) if m_ > 1e-6 else 1.0
+                me.vertices[vi].co = p + d * f
+            # 소매 가중치: 원래 소매 물리 뼈가 가슴·어깨(조상)에 합쳐져 있어 팔을 굽히면 천이 판처럼 늘어남 -> 팔 축 위치로 위팔/아래팔/손목에만(팔꿈치 ±3cm, 손목 앞 2cm 섞음)
+            groups = {g.name: g for g in cm.vertex_groups}
+            for s in ('Left', 'Right'):
+                for b in ('arm', 'elbow', 'wrist'):
+                    if '%s %s' % (s, b) not in groups: groups['%s %s' % (s, b)] = cm.vertex_groups.new(name='%s %s' % (s, b))
+            for vi, (r, s, sp, p, d, k) in F.items():
+                A0, E0, W0 = lines[s]; Lu = (E0 - A0).length; Lf = (W0 - E0).length
+                wa = max(0.0, min(1.0, (Lu + 3.0 - sp) / 6.0)); ww = max(0.0, min(1.0, (sp - (Lu + Lf - 2.0)) / 2.0)); we = max(0.0, 1.0 - wa - ww)
+                for g in cm.vertex_groups: g.remove([vi])
+                for b, w in (('arm', wa), ('elbow', we), ('wrist', ww)):
+                    if w > 1e-3: groups['%s %s' % (s, b)].add([vi], w, 'REPLACE')
+        for v in (me.vertices if not (cut and cut.get('no_clamp')) else []):
             ws = [(gi.get(g.group), g.weight) for g in v.groups if g.weight > 0]
             if not ws: continue
             n, _ = max(ws, key=lambda t: t[1])

@@ -1,0 +1,17 @@
+[
+ {
+  "tmp": "M_S00",
+  "slot": "Dark_Olive",
+  "material": "MI_DE_panzerschreck_rocket_Dark_Olive"
+ },
+ {
+  "tmp": "M_S01",
+  "slot": "Tip_Metal",
+  "material": "MI_DE_panzerschreck_rocket_Tip_Metal"
+ },
+ {
+  "tmp": "M_S02",
+  "slot": "Olive_Paint",
+  "material": "MI_DE_panzerschreck_rocket_Olive_Paint"
+ }
+]

@@ -53,17 +53,25 @@ def build_timeline(base, gun_ref, clip_anchor, amount, opening, closing, duratio
 
 def one_clip(base):
     # The first authored G43 clip sequence, followed by the original recovery.
+    recovery_start, recovery_end, duration = 2.79, 5.9, 3.84
+
     def animation(t):
         if t < 2.49:
             return base(t)
-        if t < 2.79:
+        if t < recovery_start:
             state = base(2.49)
             state['clip_vis'] = False
             state['rounds_vis'] = False
-            state['R'] = ('R_CLIP', 'R_GRIP', phase(t, 2.49, 2.79), 2.)
+            state['R'] = ('R_CLIP', 'R_GRIP', phase(t, 2.49, recovery_start), 2.)
             return state
-        return base(min(5.9, 4.85 + (t - 2.79)))
-    return animation, 3.84
+        alpha = min(1.0, (t - recovery_start) / (duration - recovery_start))
+        state = base(4.70 + (recovery_end - 4.70) * alpha)
+        state['clip_vis'] = False
+        state['rounds_vis'] = False
+        state['R'] = ('R_GRIP', 'R_GRIP', 0, 0)
+        return state
+
+    return animation, duration
 
 
 def export_animations(directory, model, armature, controls, clips, bake, fps):

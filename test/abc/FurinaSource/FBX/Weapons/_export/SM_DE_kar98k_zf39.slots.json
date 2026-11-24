@@ -1,0 +1,42 @@
+[
+ {
+  "tmp": "M_S00",
+  "slot": "Material",
+  "material": "MI_DE_kar98k_zf39_Material"
+ },
+ {
+  "tmp": "M_S01",
+  "slot": "Material_001",
+  "material": "MI_DE_kar98k_zf39_Material_001"
+ },
+ {
+  "tmp": "M_S02",
+  "slot": "Material_002",
+  "material": "MI_DE_kar98k_zf39_Material_002"
+ },
+ {
+  "tmp": "M_S03",
+  "slot": "Material_003",
+  "material": "MI_DE_kar98k_zf39_Material_003"
+ },
+ {
+  "tmp": "M_S04",
+  "slot": "Material_005",
+  "material": "MI_DE_kar98k_zf39_Material_005"
+ },
+ {
+  "tmp": "M_S05",
+  "slot": "ZF39_Blued",
+  "material": "MI_DE_kar98k_zf39_ZF39_Blued"
+ },
+ {
+  "tmp": "M_S06",
+  "slot": "Mount_K98_Blued",
+  "material": "MI_DE_kar98k_zf39_Mount_K98_Blued"
+ },
+ {
+  "tmp": "M_S07",
+  "slot": "ZF39_Glass",
+  "material": "MI_DE_kar98k_zf39_ZF39_Glass"
+ }
+]

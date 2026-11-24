@@ -12,14 +12,18 @@ from mathutils import Vector, Matrix
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from pmx_reader import read_pmx
 
-R0 = r'C:\Users\fromj\Downloads\test\test\abc\FurinaSource'
+R0 = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))   # 2026-11-23: 프로젝트를 옮겨 옛 고정 경로(Downloads) 대신 이 파일 기준
 FUR = R0 + r'\FBX\Furina_cm.fbx'
 SRC = R0 + r'\FBX\Classes\source'
 CLASSES = {'officer': ('장교', 173.0), 'infantry': ('보병', 165.0), 'assault': ('돌격병', 184.0), 'antitank': ('대전차병', 125.0),
            'heavy': ('중화기병', 166.0), 'sniper': ('저격수', 163.0), 'armor': ('기갑병', 171.0),
            # 대일본제국(2026-11-22, 받은 압축 파일 이름의 키)
            'jp_officer': ('장교', 187.0), 'jp_infantry': ('보병', 186.0), 'jp_assault': ('돌격병', 166.0), 'jp_antitank': ('대전차병', 163.0),
-           'jp_heavy': ('중화기병', 177.0), 'jp_sniper': ('저격수', 178.0), 'jp_armor': ('기갑병', 190.0)}
+           'jp_heavy': ('중화기병', 177.0), 'jp_sniper': ('저격수', 178.0), 'jp_armor': ('기갑병', 190.0),
+           # 2026-11-23 사용자 지정: 캐릭터 통일(Downloads/Sparxie.zip, 붕괴: 스타레일 MMD). 키 = PMX 원래 크기(MMD 1 = 8cm) 147.7
+           'sparxie': ('통일 캐릭터', 147.7),
+           # 2026-11-23 사용자 지정: 통일 캐릭터를 Robin 으로 교체(Downloads/Robin.zip). 키 = PMX 원래 크기 173.4(머리 위 날개·고리 포함)
+           'robin': ('통일 캐릭터', 173.4)}
 A = sys.argv[sys.argv.index('--') + 1:] if '--' in sys.argv else ['infantry']
 KEY = A[0]; MODE = A[1] if len(A) > 1 else 'build'; H = CLASSES[KEY][1]
 REP = {'key': KEY, 'class': CLASSES[KEY][0], 'height_cm': H}

@@ -25,9 +25,78 @@ def setup_ik(arm):
         e = E['T_' + s]; e.rotation_mode = 'QUATERNION'
     bpy.context.view_layer.objects.active = arm; bpy.ops.object.mode_set(mode='POSE')
     for s in ('L', 'R'):
-        el = arm.pose.bones['%s elbow' % SIDE[s]]; c = el.constraints.new('IK'); c.target = E['T_' + s]; c.pole_target = E['P_' + s]; c.chain_count = 2; c.use_tail = True; c.name = 'FPVM_IK'
+        el = arm.pose.bones['%s elbow' % SIDE[s]]; c = el.constraints.new('IK'); c.target = E['T_' + s]; c.pole_target = E['P_' + s]; c.chain_count = 2; c.use_tail = True; c.use_stretch = False; c.name = 'FPVM_IK'
         w = arm.pose.bones['%s wrist' % SIDE[s]]; c2 = w.constraints.new('COPY_ROTATION'); c2.target = E['T_' + s]; c2.name = 'FPVM_ROT'
     bpy.ops.object.mode_set(mode='OBJECT'); return E
+
+
+def settle_wrist(arm, targets, side, goal, *, relax_arm=True):
+    """어깨 자세와 팔꿈치 폴을 조정해 손의 목표를 유지하면서 손목 꺾임을 줄인다."""
+    label = SIDE[side]
+    bones = arm.pose.bones
+    collar = bones[f'{label} shoulder']
+    upper = bones[f'{label} arm']
+    elbow = bones[f'{label} elbow']
+    wrist = bones[f'{label} wrist']
+    knuckle = bones[f'MiddleFinger1_{side}']
+    target = targets['T_' + side]
+    pole = targets['P_' + side]
+    local_goal = arm.matrix_world.inverted() @ goal
+
+    def solve():
+        bpy.context.view_layer.update()
+        error = goal - arm.matrix_world @ wrist.head
+        best = error.length
+        best_location = target.location.copy()
+        for _ in range(12):
+            if error.length < 0.0002:
+                return error.length
+            target.location += error * min(1.0, 0.025 / error.length)
+            bpy.context.view_layer.update()
+            error = goal - arm.matrix_world @ wrist.head
+            if error.length < best:
+                best = error.length
+                best_location = target.location.copy()
+        target.location = best_location
+        bpy.context.view_layer.update()
+        return best
+
+    collar.matrix_basis = Matrix.Identity(4)
+    miss = solve()
+    if not relax_arm:
+        return
+    forearm = wrist.head - elbow.head
+    hand = knuckle.head - wrist.head
+    bend = forearm.angle(hand, 0.0)
+    effort = min(1.0, max(0.0, (math.degrees(bend) - 44.0) / 30.0))
+    effort = effort * effort * (3.0 - 2.0 * effort)
+    axis = (local_goal - upper.head).normalized()
+    radial = elbow.head - upper.head
+    radial -= axis * radial.dot(axis)
+    desired = -(hand - axis * hand.dot(axis))
+    if effort == 0.0 or min(radial.length, desired.length) < 0.002:
+        return
+
+    # 목표가 반대편을 지나도 팔꿈치가 갑자기 다른 쪽으로 뒤집히지 않게 한다.
+    turn = math.radians(40.0) * effort * axis.dot(radial.normalized().cross(desired.normalized()))
+    if abs(turn) < 0.001:
+        return
+    old_pole, old_target = pole.location.copy(), target.location.copy()
+    old_collar = collar.matrix.copy()
+    pivot = collar.head.copy()
+    clavicle = upper.head - pivot
+    adjusted = clavicle + (Quaternion(axis, turn) @ radial - radial) * 0.25
+    if min(clavicle.length, adjusted.length) > 0.001:
+        rotation = clavicle.rotation_difference(adjusted)
+        rotation = Quaternion().slerp(rotation, min(1.0, math.radians(6.0) / max(rotation.angle, 1e-6)))
+        collar.matrix = Matrix.Translation(pivot) @ rotation.to_matrix().to_4x4() @ Matrix.Translation(-pivot) @ old_collar
+    world_axis = (arm.matrix_world.to_3x3() @ axis).normalized()
+    pole.location = goal + Quaternion(world_axis, turn) @ (old_pole - goal)
+    new_miss = solve()
+    if new_miss > max(0.001, miss + 0.0003) or (wrist.head - elbow.head).angle(knuckle.head - wrist.head, bend) > bend:
+        collar.matrix = old_collar
+        pole.location, target.location = old_pole, old_target
+        bpy.context.view_layer.update()
 
 
 def key_baked_pose(bone, matrix, frame, previous):
@@ -40,6 +109,16 @@ def key_baked_pose(bone, matrix, frame, previous):
     for path in ('location', 'rotation_quaternion', 'scale'):
         bone.keyframe_insert(path, frame=frame, group=bone.name)
 
+
+def blend_hand_motion(start, end, alpha, lift=0.0):
+    """잡는 순간에는 기존 표적에 닿고, 이동 중 보조 호의 가속도는 양 끝에서 0이 된다."""
+    start_pos, start_rot, _ = start.decompose()
+    end_pos, end_rot, _ = end.decompose()
+    alpha = min(1.0, max(0.0, alpha))
+    clearance = (4.0 * alpha * (1.0 - alpha)) ** 3
+    height = min(lift, (end_pos - start_pos).length * 0.25)
+    position = start_pos.lerp(end_pos, alpha) + Vector((0.0, 0.0, clearance * height))
+    return Matrix.LocRotScale(position, start_rot.slerp(end_rot, alpha), None)
 
 def calib_pole(arm, E, s, wrist_m, elbow_hint_m):
     """pole_angle 을 0/90/-90/180 중 팔꿈치가 hint 에 가장 가까운 값으로."""
@@ -168,6 +247,7 @@ def search_hand(H, key, target, bvh, shoulder, reach_cm=37.0, excl=None, r_cm=0.
     """H[key](손목 로컬 점)가 target 에 오게 하는 손목 행렬 중 관통(무기 표면에서 r 안) 최소. excl=(중심, 반지름 m): 그 안의 점은 접촉 허용.
     prefer=(로컬축 벡터, 월드 방향, 가중치): 선호 방향."""
     best = None; r = r_cm / 100.0; o = H[key]
+
     for d in fib_dirs(ndir):
         base = Vector((0, 1, 0)).rotation_difference(d).to_matrix()
         for k in range(nroll):

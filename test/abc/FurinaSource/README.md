@@ -1499,6 +1499,78 @@ Control Rig이 들어 올리는 회전은 컴포넌트 +X축 기준 음수 각�
 - **양각대(사용자 지정):** 들고 다닐 때는 접힌 총 `SM_MG42_Folded`(다리 두 개를 위 경첩 축으로 뒤로 돌려 총열 덮개 아래 양옆에 나란히 - MG42 양각대는 덮개를 따라 뒤로 접힘, `Data/mg42_fold.jpg`), 설치할 때만 편 총 `SM_MG42_Deployed`.
 - **MG42 남은 것(다음 단계):** 평소 어깨에 메고(양각대 접힌 `SM_MG42_Folded`) 왼손 상자 드는 1인칭, 설치된 총 가까이 스페이스 = 사격 준비 자세(엎드려 쏘기 1인칭), 사격 때 `Rounds` 감소와 연결, 재장전(새 상자 꺼내 탄띠 연결), 줄자처럼 감겨 올라가며 찰랑거리는 탄띠 물리(C++ 부품, 에디터 닫고 빌드 - 사용자 허락 받음), 다시 집기.
 
+## 캐릭터 통일(Robin) · Kar98k/G43 탄피 (2026-11-23)
+- **사용자 지정:** 캐릭터를 하나로 통일하고 병과 선택은 끈다. Sparxie 로 먼저 했다가 Robin(`Downloads/Robin.zip`, 붕괴: 스타레일 MMD, 173.4cm)으로 바꿨다.
+  - 사용 규칙: 재배포·상업 이용 금지(miHoYo 저작권). 원본은 `FBX/Classes/source/robin`(Sparxie 는 `.../sparxie`). 공개 저장소에 올리지 말 것.
+- **3인칭:** `build_class_on_furina.py -- robin build` → 언리얼 `lyra_sparxie.py assets+event+start+menu char=robin`
+  - `SKM_Robin`(자기 뼈대), 이벤트 `FurinaLookRobin`, BeginPlay `LOOK_StartLook` → Robin, `FurinaMesh` 기본 메시·`FurinaLook` 기본값 'robin'.
+  - 무기창 병과 버튼 `Look_1~14` 비활성. 백업: `Backups/Sparxie_20261123`.
+- **1인칭 팔(`fpvm_lib.py`):** `FP_CHAR`(기본 'robin', 환경변수 `FURINA_FP_CHAR=furina` 면 예전 푸리나 + 병과 14종)
+  - `load_arms` 의 팔 메시 = 통일 캐릭터 팔(재질 `CA<Key>_MatNN`). 손가락 쥐기·휴식 자세가 이 피부 기준이다. 병과 팔은 더 넣지 않는다.
+  - `SLEEVE_CUT`: 큰 소매는 팔 따라 1cm 단면마다 가장 넓은 폭을 목표 반지름으로 고르게 줄인다(예전 반지름 자르기는 천이 구겨져 덩어리·꼬인 손목이 됐음). 소매 가중치는 위팔·아래팔·손목 뼈로 다시 묶는다.
+    - Robin: 위팔 프릴 5.5cm, 드레스 조각 Mat07 은 뺀다. Sparxie: 소매 4.6/3.9cm, 어깨 카드 장식 뺌.
+- **무기 원본:** 예전 `Downloads/FurinaWeaponSrc` 가 없어 `lyra_export_weapon_src.py` 로 언리얼 `SM_DE_*` 24종을 `FBX/Weapons/_export` 에 다시 뽑았다(`.slots.json` = 슬롯 이름).
+  - Nanite 메시는 임시 복제본에서 끄고 뽑는다. 그러지 않으면 줄인 대체 메시가 나가 MP38 탄창이 빠진다.
+  - `load_weapon` 이 재질 이름을 되돌리고 같은 재질 안에서만 정점을 붙인다. Kar98k 기존 1인칭 총과 오차 0.00cm.
+- **Blender 옛 고정 경로 정리:** `fpvm_lib`(D·EXP), `build_class_on_furina`, fpvm_* `sys.path`, `fpvm_grip_audit`, `Tools/fpvm_export_all.sh`(MG34 추가, 경로 따옴표).
+- **언리얼 다시 만들기 순서(캐릭터를 바꿀 때):**
+  1. `fpvm_export_all.sh A`·`B`
+  2. `lyra_fpvm_mesh_slots_reset.py`: 슬롯 목록을 비우고 메시만 다시 가져온다. 이걸 안 하면 예전 슬롯이 번호대로 남는다.
+  3. `lyra_fpvm_reimport.py` → `lyra_fpvm_reimport_mg34.py` → `lyra_launchers.py assets`
+  4. `lyra_class_fp_arms2.py slots` → `lyra_pzf60_material.py` → `lyra_pistol_cases.py`
+  5. `lyra_rifle_cases.py`(`Saved/RifleCases.json` 의 `socket_done` 을 지우고)
+- **Kar98k·G43 탄피:**
+  - 원인: 1인칭 역사 무기 화면(`HistoricalView_EjectOnlyM4`)이 권총 말고는 탄피를 만들지 않았다.
+  - `fx_792case.py` → `SM_FPVM_792Case`(7.92x57 빈 탄피), `fpvm_rifle_ejection.py` → 배출구.
+  - `lyra_rifle_cases.py`: `BP_FPVM_792Case` 4m/s, 소켓 `VM_CaseFX` 7개. G43 은 쏠 때, Kar98k 는 0.5초 뒤(노리쇠를 끝까지 당길 때, `FurinaRifleCaseLater`).
+- **확인(PIE):**
+  - 시작 외형 robin, 발끝이 바닥 위 9.9cm(`Data/robin_tp_*.png`).
+  - 1인칭 메시 14개 모두 `MI_Robin_*` 팔 슬롯.
+  - `lyra_fx_capture.py rcase`: Kar98k·ZF39·G43·ZF4 모두 탄피 생성, G43 탄피가 오른쪽으로 나감(`Data/fx_g43_fire.png`).
+- **남음:**
+  - 1인칭 팔이 밝게(거의 흰색) 보인다(재질 밝기 확인 필요).
+  - 무기별 손 정합 측정(`grip_audit_all.sh`)은 아직 안 했다.
+  - 기록상 탄피 위치가 카메라 기준으로 거의 그대로다(캡자 시점 문제인지 충돌인지 확인 필요).
+  - MG34 손 떨림·끝 멈춤, MG42 2단계.
+
+## Robin 1인칭 점검과 리그 개선안 (2026-11-23)
+
+### 확인한 결과
+
+- `Data/Robin_FP_Audit_20261123/grip_audit_summary.json`에 Robin 메시 14개의 대기 클립을 각각 8프레임 검사한 결과가 있다. 샘플 최대 관통은 P08 오른쪽 엄지 가운데 마디의 0.42cm다. MP38 왼쪽 검지와 새끼손가락 가운데 마디에는 각각 1.41cm와 1.27cm, MP40 왼쪽 검지 가운데 마디에는 1.18cm의 틈이 있었다. 대기 클립에서 측정한 손목 위치 편차의 최대값은 0.00cm다.
+- `fpvm_grip_audit.py`는 가장 큰 가중치를 가진 손바닥과 손가락 가운데·끝마디 정점을 검사한다. 손이 모델에서 떨어진 프레임은 접촉 판정에서 제외한다. 측정 결과의 `gap`은 해당 부위에서 표면에 가장 가까운 정점의 거리다. 접촉이 의도된 지점과 접촉 구간을 먼저 정하면 손가락 관절을 자연스럽게 유지하면서 틈을 줄일 수 있다.
+- `Data/Robin_FP_Audit_20261123/PIE`에 `stance`, `v3`, `lch`, `p38+mp40+mg34`, `rcaseslow`의 이미지와 실행별 JSON이 있다. 각각 49, 54, 38, 23, 16장으로 총 180장이다. 처음 일괄 실행 요약은 저속 탄피 캡처의 완료를 놓쳤다. 각 실행의 완료 JSON과 실제 파일 수를 대조해 요약을 갱신했다.
+- `Data/Robin_FP_Audit_20261123/Wrist`는 14개 메시의 대기·재장전 28개 조합에서 448개 프레임을 검사했다. 손목에서 팔꿈치 방향으로 0.8cm와 1.6cm 떨어진 피부 단면의 최소 폭을 FBX 기준 자세와 비교했다. G43 기본형과 ZF4에서 왼손 가까운 단면의 폭이 기준의 84.8%로 가장 작았다. 판처파우스트와 MP40에는 아래팔과 손 방향 사이의 각도가 가장 큰 프레임이 있었다. 이 값은 뼈 위치에서 계산한 각도로, 관절 로컬 축의 굴곡·편위·트위스트는 따로 확인해야 한다.
+- 기존 탄피 캡처가 액터 원점을 기록해 이동하는 메시의 위치를 놓쳤다. `lyra_fx_capture.py`에서 물리 메시의 월드 위치와 게임 시간을 기록하도록 수정했다. 저속 캡처에서 Kar98k의 탄피는 초기 오른쪽·위쪽, G43의 탄피는 초기 오른쪽 위주로 이동했다. 관측 구간에서 메시가 출발 위치에 붙는 현상은 없었다.
+- 비교 전 1인칭과 3인칭 Robin은 `MI_Robin_Mat18`과 `T_Robin_02`를 공유했다. 기존 재질의 Roughness는 0.77, Specular는 0.30이며 Normal과 Emissive 입력은 비어 있다. MP40을 든 같은 PIE 장면에서 피부의 선형 Base Color에 `0.84`를 곱해 비교했다. 보정 전후 캡처는 `Data/Robin_FP_Audit_20261123/Skin`에 있다. 손 주변의 밝은 저채도 픽셀 중앙값이 약 211에서 205로 낮아졌다. 대기 자세의 미세한 움직임이 있으므로 화면 밝기의 근사 비교로 사용한다.
+- 보정 재질 `MI_Robin_FP_Mat18`을 Robin 1인칭 메시 14개의 `CARobin_Mat18` 슬롯에 저장했다. `lyra_class_fp_arms2.py slots`를 다시 실행해도 해당 슬롯에 보정 재질을 지정한다. 새 PIE에서 MP40 뷰모델의 보정 재질과 3인칭의 `MID_MI_Robin_Mat18_0`을 확인했다. 사용한 엔진은 SM6 고급 렌더링이 비활성인 상태였으므로 다른 렌더러와 조명에서의 색은 추가 확인 대상이다. 최종 캡처는 `Data/Robin_FP_Audit_20261123/Skin/Applied/robin_fp_applied.png`, 변경 전 스켈레탈 메시 백업은 `Backups/RobinFP_20261123`에 있다.
+
+### 7가지 요구사항의 적용 기준
+
+아래 각도와 재질 값은 Robin에서 검증할 시작값이다. 각도는 리그 기준 자세의 관절 로컬 축에서 잰다. 엘보 굴곡은 팔이 완전히 펴졌을 때를 0°로 둔다.
+
+1. **손 접촉** — 기존 도구로 소품 로컬 좌표에서 왼손·오른손의 손바닥 기준점을 고르고, 손가락별 패드가 닿을 위치를 표면에서 0.1~0.3cm 밖에 설정한다. 손바닥 방향과 팔꿈치 폴 벡터를 함께 저장하고, 전완 길이 스트레치를 0%로 시작한다. 접촉 프레임의 패드 목표 오차 0.3cm, 관통 상한 1.0cm를 검증 기준으로 삼는다. 손을 떼고 다시 잡는 구간은 접촉 가중치를 0↔1로 4~6프레임에 걸쳐 바꾼다. 소켓 변환은 14개 메시의 실제 표면에서 각각 산출한다. [Unreal Full-Body IK](https://dev.epicgames.com/documentation/unreal-engine/control-rig-full-body-ik-in-unreal-engine?application_version=5.8)
+2. **전완 트위스트** — 손목의 스윙과 아래팔 축 회전을 쿼터니언으로 분리한다. 전완의 근위·중간·원위 위치에 누적 회전을 25%, 55%, 85% 적용하고 손목에서 전체 방향을 맞춘다. 피부 정점은 서로 인접한 본 2~3개에 연속적으로 가중치를 주고 합계를 1로 정규화한다. 축 회전은 양방향 55°에서 제한을 시작한다. 강한 비틀림에서 손목 단면 최소 폭이 기준 자세의 85% 아래로 떨어지는 프레임을 교정 후보로 삼고, 최종 출력에서 필요할 때 `Twist Corrective`로 보정 모프를 구동한다. [Unreal Twist Corrective](https://dev.epicgames.com/documentation/unreal-engine/animation-blueprint-twist-corrective-in-unreal-engine?application_version=5.8)
+3. **관절과 실루엣** — 작업 자세에서 어깨 전방 굴곡 0~65°, 외전 5~45°, 팔꿈치 굴곡 30~125°, 손목 굴곡 20°·신전 25°, 요측 12°·척측 20°로 시작한다. 제한에 닿기 8° 전부터 가중치를 부드럽게 줄이고, 목표가 멀어지면 쇄골 회전과 소품의 카메라 상대 위치를 보정한다. 강한 동작은 화면에서 어깨 들림, 손목 꺾임, 접촉 이탈을 함께 검토해 클립별 허용 각도를 정한다. [Unreal FBIK 관절 제한](https://dev.epicgames.com/documentation/unreal-engine/control-rig-full-body-ik-in-unreal-engine?application_version=5.8)
+4. **피부 셰이딩** — Robin의 밝은 팔레트를 유지하면서 `Metallic 0`, 피부 Roughness 0.52~0.70, Specular 0.25~0.32로 시작한다. 손등은 범위의 중간, 손바닥과 마디 주름은 높은 쪽에서 비교한다. Roughness 텍스처는 sRGB를 끄고, Normal은 Normal Map 압축을 사용한다. 기존 피부 디테일 텍스처가 확보되면 미세 노멀을 강도 0.15~0.25로 더하고 작은 화면에서 거칠게 튀는 부분을 줄인다. Subsurface Profile의 유효 산란 길이는 모델 스케일 기준 1~2mm에서 시험하고, Surface Albedo는 피부 Base Color와 맞춘다. 동일한 노출에서 정면광과 측광을 비교한 뒤 1인칭 피부만 적용한다. [Unreal Subsurface Profile](https://dev.epicgames.com/documentation/unreal-engine/subsurface-profile-shading-model-in-unreal-engine?application_version=5.8)
+5. **인체 비율** — Robin 원본 빌드의 키는 173.4cm, 좌측 위팔은 23.07cm, 전완은 19.07cm, 손목부터 중지 끝마디 본까지는 13.70cm다. 위팔 대 전완 비율은 1.21이다. 앞·옆 정사영으로 관절 중심의 순서와 좌우 대칭을 확인한다. 뷰모델에는 기존 푸리나 팔 뼈대로의 길이 보정이 있으므로, 소매나 장식이 과도하게 늘어나는 부분은 피부와 별도로 본다. 아래 자료에서 캐릭터의 외형, 관절 위치, 재질 표현의 비교 기준을 가져왔다.
+   - Robin 공식 영상의 가느다란 손가락, 손목 장식과 밝은 보라색 계열을 원본 외형 기준으로 삼는다. [HoYoverse Robin 공식 영상](https://www.hoyolab.com/article/28252276)
+   - Riot의 Ahri 개편에 실린 컨셉과 3D 자료를 참고해 정면과 측면에서 손·소매 실루엣이 구분되는지 본다. [Riot Games Ahri ASU](https://www.leagueoflegends.com/en-ph/news/dev/dev-ahri-s-asu/)
+   - Blender Studio의 Rain 리그 시연에서 손목과 전완을 움직일 때 실루엣이 어떻게 연결되는지 비교한다. [Blender Studio Rain 리그 시연](https://www.youtube.com/watch?v=ZvG956AFc4Q)
+   - Fortiche 제작진의 Vi 캐릭터 자료를 참고해 마디와 손등의 큰 색 면을 읽히게 하고 미세 텍스처 대비를 낮춘다. [Candice Theuillon의 Vi 텍스처링](https://candicetheuillon.artstation.com/projects/b505vm)
+   - OpenStax의 위팔·전완·손뼈 그림으로 팔꿈치의 회전축과 손목의 굴곡 기준을 잡는다. [OpenStax 상지 뼈](https://openstax.org/books/anatomy-and-physiology-2e/pages/8-2-bones-of-the-upper-limb)
+   - MetaHuman의 체형 예시로 손 길이와 어깨 폭을 정사영에서 같은 기준으로 재는 방법을 비교한다. [Epic MetaHuman 체형 도구](https://dev.epicgames.com/documentation/metahuman/metahuman-creator-body-params-tool-in-unreal-engine)
+6. **전신 관절과 보조 모션** — `class_robin_build.json`에는 몸·손가락 기준 본 51개와 원본에서 직접 매핑되지 않은 본 328개가 기록되어 있다. 95% 달성 여부는 가져온 전체 본 목록과 실제 클립·스킨·물리 구동 본 목록을 먼저 대조해 수치화한다. 몸통과 접촉 손은 애니메이션·IK로 제어하고, 소매 끝과 장식은 `AnimDynamics` 또는 충돌이 필요한 체인에서 `Physics Asset`·`RigidBody`로 구동한다. 테스트 시작값은 중력 980cm/s², 소매 회전 제한 ±12~18°, 감쇠비 0.7~0.9, 60Hz 기준 시뮬레이션, 급격한 시점 전환 시 상태 초기화다. 30·60·120fps에서 흔들림이 일관적인지 비교하고 접촉 중인 손 본은 강체 시뮬레이션의 영향을 받지 않게 한다. [Unreal AnimDynamics](https://dev.epicgames.com/documentation/unreal-engine/animation-blueprint-animdynamics-in-unreal-engine?application_version=5.8), [Unreal 물리 기반 애니메이션](https://dev.epicgames.com/documentation/unreal-engine/physics-driven-animation-in-unreal-engine?application_version=5.8)
+7. **자가 진단** — 대기 자세의 낮은 관통 수치만으로 전환 중 손목 변형을 판단하기 어려웠다. 손목 피부 단면 폭과 아래팔–손 각도를 재는 진단을 추가했다. 1인칭에서는 손과 소품의 접촉, 실루엣, 소매가 움직인 뒤 멈추는 시간을 본다. 장착과 해제 구간에서는 팔꿈치와 손목의 프레임별 이동을 따로 기록해 관절이 튀는 프레임을 좁힌다. 피부 반사는 같은 카메라·조명으로 전후를 비교하고, 전신 무게 중심은 향후 몸이 보이는 검증 카메라에서 발 접지와 골반 이동을 함께 확인한다.
+
+## Robin 1인칭 파지와 재장전 보정 (2026-11-24)
+
+- 39개 AnimSequence를 기존 에셋에 반영했다. 연결된 스켈레톤과 애니메이션 길이를 대조했다. 정확한 반영 목록과 FBX 체크섬은 `Data/Robin_FP_Grip_20261124/verification.json`에 있다. 원본 FBX와 Unreal 에셋은 `Saved/RobinGripCandidate_20261124/BeforeApply`에 있다.
+- 움직이는 손은 주변 5프레임의 위치를 참고해 궤적을 완만하게 만들고, 손이 붙어 있는 동안은 손 위치를 유지하며 위팔과 전완을 회전시킨다. G43은 쇄골이 닿는 범위를 보완하고 팔 길이와 팔꿈치 굽힘 방향을 유지해 재장전 자세를 다시 계산했다. 기본형의 한 프레임 최대 손목 이동은 왼손 78.32→4.67cm, 오른손 23.74→4.93cm다. `Clip5`는 복귀 시작 자세를 이어 붙여 왼손 최대 이동을 78.32→5.33cm로 줄였다.
+- MP38·MP40과 P08·PP는 대기·사격의 접촉 검사에서 틈과 관통 깊이 1cm 기준을 통과했다. P08·PP의 대기 중 엄지 끝 최대 틈은 각각 1.85→0.08cm, 2.08→0.68cm다. 두 권총의 사격 클립은 쥔 손의 손목을 모델에 고정하고 팔꿈치로 움직임을 받아, 분석한 프레임에서 손목 위치 편차가 0.00cm였다. 손가락 보정값은 `Data/Robin_FP_Grip_20261124/Profiles`에 있다.
+- PIE에서 대기·조준과 재장전 상태를 캡처했다. 14개 뷰모델이 표시됐고 재장전이 있는 13개는 입력부터 완료까지 확인했다. G43의 `Clip5`와 `Loose3`도 별도로 실행했다. MG34 설치 시 빠진 블루프린트 연결을 복구해 MP40·MP38·StG44·판처슈렉의 재장전이 다시 실행된다. 판처파우스트의 일반 재장전 입력은 기존 일회용 관 교체 규칙에 따라 막혀 있다. 실행 기록과 70장 캡처는 `Data/Robin_FP_Grip_20261124/Verified`에 있다.
+- **자가 진단** — G43의 큰 프레임 튐은 줄었지만 MG34와 MP40은 재장전 중 손과 아래팔 방향이 크게 벌어지는 프레임이 남는다. 일부 반대 손 또는 팔꿈치에서는 가속도 변화율이 높아졌다. 손목 피부 단면과 접촉 검사는 샘플 기준이다. 피부의 미세 노멀·SSS와 전신 본 95% 구동은 앞 절의 설계·검증 항목으로 남아 있다.
+
 ## 1인칭 파지 여섯 방향 검수 (2026-11-25)
 
 - 손과 소품을 수정할 때는 같은 클립 시각과 배율로 상·하·좌·우·전·후를 교정 전후에 캡처한다. 권총은 대기·견착·조준을 각각 확인한다. 손가락이 본체와 교차하지 않아도 손바닥과 아래쪽 손가락이 손잡이를 감싸는지 1인칭 화면에서 확인한다. 움직이는 소품은 손이 접근하는 순간, 실제로 잡고 옮기는 동안, 다시 놓는 순간을 각각 확인한다.

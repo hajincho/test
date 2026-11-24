@@ -1,0 +1,72 @@
+[
+ {
+  "tmp": "M_S00",
+  "slot": "Ammo_Case_Aged",
+  "material": "MI_DE_pzb39_Ammo_Case_Aged"
+ },
+ {
+  "tmp": "M_S01",
+  "slot": "Case_Fittings",
+  "material": "MI_DE_pzb39_Case_Fittings"
+ },
+ {
+  "tmp": "M_S02",
+  "slot": "Barrel_Blued",
+  "material": "MI_DE_pzb39_Barrel_Blued"
+ },
+ {
+  "tmp": "M_S03",
+  "slot": "Bipod_Satin",
+  "material": "MI_DE_pzb39_Bipod_Satin"
+ },
+ {
+  "tmp": "M_S04",
+  "slot": "Edges_And_Fasteners",
+  "material": "MI_DE_pzb39_Edges_And_Fasteners"
+ },
+ {
+  "tmp": "M_S05",
+  "slot": "Receiver_Blued",
+  "material": "MI_DE_pzb39_Receiver_Blued"
+ },
+ {
+  "tmp": "M_S06",
+  "slot": "Wood_Foreend",
+  "material": "MI_DE_pzb39_Wood_Foreend"
+ },
+ {
+  "tmp": "M_S07",
+  "slot": "Rosewood_Pistol_Panels",
+  "material": "MI_DE_pzb39_Rosewood_Pistol_Panels"
+ },
+ {
+  "tmp": "M_S08",
+  "slot": "Metal055A_Worn_Silver",
+  "material": "MI_DE_pzb39_Metal055A_Worn_Silver"
+ },
+ {
+  "tmp": "M_S09",
+  "slot": "Rubber004_Hard_Matte",
+  "material": "MI_DE_pzb39_Rubber004_Hard_Matte"
+ },
+ {
+  "tmp": "M_S10",
+  "slot": "Grip_Dark_Molded",
+  "material": "MI_DE_pzb39_Grip_Dark_Molded"
+ },
+ {
+  "tmp": "M_S11",
+  "slot": "Rosewood_Cheek_Rest",
+  "material": "MI_DE_pzb39_Rosewood_Cheek_Rest"
+ },
+ {
+  "tmp": "M_S12",
+  "slot": "Prop_Brass",
+  "material": "MI_DE_pzb39_Prop_Brass"
+ },
+ {
+  "tmp": "M_S13",
+  "slot": "Prop_Tip_Steel",
+  "material": "MI_DE_pzb39_Prop_Tip_Steel"
+ }
+]

@@ -1,0 +1,22 @@
+[
+ {
+  "tmp": "M_S00",
+  "slot": "Gewehr43",
+  "material": "MI_DE_g43_zf4_Gewehr43"
+ },
+ {
+  "tmp": "M_S01",
+  "slot": "ZF4_Blued",
+  "material": "MI_DE_g43_zf4_ZF4_Blued"
+ },
+ {
+  "tmp": "M_S02",
+  "slot": "Mount_ZF4_Phosphate",
+  "material": "MI_DE_g43_zf4_Mount_ZF4_Phosphate"
+ },
+ {
+  "tmp": "M_S03",
+  "slot": "ZF4_Glass",
+  "material": "MI_DE_g43_zf4_ZF4_Glass"
+ }
+]

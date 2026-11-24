@@ -1,0 +1,27 @@
+{
+  "lch": {
+    "shots": 38,
+    "error": null,
+    "done": true
+  },
+  "p38+mp40+mg34": {
+    "shots": 23,
+    "error": null,
+    "done": true
+  },
+  "rcaseslow": {
+    "shots": 16,
+    "error": null,
+    "done": true
+  },
+  "stance": {
+    "shots": 49,
+    "error": null,
+    "done": true
+  },
+  "v3": {
+    "shots": 54,
+    "error": null,
+    "done": true
+  }
+}

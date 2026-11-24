@@ -5,7 +5,7 @@
   "K_det": 9.999981549863479e-07,
   "scale": 0.009999993849950711,
   "bones_kept": 53,
-  "arm_verts": 4128,
+  "arm_verts": 6519,
   "K": [
    [
     3.586359292873098e-09,
@@ -49,7 +49,8 @@
   "Right_len_cm": [
    21.14,
    18.02
-  ]
+  ],
+  "fp_char": "robin"
  },
  "clavicle_err_cm": {
   "L": 1.34,
@@ -68,20 +69,8 @@
  ],
  "yL": -4.0,
  "carrier": {
-  "faces": 493,
+  "faces": 995,
   "parts": [
-   [
-    [
-     -0.88,
-     9.83,
-     7.12
-    ],
-    [
-     0.88,
-     16.05,
-     7.62
-    ]
-   ],
    [
     [
      -1.28,
@@ -141,12 +130,24 @@
      9.31,
      8.34
     ]
+   ],
+   [
+    [
+     -0.88,
+     9.83,
+     7.12
+    ],
+    [
+     0.88,
+     16.05,
+     7.62
+    ]
    ]
   ]
  },
  "R_grip": {
   "wrist_cm": [
-   -1.23,
+   -1.24,
    -13.9,
    -9.84
   ],
@@ -155,15 +156,15 @@
  },
  "seat_cm": {
   "R_GRIP": {
-   "gap_cm": 0.01,
+   "gap_cm": 0.04,
    "moved_cm": 0.0
   },
   "L_GRIP": {
-   "gap_cm": 1.47,
+   "gap_cm": 1.6,
    "moved_cm": 3.0
   },
   "L_RELOAD": {
-   "gap_cm": 0.901,
+   "gap_cm": 1.048,
    "moved_cm": 3.0
   }
  },
@@ -172,80 +173,80 @@
   "face": 63,
   "native_cm": [
    -0.0,
-   18.16,
+   18.17,
    -0.77
   ],
   "mcp_native_cm": [
    -2.03,
-   24.71,
+   24.72,
    -0.87
   ],
   "tip_native_cm": [
-   -1.65,
+   -1.66,
    20.67,
    -5.86
   ]
  },
  "R_grip_fingers": {
   "Thumb": {
-   "cost": 0.022,
+   "cost": 0.021,
    "gap_cm": [
-    0.05,
-    0.01,
-    0.01
+    0.02,
+    0.02,
+    0.0
    ]
   },
   "IndexFinger": {
-   "cost": 1.319,
+   "cost": 1.431,
    "gap_cm": [
-    0.67,
-    0.01,
-    -0.1
+    0.75,
+    0.53,
+    -0.08
    ],
    "spread": 50.0,
-   "pad_miss_cm": 1.31
+   "pad_miss_cm": 1.42
   },
   "MiddleFinger": {
-   "cost": 0.771,
+   "cost": 0.677,
    "gap_cm": [
-    1.5,
-    0.0,
+    1.34,
+    0.01,
     0.0
    ]
   },
   "RingFinger": {
-   "cost": 0.35,
+   "cost": 0.387,
    "gap_cm": [
-    0.69,
+    0.75,
     0.0,
-    0.0
+    0.01
    ]
   },
   "LittleFinger": {
-   "cost": 0.029,
+   "cost": 0.017,
    "gap_cm": [
     0.02,
-    0.0,
-    0.01
+    0.01,
+    0.0
    ]
   }
  },
  "L_grip": {
   "wrist_cm": [
-   31.86,
-   -4.66,
-   -11.8
+   31.83,
+   -4.67,
+   -11.81
   ],
-  "miss_cm": 6.48,
+  "miss_cm": 6.45,
   "pole": 180
  },
  "L_reload": {
   "wrist_cm": [
-   29.86,
-   -4.74,
+   29.83,
+   -4.75,
    -11.83
   ],
-  "miss_cm": 4.6
+  "miss_cm": 4.58
  },
  "L_ch": {
   "score": 0.163,
@@ -290,14 +291,20 @@
    "frames": 178
   }
  },
- "fbx": "C:\\Users\\fromj\\Downloads\\test\\test\\abc\\FurinaSource\\FBX\\FPVM\\SK_FPVM_G43.fbx",
+ "fbx": "C:\\Users\\fromj\\OneDrive\\\ubc14\ud0d5 \ud654\uba74\\\uc0c8 \ud3f4\ub354\\test\\test\\abc\\FurinaSource\\FBX\\FPVM\\SK_FPVM_G43.fbx",
  "fps": 30,
  "mats": [
+  "CARobin_Mat06",
+  "CARobin_Mat12",
+  "CARobin_Mat13",
+  "CARobin_Mat18",
+  "CARobin_Mat23",
+  "CARobin_Mat24",
+  "CARobin_Mat25",
+  "CARobin_Mat26",
   "Clip_Case",
   "Clip_Projectile",
   "Clip_Steel",
-  "Furina_Outfit",
-  "Furina_SkinHair",
   "Gewehr43"
  ]
 }

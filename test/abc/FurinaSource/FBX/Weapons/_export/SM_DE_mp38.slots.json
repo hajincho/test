@@ -1,0 +1,42 @@
+[
+ {
+  "tmp": "M_S00",
+  "slot": "Blued_Barrel",
+  "material": "MI_DE_mp38_Blued_Barrel"
+ },
+ {
+  "tmp": "M_S01",
+  "slot": "Blued_Receiver",
+  "material": "MI_DE_mp38_Blued_Receiver"
+ },
+ {
+  "tmp": "M_S02",
+  "slot": "Rosewood_Foregrip",
+  "material": "MI_DE_mp38_Rosewood_Foregrip"
+ },
+ {
+  "tmp": "M_S03",
+  "slot": "Dark_Cast_Alloy",
+  "material": "MI_DE_mp38_Dark_Cast_Alloy"
+ },
+ {
+  "tmp": "M_S04",
+  "slot": "Worn_Steel",
+  "material": "MI_DE_mp38_Worn_Steel"
+ },
+ {
+  "tmp": "M_S05",
+  "slot": "Rosewood_Dark_Grip",
+  "material": "MI_DE_mp38_Rosewood_Dark_Grip"
+ },
+ {
+  "tmp": "M_S06",
+  "slot": "Magazine_Steel",
+  "material": "MI_DE_mp38_Magazine_Steel"
+ },
+ {
+  "tmp": "M_S07",
+  "slot": "Stock_Steel",
+  "material": "MI_DE_mp38_Stock_Steel"
+ }
+]

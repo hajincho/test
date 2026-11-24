@@ -1,0 +1,155 @@
+{
+ "shots": [
+  {
+   "name": "tp_front",
+   "toe_above_floor": [
+    9.9,
+    9.9
+   ],
+   "head_above_floor": 142.7,
+   "vm": "SK_FPVM_Kar98k_Interior",
+   "vm_vis": false,
+   "vm_mats": {
+    "0": "MID_M_FPVM_ReceiverInterior_0",
+    "1": "MID_MI_DE_kar98k_Material_1",
+    "2": "MID_MI_DE_kar98k_Material_001_1",
+    "3": "MID_MI_DE_kar98k_Material_002_1",
+    "4": "MID_MI_DE_kar98k_Material_003_1",
+    "5": "MID_MI_DE_kar98k_Material_005_1",
+    "6": "MID_MI_DE_mauser_clip_Material_1",
+    "7": "MID_MI_DE_mauser_clip_6_1",
+    "8": "MID_MI_DE_mauser_clip_case_1",
+    "9": "MID_MI_Robin_Mat06_0",
+    "10": "MID_MI_Robin_Mat12_0",
+    "11": "MID_MI_Robin_Mat13_0",
+    "12": "MID_MI_Robin_Mat18_0",
+    "13": "MID_MI_Robin_Mat23_0",
+    "14": "MID_MI_Robin_Mat24_0",
+    "15": "MID_MI_Robin_Mat25_0",
+    "16": "MID_MI_Robin_Mat26_0"
+   }
+  },
+  {
+   "name": "tp_side",
+   "toe_above_floor": [
+    9.9,
+    9.9
+   ],
+   "head_above_floor": 141.7,
+   "vm": "SK_FPVM_Kar98k_Interior",
+   "vm_vis": false,
+   "vm_mats": {
+    "0": "MID_M_FPVM_ReceiverInterior_0",
+    "1": "MID_MI_DE_kar98k_Material_1",
+    "2": "MID_MI_DE_kar98k_Material_001_1",
+    "3": "MID_MI_DE_kar98k_Material_002_1",
+    "4": "MID_MI_DE_kar98k_Material_003_1",
+    "5": "MID_MI_DE_kar98k_Material_005_1",
+    "6": "MID_MI_DE_mauser_clip_Material_1",
+    "7": "MID_MI_DE_mauser_clip_6_1",
+    "8": "MID_MI_DE_mauser_clip_case_1",
+    "9": "MID_MI_Robin_Mat06_0",
+    "10": "MID_MI_Robin_Mat12_0",
+    "11": "MID_MI_Robin_Mat13_0",
+    "12": "MID_MI_Robin_Mat18_0",
+    "13": "MID_MI_Robin_Mat23_0",
+    "14": "MID_MI_Robin_Mat24_0",
+    "15": "MID_MI_Robin_Mat25_0",
+    "16": "MID_MI_Robin_Mat26_0"
+   }
+  },
+  {
+   "name": "tp_back",
+   "toe_above_floor": [
+    9.9,
+    9.9
+   ],
+   "head_above_floor": 142.0,
+   "vm": "SK_FPVM_Kar98k_Interior",
+   "vm_vis": false,
+   "vm_mats": {
+    "0": "MID_M_FPVM_ReceiverInterior_0",
+    "1": "MID_MI_DE_kar98k_Material_1",
+    "2": "MID_MI_DE_kar98k_Material_001_1",
+    "3": "MID_MI_DE_kar98k_Material_002_1",
+    "4": "MID_MI_DE_kar98k_Material_003_1",
+    "5": "MID_MI_DE_kar98k_Material_005_1",
+    "6": "MID_MI_DE_mauser_clip_Material_1",
+    "7": "MID_MI_DE_mauser_clip_6_1",
+    "8": "MID_MI_DE_mauser_clip_case_1",
+    "9": "MID_MI_Robin_Mat06_0",
+    "10": "MID_MI_Robin_Mat12_0",
+    "11": "MID_MI_Robin_Mat13_0",
+    "12": "MID_MI_Robin_Mat18_0",
+    "13": "MID_MI_Robin_Mat23_0",
+    "14": "MID_MI_Robin_Mat24_0",
+    "15": "MID_MI_Robin_Mat25_0",
+    "16": "MID_MI_Robin_Mat26_0"
+   }
+  },
+  {
+   "name": "fp",
+   "toe_above_floor": [
+    9.9,
+    9.9
+   ],
+   "head_above_floor": 141.8,
+   "vm": "SK_FPVM_Kar98k_Interior",
+   "vm_vis": true,
+   "vm_mats": {
+    "0": "MID_M_FPVM_ReceiverInterior_0",
+    "1": "MID_MI_DE_kar98k_Material_1",
+    "2": "MID_MI_DE_kar98k_Material_001_1",
+    "3": "MID_MI_DE_kar98k_Material_002_1",
+    "4": "MID_MI_DE_kar98k_Material_003_1",
+    "5": "MID_MI_DE_kar98k_Material_005_1",
+    "6": "MID_MI_DE_mauser_clip_Material_1",
+    "7": "MID_MI_DE_mauser_clip_6_1",
+    "8": "MID_MI_DE_mauser_clip_case_1",
+    "9": "MID_MI_Robin_Mat06_0",
+    "10": "MID_MI_Robin_Mat12_0",
+    "11": "MID_MI_Robin_Mat13_0",
+    "12": "MID_MI_Robin_Mat18_0",
+    "13": "MID_MI_Robin_Mat23_0",
+    "14": "MID_MI_Robin_Mat24_0",
+    "15": "MID_MI_Robin_Mat25_0",
+    "16": "MID_MI_Robin_Mat26_0"
+   }
+  }
+ ],
+ "look": "robin",
+ "mesh": "SKM_Robin",
+ "n_mats": 29,
+ "mats": [
+  "MID_MI_Robin_Mat00_0",
+  "MID_MI_Robin_Mat01_0",
+  "MID_MI_Robin_Mat02_0",
+  "MID_MI_Robin_Mat03_0",
+  "MID_MI_Robin_Mat04_0",
+  "MID_MI_Robin_Mat05_0",
+  "MID_MI_Robin_Mat06_0",
+  "MID_MI_Robin_Mat07_0",
+  "MID_MI_Robin_Mat08_0",
+  "MID_MI_Robin_Mat09_0",
+  "MID_MI_Robin_Mat10_0",
+  "MID_MI_Robin_Mat11_0",
+  "MID_MI_Robin_Mat12_0",
+  "MID_MI_Robin_Mat13_0",
+  "MID_MI_Robin_Mat14_0",
+  "MID_MI_Robin_Mat15_0",
+  "MID_MI_Robin_Mat16_0",
+  "MID_MI_Robin_Mat17_0",
+  "MID_MI_Robin_Mat18_0",
+  "MID_MI_Robin_Mat19_0",
+  "MID_MI_Robin_Mat20_0",
+  "MID_MI_Robin_Mat21_0",
+  "MID_MI_Robin_Mat22_0",
+  "MID_MI_Robin_Mat23_0",
+  "MID_MI_Robin_Mat24_0",
+  "MID_MI_Robin_Mat25_0",
+  "MID_MI_Robin_Mat26_0",
+  "MID_MI_Robin_Mat27_0",
+  "MID_MI_Robin_Mat28_0"
+ ],
+ "done": true
+}
