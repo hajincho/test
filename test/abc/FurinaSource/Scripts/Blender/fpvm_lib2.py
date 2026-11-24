@@ -29,6 +29,18 @@ def setup_ik(arm):
         w = arm.pose.bones['%s wrist' % SIDE[s]]; c2 = w.constraints.new('COPY_ROTATION'); c2.target = E['T_' + s]; c2.name = 'FPVM_ROT'
     bpy.ops.object.mode_set(mode='OBJECT'); return E
 
+
+def key_baked_pose(bone, matrix, frame, previous):
+    bone.matrix_basis = matrix
+    rotation = bone.rotation_quaternion.copy()
+    if bone.name in previous:
+        rotation.make_compatible(previous[bone.name])
+    bone.rotation_quaternion = rotation
+    previous[bone.name] = rotation
+    for path in ('location', 'rotation_quaternion', 'scale'):
+        bone.keyframe_insert(path, frame=frame, group=bone.name)
+
+
 def calib_pole(arm, E, s, wrist_m, elbow_hint_m):
     """pole_angle 을 0/90/-90/180 중 팔꿈치가 hint 에 가장 가까운 값으로."""
     c = arm.pose.bones['%s elbow' % SIDE[s]].constraints['FPVM_IK']; E['T_' + s].location = wrist_m; E['P_' + s].location = elbow_hint_m; best = None
