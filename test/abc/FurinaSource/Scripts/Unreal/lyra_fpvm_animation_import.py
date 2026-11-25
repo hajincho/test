@@ -77,7 +77,11 @@ def import_clip(folder, skeleton, name):
     meshless = import_fbx(name + '.fbx', folder, name, mesh=False, skeleton=skeleton)
     animation = next(item for item in meshless if isinstance(item, unreal.AnimSequence))
     match_skeleton_units(animation)
-    return rename_animation(animation, folder, name)
+    animation = rename_animation(animation, folder, name)
+    if name in ('AS_FPVM_G43_MagReload', 'AS_FPVM_PANZERSCHRECK_Reload'):
+        from lyra_fpvm_reload_wrists import normalize_prop_tracks
+        normalize_prop_tracks(animation)
+    return animation
 
 
 def match_skeleton_units(animation):
